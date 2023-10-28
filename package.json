@@ -2,6 +2,7 @@
   "name": "rck",
   "private": false,
   "version": "1.0.0",
+  "author": "Abel Lopes (@abelflopes)",
   "description": "Monorepo PoC/Template with independent versioning for the whole project and its packages",
   "homepage": "https://github.com/abelflopes/rck#readme",
   "repository": {
@@ -18,10 +19,6 @@
     "clean": "lerna run clean",
     "todo": "npx leasot '**/**' '.**/**' -i '**/node_modules/**' -S -x"
   },
-  "author": "Abel Lopes (@abelflopes)",
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@abelflopes/eslint-config-tsr-pro": "^1.1.0",
     "@abelflopes/prettier-config-pro": "^1.0.0",
@@ -33,5 +30,8 @@
     "prettier": "^3.0.3",
     "semantic-release": "^22.0.5",
     "semantic-release-config-conventional": "^1.0.1"
-  }
+  },
+  "workspaces": [
+    "packages/*/*"
+  ]
 }
