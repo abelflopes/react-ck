@@ -11,7 +11,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "start": "lerna run start --parallel --stream",
+    "prestart": "lerna run build --scope @rck/*config*",
+    "start": "lerna run start --parallel --stream --ignore @rck/*config*",
     "build": "lerna run build",
     "test": "lerna run test --parallel",
     "lint": "eslint . --ext ts,tsx",
