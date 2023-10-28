@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "independent",
+  "tagVersionPrefix": "package-",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "changelogPreset": "conventional-changelog-conventionalcommits",
+      "message": "chore(release): packages publish [no ci]"
+    }
+  }
+}
