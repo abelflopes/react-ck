@@ -1,5 +1,5 @@
 {
-  "name": "@rck/webpack",
+  "name": "@rck/webpack-config",
   "private": true,
   "version": "1.0.0",
   "main": "dist/index.js",
