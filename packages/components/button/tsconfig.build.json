@@ -1,9 +1,7 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "@rck/typescript-config/tsconfig.json",
   "compilerOptions": {
-    "target": "es2016",
     "declaration": true,
-    "noEmit": false,
     "outDir": "./dist"
   },
   "include": ["./src/**/*", "./src/index.ts*"]

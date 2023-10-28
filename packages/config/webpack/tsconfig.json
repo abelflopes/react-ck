@@ -1,25 +1,10 @@
 {
+  "extends": "@rck/typescript-config/tsconfig.json",
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "./dist",
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "useUnknownInCatchVariables": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true
+    "outDir": "./dist"
   },
   "include": ["./src/index.ts*"]
 }
