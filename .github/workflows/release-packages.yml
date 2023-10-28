@@ -62,4 +62,4 @@ jobs:
         run: git config --list
 
       - name: Release Packages
-        run: lerna publish --yes
+        run: lerna publish --yes --no-private

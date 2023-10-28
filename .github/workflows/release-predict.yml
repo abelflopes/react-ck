@@ -58,4 +58,4 @@ jobs:
             );
 
       - name: Predict Next Version - Packages
-        run: npm exec -- lerna version --no-git-tag-version --no-push --yes
+        run: npm exec -- lerna version --yes  --no-git-tag-version --no-push--no-private
