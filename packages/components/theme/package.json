@@ -14,8 +14,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "clean": "rm -rf dist",
-    "test": "jest"
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@rck/typescript-config": "^1.0.0",
