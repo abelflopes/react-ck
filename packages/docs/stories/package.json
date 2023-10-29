@@ -1,0 +1,19 @@
+{
+  "name": "@rck/stories-docs",
+  "private": true,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/docs/stories#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/rck.git"
+  },
+  "devDependencies": {
+    "@rck/typescript-config": "^1.0.0"
+  },
+  "dependencies": {
+    "@rck/button": "^1.0.0",
+    "@rck/theme": "^1.0.0"
+  }
+}

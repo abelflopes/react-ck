@@ -1,0 +1,27 @@
+{
+  "name": "@rck/storybook-docs",
+  "private": true,
+  "version": "1.0.0",
+  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/docs/storybook#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/rck.git"
+  },
+  "scripts": {
+    "start": "storybook dev -p 6006",
+    "build": "storybook build -o dist"
+  },
+  "devDependencies": {
+    "@rck/typescript-config": "^1.0.0",
+    "@rck/webpack-config": "^1.0.0",
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/react": "^7.5.1",
+    "@storybook/react-webpack5": "^7.5.1",
+    "css-loader": "^6.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.5.1"
+  }
+}
