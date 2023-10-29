@@ -21,14 +21,16 @@
     "test:snapshot": "jest --testPathPattern=\".snapshot.*\""
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.22.7",
-    "@babel/preset-typescript": "^7.22.5",
+    "@rck/babel-config": "^1.0.0",
     "@rck/jest-config": "^1.0.0",
     "@rck/typescript-config": "^1.0.0",
     "@rck/webpack-config": "^1.0.0",
-    "@types/react": "^18.2.33",
+    "@types/react": "^18.2.33"
   },
   "peerDependencies": {
     "react": "^18.2.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
   }
 }
