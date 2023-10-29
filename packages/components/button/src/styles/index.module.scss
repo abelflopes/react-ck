@@ -1,0 +1,35 @@
+.root {
+  font: inherit;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-base) calc(var(--spacing-base) * 2);
+  border-radius: 8px;
+
+  &:hover {
+    background-color: rgba(#000, 0.2);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background: linear-gradient(
+    220deg,
+    var(--color-highlight-primary),
+    var(--color-highlight-secondary)
+  );
+  color: #fff;
+}
+
+.secondary {
+  background: var(--color-neutral100);
+  color: var(--color-text-alt);
+}
