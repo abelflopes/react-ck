@@ -13,7 +13,6 @@
     "url": "git+https://github.com/abelflopes/rck.git"
   },
   "scripts": {
-    "start": "NODE_ENV=development webpack --watch",
     "build": "NODE_ENV=production webpack",
     "clean": "rm -rf dist",
     "test": "npx -y npm-run-all -s test:*",
