@@ -1,0 +1,31 @@
+{
+  "name": "@rck/theme",
+  "private": false,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/components/theme#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/rck.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "clean": "rm -rf dist",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@rck/typescript-config": "^1.0.0",
+    "@rck/webpack-config": "^1.0.0",
+    "@types/react": "^18.2.33"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "change-case": "^5.1.2"
+  }
+}

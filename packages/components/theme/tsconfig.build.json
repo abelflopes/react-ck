@@ -1,0 +1,8 @@
+{
+  "extends": "@rck/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "include": ["../../../*.d.ts", "./src/**/*", "./src/index.ts*"]
+}
