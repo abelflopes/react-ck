@@ -7,7 +7,7 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/webpack#readme",
+  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/config/webpack#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/rck.git"

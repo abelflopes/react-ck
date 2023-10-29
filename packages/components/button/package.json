@@ -7,7 +7,7 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/button#readme",
+  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/components/button#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/rck.git"
