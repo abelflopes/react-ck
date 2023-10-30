@@ -14,7 +14,7 @@ export interface ThemeProviderProps {
 type MappedTheme = Record<string, Record<string, number>>;
 
 export const ThemeProvider = ({
-  target,
+  // target, // TODO: add target flexibility
   theme = defaultTheme,
   children,
 }: Readonly<ThemeProviderProps>): React.ReactElement => {
