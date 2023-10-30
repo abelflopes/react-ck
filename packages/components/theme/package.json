@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sass": "src/styles/shared.scss",
   "files": [
-    "/dist"
+    "/dist",
+    "/src/styles"
   ],
   "homepage": "https://github.com/abelflopes/rck/tree/master/packages/components/theme#readme",
   "repository": {

@@ -1,0 +1,18 @@
+// TODO: move to typography
+
+@mixin font-base {
+  font-family: get-var(font-family);
+  font-size: get-var(font-base-size);
+}
+
+@function get-var($name) {
+  @return var(--#{$name});
+}
+
+@function get-color($name) {
+  @return get-var(color-#{$name});
+}
+
+@function get-spacing($multi: 1) {
+  @return calc(#{get-var(spacing-base)} * $multi);
+}
