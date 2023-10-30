@@ -2,6 +2,11 @@ import { Preview } from "@storybook/react";
 
 const preview: Preview = {
   parameters: {
+    docs: {
+      canvas: {
+        sourceState: "shown",
+      },
+    },
     layout: "centered",
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
