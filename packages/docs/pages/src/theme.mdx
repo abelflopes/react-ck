@@ -1,0 +1,36 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+import { defaultTheme } from "@rck/theme";
+
+<Meta title="Core/Theme" />
+
+# Theme
+
+All theme colors applied by the default theme
+
+<ColorPalette>
+  <ColorItem
+    title="Highlight Primary"
+    subtitle="Main highlight color, mostly used for CTA's"
+    colors={{ highlightPrimary: defaultTheme.color.highlightPrimary }}
+  />
+  <ColorItem
+    title="Highlight Secondary"
+    subtitle="Second main color used for important items"
+    colors={{ highlightSecondary: defaultTheme.color.highlightSecondary }}
+  />
+  <ColorItem
+    title="Text"
+    subtitle="Colors applied in typography"
+    colors={{
+      text: defaultTheme.color.text,
+      textAlt: defaultTheme.color.textAlt,
+    }}
+  />
+  <ColorItem
+    title="Neutral"
+    subtitle="Multi purpose neutral colors"
+    colors={{
+      neutral100: defaultTheme.color.neutral100,
+    }}
+  />
+</ColorPalette>
