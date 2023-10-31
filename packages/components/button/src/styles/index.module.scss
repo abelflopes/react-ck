@@ -31,3 +31,9 @@
   background: get-color(neutral100);
   color: get-color(text-alt);
 }
+
+.icon {
+  margin-right: get-spacing(1);
+  display: inline-flex;
+  align-items: center;
+}
