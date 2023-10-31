@@ -9,7 +9,7 @@ export const defaultTheme: Theme = {
     neutral100: "#DBDEEB",
   },
   font: {
-    family: "Lato",
+    family: "system-ui, sans-serif",
     baseSize: "14px",
   },
   spacing: {
