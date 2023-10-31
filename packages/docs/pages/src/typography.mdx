@@ -1,0 +1,14 @@
+import { Meta, Typeset } from "@storybook/blocks";
+import { defaultTheme } from "@rck/theme";
+import { faker } from "@faker-js/faker";
+
+<Meta title="Core/Typography" />
+
+# Typography
+
+<Typeset
+  fontSizes={[60, parseInt(defaultTheme.font.baseSize)]}
+  fontWeight={500}
+  sampleText={faker.lorem.sentence()}
+  fontFamily={defaultTheme.font.family}
+/>
