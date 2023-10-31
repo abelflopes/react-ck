@@ -10,7 +10,6 @@ export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   margin?: boolean;
   type?: "huge" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
   variation?: TextVariation | TextVariation[];
-  children?: React.ReactNode | React.ReactNode[];
   as?: keyof ReactHTML | React.ReactElement;
 }
 
