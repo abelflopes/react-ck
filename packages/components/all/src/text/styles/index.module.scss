@@ -29,6 +29,16 @@
 
 // Types
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  // Force block display in case of component    with inline element
+  display: block;
+}
+
 .h1 {
   --font-size: 29px;
   --font-weight: 500;
