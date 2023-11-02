@@ -1,0 +1,24 @@
+@import "@rck/theme";
+
+.root {
+  --border-color: transparent;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: solid 1px var(--border-color);
+  border-radius: get-spacing(2);
+  overflow: hidden;
+}
+
+.item {
+  padding: get-spacing(2);
+
+  &:not(:first-child) {
+    border-top: solid 1px var(--border-color);
+  }
+}
+
+.bordered {
+  --border-color: #{get-color(neutral100)};
+}
