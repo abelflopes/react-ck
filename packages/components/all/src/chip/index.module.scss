@@ -1,0 +1,29 @@
+@import "@rck/theme";
+
+.root {
+  @include font-base;
+
+  padding: 4px 8px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #e2e8f0;
+  color: #1a202c;
+  display: inline-flex;
+  border-radius: 8px;
+}
+
+.negative {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}
+
+.average {
+  background-color: #feebc8;
+  color: #9b2c2c;
+}
+
+.positive {
+  background-color: #e2f2e3;
+  color: #276749;
+}
