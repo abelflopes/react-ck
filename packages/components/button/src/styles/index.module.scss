@@ -23,12 +23,12 @@
 }
 
 .primary {
-  background: linear-gradient(220deg, get-color(highlight-primary), get-color(highlight-secondary));
+  background-color: get-color(highlight-primary);
   color: #fff;
 }
 
 .secondary {
-  background: get-color(neutral100);
+  background: get-color(neutral200);
   color: get-color(text-alt);
 }
 
