@@ -1,0 +1,26 @@
+.root {
+  --spacing-y: 0;
+  --spacing-x: 0;
+
+  box-sizing: border-box;
+  max-width: var(--max-width);
+  padding: var(--spacing-y) var(--spacing-x);
+  margin: 0 auto;
+}
+
+.horizontal {
+  --max-width: 1300px;
+  --spacing-x: 50px;
+
+  .small {
+    color: red;
+  }
+}
+
+.vertical {
+  --spacing-y: 30px;
+
+  .small {
+    --spacing-y: 16px;
+  }
+}
