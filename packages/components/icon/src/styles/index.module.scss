@@ -1,0 +1,10 @@
+@import "@rck/theme";
+
+.root {
+  color: currentColor;
+
+  // Add margin for icons next to each other
+  & + & {
+    margin-left: get-spacing(1);
+  }
+}
