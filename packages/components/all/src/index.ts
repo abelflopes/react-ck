@@ -1,1 +1,11 @@
-export * from "./text/index";
+export * from "./text";
+
+export * from "./divider";
+
+export * from "./banner";
+
+export * from "./card";
+
+export * from "./container";
+
+export * from "./chip";
