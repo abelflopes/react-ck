@@ -5,6 +5,7 @@ export interface Theme {
     text: string;
     textAlt: string;
     neutral100: string;
+    neutral200: string;
   };
   font: {
     family: string;
