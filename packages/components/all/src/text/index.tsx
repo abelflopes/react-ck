@@ -8,7 +8,7 @@ export type TextVariation = "small" | "bold" | "link" | "link_hidden";
 
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   margin?: boolean;
-  type?: "huge" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
+  type?: "huge" | "soft" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
   variation?: TextVariation | TextVariation[];
   as?: keyof ReactHTML | React.ReactElement;
 }
@@ -44,6 +44,7 @@ export const Text = ({
     let value: keyof ReactHTML;
 
     switch (type) {
+      case "soft":
       case "huge": {
         value = "h1";
         break;
