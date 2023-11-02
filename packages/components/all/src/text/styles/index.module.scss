@@ -16,8 +16,8 @@
   margin-bottom: var(--margin-bottom);
   line-height: var(--line-height);
 
-  &.margin {
-    &:not(.p) {
+  &:not(:only-child).margin {
+    &:not(.p, a) {
       --margin-bottom: calc(var(--font-size) * 0.75);
     }
 
