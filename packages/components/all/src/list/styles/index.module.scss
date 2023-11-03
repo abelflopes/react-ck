@@ -1,12 +1,13 @@
 @import "@rck/theme";
+@import "@rck/scss-utils";
 
 .root {
-  --border-color: transparent;
+  @include define-css-var(border-color, transparent);
 
   margin: 0;
   padding: 0;
   list-style: none;
-  border: solid 1px var(--border-color);
+  border: solid 1px get-css-var(border-color);
   border-radius: get-spacing(2);
   overflow: hidden;
 }
@@ -15,7 +16,7 @@
   padding: get-spacing(2);
 
   &:not(:first-child) {
-    border-top: solid 1px var(--border-color);
+    border-top: solid 1px get-css-var(border-color);
   }
 }
 

@@ -1,28 +1,29 @@
 @import "@rck/theme";
+@import "@rck/scss-utils";
 
 .root {
-  --font-size: 16px;
-  --line-height: 24px;
-  --font-weight: 500;
-  --margin-top: 0;
-  --margin-bottom: 0;
-  --color: get-color(text);
+  @include define-css-var(font-size, 16px);
+  @include define-css-var(line-height, 24px);
+  @include define-css-var(font-weight, 500);
+  @include define-css-var(margin-top, 0);
+  @include define-css-var(margin-bottom, 0);
+  @include define-css-var(color, get-color(text));
 
-  color: var(--color);
+  color: get-css-var(color);
   font-family: sans-serif;
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  margin-top: var(--margin-top);
-  margin-bottom: var(--margin-bottom);
-  line-height: var(--line-height);
+  font-size: get-css-var(font-size);
+  font-weight: get-css-var(font-weight);
+  margin-top: get-css-var(margin-top);
+  margin-bottom: get-css-var(margin-bottom);
+  line-height: get-css-var(line-height);
 
   &:not(:only-child).margin {
     &:not(.p, a) {
-      --margin-bottom: calc(var(--font-size) * 0.75);
+      @include define-css-var(margin-bottom, calc(#{get-css-var(font-size)} * 0.75));
     }
 
     & + & {
-      --margin-top: var(--font-size);
+      @include define-css-var(margin-top, get-css-var(font-size));
     }
   }
 }
@@ -40,43 +41,43 @@
 }
 
 .h1 {
-  --font-size: 29px;
-  --font-weight: 500;
-  --line-height: 36px;
+  @include define-css-var(font-size, 29px);
+  @include define-css-var(font-weight, 500);
+  @include define-css-var(line-height, 36px);
 }
 
 .h2 {
-  --font-size: 24px;
-  --font-weight: 500;
-  --line-height: 36px;
-  --color: #1a202c;
+  @include define-css-var(font-size, 24px);
+  @include define-css-var(font-weight, 500);
+  @include define-css-var(line-height, 36px);
+  @include define-css-var(color, #1a202c);
 }
 
 .huge {
-  --font-size: 60px;
+  @include define-css-var(font-size, 60px);
 }
 
 .soft {
-  --color: #718096;
+  @include define-css-var(color, #718096);
 }
 
 // Variations
 
 .small {
-  --font-size: 14px;
-  --font-weight: 400;
-  --line-height: 21px;
+  @include define-css-var(font-size, 14px);
+  @include define-css-var(font-weight, 400);
+  @include define-css-var(line-height, 21px);
 }
 
 .bold {
-  --font-weight: 700;
+  @include define-css-var(font-weight, 700);
 }
 
 .link {
-  --color: #0052cc;
+  @include define-css-var(color, #0052cc);
 
   &:hover {
-    --color: #003e99;
+    @include define-css-var(color, #003e99);
   }
 }
 
@@ -84,7 +85,7 @@
   text-decoration: none;
 
   &:hover {
-    --color: #003e99;
+    @include define-css-var(color, #003e99);
     text-decoration: underline;
   }
 }

@@ -1,10 +1,6 @@
 @import "theme-type";
 @import "@rck/scss-utils";
 
-@function get-css-var($name) {
-  @return var(--#{$name});
-}
-
 @function get-color($name) {
   $colors: map-get-strict($theme-type, "color");
   @if validate-map-key($colors, $name) {

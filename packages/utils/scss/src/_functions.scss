@@ -19,3 +19,11 @@
     }
   }
 }
+
+// Sync prefixing with /packages/components/theme/src/provider.tsx
+// themeCssVars
+// and /packages/utils/scss/src/_mixins.scss
+// define-css-var
+@function get-css-var($name) {
+  @return var(--rck-#{$name});
+}

@@ -27,7 +27,6 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@rck/scss-utils": "^1.0.0",
-    "change-case": "^5.1.2"
+    "@rck/scss-utils": "^1.0.0"
   }
 }

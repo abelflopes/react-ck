@@ -23,6 +23,10 @@
     "@rck/webpack-config": "^1.0.0",
     "@types/react": "^18.2.33"
   },
+  "dependencies": {
+    "@rck/scss-utils": "^1.0.0",
+    "@rck/theme": "^1.0.0"
+  },
   "peerDependencies": {
     "react": "^18.2.0"
   }

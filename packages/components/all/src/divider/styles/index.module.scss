@@ -1,18 +1,19 @@
 @import "@rck/theme";
+@import "@rck/scss-utils";
 
 .root {
-  background-color: get-color("neutral-200");
+  background-color: get-color(neutral-200);
   border: none;
-  height: var(--height);
-  width: var(--width);
+  height: get-css-var(height);
+  width: get-css-var(width);
 }
 
 .horizontal {
-  --width: 100%;
-  --height: 1px;
+  @include define-css-var(width, 100%);
+  @include define-css-var(height, 1px);
 }
 
 .vertical {
-  --width: 1px;
-  --height: 100%;
+  @include define-css-var(width, 1px);
+  @include define-css-var(height, 100%);
 }

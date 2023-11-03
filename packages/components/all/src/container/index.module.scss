@@ -1,16 +1,18 @@
+@import "@rck/scss-utils";
+
 .root {
-  --spacing-y: 0;
-  --spacing-x: 0;
+  @include define-css-var(spacing-y, 0);
+  @include define-css-var(spacing-x, 0);
 
   box-sizing: border-box;
-  max-width: var(--max-width);
-  padding: var(--spacing-y) var(--spacing-x);
+  max-width: get-css-var(max-width);
+  padding: get-css-var(spacing-y) get-css-var(spacing-x);
   margin: 0 auto;
 }
 
 .horizontal {
-  --max-width: 1300px;
-  --spacing-x: 50px;
+  @include define-css-var(max-width, 1300px);
+  @include define-css-var(spacing-x, 50px);
 
   .small {
     color: red;
@@ -18,9 +20,9 @@
 }
 
 .vertical {
-  --spacing-y: 30px;
+  @include define-css-var(spacing-y, 30px);
 
   .small {
-    --spacing-y: 16px;
+    @include define-css-var(spacing-y, 16px);
   }
 }

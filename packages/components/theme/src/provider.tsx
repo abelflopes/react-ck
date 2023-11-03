@@ -3,7 +3,6 @@ import React, { useMemo } from "react";
 import type { Theme } from "./types";
 import { defaultTheme } from "./themes/default";
 import { ThemeContext } from "./context";
-import { kebabCase } from "change-case";
 
 export interface ThemeProviderProps {
   target?: HTMLElement;
@@ -21,10 +20,9 @@ export const ThemeProvider = ({
   const themeCssVars = useMemo<React.CSSProperties>(() => {
     return Object.fromEntries(
       Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
-        Object.entries(data).map(([key, value]) => [
-          "--" + kebabCase(context) + "-" + kebabCase(key),
-          value,
-        ]),
+        // Sync prefixing with /packages/utils/scss/src/_functions.scss
+        // get-css-var
+        Object.entries(data).map(([key, value]) => ["--rck-" + context + "-" + key, value]),
       ),
     );
   }, [theme]);
