@@ -1,0 +1,14 @@
+{
+  "name": "@rck/scss-utils",
+  "private": false,
+  "version": "1.0.0",
+  "sass": "src/index.scss",
+  "files": [
+    "/src"
+  ],
+  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/utils/scss-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/rck.git"
+  }
+}

@@ -1,0 +1,21 @@
+@function validate-map-key($map, $key) {
+  @if (type_of($map) == list) {
+    @if (index($map, $key) == null) {
+      @error "Map does not have "#{$key}" key. Available keys are #{$map}";
+    }
+  } @else if (map-has-key($map, $key) == false) {
+    @error "Map does not have "#{$key}" key. Available keys are #{map-keys($map)}";
+  }
+
+  @return true;
+}
+
+@function map-get-strict($map, $key) {
+  @if (validate-map-key($map, $key)) {
+    @if (type_of($map) == list) {
+      @return nth($map, $key);
+    } @else {
+      @return map-get($map, $key);
+    }
+  }
+}

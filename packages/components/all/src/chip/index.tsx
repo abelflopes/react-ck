@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 import React from "react";
 
 export interface ChipProps extends React.HTMLAttributes<HTMLDivElement> {
-  skin?: "default" | "negative" | "average" | "positive";
+  skin?: "negative" | "average" | "positive";
 }
 
 export const Chip = ({
@@ -12,7 +12,7 @@ export const Chip = ({
   className,
   ...otherProps
 }: Readonly<ChipProps>): React.ReactElement => (
-  <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
+  <div {...otherProps} className={classNames(styles.root, skin && styles[skin], className)}>
     {children}
   </div>
 );
