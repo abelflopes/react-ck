@@ -4,16 +4,16 @@
 .root {
   background-color: get-color(neutral-200);
   border: none;
-  height: get-css-var(height);
-  width: get-css-var(width);
+  height: get-css-var(divider, height);
+  width: get-css-var(divider, width);
 }
 
 .horizontal {
-  @include define-css-var(width, 100%);
-  @include define-css-var(height, 1px);
+  @include define-css-var(divider, width, 100%);
+  @include define-css-var(divider, height, 1px);
 }
 
 .vertical {
-  @include define-css-var(width, 1px);
-  @include define-css-var(height, 100%);
+  @include define-css-var(divider, width, 1px);
+  @include define-css-var(divider, height, 100%);
 }

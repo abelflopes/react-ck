@@ -2,28 +2,28 @@
 @import "@rck/scss-utils";
 
 .root {
-  @include define-css-var(font-size, 16px);
-  @include define-css-var(line-height, 24px);
-  @include define-css-var(font-weight, 500);
-  @include define-css-var(margin-top, 0);
-  @include define-css-var(margin-bottom, 0);
-  @include define-css-var(color, get-color(text));
+  @include define-css-var(text, font-size, 16px);
+  @include define-css-var(text, line-height, 24px);
+  @include define-css-var(text, font-weight, 500);
+  @include define-css-var(text, margin-top, 0);
+  @include define-css-var(text, margin-bottom, 0);
+  @include define-css-var(text, color, get-color(text));
 
-  color: get-css-var(color);
+  color: get-css-var(text, color);
   font-family: sans-serif;
-  font-size: get-css-var(font-size);
-  font-weight: get-css-var(font-weight);
-  margin-top: get-css-var(margin-top);
-  margin-bottom: get-css-var(margin-bottom);
-  line-height: get-css-var(line-height);
+  font-size: get-css-var(text, font-size);
+  font-weight: get-css-var(text, font-weight);
+  margin-top: get-css-var(text, margin-top);
+  margin-bottom: get-css-var(text, margin-bottom);
+  line-height: get-css-var(text, line-height);
 
   &:not(:only-child).margin {
     &:not(.p, a) {
-      @include define-css-var(margin-bottom, calc(#{get-css-var(font-size)} * 0.75));
+      @include define-css-var(text, margin-bottom, calc(#{get-css-var(text, font-size)} * 0.75));
     }
 
     & + & {
-      @include define-css-var(margin-top, get-css-var(font-size));
+      @include define-css-var(text, margin-top, get-css-var(text, font-size));
     }
   }
 }
@@ -41,43 +41,43 @@
 }
 
 .h1 {
-  @include define-css-var(font-size, 29px);
-  @include define-css-var(font-weight, 500);
-  @include define-css-var(line-height, 36px);
+  @include define-css-var(text, font-size, 29px);
+  @include define-css-var(text, font-weight, 500);
+  @include define-css-var(text, line-height, 36px);
 }
 
 .h2 {
-  @include define-css-var(font-size, 24px);
-  @include define-css-var(font-weight, 500);
-  @include define-css-var(line-height, 36px);
-  @include define-css-var(color, #1a202c);
+  @include define-css-var(text, font-size, 24px);
+  @include define-css-var(text, font-weight, 500);
+  @include define-css-var(text, line-height, 36px);
+  @include define-css-var(text, color, #1a202c);
 }
 
 .huge {
-  @include define-css-var(font-size, 60px);
+  @include define-css-var(text, font-size, 60px);
 }
 
 .soft {
-  @include define-css-var(color, #718096);
+  @include define-css-var(text, color, #718096);
 }
 
 // Variations
 
 .small {
-  @include define-css-var(font-size, 14px);
-  @include define-css-var(font-weight, 400);
-  @include define-css-var(line-height, 21px);
+  @include define-css-var(text, font-size, 14px);
+  @include define-css-var(text, font-weight, 400);
+  @include define-css-var(text, line-height, 21px);
 }
 
 .bold {
-  @include define-css-var(font-weight, 700);
+  @include define-css-var(text, font-weight, 700);
 }
 
 .link {
-  @include define-css-var(color, #0052cc);
+  @include define-css-var(text, color, #0052cc);
 
   &:hover {
-    @include define-css-var(color, #003e99);
+    @include define-css-var(text, color, #003e99);
   }
 }
 
@@ -85,7 +85,7 @@
   text-decoration: none;
 
   &:hover {
-    @include define-css-var(color, #003e99);
+    @include define-css-var(text, color, #003e99);
     text-decoration: underline;
   }
 }

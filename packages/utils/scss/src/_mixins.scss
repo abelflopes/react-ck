@@ -1,5 +1,5 @@
 // and /packages/utils/scss/src/_functions.scss
 // get-css-var
-@mixin define-css-var($name, $value) {
-  --rck-#{$name}: #{$value};
+@mixin define-css-var($scope, $name, $value) {
+  --rck-#{$scope}-#{$name}: #{$value};
 }
