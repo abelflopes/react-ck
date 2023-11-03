@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   padding: get-spacing(1) get-spacing(2);
-  border-radius: get-var(spacing-base);
+  border-radius: get-spacing(1);
 
   &:hover {
     background-color: rgba(#000, 0.2);
@@ -28,7 +28,7 @@
 }
 
 .secondary {
-  background: get-color(neutral200);
+  background: get-color(neutral-200);
   color: get-color(text-alt);
 }
 

@@ -1,0 +1,39 @@
+@import "theme-type";
+
+@function validate-map-key($map, $key) {
+  @warn (type_of($map));
+  @if (type_of($map) == list) {
+    @if (index($map, $key) == null) {
+      @error "2 Map does not have "#{$key}" key. Available keys are #{$map}";
+    }
+  } @else if (map-has-key($map, $key) == false) {
+    @error "1 Map does not have "#{$key}" key. Available keys are #{map-keys($map)}";
+  }
+
+  @return true;
+}
+
+@function map-get-strict($map, $key) {
+  @if (validate-map-key($map, $key)) {
+    @if (type_of($map) == list) {
+      @return nth($map, $key);
+    } @else {
+      @return map-get($map, $key);
+    }
+  }
+}
+
+@function get-css-var($name) {
+  @return var(--#{$name});
+}
+
+@function get-color($name) {
+  $colors: map-get-strict($theme-type, "color");
+  @if validate-map-key($colors, $name) {
+    @return get-css-var(color-#{$name});
+  }
+}
+
+@function get-spacing($multi: 1) {
+  @return calc(#{get-css-var(spacing-base)} * $multi);
+}

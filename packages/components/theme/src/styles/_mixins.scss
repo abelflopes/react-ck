@@ -1,0 +1,7 @@
+@import "functions";
+
+// TODO: move to typography
+@mixin font-base {
+  font-family: get-css-var(font-family);
+  font-size: get-css-var(font-base-size);
+}

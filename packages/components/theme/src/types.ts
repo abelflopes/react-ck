@@ -1,15 +1,15 @@
 export interface Theme {
   color: {
-    highlightPrimary: string;
-    highlightSecondary: string;
-    text: string;
-    textAlt: string;
-    neutral100: string;
-    neutral200: string;
+    "highlight-primary": string;
+    "highlight-secondary": string;
+    "text": string;
+    "text-alt": string;
+    "neutral-100": string;
+    "neutral-200": string;
   };
   font: {
-    family: string;
-    baseSize: string;
+    "family": string;
+    "base-size": string;
   };
   spacing: {
     base: string;
