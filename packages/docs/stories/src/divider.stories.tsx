@@ -1,12 +1,11 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
-import { Text } from "@rck/all/src";
-import { faker } from "@faker-js/faker";
+import { Divider } from "@rck/all/src";
 
-const meta: Meta<typeof Text> = {
-  title: "Components/Text",
-  component: Text,
+const meta: Meta<typeof Divider> = {
+  title: "Components/Divider",
+  component: Divider,
   decorators: [
     (Story) => (
       <ThemeProvider>
@@ -18,10 +17,12 @@ const meta: Meta<typeof Text> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Divider>;
 
-export const Default: Story = {
+export const Default: Story = {};
+
+export const vertical: Story = {
   args: {
-    children: faker.lorem.sentence(),
+    type: "vertical",
   },
 };

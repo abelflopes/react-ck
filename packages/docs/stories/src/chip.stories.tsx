@@ -2,12 +2,11 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { sentenceCase } from "change-case";
-import { Input } from "@rck/input/src/index";
+import { Chip } from "@rck/all/src";
 
-const meta: Meta<typeof Input> = {
-  title: "Components/Input",
-  component: Input,
+const meta: Meta<typeof Chip> = {
+  title: "Components/Chip",
+  component: Chip,
   decorators: [
     (Story) => (
       <ThemeProvider>
@@ -19,11 +18,10 @@ const meta: Meta<typeof Input> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof Chip>;
 
 export const Default: Story = {
   args: {
-    required: true,
-    placeholder: sentenceCase(faker.lorem.words({ min: 1, max: 2 })),
+    children: faker.lorem.words({ min: 1, max: 2 }),
   },
 };

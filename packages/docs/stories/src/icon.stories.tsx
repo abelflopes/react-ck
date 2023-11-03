@@ -1,12 +1,11 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
-import { Text } from "@rck/all/src";
-import { faker } from "@faker-js/faker";
+import { Icon } from "@rck/icon";
 
-const meta: Meta<typeof Text> = {
-  title: "Components/Text",
-  component: Text,
+const meta: Meta<typeof Icon> = {
+  title: "Components/Icon",
+  component: Icon,
   decorators: [
     (Story) => (
       <ThemeProvider>
@@ -18,10 +17,10 @@ const meta: Meta<typeof Text> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Icon>;
 
 export const Default: Story = {
   args: {
-    children: faker.lorem.sentence(),
+    name: "BsBellFill",
   },
 };

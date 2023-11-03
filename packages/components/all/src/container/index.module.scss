@@ -6,7 +6,7 @@
 
   box-sizing: border-box;
   max-width: get-css-var(container, max-width);
-  padding: get-css-var(container, spacing-y) get-css-var(spacing-x);
+  padding: get-css-var(container, spacing-y) get-css-var(container, spacing-x);
   margin: 0 auto;
 }
 
