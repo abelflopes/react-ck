@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",
-    "@rck/typescript-config": "^1.0.0"
+    "@rck/typescript-config": "^1.0.0",
+    "change-case": "^5.1.2"
   },
   "dependencies": {
     "@rck/all": "^1.0.0",
