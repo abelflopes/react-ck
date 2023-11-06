@@ -2,7 +2,7 @@ import "./styles/index.module.scss";
 import React, { useMemo } from "react";
 import type { Theme } from "./types";
 import { defaultTheme } from "./themes/default";
-import { ThemeContext } from "./context";
+import { ThemeContextProvider } from "./context";
 
 export interface ThemeProviderProps {
   target?: HTMLElement;
@@ -28,8 +28,11 @@ export const ThemeProvider = ({
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContextProvider
+      value={{
+        theme,
+      }}>
       <div style={themeCssVars}>{children}</div>
-    </ThemeContext.Provider>
+    </ThemeContextProvider>
   );
 };

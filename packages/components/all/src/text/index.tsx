@@ -3,8 +3,9 @@ import styles from "./styles/index.module.scss";
 import React, { type ReactHTML, useMemo } from "react";
 // Utils
 import classNames from "classnames";
+import { useThemeContext } from "@rck/theme";
 
-export type TextVariation = "small" | "bold" | "link" | "link_hidden";
+export type TextVariation = "small" | "bold" | "link" | "link_hidden" | "inverted";
 
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   margin?: boolean;
@@ -22,6 +23,8 @@ export const Text = ({
   children,
   ...otherProps
 }: Readonly<TextProps>): React.ReactElement => {
+  const { inverted } = useThemeContext();
+
   const computedVariations = Array.isArray(variation) ? variation : variation && [variation];
 
   const computedClassNames = useMemo(
@@ -32,7 +35,10 @@ export const Text = ({
         {
           [`${styles.margin}`]: margin,
         },
-        computedVariations?.map((i) => styles[i]),
+        computedVariations?.filter((i) => i !== "inverted").map((i) => styles[i]),
+        {
+          [`${styles.inverted}`]: inverted && !computedVariations?.includes("inverted"),
+        },
         className,
       ),
     [className, computedVariations, margin, type],

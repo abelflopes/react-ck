@@ -89,3 +89,7 @@
     text-decoration: underline;
   }
 }
+
+.inverted {
+  @include define-css-var(text, color, #fff);
+}
