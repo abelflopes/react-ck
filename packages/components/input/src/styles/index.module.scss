@@ -5,7 +5,7 @@
   @include font-base;
 
   background: get-color(neutral-200);
-  color: get-color(text);
+  color: get-color(neutral-900);
   border: none;
   width: 100%;
   padding: get-spacing(1) get-spacing(2);
@@ -15,7 +15,7 @@
   border-radius: get-spacing(1);
 
   &::placeholder {
-    color: get-color(text-alt);
+    color: get-color(neutral-800);
   }
 
   &:disabled {

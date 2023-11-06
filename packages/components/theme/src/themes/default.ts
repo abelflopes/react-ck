@@ -8,10 +8,11 @@ export const defaultTheme: Theme = {
   color: {
     "highlight-primary": "#59BCC8",
     "highlight-secondary": "#3e86d4",
-    "text": "#1E2232",
-    "text-alt": "#323646",
+    "neutral-0": "#fff",
     "neutral-100": "#edf2f7",
     "neutral-200": "#DBDEEB",
+    "neutral-800": "#323646",
+    "neutral-900": "#1E2232",
     "overlay-light": "rgba(255,255,255, .2)",
     "overlay-dark": "rgba(0,0,0,.2)",
   },

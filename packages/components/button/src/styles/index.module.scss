@@ -14,7 +14,7 @@
   border-radius: get-spacing(1);
 
   &:hover {
-    background-color: rgba(#000, 0.2);
+    background-color: get-color(overlay-dark);
   }
 
   &:disabled {
@@ -24,12 +24,12 @@
 
 .primary {
   background-color: get-color(highlight-primary);
-  color: #fff;
+  color: get-color(neutral-0);
 }
 
 .secondary {
   background: get-color(neutral-200);
-  color: get-color(text-alt);
+  color: get-color(neutral-800);
 }
 
 .icon {

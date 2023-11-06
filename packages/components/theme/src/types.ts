@@ -3,10 +3,11 @@ export interface Theme {
   color: {
     "highlight-primary": string;
     "highlight-secondary": string;
-    "text": string;
-    "text-alt": string;
+    "neutral-0": string;
     "neutral-100": string;
     "neutral-200": string;
+    "neutral-800": string;
+    "neutral-900": string;
     "overlay-light": string;
     "overlay-dark": string;
   };

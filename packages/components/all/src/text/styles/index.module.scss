@@ -7,7 +7,7 @@
   @include define-css-var(text, font-weight, 500);
   @include define-css-var(text, margin-top, 0);
   @include define-css-var(text, margin-bottom, 0);
-  @include define-css-var(text, color, get-color(text));
+  @include define-css-var(text, color, get-color(neutral-900));
 
   color: get-css-var(text, color);
   font-family: sans-serif;
@@ -93,5 +93,5 @@
 }
 
 .inverted {
-  @include define-css-var(text, color, #fff);
+  @include define-css-var(text, color, get-color(neutral-0));
 }

@@ -1,4 +1,5 @@
 import { Preview } from "@storybook/react";
+import { defaultTheme } from "@rck/theme/src";
 
 const preview: Preview = {
   argTypes: {
@@ -16,7 +17,7 @@ const preview: Preview = {
       values: [
         {
           name: "light",
-          value: "#fff",
+          value: defaultTheme.color["neutral-0"],
         },
         {
           name: "medium",
@@ -24,7 +25,7 @@ const preview: Preview = {
         },
         {
           name: "dark",
-          value: "#000",
+          value: defaultTheme.color["neutral-900"],
         },
       ],
     },
