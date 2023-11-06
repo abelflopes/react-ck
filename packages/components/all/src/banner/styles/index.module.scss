@@ -1,9 +1,34 @@
 @import "@rck/theme";
 
 .root {
+  display: flex;
+  align-items: center;
   background-color: get-color("neutral-200");
-  display: block;
-  height: 300px;
-  object-fit: cover;
   width: 100%;
+  min-height: 300px;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .actions {
+    display: flex;
+    gap: get-spacing(1);
+
+    &:not(:only-child) {
+      margin-top: get-spacing(2);
+    }
+  }
 }

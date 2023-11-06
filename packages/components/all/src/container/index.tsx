@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import classNames from "classnames";
 
-type ContainerVariation = "small";
+type ContainerVariation = "small" | "big";
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   variation?: ContainerVariation | ContainerVariation[];
@@ -11,14 +11,13 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Container = ({
-  variation,
+  variation = [],
   spacingX = true,
   spacingY,
   className,
   ...otherProps
 }: Readonly<ContainerProps>): React.ReactElement => {
-  const computedVariations =
-    Array.isArray(variation) || variation === undefined ? variation : [variation];
+  const computedVariations = Array.isArray(variation) ? variation : [variation];
 
   return (
     <div

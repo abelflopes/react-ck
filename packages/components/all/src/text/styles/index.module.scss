@@ -55,6 +55,8 @@
 
 .huge {
   @include define-css-var(text, font-size, 60px);
+  @include define-css-var(text, line-height, 60px);
+  @include define-css-var(text, font-weight, 700);
 }
 
 .soft {

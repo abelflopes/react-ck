@@ -13,16 +13,16 @@
 .horizontal {
   @include define-css-var(container, max-width, 1300px);
   @include define-css-var(container, spacing-x, 50px);
-
-  .small {
-    color: red;
-  }
 }
 
 .vertical {
   @include define-css-var(container, spacing-y, 30px);
+}
 
-  .small {
-    @include define-css-var(container, spacing-y, 16px);
-  }
+.small {
+  @include define-css-var(container, spacing-y, 16px);
+}
+
+.big {
+  @include define-css-var(container, spacing-y, 60px);
 }
