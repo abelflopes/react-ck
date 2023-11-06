@@ -1,0 +1,37 @@
+import { Meta, Title, IconGallery, IconItem } from "@storybook/blocks";
+import { Icon } from "@rck/icon/src";
+import icons from "@rck/icon/src/icons";
+import { Input } from "@rck/input/src";
+import { ThemeProvider } from "@rck/theme/src";
+
+<Meta title="Core/Icons" />
+
+export function Demo ()  {
+  const [search, setSearch] = React.useState("");
+  
+  return (
+    <ThemeProvider>
+      <Input autofocus placeholder="Search" onChange={function (e) {
+        setSearch(e.target.value);
+      }}/>
+
+      <br />
+      <br />
+
+      <IconGallery>
+        {Object.keys(icons).filter(function (i) {
+          return i.includes(search)
+        }).map((icon) => (
+          <IconItem key={icon} name={icon}>
+            <Icon name={icon} />
+          </IconItem>
+        ))}
+      </IconGallery>
+    </ThemeProvider>
+
+)
+}
+
+# Icons
+
+<Demo />

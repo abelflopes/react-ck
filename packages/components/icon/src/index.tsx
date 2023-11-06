@@ -1,14 +1,10 @@
 import styles from "./styles/index.module.scss";
 /// React
 import React from "react";
-// Icons - https://react-icons.github.io/react-icons/icons?name=si
+// Icons
 import { type IconType } from "react-icons";
-import { BsBellFill } from "react-icons/bs";
+import icons from "./icons";
 
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-const icons = {
-  BsBellFill,
-};
 /* eslint-enable @typescript-eslint/no-unsafe-assignment */
 export interface IconProps extends Omit<IconType, "size"> {
   title?: string;
@@ -22,7 +18,9 @@ export const Icon = ({
   url,
   ...otherProps
 }: Readonly<IconProps>): React.ReactElement => {
-  const Icon: IconType = icons[name] as IconType;
+  console.log(name, icons[name]);
+
+  const Icon: IconType = icons[name];
   const IconElement = <Icon {...otherProps} title={title} size={16} />;
 
   const Component = url ? (

@@ -21,6 +21,6 @@ type Story = StoryObj<typeof Icon>;
 
 export const Default: Story = {
   args: {
-    name: "BsBellFill",
+    name: "bell-filled",
   },
 };
