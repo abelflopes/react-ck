@@ -6,7 +6,7 @@ import { sentenceCase } from "change-case";
 import { Input } from "@rck/input/src/index";
 
 const meta: Meta<typeof Input> = {
-  title: "Components/Input",
+  title: "Form Components/Input",
   component: Input,
   decorators: [
     (Story) => (
