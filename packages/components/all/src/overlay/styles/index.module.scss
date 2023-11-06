@@ -1,0 +1,17 @@
+@import "@rck/theme";
+@import "@rck/scss-utils";
+
+.root {
+  background-color: get-css-var(overlay, color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@each $variation in (dark, light) {
+  .#{$variation} {
+    @include define-css-var(overlay, color, get-color("overlay-#{$variation}"));
+  }
+}
