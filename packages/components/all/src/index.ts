@@ -15,3 +15,7 @@ export * from "./collapse";
 export * from "./list";
 
 export * from "./overlay";
+
+export * from "./data-table";
+
+export * from "./table";

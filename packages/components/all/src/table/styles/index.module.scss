@@ -1,0 +1,31 @@
+@import "@rck/theme";
+@import "@rck/scss-utils";
+
+.root {
+  @include font-base;
+  @include define-css-var(table, border-color, transparent);
+
+  border: solid 1px get-css-var(table, border-color);
+  border-radius: get-spacing(1);
+
+  td,
+  th {
+    padding: get-spacing();
+
+    &:not(:first-child) {
+      border-left: solid 1px get-css-var(table, border-color);
+    }
+  }
+
+  thead tr,
+  tr:not(:last-child) {
+    th,
+    td {
+      border-bottom: solid 1px get-css-var(table, border-color);
+    }
+  }
+}
+
+.bordered {
+  @include define-css-var(table, border-color, get-color(neutral-100));
+}
