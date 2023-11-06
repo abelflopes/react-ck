@@ -21,5 +21,5 @@
 }
 
 .bordered {
-  --border-color: #{get-color(neutral-100)};
+  @include define-css-var(divider, border-color, get-color(neutral-100));
 }
