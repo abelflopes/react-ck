@@ -12,6 +12,8 @@ export const defaultTheme: Theme = {
     "text-alt": "#323646",
     "neutral-100": "#edf2f7",
     "neutral-200": "#DBDEEB",
+    "overlay-light": "rgba(255,255,255, .2)",
+    "overlay-dark": "rgba(0,0,0,.2)",
   },
   font: {
     "family": "system-ui, sans-serif",

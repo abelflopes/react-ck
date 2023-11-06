@@ -7,6 +7,8 @@ export interface Theme {
     "text-alt": string;
     "neutral-100": string;
     "neutral-200": string;
+    "overlay-light": string;
+    "overlay-dark": string;
   };
   font: {
     "family": string;
