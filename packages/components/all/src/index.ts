@@ -13,3 +13,5 @@ export * from "./chip";
 export * from "./collapse";
 
 export * from "./list";
+
+export * from "./overlay";
