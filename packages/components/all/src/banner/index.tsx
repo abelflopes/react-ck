@@ -3,6 +3,7 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Container } from "../container";
 import { ThemeContextProvider } from "@rck/theme";
+import { Overlay } from "../overlay";
 
 export interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
   src: string;
@@ -28,6 +29,7 @@ export const Banner = ({
         {actions?.length && <div className={styles.actions}>{actions}</div>}
       </Container>
       <img className={styles.image} alt={alt} src={src} />
+      <Overlay />
     </div>
   </ThemeContextProvider>
 );
