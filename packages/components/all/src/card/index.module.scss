@@ -4,5 +4,5 @@
   border-radius: get-spacing(2);
   padding: get-spacing(4) get-spacing(3);
   border: solid 0 get-color(neutral-100);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 0 get-color(overlay-dark);
 }
