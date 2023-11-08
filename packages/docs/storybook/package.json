@@ -24,6 +24,7 @@
     "css-loader": "^6.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.5.2"
+    "storybook": "^7.5.2",
+    "storybook-addon-performance": "^0.17.1"
   }
 }

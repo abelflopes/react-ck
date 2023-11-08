@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
     "@whitespace/storybook-addon-html",
+    "storybook-addon-performance",
   ],
   framework: {
     name: "@storybook/react-webpack5",
