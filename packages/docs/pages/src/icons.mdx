@@ -8,30 +8,42 @@ import { ThemeProvider } from "@rck/theme/src";
 
 export function Demo ()  {
   const [search, setSearch] = React.useState("");
-  
-  return (
-    <ThemeProvider>
-      <Input autofocus placeholder="Search" onChange={function (e) {
-        setSearch(e.target.value);
-      }}/>
+  const filteredIcons = Object.keys(icons).filter(function (i) {
+    return i.includes(search)
+  });
 
-      <br />
-      <br />
+return (
 
-      <IconGallery>
-        {Object.keys(icons).filter(function (i) {
-          return i.includes(search)
-        }).map((icon) => (
-          <IconItem key={icon} name={icon}>
-            <Icon name={icon} />
-          </IconItem>
-        ))}
-      </IconGallery>
-    </ThemeProvider>
+  <ThemeProvider>
+  <Input autofocus placeholder="Search" onChange={function (e) {
+      setSearch(e.target.value);
+    }}
+  />
+
+    <br />
+    <br />
+
+
+    <IconGallery>
+      {filteredIcons.map((icon) => (
+        <IconItem key={icon} name={icon}>
+          <Icon name={icon} />
+        </IconItem>
+      ))}
+
+      {!filteredIcons.length && (
+        <p>No icons were found for "<b>{search}</b>".</p>
+      )}
+    </IconGallery>
+
+  </ThemeProvider>
 
 )
 }
 
 # Icons
+
+Welcome to our Icon Gallery! Explore a wide range of icons that you can use to enhance your user interfaces.
+Use the search bar below to find the perfect icon for your needs.
 
 <Demo />
