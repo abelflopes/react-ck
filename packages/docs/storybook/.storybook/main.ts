@@ -4,7 +4,12 @@ import { getWebpackConfig } from "@rck/webpack-config";
 
 const config: StorybookConfig = {
   stories: ["../../pages/src/**/*.mdx", "../../stories/src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-a11y"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-a11y",
+    "@whitespace/storybook-addon-html",
+  ],
   framework: {
     name: "@storybook/react-webpack5",
     options: {
