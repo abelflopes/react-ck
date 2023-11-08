@@ -43,6 +43,26 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    // https://storybook.js.org/addons/@storybook/addon-a11y
+    a11y: {
+      options: {
+        runOnly: {
+          type: "tag",
+          values: [
+            "wcag2a",
+            "wcag2aa",
+            "wcag2aaa",
+            "wcag21a",
+            "wcag21aa",
+            "wcag21aaa",
+            "wcag22aa",
+            "best-practice",
+            "wcag***",
+            "ACT",
+          ],
+        },
+      },
+    },
   },
 };
 
