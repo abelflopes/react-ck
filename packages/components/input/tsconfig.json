@@ -1,7 +1,4 @@
 {
   "extends": "@rck/typescript-config/tsconfig.json",
-  "compilerOptions": {
-    "noEmit": true
-  },
   "include": ["./**/*"]
 }
