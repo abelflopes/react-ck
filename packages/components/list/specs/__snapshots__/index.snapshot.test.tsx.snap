@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot List renders correctly 1`] = `
+<ul
+  className="root"
+>
+  <li
+    className="item"
+  >
+    List
+  </li>
+</ul>
+`;

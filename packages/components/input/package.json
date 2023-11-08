@@ -16,7 +16,8 @@
     "build": "NODE_ENV=production webpack",
     "test": "npx -y npm-run-all -s test:*",
     "test:unit": "jest --testPathPattern=\".unit.*\"",
-    "test:snapshot": "jest --testPathPattern=\".snapshot.*\""
+    "test:snapshot": "jest --testPathPattern=\".snapshot.*\"",
+    "test:snapshot:update": "jest --testPathPattern=\".snapshot.*\" -u"
   },
   "devDependencies": {
     "@rck/babel-config": "^1.0.0",

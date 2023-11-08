@@ -3,7 +3,7 @@ import { Button } from "../src/index";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-describe("Button", () => {
+describe("Unit Button", () => {
   test("renders correctly", async () => {
     const content = "Button";
     render(<Button>{content}</Button>);

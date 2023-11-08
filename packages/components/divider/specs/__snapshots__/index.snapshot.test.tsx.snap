@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Divider renders correctly 1`] = `
+<hr
+  className="root horizontal"
+>
+  Divider
+</hr>
+`;

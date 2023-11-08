@@ -4,7 +4,7 @@
 .root {
   @include font-base;
 
-  background: get-color(neutral-200);
+  background: get-color(neutral-100);
   color: get-color(neutral-900);
   border: none;
   width: 100%;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Table renders correctly 1`] = `
+<table
+  className="root"
+>
+  Table
+</table>
+`;

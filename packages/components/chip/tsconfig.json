@@ -1,0 +1,4 @@
+{
+  "extends": "@rck/typescript-config/tsconfig.json",
+  "include": ["./**/*"]
+}

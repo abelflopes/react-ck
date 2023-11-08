@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot DataTable renders correctly 1`] = `
+<table
+  className="root"
+  data-testid="table"
+>
+  <tbody>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        3
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Banner renders correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="root horizontal vertical big container"
+  >
+    Banner
+  </div>
+  <img
+    className="image"
+  />
+  <div
+    className="root dark"
+  />
+</div>
+`;
