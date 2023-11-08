@@ -3,7 +3,5 @@
 exports[`Snapshot Overlay renders correctly 1`] = `
 <div
   className="root dark"
->
-  Overlay
-</div>
+/>
 `;

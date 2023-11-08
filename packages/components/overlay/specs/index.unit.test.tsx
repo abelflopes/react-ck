@@ -5,9 +5,8 @@ import "@testing-library/jest-dom";
 
 describe("Unit Overlay", () => {
   test("renders correctly", async () => {
-    const content = "Overlay";
-    render(<Overlay skin="dark" />);
-    const find = await screen.findByText(content);
+    render(<Overlay skin="dark" data-testid="overlay" />);
+    const find = await screen.findByTestId("overlay");
     expect(find).toBeInTheDocument();
   });
 });

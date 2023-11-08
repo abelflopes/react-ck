@@ -4,7 +4,9 @@ exports[`Snapshot Collapse renders correctly 1`] = `
 <details>
   <summary
     className="header"
-  />
+  >
+    Header
+  </summary>
   Collapse
 </details>
 `;

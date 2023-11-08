@@ -11,6 +11,7 @@ exports[`Snapshot Banner renders correctly 1`] = `
   </div>
   <img
     className="image"
+    src="some-image-url"
   />
   <div
     className="root dark"
