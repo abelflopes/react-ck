@@ -18,6 +18,7 @@
     "lint": "eslint . --ext ts,tsx",
     "format": "prettier . --check --cache --ignore-unknown",
     "clean": "lerna exec -- rm -rf dist specs/coverage",
+    "clean:deps": "lerna exec -- rm -rf node_modules && rm -rf node_modules",
     "todo": "npx leasot '**/**' '.**/**' -i '**/node_modules/**' -S -x"
   },
   "devDependencies": {
