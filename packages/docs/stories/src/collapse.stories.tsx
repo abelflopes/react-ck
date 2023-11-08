@@ -2,7 +2,8 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { Collapse, Text } from "@rck/all/src";
+import { Collapse } from "@rck/collapse/src";
+import { Text } from "@rck/text/src";
 
 const meta: Meta<typeof Collapse> = {
   title: "Components/Collapse",

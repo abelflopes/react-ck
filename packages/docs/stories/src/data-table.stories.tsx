@@ -2,7 +2,8 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { Chip, DataTable } from "@rck/all/src";
+import { DataTable } from "@rck/data-table/src";
+import { Chip } from "@rck/chip/src";
 
 const meta: Meta<typeof DataTable> = {
   title: "Components/DataTable",

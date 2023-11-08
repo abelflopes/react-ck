@@ -1,7 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
-import { Overlay } from "@rck/all/src";
+import { Overlay } from "@rck/overlay/src";
 
 const meta: Meta<typeof Overlay> = {
   title: "Components/Overlay",

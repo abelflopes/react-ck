@@ -1,7 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
-import { Table } from "@rck/all/src";
+import { Table } from "@rck/table/src";
 
 const meta: Meta<typeof Table> = {
   title: "Components/Table",

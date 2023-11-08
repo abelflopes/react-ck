@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
 import { capitalCase } from "change-case";
-import { Banner, Text } from "@rck/all/src/index";
-import { Button } from "@rck/button/src/index";
+import { Banner } from "@rck/banner/src";
+import { Text } from "@rck/text/src";
+import { Button } from "@rck/button/src";
 
 const meta: Meta<typeof Banner> = {
   title: "Components/Banner",

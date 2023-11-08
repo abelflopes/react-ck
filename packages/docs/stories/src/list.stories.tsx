@@ -2,7 +2,8 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { List, Text } from "@rck/all/src";
+import { List } from "@rck/list/src";
+import { Text } from "@rck/text/src";
 
 const meta: Meta<typeof List> = {
   title: "Components/List",

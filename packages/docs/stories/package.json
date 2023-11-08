@@ -15,10 +15,20 @@
     "change-case": "^5.1.2"
   },
   "dependencies": {
-    "@rck/all": "^1.0.0",
+    "@rck/banner": "^1.0.0",
     "@rck/button": "^1.0.0",
+    "@rck/card": "^1.0.0",
+    "@rck/chip": "^1.0.0",
+    "@rck/collapse": "^1.0.0",
+    "@rck/container": "^1.0.0",
+    "@rck/data-table": "^1.0.0",
+    "@rck/divider": "^1.0.0",
     "@rck/icon": "^1.0.0",
     "@rck/input": "^1.0.0",
+    "@rck/list": "^1.0.0",
+    "@rck/overlay": "^1.0.0",
+    "@rck/table": "^1.0.0",
+    "@rck/text": "^1.0.0",
     "@rck/theme": "^1.0.0"
   }
 }

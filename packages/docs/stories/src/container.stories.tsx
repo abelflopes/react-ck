@@ -2,7 +2,8 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { Container, Text } from "@rck/all/src/index";
+import { Container } from "@rck/container/src";
+import { Text } from "@rck/text/src";
 
 const meta: Meta<typeof Container> = {
   title: "Components/Container",

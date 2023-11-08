@@ -1,7 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
-import { Divider } from "@rck/all/src";
+import { Divider } from "@rck/divider/src";
 
 const meta: Meta<typeof Divider> = {
   title: "Components/Divider",

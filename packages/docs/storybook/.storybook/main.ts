@@ -30,7 +30,13 @@ const config: StorybookConfig = {
   // Reduce log noise
   logLevel: "warn",
   // Copy assets to app dist public folder
-  staticDirs: ["../public"],
+  staticDirs: [
+    "../../pages/assets",
+    {
+      from: "../../../../docs/assets",
+      to: "/docs/assets",
+    },
+  ],
   // Extend / verride webpack config
   async webpackFinal(config) {
     const packagesConfig = getWebpackConfig();
