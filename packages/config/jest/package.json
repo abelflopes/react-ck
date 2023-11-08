@@ -13,7 +13,7 @@
     "url": "git+https://github.com/abelflopes/rck.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
