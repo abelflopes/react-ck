@@ -35,7 +35,7 @@ export const Text = ({
         {
           [`${styles.margin}`]: margin,
         },
-        computedVariations?.filter((i) => i !== "inverted").map((i) => styles[i]),
+        computedVariations?.filter((index) => index !== "inverted").map((index) => styles[index]),
         {
           [`${styles.inverted}`]: inverted && !computedVariations?.includes("inverted"),
         },

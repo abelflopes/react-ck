@@ -5,7 +5,6 @@ import React from "react";
 import { type IconType } from "react-icons";
 import icons from "./icons";
 
-/* eslint-enable @typescript-eslint/no-unsafe-assignment */
 export interface IconProps extends Omit<IconType, "size"> {
   title?: string;
   url?: string;
@@ -18,10 +17,8 @@ export const Icon = ({
   url,
   ...otherProps
 }: Readonly<IconProps>): React.ReactElement => {
-  console.log(name, icons[name]);
-
   const Icon: IconType = icons[name];
-  const IconElement = <Icon {...otherProps} title={title} size={16} />;
+  const IconElement = (<Icon {...otherProps} title={title} size={16} />) as React.ReactElement;
 
   const Component = url ? (
     <a href={url} title={title} target="_blank" rel="noreferrer" className={styles.root}>

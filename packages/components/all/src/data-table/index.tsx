@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Table, type TableProps } from "..";
+import { Table, type TableProps } from "../table";
 
 type TableData = Array<Record<string, React.ReactNode>>;
 
@@ -15,9 +15,12 @@ export const DataTable = <T extends TableData>({
 }: Readonly<DataTableProps<T>>): React.ReactElement => {
   const keys = useMemo(
     () =>
-      [...data.flatMap((i) => Object.keys(i)), ...(headers ? Object.keys(headers) : [])]
-        // remove repeated
-        .reduce<string[]>((prev, curr) => [...prev, ...(prev.includes(curr) ? [] : [curr])], []),
+      [...data.flatMap((index) => Object.keys(index)), ...(headers ? Object.keys(headers) : [])]
+        // Remove repeated
+        .reduce<string[]>(
+          (previous, current) => [...previous, ...(previous.includes(current) ? [] : [current])],
+          [],
+        ),
     [data, headers],
   );
 

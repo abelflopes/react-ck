@@ -13,11 +13,11 @@ export interface ThemeProviderProps {
 type MappedTheme = Record<string, Record<string, number>>;
 
 export const ThemeProvider = ({
-  // target, // TODO: add target flexibility
+  // Target, // TODO: add target flexibility
   theme = defaultTheme,
   children,
 }: Readonly<ThemeProviderProps>): React.ReactElement => {
-  const themeCssVars = useMemo<React.CSSProperties>(() => {
+  const themeCssVariables = useMemo<React.CSSProperties>(() => {
     return Object.fromEntries(
       Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
         // Sync prefixing with /packages/utils/scss/src/_functions.scss
@@ -32,7 +32,7 @@ export const ThemeProvider = ({
       value={{
         theme,
       }}>
-      <div style={themeCssVars}>{children}</div>
+      <div style={themeCssVariables}>{children}</div>
     </ThemeContextProvider>
   );
 };

@@ -28,7 +28,7 @@ export const Default: Story = {
   args: {
     skin: "bordered",
     headers: { [col1]: faker.lorem.word(), [col2]: faker.lorem.word(), [col3]: faker.lorem.word() },
-    data: Object.keys(Array.from(Array(10))).map((i) => ({
+    data: Object.keys(Array.from(Array.from({ length: 10 }))).map((index) => ({
       [col1]: faker.date.future().toLocaleDateString(),
       [col2]: faker.company.buzzNoun(),
       [col3]: <Chip>{faker.commerce.price()}</Chip>,

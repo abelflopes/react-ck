@@ -24,7 +24,7 @@ export const Container = ({
       className={classNames(
         styles.root,
         { [`${styles.horizontal}`]: spacingX, [`${styles.vertical}`]: spacingY },
-        computedVariations?.map((i) => styles[i]),
+        computedVariations?.map((index) => styles[index]),
         className,
       )}
       {...otherProps}

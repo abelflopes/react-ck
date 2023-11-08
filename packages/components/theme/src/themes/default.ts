@@ -1,6 +1,6 @@
 import type { Theme } from "../types";
 
-// colorPrimary: "#783192",
+// ColorPrimary: "#783192",
 // colorSecondary: "#59BCC8",
 // textColor: "#1E2232",
 

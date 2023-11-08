@@ -23,8 +23,19 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
   return {
     mode,
     output: {
+      // Module: true,
       filename: "index.js",
+      library: {
+        type: "module",
+      },
     },
+    experiments: {
+      outputModule: true,
+    },
+    optimization: {
+      minimize: false,
+    },
+    target: "es2020",
     module: {
       rules: [
         {
@@ -52,8 +63,8 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
         },
         {
           test: /\.tsx?$/,
-          loader: "ts-loader",
           exclude: /node_modules/,
+          loader: "ts-loader",
           options: {
             configFile: "tsconfig.build.json",
             compilerOptions: {
@@ -67,6 +78,7 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
       extensions: [".tsx", ".ts", ".js"],
     },
     externals: ["react"],
+    externalsType: "module",
     stats: mode === "production" ? "normal" : "minimal",
   };
 };
