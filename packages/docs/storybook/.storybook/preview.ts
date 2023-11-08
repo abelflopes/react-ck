@@ -49,9 +49,11 @@ const preview: Preview = {
     // https://storybook.js.org/addons/@storybook/addon-a11y
     a11y: {
       options: {
+        // https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples
         runOnly: {
           type: "tag",
           values: [
+            // https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#axe-core-tags
             "wcag2a",
             "wcag2aa",
             "wcag2aaa",

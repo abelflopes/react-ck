@@ -1,25 +1,34 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
+import { configureStory } from "@rck/story-config";
+import readme from "@rck/table/README.md";
 import { Table } from "@rck/table/src";
 
+type Story = StoryObj<typeof Table>;
+
 const meta: Meta<typeof Table> = {
-  title: "Components/Table",
-  component: Table,
-  decorators: [
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
+  title: "Generic/Table",
+  ...configureStory(
+    Table,
+    {
+      decorators: [
+        (Story) => (
+          <ThemeProvider>
+            <Story />
+          </ThemeProvider>
+        ),
+      ],
+    },
+    {
+      readme,
+    },
+  ),
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Table>;
-
-export const Default: Story = {
+export const Component: Story = {
   args: {
     skin: "bordered",
     children: (

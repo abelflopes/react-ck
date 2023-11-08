@@ -3,28 +3,37 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
 import { capitalCase } from "change-case";
-import { Banner } from "@rck/banner/src";
 import { Text } from "@rck/text/src";
 import { Button } from "@rck/button/src";
+import { configureStory } from "@rck/story-config";
+import readme from "@rck/banner/README.md";
+import { Banner } from "@rck/banner/src";
+
+type Story = StoryObj<typeof Banner>;
 
 const meta: Meta<typeof Banner> = {
-  title: "Components/Banner",
-  component: Banner,
-  parameters: {
-    layout: "fullscreen",
-  },
-  decorators: [
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
+  title: "Layout/Banner",
+  ...configureStory(
+    Banner,
+    {
+      parameters: {
+        layout: "fullscreen",
+      },
+      decorators: [
+        (Story) => (
+          <ThemeProvider>
+            <Story />
+          </ThemeProvider>
+        ),
+      ],
+    },
+    {
+      readme,
+    },
+  ),
 };
 
 export default meta;
-
-type Story = StoryObj<typeof Banner>;
 
 export const WithText: Story = {
   args: {

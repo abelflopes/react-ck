@@ -3,26 +3,36 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
+import { configureStory } from "@rck/story-config";
+import readme from "@rck/button/README.md";
 import { Button } from "@rck/button/src";
 
+type Story = StoryObj<typeof Button>;
+
 const meta: Meta<typeof Button> = {
-  title: "Components/Button",
-  component: Button,
-  decorators: [
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
+  title: "Generic/Button",
+  ...configureStory(
+    Button,
+    {
+      decorators: [
+        (Story) => (
+          <ThemeProvider>
+            <Story />
+          </ThemeProvider>
+        ),
+      ],
+    },
+    {
+      readme,
+    },
+  ),
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
-
-export const Default: Story = {
+export const Primary: Story = {
   args: {
+    skin: "primary",
     children: sentenceCase(faker.lorem.words({ min: 1, max: 3 })),
   },
 };

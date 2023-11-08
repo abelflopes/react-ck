@@ -2,29 +2,35 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { Container } from "@rck/container/src";
 import { Text } from "@rck/text/src";
+import { configureStory } from "@rck/story-config";
+import readme from "@rck/container/README.md";
+import { Container } from "@rck/container/src";
+
+type Story = StoryObj<typeof Container>;
 
 const meta: Meta<typeof Container> = {
-  title: "Components/Container",
-  component: Container,
-  parameters: {
-    layout: "fullscreen",
-  },
-  decorators: [
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
+  title: "Layout/Container",
+  ...configureStory(
+    Container,
+    {
+      decorators: [
+        (Story) => (
+          <ThemeProvider>
+            <Story />
+          </ThemeProvider>
+        ),
+      ],
+    },
+    {
+      readme,
+    },
+  ),
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Container>;
-
-export const Default: Story = {
+export const Component: Story = {
   args: {
     spacingX: true,
     spacingY: true,

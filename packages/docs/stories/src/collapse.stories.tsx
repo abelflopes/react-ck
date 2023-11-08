@@ -2,26 +2,35 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { Collapse } from "@rck/collapse/src";
 import { Text } from "@rck/text/src";
+import { configureStory } from "@rck/story-config";
+import readme from "@rck/collapse/README.md";
+import { Collapse } from "@rck/collapse/src";
+
+type Story = StoryObj<typeof Collapse>;
 
 const meta: Meta<typeof Collapse> = {
-  title: "Components/Collapse",
-  component: Collapse,
-  decorators: [
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
+  title: "Generic/Collapse",
+  ...configureStory(
+    Collapse,
+    {
+      decorators: [
+        (Story) => (
+          <ThemeProvider>
+            <Story />
+          </ThemeProvider>
+        ),
+      ],
+    },
+    {
+      readme,
+    },
+  ),
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Collapse>;
-
-export const Default: Story = {
+export const Component: Story = {
   parameters: {
     layout: "padded",
   },

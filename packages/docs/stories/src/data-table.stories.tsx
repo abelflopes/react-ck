@@ -2,30 +2,39 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@rck/theme";
 import { faker } from "@faker-js/faker";
-import { DataTable } from "@rck/data-table/src";
 import { Chip } from "@rck/chip/src";
+import { configureStory } from "@rck/story-config";
+import readme from "@rck/data-table/README.md";
+import { DataTable } from "@rck/data-table/src";
+
+type Story = StoryObj<typeof DataTable>;
 
 const meta: Meta<typeof DataTable> = {
-  title: "Components/DataTable",
-  component: DataTable,
-  decorators: [
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
+  title: "Generic/DataTable",
+  ...configureStory(
+    DataTable,
+    {
+      decorators: [
+        (Story) => (
+          <ThemeProvider>
+            <Story />
+          </ThemeProvider>
+        ),
+      ],
+    },
+    {
+      readme,
+    },
+  ),
 };
 
 export default meta;
-
-type Story = StoryObj<typeof DataTable>;
 
 const col1 = faker.lorem.word();
 const col2 = faker.lorem.word();
 const col3 = faker.lorem.word();
 
-export const Default: Story = {
+export const Component: Story = {
   args: {
     skin: "bordered",
     headers: { [col1]: faker.lorem.word(), [col2]: faker.lorem.word(), [col3]: faker.lorem.word() },
