@@ -9,9 +9,7 @@ const preview: Preview = {
     children: {
       description: "Content Slot",
       control: false,
-    },
-    header: {
-      control: false,
+      if: { arg: "children", truthy: true },
     },
   },
   parameters: {
