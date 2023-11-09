@@ -1,0 +1,70 @@
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import { ThemeProvider } from "@react-ck/theme";
+import { faker } from "@faker-js/faker";
+import { configureStory } from "@react-ck/story-config";
+import readme from "@react-ck/grid/README.md";
+import { GridContainer, GridColumn } from "@react-ck/grid/src";
+import { Card } from "@react-ck/card";
+
+type Story = StoryObj<typeof GridContainer>;
+
+const meta: Meta<typeof GridContainer> = {
+  title: "Layout/Grid",
+  ...configureStory(
+    GridContainer,
+    {
+      decorators: [
+        (Story) => (
+          <ThemeProvider>
+            <Story />
+          </ThemeProvider>
+        ),
+      ],
+    },
+    {
+      readme,
+    },
+  ),
+};
+
+export default meta;
+
+export const Component: Story = {
+  args: {
+    children: (
+      <>
+        <GridColumn size={2}>
+          <Card>{faker.lorem.sentence(2)}</Card>
+        </GridColumn>
+        <GridColumn size={2}>
+          <Card>{faker.lorem.sentence(2)}</Card>
+        </GridColumn>
+        <GridColumn size={3}>
+          <Card>{faker.lorem.sentence(5)}</Card>
+        </GridColumn>
+        <GridColumn size={5}>
+          <Card>{faker.lorem.sentence(10)}</Card>
+        </GridColumn>
+        <GridColumn size={6}>
+          <Card>{faker.lorem.sentence(10)}</Card>
+        </GridColumn>
+        <GridColumn size={4}>
+          <Card>{faker.lorem.sentence(6)}</Card>
+        </GridColumn>
+        <GridColumn size={2}>
+          <Card>{faker.lorem.sentence(2)}</Card>
+        </GridColumn>
+        <GridColumn size={2}>
+          <Card>{faker.lorem.sentence(1)}</Card>
+        </GridColumn>
+        <GridColumn size="auto">
+          <Card>{faker.lorem.sentence(2)}</Card>
+        </GridColumn>
+        <GridColumn size={2}>
+          <Card>{faker.lorem.sentence(1)}</Card>
+        </GridColumn>
+      </>
+    ),
+  },
+};

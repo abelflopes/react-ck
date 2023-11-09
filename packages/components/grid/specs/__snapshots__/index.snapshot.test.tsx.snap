@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot GridColumn renders correctly 1`] = `
+<div
+  className="root size_auto"
+  style={
+    {
+      "--columns": 0,
+      "--size": "auto",
+    }
+  }
+/>
+`;
+
+exports[`Snapshot GridContainer renders correctly 1`] = `
+<div
+  className="root wrap"
+/>
+`;

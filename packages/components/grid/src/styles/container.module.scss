@@ -1,0 +1,15 @@
+@import "@react-ck/theme";
+@import "@react-ck/scss-utils";
+
+.root {
+  @include define-css-var(divider, flex-wrap, none);
+  @include define-css-var(grid-container, gap, get-spacing(2));
+
+  display: flex;
+  gap: get-css-var(grid-container, gap);
+  flex-wrap: get-css-var(grid-container, flex-wrap);
+}
+
+.wrap {
+  @include define-css-var(grid-container, flex-wrap, wrap);
+}

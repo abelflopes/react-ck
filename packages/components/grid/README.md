@@ -1,0 +1,11 @@
+# RCK | React Grid Component
+
+The React Grid component features a robust 12-column system, providing developers with a flexible framework to create responsive and well-structured layouts. This system allows elements to be precisely positioned within the grid, offering granular control over their placement and alignment. With the ability to utilize these 12 columns, developers can design layouts that are visually balanced and optimized for different screen sizes.
+
+Moreover, the React Grid component offers the convenience of both wrapping and nowrap behaviors. When set to wrap, the grid intelligently adjusts its content, allowing items to flow into new rows as needed. This ensures that the layout gracefully accommodates varying amounts of content without sacrificing its structure. Conversely, the nowrap option prevents items from wrapping onto new lines, maintaining a compact and streamlined appearance.
+
+By combining the 12-column system with the flexibility to wrap or nowrap elements, developers can effortlessly create responsive designs that adapt to diverse devices and content lengths. This versatile component empowers developers to craft visually appealing interfaces that maintain consistency and readability across different screen sizes, enhancing the overall user experience.
+
+### Installation 
+
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/grid` or `yarn add @react-ck/grid`.
