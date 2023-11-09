@@ -25,11 +25,14 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build config packages
+        run: npm run prestart
 
       - name: Run Tests
         run: npm run test
+
+      - name: Build
+        run: npm run build
 
       - name: Run Code Checks
         run: npm run lint
