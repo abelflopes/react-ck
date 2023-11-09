@@ -42,14 +42,14 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
-      - name: Verify NPM Access
-        run: npm whoami
-
       # if publish to npm
       - name: Setup npm auth
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
           echo "access=public" >> .npmrc
+
+      - name: Verify NPM Access
+        run: npm whoami
 
       # if publish to github
       # - name: Setup npm auth
