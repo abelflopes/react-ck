@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Abel Lopes (@abelflopes)",
   "description": "Monorepo PoC/Template with independent versioning for the whole project and its packages",
-  "homepage": "https://github.com/abelflopes/rck#readme",
+  "homepage": "https://github.com/abelflopes/rck",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/rck.git"
