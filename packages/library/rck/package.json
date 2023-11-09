@@ -1,0 +1,10 @@
+{
+  "name": "rck",
+  "private": false,
+  "version": "1.0.0",
+  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/library/rck#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/rck.git"
+  }
+}
