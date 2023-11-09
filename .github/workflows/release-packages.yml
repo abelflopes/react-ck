@@ -42,6 +42,9 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
+      - name: Verify NPM Access
+        run: npm whoami
+
       # if publish to npm
       - name: Setup npm auth
         run: |
