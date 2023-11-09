@@ -1,6 +1,6 @@
 {
   "name": "@abelflopes/rck",
-  "private": false,
+  "private": true,
   "version": "1.0.0",
   "author": "Abel Lopes (@abelflopes)",
   "description": "Monorepo PoC/Template with independent versioning for the whole project and its packages",
