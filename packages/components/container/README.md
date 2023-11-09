@@ -4,4 +4,4 @@ The Container component in React is a fundamental building block that provides s
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/container` or `yarn add @rck/container`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/container` or `yarn add @react-ck/container`.

@@ -25,5 +25,5 @@
 // and /packages/utils/scss/src/_mixins.scss
 // define-css-var
 @function get-css-var($scope, $name) {
-  @return var(--rck-#{$scope}-#{$name});
+  @return var(--react-ck-#{$scope}-#{$name});
 }

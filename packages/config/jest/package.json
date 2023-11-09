@@ -1,5 +1,5 @@
 {
-  "name": "@rck/jest-config",
+  "name": "@react-ck/jest-config",
   "private": true,
   "version": "1.0.0",
   "main": "dist/index.js",
@@ -7,17 +7,17 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/config/jest#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/config/jest#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelflopes/rck.git"
+    "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@rck/typescript-config": "^1.0.0"
+    "@react-ck/typescript-config": "^1.0.0"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.1.4",

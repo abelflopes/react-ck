@@ -1,5 +1,5 @@
 @import "theme-type";
-@import "@rck/scss-utils";
+@import "@react-ck/scss-utils";
 
 @function get-color($name) {
   $colors: map-get-strict($theme-type, "color");

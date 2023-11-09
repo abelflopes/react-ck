@@ -6,4 +6,4 @@ With the React Overlay component, developers can create visually appealing overl
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/overlay` or `yarn add @rck/overlay`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/overlay` or `yarn add @react-ck/overlay`.

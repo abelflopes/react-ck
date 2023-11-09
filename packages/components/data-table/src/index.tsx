@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Table, type TableProps } from "@rck/table";
+import { Table, type TableProps } from "@react-ck/table";
 
 /** Type representing the data structure for the DataTable component  */
 type TableData = Array<Record<string, React.ReactNode>>;

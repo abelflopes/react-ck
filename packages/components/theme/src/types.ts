@@ -1,4 +1,4 @@
-// Keep in sync with /Users/alopes/Desktop/dev-abel/rck/packages/components/theme/src/styles/_theme-type.scss
+// Keep in sync with /Users/alopes/Desktop/dev-abel/react-ck/packages/components/theme/src/styles/_theme-type.scss
 export interface Theme {
   color: {
     "highlight-primary": string;

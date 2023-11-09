@@ -22,7 +22,7 @@ export const ThemeProvider = ({
       Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
         // Sync prefixing with /packages/utils/scss/src/_functions.scss
         // get-css-var
-        Object.entries(data).map(([key, value]) => ["--rck-" + context + "-" + key, value]),
+        Object.entries(data).map(([key, value]) => ["--react-ck-" + context + "-" + key, value]),
       ),
     );
   }, [theme]);

@@ -1,5 +1,5 @@
 import { Preview } from "@storybook/react";
-import { defaultTheme } from "@rck/theme/src";
+import { defaultTheme } from "@react-ck/theme/src";
 import { withPerformance } from "storybook-addon-performance";
 
 export const decorators = [withPerformance];

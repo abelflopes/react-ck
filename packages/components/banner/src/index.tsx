@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { Container } from "@rck/container";
-import { ThemeContextProvider } from "@rck/theme";
-import { Overlay } from "@rck/overlay";
+import { Container } from "@react-ck/container";
+import { ThemeContextProvider } from "@react-ck/theme";
+import { Overlay } from "@react-ck/overlay";
 
 export interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
   /** The source URL of the banner image */

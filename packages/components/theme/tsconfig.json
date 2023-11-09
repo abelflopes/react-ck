@@ -1,4 +1,4 @@
 {
-  "extends": "@rck/typescript-config/tsconfig.json",
+  "extends": "@react-ck/typescript-config/tsconfig.json",
   "include": ["./**/*"]
 }

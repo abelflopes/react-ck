@@ -10,4 +10,4 @@ In summary, the React Divider component is a lightweight and essential tool for 
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/divider` or `yarn add @rck/divider`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/divider` or `yarn add @react-ck/divider`.

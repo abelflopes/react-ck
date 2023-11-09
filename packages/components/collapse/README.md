@@ -12,4 +12,4 @@ In summary, the React Collapse component streamlines the presentation of extensi
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/collapse` or `yarn add @rck/collapse`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/collapse` or `yarn add @react-ck/collapse`.

@@ -9,4 +9,4 @@ By incorporating `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>` elements as ch
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/table` or `yarn add @rck/table`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/table` or `yarn add @react-ck/table`.

@@ -1,11 +1,11 @@
 {
-  "name": "@rck/stories-pages",
+  "name": "@react-ck/stories-pages",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/docs/pages#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/docs/pages#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelflopes/rck.git"
+    "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "devDependencies": {
     "@storybook/blocks": "^7.5.1"

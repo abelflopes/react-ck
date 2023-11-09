@@ -4,7 +4,7 @@ import { create } from "@storybook/theming";
 const theme = create({
   base: "light",
   brandTitle: "RCK",
-  brandUrl: "https://github.com/abelflopes/rck",
+  brandUrl: "https://github.com/abelflopes/react-ck",
   brandImage: "./logo.svg",
   colorPrimary: "#783192",
   colorSecondary: "#59BCC8",

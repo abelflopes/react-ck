@@ -8,4 +8,4 @@ With its lightweight and efficient implementation, the React Icon component enha
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/icon` or `yarn add @rck/icon`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/icon` or `yarn add @react-ck/icon`.

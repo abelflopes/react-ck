@@ -10,4 +10,4 @@ In summary, the React Chip component simplifies the process of displaying concis
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/chip` or `yarn add @rck/chip`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/chip` or `yarn add @react-ck/chip`.

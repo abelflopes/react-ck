@@ -10,4 +10,4 @@ In summary, the React Table component offers a pragmatic solution for displaying
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/data-table` or `yarn add @rck/data-table`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/data-table` or `yarn add @react-ck/data-table`.

@@ -1,9 +1,9 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@rck/theme";
-import { configureStory } from "@rck/story-config";
-import readme from "@rck/overlay/README.md";
-import { Overlay } from "@rck/overlay/src";
+import { ThemeProvider } from "@react-ck/theme";
+import { configureStory } from "@react-ck/story-config";
+import readme from "@react-ck/overlay/README.md";
+import { Overlay } from "@react-ck/overlay/src";
 
 type Story = StoryObj<typeof Overlay>;
 

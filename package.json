@@ -1,18 +1,18 @@
 {
-  "name": "@abelflopes/rck",
+  "name": "@abelflopes/react-ck",
   "private": true,
   "version": "1.0.0",
   "author": "Abel Lopes (@abelflopes)",
   "description": "Monorepo PoC/Template with independent versioning for the whole project and its packages",
-  "homepage": "https://github.com/abelflopes/rck",
+  "homepage": "https://github.com/abelflopes/react-ck",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelflopes/rck.git"
+    "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
     "prepare": "husky install",
-    "prestart": "lerna run build --scope @rck/*config*",
-    "start": "lerna run start --parallel --stream --ignore @rck/*config*",
+    "prestart": "lerna run build --scope @react-ck/*config*",
+    "start": "lerna run start --parallel --stream --ignore @react-ck/*config*",
     "build": "lerna run build",
     "test": "npx npm-run-all --sequential test:*",
     "test:unit": "lerna run test:unit --parallel",

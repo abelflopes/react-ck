@@ -1,5 +1,5 @@
 {
-  "name": "@rck/theme",
+  "name": "@react-ck/theme",
   "private": false,
   "version": "1.0.0",
   "main": "dist/index.js",
@@ -9,24 +9,24 @@
     "/dist",
     "/src/styles"
   ],
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/components/theme#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/theme#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelflopes/rck.git"
+    "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@rck/typescript-config": "^1.0.0",
-    "@rck/webpack-config": "^1.0.0",
+    "@react-ck/typescript-config": "^1.0.0",
+    "@react-ck/webpack-config": "^1.0.0",
     "@types/react": "^18.2.33"
   },
   "peerDependencies": {
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@rck/scss-utils": "^1.0.0"
+    "@react-ck/scss-utils": "^1.0.0"
   }
 }

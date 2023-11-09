@@ -1,38 +1,38 @@
 {
-  "name": "@rck/stories-docs",
+  "name": "@react-ck/stories-docs",
   "private": true,
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/docs/stories#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/docs/stories#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelflopes/rck.git"
+    "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
     "lint:typescript": "tsc --noEmit"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",
-    "@rck/story-config": "^1.0.0",
-    "@rck/typescript-config": "^1.0.0",
+    "@react-ck/story-config": "^1.0.0",
+    "@react-ck/typescript-config": "^1.0.0",
     "change-case": "^5.1.2"
   },
   "dependencies": {
-    "@rck/banner": "^1.0.0",
-    "@rck/button": "^1.0.0",
-    "@rck/card": "^1.0.0",
-    "@rck/chip": "^1.0.0",
-    "@rck/collapse": "^1.0.0",
-    "@rck/container": "^1.0.0",
-    "@rck/data-table": "^1.0.0",
-    "@rck/divider": "^1.0.0",
-    "@rck/icon": "^1.0.0",
-    "@rck/input": "^1.0.0",
-    "@rck/list": "^1.0.0",
-    "@rck/overlay": "^1.0.0",
-    "@rck/table": "^1.0.0",
-    "@rck/text": "^1.0.0",
-    "@rck/theme": "^1.0.0"
+    "@react-ck/banner": "^1.0.0",
+    "@react-ck/button": "^1.0.0",
+    "@react-ck/card": "^1.0.0",
+    "@react-ck/chip": "^1.0.0",
+    "@react-ck/collapse": "^1.0.0",
+    "@react-ck/container": "^1.0.0",
+    "@react-ck/data-table": "^1.0.0",
+    "@react-ck/divider": "^1.0.0",
+    "@react-ck/icon": "^1.0.0",
+    "@react-ck/input": "^1.0.0",
+    "@react-ck/list": "^1.0.0",
+    "@react-ck/overlay": "^1.0.0",
+    "@react-ck/table": "^1.0.0",
+    "@react-ck/text": "^1.0.0",
+    "@react-ck/theme": "^1.0.0"
   }
 }

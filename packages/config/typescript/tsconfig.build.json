@@ -1,5 +1,5 @@
 {
-  "extends": "@rck/typescript-config/tsconfig.json",
+  "extends": "@react-ck/typescript-config/tsconfig.json",
   "compilerOptions": {
     "target": "ES2020",
     "module": "ES2020",

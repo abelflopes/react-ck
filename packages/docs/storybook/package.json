@@ -1,11 +1,11 @@
 {
-  "name": "@rck/storybook-docs",
+  "name": "@react-ck/storybook-docs",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/docs/storybook#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/docs/storybook#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelflopes/rck.git"
+    "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
     "start": "storybook dev -p 6006",
@@ -13,8 +13,8 @@
     "lint:typescript": "tsc --noEmit"
   },
   "devDependencies": {
-    "@rck/typescript-config": "^1.0.0",
-    "@rck/webpack-config": "^1.0.0",
+    "@react-ck/typescript-config": "^1.0.0",
+    "@react-ck/webpack-config": "^1.0.0",
     "@storybook/addon-a11y": "^7.5.3",
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-links": "^7.5.2",

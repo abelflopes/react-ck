@@ -1,5 +1,5 @@
 {
-  "extends": "@rck/typescript-config/tsconfig.build.json",
+  "extends": "@react-ck/typescript-config/tsconfig.build.json",
   "compilerOptions": {
     "outDir": "./dist"
   },

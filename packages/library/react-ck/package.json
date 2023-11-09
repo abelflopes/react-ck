@@ -1,0 +1,10 @@
+{
+  "name": "react-ck",
+  "private": false,
+  "version": "1.0.0",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/library/react-ck#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/react-ck.git"
+  }
+}

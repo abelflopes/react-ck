@@ -1,5 +1,5 @@
 {
-  "name": "@rck/babel-config",
+  "name": "@react-ck/babel-config",
   "private": true,
   "version": "1.0.0",
   "main": "dist/index.js",
@@ -7,17 +7,17 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/rck/tree/master/packages/config/babel#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/config/babel#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelflopes/rck.git"
+    "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@rck/typescript-config": "^1.0.0"
+    "@react-ck/typescript-config": "^1.0.0"
   },
   "dependencies": {
     "@babel/preset-env": "^7.22.7",

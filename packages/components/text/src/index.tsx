@@ -3,7 +3,7 @@ import styles from "./styles/index.module.scss";
 import React, { type ReactHTML, useMemo } from "react";
 // Utils
 import classNames from "classnames";
-import { useThemeContext } from "@rck/theme";
+import { useThemeContext } from "@react-ck/theme";
 
 export type TextVariation = "small" | "bold" | "link" | "link_hidden" | "inverted";
 

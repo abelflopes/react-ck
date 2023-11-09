@@ -1,6 +1,6 @@
 import { StorybookConfig } from "@storybook/react-webpack5";
 import { ProgressPlugin } from "webpack";
-import { getWebpackConfig } from "@rck/webpack-config";
+import { getWebpackConfig } from "@react-ck/webpack-config";
 
 const config: StorybookConfig = {
   stories: ["../../pages/src/**/*.mdx", "../../stories/src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],

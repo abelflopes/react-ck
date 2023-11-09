@@ -1,3 +1,3 @@
 module.exports = {
-  extends: "@rck/babel-config",
+  extends: "@react-ck/babel-config",
 };

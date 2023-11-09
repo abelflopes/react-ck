@@ -12,4 +12,4 @@ In summary, the React Input component is a crucial element for creating interact
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/input` or `yarn add @rck/input`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/input` or `yarn add @react-ck/input`.

@@ -1,9 +1,9 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@rck/theme";
-import { configureStory } from "@rck/story-config";
-import readme from "@rck/table/README.md";
-import { Table } from "@rck/table/src";
+import { ThemeProvider } from "@react-ck/theme";
+import { configureStory } from "@react-ck/story-config";
+import readme from "@react-ck/table/README.md";
+import { Table } from "@react-ck/table/src";
 
 type Story = StoryObj<typeof Table>;
 

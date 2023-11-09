@@ -1,4 +1,4 @@
-import { getWebpackConfig } from "@rck/webpack-config";
+import { getWebpackConfig } from "@react-ck/webpack-config";
 import packageJson from "./package.json";
 
 export default getWebpackConfig({

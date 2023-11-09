@@ -4,4 +4,4 @@ The Card component is a versatile and essential building block for creating dyna
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/card` or `yarn add @rck/card`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/card` or `yarn add @react-ck/card`.

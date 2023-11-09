@@ -6,4 +6,4 @@ With the React List component, developers can effortlessly handle arrays of data
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/list` or `yarn add @rck/list`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/list` or `yarn add @react-ck/list`.

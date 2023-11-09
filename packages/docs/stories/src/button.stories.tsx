@@ -1,11 +1,11 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@rck/theme";
+import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
-import { configureStory } from "@rck/story-config";
-import readme from "@rck/button/README.md";
-import { Button } from "@rck/button/src";
+import { configureStory } from "@react-ck/story-config";
+import readme from "@react-ck/button/README.md";
+import { Button } from "@react-ck/button/src";
 
 type Story = StoryObj<typeof Button>;
 
