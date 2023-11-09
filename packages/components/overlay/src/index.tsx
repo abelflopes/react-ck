@@ -3,6 +3,7 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 export interface OverlayProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
+  /** Specifies the visual style of the overlay  */
   skin?: "light" | "dark";
 }
 

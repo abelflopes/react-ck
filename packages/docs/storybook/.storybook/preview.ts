@@ -8,11 +8,25 @@ const preview: Preview = {
   argTypes: {
     children: {
       description: "Content Slot",
-      control: false,
+      // control: false,
+      control: "text",
       if: { arg: "children", truthy: true },
+    },
+    icon: {
+      control: "text",
+      if: { arg: "icon", truthy: true },
+    },
+    header: {
+      control: "text",
+      if: { arg: "header", truthy: true },
     },
   },
   parameters: {
+    options: {
+      storySort: {
+        order: ["Welcome", "About", "Core", "Generic", "Form", "*", "Utility", "Layout"],
+      },
+    },
     backgrounds: {
       default: "light",
       values: [

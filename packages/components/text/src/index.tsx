@@ -8,9 +8,13 @@ import { useThemeContext } from "@rck/theme";
 export type TextVariation = "small" | "bold" | "link" | "link_hidden" | "inverted";
 
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {
+  /** Adds margin to the text element  */
   margin?: boolean;
+  /** Specifies the type/visual variation of text element to be rendered  */
   type?: "huge" | "soft" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
+  /* Specifies the visual style variation(s) for the text */
   variation?: TextVariation | TextVariation[];
+  /** Specifies the custom element to be used as the text container  */
   as?: keyof ReactHTML | React.ReactElement;
 }
 

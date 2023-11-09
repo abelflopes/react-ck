@@ -3,7 +3,9 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 export interface ListProps extends Omit<React.HTMLAttributes<HTMLUListElement>, "children"> {
+  /** Specifies the visual style of the list */
   skin?: "bordered";
+  /** An array of React nodes representing the list items  */
   items: React.ReactNode[];
 }
 

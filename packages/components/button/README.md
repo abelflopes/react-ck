@@ -4,9 +4,4 @@ The Button component is a versatile and highly customizable element tailored for
 
 ### Installation 
 
-To integrate the this component into your React applications, you can easily install it using npm or yarn.
-Open your terminal or command prompt and run the following command:
-
-```sh
-npm i --save @rck/button
-```
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @rck/button` or `yarn add @rck/button`.

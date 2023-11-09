@@ -6,8 +6,11 @@ import { ThemeContextProvider } from "@rck/theme";
 import { Overlay } from "@rck/overlay";
 
 export interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** The source URL of the banner image */
   src: string;
+  /** The alternative text for the banner image */
   alt?: string;
+  /** An array of React nodes representing actions or buttons displayed on the banner */
   actions?: React.ReactNode[];
 }
 

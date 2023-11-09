@@ -2,11 +2,19 @@ import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
-type ContainerVariation = "small" | "big";
+/** Represents the possible variations for the Container component  */
+type ContainerVariation =
+  /** reduces the spacing */
+  | "small"
+  /** increases the spacing */
+  | "big";
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Specifies the variation(s) of the container  */
   variation?: ContainerVariation | ContainerVariation[];
+  /** Adds horizontal spacing to the container  */
   spacingX?: boolean;
+  /** Adds vertical spacing to the container  */
   spacingY?: boolean;
 }
 

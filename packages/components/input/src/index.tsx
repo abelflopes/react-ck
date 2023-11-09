@@ -3,6 +3,7 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  /** disallow usage of react children */
   children?: never;
 }
 

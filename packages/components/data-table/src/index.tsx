@@ -1,11 +1,18 @@
 import React, { useMemo } from "react";
 import { Table, type TableProps } from "@rck/table";
 
+/** Type representing the data structure for the DataTable component  */
 type TableData = Array<Record<string, React.ReactNode>>;
 
+/**
+ * DataTableProps interface represents the props for the DataTable component.
+ * @typeParam T - The type of data provided for the DataTable.
+ */
 export interface DataTableProps<T extends TableData = TableData>
   extends Omit<TableProps, "children"> {
+  /** Headers mapping to define column names and their corresponding header content */
   headers?: Record<keyof T[number] | string, React.ReactNode>;
+  /** Data to be displayed in the table. Should be an array of objects with keys matching the headers' keys (non-mandatory) */
   data: T;
 }
 

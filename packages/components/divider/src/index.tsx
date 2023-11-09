@@ -3,6 +3,7 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 export interface DividerProps extends Omit<React.HTMLAttributes<HTMLHRElement>, "children"> {
+  /** Specifies the orientation of the divider */
   type?: "vertical" | "horizontal";
 }
 

@@ -3,6 +3,7 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
+  /** Specifies the visual style of the table  */
   skin?: "default" | "bordered";
 }
 

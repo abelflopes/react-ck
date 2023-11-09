@@ -9,7 +9,7 @@ import { Text } from "@rck/text/src";
 type Story = StoryObj<typeof Text>;
 
 const meta: Meta<typeof Text> = {
-  title: "Core/Typography",
+  title: "Core/Text",
   ...configureStory(
     Text,
     {
