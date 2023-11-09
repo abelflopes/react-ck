@@ -1,6 +1,16 @@
 name: Release Packages
 on:
   workflow_dispatch:
+    inputs:
+      positional:
+        description: "VERSIONING MODE: default - changed since the last release / from-git - tagged in the current commit / from-package - latest version is not present in the registry"
+        required: true
+        default: "default"
+        type: choice
+        options:
+          - default
+          - from-git
+          - from-package
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -68,4 +78,5 @@ jobs:
         run: git config --list
 
       - name: Release Packages
-        run: lerna publish from-package --yes --no-private --no-push --no-git-tag-version
+        # https://github.com/lerna/lerna/tree/main/libs/commands/publish#readme
+        run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private --no-push --no-git-tag-version
