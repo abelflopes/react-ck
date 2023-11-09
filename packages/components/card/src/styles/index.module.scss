@@ -1,6 +1,8 @@
 @import "@react-ck/theme";
 
 .root {
+  @include font-base;
+
   border-radius: get-spacing(2);
   padding: get-spacing(4) get-spacing(3);
   border: solid 0 get-color(neutral-100);
