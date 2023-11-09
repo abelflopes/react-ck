@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "storybook dev -p 6006",
-    "build": "storybook build -o dist"
+    "build": "storybook build -o dist",
+    "lint:typescript": "tsc --noEmit"
   },
   "devDependencies": {
     "@rck/typescript-config": "^1.0.0",

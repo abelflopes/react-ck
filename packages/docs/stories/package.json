@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/abelflopes/rck.git"
   },
+  "scripts": {
+    "lint:typescript": "tsc --noEmit"
+  },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",
     "@rck/story-config": "^1.0.0",
