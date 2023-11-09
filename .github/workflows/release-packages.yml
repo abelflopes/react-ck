@@ -40,17 +40,17 @@ jobs:
         run: npm audit signatures
 
       # if publish to npm
-      # - name: Setup npm auth
-      #   run: |
-      #     echo "//registry.npmjs.org :_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
-      #     echo "access=public" >> .npmrc
-
-      # if publish to github
       - name: Setup npm auth
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
-          echo "@abelflopes:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "//registry.npmjs.org :_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
           echo "access=public" >> .npmrc
+
+      # if publish to github
+      # - name: Setup npm auth
+      #   run: |
+      #     echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+      #     echo "@abelflopes:registry=https://npm.pkg.github.com" >> .npmrc
+      #     echo "access=public" >> .npmrc
 
       # required for lerna
       - name: Set git user
