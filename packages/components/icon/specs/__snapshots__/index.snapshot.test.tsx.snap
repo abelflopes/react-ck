@@ -2,6 +2,7 @@
 
 exports[`Snapshot Icon renders correctly 1`] = `
 <svg
+  className="root"
   fill="currentColor"
   height={16}
   stroke="currentColor"
