@@ -23,7 +23,7 @@ jobs:
           cache: npm
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm i --no-save # as npm ci cleans node_modules (faster)
 
       - name: Build config packages
         run: npm run prestart
@@ -31,14 +31,14 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-      - name: Build
-        run: npm run build
-
       - name: Run Code Checks
         run: npm run lint
 
       - name: Run Formatting Checks
         run: npm run format
+
+      - name: Build
+        run: npm run build
 
   lint_commits:
     name: Validate Commits
@@ -54,7 +54,7 @@ jobs:
           cache: npm
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm i --no-save # as npm ci cleans node_modules (faster)
 
       # https://github.com/wagoid/commitlint-github-action
       - name: Validate commits differing from the default branch
