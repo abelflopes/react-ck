@@ -1,8 +1,8 @@
-# RCK  Branding
+# R-CK  Branding
 
 Branding created with https://www.namecheap.com/logo-maker/
 
-![RCK Logo](./vector/default.svg)
+![R-CK Logo](./vector/default.svg)
 
 ## Font
 
