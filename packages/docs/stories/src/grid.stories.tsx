@@ -2,7 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
-import { configureStory } from "@react-ck/story-config";
+import { configureStory } from "@react-ck/story-config/src/index";
 import readme from "@react-ck/grid/README.md";
 import { GridContainer, GridColumn } from "@react-ck/grid/src";
 import { Card } from "@react-ck/card";
@@ -11,6 +11,9 @@ type Story = StoryObj<typeof GridContainer>;
 
 const meta: Meta<typeof GridContainer> = {
   title: "Layout/Grid",
+  // subcomponents: {
+  //   GridColumn,
+  // },
   ...configureStory(
     GridContainer,
     {
@@ -24,6 +27,7 @@ const meta: Meta<typeof GridContainer> = {
     },
     {
       readme,
+      subComponents: [GridColumn],
     },
   ),
 };
