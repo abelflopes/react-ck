@@ -11,9 +11,6 @@ type Story = StoryObj<typeof GridContainer>;
 
 const meta: Meta<typeof GridContainer> = {
   title: "Layout/Grid",
-  // subcomponents: {
-  //   GridColumn,
-  // },
   ...configureStory(
     GridContainer,
     {

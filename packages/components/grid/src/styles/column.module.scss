@@ -2,12 +2,11 @@
 @import "@react-ck/scss-utils";
 
 .root {
-  width: calc(
-    (100% / 12 * var(--size)) -
-      (#{get-css-var(grid-container, gap)} * (var(--columns) - 1) / var(--columns))
-  );
+  width: calc((100% / 12 * var(--size)));
   flex-shrink: 0;
   flex-grow: 0;
+  padding: calc(#{get-css-var(grid-container, gap)} * 0.5);
+  box-sizing: border-box;
 }
 
 .size_auto {

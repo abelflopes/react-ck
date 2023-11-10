@@ -4,10 +4,14 @@ import classNames from "classnames";
 import { GridContext, type GridContextProps } from "./context";
 
 export interface GridContainerProps extends React.HTMLAttributes<HTMLHRElement> {
+  /** The spacing between columns in the grid  */
+  spacing?: "s" | "m" | "l" | "none";
+  /** Whether to allow grid items to wrap to the next line  */
   wrap?: boolean;
 }
 
 export const GridContainer = ({
+  spacing = "m",
   wrap = true,
   className,
   ...otherProps
@@ -35,6 +39,7 @@ export const GridContainer = ({
       <div
         className={classNames(
           styles.root,
+          styles["spacing_" + spacing],
           {
             [`${styles.wrap}`]: wrap,
           },

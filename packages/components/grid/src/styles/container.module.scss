@@ -3,13 +3,30 @@
 
 .root {
   @include define-css-var(divider, flex-wrap, none);
-  @include define-css-var(grid-container, gap, get-spacing(2));
 
   display: flex;
-  gap: get-css-var(grid-container, gap);
+  margin: calc(#{get-css-var(grid-container, gap)} * -0.5);
   flex-wrap: get-css-var(grid-container, flex-wrap);
+  box-sizing: border-box;
+  width: calc(100% + #{get-css-var(grid-container, gap)});
 }
 
 .wrap {
   @include define-css-var(grid-container, flex-wrap, wrap);
+}
+
+.spacing_s {
+  @include define-css-var(grid-container, gap, get-spacing(1));
+}
+
+.spacing_m {
+  @include define-css-var(grid-container, gap, get-spacing(2));
+}
+
+.spacing_l {
+  @include define-css-var(grid-container, gap, get-spacing(4));
+}
+
+.spacing_none {
+  @include define-css-var(grid-container, gap, 0);
 }

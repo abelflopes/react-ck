@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { useGridContext } from "./context";
 
 export interface GridColumnProps extends React.HTMLAttributes<HTMLHRElement> {
+  /** Specifies the size of the column */
   size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | "auto";
 }
 
