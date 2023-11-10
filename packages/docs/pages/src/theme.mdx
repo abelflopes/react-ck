@@ -10,31 +10,25 @@ These colors are carefully curated to maintain a cohesive and visually appealing
 
 <ColorPalette>
   <ColorItem
-    title="Highlight Primary"
-    subtitle="Main highlight color, mostly used for CTA's"
-    colors={{ ["highlight-primary"]: defaultTheme.color["highlight-primary"] }}
+    title="Highlight Colors"
+    subtitle="Mostly used for CTA's"
+    colors={Object.fromEntries(
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("highlight")),
+    )}
   />
-  <ColorItem
-    title="Highlight Secondary"
-    subtitle="Second main color used for important items"
-    colors={{ ["highlight-secondary"]: defaultTheme.color["highlight-secondary"] }}
-  />
+
   <ColorItem
     title="Neutral"
     subtitle="Multi purpose neutral colors"
-    colors={{
-      "neutral-100": defaultTheme.color["neutral-100"],
-      "neutral-200": defaultTheme.color["neutral-200"],
-      "neutral-800": defaultTheme.color["neutral-800"],
-      "neutral-900": defaultTheme.color["neutral-900"],
-    }}
+    colors={Object.fromEntries(
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("neutral")),
+    )}
   />
   <ColorItem
     title="Overlay"
     subtitle="Semi-opaque colors"
-    colors={{
-      "overlay-light": defaultTheme.color["overlay-light"],
-      "overlay-dark": defaultTheme.color["overlay-dark"],
-    }}
+    colors={Object.fromEntries(
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("overlay")),
+    )}
   />
 </ColorPalette>
