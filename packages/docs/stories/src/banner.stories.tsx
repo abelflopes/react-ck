@@ -35,25 +35,7 @@ const meta: Meta<typeof Banner> = {
 
 export default meta;
 
-export const WithText: Story = {
-  args: {
-    src: faker.image.urlPicsumPhotos(),
-    children: (
-      <>
-        <Text type="huge">{faker.lorem.sentence()}</Text>
-        <Text>{faker.lorem.sentence()}</Text>
-      </>
-    ),
-  },
-};
-
-export const ImageOnly: Story = {
-  args: {
-    src: faker.image.urlPicsumPhotos(),
-  },
-};
-
-export const WithActions: Story = {
+export const Component: Story = {
   args: {
     src: faker.image.urlPicsumPhotos(),
     children: (
