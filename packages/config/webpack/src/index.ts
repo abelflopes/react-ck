@@ -1,4 +1,7 @@
 import { type Configuration } from "webpack";
+import nodeExternals from "webpack-node-externals";
+import path from "node:path";
+import fs from "node:fs";
 
 // SCSS - https://webpack.js.org/loaders/sass-loader/
 // CSS MODULES - https://webpack.js.org/loaders/css-loader/#modules
@@ -19,6 +22,10 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
         : (() => {
             throw new Error("Invalid webpack mode");
           })())();
+
+  const mainNodeModulesFolder = path.resolve(process.cwd(), "../../../node_modules");
+
+  if (!fs.existsSync(mainNodeModulesFolder)) throw new Error("main node js folder does not exist");
 
   return {
     mode,
@@ -77,7 +84,12 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
     },
-    externals: ["react"],
+    externals: [
+      nodeExternals({
+        importType: "module",
+        additionalModuleDirs: [mainNodeModulesFolder],
+      }),
+    ],
     externalsType: "module",
     stats: mode === "production" ? "normal" : "summary",
   };
