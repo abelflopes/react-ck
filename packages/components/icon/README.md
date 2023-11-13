@@ -1,5 +1,7 @@
 # RCK | React Icon Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The React Icon component is a compact and versatile element designed for displaying scalable vector icons within React applications. This component simplifies the integration of icons, offering developers a convenient way to enhance user interfaces with visual cues and meaningful symbols.
 
 By providing a wide range of icons representing various actions, objects, and concepts, the React Icon component empowers developers to improve user experience and communication. Icons can be easily customized in terms of size, color, and style to match the application's design language, ensuring a cohesive visual presentation.

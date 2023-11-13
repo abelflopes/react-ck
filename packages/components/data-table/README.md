@@ -1,5 +1,7 @@
 # RCK | React Data Table Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The React Table component is a versatile element designed to efficiently display structured data in a tabular format within React applications. Unlike traditional table components, this component accepts an array of records, where each record is represented as an object with named keys and corresponding React nodes. This flexibility allows developers to easily populate tables with dynamic and diverse content without the need for complex nesting.
 
 By accepting an `Array<Record<string, React.ReactNode>>` as input, developers can populate the table with data in a concise and straightforward manner. Each record in the array corresponds to a row in the table, and the keys within the records determine the columns. This streamlined approach simplifies the process of rendering data-driven tables, making it ideal for dynamic applications where the content may vary based on user input or API responses.

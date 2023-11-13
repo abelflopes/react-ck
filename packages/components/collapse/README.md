@@ -1,5 +1,7 @@
 # RCK | React Collapse Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The Collapse component is a dynamic and space-saving element tailored for React applications, offering developers an efficient way to manage and present content in a concise manner. This component provides a seamless solution for displaying large amounts of information while optimizing screen real estate and enhancing user interaction.
 
 With the Collapse component, developers can create expandable sections of content that can be toggled open or closed, allowing users to focus on specific details when needed. This feature is particularly useful for displaying lengthy text, detailed descriptions, or additional information without overwhelming the user interface.

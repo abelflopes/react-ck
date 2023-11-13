@@ -1,5 +1,7 @@
 # RCK | React Input Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The React Input component is a fundamental building block for user interactions within React applications. It provides a user-friendly way to collect and validate user input, ranging from simple text entries to more complex data such as dates or email addresses.
 
 This component allows developers to create various types of input fields, including text inputs, password inputs, checkboxes, radio buttons, and more. Developers can customize the appearance and behavior of the input fields, defining attributes like placeholder text, default values, and validation rules.

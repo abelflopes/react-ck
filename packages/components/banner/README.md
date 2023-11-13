@@ -1,5 +1,7 @@
 # RCK | React Banner Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The Banner component is a versatile and visually appealing element designed specifically for React applications.
 It serves as a prominent interface element, allowing developers to showcase images, messages,
 or calls to action effectively. With this component, developers can create engaging and interactive banners tailored to their application's needs.

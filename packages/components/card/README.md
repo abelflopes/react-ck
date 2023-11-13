@@ -1,5 +1,7 @@
 # RCK | React Card Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The Card component is a versatile and essential building block for creating dynamic and interactive user interfaces in React applications. This component enables developers to showcase content in a structured and visually appealing manner. With the Card component, you can present various types of information, including text, images, and actions, effectively engaging users.
 
 ### Installation 

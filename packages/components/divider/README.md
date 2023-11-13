@@ -1,5 +1,7 @@
 # RCK | React Divider Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The React Divider component is a minimalist element designed to create a clear visual distinction between sections or elements within a user interface. This simple component serves a singular purpose: rendering a horizontal or vertical line, enhancing the overall layout and readability of the content.
 
 Developers can easily integrate the React Divider component into their applications to separate different sections of a page or group related elements, providing a subtle visual cue to users. The component offers the flexibility to render both horizontal and vertical lines, allowing developers to choose the appropriate orientation based on the layout requirements.

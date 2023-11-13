@@ -1,5 +1,7 @@
 # RCK | RCK | React Theme Package
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The React Theme Package is a comprehensive solution for managing themes and styling in React applications. This package provides a default theme configuration and a Theme Provider component wrapper, complete with context and theme context utilities, to simplify the process of theming React applications.
 
 ## Default Theme Configuration

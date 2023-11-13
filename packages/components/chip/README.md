@@ -1,5 +1,7 @@
 # RCK | React Chip Component
 
+> :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
+
 The Chip component is a dynamic and adaptable element designed specifically for React applications, providing developers with a versatile solution for displaying and interacting with small pieces of information. This component serves as a compact container for various types of content, such as text, icons, or images, allowing developers to present data in an organized and visually appealing manner.
 
 With the Chip component, developers can effortlessly showcase different types of information, including tags, categories, or user avatars. Its customizable features enable developers to define the chip's appearance, such as background color, text color, and border radius, ensuring seamless integration into any user interface design.
