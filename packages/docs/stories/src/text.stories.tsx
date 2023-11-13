@@ -36,6 +36,11 @@ export const Component: Story = {
 };
 
 export const Inverted: Story = {
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
+  },
   args: {
     variation: "inverted",
     children: faker.lorem.sentence(),
