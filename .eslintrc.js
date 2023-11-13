@@ -6,6 +6,7 @@ const config = {
     "unicorn/prefer-spread": 0,
     "unicorn/prevent-abbreviations": 0,
     "unicorn/no-array-reduce": 0,
+    "unicorn/no-useless-undefined": 0,
   },
 };
 
