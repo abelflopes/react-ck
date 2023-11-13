@@ -14,6 +14,6 @@ exports[`Snapshot GridColumn renders correctly 1`] = `
 
 exports[`Snapshot GridContainer renders correctly 1`] = `
 <div
-  className="root wrap"
+  className="root spacing_m wrap"
 />
 `;
