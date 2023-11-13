@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.2.1...@react-ck/text@1.2.2) (2023-11-13)
+
+
+### Bug Fixes
+
+* text inverted computation not working ([c62dcb6](https://github.com/abelflopes/react-ck/commit/c62dcb6b82ceb171b7fec982ecaa933e34dbc7b2))
+
+
+
 ## [1.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.2.0...@react-ck/text@1.2.1) (2023-11-13)
 
 **Note:** Version bump only for package @react-ck/text

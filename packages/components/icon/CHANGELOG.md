@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.2.1...@react-ck/icon@1.3.0) (2023-11-13)
+
+
+### Features
+
+* add icon inverted skin ([b25f46c](https://github.com/abelflopes/react-ck/commit/b25f46c032b424b2dbfea3b7e21f087a9140741e))
+* add social icons ([17757ad](https://github.com/abelflopes/react-ck/commit/17757ad77557dca7331d93d3a46cf7330ca83864))
+
+
+
 ## [1.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.2.0...@react-ck/icon@1.2.1) (2023-11-13)
 
 **Note:** Version bump only for package @react-ck/icon
