@@ -89,4 +89,4 @@ jobs:
 
       - name: Release Packages
         # https://github.com/lerna/lerna/tree/main/libs/commands/publish#readme
-        run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' }}
+        run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' || '' }}
