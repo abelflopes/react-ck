@@ -34,3 +34,17 @@ export const Component: Story = {
     children: faker.lorem.sentence(),
   },
 };
+
+export const Inverted: Story = {
+  args: {
+    variation: "inverted",
+    children: faker.lorem.sentence(),
+  },
+};
+
+export const Link: Story = {
+  args: {
+    variation: "link",
+    as: <a href="#some-link">{faker.lorem.sentence()}</a>,
+  },
+};
