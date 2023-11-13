@@ -1,0 +1,11 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 1.1.0 (2023-11-13)
+
+
+### Features
+
+* update theme neutral colors ([b91da4c](https://github.com/abelflopes/react-ck/commit/b91da4ca3fa10d7e32b3e9d37fd6b27374f4e433))
