@@ -27,7 +27,7 @@ export const Text = ({
   children,
   ...otherProps
 }: Readonly<TextProps>): React.ReactElement => {
-  const { inverted } = useThemeContext();
+  const theme = useThemeContext();
 
   const computedVariations = Array.isArray(variation) ? variation : variation && [variation];
 
@@ -41,11 +41,11 @@ export const Text = ({
         },
         computedVariations?.filter((index) => index !== "inverted").map((index) => styles[index]),
         {
-          [`${styles.inverted}`]: inverted && !computedVariations?.includes("inverted"),
+          [`${styles.inverted}`]: computedVariations?.includes("inverted") ?? theme.inverted,
         },
         className,
       ),
-    [className, computedVariations, inverted, margin, type],
+    [className, computedVariations, theme, margin, type],
   );
 
   const tag = useMemo<keyof ReactHTML>(() => {
