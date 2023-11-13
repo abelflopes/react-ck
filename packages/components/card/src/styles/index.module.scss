@@ -3,6 +3,7 @@
 .root {
   @include font-base;
 
+  background-color: get-color(neutral-0);
   border-radius: get-spacing(2);
   padding: get-spacing(4) get-spacing(3);
   border: solid 0 get-color(neutral-100);
