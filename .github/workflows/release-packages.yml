@@ -9,8 +9,18 @@ on:
         type: choice
         options:
           - default
+          # https://github.com/lerna/lerna/tree/main/libs/commands/version#semver-bump
+          - patch
+          - minor
+          - major
+          # https://github.com/lerna/lerna/tree/main/libs/commands/publish#usage
           - from-git
           - from-package
+      force_publish:
+        description: "Force publish"
+        default: false
+        required: false
+        type: boolean
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -79,4 +89,4 @@ jobs:
 
       - name: Release Packages
         # https://github.com/lerna/lerna/tree/main/libs/commands/publish#readme
-        run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private
+        run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' }}
