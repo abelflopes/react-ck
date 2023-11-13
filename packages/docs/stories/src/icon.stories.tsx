@@ -28,8 +28,20 @@ const meta: Meta<typeof Icon> = {
 
 export default meta;
 
-export const Component: Story = {
+export const Normal: Story = {
   args: {
     name: "bell-filled",
+  },
+};
+
+export const Inverted: Story = {
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
+  },
+  args: {
+    skin: "inverted",
+    name: "github",
   },
 };

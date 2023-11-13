@@ -1,10 +1,16 @@
 @import "@react-ck/theme";
 
 .root {
-  color: currentColor;
+  @include define-css-var(icon, color, currentColor);
+
+  color: get-css-var(icon, color);
 
   // Add margin for icons next to each other
   & + & {
     margin-left: get-spacing(1);
   }
+}
+
+.inverted {
+  @include define-css-var(icon, color, get-color(neutral-0));
 }

@@ -8,6 +8,7 @@ import { Button } from "@react-ck/button/src";
 import { configureStory } from "@react-ck/story-config";
 import readme from "@react-ck/banner/README.md";
 import { Banner } from "@react-ck/banner/src";
+import { Icon } from "@react-ck/icon";
 
 type Story = StoryObj<typeof Banner>;
 
@@ -42,6 +43,7 @@ export const Component: Story = {
       <>
         <Text type="huge">{faker.lorem.sentence()}</Text>
         <Text>{faker.lorem.sentence()}</Text>
+        <Icon name="linkedin" />
       </>
     ),
     actions: [
