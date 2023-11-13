@@ -7,3 +7,18 @@ or calls to action effectively. With this component, developers can create engag
 ### Installation 
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/banner` or `yarn add @react-ck/banner`.
+
+You will also need to set up the theme provider, install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+
+Wrap your app root with the theme provider and use this component:
+
+```tsx
+import { ThemeProvider } from "@react-ck/theme";
+import { Banner } from "@react-ck/banner";
+
+const myApp = () => (
+    <ThemeProvider>
+        <Banner ... />
+    </ThemeProvider>
+);
+```

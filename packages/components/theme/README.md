@@ -21,3 +21,17 @@ In summary, the React Theme Package offers a robust solution for managing themes
 ### Installation 
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+
+Wrap your app root with the theme provider to properly use the components:
+
+```tsx
+import { ThemeProvider } from "@react-ck/theme";
+import { Button } from "@react-ck/button";
+
+const myApp = () => (
+    <ThemeProvider>
+        Your app
+        <Button ... />
+    </ThemeProvider>
+);
+```

@@ -11,3 +11,18 @@ In summary, the React Divider component is a lightweight and essential tool for 
 ### Installation 
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/divider` or `yarn add @react-ck/divider`.
+
+You will also need to set up the theme provider, install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+
+Wrap your app root with the theme provider and use this component:
+
+```tsx
+import { ThemeProvider } from "@react-ck/theme";
+import { Divider } from "@react-ck/divider";
+
+const myApp = () => (
+    <ThemeProvider>
+        <Divider ... />
+    </ThemeProvider>
+);
+```

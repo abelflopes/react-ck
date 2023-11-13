@@ -13,3 +13,18 @@ In summary, the React Input component is a crucial element for creating interact
 ### Installation 
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/input` or `yarn add @react-ck/input`.
+
+You will also need to set up the theme provider, install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+
+Wrap your app root with the theme provider and use this component:
+
+```tsx
+import { ThemeProvider } from "@react-ck/theme";
+import { Input } from "@react-ck/input";
+
+const myApp = () => (
+    <ThemeProvider>
+        <Input ... />
+    </ThemeProvider>
+);
+```

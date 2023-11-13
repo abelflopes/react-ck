@@ -9,3 +9,18 @@ By combining the 12-column system with the flexibility to wrap or nowrap element
 ### Installation 
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/grid` or `yarn add @react-ck/grid`.
+
+You will also need to set up the theme provider, install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+
+Wrap your app root with the theme provider and use this component:
+
+```tsx
+import { ThemeProvider } from "@react-ck/theme";
+import { GridContainer, GridColumn } from "@react-ck/grid";
+
+const myApp = () => (
+    <ThemeProvider>
+        <GridContainer ... />
+    </ThemeProvider>
+);
+```

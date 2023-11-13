@@ -13,3 +13,18 @@ In summary, the React Collapse component streamlines the presentation of extensi
 ### Installation 
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/collapse` or `yarn add @react-ck/collapse`.
+
+You will also need to set up the theme provider, install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+
+Wrap your app root with the theme provider and use this component:
+
+```tsx
+import { ThemeProvider } from "@react-ck/theme";
+import { Collapse } from "@react-ck/collapse";
+
+const myApp = () => (
+    <ThemeProvider>
+        <Collapse ... />
+    </ThemeProvider>
+);
+```

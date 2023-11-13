@@ -5,3 +5,18 @@ The Text component is a highly adaptable tool designed for displaying textual co
 ### Installation 
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/text` or `yarn add @react-ck/text`.
+
+You will also need to set up the theme provider, install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+
+Wrap your app root with the theme provider and use this component:
+
+```tsx
+import { ThemeProvider } from "@react-ck/theme";
+import { Text } from "@react-ck/text";
+
+const myApp = () => (
+    <ThemeProvider>
+        <Text ... />
+    </ThemeProvider>
+);
+```
