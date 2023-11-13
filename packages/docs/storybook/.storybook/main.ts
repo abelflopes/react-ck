@@ -55,7 +55,7 @@ const config: StorybookConfig = {
     config.module?.rules?.push(cssRule);
 
     // Reduce log noise
-    config.stats = "minimal";
+    config.stats = "summary";
 
     // Remove progress plugin as it pollutes lerna stream
     config.plugins = config.plugins?.filter((i) => !(i instanceof ProgressPlugin));

@@ -79,6 +79,6 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
     },
     externals: ["react"],
     externalsType: "module",
-    stats: mode === "production" ? "normal" : "minimal",
+    stats: mode === "production" ? "normal" : "summary",
   };
 };
