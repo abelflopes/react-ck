@@ -1,21 +1,57 @@
 # Roadmap
 
-- [ ] Badge component
+- [ ] Badge
 
-- [ ] Form Field component
+- [ ] Form Field
 
-- [ ] Modal component
+- [ ] Modal
 
-- [ ] Select component
+- [ ] Select
 
-- [ ] Textarea component
+- [ ] Textarea
 
-- [ ] Alert component
+- [ ] Tabs
 
-- [ ] Tooltip component
+- [ ] Alert
+
+- [ ] Tooltip
 
 - [ ] Responsive util
 
 - [ ] Polimorphy util
 
-- Checkbox / Radio
+- [ ] Checkbox / Radio
+
+- [ ] Choice / Toggle
+
+- [ ] From Renderer
+
+- [ ] Skeleton
+
+- [ ] Spinner 
+
+- [ ] Accordion 
+
+- [ ] Avatar
+
+- [ ] Breadcrumb
+
+- [ ] Calendar
+
+- [ ] DatePicker
+
+- [ ] Carousel
+
+- [ ] Chat
+
+- [ ] Dialog
+
+- [ ] Popover
+
+- [ ] Panel
+
+- [ ] Drawer
+
+- [ ] Pagination
+
+- [ ] Progress
