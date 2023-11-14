@@ -1,57 +1,59 @@
 # Roadmap
 
-- [ ] Badge
+This roadmap is our plan for building a complete front-end framework. Each item on this list is  a building block to make our library complete.
 
-- [ ] Form Field
+- [ ] **Badge:** Small signs that show if something is good or special.
 
-- [ ] Modal
+- [ ] **Form Field:** Boxes where people type stuff or pick options.
 
-- [ ] Select
+- [ ] **Modal:** A pop-up box for important messages or extra info.
 
-- [ ] Textarea
+- [ ] **Select:** A drop-down menu to choose things.
 
-- [ ] Tabs
+- [ ] **Textarea:** A big box for writing lots of stuff.
 
-- [ ] Alert
+- [ ] **Tabs:** Sections to organize our site, like folders.
 
-- [ ] Tooltip
+- [ ] **Alert:** A notice to tell users important things.
 
-- [ ] Responsive util
+- [ ] **Tooltip:** Small pop-up tips when you hover over things.
 
-- [ ] Polimorphy util
+- [ ] **Responsive util:** Helps our site look good on any device.
 
-- [ ] Checkbox / Radio
+- [ ] **Polymorphy util:** Makes our site flexible and cool.
 
-- [ ] Choice / Toggle
+- [ ] **Checkbox / Radio:** Boxes you can tick or circles you can pick.
 
-- [ ] From Renderer
+- [ ] **Choice / Toggle:** Things for making selections or turning stuff on/off.
 
-- [ ] Skeleton
+- [ ] **Form Renderer:** Tool to make forms show up the way we want.
 
-- [ ] Spinner 
+- [ ] **Skeleton:** A placeholder that shows where things will go.
 
-- [ ] Accordion 
+- [ ] **Spinner:** A spinning thing to show stuff is loading.
 
-- [ ] Avatar
+- [ ] **Accordion:** A way to hide or show parts of the page.
 
-- [ ] Breadcrumb
+- [ ] **Avatar:** A small picture to represent a user.
 
-- [ ] Calendar
+- [ ] **Breadcrumb:** Shows where you are on the site.
 
-- [ ] DatePicker
+- [ ] **Calendar:** Shows dates and events.
 
-- [ ] Carousel
+- [ ] **DatePicker:** Helps pick dates from a calendar.
 
-- [ ] Chat
+- [ ] **Carousel:** A slideshow of pictures.
 
-- [ ] Dialog
+- [ ] **Chat:** Lets people talk in real-time.
 
-- [ ] Popover
+- [ ] **Dialog:** A pop-up box for talking to users.
 
-- [ ] Panel
+- [ ] **Popover:** Like a tooltip, but bigger.
 
-- [ ] Drawer
+- [ ] **Panel:** A box for organizing and showing things.
 
-- [ ] Pagination
+- [ ] **Drawer:** A side panel for extra options.
 
-- [ ] Progress
+- [ ] **Pagination:** Lets users move between pages.
+
+- [ ] **Progress:** Shows how much of a task is done.
