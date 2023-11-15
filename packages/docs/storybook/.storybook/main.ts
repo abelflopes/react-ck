@@ -6,6 +6,7 @@ const config: StorybookConfig = {
   stories: ["../../pages/src/**/*.mdx", "../../stories/src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "../addons/links",
+    "../addons/package-info",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
@@ -39,6 +40,7 @@ const config: StorybookConfig = {
   // Copy assets to app dist public folder
   staticDirs: [
     "../../pages/assets",
+    "../public",
     {
       from: "../../../../docs/assets",
       to: "/docs/assets",
