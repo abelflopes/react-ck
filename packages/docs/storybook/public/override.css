@@ -1,0 +1,61 @@
+.custom-docs-wrapper {
+  background-color: #fff;
+  min-height: 100%;
+}
+
+.custom-docs-container,
+#storybook-docs .sbdocs-wrapper {
+  max-width: 1000px;
+  padding: 70px 30px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.custom-docs-container h1,
+#storybook-docs .sbdocs-wrapper h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 1em;
+}
+
+.custom-docs-container h2,
+#storybook-docs .sbdocs-wrapper h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 1.5em 0 1em;
+}
+
+.custom-docs-container h3,
+#storybook-docs .sbdocs-wrapper h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1.5em 0 1em;
+}
+
+.custom-docs-container p,
+#storybook-docs .sbdocs-wrapper p {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 16px 0;
+}
+
+.custom-docs-container pre {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-docs-container blockquote,
+#storybook-docs .sbdocs-wrapper blockquote {
+  font-style: italic;
+  padding: 8px 16px;
+  margin: 0;
+  font-size: 14px;
+  background: #fff9e9;
+  border-radius: 8px;
+  border: none;
+}
+
+.custom-docs-container blockquote p,
+#storybook-docs .sbdocs-wrapper blockquote p {
+  margin: 0;
+}

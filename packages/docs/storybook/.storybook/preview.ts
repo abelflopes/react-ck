@@ -1,8 +1,8 @@
-import { Preview } from "@storybook/react";
+import { Preview, Decorator } from "@storybook/react";
 import { defaultTheme } from "@react-ck/theme/src";
 import { withPerformance } from "storybook-addon-performance";
 
-export const decorators = [withPerformance];
+export const decorators: Decorator[] = [withPerformance];
 
 const preview: Preview = {
   argTypes: {
