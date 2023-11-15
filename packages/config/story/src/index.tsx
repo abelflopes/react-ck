@@ -1,9 +1,11 @@
 import React from "react";
 import type { Meta } from "@storybook/react";
-import { Subtitle, Description, Primary, Controls, ArgsTable } from "@storybook/blocks";
+import { Subtitle, Description, Primary, Controls, ArgsTable, Title } from "@storybook/blocks";
+import { capitalCase } from "change-case";
 
 interface ConfigureStoryExtra {
   subComponents?: [unknown];
+  type?: "Component";
 }
 
 function isComponent(v: unknown): v is { displayName: string } {
@@ -32,6 +34,10 @@ export const configureStory = <T,>(
         data.parameters?.docs?.page ??
         (() => (
           <>
+            <Title>
+              RCK | React {isComponent(component) ? capitalCase(component.displayName) : ""}{" "}
+              {extra?.type ?? "Component"}{" "}
+            </Title>
             <Subtitle />
             <Description />
             <Primary />
