@@ -1,4 +1,4 @@
-# RCK | RCK | React Theme Package
+# RCK | React Theme Package
 
 > :warning: **WARNING**: This component library is being updated frequently and it's currently unstable due to being in it's early stages, we advice you to use only in production environments only after version **2.0.0**.
 
