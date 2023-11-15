@@ -23,7 +23,7 @@ const CONFIG = {
     },
     readme: {
       id: "package-info/readme",
-      title: "Read Me",
+      title: "Documentation",
       route: "readme",
     },
   },
