@@ -11,41 +11,42 @@
   margin: 0 auto;
 }
 
-.custom-docs-container h1,
-#storybook-docs .sbdocs-wrapper h1 {
+.custom-docs-container > div > h1,
+#storybook-docs .sbdocs-content > h1 {
   font-size: 32px;
   font-weight: bold;
+  line-height: 1.1em;
   margin: 0 0 1em;
 }
 
-.custom-docs-container h2,
-#storybook-docs .sbdocs-wrapper h2 {
+.custom-docs-container > div > h2,
+#storybook-docs .sbdocs-content > h2 {
   font-size: 24px;
   font-weight: bold;
   margin: 1.5em 0 1em;
 }
 
-.custom-docs-container h3,
-#storybook-docs .sbdocs-wrapper h3 {
+.custom-docs-container > div > h3,
+#storybook-docs .sbdocs-content > h3 {
   font-size: 20px;
   font-weight: bold;
   margin: 1.5em 0 1em;
 }
 
-.custom-docs-container p,
-#storybook-docs .sbdocs-wrapper p {
+.custom-docs-container > div > p,
+#storybook-docs .sbdocs-content > p {
   font-size: 14px;
   line-height: 24px;
   margin: 16px 0;
 }
 
-.custom-docs-container pre {
+.custom-docs-container > div > pre {
   margin: 0;
   padding: 0;
 }
 
-.custom-docs-container blockquote,
-#storybook-docs .sbdocs-wrapper blockquote {
+.custom-docs-container > div > blockquote,
+#storybook-docs .sbdocs-content > blockquote {
   font-style: italic;
   padding: 8px 16px;
   margin: 0;
@@ -55,7 +56,7 @@
   border: none;
 }
 
-.custom-docs-container blockquote p,
-#storybook-docs .sbdocs-wrapper blockquote p {
+.custom-docs-container > div > blockquote p,
+#storybook-docs .sbdocs-content > blockquote p {
   margin: 0;
 }
