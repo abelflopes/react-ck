@@ -6,7 +6,6 @@ import { capitalCase } from "change-case";
 import { Text } from "@react-ck/text/src";
 import { Button } from "@react-ck/button/src";
 import { configureStory } from "@react-ck/story-config";
-import readme from "@react-ck/banner/README.md";
 import { Banner } from "@react-ck/banner/src";
 import { Icon } from "@react-ck/icon";
 
@@ -14,24 +13,18 @@ type Story = StoryObj<typeof Banner>;
 
 const meta: Meta<typeof Banner> = {
   title: "Layout/Banner",
-  ...configureStory(
-    Banner,
-    {
-      parameters: {
-        layout: "fullscreen",
-      },
-      decorators: [
-        (Story) => (
-          <ThemeProvider>
-            <Story />
-          </ThemeProvider>
-        ),
-      ],
+  ...configureStory(Banner, {
+    parameters: {
+      layout: "fullscreen",
     },
-    {
-      readme,
-    },
-  ),
+    decorators: [
+      (Story) => (
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
+      ),
+    ],
+  }),
 };
 
 export default meta;

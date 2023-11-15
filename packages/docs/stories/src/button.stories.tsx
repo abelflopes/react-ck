@@ -4,28 +4,21 @@ import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import readme from "@react-ck/button/README.md";
 import { Button } from "@react-ck/button/src";
 
 type Story = StoryObj<typeof Button>;
 
 const meta: Meta<typeof Button> = {
   title: "Generic/Button",
-  ...configureStory(
-    Button,
-    {
-      decorators: [
-        (Story) => (
-          <ThemeProvider>
-            <Story />
-          </ThemeProvider>
-        ),
-      ],
-    },
-    {
-      readme,
-    },
-  ),
+  ...configureStory(Button, {
+    decorators: [
+      (Story) => (
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
+      ),
+    ],
+  }),
 };
 
 export default meta;

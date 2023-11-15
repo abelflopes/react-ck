@@ -1,9 +1,8 @@
 import React from "react";
 import type { Meta } from "@storybook/react";
-import { Subtitle, Description, Primary, Controls, Markdown, ArgsTable } from "@storybook/blocks";
+import { Subtitle, Description, Primary, Controls, ArgsTable } from "@storybook/blocks";
 
 interface ConfigureStoryExtra {
-  readme: string;
   subComponents?: [unknown];
 }
 
@@ -19,7 +18,7 @@ function isComponent(v: unknown): v is { displayName: string } {
 export const configureStory = <T,>(
   component: T,
   data: Omit<Meta<T>, "component" | "title">,
-  extra: ConfigureStoryExtra,
+  extra?: ConfigureStoryExtra,
 ): Meta<T> => ({
   component,
   ...data,
@@ -33,13 +32,12 @@ export const configureStory = <T,>(
         data.parameters?.docs?.page ??
         (() => (
           <>
-            <Markdown>{extra.readme}</Markdown>
             <Subtitle />
             <Description />
             <Primary />
             {isComponent(component) && <h3>{component.displayName} Props</h3>}
             <Controls />
-            {extra.subComponents?.filter(isComponent).map((i) => (
+            {extra?.subComponents?.filter(isComponent).map((i) => (
               <React.Fragment key={JSON.stringify(i)}>
                 <h3>{i.displayName} Props</h3>
                 <ArgsTable of={i} />

@@ -2,28 +2,21 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@react-ck/theme";
 import { configureStory } from "@react-ck/story-config";
-import readme from "@react-ck/table/README.md";
 import { Table } from "@react-ck/table/src";
 
 type Story = StoryObj<typeof Table>;
 
 const meta: Meta<typeof Table> = {
   title: "Generic/Table",
-  ...configureStory(
-    Table,
-    {
-      decorators: [
-        (Story) => (
-          <ThemeProvider>
-            <Story />
-          </ThemeProvider>
-        ),
-      ],
-    },
-    {
-      readme,
-    },
-  ),
+  ...configureStory(Table, {
+    decorators: [
+      (Story) => (
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
+      ),
+    ],
+  }),
 };
 
 export default meta;

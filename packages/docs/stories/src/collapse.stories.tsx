@@ -4,28 +4,21 @@ import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
 import { configureStory } from "@react-ck/story-config";
-import readme from "@react-ck/collapse/README.md";
 import { Collapse } from "@react-ck/collapse/src";
 
 type Story = StoryObj<typeof Collapse>;
 
 const meta: Meta<typeof Collapse> = {
   title: "Generic/Collapse",
-  ...configureStory(
-    Collapse,
-    {
-      decorators: [
-        (Story) => (
-          <ThemeProvider>
-            <Story />
-          </ThemeProvider>
-        ),
-      ],
-    },
-    {
-      readme,
-    },
-  ),
+  ...configureStory(Collapse, {
+    decorators: [
+      (Story) => (
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
+      ),
+    ],
+  }),
 };
 
 export default meta;

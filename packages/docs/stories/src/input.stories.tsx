@@ -4,28 +4,21 @@ import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import readme from "@react-ck/input/README.md";
 import { Input } from "@react-ck/input/src";
 
 type Story = StoryObj<typeof Input>;
 
 const meta: Meta<typeof Input> = {
   title: "Form/Input",
-  ...configureStory(
-    Input,
-    {
-      decorators: [
-        (Story) => (
-          <ThemeProvider>
-            <Story />
-          </ThemeProvider>
-        ),
-      ],
-    },
-    {
-      readme,
-    },
-  ),
+  ...configureStory(Input, {
+    decorators: [
+      (Story) => (
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
+      ),
+    ],
+  }),
 };
 
 export default meta;

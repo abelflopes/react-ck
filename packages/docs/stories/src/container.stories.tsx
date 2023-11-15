@@ -4,28 +4,21 @@ import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
 import { configureStory } from "@react-ck/story-config";
-import readme from "@react-ck/container/README.md";
 import { Container } from "@react-ck/container/src";
 
 type Story = StoryObj<typeof Container>;
 
 const meta: Meta<typeof Container> = {
   title: "Layout/Container",
-  ...configureStory(
-    Container,
-    {
-      decorators: [
-        (Story) => (
-          <ThemeProvider>
-            <Story />
-          </ThemeProvider>
-        ),
-      ],
-    },
-    {
-      readme,
-    },
-  ),
+  ...configureStory(Container, {
+    decorators: [
+      (Story) => (
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
+      ),
+    ],
+  }),
 };
 
 export default meta;

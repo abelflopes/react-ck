@@ -4,28 +4,21 @@ import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { Chip } from "@react-ck/chip/src";
 import { configureStory } from "@react-ck/story-config";
-import readme from "@react-ck/data-table/README.md";
 import { DataTable } from "@react-ck/data-table/src";
 
 type Story = StoryObj<typeof DataTable>;
 
 const meta: Meta<typeof DataTable> = {
   title: "Generic/DataTable",
-  ...configureStory(
-    DataTable,
-    {
-      decorators: [
-        (Story) => (
-          <ThemeProvider>
-            <Story />
-          </ThemeProvider>
-        ),
-      ],
-    },
-    {
-      readme,
-    },
-  ),
+  ...configureStory(DataTable, {
+    decorators: [
+      (Story) => (
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
+      ),
+    ],
+  }),
 };
 
 export default meta;

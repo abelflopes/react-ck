@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config/src/index";
-import readme from "@react-ck/grid/README.md";
 import { GridContainer, GridColumn } from "@react-ck/grid/src";
 import { Card } from "@react-ck/card";
 
@@ -23,7 +22,6 @@ const meta: Meta<typeof GridContainer> = {
       ],
     },
     {
-      readme,
       subComponents: [GridColumn],
     },
   ),
