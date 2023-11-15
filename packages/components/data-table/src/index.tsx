@@ -16,6 +16,12 @@ export interface DataTableProps<T extends TableData = TableData>
   data: T;
 }
 
+/**
+ * Data table is a component that transforms a JSON structure into a table
+ * @param props - {@link DataTableProps}
+ * @returns a React element
+ */
+
 export const DataTable = <T extends TableData>({
   headers,
   data,

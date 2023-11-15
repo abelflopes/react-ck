@@ -7,6 +7,12 @@ export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
   skin?: "default" | "bordered";
 }
 
+/**
+ * Table is an element that visualizes a data set in rows and columns. It’s often used to embed structured data in a way that’s easy to scan.
+ * @param props - {@link OverlayProps}
+ * @returns a React element
+ */
+
 export const Table = ({
   skin = "default",
   className,

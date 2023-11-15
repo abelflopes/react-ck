@@ -13,6 +13,12 @@ export interface IconProps extends Omit<IconType, "size"> {
   name: keyof typeof icons;
 }
 
+/**
+ * Icon is a visual symbol that indicates the purpose of an interface element. It’s used to represent ideas, content types, and actions.
+ * @param props - {@link IconProps}
+ * @returns a React element
+ */
+
 export const Icon = ({
   skin = "default",
   name,

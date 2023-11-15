@@ -9,6 +9,12 @@ export interface ListProps extends Omit<React.HTMLAttributes<HTMLUListElement>, 
   items: React.ReactNode[];
 }
 
+/**
+ * List is a grouping of related items. List can be ordered with numbers or unordered with bullets.
+ * @param props - {@link ListProps}
+ * @returns a React element
+ */
+
 export const List = ({
   skin,
   items,

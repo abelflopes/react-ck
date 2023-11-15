@@ -7,6 +7,13 @@ export interface OverlayProps extends Omit<React.HTMLAttributes<HTMLDivElement>,
   skin?: "light" | "dark";
 }
 
+/**
+ * Overlay is a floating layer used to redirect the focus of the user to
+ * somewhere else other than the content it covers.
+ * @param props - {@link OverlayProps}
+ * @returns a React element
+ */
+
 export const Overlay = ({
   skin = "dark",
   className,

@@ -12,6 +12,13 @@ export interface ThemeProviderProps {
 
 type MappedTheme = Record<string, Record<string, number>>;
 
+/**
+ * Injects theme CSS variables on the DOM and dynamically feeds
+ * theme information to it's child components
+ * @param props - {@link ThemeProviderProps}
+ * @returns a React element
+ */
+
 export const ThemeProvider = ({
   // Target, // TODO: add target flexibility
   theme = defaultTheme,

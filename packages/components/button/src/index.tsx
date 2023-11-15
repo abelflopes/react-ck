@@ -15,6 +15,14 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   icon?: React.ReactNode;
 }
 
+/**
+ * Button is a clickable interactive element that triggers a response.
+ * You can place text and icons inside of a button.
+ * Buttons are often used for form submissions and to toggle elements into view.
+ * @param props - {@link ButtonProps}
+ * @returns a React element
+ */
+
 export const Button = ({
   skin = "primary",
   icon,

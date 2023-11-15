@@ -18,6 +18,13 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   spacingY?: boolean;
 }
 
+/**
+ * A wrapper used to build limit the with of given content, provide spacing and
+ * alignment with the rest of the layout.
+ * @param props - {@link ContainerProps}
+ * @returns a React element
+ */
+
 export const Container = ({
   variation = [],
   spacingX = true,

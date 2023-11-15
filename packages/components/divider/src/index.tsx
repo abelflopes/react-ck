@@ -7,6 +7,12 @@ export interface DividerProps extends Omit<React.HTMLAttributes<HTMLHRElement>, 
   type?: "vertical" | "horizontal";
 }
 
+/**
+ * Divider is a separator between sections of content or groups of items.
+ * @param props - {@link DividerProps}
+ * @returns a React element
+ */
+
 export const Divider = ({
   type = "horizontal",
   className,

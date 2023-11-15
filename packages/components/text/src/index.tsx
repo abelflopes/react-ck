@@ -18,6 +18,13 @@ export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   as?: keyof ReactHTML | React.ReactElement;
 }
 
+/**
+ * Text is a style component that renders a string of characters, words,
+ * or paragraphs in a consistent font size and weight.
+ * @param props - {@link TextProps}
+ * @returns a React element
+ */
+
 export const Text = ({
   as,
   margin = true,

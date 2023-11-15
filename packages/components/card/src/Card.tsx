@@ -3,6 +3,13 @@ import styles from "./styles/index.module.scss";
 import React, { useMemo, useState } from "react";
 import { CardContext, type CardContextValue } from "./context";
 
+/**
+ * Card is a content container that represents a single object and related actions.
+ * For example, an article or task.
+ * @param props - {@link React.HTMLAttributes}
+ * @returns a React element
+ */
+
 export const Card = ({
   children,
   className,

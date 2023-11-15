@@ -10,6 +10,12 @@ export interface GridContainerProps extends React.HTMLAttributes<HTMLHRElement> 
   wrap?: boolean;
 }
 
+/**
+ * A container used to build layouts that align to a user-defined system of columns and rows.
+ * @param props - {@link DividerProps}
+ * @returns a React element
+ */
+
 export const GridContainer = ({
   spacing = "m",
   wrap = true,
