@@ -32,4 +32,4 @@ Thank you, let's revolutionize the way we build the web, one component at a time
 
 ---
 
-Check the documentation website - [https://react-ck.js.org](https://react-ck.js.org).
+Check the documentation website - [react-ck.js.org](https://react-ck.js.org).
