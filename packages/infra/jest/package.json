@@ -7,7 +7,7 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/config/jest#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/infra/jest#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/react-ck.git"

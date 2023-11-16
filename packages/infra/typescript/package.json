@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/config/typescript#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/infra/typescript#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/react-ck.git"

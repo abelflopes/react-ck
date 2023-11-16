@@ -7,7 +7,7 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/config/babel#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/infra/babel#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/react-ck.git"
