@@ -5,6 +5,7 @@ import { getWebpackConfig } from "@react-ck/webpack-config";
 const config: StorybookConfig = {
   stories: ["../../pages/src/**/*.mdx", "../../stories/src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
+    "../addons/title",
     "../addons/links",
     "../addons/package-info",
     "@storybook/addon-links",
