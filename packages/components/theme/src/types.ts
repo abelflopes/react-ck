@@ -6,6 +6,8 @@ export interface Theme {
     "neutral-0": string;
     "neutral-100": string;
     "neutral-200": string;
+    "neutral-300": string;
+    "neutral-500": string;
     "neutral-800": string;
     "neutral-900": string;
     "overlay-light": string;
