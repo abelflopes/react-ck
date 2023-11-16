@@ -11,9 +11,10 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "prestart": "lerna run build --scope @react-ck/*config*",
     "start": "lerna run start --parallel --stream --ignore @react-ck/*config*",
-    "build": "lerna run build",
+    "build": "lerna run build --ignore @react-ck/*config* --ignore @react-ck/*docs*",
+    "build:infra": "lerna run build --scope @react-ck/*config*",
+    "build:docs": "lerna run build --scope @react-ck/*docs*",
     "test": "npx npm-run-all --sequential test:*",
     "test:unit": "lerna run test:unit --parallel",
     "test:snapshot": "lerna run test:snapshot --parallel",
