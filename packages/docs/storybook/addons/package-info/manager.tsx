@@ -114,8 +114,10 @@ addons.register(CONFIG.id, (api) => {
     addons.add(CONFIG.addons[entry].id, {
       title: CONFIG.addons[entry].title,
       type: addonType,
-      route: ({ storyId, refId }) =>
-        `/${CONFIG.addons[entry].route}/${[refId, storyId].filter(Boolean).join("_")}`,
+      route: ({ storyId, refId, ...more }) => {
+        const ref = `${storyId?.split("--")[0]}--docs`;
+        return `/${CONFIG.addons[entry].route}/${ref}`;
+      },
       match: ({ viewMode }) => viewMode === CONFIG.addons[entry].route,
       hidden: false,
       render: ({ active }) => {
@@ -143,6 +145,17 @@ addons.register(CONFIG.id, (api) => {
           </div>
         ) : null;
       },
+    });
+  });
+
+  Object.entries(Events).forEach(([key, ev]) => {
+    if (typeof ev !== "string") return;
+    if (ev.includes("progress")) return;
+    if (ev.includes("preload")) return;
+
+    api.on(ev, () => {
+      // console.log(key, ev);
+      // console.log(api.getCurrentStoryData());
     });
   });
 });
