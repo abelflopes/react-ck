@@ -83,8 +83,6 @@ addons.register(CONFIG.id, (api) => {
             changelog: currPackageInfo?.markdown.changelog,
             readme: currPackageInfo?.markdown.readme,
           }));
-
-          console.log("storyData", storyData);
         };
 
         storybookApi.on(Events.CURRENT_STORY_WAS_SET, handler);
