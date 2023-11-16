@@ -6,7 +6,7 @@ import { type PackageInfo } from "../../scripts/package-info/types";
 import { useData, UseDataReturn } from "@react-ck/react-hooks/src";
 import { isPackageInfoList } from "../../scripts/package-info/type-guards";
 // https://storybook.js.org/docs/react/addons/addon-knowledge-base#storybook-components
-import { Markdown } from "@storybook/blocks";
+import { Markdown } from "@react-ck/story-config";
 
 const CONFIG = {
   id: "package-info",
