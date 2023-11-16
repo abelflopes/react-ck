@@ -36,7 +36,7 @@ const preview: Preview = {
         },
         {
           name: "medium",
-          value: "#808080",
+          value: defaultTheme.color["neutral-500"],
         },
         {
           name: "dark",
