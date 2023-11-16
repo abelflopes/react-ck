@@ -9,7 +9,7 @@ export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
 
 /**
  * Table is an element that visualizes a data set in rows and columns. It’s often used to embed structured data in a way that’s easy to scan.
- * @param props - {@link OverlayProps}
+ * @param props - {@link TableProps}
  * @returns a React element
  */
 
