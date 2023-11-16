@@ -59,7 +59,7 @@ addons.register(CONFIG.id, (api) => {
         error: undefined,
       });
 
-      const { loading, dataPromise, error } = useData("/packages-info.json");
+      const { loading, dataPromise, error } = useData("./packages-info.json");
 
       useEffect(() => {
         const handler = async (info: { storyId: string; viewMode: string }) => {
