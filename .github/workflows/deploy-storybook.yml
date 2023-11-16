@@ -20,7 +20,7 @@ jobs:
   deploy:
     name: Deploy App
     environment:
-      name: prod
+      name: storybook
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
