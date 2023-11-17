@@ -12,7 +12,7 @@ export const registerMarkdownAddon = (): void => {
     addons.add(addonInfo.id, {
       title: addonInfo.title,
       type: addonType,
-      route: ({ storyId, refId, ...more }) => {
+      route: ({ storyId }) => {
         const ref = `${storyId?.split("--")[0]}--docs`;
         return `/${addonInfo.route}/${ref}`;
       },

@@ -27,7 +27,7 @@ export const registerManagerAddon = (): void => {
       const { loading, dataPromise, error } = useData("./packages-info.json");
 
       useEffect(() => {
-        const handler = async (info: { storyId: string; viewMode: string }): void => {
+        const handler = async (info: { storyId: string; viewMode: string }): Promise<void> => {
           const storyData = api.getData(info.storyId);
 
           const data = await dataPromise;

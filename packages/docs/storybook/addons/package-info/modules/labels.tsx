@@ -1,8 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useMemo } from "react";
 import { addons, types, useAddonState } from "@storybook/manager-api";
-// https://storybook.js.org/docs/react/addons/addon-knowledge-base#storybook-components
-import { Badge } from "@storybook/components";
 import { CONFIG, type PackageInfoState, labelAddons } from "../util";
 
 export const registerLabelsAddon = (): void => {
@@ -16,7 +14,23 @@ export const registerLabelsAddon = (): void => {
       render: () => {
         const [addonState] = useAddonState<PackageInfoState | undefined>(CONFIG.id);
         const data = useMemo(() => addonState?.[entry], [addonState]);
-        return data ? <Badge status="neutral">{data}</Badge> : null;
+        return data ? (
+          <b
+            style={{
+              margin: "0",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "0 6px",
+              fontSize: "13px",
+              top: "-0.5px",
+              position: "relative",
+
+              color: "#000",
+            }}>
+            {data}
+          </b>
+        ) : null;
       },
     });
   });
