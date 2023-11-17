@@ -51,7 +51,7 @@ jobs:
         run: npm ci
 
       - name: Build config packages
-        run: npm run prestart
+        run: npm run build:infra
 
       - name: Run Tests
         run: npm run test
