@@ -4,6 +4,10 @@ exports[`Snapshot Card renders correctly 1`] = `
 <div
   className="root"
 >
-  Card
+  <div
+    className="content"
+  >
+    Card
+  </div>
 </div>
 `;
