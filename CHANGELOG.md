@@ -1,3 +1,26 @@
+## [1.1.0](https://github.com/abelflopes/react-ck/compare/v1.0.0...v1.1.0) (2023-11-17)
+
+
+### Features
+
+* add card image compound component ([aaef456](https://github.com/abelflopes/react-ck/commit/aaef456e768fcb2148883b3c614d6d64778fcc10))
+* add grey tones ([6299a39](https://github.com/abelflopes/react-ck/commit/6299a399e726aeb8e45c8cb48aacea516608641c))
+
+
+### Bug Fixes
+
+* component display name ([0635c00](https://github.com/abelflopes/react-ck/commit/0635c00bcb726c49328e0f0c1cd4446945b3bede))
+* fetching of packages info ([e999dfc](https://github.com/abelflopes/react-ck/commit/e999dfccbe01c237c27c26792d2ac72e6e91982c))
+* placeholder color ([3f8b899](https://github.com/abelflopes/react-ck/commit/3f8b89922bf2e4d4a0f87780a7ab6514ad9f87ee))
+* prevent docs override styles from conflicting with components ([bf54b05](https://github.com/abelflopes/react-ck/commit/bf54b05adaff077942d62e0e002d9224ad60312c))
+* remove redundant readme from story definition ([acabb46](https://github.com/abelflopes/react-ck/commit/acabb466269fcb6700325ff7ce61a9d5912126f2))
+* update favicon ([7240d25](https://github.com/abelflopes/react-ck/commit/7240d25e3f40106c002ccc1d22dc5d70a36efc42))
+
+
+### Code Refactoring
+
+* use generic centralised to render markdown with ignored parts ([f4fd6a6](https://github.com/abelflopes/react-ck/commit/f4fd6a6bd8dff9e984d49a7543003bbdd77bcf9b))
+
 ## 1.0.0 (2023-11-13)
 
 
