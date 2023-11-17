@@ -10,9 +10,9 @@ addons.register("links-toolbar", () => {
     type: types.TOOLEXTRA,
     render: () => (
       <>
-        <IconButton href={`${packageJson.homepage}`}>Repo</IconButton>
         <IconButton href={`${packageJson.homepage}/issues`}>Report an Issue</IconButton>
         <IconButton href={`${packageJson.homepage}/discussions`}>Make a Request</IconButton>
+        <IconButton href={`${packageJson.homepage}`}>Repo</IconButton>
       </>
     ),
   });
