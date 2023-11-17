@@ -40,8 +40,9 @@ export const useData = (url: string): UseDataReturn => {
         const data: unknown = await dataPromise;
 
         if (mounted.current) setData(data);
-      } catch (error) {
-        if (mounted.current) setError(error instanceof Error ? error.message : String(error));
+      } catch (error: unknown) {
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+        if (mounted.current) setError((error as Error).message);
       }
 
       if (mounted.current) setLoading((v) => v - 1);
