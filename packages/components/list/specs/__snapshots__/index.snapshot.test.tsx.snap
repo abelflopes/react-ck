@@ -2,7 +2,7 @@
 
 exports[`Snapshot List renders correctly 1`] = `
 <ul
-  className="root"
+  className="root bordered"
 >
   <li
     className="item"

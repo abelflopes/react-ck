@@ -16,7 +16,7 @@ export interface ListProps extends Omit<React.HTMLAttributes<HTMLUListElement>, 
  */
 
 export const List = ({
-  skin,
+  skin = "bordered",
   items,
   className,
   ...otherProps
