@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/input",
   "private": false,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@react-ck/scss-utils": "^1.1.2",
-    "@react-ck/theme": "^1.2.2",
+    "@react-ck/theme": "^1.3.0",
     "classnames": "^2.3.2"
   }
 }

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.1.2...@react-ck/card@1.2.0) (2023-11-17)
+
+
+### Features
+
+* add card image compound component ([aaef456](https://github.com/abelflopes/react-ck/commit/aaef456e768fcb2148883b3c614d6d64778fcc10))
+
+
+
 ## [1.1.2](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.1.1...@react-ck/card@1.1.2) (2023-11-13)
 
 
