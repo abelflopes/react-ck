@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Accordion renders correctly 1`] = `
+<ul
+  className="root bordered"
+>
+  <li
+    className="item"
+  >
+    <details>
+      <summary
+        className="header"
+      >
+        item 1
+      </summary>
+      content 1
+    </details>
+  </li>
+  <li
+    className="item"
+  >
+    <details>
+      <summary
+        className="header"
+      >
+        item 2
+      </summary>
+      content 2
+    </details>
+  </li>
+</ul>
+`;

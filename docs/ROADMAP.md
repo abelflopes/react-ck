@@ -32,7 +32,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 - [ ] **Spinner:** A spinning thing to show stuff is loading.
 
-- [ ] **Accordion:** A way to hide or show parts of the page.
+[x] **Accordion:** A way to hide or show parts of the page.
 
 - [ ] **Avatar:** A small picture to represent a user.
 
