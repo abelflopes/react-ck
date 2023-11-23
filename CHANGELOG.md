@@ -1,3 +1,16 @@
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/v1.1.0...v1.2.0) (2023-11-23)
+
+
+### Features
+
+* add accordion component ([3a32909](https://github.com/abelflopes/react-ck/commit/3a32909d9ca572e0d04438d2ad398a4c48996f2e))
+* add textarea component ([f7286a0](https://github.com/abelflopes/react-ck/commit/f7286a0d4c4d018887d6c5da782829d9bc698f5f))
+
+
+### Bug Fixes
+
+* use bordered variation as default for list ([119d0e4](https://github.com/abelflopes/react-ck/commit/119d0e40d3e702d9d415aaab0b5c2be5cc066048))
+
 ## [1.1.0](https://github.com/abelflopes/react-ck/compare/v1.0.0...v1.1.0) (2023-11-17)
 
 
