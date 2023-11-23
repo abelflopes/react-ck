@@ -1,5 +1,5 @@
 import { useData } from "../src/index";
-import { renderHook, act, render, RenderResult } from "@testing-library/react";
+import { renderHook, act, render, type RenderResult } from "@testing-library/react";
 import { mockFetch } from "./mock-fetch";
 import React from "react";
 import "@testing-library/jest-dom";

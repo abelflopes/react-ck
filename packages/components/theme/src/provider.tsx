@@ -26,6 +26,7 @@ export const ThemeProvider = ({
 }: Readonly<ThemeProviderProps>): React.ReactElement => {
   const themeCssVariables = useMemo<React.CSSProperties>(() => {
     return Object.fromEntries(
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- required to simplify code
       Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
         // Sync prefixing with /packages/utils/scss/src/_functions.scss
         // get-css-var

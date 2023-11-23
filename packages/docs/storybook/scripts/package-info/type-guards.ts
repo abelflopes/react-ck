@@ -16,5 +16,7 @@ export function isPackageInfo(v: unknown): v is PackageInfo {
 }
 
 export function isPackageInfoList(v: unknown): v is PackageInfo[] {
-  return v !== null && typeof v === "object" && Array.isArray(v) && v.every(isPackageInfo);
+  return (
+    v !== null && typeof v === "object" && Array.isArray(v) && v.every((i) => isPackageInfo(i))
+  );
 }
