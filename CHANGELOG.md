@@ -1,3 +1,26 @@
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/v1.2.0...v1.3.0) (2023-11-24)
+
+
+### Features
+
+* add dark and light variations of primary color ([9c1d3c7](https://github.com/abelflopes/react-ck/commit/9c1d3c79746dfccd7cc0aa4b86ea9344c3dd1da0))
+* add select component ([91fb188](https://github.com/abelflopes/react-ck/commit/91fb188ef63d1b35f9ec4f4a5a5d4aa65adddf08))
+* use chip default skin as neutral and add primary color skin ([cc5d4df](https://github.com/abelflopes/react-ck/commit/cc5d4df2e02a37a407d9adbacf4004b620d47a4b))
+
+
+### Bug Fixes
+
+* add contrast in neutral colors ([2c51fec](https://github.com/abelflopes/react-ck/commit/2c51fec5f8a3e0f7b6a13428dfeb34c00cc29eb6))
+* button hover background & smooth transition ([2632b4e](https://github.com/abelflopes/react-ck/commit/2632b4e19a4fad6e00569a11d82087c286908c5e))
+* button secondary variation hover background ([16bd98c](https://github.com/abelflopes/react-ck/commit/16bd98cff86e1c1c7d31cd87fa241aaeb2c24f75))
+* remove unused select placeholder styles ([150d539](https://github.com/abelflopes/react-ck/commit/150d539f63f9611d6d2cbea33666d89e543f7b6f))
+* remove unused theme color ([dc6c231](https://github.com/abelflopes/react-ck/commit/dc6c2311066d837718ceee4a82f7d2878d9820b2))
+
+
+### Code Refactoring
+
+* use chip colors as centralised theme colors ([8fb30dd](https://github.com/abelflopes/react-ck/commit/8fb30dd13c69374cd1baac87c43049dc554d20f1))
+
 ## [1.2.0](https://github.com/abelflopes/react-ck/compare/v1.1.0...v1.2.0) (2023-11-23)
 
 
