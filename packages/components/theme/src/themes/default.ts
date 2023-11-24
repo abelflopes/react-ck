@@ -7,7 +7,6 @@ import type { Theme } from "../types";
 export const defaultTheme: Theme = {
   color: {
     "highlight-primary": "#59BCC8",
-    "highlight-secondary": "#3e86d4",
     "neutral-0": "#fff",
     "neutral-100": "#edf2f7",
     "neutral-200": "#DBDEEB",

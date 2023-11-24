@@ -2,7 +2,6 @@
 export interface Theme {
   color: {
     "highlight-primary": string;
-    "highlight-secondary": string;
     "neutral-0": string;
     "neutral-100": string;
     "neutral-200": string;
