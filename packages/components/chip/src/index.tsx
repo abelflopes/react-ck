@@ -4,7 +4,7 @@ import React from "react";
 
 export interface ChipProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Specifies the visual style of the chip  */
-  skin?: "negative" | "average" | "positive";
+  skin?: "neutral" | "primary" | "negative" | "average" | "positive";
 }
 
 /**
@@ -15,7 +15,7 @@ export interface ChipProps extends React.HTMLAttributes<HTMLDivElement> {
  */
 
 export const Chip = ({
-  skin,
+  skin = "neutral",
   children,
   className,
   ...otherProps

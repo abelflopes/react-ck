@@ -7,10 +7,19 @@
   line-height: 18px;
   font-size: 12px;
   font-weight: 700;
-  background-color: #e2e8f0;
-  color: #1a202c;
+
   display: inline-flex;
   border-radius: 8px;
+}
+
+.neutral {
+  background-color: #e2e8f0;
+  color: #1a202c;
+}
+
+.primary {
+  background-color: get-color(highlight-primary-light);
+  color: get-color(highlight-primary-dark);
 }
 
 .negative {
