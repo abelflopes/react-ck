@@ -14,10 +14,6 @@
   box-sizing: border-box;
   border-radius: get-spacing(1);
 
-  &::placeholder {
-    color: get-color(neutral-300);
-  }
-
   &:disabled {
     cursor: not-allowed;
   }
