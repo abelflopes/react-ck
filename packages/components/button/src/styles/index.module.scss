@@ -3,8 +3,9 @@
 .root {
   @include font-base;
 
+  background-color: get-css-var(button, background-color);
+  color: get-css-var(button, color);
   font-weight: 700;
-  color: inherit;
   border: none;
   cursor: pointer;
   display: inline-flex;
@@ -14,23 +15,27 @@
   border-radius: get-spacing(1);
   transition: background-color 0.2s ease;
 
-  &:hover {
-    background-color: get-color(highlight-primary-dark);
-  }
-
   &:disabled {
     cursor: not-allowed;
   }
 }
 
 .primary {
-  background-color: get-color(highlight-primary);
-  color: get-color(neutral-0);
+  @include define-css-var(button, background-color, get-color(highlight-primary));
+  @include define-css-var(button, color, get-color(neutral-0));
+
+  &:hover {
+    @include define-css-var(button, background-color, get-color(highlight-primary-dark));
+  }
 }
 
 .secondary {
-  background: get-color(neutral-200);
-  color: get-color(neutral-800);
+  @include define-css-var(button, background-color, get-color(neutral-200));
+  @include define-css-var(button, color, get-color(neutral-800));
+
+  &:hover {
+    @include define-css-var(button, background-color, get-color(neutral-300));
+  }
 }
 
 .icon {
