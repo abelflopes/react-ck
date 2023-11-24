@@ -2,7 +2,7 @@
 
 exports[`Snapshot Chip renders correctly 1`] = `
 <div
-  className="root"
+  className="root neutral"
 >
   Chip
 </div>
