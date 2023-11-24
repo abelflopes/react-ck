@@ -17,13 +17,25 @@ These colors are carefully curated to maintain a cohesive and visually appealing
     )}
   />
 
-  <ColorItem
-    title="Neutral"
-    subtitle="Multi purpose neutral colors"
+{" "}
+
+<ColorItem
+  title="Neutral"
+  subtitle="Multi purpose neutral colors"
+  colors={Object.fromEntries(
+    Object.entries(defaultTheme.color).filter(([k]) => k.includes("neutral")),
+  )}
+/>
+
+    <ColorItem
+    title="Status Colors"
+    subtitle="Colors used to refelect different statuses"
     colors={Object.fromEntries(
-      Object.entries(defaultTheme.color).filter(([k]) => k.includes("neutral")),
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("status")),
     )}
-  />
+
+/>
+
   <ColorItem
     title="Overlay"
     subtitle="Semi-opaque colors"

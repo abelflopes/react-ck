@@ -3,36 +3,37 @@
 .root {
   @include font-base;
 
+  background-color: get-css-var(chip, background-color);
+  color: get-css-var(chip, color);
   padding: 4px 8px;
   line-height: 18px;
   font-size: 12px;
   font-weight: 700;
-
   display: inline-flex;
   border-radius: 8px;
 }
 
 .neutral {
-  background-color: #e2e8f0;
-  color: #1a202c;
+  @include define-css-var(chip, background-color, #e2e8f0);
+  @include define-css-var(chip, color, #1a202c);
 }
 
 .primary {
-  background-color: get-color(highlight-primary-light);
-  color: get-color(highlight-primary-dark);
+  @include define-css-var(chip, background-color, get-color(highlight-primary-light));
+  @include define-css-var(chip, color, get-color(highlight-primary-dark));
 }
 
 .negative {
-  background-color: #fed7d7;
-  color: #9b2c2c;
+  @include define-css-var(chip, background-color, get-color(status-negative-light));
+  @include define-css-var(chip, color, get-color(status-negative-dark));
 }
 
 .average {
-  background-color: #feebc8;
-  color: #9b2c2c;
+  @include define-css-var(chip, background-color, get-color(status-average-light));
+  @include define-css-var(chip, color, get-color(status-average-dark));
 }
 
 .positive {
-  background-color: #e2f2e3;
-  color: #276749;
+  @include define-css-var(chip, background-color, get-color(status-positive-light));
+  @include define-css-var(chip, color, get-color(status-positive-dark));
 }

@@ -11,6 +11,12 @@ export interface Theme {
     "neutral-500": string;
     "neutral-800": string;
     "neutral-900": string;
+    "status-positive-light": string;
+    "status-positive-dark": string;
+    "status-average-light": string;
+    "status-average-dark": string;
+    "status-negative-light": string;
+    "status-negative-dark": string;
     "overlay-light": string;
     "overlay-dark": string;
   };
