@@ -33,6 +33,7 @@
     "@react-ck/input": "^1.0.0",
     "@react-ck/list": "^1.0.0",
     "@react-ck/overlay": "^1.0.0",
+    "@react-ck/select": "^1.0.0",
     "@react-ck/table": "^1.0.0",
     "@react-ck/text": "^1.0.0",
     "@react-ck/textarea": "^1.0.0",

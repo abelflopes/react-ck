@@ -40,7 +40,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [ ] **Form Field:** Boxes where people type stuff or pick options.
 
-[ ] **Select:** A drop-down menu to choose things.
+[x] **Select:** A drop-down menu to choose things.
 
 [ ] **Textarea:** A big box for writing lots of stuff.
 
