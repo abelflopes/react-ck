@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.2.4...@react-ck/input@1.2.5) (2023-11-24)
+
+
+### Bug Fixes
+
+* add contrast in neutral colors ([2c51fec](https://github.com/abelflopes/react-ck/commit/2c51fec5f8a3e0f7b6a13428dfeb34c00cc29eb6))
+
+
+
 ## [1.2.4](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.2.3...@react-ck/input@1.2.4) (2023-11-23)
 
 **Note:** Version bump only for package @react-ck/input

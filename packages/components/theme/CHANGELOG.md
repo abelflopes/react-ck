@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.3.1...@react-ck/theme@1.4.0) (2023-11-24)
+
+
+### Features
+
+* add dark and light variations of primary color ([9c1d3c7](https://github.com/abelflopes/react-ck/commit/9c1d3c79746dfccd7cc0aa4b86ea9344c3dd1da0))
+
+
+### Bug Fixes
+
+* add contrast in neutral colors ([2c51fec](https://github.com/abelflopes/react-ck/commit/2c51fec5f8a3e0f7b6a13428dfeb34c00cc29eb6))
+* remove unused theme color ([dc6c231](https://github.com/abelflopes/react-ck/commit/dc6c2311066d837718ceee4a82f7d2878d9820b2))
+
+
+
 ## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.3.0...@react-ck/theme@1.3.1) (2023-11-23)
 
 **Note:** Version bump only for package @react-ck/theme

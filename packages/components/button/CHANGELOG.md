@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.2.4...@react-ck/button@1.2.5) (2023-11-24)
+
+
+### Bug Fixes
+
+* button hover background & smooth transition ([2632b4e](https://github.com/abelflopes/react-ck/commit/2632b4e19a4fad6e00569a11d82087c286908c5e))
+* button secondary variation hover background ([16bd98c](https://github.com/abelflopes/react-ck/commit/16bd98cff86e1c1c7d31cd87fa241aaeb2c24f75))
+
+
+
 ## [1.2.4](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.2.3...@react-ck/button@1.2.4) (2023-11-23)
 
 **Note:** Version bump only for package @react-ck/button
