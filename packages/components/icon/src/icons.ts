@@ -2,6 +2,7 @@
 import { BsBellFill } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
 import { SiLinkedin, SiCodersrank, SiNpm, SiCodepen, SiGithub } from "react-icons/si";
+import { CgSpinnerTwoAlt } from "react-icons/cg";
 
 export default {
   "bell-filled": BsBellFill,
@@ -11,4 +12,5 @@ export default {
   "npm": SiNpm,
   "codepen": SiCodepen,
   "github": SiGithub,
+  "spinner": CgSpinnerTwoAlt,
 };
