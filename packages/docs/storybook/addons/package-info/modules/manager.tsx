@@ -39,7 +39,7 @@ export const registerManagerAddon = (): void => {
           const currPackageInfo = data.find(({ id }) => {
             const packageName = id.split("/")[1];
 
-            return packageName && storyIdParts.includes(packageName);
+            return packageName && storyIdParts.includes(packageName.replace(/-/g, ""));
           });
 
           setAddonState((state) => ({
