@@ -46,7 +46,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 ## Loading & Progress
 
-[ ] **Skeleton:** A placeholder that shows where things will go.
+[x] **Skeleton:** A placeholder that shows where things will go.
 
 [ ] **Spinner:** A spinning thing to show stuff is loading.
 
