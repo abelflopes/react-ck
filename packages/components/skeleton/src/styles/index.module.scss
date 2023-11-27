@@ -4,7 +4,7 @@
   background-color: get-color(neutral-100);
   position: relative;
   width: 100%;
-  border-radius: 3px;
+  border-radius: get-spacing(0.5);
   overflow: hidden;
   height: get-spacing(20);
 
