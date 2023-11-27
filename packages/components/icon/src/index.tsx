@@ -11,6 +11,8 @@ export interface IconProps extends Omit<IconType, "size"> {
   skin?: "default" | "inverted";
   /** Specifies the name of the icon to be rendered */
   name: keyof typeof icons;
+  /** Additional CSS class */
+  className?: SVGAttributes<SVGElement>["className"];
 }
 
 /**
