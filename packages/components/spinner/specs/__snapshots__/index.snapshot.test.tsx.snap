@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Spinner renders correctly 1`] = `
+<span
+  className="root default"
+>
+  <svg
+    className="root size_l skin_default"
+    fill="none"
+    height="1em"
+    stroke="currentColor"
+    strokeWidth="0"
+    style={
+      {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 22C17.5228 22 22 17.5228 22 12H19C19 15.866 15.866 19 12 19V22Z"
+      fill="currentColor"
+    />
+    <path
+      d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"
+      fill="currentColor"
+    />
+  </svg>
+</span>
+`;

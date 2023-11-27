@@ -35,6 +35,7 @@
     "@react-ck/overlay": "^1.0.0",
     "@react-ck/select": "^1.0.0",
     "@react-ck/skeleton": "^1.0.0",
+    "@react-ck/spinner": "^1.0.0",
     "@react-ck/table": "^1.0.0",
     "@react-ck/text": "^1.0.0",
     "@react-ck/textarea": "^1.0.0",

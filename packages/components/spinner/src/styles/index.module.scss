@@ -1,0 +1,27 @@
+@import "@react-ck/theme";
+
+.root {
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: get-css-var(spinner, color);
+  animation: spin 1.5s infinite linear;
+}
+
+.default {
+  @include define-css-var(spinner, color, currentColor);
+}
+
+.primary {
+  @include define-css-var(spinner, color, get-color(highlight-primary));
+}
