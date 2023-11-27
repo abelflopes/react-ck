@@ -1,6 +1,6 @@
 import styles from "./styles/index.module.scss";
 /// React
-import React from "react";
+import React, { type SVGAttributes } from "react";
 // Icons
 import { type IconType } from "react-icons";
 import icons from "./icons";
@@ -8,6 +8,7 @@ import { useThemeContext } from "@react-ck/theme";
 import classNames from "classnames";
 
 export interface IconProps extends Omit<IconType, "size"> {
+  size?: "text" | "m" | "l";
   skin?: "default" | "inverted";
   /** Specifies the name of the icon to be rendered */
   name: keyof typeof icons;
@@ -22,8 +23,10 @@ export interface IconProps extends Omit<IconType, "size"> {
  */
 
 export const Icon = ({
+  size = "text",
   skin = "default",
   name,
+  className,
   ...otherProps
 }: Readonly<IconProps>): React.ReactElement => {
   const themeContext = useThemeContext();
@@ -33,11 +36,15 @@ export const Icon = ({
   return (
     <Icon
       {...otherProps}
-      size={16}
-      className={classNames(styles.root, {
-        [`${styles[skin]}`]: skin !== "default" && skin !== "inverted",
-        [`${styles.inverted}`]: themeContext.inverted || skin === "inverted",
-      })}
+      className={classNames(
+        styles.root,
+        styles[`size_${size}`],
+        {
+          [`${styles[`skin_${skin}`]}`]: skin !== "inverted",
+          [`${styles.skin_inverted}`]: themeContext.inverted || skin === "inverted",
+        },
+        className,
+      )}
     />
   );
 };

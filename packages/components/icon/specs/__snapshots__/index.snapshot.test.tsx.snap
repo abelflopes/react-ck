@@ -2,9 +2,9 @@
 
 exports[`Snapshot Icon renders correctly 1`] = `
 <svg
-  className="root"
+  className="root size_text skin_default"
   fill="currentColor"
-  height={16}
+  height="1em"
   stroke="currentColor"
   strokeWidth="0"
   style={
@@ -13,7 +13,7 @@ exports[`Snapshot Icon renders correctly 1`] = `
     }
   }
   viewBox="0 0 16 16"
-  width={16}
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
