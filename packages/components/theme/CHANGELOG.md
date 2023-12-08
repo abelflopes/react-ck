@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.4.0...@react-ck/theme@1.4.1) (2023-12-08)
+
+
+### Bug Fixes
+
+* allow using custom target element for theme var injection ([bea2487](https://github.com/abelflopes/react-ck/commit/bea24870cd920888c42321544eab457c9a92388a))
+
+
+
 ## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.3.1...@react-ck/theme@1.4.0) (2023-11-24)
 
 

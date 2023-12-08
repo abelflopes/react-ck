@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.3.3...@react-ck/icon@1.4.0) (2023-12-08)
+
+
+### Features
+
+* add icon size variations ([54bfedd](https://github.com/abelflopes/react-ck/commit/54bfedd0d5be95c607ef413fe75edfec1183e043))
+* add spinner icon ([10cf800](https://github.com/abelflopes/react-ck/commit/10cf800c582b2622c9b5eb15c19aff3533130186))
+* allow adding classnames to icon component ([c74a203](https://github.com/abelflopes/react-ck/commit/c74a2033f75461a88900ac160ec17fcc8563dcab))
+
+
+
 ## [1.3.3](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.3.2...@react-ck/icon@1.3.3) (2023-11-24)
 
 **Note:** Version bump only for package @react-ck/icon
