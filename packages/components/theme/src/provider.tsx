@@ -1,5 +1,5 @@
 import "./styles/index.module.scss";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import type { Theme } from "./types";
 import { defaultTheme } from "./themes/default";
 import { ThemeContextProvider } from "./context";
@@ -20,27 +20,44 @@ type MappedTheme = Record<string, Record<string, number>>;
  */
 
 export const ThemeProvider = ({
-  // Target, // TODO: add target flexibility
+  target,
   theme = defaultTheme,
   children,
 }: Readonly<ThemeProviderProps>): React.ReactElement => {
-  const themeCssVariables = useMemo<React.CSSProperties>(() => {
-    return Object.fromEntries(
-      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- required to simplify code
-      Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
-        // Sync prefixing with /packages/utils/scss/src/_functions.scss
-        // get-css-var
-        Object.entries(data).map(([key, value]) => ["--react-ck-" + context + "-" + key, value]),
+  const themeCssVariables = useMemo<React.CSSProperties>(
+    () =>
+      Object.fromEntries(
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- required to simplify code
+        Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
+          // Sync prefixing with /packages/utils/scss/src/_functions.scss
+          // get-css-var
+          Object.entries(data).map(([key, value]) => ["--react-ck-" + context + "-" + key, value]),
+        ),
       ),
-    );
-  }, [theme]);
+    [theme],
+  );
+
+  useEffect(() => {
+    if (!target) return;
+
+    Object.entries(themeCssVariables).forEach(([key, value]) => {
+      if (typeof value !== "string") return;
+      target.style.setProperty(key, value);
+    });
+
+    return () => {
+      Object.keys(themeCssVariables).forEach(target.style.removeProperty);
+    };
+  }, [target, themeCssVariables]);
 
   return (
     <ThemeContextProvider
       value={{
         theme,
       }}>
-      <div style={themeCssVariables}>{children}</div>
+      {!target && <div style={themeCssVariables}>{children}</div>}
+
+      {target && children}
     </ThemeContextProvider>
   );
 };
