@@ -1,3 +1,26 @@
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/v1.3.0...v1.4.0) (2023-12-08)
+
+
+### Features
+
+* add icon size variations ([54bfedd](https://github.com/abelflopes/react-ck/commit/54bfedd0d5be95c607ef413fe75edfec1183e043))
+* add skeleton component ([39b589d](https://github.com/abelflopes/react-ck/commit/39b589d156aee9ec5aad981b8dbfb8f5123de3ee))
+* add spinner component ([dec49eb](https://github.com/abelflopes/react-ck/commit/dec49eba4437e49b5e5b8fbace99e7b0ec8ee74c))
+* add spinner icon ([10cf800](https://github.com/abelflopes/react-ck/commit/10cf800c582b2622c9b5eb15c19aff3533130186))
+* allow adding classnames to icon component ([c74a203](https://github.com/abelflopes/react-ck/commit/c74a2033f75461a88900ac160ec17fcc8563dcab))
+* create main manager wrapper ([bf6fc75](https://github.com/abelflopes/react-ck/commit/bf6fc756c42b2d401293b0b07da06ff06245ef37))
+
+
+### Bug Fixes
+
+* allow using custom target element for theme var injection ([bea2487](https://github.com/abelflopes/react-ck/commit/bea24870cd920888c42321544eab457c9a92388a))
+* make skeleton use border radius from theme ([a54e58c](https://github.com/abelflopes/react-ck/commit/a54e58c0a307e916a0fb6773951688d115f94e72))
+
+
+### Code Refactoring
+
+* use manager instead of theme as main wrapper ([3728d99](https://github.com/abelflopes/react-ck/commit/3728d990e66c29d62ad9e2e9ddfd53a6886c5311))
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/v1.2.0...v1.3.0) (2023-11-24)
 
 
