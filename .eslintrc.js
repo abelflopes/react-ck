@@ -13,6 +13,7 @@ const config = {
     "unicorn/no-null": 0,
     "unicorn/prefer-top-level-await": 0,
     "unicorn/prefer-string-replace-all": 0,
+    "unicorn/no-array-callback-reference": 0,
     "@typescript-eslint/consistent-type-assertions": [2, { assertionStyle: "never" }],
     // Eslint comments
     // "eslint-comments/disable-enable-pair": 0,
