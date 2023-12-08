@@ -1,0 +1,30 @@
+{
+  "name": "@react-ck/manager",
+  "private": false,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/utils/manager#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/react-ck.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@react-ck/typescript-config": "^1.0.0",
+    "@react-ck/webpack-config": "^1.0.0",
+    "@types/react": "^18.2.33"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@react-ck/theme": "^1.4.0"
+  }
+}
