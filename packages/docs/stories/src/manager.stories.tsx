@@ -16,6 +16,8 @@ const meta: Meta<typeof Manager> = {
 
 export default meta;
 
+// TODO: add basic vs custom example with curtomizable arg tables
+
 export const component: Story = {
   args: {
     theme: {

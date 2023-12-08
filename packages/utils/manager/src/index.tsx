@@ -6,6 +6,7 @@ export interface ManagerProps {
   children: React.ReactNode;
 }
 
+// TODO: add annotation
 export const Manager = ({ theme, children }: Readonly<ManagerProps>): React.ReactElement => (
   <ThemeProvider {...theme}>{children}</ThemeProvider>
 );
