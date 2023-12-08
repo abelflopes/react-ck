@@ -19,13 +19,13 @@ You will also need to set up the theme provider, install it using npm or yarn: `
 Wrap your app root with the theme provider and use this component:
 
 ```tsx
-import { ThemeProvider } from "@react-ck/theme";
+import { Manager } from "@react-ck/manager";
 import { Chip } from "@react-ck/chip";
 
 const myApp = () => (
-    <ThemeProvider>
+    <Manager>
         <Chip ... />
-    </ThemeProvider>
+    </Manager>
 );
 ```
 

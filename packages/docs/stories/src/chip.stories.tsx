@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@react-ck/theme";
+import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
 import { Chip } from "@react-ck/chip/src";
@@ -12,9 +12,9 @@ const meta: Meta<typeof Chip> = {
   ...configureStory(Chip, {
     decorators: [
       (Story) => (
-        <ThemeProvider>
+        <Manager>
           <Story />
-        </ThemeProvider>
+        </Manager>
       ),
     ],
   }),

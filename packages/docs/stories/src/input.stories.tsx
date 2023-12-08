@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@react-ck/theme";
+import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
@@ -13,9 +13,9 @@ const meta: Meta<typeof Input> = {
   ...configureStory(Input, {
     decorators: [
       (Story) => (
-        <ThemeProvider>
+        <Manager>
           <Story />
-        </ThemeProvider>
+        </Manager>
       ),
     ],
   }),

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@react-ck/theme";
+import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Table } from "@react-ck/table/src";
 
@@ -11,9 +11,9 @@ const meta: Meta<typeof Table> = {
   ...configureStory(Table, {
     decorators: [
       (Story) => (
-        <ThemeProvider>
+        <Manager>
           <Story />
-        </ThemeProvider>
+        </Manager>
       ),
     ],
   }),

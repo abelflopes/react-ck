@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@react-ck/theme";
+import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Skeleton } from "@react-ck/skeleton/src";
 
@@ -14,9 +14,9 @@ const meta: Meta<typeof Skeleton> = {
     },
     decorators: [
       (Story) => (
-        <ThemeProvider>
+        <Manager>
           <Story />
-        </ThemeProvider>
+        </Manager>
       ),
     ],
   }),

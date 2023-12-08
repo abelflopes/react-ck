@@ -2,7 +2,7 @@ import { Meta, Title, IconGallery, IconItem } from "@storybook/blocks";
 import { Icon } from "@react-ck/icon/src";
 import icons from "@react-ck/icon/src/icons";
 import { Input } from "@react-ck/input/src";
-import { ThemeProvider } from "@react-ck/theme/src";
+import { Manager } from "@react-ck/manager/src";
 
 <Meta title="Generic/Icon/Gallery" />
 
@@ -14,7 +14,7 @@ export function Demo ()  {
 
 return (
 
-  <ThemeProvider>
+  <Manager>
   <Input autofocus placeholder="Search" onChange={function (e) {
       setSearch(e.target.value);
     }}
@@ -36,7 +36,7 @@ return (
       )}
     </IconGallery>
 
-  </ThemeProvider>
+  </Manager>
 
 )
 }

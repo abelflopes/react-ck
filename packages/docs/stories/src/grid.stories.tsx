@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@react-ck/theme";
+import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config/src/index";
 import { GridContainer, GridColumn } from "@react-ck/grid/src";
@@ -15,9 +15,9 @@ const meta: Meta<typeof GridContainer> = {
     {
       decorators: [
         (Story) => (
-          <ThemeProvider>
+          <Manager>
             <Story />
-          </ThemeProvider>
+          </Manager>
         ),
       ],
     },

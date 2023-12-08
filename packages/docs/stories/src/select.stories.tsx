@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@react-ck/theme";
+import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
 import { Select, SelectOption } from "@react-ck/select/src";
@@ -12,9 +12,9 @@ const meta: Meta<typeof Select> = {
   ...configureStory(Select, {
     decorators: [
       (Story) => (
-        <ThemeProvider>
+        <Manager>
           <Story />
-        </ThemeProvider>
+        </Manager>
       ),
     ],
   }),
