@@ -24,6 +24,7 @@ const config = {
     "eslint-comments/no-restricted-disable": 2,
     // "eslint-comments/no-use": 0,
     "eslint-comments/require-description": 1,
+    "arrow-body-style": ["error", "as-needed"],
   },
 };
 
