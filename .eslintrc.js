@@ -5,6 +5,7 @@ const config = {
   rules: {
     "@typescript-eslint/promise-function-async": 1,
     "etc/no-assign-mutated-array": 0,
+    "react/button-has-type": 0,
     "import/no-unresolved": 0,
     "unicorn/prefer-spread": 0,
     "unicorn/prevent-abbreviations": 0,
