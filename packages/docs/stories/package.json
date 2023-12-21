@@ -32,6 +32,7 @@
     "@react-ck/icon": "^1.0.0",
     "@react-ck/input": "^1.0.0",
     "@react-ck/list": "^1.0.0",
+    "@react-ck/modal": "^1.0.0",
     "@react-ck/overlay": "^1.0.0",
     "@react-ck/select": "^1.0.0",
     "@react-ck/skeleton": "^1.0.0",

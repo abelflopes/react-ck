@@ -5,6 +5,7 @@ import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
 import { Button } from "@react-ck/button/src";
+import { Icon } from "@react-ck/icon";
 
 type Story = StoryObj<typeof Button>;
 
@@ -34,5 +35,12 @@ export const Secondary: Story = {
   args: {
     skin: "secondary",
     children: sentenceCase(faker.lorem.words({ min: 1, max: 3 })),
+  },
+};
+
+export const IconButton: Story = {
+  args: {
+    skin: "secondary",
+    icon: <Icon name="close" />,
   },
 };
