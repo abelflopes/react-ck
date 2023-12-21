@@ -7,7 +7,7 @@ import classNames from "classnames";
  */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Defines the color scheme of the button */
-  skin?: "primary" | "secondary";
+  skin?: "primary" | "secondary" | "ghost";
   /**
    * Content slot to receive an icon.
    * This can be any valid React node, allowing integration of icons or custom SVG components.

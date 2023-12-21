@@ -38,6 +38,15 @@
   }
 }
 
+.ghost {
+  @include define-css-var(button, background-color, transparent);
+  @include define-css-var(button, color, get-color(neutral-800));
+
+  &:hover {
+    @include define-css-var(button, background-color, get-color(neutral-100));
+  }
+}
+
 .icon {
   margin-right: get-spacing(1);
   display: inline-flex;
