@@ -53,6 +53,12 @@
   @include define-css-var(text, color, #1a202c);
 }
 
+.h3 {
+  @include define-css-var(text, font-size, 20px);
+  @include define-css-var(text, font-weight, 500);
+  @include define-css-var(text, line-height, 24px);
+}
+
 .huge {
   @include define-css-var(text, font-size, 60px);
   @include define-css-var(text, line-height, 60px);
