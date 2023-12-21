@@ -14,7 +14,7 @@ In summary, the React Chip component simplifies the process of displaying concis
 
 To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/chip` or `yarn add @react-ck/chip`.
 
-You will also need to set up the theme provider, install it using npm or yarn: `npm i --save @react-ck/theme` or `yarn add @react-ck/theme`.
+You will also need to set up the manager, install it using npm or yarn: `npm i --save @react-ck/manager` or `yarn add @react-ck/manager`.
 
 Wrap your app root with the theme provider and use this component:
 

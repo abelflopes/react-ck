@@ -67,3 +67,9 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 [ ] **Responsive util:** Helps our site look good on any device.
 
 [ ] **Polymorphy util:** Makes our site flexible and cool.
+
+[ ] **Keyboard controls:** Allow components to be controlled with keys (esc. close modal as example)
+
+[ ] **Focus trapping:** Lock focus when view blocking components are displayed
+
+[ ] **Accessibility:** Modals, dialogs, buttons, controls, inputs / forms
