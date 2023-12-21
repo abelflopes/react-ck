@@ -9,30 +9,60 @@ import { Button } from "@react-ck/button";
 import { Text } from "@react-ck/text";
 import { Layer } from "@react-ck/layers";
 
-interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {}
+/**
+ * ModalProps interface represents the properties for the Modal component.
+ * Extends React.HTMLAttributes<HTMLDivElement> to inherit HTMLDivElement attributes.
+ */
+
+interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Determines whether the modal is open or closed */
+  open?: boolean;
+  /** Determines if the modal can be dismissed by clicking outside or close button  */
+  dismissable?: boolean;
+  onOpen?: () => void;
+  onClose?: () => void;
+}
 
 // TODO: add annotation
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-modal-dialog-with-a-portal
 
 /**
+ * Modal is a full screen overlay that sits atop the page content.
+ * It’s used to focus attention on an important task or message and requires user input to be dismissed.
  * @param props - {@link React.HTMLAttributes}
  * @returns a React element
  */
 
 export const Modal = ({
+  open = true,
+  dismissable = true,
   children,
   className,
+  onOpen,
+  onClose,
   ...otherProps
-}: Readonly<ModalProps>): React.ReactElement => {
+}: Readonly<ModalProps>): React.ReactNode => {
+  // Internal open state, allows component to be uncontrolled
+  const [internalOpen, setInternalOpen] = useState(open);
+
+  // State child compound components' props
   const [props, setProps] = useState<ModalContextValue>({
     header: undefined,
     footer: undefined,
   });
 
+  // Define context properties from child compound components
   const setContextValue = useCallback<ModalContextProps["setValue"]>((value) => {
     setProps((v) => ({ ...v, ...value }));
   }, []);
 
+  // Close callback
+  const handleClose = useCallback(() => {
+    if (!dismissable) return;
+    setInternalOpen(false);
+  }, [dismissable]);
+
+  // Build context for child compound components
   const contextProps = useMemo<ModalContextProps>(
     () => ({
       setValue: setContextValue,
