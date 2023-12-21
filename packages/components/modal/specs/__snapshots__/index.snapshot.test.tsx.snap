@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Modal renders correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="root dark"
+  />
+  <div
+    className="root card"
+  >
+    <div
+      className="content"
+    >
+      <header
+        className="header"
+        heading="Heading"
+      >
+        <p
+          className="root h3"
+        >
+          Heading
+        </p>
+        <button
+          className="root ghost icon-only"
+        >
+          <svg
+            className="root size_text skin_default"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3,3 L21,21 M3,21 L21,3"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </button>
+      </header>
+      <main
+        className="content"
+      />
+      <footer
+        className="footer"
+      >
+        Footer
+      </footer>
+    </div>
+  </div>
+</div>
+`;

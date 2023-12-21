@@ -1,10 +1,23 @@
 import React from "react";
-import { Modal } from "../src/index";
-import renderer from "react-test-renderer";
+import { Modal, ModalFooter, ModalHeader } from "../src/index";
+import { LayersProvider } from "@react-ck/layers";
+import renderer, { act, type ReactTestRenderer } from "react-test-renderer";
 
 describe("Snapshot Modal", () => {
   test("renders correctly", async () => {
-    const tree = renderer.create(<Modal>Modal</Modal>).toJSON();
-    expect(tree).toMatchSnapshot();
+    let component: ReactTestRenderer | undefined;
+
+    await act(() => {
+      component = renderer.create(
+        <LayersProvider>
+          <Modal>
+            <ModalHeader heading="Heading" />
+            <ModalFooter>Footer</ModalFooter>
+          </Modal>
+        </LayersProvider>,
+      );
+    });
+
+    expect(component?.toJSON()).toMatchSnapshot();
   });
 });
