@@ -29,9 +29,26 @@ export const Button = ({
   children,
   className,
   ...otherProps
-}: Readonly<ButtonProps>): React.ReactElement => (
-  <button className={classNames(styles.root, styles[skin], className)} {...otherProps}>
-    {icon && <span className={styles.icon}>{icon}</span>}
-    {children}
-  </button>
-);
+}: Readonly<ButtonProps>): React.ReactElement => {
+  const isIconOnly = useMemo(
+    () => icon !== undefined && React.Children.count(children) === 0,
+    [children, icon],
+  );
+
+  return (
+    <button
+      className={classNames(
+        styles.root,
+        styles[skin],
+        {
+          [`${styles["icon-only"]}`]: isIconOnly,
+        },
+        className,
+      )}
+      {...otherProps}>
+      {icon && !isIconOnly && <span className={styles.icon}>{icon}</span>}
+      {children}
+      {isIconOnly && icon}
+    </button>
+  );
+};

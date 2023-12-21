@@ -3,6 +3,10 @@
 .root {
   @include font-base;
 
+  @include define-css-var(button, border-radius, get-spacing(1));
+  @include define-css-var(button, padding-y, get-spacing(1));
+  @include define-css-var(button, padding-x, get-spacing(2));
+
   background-color: get-css-var(button, background-color);
   color: get-css-var(button, color);
   font-weight: 700;
@@ -11,12 +15,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: get-spacing(1) get-spacing(2);
-  border-radius: get-spacing(1);
+  padding: get-css-var(button, padding-y) get-css-var(button, padding-x);
+  border-radius: get-css-var(button, border-radius);
   transition: background-color 0.2s ease;
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &.icon-only {
+    @include define-css-var(button, padding-x, get-spacing(1));
+    @include define-css-var(button, border-radius, 50%);
+
+    aspect-ratio: 1/1;
   }
 }
 
