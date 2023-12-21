@@ -11,7 +11,7 @@
 }
 
 .size_text {
-  @include define-css-var(icon, size, 1em);
+  @include define-css-var(icon, size, 1.1em);
 }
 
 .size_m {
