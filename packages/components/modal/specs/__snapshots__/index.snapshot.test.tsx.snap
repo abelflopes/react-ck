@@ -5,7 +5,8 @@ exports[`Snapshot Modal renders correctly 1`] = `
   className="root"
 >
   <div
-    className="root dark"
+    className="root dark clickable_overlay"
+    onClick={[Function]}
   />
   <div
     className="root card"
@@ -24,6 +25,7 @@ exports[`Snapshot Modal renders correctly 1`] = `
         </p>
         <button
           className="root ghost icon-only"
+          onClick={[Function]}
         >
           <svg
             className="root size_text skin_default"
