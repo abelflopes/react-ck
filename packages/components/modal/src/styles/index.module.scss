@@ -1,7 +1,7 @@
 @import "@react-ck/theme";
 
 .root {
-  @include define-css-var(modal, spacing, get-spacing(4));
+  @include define-css-var(modal, spacing, get-spacing(5));
 
   display: flex;
   align-items: center;
@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+.clickable_overlay {
+  cursor: pointer;
+}
+
 .card {
   position: relative;
 }
@@ -22,12 +26,13 @@
   align-items: center;
   justify-content: space-between;
   gap: get-css-var(modal, spacing);
-  padding-bottom: get-css-var(modal, spacing);
+  margin-bottom: get-css-var(modal, spacing);
 }
 
 .footer {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: get-css-var(modal, spacing);
-  padding-top: get-css-var(modal, spacing);
+  margin-top: get-css-var(modal, spacing);
 }

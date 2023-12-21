@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./styles/index.module.scss";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ModalContext, type ModalContextProps, type ModalContextValue } from "./context";
 import { Card } from "@react-ck/card";
 import { Overlay } from "@react-ck/overlay";
@@ -40,33 +40,51 @@ export const Modal = ({
     [setContextValue],
   );
 
-  return (
-    <Layer elevation="overlay">
-      <div {...otherProps} className={classNames(styles.root, className)}>
-        <Overlay />
-        <Card className={styles.card}>
-          <ModalContext.Provider value={contextProps}>
-            {props.header && (
-              <header
-                {...props.header}
-                className={classNames(styles.header, props.header.className)}>
-                <Text type="h3" as="p" margin={false}>
-                  {props.header.heading}
-                </Text>
+  // Invoke open / close handlers
+  useEffect(() => {
+    if (internalOpen) onOpen?.();
+    else onClose?.();
+  }, [internalOpen, onClose, onOpen]);
 
-                <Button skin="ghost" icon={<Icon name="close" />} />
-              </header>
-            )}
-            <main className={styles.content}>{children}</main>
-            {props.footer && (
-              <footer
-                {...props.footer}
-                className={classNames(styles.footer, props.footer.className)}
-              />
-            )}
-          </ModalContext.Provider>
-        </Card>
-      </div>
-    </Layer>
+  // Synchronize internal state with external state
+  useEffect(() => {
+    setInternalOpen(open);
+  }, [open]);
+
+  return (
+    internalOpen && (
+      <Layer elevation="overlay">
+        <div {...otherProps} className={classNames(styles.root, className)}>
+          <Overlay
+            className={classNames(dismissable && styles.clickable_overlay)}
+            onClick={handleClose}
+          />
+          <Card className={styles.card}>
+            <ModalContext.Provider value={contextProps}>
+              {props.header && (
+                <header
+                  {...props.header}
+                  className={classNames(styles.header, props.header.className)}>
+                  <Text type="h3" as="p" margin={false}>
+                    {props.header.heading}
+                  </Text>
+
+                  {dismissable && (
+                    <Button skin="ghost" icon={<Icon name="close" />} onClick={handleClose} />
+                  )}
+                </header>
+              )}
+              <main className={styles.content}>{children}</main>
+              {props.footer && (
+                <footer
+                  {...props.footer}
+                  className={classNames(styles.footer, props.footer.className)}
+                />
+              )}
+            </ModalContext.Provider>
+          </Card>
+        </div>
+      </Layer>
+    )
   );
 };
