@@ -1,0 +1,44 @@
+{
+  "name": "@react-ck/modal",
+  "private": false,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/modal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/react-ck.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "lint:typescript": "tsc --noEmit",
+    "test": "npx -y npm-run-all -s test:*",
+    "test:unit": "jest --testPathPattern=\".unit.*\"",
+    "test:snapshot": "jest --testPathPattern=\".snapshot.*\"",
+    "test:snapshot:update": "jest --testPathPattern=\".snapshot.*\" -u"
+  },
+  "devDependencies": {
+    "@react-ck/babel-config": "^1.0.0",
+    "@react-ck/jest-config": "^1.0.0",
+    "@react-ck/typescript-config": "^1.0.0",
+    "@react-ck/webpack-config": "^1.0.0",
+    "@types/react": "^18.2.33"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@react-ck/button": "^1.2.6",
+    "@react-ck/card": "^1.2.3",
+    "@react-ck/icon": "^1.4.0",
+    "@react-ck/layers": "^1.0.0",
+    "@react-ck/overlay": "^1.1.6",
+    "@react-ck/react-utils": "^1.0.0",
+    "@react-ck/text": "^1.2.6",
+    "@react-ck/theme": "^1.4.1",
+    "classnames": "^2.3.2"
+  }
+}

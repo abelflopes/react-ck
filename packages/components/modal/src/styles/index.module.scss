@@ -1,0 +1,33 @@
+@import "@react-ck/theme";
+
+.root {
+  @include define-css-var(modal, spacing, get-spacing(4));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: get-css-var(modal, spacing);
+  padding-bottom: get-css-var(modal, spacing);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: get-css-var(modal, spacing);
+  padding-top: get-css-var(modal, spacing);
+}
