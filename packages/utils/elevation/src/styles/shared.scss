@@ -1,0 +1,14 @@
+// should be synced with ../index.ts
+
+$elevation: (
+  /// base level
+  "root": 1,
+  /// sticky / navigation elements
+  "sticky": 100,
+  /// floating non-blocking elements
+  "floating": 200,
+  /// blocking elements
+  "overlay": 300,
+  /// high relevance floating blocking elements
+  "popup": 400
+);

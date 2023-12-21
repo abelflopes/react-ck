@@ -1,0 +1,26 @@
+{
+  "name": "@react-ck/elevation",
+  "private": false,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sass": "src/styles/shared.scss",
+  "files": [
+    "/dist",
+    "/src/styles"
+  ],
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/utils/elevation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/react-ck.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@react-ck/typescript-config": "^1.0.0",
+    "@react-ck/webpack-config": "^1.0.0",
+    "@types/react": "^18.2.33"
+  }
+}
