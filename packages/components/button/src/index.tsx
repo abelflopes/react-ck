@@ -1,6 +1,7 @@
-import React from "react";
+import React, { isValidElement, useEffect, useMemo } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
+import { getDisplayName } from "@react-ck/react-utils";
 
 /**
  * Props for the Button component
@@ -34,6 +35,18 @@ export const Button = ({
     () => icon !== undefined && React.Children.count(children) === 0,
     [children, icon],
   );
+
+  useEffect(() => {
+    // Validate icon usage (icon should be set through specific prop)
+    React.Children.toArray(children)
+      .filter(isValidElement)
+      .forEach((i) => {
+        const name = getDisplayName(i);
+        if (name && name.toLowerCase().includes("icon")) {
+          throw new Error("Icons inside Button should be set with 'icon' prop");
+        }
+      });
+  }, [children]);
 
   return (
     <button
