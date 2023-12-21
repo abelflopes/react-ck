@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider, type ThemeProviderProps } from "@react-ck/theme";
+import { LayersProvider } from "@react-ck/layers";
 
 export interface ManagerProps {
   theme?: Omit<ThemeProviderProps, "children">;
@@ -8,5 +9,7 @@ export interface ManagerProps {
 
 // TODO: add annotation
 export const Manager = ({ theme, children }: Readonly<ManagerProps>): React.ReactElement => (
-  <ThemeProvider {...theme}>{children}</ThemeProvider>
+  <ThemeProvider {...theme}>
+    <LayersProvider>{children}</LayersProvider>
+  </ThemeProvider>
 );
