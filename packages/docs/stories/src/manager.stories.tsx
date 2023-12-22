@@ -10,7 +10,7 @@ import { defaultTheme } from "@react-ck/theme/src";
 type Story = StoryObj<typeof Manager>;
 
 const meta: Meta<typeof Manager> = {
-  title: "Core/Manager",
+  title: "Providers/Manager",
   ...configureStory(Manager, {}),
 };
 
