@@ -1,14 +1,15 @@
 // should be synced with ../index.ts
 
+/// Map of elevation levels for different UI elements
 $elevation: (
-  /// base level
+  /// Base level elevation
   "root": 1,
-  /// sticky / navigation elements
+  /// Elevation for sticky or navigation elements
   "sticky": 100,
-  /// floating non-blocking elements
+  /// Elevation for floating non-blocking elements
   "floating": 200,
-  /// blocking elements
+  /// Elevation for blocking elements
   "overlay": 300,
-  /// high relevance floating blocking elements
+  /// Elevation for high relevance floating blocking elements
   "popup": 400
 );

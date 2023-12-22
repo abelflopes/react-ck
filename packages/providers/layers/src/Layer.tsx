@@ -4,11 +4,19 @@ import { type Elevation } from "@react-ck/elevation";
 import { getDisplayName } from "@react-ck/react-utils";
 
 export interface LayerProps {
+  /** The elevation level for the layer  */
   elevation: Elevation;
+  /** The child components to be rendered within the layer */
   children?: React.ReactNode;
 }
 
-// TODO: add annotation
+/**
+ * Component for creating a layer with a specific elevation level,
+ * works like React portal - will render its children on app root
+ *
+ * @param props - {@link LayerProps}.
+ * @returns The rendered content of the layer
+ */
 
 export const Layer = ({ elevation, children }: Readonly<LayerProps>): React.ReactNode => {
   const { createLayer } = useContext(LayersContext);

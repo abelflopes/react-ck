@@ -23,7 +23,6 @@ interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;
 }
 
-// TODO: add annotation
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-modal-dialog-with-a-portal
 
 /**
