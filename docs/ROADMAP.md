@@ -50,7 +50,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [x] **Spinner:** A spinning thing to show stuff is loading.
 
-[ ] **Progress:** Shows how much of a task is done.
+[x] **Progress:** Shows how much of a task is done.
 
 ## Floating 
 

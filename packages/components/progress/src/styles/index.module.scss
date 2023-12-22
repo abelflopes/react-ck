@@ -1,0 +1,17 @@
+@import "@react-ck/theme";
+
+.root {
+  background-color: get-color(neutral-100);
+  height: get-spacing(0.5);
+  border-radius: get-spacing(0.5);
+  overflow: hidden;
+}
+
+.bar {
+  background-color: get-color(highlight-primary);
+  width: 100%;
+  transform: scaleX(var(--value));
+  transform-origin: center left;
+  height: 100%;
+  transition: transform ease-in-out 0.5s;
+}

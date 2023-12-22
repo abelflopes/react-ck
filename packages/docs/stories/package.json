@@ -42,6 +42,7 @@
     "@react-ck/textarea": "^1.0.0",
     "@react-ck/manager": "^1.0.0",
     "@react-ck/layers": "^1.0.0",
-    "@react-ck/theme": "^1.0.0"
+    "@react-ck/theme": "^1.0.0",
+    "@react-ck/progress": "^1.0.0"
   }
 }
