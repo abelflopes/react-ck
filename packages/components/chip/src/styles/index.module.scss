@@ -1,5 +1,6 @@
 @import "@react-ck/theme";
 @import "@react-ck/text";
+@import "variables";
 
 .root {
   @include text-base;
@@ -14,27 +15,10 @@
   border-radius: 8px;
 }
 
-.neutral {
-  @include define-css-var(chip, background-color, #e2e8f0);
-  @include define-css-var(chip, color, #1a202c);
-}
-
-.primary {
-  @include define-css-var(chip, background-color, get-color(highlight-primary-light));
-  @include define-css-var(chip, color, get-color(highlight-primary-dark));
-}
-
-.negative {
-  @include define-css-var(chip, background-color, get-color(status-negative-light));
-  @include define-css-var(chip, color, get-color(status-negative-dark));
-}
-
-.average {
-  @include define-css-var(chip, background-color, get-color(status-average-light));
-  @include define-css-var(chip, color, get-color(status-average-dark));
-}
-
-.positive {
-  @include define-css-var(chip, background-color, get-color(status-positive-light));
-  @include define-css-var(chip, color, get-color(status-positive-dark));
+@each $key, $props in $chip-styles {
+  .#{$key} {
+    @each $propKey, $propValue in $props {
+      @include define-css-var(chip, $propKey, $propValue);
+    }
+  }
 }
