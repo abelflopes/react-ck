@@ -52,9 +52,11 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [x] **Progress:** Shows how much of a task is done.
 
+[x] **Empty State:** Shows that a there is no data available.
+
 ## Floating 
 
-[ ] **Modal:** A pop-up box for important messages or extra info.
+[x] **Modal:** A pop-up box for important messages or extra info.
 
 [ ] **Tooltip:** Small pop-up tips when you hover over things.
 
