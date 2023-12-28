@@ -28,6 +28,7 @@
     "@react-ck/container": "^1.0.0",
     "@react-ck/data-table": "^1.0.0",
     "@react-ck/divider": "^1.0.0",
+    "@react-ck/empty-state": "^1.0.0",
     "@react-ck/grid": "^1.0.0",
     "@react-ck/icon": "^1.0.0",
     "@react-ck/input": "^1.0.0",
