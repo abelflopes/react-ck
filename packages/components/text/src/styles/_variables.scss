@@ -1,0 +1,106 @@
+@import "@react-ck/theme";
+@import "@react-ck/scss-utils";
+
+$text-types: (
+  p: (
+    default: (
+      font-family: get-css-var(font, family),
+      font-size: get-css-var(font, base-size),
+      line-height: 24px,
+      font-weight: 500,
+      color: get-color(neutral-900),
+    ),
+    hover: (),
+  ),
+  huge: (
+    default: (
+      font-size: 60px,
+      font-weight: 700,
+      line-height: 60px,
+    ),
+    hover: (),
+  ),
+  soft: (
+    default: (
+      color: #718096,
+    ),
+    hover: (),
+  ),
+  h1: (
+    default: (
+      font-size: 29px,
+      font-weight: 500,
+      line-height: 36px,
+    ),
+    hover: (),
+  ),
+  h2: (
+    default: (
+      font-size: 24px,
+      font-weight: 500,
+      line-height: 36px,
+      color: #1a202c,
+    ),
+    hover: (),
+  ),
+  h3: (
+    default: (
+      font-size: 20px,
+      font-weight: 500,
+      line-height: 24px,
+    ),
+    hover: (),
+  ),
+  h4: (
+    default: (),
+    hover: (),
+  ),
+  h5: (
+    default: (),
+    hover: (),
+  ),
+  h6: (
+    default: (),
+    hover: (),
+  ),
+);
+
+$text-variations: (
+  small: (
+    default: (
+      font-size: 14px,
+      font-weight: 400,
+      line-height: 21px,
+    ),
+    hover: (),
+  ),
+  bold: (
+    default: (
+      font-weight: 700,
+    ),
+    hover: (),
+  ),
+  link: (
+    default: (
+      color: #0052cc,
+    ),
+    hover: (
+      color: #003e99,
+    ),
+  ),
+  link_hidden: (
+    default: (
+      text-decoration: none,
+    ),
+    hover: (
+      color: #003e99,
+      text-decoration: underline,
+    ),
+  ),
+  inverted: (
+    default: (
+      color: get-color(neutral-0),
+    ),
+    hover: (),
+  ),
+);

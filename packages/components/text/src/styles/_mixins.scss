@@ -1,7 +1,39 @@
 @import "@react-ck/theme";
+@import "variables";
 
-// TODO: move to typography
+@mixin text-variant($key, $map) {
+  $props: map-get-strict($map, $key);
+  $defaultProps: map-get-strict($props, default);
+  $hoverProps: map-get-strict($props, hover);
+
+  @each $propName, $propValue in $defaultProps {
+    @include define-css-var(text, $propName, $propValue);
+  }
+
+  &:hover {
+    @each $propName, $propValue in $hoverProps {
+      @include define-css-var(text, $propName, $propValue);
+    }
+  }
+}
+
+@mixin text-variation($key) {
+  @include text-variant($key, $text-variations);
+}
+
+@mixin text-type($key) {
+  @include text-variant($key, $text-types);
+}
+
 @mixin font-base {
-  font-family: get-css-var(font, family);
-  font-size: get-css-var(font, base-size);
+  @include text-type(p);
+  @include define-css-var(text, color, get-color(neutral-900));
+  @include define-css-var(text, text-decoration, none);
+
+  font-family: get-css-var(text, font-family);
+  font-size: get-css-var(text, font-size);
+  font-weight: get-css-var(text, font-weight);
+  line-height: get-css-var(text, line-height);
+  text-decoration: get-css-var(text, text-decoration);
+  color: get-css-var(text, color);
 }
