@@ -6,7 +6,7 @@
   @include text-base;
   @include define-css-var(table, border-color, transparent);
 
-  border: solid 1px get-css-var(table, border-color);
+  border: solid get-css-var(spacing, border) get-css-var(table, border-color);
   border-radius: get-spacing(1);
 
   td,
@@ -14,7 +14,7 @@
     padding: get-spacing();
 
     &:not(:first-child) {
-      border-left: solid 1px get-css-var(table, border-color);
+      border-left: solid get-css-var(spacing, border) get-css-var(table, border-color);
     }
   }
 
@@ -22,7 +22,7 @@
   tr:not(:last-child) {
     th,
     td {
-      border-bottom: solid 1px get-css-var(table, border-color);
+      border-bottom: solid get-css-var(spacing, border) get-css-var(table, border-color);
     }
   }
 }

@@ -1,0 +1,24 @@
+// TODO: add colors to theme
+
+$alert-styles: (
+  neutral: (
+    background-color: #e2e8f0,
+    color: #1a202c,
+  ),
+  primary: (
+    background-color: get-color(highlight-primary-light),
+    color: get-color(highlight-primary-dark),
+  ),
+  negative: (
+    background-color: get-color(status-negative-light),
+    color: get-color(status-negative-dark),
+  ),
+  average: (
+    background-color: get-color(status-average-light),
+    color: get-color(status-average-dark),
+  ),
+  positive: (
+    background-color: get-color(status-positive-light),
+    color: get-color(status-positive-dark),
+  ),
+);

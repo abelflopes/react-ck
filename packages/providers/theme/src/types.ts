@@ -12,10 +12,13 @@ export interface Theme {
     "neutral-800": string;
     "neutral-900": string;
     "status-positive-light": string;
+    "status-positive": string;
     "status-positive-dark": string;
     "status-average-light": string;
+    "status-average": string;
     "status-average-dark": string;
     "status-negative-light": string;
+    "status-negative": string;
     "status-negative-dark": string;
     "overlay-light": string;
     "overlay-dark": string;
@@ -26,5 +29,6 @@ export interface Theme {
   };
   spacing: {
     base: string;
+    border: string;
   };
 }

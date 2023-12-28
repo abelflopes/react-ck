@@ -13,10 +13,13 @@ $theme-type: (
     "neutral-800",
     "neutral-900",
     "status-positive-light",
+    "status-positive",
     "status-positive-dark",
     "status-average-light",
+    "status-average",
     "status-average-dark",
     "status-negative-light",
+    "status-negative",
     "status-negative-dark",
     "overlay-light",
     "overlay-dark",
@@ -27,5 +30,6 @@ $theme-type: (
   ),
   "spacing": (
     "base",
+    "border",
   ),
 );

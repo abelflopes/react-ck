@@ -17,10 +17,13 @@ export const defaultTheme: Theme = {
     "neutral-800": "#323646",
     "neutral-900": "#1E2232",
     "status-positive-light": "#e2f2e3",
+    "status-positive": "#5ab289",
     "status-positive-dark": "#276749",
     "status-average-light": "#feebc8",
+    "status-average": "#e6c283",
     "status-average-dark": "#9b5c2c",
     "status-negative-light": "#fed7d7",
+    "status-negative": "#ed6d6d",
     "status-negative-dark": "#9b2c2c",
     "overlay-light": "rgba(255,255,255, .2)",
     "overlay-dark": "rgba(0,0,0,.2)",
@@ -31,5 +34,6 @@ export const defaultTheme: Theme = {
   },
   spacing: {
     base: "10px",
+    border: "2px",
   },
 };

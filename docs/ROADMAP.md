@@ -8,7 +8,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [ ] **Tabs:** Sections to organize our site, like folders.
 
-[ ] **Alert:** A notice to tell users important things.
+[x] **Alert:** A notice to tell users important things.
 
 [x] **Accordion:** A way to hide or show parts of the page.
 

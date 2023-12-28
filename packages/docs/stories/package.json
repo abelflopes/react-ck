@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@react-ck/accordion": "^1.0.0",
+    "@react-ck/alert": "^1.0.0",
     "@react-ck/banner": "^1.0.0",
     "@react-ck/button": "^1.0.0",
     "@react-ck/card": "^1.0.0",

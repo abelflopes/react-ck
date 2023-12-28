@@ -1,0 +1,25 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+@import "variables";
+
+.root {
+  @include text-base;
+
+  box-sizing: border-box;
+  background-color: get-css-var(alert, background-color);
+  color: get-css-var(alert, color);
+  padding: get-spacing(1) get-spacing(2);
+  border-radius: get-spacing(1);
+
+  .heading {
+    color: inherit;
+  }
+}
+
+@each $key, $props in $alert-styles {
+  .#{$key} {
+    @each $propKey, $propValue in $props {
+      @include define-css-var(alert, $propKey, $propValue);
+    }
+  }
+}
