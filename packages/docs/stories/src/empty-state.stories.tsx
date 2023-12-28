@@ -2,7 +2,6 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text } from "@react-ck/text/src";
 import { configureStory } from "@react-ck/story-config";
 import { EmptyState } from "@react-ck/empty-state/src";
 
