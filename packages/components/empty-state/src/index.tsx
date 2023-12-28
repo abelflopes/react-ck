@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { getDisplayName } from "@react-ck/react-utils";
 import { Text } from "@react-ck/text";
 
 /**
@@ -22,6 +21,6 @@ export const EmptyState = ({
   ...otherProps
 }: Readonly<EmptyStateProps>): React.ReactElement => (
   <div className={classNames(styles.root, className)} {...otherProps}>
-    <Text type="soft">{children}</Text>
+    {children}
   </div>
 );
