@@ -2,7 +2,7 @@
 @import "@react-ck/text";
 
 .root {
-  @include font-base;
+  @include text-base;
 
   @include define-css-var(button, border-radius, get-spacing(1));
   @include define-css-var(button, padding-y, get-spacing(1));

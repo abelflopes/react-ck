@@ -2,7 +2,7 @@
 @import "@react-ck/text";
 
 .root {
-  @include font-base;
+  @include text-base;
   @include text-type(soft);
   @include text-variation(bold);
 

@@ -4,7 +4,7 @@
 @import "variables";
 
 .root {
-  @include font-base;
+  @include text-base;
   @include define-css-var(text, margin-top, 0);
   @include define-css-var(text, margin-bottom, 0);
 

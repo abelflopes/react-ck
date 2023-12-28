@@ -2,7 +2,7 @@
 @import "@react-ck/text";
 
 .root {
-  @include font-base;
+  @include text-base;
 
   background-color: get-css-var(chip, background-color);
   color: get-css-var(chip, color);

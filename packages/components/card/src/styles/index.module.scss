@@ -2,7 +2,7 @@
 @import "@react-ck/text";
 
 .root {
-  @include font-base;
+  @include text-base;
 
   background-color: get-color(neutral-0);
   border-radius: get-spacing(2);

@@ -25,7 +25,7 @@
   @include text-variant($key, $text-types);
 }
 
-@mixin font-base {
+@mixin text-base {
   @include text-type(p);
   @include define-css-var(text, color, get-color(neutral-900));
   @include define-css-var(text, text-decoration, none);
