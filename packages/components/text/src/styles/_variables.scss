@@ -24,7 +24,7 @@ $text-types: (
   ),
   soft: (
     default: (
-      color: #718096,
+      color: get-color(neutral-500),
     ),
     hover: (),
   ),
@@ -41,7 +41,7 @@ $text-types: (
       font-size: 24px,
       font-weight: 500,
       line-height: 36px,
-      color: #1a202c,
+      color: get-color(neutral-800),
     ),
     hover: (),
   ),
@@ -84,10 +84,10 @@ $text-variations: (
   ),
   link: (
     default: (
-      color: #0052cc,
+      color: get-color(highlight-alt),
     ),
     hover: (
-      color: #003e99,
+      color: get-color(highlight-alt-dark),
     ),
   ),
   link_hidden: (
@@ -95,7 +95,7 @@ $text-variations: (
       text-decoration: none,
     ),
     hover: (
-      color: #003e99,
+      color: get-color(highlight-alt-dark),
       text-decoration: underline,
     ),
   ),

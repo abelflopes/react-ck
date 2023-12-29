@@ -9,6 +9,8 @@ export const defaultTheme: Theme = {
     "highlight-primary-light": "hsl(185deg 50% 85%)",
     "highlight-primary": "hsl(185deg 50% 55%)",
     "highlight-primary-dark": "hsl(185deg 50% 35%)",
+    "highlight-alt": "#0052cc",
+    "highlight-alt-dark": "#003e99",
     "neutral-0": "#fff",
     "neutral-100": "#edf2f7",
     "neutral-200": "#DBDEEB",

@@ -4,6 +4,8 @@ export interface Theme {
     "highlight-primary-light": string;
     "highlight-primary": string;
     "highlight-primary-dark": string;
+    "highlight-alt": string;
+    "highlight-alt-dark": string;
     "neutral-0": string;
     "neutral-100": string;
     "neutral-200": string;
