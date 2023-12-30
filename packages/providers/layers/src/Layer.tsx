@@ -29,14 +29,12 @@ export const Layer = ({ elevation, children }: Readonly<LayerProps>): React.Reac
 
   useEffect(() => {
     // Validate icon usage (icon should be set through specific prop)
-    React.Children.toArray(children)
-      .filter(isValidElement)
-      .forEach((i) => {
-        const name = getDisplayName(i);
-        if (name && name.toLowerCase().includes("layer")) {
-          throw new Error("Layers should not be directly nested");
-        }
-      });
+    for (const i of React.Children.toArray(children).filter(isValidElement)) {
+      const name = getDisplayName(i);
+      if (name && name.toLowerCase().includes("layer")) {
+        throw new Error("Layers should not be directly nested");
+      }
+    }
   }, [children]);
 
   return undefined;

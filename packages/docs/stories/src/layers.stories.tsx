@@ -1,6 +1,5 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Text } from "@react-ck/text/src";
 import { configureStory } from "@react-ck/story-config";
 import { ThemeProvider } from "@react-ck/theme";
 import { Layer, LayersProvider } from "@react-ck/layers";

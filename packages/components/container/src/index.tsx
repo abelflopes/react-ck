@@ -4,9 +4,9 @@ import classNames from "classnames";
 
 /** Represents the possible variations for the Container component  */
 type ContainerVariation =
-  /** reduces the spacing */
+  /** Reduces the spacing */
   | "small"
-  /** increases the spacing */
+  /** Increases the spacing */
   | "big";
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {

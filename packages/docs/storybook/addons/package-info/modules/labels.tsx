@@ -4,7 +4,7 @@ import { addons, types, useAddonState } from "@storybook/manager-api";
 import { CONFIG, type PackageInfoState, labelAddons } from "../util";
 
 export const registerLabelsAddon = (): void => {
-  labelAddons.forEach((entry) => {
+  for (const entry of labelAddons) {
     const addonType = types.TOOL;
     const addonInfo = CONFIG.labelAddons[entry];
 
@@ -33,5 +33,5 @@ export const registerLabelsAddon = (): void => {
         ) : null;
       },
     });
-  });
+  }
 };

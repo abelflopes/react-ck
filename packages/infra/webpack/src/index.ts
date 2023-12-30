@@ -62,7 +62,7 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
                   // Solves conflicts of equal classname compilation from two different builds
                   localIdentHashSalt: options?.cssHashSalt,
                 },
-                // sourceMap: mode === "development",
+                // SourceMap: mode === "development",
                 sourceMap: true,
               },
             },
@@ -76,7 +76,7 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
           options: {
             configFile: "tsconfig.build.json",
             compilerOptions: {
-              // sourceMap: mode === "development",
+              // SourceMap: mode === "development",
               sourceMap: true,
             },
           },

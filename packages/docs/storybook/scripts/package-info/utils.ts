@@ -1,7 +1,8 @@
 import path from "node:path";
 import fs from "node:fs";
 
-export const asyncReadFile = (file: string): Promise<string> =>
+export const asyncReadFile = async (file: string): Promise<string> =>
+  // eslint-disable-next-line @typescript-eslint/return-await
   new Promise<string>((resolve, reject) => {
     fs.readFile(
       file,
@@ -15,8 +16,8 @@ export const asyncReadFile = (file: string): Promise<string> =>
     );
   });
 
-export const asyncWriteFile = (file: string, content: string): Promise<void> =>
-  new Promise<void>((resolve, reject) => {
+export const asyncWriteFile = async (file: string, content: string): Promise<void> => {
+  await new Promise<void>((resolve, reject) => {
     const folder = path.dirname(file);
 
     if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });
@@ -33,3 +34,4 @@ export const asyncWriteFile = (file: string, content: string): Promise<void> =>
       },
     );
   });
+};

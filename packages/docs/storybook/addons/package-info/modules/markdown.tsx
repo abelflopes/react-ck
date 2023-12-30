@@ -5,7 +5,7 @@ import { Markdown } from "@react-ck/story-config";
 import { CONFIG, type PackageInfoState, markdownAddons } from "../util";
 
 export const registerMarkdownAddon = (): void => {
-  markdownAddons.forEach((entry) => {
+  for (const entry of markdownAddons) {
     const addonType = types.TAB;
     const addonInfo = CONFIG.markdownAddons[entry];
 
@@ -44,5 +44,5 @@ export const registerMarkdownAddon = (): void => {
         ) : null;
       },
     });
-  });
+  }
 };

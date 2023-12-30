@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { Text } from "@react-ck/text";
 
 /**
  * Props for the EmptyState component

@@ -38,14 +38,12 @@ export const Button = ({
 
   useEffect(() => {
     // Validate icon usage (icon should be set through specific prop)
-    React.Children.toArray(children)
-      .filter(isValidElement)
-      .forEach((i) => {
-        const name = getDisplayName(i);
-        if (name && name.toLowerCase().includes("icon")) {
-          throw new Error("Icons inside Button should be set with 'icon' prop");
-        }
-      });
+    for (const i of React.Children.toArray(children).filter(isValidElement)) {
+      const name = getDisplayName(i);
+      if (name && name.toLowerCase().includes("icon")) {
+        throw new Error("Icons inside Button should be set with 'icon' prop");
+      }
+    }
   }, [children]);
 
   return (

@@ -1,4 +1,4 @@
-// should be synced with ./styles/shared.scss
+// Should be synced with ./styles/shared.scss
 
 /** Map of elevation levels for different UI elements  */
 export const elevationMap = {

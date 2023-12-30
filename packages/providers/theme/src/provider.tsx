@@ -40,10 +40,10 @@ export const ThemeProvider = ({
   useEffect(() => {
     if (!target) return;
 
-    Object.entries(themeCssVariables).forEach(([key, value]) => {
-      if (typeof value !== "string") return;
+    for (const [key, value] of Object.entries(themeCssVariables)) {
+      if (typeof value !== "string") continue;
       target.style.setProperty(key, value);
-    });
+    }
 
     return () => {
       Object.keys(themeCssVariables).forEach(target.style.removeProperty);

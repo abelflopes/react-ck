@@ -27,6 +27,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/elevation": "^1.0.0"
+    "@react-ck/elevation": "^1.0.0",
+    "@react-ck/react-utils": "^1.0.0"
   }
 }
