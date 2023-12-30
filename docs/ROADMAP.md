@@ -6,7 +6,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [ ] **Badge:** Small signs that show if something is good or special.
 
-[ ] **Tabs:** Sections to organize our site, like folders.
+[x] **Tabs:** Sections to organize our site, like folders.
 
 [x] **Alert:** A notice to tell users important things.
 
