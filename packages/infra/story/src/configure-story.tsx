@@ -1,6 +1,14 @@
 import React from "react";
 import type { Meta } from "@storybook/react";
-import { Subtitle, Description, Primary, Controls, ArgsTable, Title } from "@storybook/blocks";
+import {
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  ArgsTable,
+  Title,
+  Stories,
+} from "@storybook/blocks";
 import { capitalCase } from "change-case";
 
 interface ConfigureStoryExtra {
@@ -49,6 +57,8 @@ export const configureStory = <T,>(
                 <ArgsTable of={i} />
               </React.Fragment>
             ))}
+
+            <Stories title="" includePrimary={false} />
           </>
         )),
     },
