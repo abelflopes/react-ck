@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Tabs renders correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="track"
+  >
+    <button
+      className="tab tab_active"
+      onClick={[Function]}
+    >
+      item 1
+    </button>
+    <button
+      className="tab"
+      onClick={[Function]}
+    >
+      item 2
+    </button>
+  </div>
+  content 1
+</div>
+`;

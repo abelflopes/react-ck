@@ -14,11 +14,10 @@ describe("Unit Tabs", () => {
 
     await Promise.all(
       items.map(async (item) => {
-        const header = await screen.findByText(item.heading);
-        const children = await screen.findByText(item.content);
-        expect(header).toBeInTheDocument();
-        expect(children).toBeInTheDocument();
+        expect(await screen.findByText(item.heading)).toBeInTheDocument();
       }),
     );
+
+    expect(await screen.findByText(items[0]?.content ?? "")).toBeInTheDocument();
   });
 });
