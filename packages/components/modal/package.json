@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/modal",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -31,14 +31,14 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/button": "^1.2.6",
-    "@react-ck/card": "^1.2.3",
-    "@react-ck/icon": "^1.4.0",
-    "@react-ck/layers": "^1.0.0",
-    "@react-ck/overlay": "^1.1.6",
+    "@react-ck/button": "^1.3.0",
+    "@react-ck/card": "^1.2.4",
+    "@react-ck/icon": "^1.4.1",
+    "@react-ck/layers": "^1.1.0",
+    "@react-ck/overlay": "^1.1.7",
     "@react-ck/react-utils": "^1.0.0",
-    "@react-ck/text": "^1.2.6",
-    "@react-ck/theme": "^1.4.1",
+    "@react-ck/text": "^1.2.7",
+    "@react-ck/theme": "^1.5.0",
     "classnames": "^2.3.2"
   }
 }

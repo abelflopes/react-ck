@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.2.6...@react-ck/button@1.3.0) (2024-01-02)
+
+
+### Features
+
+* add button icon only variation ([55919f1](https://github.com/abelflopes/react-ck/commit/55919f1ca108d07da9d95481ce1426719ffac66d))
+* add ghost button variation ([c1ad55e](https://github.com/abelflopes/react-ck/commit/c1ad55efe521fc2ae75c6b0fa1aa4edd74794058))
+
+
+### Bug Fixes
+
+* enforce usage of icon inside buttons through dedicated prop ([afcfa45](https://github.com/abelflopes/react-ck/commit/afcfa4523cf749684a60c47175ba4c0803d0430f))
+
+
+
 ## [1.2.6](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.2.5...@react-ck/button@1.2.6) (2023-12-08)
 
 **Note:** Version bump only for package @react-ck/button

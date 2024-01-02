@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.4.0...@react-ck/icon@1.4.1) (2024-01-02)
+
+
+### Bug Fixes
+
+* fix icon size in text variation ([e0c41a8](https://github.com/abelflopes/react-ck/commit/e0c41a89d1382ee114bbe3e93d8cb67f07d13fa5))
+
+
+
 ## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.3.3...@react-ck/icon@1.4.0) (2023-12-08)
 
 
