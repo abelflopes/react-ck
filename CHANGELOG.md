@@ -1,3 +1,37 @@
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/v1.4.0...v1.5.0) (2024-01-02)
+
+
+### Features
+
+* add alert component ([c95cc8b](https://github.com/abelflopes/react-ck/commit/c95cc8b37c0471b1db11b124d5d676677b64eacb))
+* add button icon only variation ([55919f1](https://github.com/abelflopes/react-ck/commit/55919f1ca108d07da9d95481ce1426719ffac66d))
+* add elevation levels package ([3e47d91](https://github.com/abelflopes/react-ck/commit/3e47d91ea6a9fb9c66e2d9befc22718c09e4e836))
+* add empty state package ([004787f](https://github.com/abelflopes/react-ck/commit/004787ffe718de5c77ba80da623d853c67a2e966))
+* add ghost button variation ([c1ad55e](https://github.com/abelflopes/react-ck/commit/c1ad55efe521fc2ae75c6b0fa1aa4edd74794058))
+* add layers provider package ([86ea726](https://github.com/abelflopes/react-ck/commit/86ea7262e192899766b6bad6ea4f2b8d2e3b32af))
+* add modal component ([4c5be1b](https://github.com/abelflopes/react-ck/commit/4c5be1b7ce296b72d52aefce3978e6a8c8678b71))
+* add progress component ([5a16d13](https://github.com/abelflopes/react-ck/commit/5a16d1325b71616cc7e24973e76ada26ce58720d))
+* add react utils package ([fe8737f](https://github.com/abelflopes/react-ck/commit/fe8737f2bf784a0b42111a03980112fa3d4f0795))
+* add tabs component ([0ba9dd8](https://github.com/abelflopes/react-ck/commit/0ba9dd81e1669ae4a5049a9f102814e91958a906))
+* update modal component ([4b4787d](https://github.com/abelflopes/react-ck/commit/4b4787d56c2156bf5ab410d28d5ecd7a52ae753c))
+
+
+### Bug Fixes
+
+* enforce usage of icon inside buttons through dedicated prop ([afcfa45](https://github.com/abelflopes/react-ck/commit/afcfa4523cf749684a60c47175ba4c0803d0430f))
+* fix icon size in text variation ([e0c41a8](https://github.com/abelflopes/react-ck/commit/e0c41a89d1382ee114bbe3e93d8cb67f07d13fa5))
+* improve h3 text styles ([4835b5a](https://github.com/abelflopes/react-ck/commit/4835b5a658ab7a0b79b94ae7b8f4a139b792cc2d))
+
+
+### Code Refactoring
+
+* apply default typography styles to empty state ([77c858e](https://github.com/abelflopes/react-ck/commit/77c858ed4e1fe1b07607701d1c742f0bf02bdf7b))
+* consolidate theme colors ([3109ee2](https://github.com/abelflopes/react-ck/commit/3109ee20616d49eda650f2b22afb09a45a6dea2a))
+* rename base font mixin ([ad69ff4](https://github.com/abelflopes/react-ck/commit/ad69ff44ba01e86ad72291707f7d911cf307a47d))
+* use font base mixing from text package ([9af8f07](https://github.com/abelflopes/react-ck/commit/9af8f0729ca14af10f1f285a49103e0d8c137fe7))
+* use mixin based typography ([878fb6e](https://github.com/abelflopes/react-ck/commit/878fb6e92fea0f888046ddef8fad71b11251cf2d))
+* use styles variable set for chip ([648bb39](https://github.com/abelflopes/react-ck/commit/648bb39f44d419ac738bf1b87dbfc99041e0ac89))
+
 ## [1.4.0](https://github.com/abelflopes/react-ck/compare/v1.3.0...v1.4.0) (2023-12-08)
 
 
