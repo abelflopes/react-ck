@@ -5,6 +5,8 @@ import classNames from "classnames";
 // Styles
 import styles from "./styles/index.module.scss";
 
+// TODO: semantic - change tag to <progress />
+
 interface ProgressProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
   /** Minimum value - corresponds to 0% progress */
   min?: number;
