@@ -1,0 +1,18 @@
+$form-field-styles: (
+  default: (
+    border-color: get-color(neutral-100),
+    color: get-color(neutral-800),
+  ),
+  negative: (
+    border-color: get-color(status-negative-dark),
+    color: get-color(status-negative-dark),
+  ),
+  average: (
+    border-color: get-color(status-average-dark),
+    color: get-color(status-average-dark),
+  ),
+  positive: (
+    border-color: get-color(status-positive-dark),
+    color: get-color(status-positive-dark),
+  ),
+);

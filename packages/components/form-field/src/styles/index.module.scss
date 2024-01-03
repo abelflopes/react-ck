@@ -1,0 +1,36 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+@import "variables";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: get-spacing(0.1);
+
+  .label {
+  }
+
+  .content {
+    display: flex;
+    gap: get-spacing(1);
+    background: get-color(neutral-100);
+    padding: get-spacing(1);
+    border-radius: get-spacing(1);
+    border: solid #{get-css-var(form-field, border-color)} #{get-css-var(spacing, border)};
+  }
+
+  .description {
+  }
+
+  .validation_message {
+    color: get-css-var(form-field, color) !important;
+  }
+}
+
+@each $key, $props in $form-field-styles {
+  .#{$key} {
+    @each $propKey, $propValue in $props {
+      @include define-css-var(form-field, $propKey, $propValue);
+    }
+  }
+}
