@@ -3,7 +3,8 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Text } from "@react-ck/text";
 
-export interface FormFieldProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface FormFieldProps
+  extends Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "className"> {
   /** Specifies the visual style of the form-field  */
   skin?: "default" | "negative" | "average" | "positive";
   /** The main label for the form field */

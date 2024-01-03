@@ -1,25 +1,5 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
-@import "@react-ck/text";
+@import "@react-ck/form-field";
 
 .root {
-  @include text-base;
-
-  background: get-color(neutral-100);
-  color: get-color(neutral-900);
-  border: none;
-  width: 100%;
-  padding: get-spacing(1) get-spacing(2);
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  border-radius: get-spacing(1);
-
-  &::placeholder {
-    color: get-color(neutral-500);
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-  }
+  @include form-field-input;
 }

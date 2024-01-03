@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
+import { FormField, type FormFieldProps } from "@react-ck/form-field";
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  /** Disallow usage of react children */
-  children?: never;
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "children"> {
+  label?: FormFieldProps["label"];
+  skin?: FormFieldProps["skin"];
+  description?: FormFieldProps["description"];
+  validationMessage?: FormFieldProps["validationMessage"];
 }
 
 /**
@@ -13,6 +16,15 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
  * @returns a React element
  */
 
-export const Input = ({ className, ...props }: Readonly<InputProps>): React.ReactElement => (
-  <input {...props} className={classNames(className, styles.root)} />
+export const Input = ({
+  skin = "default",
+  label,
+  description,
+  validationMessage,
+  className,
+  ...props
+}: Readonly<InputProps>): React.ReactElement => (
+  <FormField {...{ skin, label, description, validationMessage }}>
+    <input {...props} className={classNames(className, styles.root)} />
+  </FormField>
 );

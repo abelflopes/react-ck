@@ -31,6 +31,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
+    "@react-ck/form-field": "^1.0.0",
     "@react-ck/scss-utils": "^1.1.2",
     "@react-ck/text": "^1.2.7",
     "@react-ck/theme": "^1.5.0",

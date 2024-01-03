@@ -11,10 +11,7 @@
   }
 
   .content {
-    display: flex;
-    gap: get-spacing(1);
     background: get-color(neutral-100);
-    padding: get-spacing(1);
     border-radius: get-spacing(1);
     border: solid #{get-css-var(form-field, border-color)} #{get-css-var(spacing, border)};
   }

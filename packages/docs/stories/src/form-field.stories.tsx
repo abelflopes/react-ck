@@ -26,7 +26,7 @@ export default meta;
 export const Normal: Story = {
   args: {
     label: capitalCase(faker.lorem.word()),
-    children: capitalCase(faker.lorem.word()),
+    children: "Content",
     description: faker.lorem.sentence(),
   },
 };
@@ -35,7 +35,7 @@ export const Validation: Story = {
   args: {
     skin: "negative",
     label: capitalCase(faker.lorem.word()),
-    children: capitalCase(faker.lorem.word()),
+    children: "Content",
     description: faker.lorem.sentence(),
     validationMessage: faker.lorem.sentence(),
   },
