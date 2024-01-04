@@ -4,7 +4,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 ## Generic 
 
-[ ] **Badge:** Small signs that show if something is good or special.
+[x] **Badge:** Small signs that show if something is good or special.
 
 [x] **Tabs:** Sections to organize our site, like folders.
 
@@ -38,7 +38,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [ ] **Form Renderer:** Tool to make forms show up the way we want.
 
-[ ] **Form Field:** Boxes where people type stuff or pick options.
+[x] **Form Field:** Boxes where people type stuff or pick options.
 
 [x] **Select:** A drop-down menu to choose things.
 
@@ -75,3 +75,11 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 [ ] **Focus trapping:** Lock focus when view blocking components are displayed
 
 [ ] **Accessibility:** Modals, dialogs, buttons, controls, inputs / forms
+
+## Layouts
+
+[ ] **Centered:** Auth views
+
+[ ] **Standard:** Vertically composed views
+
+[ ] **Dashboard:** Fixed sized, multiple navigation, scrollable content
