@@ -1,0 +1,29 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+@import "variables";
+
+.root {
+  $size: get-spacing(2);
+
+  @include text-base;
+  @include text-type(extra-small);
+
+  background-color: get-css-var(badge, background-color);
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: get-css-var(badge, color);
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  line-height: $size;
+}
+
+@each $key, $props in $badge-styles {
+  .#{$key} {
+    @each $propKey, $propValue in $props {
+      @include define-css-var(badge, $propKey, $propValue);
+    }
+  }
+}

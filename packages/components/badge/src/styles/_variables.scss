@@ -1,0 +1,22 @@
+$badge-styles: (
+  neutral: (
+    background-color: get-color(neutral-500),
+    color: get-color(neutral-100),
+  ),
+  primary: (
+    background-color: get-color(highlight-primary-dark),
+    color: get-color(highlight-primary-light),
+  ),
+  negative: (
+    background-color: get-color(status-negative),
+    color: get-color(status-negative-light),
+  ),
+  average: (
+    background-color: get-color(status-average),
+    color: get-color(status-average-dark),
+  ),
+  positive: (
+    background-color: get-color(status-positive),
+    color: get-color(status-positive-light),
+  ),
+);
