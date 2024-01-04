@@ -65,6 +65,14 @@ $text-types: (
     default: (),
     hover: (),
   ),
+  extra-small: (
+    default: (
+      font-size: 9px,
+      font-weight: 400,
+      line-height: 12px,
+    ),
+    hover: (),
+  ),
 );
 
 $text-variations: (
