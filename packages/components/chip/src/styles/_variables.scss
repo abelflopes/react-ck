@@ -1,7 +1,7 @@
 $chip-styles: (
   neutral: (
-    background-color: #e2e8f0,
-    color: #1a202c,
+    background-color: get-color(neutral-100),
+    color: get-color(neutral-800),
   ),
   primary: (
     background-color: get-color(highlight-primary-light),
