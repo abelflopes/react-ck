@@ -21,7 +21,7 @@ export const List = ({
   className,
   ...otherProps
 }: Readonly<ListProps>): React.ReactElement => (
-  <ul className={classNames(styles.root, skin && styles[skin], className)} {...otherProps}>
+  <ul className={classNames(styles.root, styles[skin], className)} {...otherProps}>
     {items.map((item, key) => (
       <li key={`${item?.toString()}-${key.toString()}`} className={styles.item}>
         {item}

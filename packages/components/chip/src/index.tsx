@@ -20,7 +20,7 @@ export const Chip = ({
   className,
   ...otherProps
 }: Readonly<ChipProps>): React.ReactElement => (
-  <div {...otherProps} className={classNames(styles.root, skin && styles[skin], className)}>
+  <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
     {children}
   </div>
 );
