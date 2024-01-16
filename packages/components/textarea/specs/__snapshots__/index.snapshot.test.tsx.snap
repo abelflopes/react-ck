@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Textarea renders correctly 1`] = `
-<textarea
-  className="root"
-/>
+<div
+  className="root default"
+>
+  <div
+    className="content"
+  >
+    <textarea
+      className="root"
+    />
+  </div>
+</div>
 `;

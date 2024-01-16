@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Input renders correctly 1`] = `
+exports[`Snapshot FormField renders correctly 1`] = `
 <div
   className="root default"
 >
   <div
     className="content"
   >
-    <input
-      className="root"
-    />
+    FormField
   </div>
 </div>
 `;

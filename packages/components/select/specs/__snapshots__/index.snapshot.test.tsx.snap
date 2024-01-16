@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Select renders correctly 1`] = `
-<select
-  className="root"
-/>
+<div
+  className="root default"
+>
+  <div
+    className="content"
+  >
+    <select
+      className="root"
+    />
+  </div>
+</div>
 `;

@@ -7,27 +7,70 @@ exports[`Snapshot Form renders correctly 1`] = `
   <div
     className="root default"
   >
+    <label
+      className="root p bold small label"
+      htmlFor="aaa"
+    >
+      Email Address
+    </label>
     <div
       className="content"
     >
       <input
         className="root"
         onChange={[Function]}
-        placeholder="Email Address"
+        placeholder="john-doe@aaa.com"
         value=""
       />
     </div>
+    <p
+      className="root p small description"
+    >
+      Your work email address
+    </p>
   </div>
   <div
     className="root default"
   >
+    <label
+      className="root p bold small label"
+      htmlFor="aaa"
+    >
+      Password
+    </label>
     <div
       className="content"
     >
       <input
         className="root"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="Strong password"
+        type="password"
+        value=""
+      />
+    </div>
+    <p
+      className="root p small description"
+    >
+      Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters
+    </p>
+  </div>
+  <div
+    className="root default"
+  >
+    <label
+      className="root p bold small label"
+      htmlFor="aaa"
+    >
+      Repeat Password
+    </label>
+    <div
+      className="content"
+    >
+      <input
+        className="root"
+        onChange={[Function]}
+        placeholder="Repeat password"
         type="password"
         value=""
       />
