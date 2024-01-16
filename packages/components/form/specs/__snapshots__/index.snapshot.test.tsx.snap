@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Form renders correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="root default"
+  >
+    <div
+      className="content"
+    >
+      <input
+        className="root"
+        onChange={[Function]}
+        placeholder="Email Address"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="root default"
+  >
+    <div
+      className="content"
+    >
+      <input
+        className="root"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

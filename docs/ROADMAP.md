@@ -36,7 +36,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [ ] **Choice / Toggle:** Things for making selections or turning stuff on/off.
 
-[ ] **Form Renderer:** Tool to make forms show up the way we want.
+[x] **Form Renderer:** Tool to make forms show up the way we want.
 
 [x] **Form Field:** Boxes where people type stuff or pick options.
 
