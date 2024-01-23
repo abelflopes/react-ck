@@ -1,3 +1,5 @@
+## [1.6.1](https://github.com/abelflopes/react-ck/compare/v1.6.0...v1.6.1) (2024-01-23)
+
 ## [1.6.0](https://github.com/abelflopes/react-ck/compare/v1.5.1...v1.6.0) (2024-01-23)
 
 
