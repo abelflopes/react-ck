@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Input } from "@react-ck/input";
 import { Select } from "@react-ck/select";
 import { Textarea } from "@react-ck/textarea";
@@ -181,6 +181,7 @@ export const Form = <T extends FormFieldMap>({
       fields: {},
     });
 
+    // eslint-disable-next-line guard-for-in -- not needed
     for (const key in internalValues.values) {
       const error = validators[key]?.(internalValues.values);
 
@@ -199,10 +200,6 @@ export const Form = <T extends FormFieldMap>({
 
   // Emit validity state change
   useEffect(() => {
-    console.groupCollapsed("valid", validity.valid);
-    console.table(validity.fields);
-    console.groupEnd();
-
     onValidityChange?.(validity);
   }, [onValidityChange, validity]);
 
