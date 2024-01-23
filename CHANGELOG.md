@@ -1,3 +1,25 @@
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/v1.5.1...v1.6.0) (2024-01-23)
+
+
+### Features
+
+* add badge component ([617c2e7](https://github.com/abelflopes/react-ck/commit/617c2e7a8d3fbb7addd47b27f7335632562ca308))
+* add extra small text variation ([b5fd746](https://github.com/abelflopes/react-ck/commit/b5fd7460998b09c2e4f896b2c368731298a1735b))
+* add form field component ([b44da2c](https://github.com/abelflopes/react-ck/commit/b44da2c135c308b93c59928bbdfd43aa73e17434))
+* add form renderer component ([2db29ab](https://github.com/abelflopes/react-ck/commit/2db29ab08f0b0adae3b017cf2c8777aaf6417e86))
+* label, description, validation and skin to form components ([9f189f0](https://github.com/abelflopes/react-ck/commit/9f189f0df64abac8363f6cbbfe37fdcd0f18b80a))
+
+
+### Bug Fixes
+
+* add reduced shadow to card ([4adb254](https://github.com/abelflopes/react-ck/commit/4adb254a036e6e56dc557ae4439811e941cded90))
+* use colors of neutral skin from theme ([f683429](https://github.com/abelflopes/react-ck/commit/f6834292b82404a50d888127bf35852a81f01e9e))
+
+
+### Code Refactoring
+
+* remove redundant non null assertions from class rendering ([d0fb2c5](https://github.com/abelflopes/react-ck/commit/d0fb2c5342cfd81fca1dc9970e34f39081e08780))
+
 ## [1.5.1](https://github.com/abelflopes/react-ck/compare/v1.5.0...v1.5.1) (2024-01-02)
 
 
