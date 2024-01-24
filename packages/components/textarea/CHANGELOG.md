@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/textarea@1.1.3...@react-ck/textarea@1.2.0) (2024-01-24)
+
+
+### Features
+
+* label, description, validation and skin to form components ([9f189f0](https://github.com/abelflopes/react-ck/commit/9f189f0df64abac8363f6cbbfe37fdcd0f18b80a))
+
+
+
 ## [1.1.3](https://github.com/abelflopes/react-ck/compare/@react-ck/textarea@1.1.2...@react-ck/textarea@1.1.3) (2024-01-02)
 
 **Note:** Version bump only for package @react-ck/textarea

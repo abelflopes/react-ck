@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.2.4...@react-ck/card@1.2.5) (2024-01-24)
+
+
+### Bug Fixes
+
+* add reduced shadow to card ([4adb254](https://github.com/abelflopes/react-ck/commit/4adb254a036e6e56dc557ae4439811e941cded90))
+
+
+
 ## [1.2.4](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.2.3...@react-ck/card@1.2.4) (2024-01-02)
 
 **Note:** Version bump only for package @react-ck/card

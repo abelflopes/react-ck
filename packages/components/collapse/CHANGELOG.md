@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.1.6...@react-ck/collapse@1.1.7) (2024-01-24)
+
+**Note:** Version bump only for package @react-ck/collapse
+
+
+
+
+
 ## [1.1.6](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.1.5...@react-ck/collapse@1.1.6) (2024-01-02)
 
 **Note:** Version bump only for package @react-ck/collapse

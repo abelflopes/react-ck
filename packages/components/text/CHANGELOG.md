@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.2.7...@react-ck/text@1.3.0) (2024-01-24)
+
+
+### Features
+
+* add extra small text variation ([b5fd746](https://github.com/abelflopes/react-ck/commit/b5fd7460998b09c2e4f896b2c368731298a1735b))
+
+
+
 ## [1.2.7](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.2.6...@react-ck/text@1.2.7) (2024-01-02)
 
 
