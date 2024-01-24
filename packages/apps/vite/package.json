@@ -1,0 +1,21 @@
+{
+  "name": "@react-ck/vite-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vite --force"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitejs/plugin-react-refresh": "*",
+    "@originjs/vite-plugin-commonjs": "*",
+    "vite": "^5.0.12",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^5.0.4"
+  }
+}

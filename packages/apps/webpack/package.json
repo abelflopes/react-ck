@@ -1,0 +1,22 @@
+{
+  "name": "@react-ck/webpack-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development webpack serve"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@react-ck/typescript-config": "^1.0.0",
+    "@react-ck/webpack-config": "^1.0.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "parcel": "^2.8.3",
+    "typescript": "^5.0.4",
+    "html-webpack-plugin": "*",
+    "webpack-dev-server": "*"
+  }
+}

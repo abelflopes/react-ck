@@ -1,0 +1,18 @@
+{
+  "name": "@react-ck/parcel-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "parcel ./index.html --no-cache"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "parcel": "^2.8.3",
+    "typescript": "^5.0.4"
+  }
+}
