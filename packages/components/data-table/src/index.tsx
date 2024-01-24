@@ -1,5 +1,12 @@
 import React, { useMemo } from "react";
 import { Table, type TableProps } from "@react-ck/table";
+import * as CC from "change-case";
+
+// TODO: check typings
+// TODO: add auto headers
+// TODO: add pagination
+// TODO: add scrillable table
+// TODO: add section table
 
 /** Type representing the data structure for the DataTable component  */
 type TableData = Array<Record<string, React.ReactNode>>;
@@ -14,6 +21,8 @@ export interface DataTableProps<T extends TableData = TableData>
   headers?: Record<keyof T[number] | string, React.ReactNode>;
   /** Data to be displayed in the table. Should be an array of objects with keys matching the headers' keys (non-mandatory) */
   data: T;
+  /** Automatically create table headers based on the row keys */
+  autoHeaders?: boolean;
 }
 
 /**
@@ -25,6 +34,7 @@ export interface DataTableProps<T extends TableData = TableData>
 export const DataTable = <T extends TableData>({
   headers,
   data,
+  autoHeaders,
   ...otherProps
 }: Readonly<DataTableProps<T>>): React.ReactElement => {
   const keys = useMemo(
@@ -38,13 +48,21 @@ export const DataTable = <T extends TableData>({
     [data, headers],
   );
 
+  const computedHeaders = useMemo(
+    () => ({
+      ...(autoHeaders ? Object.fromEntries(keys.map((k) => [k, CC.capitalCase(k)])) : undefined),
+      ...headers,
+    }),
+    [autoHeaders, keys, headers],
+  );
+
   return (
     <Table {...otherProps}>
-      {headers && (
+      {computedHeaders && (
         <thead>
           <tr>
             {keys.map((key) => (
-              <th key={key}>{headers[key]}</th>
+              <th key={key}>{computedHeaders[key]}</th>
             ))}
           </tr>
         </thead>

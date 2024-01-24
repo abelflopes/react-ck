@@ -27,7 +27,7 @@ const col1 = faker.lorem.word();
 const col2 = faker.lorem.word();
 const col3 = faker.lorem.word();
 
-export const Component: Story = {
+export const Normal: Story = {
   args: {
     skin: "bordered",
     headers: { [col1]: faker.lorem.word(), [col2]: faker.lorem.word(), [col3]: faker.lorem.word() },
@@ -35,6 +35,18 @@ export const Component: Story = {
       [col1]: faker.date.future().toLocaleDateString(),
       [col2]: faker.company.buzzNoun(),
       [col3]: <Chip>{faker.commerce.price()}</Chip>,
+    })),
+  },
+};
+
+export const AutoHeaders: Story = {
+  args: {
+    skin: "bordered",
+    autoHeaders: true,
+    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
+      "some_column": faker.date.future().toLocaleDateString(),
+      "otherColumn": faker.company.buzzNoun(),
+      "last-column": <Chip>{faker.commerce.price()}</Chip>,
     })),
   },
 };
