@@ -5,7 +5,7 @@ import { Icon, type IconProps } from "@react-ck/icon";
 
 export interface SpinnerProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, "children"> {
   size?: IconProps["size"];
-  skin?: "default" | "primary";
+  skin?: "text" | "primary";
 }
 
 /**
@@ -17,7 +17,7 @@ export interface SpinnerProps extends Omit<React.HTMLAttributes<HTMLSpanElement>
 
 export const Spinner = ({
   size = "l",
-  skin = "default",
+  skin = "primary",
   className,
   ...otherProps
 }: Readonly<SpinnerProps>): React.ReactElement => (

@@ -18,7 +18,7 @@
   animation: spin 1.5s infinite linear;
 }
 
-.default {
+.text {
   @include define-css-var(spinner, color, currentColor);
 }
 
