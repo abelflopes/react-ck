@@ -40,9 +40,9 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
       outputModule: true,
     },
     optimization: {
-      minimize: false,
+      minimize: mode === "production",
     },
-    target: "es2020",
+    target: "web",
     module: {
       rules: [
         {
@@ -88,11 +88,12 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
     },
     externals: [
       nodeExternals({
-        importType: "module",
         additionalModuleDirs: [mainNodeModulesFolder],
       }),
     ],
-    externalsType: "module",
-    stats: mode === "production" ? "normal" : "summary",
+    externalsPresets: {
+      web: true,
+    },
+    stats: mode === "development" ? "normal" : "summary",
   };
 };
