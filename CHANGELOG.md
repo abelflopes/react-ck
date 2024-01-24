@@ -1,3 +1,16 @@
+## [1.7.0](https://github.com/abelflopes/react-ck/compare/v1.6.1...v1.7.0) (2024-01-24)
+
+
+### Features
+
+* update webpack config ([8b957c0](https://github.com/abelflopes/react-ck/commit/8b957c05850a237f9ddecc3a64cf34e54593e1a3))
+
+
+### Bug Fixes
+
+* add missing placeholders ([b3de5df](https://github.com/abelflopes/react-ck/commit/b3de5df204cffe654d006e03d12b214fd843ed21))
+* add missing type ([46b734a](https://github.com/abelflopes/react-ck/commit/46b734acc217b10c15c173b6f2f9611bf803d324))
+
 ## [1.6.1](https://github.com/abelflopes/react-ck/compare/v1.6.0...v1.6.1) (2024-01-23)
 
 ## [1.6.0](https://github.com/abelflopes/react-ck/compare/v1.5.1...v1.6.0) (2024-01-23)
