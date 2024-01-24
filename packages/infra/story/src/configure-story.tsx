@@ -13,7 +13,7 @@ import { capitalCase } from "change-case";
 
 interface ConfigureStoryExtra {
   subComponents?: [unknown];
-  type?: "Component";
+  type?: "Component" | "Hook";
 }
 
 function isComponent(v: unknown): v is { displayName: string } {
