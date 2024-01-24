@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import React from "react";
 
-export interface ChipProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Specifies the visual style of the chip  */
   skin?: "neutral" | "primary" | "negative" | "average" | "positive";
 }
@@ -20,7 +20,7 @@ export const Chip = ({
   className,
   ...otherProps
 }: Readonly<ChipProps>): React.ReactElement => (
-  <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
+  <span {...otherProps} className={classNames(styles.root, styles[skin], className)}>
     {children}
-  </div>
+  </span>
 );
