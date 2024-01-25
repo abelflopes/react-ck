@@ -50,7 +50,7 @@ const preview: Preview = {
       },
     },
     layout: "centered",
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    // actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       sort: "requiredFirst",
       matchers: {
