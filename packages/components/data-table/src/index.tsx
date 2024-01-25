@@ -2,10 +2,7 @@ import React, { useMemo } from "react";
 import { Table, type TableProps } from "@react-ck/table";
 import * as CC from "change-case";
 
-// TODO: check typings
-// TODO: add auto headers
 // TODO: add pagination
-// TODO: add scrillable table
 // TODO: add section table
 
 /** Type representing the data structure for the DataTable component  */
