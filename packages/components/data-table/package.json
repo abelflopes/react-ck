@@ -31,11 +31,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-<<<<<<< Updated upstream
-    "@react-ck/table": "^1.2.1"
-=======
-    "@react-ck/table": "^1.2.0",
+    "@react-ck/table": "^1.2.1",
     "change-case": "^5.4.2"
->>>>>>> Stashed changes
   }
 }
