@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Table renders correctly 1`] = `
-<table
+<div
   className="root"
 >
-  Table
-</table>
+  <table
+    className="table"
+  >
+    Table
+  </table>
+</div>
 `;

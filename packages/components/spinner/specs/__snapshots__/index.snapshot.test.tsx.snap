@@ -2,7 +2,7 @@
 
 exports[`Snapshot Spinner renders correctly 1`] = `
 <span
-  className="root default"
+  className="root primary"
 >
   <svg
     className="root size_l skin_default"
