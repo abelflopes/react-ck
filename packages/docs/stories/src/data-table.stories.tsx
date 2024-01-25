@@ -11,6 +11,9 @@ type Story = StoryObj<typeof DataTable>;
 const meta: Meta<typeof DataTable> = {
   title: "Generic/DataTable",
   ...configureStory(DataTable, {
+    parameters: {
+      layout: "padded",
+    },
     decorators: [
       (Story) => (
         <Manager>
@@ -43,6 +46,19 @@ export const AutoHeaders: Story = {
   args: {
     skin: "bordered",
     autoHeaders: true,
+    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
+      "some_column": faker.date.future().toLocaleDateString(),
+      "otherColumn": faker.company.buzzNoun(),
+      "last-column": <Chip>{faker.commerce.price()}</Chip>,
+    })),
+  },
+};
+
+export const Sortable: Story = {
+  args: {
+    skin: "bordered",
+    autoHeaders: true,
+    sortable: ["otherColumn", "last-column"],
     data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
       "some_column": faker.date.future().toLocaleDateString(),
       "otherColumn": faker.company.buzzNoun(),

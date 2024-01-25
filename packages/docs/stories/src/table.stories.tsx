@@ -11,6 +11,9 @@ type Story = StoryObj<typeof Table>;
 const meta: Meta<typeof Table> = {
   title: "Generic/Table",
   ...configureStory(Table, {
+    parameters: {
+      layout: "padded",
+    },
     decorators: [
       (Story) => (
         <Manager>
@@ -23,7 +26,7 @@ const meta: Meta<typeof Table> = {
 
 export default meta;
 
-const columns = 5;
+const columns = 8;
 const rows = 5;
 
 const children = [
@@ -55,7 +58,7 @@ export const Normal: Story = {
 export const Scrollable: Story = {
   decorators: [
     (Story) => (
-      <div style={{ height: "200px", width: "400px" }}>
+      <div style={{ height: "200px" }}>
         <Story />
       </div>
     ),
