@@ -10,7 +10,7 @@ void (async (): Promise<void> => {
   const packagesDir = path.resolve(process.cwd(), "../../");
 
   const packageJsonPaths = await glob(
-    path.resolve(packagesDir, "./{components,utils}/*/package.json"),
+    path.resolve(packagesDir, "./{components,utils,providers,library}/*/package.json"),
     {
       ignore: "/**/node_modules/*",
     },
