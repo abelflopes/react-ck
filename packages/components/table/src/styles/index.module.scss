@@ -42,6 +42,8 @@
 .table {
   @include text-base;
 
+  width: 100%;
+
   td,
   th {
     padding: get-spacing();
