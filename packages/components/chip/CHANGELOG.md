@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.3...@react-ck/chip@1.2.4) (2024-01-25)
+
+
+### Bug Fixes
+
+* use span element for chip ([a300094](https://github.com/abelflopes/react-ck/commit/a30009430874f56c6149af6a4945bf6bf34e742d))
+
+
+
 ## [1.2.3](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.2...@react-ck/chip@1.2.3) (2024-01-24)
 
 
