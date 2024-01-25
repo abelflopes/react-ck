@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.2.1...@react-ck/table@1.3.0) (2024-01-25)
+
+
+### Features
+
+* add table scrollable variation ([c948956](https://github.com/abelflopes/react-ck/commit/c948956bb3605529433473781305d4ded67087e8))
+
+
+
 ## [1.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.2.0...@react-ck/table@1.2.1) (2024-01-24)
 
 **Note:** Version bump only for package @react-ck/table
