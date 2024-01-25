@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Table, type TableProps } from "@react-ck/table";
 import * as CC from "change-case";
+import { stringFromObject } from "./utils/string-from-object";
 
 // TODO: add pagination
 // TODO: add section table
@@ -66,7 +67,7 @@ export const DataTable = <T extends TableData>({
       )}
       <tbody>
         {data.map((row) => (
-          <tr key={JSON.stringify(row)}>
+          <tr key={stringFromObject(row)}>
             {keys.map((key) => (
               <td key={key}>{row[key]}</td>
             ))}
