@@ -3,18 +3,50 @@
 @import "@react-ck/text";
 
 .root {
-  @include text-base;
   @include define-css-var(table, border-color, transparent);
+
+  box-sizing: border-box;
 
   border: solid get-css-var(spacing, border) get-css-var(table, border-color);
   border-radius: get-spacing(1);
+}
+
+.scrollable {
+  overflow: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  thead th {
+    position: sticky;
+    top: 0;
+    background-color: get-color(neutral-0);
+  }
+
+  thead th:first-child {
+    z-index: 1;
+  }
+
+  thead th:first-child,
+  tbody td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: get-color(neutral-0);
+  }
+}
+
+.bordered {
+  @include define-css-var(table, border-color, get-color(neutral-100));
+}
+
+.table {
+  @include text-base;
 
   td,
   th {
     padding: get-spacing();
 
-    &:not(:first-child) {
-      border-left: solid get-css-var(spacing, border) get-css-var(table, border-color);
+    &:not(:last-child) {
+      border-right: solid get-css-var(spacing, border) get-css-var(table, border-color);
     }
   }
 
@@ -25,8 +57,4 @@
       border-bottom: solid get-css-var(spacing, border) get-css-var(table, border-color);
     }
   }
-}
-
-.bordered {
-  @include define-css-var(table, border-color, get-color(neutral-100));
 }

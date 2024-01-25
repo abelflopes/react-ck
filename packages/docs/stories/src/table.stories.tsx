@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Table } from "@react-ck/table/src";
+import { faker } from "@faker-js/faker";
+import * as CC from "change-case";
 
 type Story = StoryObj<typeof Table>;
 
@@ -21,91 +23,46 @@ const meta: Meta<typeof Table> = {
 
 export default meta;
 
-export const Component: Story = {
+const columns = 5;
+const rows = 5;
+
+const children = [
+  <thead key="head">
+    <tr>
+      {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
+        <th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</th>
+      ))}
+    </tr>
+  </thead>,
+  <tbody key="body">
+    {Object.keys(Array.from(Array.from({ length: rows }))).map((r) => (
+      <tr key={r}>
+        {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
+          <td key={i}>{faker.company.catchPhraseDescriptor()}</td>
+        ))}
+      </tr>
+    ))}
+  </tbody>,
+];
+
+export const Normal: Story = {
   args: {
     skin: "bordered",
-    children: (
-      <>
-        <thead>
-          <tr>
-            <th>deprecator</th>
-            <th>vomer</th>
-            <th>amplus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>02/03/2024</td>
-            <td>action-items</td>
-            <td>
-              <div>92.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>28/01/2024</td>
-            <td>portals</td>
-            <td>
-              <div>859.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>09/07/2024</td>
-            <td>schemas</td>
-            <td>
-              <div>255.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>29/06/2024</td>
-            <td>infrastructures</td>
-            <td>
-              <div>81.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>26/11/2023</td>
-            <td>initiatives</td>
-            <td>
-              <div>849.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>16/09/2024</td>
-            <td>technologies</td>
-            <td>
-              <div>336.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>20/12/2023</td>
-            <td>models</td>
-            <td>
-              <div>80.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>06/03/2024</td>
-            <td>ROI</td>
-            <td>
-              <div>676.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>07/12/2023</td>
-            <td>interfaces</td>
-            <td>
-              <div>238.00</div>
-            </td>
-          </tr>
-          <tr>
-            <td>29/11/2023</td>
-            <td>relationships</td>
-            <td>
-              <div>922.00</div>
-            </td>
-          </tr>
-        </tbody>
-      </>
+    children,
+  },
+};
+
+export const Scrollable: Story = {
+  decorators: [
+    (Story) => (
+      <div style={{ height: "200px", width: "400px" }}>
+        <Story />
+      </div>
     ),
+  ],
+  args: {
+    scrollable: true,
+    skin: "bordered",
+    children,
   },
 };

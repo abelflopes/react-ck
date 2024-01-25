@@ -2,9 +2,11 @@ import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
-export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
+export interface TableProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Specifies the visual style of the table  */
   skin?: "default" | "bordered";
+  /** Allows container to be scrollable and adds sticky headers  */
+  scrollable?: boolean;
 }
 
 /**
@@ -17,17 +19,19 @@ export const Table = ({
   skin = "default",
   className,
   children,
+  scrollable,
   ...otherProps
 }: Readonly<TableProps>): React.ReactElement => (
-  <table
+  <div
+    {...otherProps}
     className={classNames(
       styles.root,
       {
+        [`${styles.scrollable}`]: scrollable,
         [`${styles[skin]}`]: skin !== "default",
       },
       className,
-    )}
-    {...otherProps}>
-    {children}
-  </table>
+    )}>
+    <table className={styles.table}>{children}</table>
+  </div>
 );
