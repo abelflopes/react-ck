@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.3.0...@react-ck/table@1.3.1) (2024-01-25)
+
+
+### Bug Fixes
+
+* remove line breaks on scrollable table headers ([01b35da](https://github.com/abelflopes/react-ck/commit/01b35da8471bb3e47eedbd7d0615753b891d1815))
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.2.1...@react-ck/table@1.3.0) (2024-01-25)
 
 
