@@ -1,3 +1,18 @@
+## [1.8.0](https://github.com/abelflopes/react-ck/compare/v1.7.0...v1.8.0) (2024-01-25)
+
+
+### Features
+
+* add auto headers for data table ([684aa2c](https://github.com/abelflopes/react-ck/commit/684aa2c2d64bc6451f586f864c883c746ae9f25c))
+* add table scrollable variation ([c948956](https://github.com/abelflopes/react-ck/commit/c948956bb3605529433473781305d4ded67087e8))
+
+
+### Bug Fixes
+
+* improve types support ([33bff05](https://github.com/abelflopes/react-ck/commit/33bff05b66c56c91df40593a575f0bd25638dc99))
+* set spinner default color as primary ([7ec88f6](https://github.com/abelflopes/react-ck/commit/7ec88f62d05c54f8861628ae39bbcfef663e31cb))
+* use span element for chip ([a300094](https://github.com/abelflopes/react-ck/commit/a30009430874f56c6149af6a4945bf6bf34e742d))
+
 ## [1.7.0](https://github.com/abelflopes/react-ck/compare/v1.6.1...v1.7.0) (2024-01-24)
 
 
