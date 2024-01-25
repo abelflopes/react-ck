@@ -18,7 +18,7 @@ type TableData = Array<Record<string, React.ReactNode>>;
 export interface DataTableProps<T extends TableData = TableData>
   extends Omit<TableProps, "children"> {
   /** Headers mapping to define column names and their corresponding header content */
-  headers?: Record<keyof T[number] | string, React.ReactNode>;
+  headers?: Record<keyof T[number], React.ReactNode>;
   /** Data to be displayed in the table. Should be an array of objects with keys matching the headers' keys (non-mandatory) */
   data: T;
   /** Automatically create table headers based on the row keys */
