@@ -10,7 +10,10 @@ export interface Theme {
     "neutral-100": string;
     "neutral-200": string;
     "neutral-300": string;
+    "neutral-400": string;
     "neutral-500": string;
+    "neutral-700": string;
+    "neutral-600": string;
     "neutral-800": string;
     "neutral-900": string;
     "status-positive-light": string;
