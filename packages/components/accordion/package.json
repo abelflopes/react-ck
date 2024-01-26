@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "@react-ck/collapse": "^1.1.7",
-    "@react-ck/list": "^1.2.1"
+    "@react-ck/list": "^1.2.1",
+    "@react-ck/theme": "^1.5.1"
   },
   "peerDependencies": {
     "react": "^18.2.0"

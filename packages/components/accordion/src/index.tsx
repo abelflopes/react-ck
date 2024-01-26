@@ -1,6 +1,7 @@
 import React from "react";
 import { List, type ListProps } from "@react-ck/list";
 import { Collapse } from "@react-ck/collapse";
+import styles from "./styles/index.module.scss";
 
 export interface AccordionItem {
   header: NonNullable<React.ReactNode>;
@@ -25,7 +26,7 @@ export const Accordion = ({
     {...otherProps}
     items={items.map(({ header, children }) => (
       <Collapse key={String(JSON.stringify(header))} header={header}>
-        {children}
+        <div className={styles.content}>{children}</div>
       </Collapse>
     ))}
   />
