@@ -3,7 +3,7 @@ import { defaultTheme } from "@react-ck/theme";
 
 <Meta title="Providers/Theme/Palette" />
 
-# Theme
+# Theme Palette
 
 Explore the color palette used in our default theme.
 These colors are carefully curated to maintain a cohesive and visually appealing user interface across various components in your application.
@@ -18,10 +18,18 @@ These colors are carefully curated to maintain a cohesive and visually appealing
   />
 
   <ColorItem
-    title="Neutral"
-    subtitle="Multi purpose neutral colors"
+    title="Neutral Light"
+    subtitle="Multi purpose neutral light colors"
     colors={Object.fromEntries(
-      Object.entries(defaultTheme.color).filter(([k]) => k.includes("neutral")),
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("neutral-light")),
+    )}
+  />
+
+  <ColorItem
+    title="Neutral Dark"
+    subtitle="Multi purpose neutral dark colors"
+    colors={Object.fromEntries(
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("neutral-dark")),
     )}
   />
 

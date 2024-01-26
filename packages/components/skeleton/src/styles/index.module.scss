@@ -1,7 +1,7 @@
 @import "@react-ck/theme";
 
 .root {
-  background-color: get-color(neutral-100);
+  background-color: get-color(neutral-light-2);
   position: relative;
   width: 100%;
   border-radius: get-spacing(0.5);
@@ -26,7 +26,7 @@
     opacity: 0.75;
     transform: translateX(-100%);
     animation: move 2s linear infinite;
-    background-image: linear-gradient(90deg, transparent, get-color(neutral-200), transparent);
+    background-image: linear-gradient(90deg, transparent, get-color(neutral-light-3), transparent);
     animation-delay: calc(var(--n) * 200ms);
   }
 }

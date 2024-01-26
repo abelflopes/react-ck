@@ -58,7 +58,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* force card to have neutral-0 background ([9845e21](https://github.com/abelflopes/react-ck/commit/9845e21459fbfadc33ad42194870afda86048999))
+* force card to have neutral-light-1 background ([9845e21](https://github.com/abelflopes/react-ck/commit/9845e21459fbfadc33ad42194870afda86048999))
 
 
 

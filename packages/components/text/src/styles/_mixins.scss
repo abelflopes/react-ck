@@ -27,7 +27,7 @@
 
 @mixin text-base {
   @include text-type(p);
-  @include define-css-var(text, color, get-color(neutral-900));
+  @include define-css-var(text, color, get-color(neutral-dark-5));
   @include define-css-var(text, text-decoration, none);
 
   font-family: get-css-var(text, font-family);

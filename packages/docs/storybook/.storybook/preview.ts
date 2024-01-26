@@ -42,15 +42,15 @@ const preview: Preview = {
       values: [
         {
           name: "light",
-          value: defaultTheme.color["neutral-0"],
+          value: defaultTheme.color["neutral-light-1"],
         },
         {
           name: "medium",
-          value: defaultTheme.color["neutral-500"],
+          value: defaultTheme.color["neutral-dark-1"],
         },
         {
           name: "dark",
-          value: defaultTheme.color["neutral-900"],
+          value: defaultTheme.color["neutral-dark-5"],
         },
       ],
     },

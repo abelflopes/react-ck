@@ -10,7 +10,7 @@ $text-types: (
       font-size: get-css-var(font, base-size),
       line-height: 24px,
       font-weight: 400,
-      color: get-color(neutral-900),
+      color: get-color(neutral-dark-5),
     ),
     hover: (),
   ),
@@ -24,7 +24,7 @@ $text-types: (
   ),
   soft: (
     default: (
-      color: get-color(neutral-500),
+      color: get-color(neutral-dark-1),
     ),
     hover: (),
   ),
@@ -41,7 +41,7 @@ $text-types: (
       font-size: 24px,
       font-weight: 500,
       line-height: 36px,
-      color: get-color(neutral-800),
+      color: get-color(neutral-dark-4),
     ),
     hover: (),
   ),
@@ -109,7 +109,7 @@ $text-variations: (
   ),
   inverted: (
     default: (
-      color: get-color(neutral-0),
+      color: get-color(neutral-light-1),
     ),
     hover: (),
   ),

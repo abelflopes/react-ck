@@ -11,7 +11,7 @@
   }
 
   .content {
-    background: get-color(neutral-100);
+    background: get-color(neutral-light-2);
     border-radius: get-spacing(1);
     border: solid #{get-css-var(form-field, border-color)} #{get-css-var(spacing, border)};
   }

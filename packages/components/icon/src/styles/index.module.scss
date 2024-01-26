@@ -27,5 +27,5 @@
 }
 
 .skin_inverted {
-  @include define-css-var(icon, color, get-color(neutral-0));
+  @include define-css-var(icon, color, get-color(neutral-light-1));
 }

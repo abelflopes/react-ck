@@ -19,7 +19,7 @@
   thead th {
     position: sticky;
     top: 0;
-    background-color: get-color(neutral-0);
+    background-color: get-color(neutral-light-1);
     white-space: nowrap;
   }
 
@@ -31,12 +31,12 @@
   tbody td:first-child {
     position: sticky;
     left: 0;
-    background-color: get-color(neutral-0);
+    background-color: get-color(neutral-light-1);
   }
 }
 
 .bordered {
-  @include define-css-var(table, border-color, get-color(neutral-100));
+  @include define-css-var(table, border-color, get-color(neutral-light-2));
 }
 
 .table {

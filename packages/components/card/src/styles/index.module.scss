@@ -4,10 +4,10 @@
 .root {
   @include text-base;
 
-  background-color: get-color(neutral-0);
+  background-color: get-color(neutral-light-1);
   border-radius: get-spacing(2);
-  border: solid 0 get-color(neutral-100);
-  box-shadow: 0 0 10px 0 get-color(neutral-200);
+  border: solid 0 get-color(neutral-light-2);
+  box-shadow: 0 0 10px 0 get-color(neutral-light-3);
   overflow: hidden;
 
   .content {

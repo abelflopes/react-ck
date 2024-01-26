@@ -218,7 +218,7 @@
 * add missing overlay in banner ([882cfd0](https://github.com/abelflopes/react-ck/commit/882cfd025ad1a463e25df5a909c3a8954c6952a9))
 * css color definition ([ec01370](https://github.com/abelflopes/react-ck/commit/ec013700b9579200610a4a89a4187d3fe6085058))
 * force block display to heading variations of text ([8aee75d](https://github.com/abelflopes/react-ck/commit/8aee75d9538ce6c0df8260e8d4da79d75179c831))
-* force card to have neutral-0 background ([9845e21](https://github.com/abelflopes/react-ck/commit/9845e21459fbfadc33ad42194870afda86048999))
+* force card to have neutral-light-1 background ([9845e21](https://github.com/abelflopes/react-ck/commit/9845e21459fbfadc33ad42194870afda86048999))
 * prevent applying margin on single elements ([2af0e1c](https://github.com/abelflopes/react-ck/commit/2af0e1cdafe48e1e42417d5594c1f2ae20143251))
 * remove redundant interface prop ([43599a3](https://github.com/abelflopes/react-ck/commit/43599a306738aee6935326860948fe8e437e1eb4))
 * text inverted computation not working ([c62dcb6](https://github.com/abelflopes/react-ck/commit/c62dcb6b82ceb171b7fec982ecaa933e34dbc7b2))

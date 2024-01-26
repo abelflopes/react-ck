@@ -14,7 +14,7 @@
 }
 
 .tab {
-  @include define-css-var(tabs, border-color, get-color(neutral-200));
+  @include define-css-var(tabs, border-color, get-color(neutral-light-3));
   @include text-base;
 
   background: transparent;
