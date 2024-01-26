@@ -3,6 +3,7 @@ dist
 
 # markdown files - prevent tables formatting
 **/*.md
+**/*.mdx
 
 # generated files
 packages/docs/storybook/public/packages-info.json
