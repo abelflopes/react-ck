@@ -8,7 +8,7 @@ import { Text } from "@react-ck/text/src";
 type Story = StoryObj<typeof Text>;
 
 const meta: Meta<typeof Text> = {
-  title: "Core/Text",
+  title: "Generic/Text",
   ...configureStory(Text, {
     decorators: [
       (Story) => (
