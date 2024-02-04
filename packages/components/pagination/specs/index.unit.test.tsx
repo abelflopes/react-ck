@@ -5,9 +5,9 @@ import "@testing-library/jest-dom";
 
 describe("Unit Pagination", () => {
   test("renders correctly", async () => {
-    const content = "Pagination";
-    render(<Pagination current={10} slots={7} total={20} />);
-    const find = await screen.findByText(content);
+    const testId = "pagination";
+    render(<Pagination data-testid={testId} current={10} slots={7} total={20} />);
+    const find = await screen.findByTestId(testId);
     expect(find).toBeInTheDocument();
   });
 });
