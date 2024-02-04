@@ -24,7 +24,7 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [ ] **Drawer:** A side panel for extra options.
 
-[ ] **Pagination:** Lets users move between pages.
+[x] **Pagination:** Lets users move between pages.
 
 ## Forms
 
