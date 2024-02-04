@@ -9,6 +9,8 @@ import { getDisplayName } from "@react-ck/react-utils";
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Defines the color scheme of the button */
   skin?: "primary" | "secondary" | "ghost";
+  /** Defines the scale of the button */
+  size?: "s" | "m";
   /**
    * Content slot to receive an icon.
    * This can be any valid React node, allowing integration of icons or custom SVG components.
@@ -26,6 +28,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 export const Button = ({
   skin = "primary",
+  size = "m",
   icon,
   children,
   className,
@@ -51,6 +54,7 @@ export const Button = ({
       className={classNames(
         styles.root,
         styles[skin],
+        styles[`size-${size}`],
         {
           [`${styles["icon-only"]}`]: isIconOnly,
         },
