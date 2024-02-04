@@ -13,7 +13,11 @@ exports[`Snapshot Accordion renders correctly 1`] = `
       >
         item 1
       </summary>
-      content 1
+      <div
+        className="content"
+      >
+        content 1
+      </div>
     </details>
   </li>
   <li
@@ -25,7 +29,11 @@ exports[`Snapshot Accordion renders correctly 1`] = `
       >
         item 2
       </summary>
-      content 2
+      <div
+        className="content"
+      >
+        content 2
+      </div>
     </details>
   </li>
 </ul>

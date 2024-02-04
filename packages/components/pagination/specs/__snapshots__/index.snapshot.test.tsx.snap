@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Pagination renders correctly 1`] = `
+<div
+  className="root"
+>
+  <button
+    className="root ghost size-s"
+    onClick={[Function]}
+  >
+    1
+  </button>
+  <button
+    className="root ghost size-s"
+    onClick={[Function]}
+  >
+    ...
+  </button>
+  <button
+    className="root ghost size-s"
+    onClick={[Function]}
+  >
+    9
+  </button>
+  <button
+    className="root secondary size-s"
+    onClick={[Function]}
+  >
+    10
+  </button>
+  <button
+    className="root ghost size-s"
+    onClick={[Function]}
+  >
+    11
+  </button>
+  <button
+    className="root ghost size-s"
+    onClick={[Function]}
+  >
+    ...
+  </button>
+  <button
+    className="root ghost size-s"
+    onClick={[Function]}
+  >
+    20
+  </button>
+</div>
+`;

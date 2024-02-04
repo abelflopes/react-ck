@@ -24,7 +24,7 @@ exports[`Snapshot Modal renders correctly 1`] = `
           Heading
         </p>
         <button
-          className="root ghost icon-only"
+          className="root ghost size-m icon-only"
           onClick={[Function]}
         >
           <svg

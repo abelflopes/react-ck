@@ -2,7 +2,7 @@
 
 exports[`Snapshot Button renders correctly 1`] = `
 <button
-  className="root primary"
+  className="root primary size-m"
 >
   Button
 </button>

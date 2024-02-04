@@ -10,9 +10,15 @@ exports[`Snapshot DataTable renders correctly 1`] = `
   >
     <thead>
       <tr>
-        <th />
-        <th />
-        <th />
+        <th
+          onClick={[Function]}
+        />
+        <th
+          onClick={[Function]}
+        />
+        <th
+          onClick={[Function]}
+        />
       </tr>
     </thead>
     <tbody>
