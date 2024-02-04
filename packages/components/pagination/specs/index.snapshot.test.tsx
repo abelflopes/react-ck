@@ -1,6 +1,5 @@
 import React from "react";
-import { Pagination, PaginationFooter, PaginationHeader } from "../src/index";
-import { LayersProvider } from "@react-ck/layers";
+import { Pagination } from "../src/index";
 import renderer, { act, type ReactTestRenderer } from "react-test-renderer";
 
 describe("Snapshot Pagination", () => {
@@ -8,14 +7,7 @@ describe("Snapshot Pagination", () => {
     let component: ReactTestRenderer | undefined;
 
     await act(() => {
-      component = renderer.create(
-        <LayersProvider>
-          <Pagination>
-            <PaginationHeader heading="Heading" />
-            <PaginationFooter>Footer</PaginationFooter>
-          </Pagination>
-        </LayersProvider>,
-      );
+      component = renderer.create(<Pagination current={10} slots={7} total={20} />);
     });
 
     expect(component?.toJSON()).toMatchSnapshot();

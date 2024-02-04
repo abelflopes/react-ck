@@ -1,17 +1,12 @@
 import React from "react";
 import { Pagination } from "../src/index";
-import { LayersProvider } from "@react-ck/layers";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Unit Pagination", () => {
   test("renders correctly", async () => {
     const content = "Pagination";
-    render(
-      <LayersProvider>
-        <Pagination>{content}</Pagination>
-      </LayersProvider>,
-    );
+    render(<Pagination current={10} slots={7} total={20} />);
     const find = await screen.findByText(content);
     expect(find).toBeInTheDocument();
   });
