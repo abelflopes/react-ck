@@ -5,7 +5,7 @@ import React, { type ReactHTML, useMemo } from "react";
 import classNames from "classnames";
 import { useThemeContext } from "@react-ck/theme";
 
-export type TextVariation = "small" | "bold" | "link" | "link_hidden" | "inverted";
+export type TextVariation = "smallest" | "small" | "bold" | "link" | "link_hidden" | "inverted";
 
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   /** Adds margin to the text element  */
