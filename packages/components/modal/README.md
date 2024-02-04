@@ -8,7 +8,7 @@ With the React Modal component, developers can effortlessly introduce modals int
 
 ### Installation 
 
-To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/list` or `yarn add @react-ck/list`.
+To integrate the this component into your React apps, you can install it using npm or yarn: `npm i --save @react-ck/modal` or `yarn add @react-ck/modal`.
 
 You will also need to set up the manager, install it using npm or yarn: `npm i --save @react-ck/manager` or `yarn add @react-ck/manager`.
 
@@ -16,7 +16,7 @@ Wrap your app root with the theme provider and use this component:
 
 ```tsx
 import { Manager } from "@react-ck/manager";
-import { Modal } from "@react-ck/list";
+import { Modal } from "@react-ck/modal";
 
 const myApp = () => (
     <Manager>
