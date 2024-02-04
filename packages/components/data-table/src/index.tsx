@@ -100,7 +100,7 @@ export const DataTable = <T extends TableData>({
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       let valueB = b[k]!;
 
-      if (!isNaN(Number(valueA)) && !isNaN(Number(valueB))) {
+      if (!Number.isNaN(Number(valueA)) && !Number.isNaN(Number(valueB))) {
         valueA = Number(valueA);
         valueB = Number(valueB);
       } else if (React.isValidElement(valueA) && React.isValidElement(valueB)) {
