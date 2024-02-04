@@ -40,7 +40,8 @@ export const Secondary: Story = {
 
 export const IconButton: Story = {
   args: {
-    skin: "secondary",
+    size: "s",
+    skin: "ghost",
     icon: <Icon name="close" />,
   },
 };
