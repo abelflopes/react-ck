@@ -22,7 +22,7 @@
     "test:snapshot": "lerna run test:snapshot --parallel",
     "test:snapshot:update": "lerna run test:snapshot:update --parallel",
     "lint": "npx npm-run-all --sequential lint:*",
-    "lint:code": "NODE_OPTIONS=--max_old_space_size=6144 eslint . --ext ts,tsx",
+    "lint:code": "NODE_OPTIONS=--max_old_space_size=6144 eslint . --ext ts,tsx --cache",
     "lint:typescript": "lerna run lint:typescript",
     "format": "prettier . --check --cache --ignore-unknown",
     "clean": "lerna exec -- rm -rf dist specs/coverage",

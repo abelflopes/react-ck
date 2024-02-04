@@ -12,6 +12,7 @@ const config = {
     "unicorn/no-array-reduce": 0,
     "unicorn/no-useless-undefined": 0,
     "unicorn/no-null": 0,
+    "unicorn/no-new-array": 0,
     "unicorn/prefer-top-level-await": 0,
     "unicorn/prefer-string-replace-all": 0,
     "unicorn/no-array-callback-reference": 0,
