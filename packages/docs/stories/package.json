@@ -10,7 +10,8 @@
     "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
-    "lint:typescript": "tsc --noEmit"
+    "lint:typescript": "tsc --noEmit",
+    "lint:code": "eslint . --ext ts,tsx --cache"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",

@@ -11,7 +11,8 @@
     "start": "storybook dev -p 6006",
     "prebuild": "ts-node-dev --clear ./scripts/package-info/index.ts",
     "build": "storybook build -o dist",
-    "lint:typescript": "tsc --noEmit"
+    "lint:typescript": "tsc --noEmit",
+    "lint:code": "eslint . --ext ts,tsx --cache"
   },
   "devDependencies": {
     "@react-ck/story-config": "^1.0.0",
