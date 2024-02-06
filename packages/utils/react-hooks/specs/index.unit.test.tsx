@@ -35,30 +35,22 @@ describe("Unit useData hook", () => {
     await act(async () => undefined);
   });
 
-  test("displays data", async () => {
+  it("displays data", async () => {
     const data = { abc: 123 };
 
     mockFetch(data);
 
-    let component: RenderResult | undefined;
-
-    await act(async () => {
-      component = render(<Component />);
-    });
+    const component = await getActRender(<Component />, "render");
 
     expect(component?.getByText(JSON.stringify(data))).toBeInTheDocument();
   });
 
-  test("displays error", async () => {
+  it("displays error", async () => {
     const errorMessage = "Api error";
 
     mockFetch(new Error(errorMessage));
 
-    let component: RenderResult | undefined;
-
-    await act(async () => {
-      component = render(<Component />);
-    });
+    const component = await getActRender(<Component />, "render");
 
     expect(component?.getByText(errorMessage)).toBeInTheDocument();
   });
