@@ -1,4 +1,4 @@
-import type { Config } from "jest";
+import { type Config } from "jest";
 import { config as sharedConfig } from "@react-ck/jest-config";
 
 const config: Config = {

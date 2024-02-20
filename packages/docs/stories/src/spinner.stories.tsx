@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Spinner } from "@react-ck/spinner/src";
@@ -10,7 +10,7 @@ const meta: Meta<typeof Spinner> = {
   title: "Loading/Spinner",
   ...configureStory(Spinner, {
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>

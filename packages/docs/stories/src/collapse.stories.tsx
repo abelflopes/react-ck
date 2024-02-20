@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
@@ -12,7 +12,7 @@ const meta: Meta<typeof Collapse> = {
   title: "Generic/Collapse",
   ...configureStory(Collapse, {
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>

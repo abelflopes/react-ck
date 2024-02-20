@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect } from "react";
 import { addons, types, useAddonState, useStorybookApi } from "@storybook/manager-api";
 import * as Events from "@storybook/core-events";
@@ -7,6 +6,7 @@ import { isPackageInfoList } from "../../../scripts/package-info/type-guards";
 import { CONFIG, type PackageInfoState } from "../util";
 
 export const registerManagerAddon = (): void => {
+  /* eslint-disable react-hooks/rules-of-hooks -- lint not able to detect that output is a react component */
   addons.add(CONFIG.commonAddons.manager.id, {
     title: CONFIG.commonAddons.manager.title,
     type: types.TAB,
@@ -27,30 +27,33 @@ export const registerManagerAddon = (): void => {
       const { loading, dataPromise, error } = useData("./packages-info.json");
 
       useEffect(() => {
-        const handler = async (info: { storyId: string; viewMode: string }): Promise<void> => {
-          const storyData = api.getData(info.storyId);
+        const handler = (info: { storyId: string; viewMode: string }): void => {
+          void (async (): Promise<void> => {
+            const storyData = api.getData(info.storyId);
 
-          const data = await dataPromise;
+            const data = await dataPromise;
 
-          if (!isPackageInfoList(data)) throw new TypeError("Unsupported package info data format");
+            if (!isPackageInfoList(data))
+              throw new TypeError("Unsupported package info data format");
 
-          const storyIdParts = storyData.id.split("-");
+            const storyIdParts = storyData.id.split("-");
 
-          const currPackageInfo = data.find(({ id }) => {
-            const packageName = id.split("/")[1];
+            const currPackageInfo = data.find(({ id }) => {
+              const [, packageName] = id.split("/");
 
-            return packageName && storyIdParts.includes(packageName.replace(/-/g, ""));
-          });
+              return packageName && storyIdParts.includes(packageName.replace(/-/gu, ""));
+            });
 
-          setAddonState((state) => ({
-            error: state.error,
-            loading: state.loading,
-            changelog: currPackageInfo?.markdown.changelog,
-            readme: currPackageInfo?.markdown.readme,
-            version:
-              currPackageInfo &&
-              `${currPackageInfo.packageJson.name}@${currPackageInfo.packageJson.version}`,
-          }));
+            setAddonState((state) => ({
+              error: state.error,
+              loading: state.loading,
+              changelog: currPackageInfo?.markdown.changelog,
+              readme: currPackageInfo?.markdown.readme,
+              version:
+                currPackageInfo &&
+                `${currPackageInfo.packageJson.name}@${currPackageInfo.packageJson.version}`,
+            }));
+          })();
         };
 
         api.on(Events.CURRENT_STORY_WAS_SET, handler);
@@ -58,7 +61,7 @@ export const registerManagerAddon = (): void => {
         return () => {
           api.off(Events.CURRENT_STORY_WAS_SET, handler);
         };
-      }, [api, dataPromise]);
+      }, [api, dataPromise, setAddonState]);
 
       useEffect(() => {
         setAddonState((state) => ({
@@ -66,7 +69,7 @@ export const registerManagerAddon = (): void => {
           loading,
           error,
         }));
-      }, [loading, error]);
+      }, [loading, error, setAddonState]);
 
       return active ? (
         <code>
@@ -75,4 +78,5 @@ export const registerManagerAddon = (): void => {
       ) : null;
     },
   });
+  /* eslint-enable */
 };

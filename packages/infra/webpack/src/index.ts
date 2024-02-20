@@ -16,12 +16,12 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
   const mode: Configuration["mode"] =
     options?.mode ??
     // Fallback to node env if not defined
-    (() =>
-      process.env.NODE_ENV === "development" || process.env.NODE_ENV === "production"
-        ? process.env.NODE_ENV
-        : (() => {
-            throw new Error("Invalid webpack mode");
-          })())();
+    ((): "development" | "production" => {
+      if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "production")
+        return process.env.NODE_ENV;
+
+      throw new Error("invalid NODE_ENV");
+    })();
 
   const mainNodeModulesFolder = path.resolve(process.cwd(), "../../../node_modules");
 
@@ -30,7 +30,6 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
   return {
     mode,
     output: {
-      // Module: true,
       filename: "index.js",
       library: {
         type: "module",
@@ -46,7 +45,7 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
     module: {
       rules: [
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.s[ac]ss$/iu,
           use: [
             "style-loader",
             {
@@ -62,7 +61,6 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
                   // Solves conflicts of equal classname compilation from two different builds
                   localIdentHashSalt: options?.cssHashSalt,
                 },
-                // SourceMap: mode === "development",
                 sourceMap: true,
               },
             },
@@ -70,13 +68,12 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
           ],
         },
         {
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
+          test: /\.tsx?$/u,
+          exclude: /node_modules/u,
           loader: "ts-loader",
           options: {
             configFile: "tsconfig.build.json",
             compilerOptions: {
-              // SourceMap: mode === "development",
               sourceMap: true,
             },
           },

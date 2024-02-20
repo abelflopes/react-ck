@@ -1,6 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Form } from "./Form";
-import type { FormValues, FormValidity, FormValidators, FormFieldMap } from "./types";
+import {
+  type FormValues,
+  type FormValidity,
+  type FormValidators,
+  type FormFieldMap,
+} from "./types";
 
 export interface UseFormProps<T extends FormFieldMap> {
   fields: T;

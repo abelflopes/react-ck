@@ -2,7 +2,6 @@ import path from "node:path";
 import fs from "node:fs";
 
 export const asyncReadFile = async (file: string): Promise<string> =>
-  // eslint-disable-next-line @typescript-eslint/return-await
   new Promise<string>((resolve, reject) => {
     fs.readFile(
       file,

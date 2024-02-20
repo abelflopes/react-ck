@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { useForm } from "@react-ck/form/src";
@@ -27,7 +26,7 @@ const meta: Meta<typeof useForm> = {
         },
       },
       decorators: [
-        (Story) => (
+        (Story): React.ReactElement => (
           <Manager>
             <Story />
           </Manager>
@@ -43,6 +42,7 @@ const meta: Meta<typeof useForm> = {
 export default meta;
 
 export const Component: Story = {
+  /* eslint-disable react-hooks/rules-of-hooks -- lint unable to identify that component is react */
   render: (): React.ReactElement => {
     const { form, initialValues, validity, values } = useForm({
       fields: LoginForm.fields,
@@ -52,7 +52,7 @@ export const Component: Story = {
 
     return (
       <>
-        <Container spacingY spacingX={false}>
+        <Container spacingX={false} spacingY>
           {form}
         </Container>
 
@@ -61,6 +61,7 @@ export const Component: Story = {
             <GridColumn key={title}>
               <Card>
                 <Text type="h3">{capitalCase(title)}</Text>
+
                 <code style={{ whiteSpace: "pre" }}>{JSON.stringify(obj, undefined, 2)}</code>
               </Card>
             </GridColumn>
@@ -69,4 +70,5 @@ export const Component: Story = {
       </>
     );
   },
+  /* eslint-enable */
 };

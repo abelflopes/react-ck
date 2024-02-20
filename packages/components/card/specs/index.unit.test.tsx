@@ -3,8 +3,8 @@ import { Card } from "../src/index";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-describe("Unit Card", () => {
-  test("renders correctly", async () => {
+describe("unit Card", () => {
+  it("renders correctly", async () => {
     const content = "Card";
     render(<Card>{content}</Card>);
     const find = await screen.findByText(content);

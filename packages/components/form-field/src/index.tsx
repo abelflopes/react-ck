@@ -18,7 +18,7 @@ export interface FormFieldProps
 /**
  * FormField is a component that provides a consistent layout and input peripherals.
  *
- * > **WARNING**: This component is used as an internal utility - if you want to render an element such as an input, use its component directly
+ * **WARNING**: This component is used as an internal utility - if you want to render an element such as an input, use its component directly
  * @param props - {@link FormFieldProps}
  * @returns a React element
  */
@@ -33,24 +33,27 @@ export const FormField = ({
   ...otherProps
 }: Readonly<FormFieldProps>): React.ReactElement => (
   <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
-    {label && (
+    {label ? (
       <Text
         className={styles.label}
         variation={["bold", "small"]}
         margin={false}
         as={<label htmlFor="aaa">{label}</label>}
       />
-    )}
+    ) : null}
+
     <div className={styles.content}>{children}</div>
-    {description && (
+
+    {description ? (
       <Text className={styles.description} variation="small" margin={false}>
         {description}
       </Text>
-    )}
-    {validationMessage && (
+    ) : null}
+
+    {validationMessage ? (
       <Text className={styles.validation_message} variation="small" margin={false}>
         {validationMessage}
       </Text>
-    )}
+    ) : null}
   </div>
 );

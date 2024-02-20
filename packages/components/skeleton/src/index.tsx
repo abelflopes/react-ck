@@ -24,15 +24,15 @@ export const Skeleton = ({
   ...otherProps
 }: Readonly<SkeletonProps>): React.ReactElement => {
   const [index, setIndex] = useState<number | undefined>(undefined);
-  const N = useMemo(() => n++ % 3, []);
+  const N = useMemo(() => (n += 1 % 3), []);
 
   useEffect(() => {
     if (variation === "default") return;
 
-    setIndex(n++);
+    setIndex((n += 1));
 
     return () => {
-      n--;
+      n -= 1;
       setIndex(undefined);
     };
   }, [variation]);
@@ -45,8 +45,7 @@ export const Skeleton = ({
         ...(index === undefined
           ? {}
           : {
-              // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary as react does not support CSS vars
-              ["--index" as keyof React.CSSProperties]: N,
+              "--index": N,
             }),
       }}
       {...otherProps}

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useMemo } from "react";
 import { addons, types, useAddonState } from "@storybook/manager-api";
 import { CONFIG, type PackageInfoState, labelAddons } from "../util";
@@ -8,6 +7,7 @@ export const registerLabelsAddon = (): void => {
     const addonType = types.TOOL;
     const addonInfo = CONFIG.labelAddons[entry];
 
+    /* eslint-disable react-hooks/rules-of-hooks -- lint not able to detect that output is a react component */
     addons.add(addonInfo.id, {
       title: addonInfo.title,
       type: addonType,
@@ -33,5 +33,6 @@ export const registerLabelsAddon = (): void => {
         ) : null;
       },
     });
+    /* eslint-enable */
   }
 };

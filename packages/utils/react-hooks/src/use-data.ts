@@ -1,7 +1,7 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 
 export interface UseDataReturn {
-  data: unknown | undefined;
+  data: unknown;
   dataPromise: Promise<unknown> | undefined;
   loading: boolean;
   error: string | undefined;
@@ -31,7 +31,6 @@ export const useData = (url: string): UseDataReturn => {
         const dataPromise = (async (): Promise<unknown> => {
           const response = await fetch(url);
 
-          // eslint-disable-next-line @typescript-eslint/return-await
           return response.json();
         })();
 
@@ -41,8 +40,8 @@ export const useData = (url: string): UseDataReturn => {
 
         if (mounted.current) setData(data);
       } catch (error: unknown) {
-        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-        if (mounted.current) setError((error as Error).message);
+        if (mounted.current)
+          setError(error instanceof Error ? error.message : JSON.stringify(error));
       }
 
       if (mounted.current) setLoading((v) => v - 1);

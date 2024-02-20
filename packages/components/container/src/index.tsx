@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
@@ -26,20 +26,24 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
  */
 
 export const Container = ({
-  variation = [],
+  variation,
   spacingX = true,
   spacingY,
   className,
   ...otherProps
 }: Readonly<ContainerProps>): React.ReactElement => {
-  const computedVariations = Array.isArray(variation) ? variation : [variation];
+  const computedVariations = useMemo(() => {
+    if (!variation) return [];
+    else if (Array.isArray(variation)) return variation;
+    return [variation];
+  }, [variation]);
 
   return (
     <div
       className={classNames(
         styles.root,
         { [`${styles.horizontal}`]: spacingX, [`${styles.vertical}`]: spacingY },
-        computedVariations?.map((index) => styles[index]),
+        computedVariations.map((index) => styles[index]),
         className,
       )}
       {...otherProps}

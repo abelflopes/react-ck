@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";

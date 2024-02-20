@@ -3,13 +3,13 @@ import { type LayerData, LayersContext, type LayersContextProps } from "./contex
 import { elevationMap } from "@react-ck/elevation";
 
 /** Props for the LayersProvider component  */
+/** Data type for a layer with an additional 'id' property  */
+type LayerList = Array<LayerData & { id: string }>;
+
 export interface LayersProviderProps {
   /** The child components to be wrapped by the LayersProvider  */
   children?: React.ReactNode;
 }
-
-/** Data type for a layer with an additional 'id' property  */
-type LayerList = Array<LayerData & { id: string }>;
 
 /**
  * Provider component for managing (elevation) layers in a React application.
@@ -23,7 +23,7 @@ export const LayersProvider = ({ children }: Readonly<LayersProviderProps>): Rea
   const [layers, setLayers] = useState<LayerList>([]);
 
   const createLayer = useCallback<LayersContextProps["createLayer"]>(({ elevationKey, node }) => {
-    currlayer.current++;
+    currlayer.current += 1;
 
     const id = `layer-${currlayer.current}`;
 
@@ -46,14 +46,12 @@ export const LayersProvider = ({ children }: Readonly<LayersProviderProps>): Rea
   // Sort layers by elevation
   const computedLayers = useMemo(
     () =>
-      layers
-        .sort((a, b) =>
-          elevationMap[a.elevationKey] > elevationMap[b.elevationKey]
-            ? 1
-            : elevationMap[a.elevationKey] < elevationMap[b.elevationKey]
-            ? -1
-            : 0,
-        )
+      [...layers]
+        .sort((a, b) => {
+          if (elevationMap[a.elevationKey] > elevationMap[b.elevationKey]) return 1;
+          else if (elevationMap[a.elevationKey] < elevationMap[b.elevationKey]) return -1;
+          return 0;
+        })
         .map((i) => i.node),
     [layers],
   );
@@ -61,6 +59,7 @@ export const LayersProvider = ({ children }: Readonly<LayersProviderProps>): Rea
   return (
     <LayersContext.Provider value={contextValue}>
       {children}
+
       {computedLayers}
     </LayersContext.Provider>
   );

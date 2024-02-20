@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useMemo } from "react";
 import { addons, types, useAddonState } from "@storybook/manager-api";
 import { Markdown } from "@react-ck/story-config";
@@ -9,6 +8,7 @@ export const registerMarkdownAddon = (): void => {
     const addonType = types.TAB;
     const addonInfo = CONFIG.markdownAddons[entry];
 
+    /* eslint-disable react-hooks/rules-of-hooks -- lint not able to detect that output is a react component */
     addons.add(addonInfo.id, {
       title: addonInfo.title,
       type: addonType,
@@ -34,15 +34,16 @@ export const registerMarkdownAddon = (): void => {
         return active ? (
           <div className="custom-docs-wrapper">
             <div className="custom-docs-container">
-              {data && <Markdown>{data.split(":warning:").join("⚠️")}</Markdown>}
+              {data ? <Markdown>{data.split(":warning:").join("⚠️")}</Markdown> : null}
 
-              {active && addonState?.loading && <p>Loading</p>}
+              {addonState?.loading ? <p>Loading</p> : null}
 
-              {active && addonState?.error && <p style={{ color: "red" }}>{addonState?.error}</p>}
+              {addonState?.error ? <p style={{ color: "red" }}>{addonState.error}</p> : null}
             </div>
           </div>
         ) : null;
       },
     });
+    /* eslint-enable */
   }
 };

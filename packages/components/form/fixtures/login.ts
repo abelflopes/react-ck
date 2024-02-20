@@ -32,15 +32,15 @@ export const fields = {
 export type Values = FormValues<typeof fields>;
 
 export const validators = {
-  email: (values) => {
+  email: (values): string | undefined => {
     if (!values.email?.toString().trim().length) return "Required field";
     return regexValidation(String(values.email), "email");
   },
-  password: (values) => {
+  password: (values): string | undefined => {
     if (!values.password?.toString().trim().length) return "Required field";
     return regexValidation(String(values.password), "password");
   },
-  passwordRepeat: (values) => {
+  passwordRepeat: (values): string | undefined => {
     if (!values.passwordRepeat?.toString().trim().length) return "Required field";
     if (values.password !== values.passwordRepeat) return "Passwords must be equal";
     return regexValidation(String(values.passwordRepeat), "password");

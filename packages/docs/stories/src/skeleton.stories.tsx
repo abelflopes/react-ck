@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Skeleton } from "@react-ck/skeleton/src";
@@ -13,7 +13,7 @@ const meta: Meta<typeof Skeleton> = {
       layout: "padded",
     },
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>

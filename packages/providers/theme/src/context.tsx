@@ -1,25 +1,22 @@
-import React, { useContext, useMemo } from "react";
-import type { Theme } from "./types";
+import React, { useMemo } from "react";
+import { type Theme } from "./types";
 import { defaultTheme } from "./themes/default";
+import { useThemeContext } from "./hooks";
 
 export interface ThemeContextProps {
   inverted: boolean;
   theme: Theme;
 }
 
-export const themeContextDefaults: ThemeContextProps = {
-  inverted: false,
-  theme: defaultTheme,
-};
-
 export interface ThemeContextProviderProps {
   value?: Partial<ThemeContextProps>;
   children: React.ReactNode;
 }
 
-export const ThemeContext = React.createContext<ThemeContextProps>(themeContextDefaults);
-
-export const useThemeContext = (): ThemeContextProps => useContext(ThemeContext);
+export const ThemeContext = React.createContext<ThemeContextProps>({
+  inverted: false,
+  theme: defaultTheme,
+});
 
 export const ThemeContextProvider = ({
   value,

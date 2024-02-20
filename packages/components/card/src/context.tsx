@@ -8,8 +8,6 @@ export interface CardContextProps {
   setValue: (value: CardContextValue) => void;
 }
 
-export const themeContextDefaults: CardContextProps = {
+export const CardContext = React.createContext<CardContextProps>({
   setValue: () => undefined,
-};
-
-export const CardContext = React.createContext<CardContextProps>(themeContextDefaults);
+});

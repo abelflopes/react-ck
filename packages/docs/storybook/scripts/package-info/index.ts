@@ -36,7 +36,7 @@ void (async (): Promise<void> => {
             const key = [dir, name]
               .filter((i) => i.length)
               .join("-")
-              .replace(/\s/g, "-")
+              .replace(/\s/gu, "-")
               .toLowerCase();
 
             const content = await asyncReadFile(filePath);

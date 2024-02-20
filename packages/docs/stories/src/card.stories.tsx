@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
@@ -12,7 +12,7 @@ const meta: Meta<typeof Card> = {
   title: "Generic/Card",
   ...configureStory(Card, {
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>
@@ -28,7 +28,9 @@ export const Component: Story = {
     children: (
       <>
         <CardImage src={faker.image.urlPicsumPhotos({ width: 320, height: 100 })} />
+
         <Text type="h2">{faker.lorem.sentence(4)}</Text>
+
         <Text>{faker.lorem.sentence(6)}</Text>
       </>
     ),

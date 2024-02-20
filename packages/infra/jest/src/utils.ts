@@ -17,7 +17,7 @@ async function getActRender(
 ): Promise<renderer.ReactTestRenderer | undefined>;
 async function getActRender(
   element: React.ReactElement,
-  mode?: "render",
+  mode: "render",
 ): Promise<RenderResult | undefined>;
 async function getActRender(
   element: React.ReactElement,

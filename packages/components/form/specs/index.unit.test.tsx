@@ -4,8 +4,8 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import * as LoginForm from "../fixtures/login";
 
-describe("Unit Form", () => {
-  test("renders correctly", async () => {
+describe("unit Form", () => {
+  it("renders correctly", async () => {
     render(
       <Form
         data-testid="form"

@@ -1,4 +1,4 @@
-import type { TransformOptions } from "babel__core";
+import { type TransformOptions } from "babel__core";
 
 // https://jestjs.io/docs/getting-started#using-typescript
 

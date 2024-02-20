@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Table } from "@react-ck/table/src";
@@ -15,7 +15,7 @@ const meta: Meta<typeof Table> = {
       layout: "padded",
     },
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>
@@ -23,8 +23,6 @@ const meta: Meta<typeof Table> = {
     ],
   }),
 };
-
-export default meta;
 
 const columns = 8;
 const rows = 5;
@@ -48,6 +46,8 @@ const children = [
   </tbody>,
 ];
 
+export default meta;
+
 export const Normal: Story = {
   args: {
     skin: "bordered",
@@ -57,7 +57,7 @@ export const Normal: Story = {
 
 export const Scrollable: Story = {
   decorators: [
-    (Story) => (
+    (Story: () => React.ReactElement): React.ReactElement => (
       <div style={{ height: "200px" }}>
         <Story />
       </div>

@@ -3,8 +3,8 @@ import { Chip } from "../src/index";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-describe("Unit Chip", () => {
-  test("renders correctly", async () => {
+describe("unit Chip", () => {
+  it("renders correctly", async () => {
     const content = "Chip";
     render(<Chip>{content}</Chip>);
     const find = await screen.findByText(content);

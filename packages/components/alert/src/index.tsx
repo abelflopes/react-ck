@@ -25,11 +25,12 @@ export const Alert = ({
   ...otherProps
 }: Readonly<AlertProps>): React.ReactElement => (
   <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
-    {heading && (
+    {heading ? (
       <Text type="h4" as="p" variation="bold" margin={false} className={styles.heading}>
         {heading}
       </Text>
-    )}
+    ) : null}
+
     {children}
   </div>
 );

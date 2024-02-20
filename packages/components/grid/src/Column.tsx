@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./styles/column.module.scss";
 import classNames from "classnames";
-import { useGridContext } from "./context";
+import { useGridContext } from "./hooks";
 
 export interface GridColumnProps extends React.HTMLAttributes<HTMLHRElement> {
   /** Specifies the size of the column */
@@ -26,8 +26,7 @@ export const GridColumn = ({
     <div
       style={{
         ...style,
-        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-        ...({ "--size": size, "--columns": columnsCount } as React.CSSProperties),
+        ...{ "--size": size, "--columns": columnsCount },
       }}
       className={classNames(
         styles.root,

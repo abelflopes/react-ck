@@ -34,11 +34,14 @@ export const Banner = ({
       inverted: true,
     }}>
     <div className={classNames(styles.root, className)} {...otherProps}>
-      <Container spacingY className={styles.container} variation="big">
+      <Container className={styles.container} variation="big" spacingY>
         {children}
-        {actions?.length && <div className={styles.actions}>{actions}</div>}
+
+        {actions?.length ? <div className={styles.actions}>{actions}</div> : null}
       </Container>
+
       <img className={styles.image} alt={alt} src={src} />
+
       <Overlay />
     </div>
   </ThemeContextProvider>

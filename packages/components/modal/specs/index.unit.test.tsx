@@ -4,8 +4,8 @@ import { LayersProvider } from "@react-ck/layers";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-describe("Unit Modal", () => {
-  test("renders correctly", async () => {
+describe("unit Modal", () => {
+  it("renders correctly", async () => {
     const content = "Modal";
     render(
       <LayersProvider>

@@ -36,7 +36,10 @@ export const Text = ({
 }: Readonly<TextProps>): React.ReactElement => {
   const theme = useThemeContext();
 
-  const computedVariations = Array.isArray(variation) ? variation : variation && [variation];
+  const computedVariations = useMemo(
+    () => (Array.isArray(variation) ? variation : variation && [variation]),
+    [variation],
+  );
 
   const computedClassNames = useMemo(
     () =>
@@ -58,7 +61,7 @@ export const Text = ({
   const tag = useMemo<keyof ReactHTML>(() => {
     if (typeof as === "string") return as;
 
-    let value: keyof ReactHTML;
+    let value: keyof ReactHTML | undefined = undefined;
 
     switch (type) {
       case "soft":
@@ -66,7 +69,6 @@ export const Text = ({
         value = "h1";
         break;
       }
-
       default: {
         value = type;
       }
@@ -85,6 +87,7 @@ export const Text = ({
             },
             <>
               {as.props.children}
+
               {children}
             </>,
           )

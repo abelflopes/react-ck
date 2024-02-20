@@ -88,9 +88,10 @@ export const Modal = ({
             className={classNames(dismissable && styles.clickable_overlay)}
             onClick={handleClose}
           />
+
           <Card className={styles.card}>
             <ModalContext.Provider value={contextProps}>
-              {props.header && (
+              {props.header ? (
                 <header
                   {...props.header}
                   className={classNames(styles.header, props.header.className)}>
@@ -98,18 +99,20 @@ export const Modal = ({
                     {props.header.heading}
                   </Text>
 
-                  {dismissable && (
+                  {dismissable ? (
                     <Button skin="ghost" icon={<Icon name="close" />} onClick={handleClose} />
-                  )}
+                  ) : null}
                 </header>
-              )}
+              ) : null}
+
               <main className={styles.content}>{children}</main>
-              {props.footer && (
+
+              {props.footer ? (
                 <footer
                   {...props.footer}
                   className={classNames(styles.footer, props.footer.className)}
                 />
-              )}
+              ) : null}
             </ModalContext.Provider>
           </Card>
         </div>

@@ -29,13 +29,14 @@ export const Card = ({
   return (
     <CardContext.Provider value={contextProps}>
       <div {...otherProps} className={classNames(styles.root, className)}>
-        {contextValue.image && (
+        {contextValue.image ? (
           <img
             {...contextValue.image}
             alt={contextValue.image.alt}
             className={classNames(styles.image, contextValue.image.className)}
           />
-        )}
+        ) : null}
+
         <div className={styles.content}>{children}</div>
       </div>
     </CardContext.Provider>

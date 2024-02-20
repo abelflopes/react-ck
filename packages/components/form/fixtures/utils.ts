@@ -1,10 +1,10 @@
 export const REGEX = {
   email: {
-    exp: /[\d%+._a-z-]+@[\d.a-z-]+.[a-z]{2,}$/,
+    exp: /[\d%+._a-z-]+@[\d.a-z-]+.[a-z]{2,}$/u,
     description: "Insert a valid email",
   },
   password: {
-    exp: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
+    exp: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/u,
     description:
       "Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters",
   },

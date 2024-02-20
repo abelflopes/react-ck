@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta } from "@storybook/react";
+import { type Meta } from "@storybook/react";
 import {
   Subtitle,
   Description,
@@ -34,26 +34,34 @@ export const configureStory = <T,>(
   ...data,
   parameters: {
     ...data.parameters,
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- lack of storybook types
     docs: {
       ...data.parameters?.docs,
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- lack of storybook types
       page:
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- lack of storybook types
         data.parameters?.docs?.page ??
-        (() => (
+        ((): React.ReactElement => (
           <>
             <Title>
               RCK | React {isComponent(component) ? capitalCase(component.displayName) : ""}{" "}
               {extra?.type ?? "Component"}{" "}
             </Title>
+
             <Subtitle />
+
             <Description />
+
             <Primary />
+
             {isComponent(component) && <h3>{component.displayName} Props</h3>}
+
             <Controls />
+
             {extra?.subComponents?.filter(isComponent).map((i) => (
               <React.Fragment key={JSON.stringify(i)}>
                 <h3>{i.displayName} Props</h3>
+
                 <ArgsTable of={i} />
               </React.Fragment>
             ))}

@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Form, type FormFieldMap, type FormProps } from "@react-ck/form/src";
@@ -14,7 +14,7 @@ const meta: Meta<typeof Form> = {
       layout: "padded",
     },
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>
@@ -23,14 +23,14 @@ const meta: Meta<typeof Form> = {
   }),
 };
 
-export default meta;
-
 const props: FormProps<typeof LoginForm.fields> = {
   fields: LoginForm.fields,
   validators: LoginForm.validators,
   values: LoginForm.values,
   onChange: () => undefined,
 };
+
+export default meta;
 
 export const Component: Story = {
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- simplify type handling

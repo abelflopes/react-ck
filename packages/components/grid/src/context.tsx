@@ -1,18 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 
 export interface GridContextProps {
   columnsCount: number;
   registerColumn: () => () => void;
 }
 
-export const themeContextDefaults: GridContextProps = {
+export const GridContext = React.createContext<GridContextProps>({
   columnsCount: 0,
   registerColumn() {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    return () => {};
+    return (): ReturnType<GridContextProps["registerColumn"]> => () => {
+      throw new Error("Grid context not initialized");
+    };
   },
-};
-
-export const GridContext = React.createContext<GridContextProps>(themeContextDefaults);
-
-export const useGridContext = (): GridContextProps => useContext(GridContext);
+});

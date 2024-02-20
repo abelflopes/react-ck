@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
@@ -16,7 +16,7 @@ const meta: Meta<typeof Modal> = {
       layout: "fullscreen",
     },
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <div style={{ height: 350 }}>
             <Story />
@@ -34,7 +34,9 @@ export const Component: Story = {
     children: (
       <>
         <ModalHeader heading={faker.lorem.sentence(4)} />
+
         <Text>{faker.lorem.sentence(6)}</Text>
+
         <ModalFooter>
           <Button>{faker.lorem.word()}</Button>
         </ModalFooter>

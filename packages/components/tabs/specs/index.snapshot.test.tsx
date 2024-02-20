@@ -2,8 +2,8 @@ import React from "react";
 import { Tabs } from "../src/index";
 import renderer from "react-test-renderer";
 
-describe("Snapshot Tabs", () => {
-  test("renders correctly", async () => {
+describe("snapshot Tabs", () => {
+  it("renders correctly", () => {
     const tree = renderer
       .create(
         <Tabs

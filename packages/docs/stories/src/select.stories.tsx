@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
@@ -13,7 +13,7 @@ const meta: Meta<typeof Select> = {
   title: "Form/Select",
   ...configureStory(Select, {
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>
@@ -30,11 +30,14 @@ export const Normal: Story = {
     required: true,
     children: (
       <>
-        <SelectOption selected disabled value="">
+        <SelectOption value="" selected disabled>
           Select Value
         </SelectOption>
+
         <SelectOption>{faker.lorem.word()}</SelectOption>
+
         <SelectOption>{faker.lorem.word()}</SelectOption>
+
         <SelectOption>{faker.lorem.word()}</SelectOption>
       </>
     ),
@@ -47,11 +50,14 @@ export const Validation: Story = {
     required: true,
     children: (
       <>
-        <SelectOption selected disabled value="">
+        <SelectOption value="" selected disabled>
           Select Value
         </SelectOption>
+
         <SelectOption>{faker.lorem.word()}</SelectOption>
+
         <SelectOption>{faker.lorem.word()}</SelectOption>
+
         <SelectOption>{faker.lorem.word()}</SelectOption>
       </>
     ),

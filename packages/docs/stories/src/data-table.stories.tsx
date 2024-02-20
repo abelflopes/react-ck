@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Chip } from "@react-ck/chip/src";
@@ -15,7 +15,7 @@ const meta: Meta<typeof DataTable> = {
       layout: "padded",
     },
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>
@@ -24,11 +24,11 @@ const meta: Meta<typeof DataTable> = {
   }),
 };
 
-export default meta;
-
 const col1 = faker.lorem.word();
 const col2 = faker.lorem.word();
 const col3 = faker.lorem.word();
+
+export default meta;
 
 export const Normal: Story = {
   args: {

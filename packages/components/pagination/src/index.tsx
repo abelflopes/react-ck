@@ -50,11 +50,8 @@ export const Pagination = ({
 
   const handleClick = useCallback(
     (n: number | "move-prev" | "move-next") => {
-      if (typeof n === "number") {
-        setComputedCurrent(n);
-      } else {
-        setOffset((v) => v + Math.max(1, slots - 4) * (n === "move-next" ? 1 : -1));
-      }
+      if (typeof n === "number") setComputedCurrent(n);
+      else setOffset((v) => v + Math.max(1, slots - 4) * (n === "move-next" ? 1 : -1));
     },
     [slots],
   );

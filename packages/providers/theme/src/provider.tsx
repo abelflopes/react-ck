@@ -1,16 +1,16 @@
 import "./styles/index.module.scss";
 import React, { useEffect, useMemo } from "react";
-import type { Theme } from "./types";
+import { type Theme } from "./types";
 import { defaultTheme } from "./themes/default";
 import { ThemeContextProvider } from "./context";
+
+type MappedTheme = Record<string, Record<string, number>>;
 
 export interface ThemeProviderProps {
   target?: HTMLElement;
   theme?: Theme;
   children?: React.ReactNode | React.ReactNode[];
 }
-
-type MappedTheme = Record<string, Record<string, number>>;
 
 /**
  * Injects theme CSS variables on the DOM and dynamically feeds
@@ -31,7 +31,7 @@ export const ThemeProvider = ({
         Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
           // Sync prefixing with /packages/utils/scss/src/_functions.scss
           // get-css-var
-          Object.entries(data).map(([key, value]) => ["--react-ck-" + context + "-" + key, value]),
+          Object.entries(data).map(([key, value]) => [`--react-ck-${context}-${key}`, value]),
         ),
       ),
     [theme],
@@ -46,6 +46,7 @@ export const ThemeProvider = ({
     }
 
     return () => {
+      // eslint-disable-next-line @typescript-eslint/unbound-method -- other approach would make code unnecessarily complex
       Object.keys(themeCssVariables).forEach(target.style.removeProperty);
     };
   }, [target, themeCssVariables]);
@@ -57,7 +58,7 @@ export const ThemeProvider = ({
       }}>
       {!target && <div style={themeCssVariables}>{children}</div>}
 
-      {target && children}
+      {target ? children : null}
     </ThemeContextProvider>
   );
 };

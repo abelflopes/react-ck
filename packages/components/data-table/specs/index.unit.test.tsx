@@ -3,8 +3,8 @@ import { DataTable } from "../src/index";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-describe("Unit DataTable", () => {
-  test("renders correctly", async () => {
+describe("unit DataTable", () => {
+  it("renders correctly", async () => {
     const data = [{ a: 1, b: 2, c: 3 }];
     render(<DataTable data={data} data-testid="table" />);
     const find = await screen.findByTestId("table");

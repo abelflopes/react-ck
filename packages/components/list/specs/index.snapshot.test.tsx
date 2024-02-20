@@ -2,8 +2,8 @@ import React from "react";
 import { List } from "../src/index";
 import renderer from "react-test-renderer";
 
-describe("Snapshot List", () => {
-  test("renders correctly", async () => {
+describe("snapshot List", () => {
+  it("renders correctly", () => {
     const content = "List";
     const tree = renderer.create(<List items={[content]} />).toJSON();
     expect(tree).toMatchSnapshot();

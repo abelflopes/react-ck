@@ -43,9 +43,8 @@ export const Button = ({
     // Validate icon usage (icon should be set through specific prop)
     for (const i of React.Children.toArray(children).filter(isValidElement)) {
       const name = getDisplayName(i);
-      if (name && name.toLowerCase().includes("icon")) {
+      if (name && name.toLowerCase().includes("icon"))
         throw new Error("Icons inside Button should be set with 'icon' prop");
-      }
     }
   }, [children]);
 
@@ -61,9 +60,11 @@ export const Button = ({
         className,
       )}
       {...otherProps}>
-      {icon && !isIconOnly && <span className={styles.icon}>{icon}</span>}
+      {icon && !isIconOnly ? <span className={styles.icon}>{icon}</span> : null}
+
       {children}
-      {isIconOnly && icon}
+
+      {isIconOnly ? icon : null}
     </button>
   );
 };

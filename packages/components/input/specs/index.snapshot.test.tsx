@@ -2,8 +2,8 @@ import React from "react";
 import { Input } from "../src/index";
 import renderer from "react-test-renderer";
 
-describe("Snapshot Input", () => {
-  test("renders correctly", async () => {
+describe("snapshot Input", () => {
+  it("renders correctly", () => {
     const tree = renderer.create(<Input />).toJSON();
     expect(tree).toMatchSnapshot();
   });

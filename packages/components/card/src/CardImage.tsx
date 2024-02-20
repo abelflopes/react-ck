@@ -10,5 +10,5 @@ export const CardImage = (props: NonNullable<CardContextValue["image"]>): undefi
     return () => {
       context.setValue({ image: undefined });
     };
-  }, [props]);
+  }, [context, props]);
 };

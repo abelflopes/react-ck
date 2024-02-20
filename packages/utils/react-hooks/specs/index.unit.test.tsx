@@ -1,38 +1,51 @@
-import { useData } from "../src/index";
-import { renderHook, act, render, type RenderResult } from "@testing-library/react";
-import { mockFetch } from "./mock-fetch";
+import { renderHook, act } from "@testing-library/react";
 import React from "react";
 import "@testing-library/jest-dom";
+import { getActRender } from "@react-ck/jest-config";
+import { mockFetch } from "./mock-fetch";
+import { useData } from "../src/index";
 
 const Component = (): React.ReactElement => {
   const { data, loading, error } = useData("http://localhost:0000/api");
 
   return (
     <>
-      {loading && <span>loading</span>}
-      {error && <span>{error}</span>}
-      {data && <span>{JSON.stringify(data)}</span>}
+      {loading ? <span>loading</span> : null}
+
+      {error ? <span>{error}</span> : null}
+
+      {data ? <span>{JSON.stringify(data)}</span> : null}
     </>
   );
 };
 
-describe("Unit useData hook", () => {
-  test("returns unresolved promise", async () => {
+describe("unit useData hook", () => {
+  it("returns unresolved promise", async () => {
     const { result } = renderHook(() => useData("http://localhost:0000/api"));
 
     // Prevent act error messages
-    await act(async () => undefined);
+    await act(
+      async () =>
+        new Promise<void>((r) => {
+          r();
+        }),
+    );
 
     expect(result.current.dataPromise).toBeInstanceOf(Promise);
   });
 
-  test("returns loading state", async () => {
+  it("returns loading state", async () => {
     const { result } = renderHook(() => useData("http://localhost:0000/api"));
 
     expect(result.current.loading).toBe(true);
 
     // Prevent act error messages
-    await act(async () => undefined);
+    await act(
+      async () =>
+        new Promise<void>((r) => {
+          r();
+        }),
+    );
   });
 
   it("displays data", async () => {

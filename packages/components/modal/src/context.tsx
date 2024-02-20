@@ -13,8 +13,8 @@ export interface ModalContextProps {
   setValue: (value: Partial<ModalContextValue>) => void;
 }
 
-export const themeContextDefaults: ModalContextProps = {
-  setValue: () => undefined,
-};
-
-export const ModalContext = React.createContext<ModalContextProps>(themeContextDefaults);
+export const ModalContext = React.createContext<ModalContextProps>({
+  setValue: () => {
+    throw new Error("modal context not defined");
+  },
+});

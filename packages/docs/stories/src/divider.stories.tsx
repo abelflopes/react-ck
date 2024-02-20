@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Divider } from "@react-ck/divider/src";
@@ -10,7 +10,7 @@ const meta: Meta<typeof Divider> = {
   title: "Generic/Divider",
   ...configureStory(Divider, {
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <Story />
         </Manager>

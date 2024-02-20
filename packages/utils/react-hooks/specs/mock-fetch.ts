@@ -4,10 +4,8 @@ function mockImplementation<T extends object>(data: T | Error): MockFetch<T> {
   return jest.fn().mockImplementation(
     async (): ReturnType<MockFetch<T>> =>
       data instanceof Error
-        ? // eslint-disable-next-line @typescript-eslint/return-await
-          Promise.reject(data)
-        : // eslint-disable-next-line @typescript-eslint/return-await
-          Promise.resolve({
+        ? Promise.reject(data)
+        : Promise.resolve({
             json: () => data,
           }),
   );

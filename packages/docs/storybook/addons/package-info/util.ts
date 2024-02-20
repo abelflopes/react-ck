@@ -30,9 +30,11 @@ export const CONFIG = {
 };
 
 export type DocAddonKey = keyof (typeof CONFIG)["markdownAddons"];
+
 export const markdownAddons: DocAddonKey[] = ["readme", "changelog"];
 
 export type LabelAddonKey = keyof (typeof CONFIG)["labelAddons"];
+
 export const labelAddons: LabelAddonKey[] = ["version"];
 
 export type PackageInfoState = Pick<UseDataReturn, "loading" | "error"> &

@@ -9,6 +9,8 @@ import { componentToText } from "./utils/component-to-text";
 // TODO: add pagination
 // TODO: add section table
 
+const sortModes = ["asc", "desc", "none"] as const;
+
 /** Type representing the data structure for the DataTable component  */
 type TableData = Array<Record<string, React.ReactNode>>;
 
@@ -30,8 +32,6 @@ export interface DataTableProps<T extends TableData> extends Omit<TableProps, "c
   /** Sort callback to allow handling sorting externally instead of automatic string / number sorting */
   onSort?: SortCallback<T>;
 }
-
-const sortModes = ["asc", "desc", "none"] as const;
 
 /**
  * Data table is a component that transforms a JSON structure into a table
@@ -95,31 +95,34 @@ export const DataTable = <T extends TableData>({
     const k = String(sortKey);
 
     return [...data].sort((a, b) => {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      /* eslint-disable @typescript-eslint/no-non-null-assertion -- files always exist */
       let valueA = a[k]!;
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       let valueB = b[k]!;
+      /* eslint-enable */
 
-      if (!Number.isNaN(Number(valueA)) && !Number.isNaN(Number(valueB))) {
+      if ([valueA, valueB].every((i) => !Number.isNaN(Number(i)))) {
+        // if both are numbers
         valueA = Number(valueA);
         valueB = Number(valueB);
-      } else if (React.isValidElement(valueA) && React.isValidElement(valueB)) {
+      } else if ([valueA, valueB].every(React.isValidElement)) {
+        // if both are react elements
         valueA = (componentToText(valueA) ?? "").trim().toLowerCase();
         valueB = (componentToText(valueB) ?? "").trim().toLowerCase();
       } else {
+        // treat as regular strings
         valueA = String(valueA).trim().toLowerCase();
         valueB = String(valueB).trim().toLowerCase();
       }
 
       if (valueA > valueB) return sortMode === "desc" ? -1 : 1;
-      if (valueA < valueB) return sortMode === "desc" ? 1 : -1;
+      else if (valueA < valueB) return sortMode === "desc" ? 1 : -1;
       return 0;
     });
   }, [data, onSort, sortKey, sortMode]);
 
   return (
     <Table {...otherProps}>
-      {computedHeaders && (
+      {Object.keys(computedHeaders).length > 0 && (
         <thead>
           <tr>
             {keys.map((key) => (
@@ -153,6 +156,7 @@ export const DataTable = <T extends TableData>({
           </tr>
         </thead>
       )}
+
       <tbody>
         {sortedData.map((row) => (
           <tr key={stringFromObject(row)}>

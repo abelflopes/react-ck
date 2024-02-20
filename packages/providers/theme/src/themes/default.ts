@@ -1,4 +1,4 @@
-import type { Theme } from "../types";
+import { type Theme } from "../types";
 
 // ColorPrimary: "#783192",
 // colorSecondary: "#59BCC8",

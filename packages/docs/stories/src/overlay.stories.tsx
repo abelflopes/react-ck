@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Overlay } from "@react-ck/overlay/src";
@@ -16,7 +16,7 @@ const meta: Meta<typeof Overlay> = {
       },
     },
     decorators: [
-      (Story) => (
+      (Story): React.ReactElement => (
         <Manager>
           <div style={{ padding: "30px" }}>
             <div style={{ position: "relative", height: "90px" }}>

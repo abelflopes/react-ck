@@ -10,10 +10,8 @@ export interface LayersContextProps {
   createLayer: (data: LayerData) => () => void;
 }
 
-export const layersContextDefaults: LayersContextProps = {
+export const LayersContext = React.createContext<LayersContextProps>({
   createLayer: () => {
     throw new Error("Layers context not defined");
   },
-};
-
-export const LayersContext = React.createContext<LayersContextProps>(layersContextDefaults);
+});

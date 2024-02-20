@@ -2,8 +2,8 @@ import React from "react";
 import { Accordion } from "../src/index";
 import renderer from "react-test-renderer";
 
-describe("Snapshot Accordion", () => {
-  test("renders correctly", async () => {
+describe("snapshot accordion", () => {
+  it("renders correctly", () => {
     const tree = renderer
       .create(
         <Accordion

@@ -45,7 +45,7 @@ export const GridContainer = ({
       <div
         className={classNames(
           styles.root,
-          styles["spacing_" + spacing],
+          styles[`spacing_${spacing}`],
           {
             [`${styles.wrap}`]: wrap,
           },

@@ -5,7 +5,7 @@ import classNames from "classnames";
 /**
  * Props for the EmptyState component
  */
-export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type EmptyStateProps = React.HTMLAttributes<HTMLDivElement>;
 
 /**
  * The Empty State component serves as a crucial element in React applications,

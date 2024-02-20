@@ -1,6 +1,7 @@
-import type { InputProps } from "@react-ck/input";
-import type { SelectProps } from "@react-ck/select";
-import type { TextareaProps } from "@react-ck/textarea";
+import type React from "react";
+import { type InputProps } from "@react-ck/input";
+import { type SelectProps } from "@react-ck/select";
+import { type TextareaProps } from "@react-ck/textarea";
 
 type FieldTypes = "input" | "select" | "textarea";
 
@@ -11,14 +12,6 @@ interface Field<T extends FieldTypes, P> {
   props: P;
 }
 
-// Types of fields available for the developer
-type BaseFieldListMap<K extends Record<FieldTypes, unknown>> = K;
-type FieldListMap = BaseFieldListMap<{
-  input: Field<"input", InputProps>;
-  select: Field<"select", SelectProps>;
-  textarea: Field<"textarea", TextareaProps>;
-}>;
-
 // Utility type grouping all fields
 type AnyField = FieldListMap[FieldTypes];
 
@@ -28,6 +21,15 @@ type TypeValueMap = BaseTypeValueMap<{
   input: NonNullable<InputProps["value"]> | null;
   select: NonNullable<SelectProps["value"]> | null;
   textarea: NonNullable<TextareaProps["value"]> | null;
+}>;
+
+// Types of fields available for the developer
+type BaseFieldListMap<K extends Record<FieldTypes, unknown>> = K;
+
+export type FieldListMap = BaseFieldListMap<{
+  input: Field<"input", InputProps>;
+  select: Field<"select", SelectProps>;
+  textarea: Field<"textarea", TextareaProps>;
 }>;
 
 // Utility type describing map provided by the developer
@@ -50,3 +52,23 @@ export interface FormValidity<T extends FormFieldMap> {
     };
   };
 }
+
+export interface InternalValues<T extends FormFieldMap> {
+  values: FormValues<T>;
+  changedField: keyof T | undefined;
+  changeType: "user" | "internal";
+}
+
+export type InputAdapterProps<
+  F extends keyof FieldListMap,
+  K extends string,
+  T extends FormFieldMap,
+  KT extends keyof T,
+> = FieldListMap[F] & {
+  key: K;
+  value: FormValues<T>[KT];
+  isTouched: boolean;
+  valid: boolean;
+  error: string | undefined;
+  setInternalValues: React.Dispatch<React.SetStateAction<InternalValues<T>>>;
+};

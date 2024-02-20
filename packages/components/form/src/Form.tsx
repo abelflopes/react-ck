@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Input } from "@react-ck/input";
-import { Select } from "@react-ck/select";
-import { Textarea } from "@react-ck/textarea";
 import {
+  type InternalValues,
   type FormFieldMap,
   type FormValidators,
   type FormValidity,
@@ -10,6 +8,9 @@ import {
 } from "./types";
 import classNames from "classnames";
 import styles from "./styles/index.module.scss";
+import { InputAdapter } from "./adapters/Input";
+import { TextareaAdapter } from "./adapters/Textarea";
+import { SelectAdapter } from "./adapters/Select";
 
 const RESTRICTED_PROPS = ["selectedValue", "defaultValue", "value"];
 
@@ -31,11 +32,11 @@ export const Form = <T extends FormFieldMap>({
   className,
   ...props
 }: Readonly<FormProps<T>>): React.ReactElement => {
-  const [internalValues, setInternalValues] = useState<{
-    values: FormValues<T>;
-    changedField: keyof T | undefined;
-    changeType: "user" | "internal";
-  }>({ values, changedField: undefined, changeType: "internal" });
+  const [internalValues, setInternalValues] = useState<InternalValues<T>>({
+    values,
+    changedField: undefined,
+    changeType: "internal",
+  });
   const [fieldElements, setFieldElements] = useState<React.ReactNode[]>([]);
   const [validity, setValidity] = useState<FormValidity<T>>({
     valid: false,
@@ -65,90 +66,27 @@ export const Form = <T extends FormFieldMap>({
 
         const value = internalValues.values[key];
 
+        const adapterProps = {
+          key,
+          value,
+          isTouched: Boolean(isTouched[key]),
+          valid: Boolean(validity.fields[key]?.valid),
+          error: validity.fields[key]?.error,
+          setInternalValues,
+        };
+
         tmpFieldElements.push(
           ((): React.ReactNode => {
-            if (item.type === "input")
-              return (
-                <Input
-                  key={key}
-                  {...item.props}
-                  skin={
-                    isTouched[key] && validity.fields[key]?.valid === false ? "negative" : "default"
-                  }
-                  description={
-                    (isTouched[key] ? validity.fields[key]?.error : undefined) ??
-                    item.props.description
-                  }
-                  value={typeof value === "string" ? value : ""}
-                  onChange={(e) => {
-                    setInternalValues((v) => ({
-                      values: {
-                        ...v.values,
-                        [key]: e.target.value.length > 0 ? e.target.value : null,
-                      },
-                      changeType: "user",
-                      changedField: key,
-                    }));
-                    item.props.onChange?.(e);
-                  }}
-                />
-              );
-
-            if (item.type === "select")
-              return (
-                <Select
-                  key={key}
-                  {...item.props}
-                  skin={
-                    isTouched[key] && validity.fields[key]?.valid === false ? "negative" : "default"
-                  }
-                  description={
-                    (isTouched[key] ? validity.fields[key]?.error : undefined) ??
-                    item.props.description
-                  }
-                  value={typeof value === "string" ? value : ""}
-                  onChange={(e) => {
-                    setInternalValues((v) => ({
-                      values: {
-                        ...v.values,
-                        [key]: e.currentTarget.value.length > 0 ? e.currentTarget.value : null,
-                      },
-                      changeType: "user",
-                      changedField: key,
-                    }));
-                    item.props.onChange?.(e);
-                  }}
-                />
-              );
-
-            if (item.type === "textarea")
-              return (
-                <Textarea
-                  key={key}
-                  {...item.props}
-                  skin={
-                    isTouched[key] && validity.fields[key]?.valid === false ? "negative" : "default"
-                  }
-                  description={
-                    (isTouched[key] ? validity.fields[key]?.error : undefined) ??
-                    item.props.description
-                  }
-                  value={typeof value === "string" ? value : ""}
-                  onChange={(e) => {
-                    setInternalValues((v) => ({
-                      values: {
-                        ...v.values,
-                        [key]: e.currentTarget.value.length > 0 ? e.currentTarget.value : null,
-                      },
-                      changeType: "user",
-                      changedField: key,
-                    }));
-                    item.props.onChange?.(e);
-                  }}
-                />
-              );
-
-            throw new Error(`Field "${JSON.stringify(item)}" is not implemented`);
+            switch (item.type) {
+              case "input":
+                return <InputAdapter {...{ ...item, ...adapterProps }} />;
+              case "select":
+                return <SelectAdapter {...{ ...item, ...adapterProps }} />;
+              case "textarea":
+                return <TextareaAdapter {...{ ...item, ...adapterProps }} />;
+              default:
+                throw new Error(`Field "${JSON.stringify(item)}" is not implemented`);
+            }
           })(),
         );
       }
@@ -181,7 +119,6 @@ export const Form = <T extends FormFieldMap>({
       fields: {},
     });
 
-    // eslint-disable-next-line guard-for-in -- not needed
     for (const key in internalValues.values) {
       const error = validators[key]?.(internalValues.values);
 
