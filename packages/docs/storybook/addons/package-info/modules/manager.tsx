@@ -61,7 +61,8 @@ export const registerManagerAddon = (): void => {
         return () => {
           api.off(Events.CURRENT_STORY_WAS_SET, handler);
         };
-      }, [api, dataPromise, setAddonState]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps -- setAddonState as dep will cause maximum depth stack exceeded
+      }, [api, dataPromise]);
 
       useEffect(() => {
         setAddonState((state) => ({
@@ -69,7 +70,8 @@ export const registerManagerAddon = (): void => {
           loading,
           error,
         }));
-      }, [loading, error, setAddonState]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps -- setAddonState as dep will cause maximum depth stack exceeded
+      }, [loading, error]);
 
       return active ? (
         <code>
