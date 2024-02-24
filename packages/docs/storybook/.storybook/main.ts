@@ -53,8 +53,9 @@ const config: StorybookConfig = {
 
     // Add same styling rules as used on package compilation
     const cssRule = packagesConfig.module?.rules?.find(
-      (i) => !!i && i !== "..." && "test" in i && i.test?.toString() === "/\\.s[ac]ss$/i",
+      (i) => !!i && i !== "..." && "test" in i && i.test?.toString() === "/\\.s[ac]ss$/iu",
     );
+
     config.module?.rules?.push(cssRule);
 
     // Reduce log noise
