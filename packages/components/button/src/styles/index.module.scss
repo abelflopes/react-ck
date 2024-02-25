@@ -77,6 +77,15 @@
   }
 }
 
+.negative {
+  @include define-css-var(button, background-color, get-color(status-negative));
+  @include define-css-var(button, color, get-color(neutral-light-1));
+
+  &:hover {
+    @include define-css-var(button, background-color, get-color(status-negative-dark));
+  }
+}
+
 .icon {
   margin-right: get-spacing(1);
   display: inline-flex;

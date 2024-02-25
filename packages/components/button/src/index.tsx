@@ -8,7 +8,7 @@ import { getDisplayName } from "@react-ck/react-utils";
  */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Defines the color scheme of the button */
-  skin?: "primary" | "secondary" | "ghost";
+  skin?: "primary" | "secondary" | "ghost" | "negative";
   /** Defines the scale of the button */
   size?: "s" | "m";
   /**
