@@ -3,19 +3,60 @@
 
 .root {
   @include text-base;
+  @include define-css-var(card, border-radius, get-spacing(2));
 
   background-color: get-color(neutral-light-1);
-  border-radius: get-spacing(2);
-  border: solid 0 get-color(neutral-light-2);
-  box-shadow: 0 0 10px 0 get-color(neutral-light-3);
+  border-radius: get-css-var(card, border-radius);
   overflow: hidden;
 
+  // Skins
+
+  &.bordered {
+    border: solid get-css-var(spacing, border) get-color(neutral-light-2);
+  }
+
+  &.shadowed {
+    box-shadow: 0 0 10px 0 get-color(neutral-light-3);
+  }
+
+  &.ghost {
+    @include define-css-var(card, border-radius, 0);
+  }
+
+  // Variations
+
+  &.horizontal {
+    display: flex;
+  }
+
+  &.vertical {
+    .image {
+      width: 100%;
+    }
+  }
+
+  // Spacing
+
+  &.spacing_s {
+    @include define-css-var(card, spacing, get-spacing(1));
+  }
+
+  &.spacing_m {
+    @include define-css-var(card, spacing, get-spacing(2));
+  }
+
+  &.spacing_l {
+    @include define-css-var(card, spacing, get-spacing(3));
+  }
+
+  // Content
+
   .content {
-    padding: get-spacing(4) get-spacing(3);
+    padding: get-css-var(card, spacing);
   }
 
   .image {
-    width: 100%;
+    display: block;
     object-fit: cover;
   }
 }

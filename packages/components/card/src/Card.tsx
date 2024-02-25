@@ -4,6 +4,18 @@ import React, { useMemo, useState } from "react";
 import { CardContext, type CardContextValue } from "./context";
 
 /**
+ * Props for the Card component
+ */
+interface CardProps extends Readonly<React.HTMLAttributes<HTMLDivElement>> {
+  /** Defines card style */
+  skin?: "bordered" | "shadowed" | "ghost";
+  /** Defines card orientation */
+  variation?: "vertical" | "horizontal";
+  /** Controls the amount of spacing between card limits */
+  spacing?: "s" | "m" | "l" | "none";
+}
+
+/**
  * Card is a content container that represents a single object and related actions.
  * For example, an article or task.
  * @param props - {@link React.HTMLAttributes}
@@ -11,10 +23,13 @@ import { CardContext, type CardContextValue } from "./context";
  */
 
 export const Card = ({
+  skin = "bordered",
+  variation = "vertical",
+  spacing = "m",
   children,
   className,
   ...otherProps
-}: Readonly<React.HTMLAttributes<HTMLDivElement>>): React.ReactElement => {
+}: Readonly<CardProps>): React.ReactElement => {
   const [contextValue, setContextValue] = useState<CardContextValue>({
     image: undefined,
   });
@@ -28,7 +43,11 @@ export const Card = ({
 
   return (
     <CardContext.Provider value={contextProps}>
-      <div {...otherProps} className={classNames(styles.root, className)}>
+      <div
+        {...otherProps}
+        className={classNames(styles.root, className, styles[skin], styles[variation], {
+          [`${styles[`spacing_${spacing}`]}`]: spacing !== "none",
+        })}>
         {contextValue.image ? (
           <img
             {...contextValue.image}
