@@ -8,6 +8,7 @@ import {
   CgChevronRight,
   CgChevronUp,
   CgChevronDown,
+  CgTrash,
 } from "react-icons/cg";
 
 export default {
@@ -23,4 +24,5 @@ export default {
   "chevron-right": CgChevronRight,
   "chevron-up": CgChevronUp,
   "chevron-down": CgChevronDown,
+  "trash": CgTrash,
 };
