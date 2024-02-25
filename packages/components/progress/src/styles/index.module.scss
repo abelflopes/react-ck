@@ -1,17 +1,22 @@
 @import "@react-ck/theme";
 
 .root {
-  background-color: get-color(neutral-light-2);
-  height: get-spacing(0.5);
-  border-radius: get-spacing(0.5);
-  overflow: hidden;
-}
+  -webkit-appearance: none;
+  appearance: none;
 
-.bar {
-  background-color: get-color(highlight-primary);
   width: 100%;
-  transform: scaleX(var(--value));
-  transform-origin: center left;
-  height: 100%;
-  transition: transform ease-in-out 0.5s;
+  height: get-spacing(0.5);
+
+  &::-webkit-progress-value,
+  &::-webkit-progress-bar {
+    border-radius: get-spacing(0.5);
+  }
+
+  &::-webkit-progress-value {
+    background-color: get-color(highlight-primary);
+  }
+
+  &::-webkit-progress-bar {
+    background-color: get-color(neutral-light-2);
+  }
 }

@@ -5,9 +5,8 @@ import classNames from "classnames";
 // Styles
 import styles from "./styles/index.module.scss";
 
-// TODO: semantic - change tag to <progress />
-
-interface ProgressProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
+interface ProgressProps
+  extends Omit<React.ProgressHTMLAttributes<HTMLProgressElement>, "children"> {
   /** Minimum value - corresponds to 0% progress */
   min?: number;
   /** Maximum value - corresponds to 100% progress */
@@ -36,14 +35,11 @@ export const Progress = ({
   }, [max, min, value]);
 
   return (
-    <div className={classNames(styles.root, className)} {...otherProps}>
-      <div
-        className={styles.bar}
-        style={{
-          // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- necessary as react does not support CSS vars
-          ["--value" as keyof React.CSSProperties]: `${percent}%`,
-        }}
-      />
-    </div>
+    <progress
+      className={classNames(styles.root, className)}
+      value={percent}
+      max={100}
+      {...otherProps}
+    />
   );
 };
