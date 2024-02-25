@@ -13,6 +13,7 @@
   font-weight: 700;
   display: inline-flex;
   border-radius: 8px;
+  white-space: nowrap;
 }
 
 @each $key, $props in $chip-styles {
