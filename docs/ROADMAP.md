@@ -50,6 +50,8 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [x] **Spinner:** A spinning thing to show stuff is loading.
 
+[ ] **Overlay Spinner:** Overlay element with sticky spinner that blurs the background elements.
+
 [x] **Progress:** Shows how much of a task is done.
 
 [x] **Empty State:** Shows that a there is no data available.
@@ -76,6 +78,10 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 
 [ ] **Accessibility:** Modals, dialogs, buttons, controls, inputs / forms
 
+[ ] **Semantic HTML:** Dialogs
+
+[ ] **Aria attributes:**
+
 ## Layouts
 
 [ ] **Centered:** Auth views
@@ -83,3 +89,5 @@ This roadmap is our plan for building a complete front-end framework. Each item 
 [ ] **Standard:** Vertically composed views
 
 [ ] **Dashboard:** Fixed sized, multiple navigation, scrollable content
+
+
