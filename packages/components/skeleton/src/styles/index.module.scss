@@ -27,7 +27,7 @@
     transform: translateX(-100%);
     animation: move 2s linear infinite;
     background-image: linear-gradient(90deg, transparent, get-color(neutral-light-3), transparent);
-    animation-delay: calc(var(--n) * 200ms);
+    animation-delay: calc(var(--index) * 200ms);
   }
 }
 

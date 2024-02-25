@@ -27,12 +27,11 @@ export const Skeleton = ({
   const N = useMemo(() => (n += 1 % 3), []);
 
   useEffect(() => {
-    if (variation === "default") return;
-
     setIndex((n += 1));
 
     return () => {
       n -= 1;
+
       setIndex(undefined);
     };
   }, [variation]);
@@ -48,7 +47,8 @@ export const Skeleton = ({
               "--index": N,
             }),
       }}
-      {...otherProps}
-    />
+      {...otherProps}>
+      {index} / {N}
+    </div>
   );
 };
