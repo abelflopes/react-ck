@@ -5,11 +5,16 @@
 .root {
   @include text-base;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: get-spacing(1);
   box-sizing: border-box;
   background-color: get-css-var(alert, background-color);
   color: get-css-var(alert, color);
   padding: get-spacing(1) get-spacing(2);
   border-radius: get-spacing(1);
+  border: none;
 
   .heading {
     color: inherit;

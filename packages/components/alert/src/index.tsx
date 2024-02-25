@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import { Text } from "@react-ck/text";
+import { Button } from "@react-ck/button";
+import { Icon } from "@react-ck/icon";
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Main title of the alert */
   heading?: string;
   /** Specifies the visual style of the alert  */
   skin?: "neutral" | "primary" | "negative" | "average" | "positive";
+  /** Determines if the alert can be dismissed by clicking on the close button  */
+  dismissable?: boolean;
+  /** Defines if the alert is open */
+  open?: boolean;
+  /** Close handler */
+  onClose?: () => void;
 }
-
-// TODO: add dismiss
 
 /**
  * Alert is a short message that provides contextual feedback in a prominent way.
@@ -20,17 +27,47 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Alert = ({
   heading,
   skin = "neutral",
+  dismissable,
+  open = true,
+  onClose,
   children,
   className,
   ...otherProps
-}: Readonly<AlertProps>): React.ReactElement => (
-  <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
-    {heading ? (
-      <Text type="h4" as="p" variation="bold" margin={false} className={styles.heading}>
-        {heading}
-      </Text>
-    ) : null}
+}: Readonly<AlertProps>): React.ReactNode => {
+  const [computedOpen, setComputedOpen] = useState(open);
 
-    {children}
-  </div>
-);
+  useEffect(() => {
+    setComputedOpen(open);
+  }, [open]);
+
+  useEffect(() => {
+    if (computedOpen === open || !onClose) return;
+
+    if (!computedOpen) onClose();
+  }, [computedOpen, onClose, open]);
+
+  return computedOpen ? (
+    <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
+      <div>
+        {heading ? (
+          <Text type="h4" as="p" variation="bold" margin={false} className={styles.heading}>
+            {heading}
+          </Text>
+        ) : null}
+
+        {children}
+      </div>
+
+      {dismissable ? (
+        <Button
+          icon={<Icon name="close" />}
+          size="s"
+          skin="ghost"
+          onClick={() => {
+            setComputedOpen(false);
+          }}
+        />
+      ) : null}
+    </div>
+  ) : null;
+};
