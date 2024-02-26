@@ -10,7 +10,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /** Defines the color scheme of the button */
   skin?: "primary" | "secondary" | "ghost" | "negative";
   /** Defines the scale of the button */
-  size?: "s" | "m";
+  size?: "s" | "m" | "l";
   /**
    * Content slot to receive an icon.
    * This can be any valid React node, allowing integration of icons or custom SVG components.

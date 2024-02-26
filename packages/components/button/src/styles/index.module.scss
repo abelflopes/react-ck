@@ -28,13 +28,23 @@
   }
 }
 
+.size-l {
+  @include define-css-var(button, padding-y, get-spacing(2));
+  @include define-css-var(button, padding-x, get-spacing(3));
+
+  &.icon-only {
+    @include define-css-var(button, padding-y, get-spacing(1.5));
+    @include define-css-var(button, padding-x, get-spacing(1.5));
+  }
+}
+
 .size-m {
   @include define-css-var(button, padding-y, get-spacing(1));
   @include define-css-var(button, padding-x, get-spacing(2));
 
   &.icon-only {
+    @include define-css-var(button, padding-y, get-spacing(1));
     @include define-css-var(button, padding-x, get-spacing(1));
-    @include define-css-var(button, padding-t, get-spacing(1));
   }
 }
 
@@ -43,8 +53,8 @@
   @include define-css-var(button, padding-x, get-spacing(1.25));
 
   &.icon-only {
+    @include define-css-var(button, padding-y, get-spacing(0.66));
     @include define-css-var(button, padding-x, get-spacing(0.66));
-    @include define-css-var(button, padding-t, get-spacing(0.66));
 
     @include text-variation(smallest);
   }
