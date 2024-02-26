@@ -1,0 +1,33 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+@import "variables";
+
+.root {
+  @include text-base;
+  @include text-type(soft);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: get-css-var(avatar, size);
+  width: get-css-var(avatar, size);
+  border-radius: 50%;
+  background-color: get-color(neutral-light-2);
+  overflow: hidden;
+  margin: 0;
+
+  @each $key, $value in $avatar-sizes {
+    &.size_#{$key} {
+      @include define-css-var(avatar, size, $value);
+    }
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}

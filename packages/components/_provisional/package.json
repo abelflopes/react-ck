@@ -1,0 +1,38 @@
+{
+  "name": "@react-ck/provisional",
+  "private": false,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/provisional#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/react-ck.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "lint:typescript": "tsc --noEmit",
+    "lint:code": "eslint . --ext ts,tsx --cache"
+  },
+  "devDependencies": {
+    "@react-ck/babel-config": "*",
+    "@react-ck/typescript-config": "*",
+    "@react-ck/webpack-config": "*",
+    "@types/react": "^18.2.33"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@react-ck/button": "*",
+    "@react-ck/icon": "*",
+    "@react-ck/skeleton": "*",
+    "@react-ck/react-utils": "*",
+    "@react-ck/scss-utils": "*",
+    "@react-ck/text": "*",
+    "classnames": "*"
+  }
+}

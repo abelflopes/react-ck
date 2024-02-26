@@ -1,0 +1,10 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+
+.root {
+  @include text-base;
+
+  &.active {
+    @include text-variation(bold);
+  }
+}
