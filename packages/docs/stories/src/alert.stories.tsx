@@ -10,6 +10,9 @@ type Story = StoryObj<typeof Alert>;
 const meta: Meta<typeof Alert> = {
   title: "Generic/Alert",
   ...configureStory(Alert, {
+    parameters: {
+      layout: "padded",
+    },
     decorators: [
       (Story): React.ReactElement => (
         <Manager>
