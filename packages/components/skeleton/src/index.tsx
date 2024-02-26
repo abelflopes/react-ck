@@ -47,8 +47,7 @@ export const Skeleton = ({
               "--index": N,
             }),
       }}
-      {...otherProps}>
-      {index} / {N}
-    </div>
+      {...otherProps}
+    />
   );
 };
