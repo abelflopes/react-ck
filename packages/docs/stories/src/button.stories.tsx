@@ -45,3 +45,11 @@ export const IconButton: Story = {
     icon: <Icon name="close" />,
   },
 };
+
+export const Link: Story = {
+  args: {
+    skin: "primary",
+    children: sentenceCase(faker.lorem.words({ min: 1, max: 3 })),
+    as: ["a", { href: "/" }],
+  },
+};
