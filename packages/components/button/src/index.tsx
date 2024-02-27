@@ -1,12 +1,19 @@
 import React, { isValidElement, useEffect, useMemo } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { getDisplayName } from "@react-ck/react-utils";
+import {
+  getDisplayName,
+  PolymorphicComponent,
+  type ConsumerPolymorphicProps,
+  type HTMLTag,
+} from "@react-ck/react-utils";
 
 /**
  * Props for the Button component
  */
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps<T extends HTMLTag>
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    ConsumerPolymorphicProps<T> {
   /** Defines the color scheme of the button */
   skin?: "primary" | "secondary" | "ghost" | "negative";
   /** Defines the scale of the button */
@@ -26,14 +33,15 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  * @returns a React element
  */
 
-export const Button = ({
+export const Button = <T extends HTMLTag>({
+  as,
   skin = "primary",
   size = "m",
   icon,
   children,
   className,
   ...otherProps
-}: Readonly<ButtonProps>): React.ReactElement => {
+}: Readonly<ButtonProps<T>>): React.ReactElement => {
   const isIconOnly = useMemo(
     () => icon !== undefined && React.Children.count(children) === 0,
     [children, icon],
@@ -49,22 +57,23 @@ export const Button = ({
   }, [children]);
 
   return (
-    <button
-      className={classNames(
-        styles.root,
-        styles[skin],
-        styles[`size-${size}`],
-        {
-          [`${styles["icon-only"]}`]: isIconOnly,
-        },
-        className,
-      )}
-      {...otherProps}>
+    <PolymorphicComponent
+      as={as}
+      fallback={["button", otherProps]}
+      commonProps={{
+        className: classNames(
+          styles.root,
+          styles[skin],
+          styles[`size-${size}`],
+          {
+            [`${styles["icon-only"]}`]: isIconOnly,
+          },
+          className,
+        ),
+      }}>
       {icon && !isIconOnly ? <span className={styles.icon}>{icon}</span> : null}
-
       {children}
-
       {isIconOnly ? icon : null}
-    </button>
+    </PolymorphicComponent>
   );
 };
