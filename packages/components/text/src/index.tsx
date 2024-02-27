@@ -4,18 +4,22 @@ import React, { type ReactHTML, useMemo } from "react";
 // Utils
 import classNames from "classnames";
 import { useThemeContext } from "@react-ck/theme";
+import {
+  type ConsumerPolymorphicProps,
+  type HTMLTag,
+  PolymorphicComponent,
+  type BaseHTMLProps,
+} from "@react-ck/react-utils";
 
 export type TextVariation = "smallest" | "small" | "bold" | "link" | "link_hidden" | "inverted";
 
-export interface TextProps extends React.HTMLAttributes<HTMLElement> {
+export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPolymorphicProps<T> {
   /** Adds margin to the text element  */
   margin?: boolean;
   /** Specifies the type/visual variation of text element to be rendered  */
   type?: "huge" | "soft" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
   /* Specifies the visual style variation(s) for the text */
   variation?: TextVariation | TextVariation[];
-  /** Specifies the custom element to be used as the text container  */
-  as?: keyof ReactHTML | React.ReactElement;
 }
 
 /**
@@ -25,7 +29,7 @@ export interface TextProps extends React.HTMLAttributes<HTMLElement> {
  * @returns a React element
  */
 
-export const Text = ({
+export const Text = <T extends HTMLTag>({
   as,
   margin = true,
   type = "p",
@@ -33,7 +37,7 @@ export const Text = ({
   className,
   children,
   ...otherProps
-}: Readonly<TextProps>): React.ReactElement => {
+}: Readonly<TextProps<T>>): React.ReactElement => {
   const theme = useThemeContext();
 
   const computedVariations = useMemo(
@@ -58,9 +62,7 @@ export const Text = ({
     [className, computedVariations, theme, margin, type],
   );
 
-  const tag = useMemo<keyof ReactHTML>(() => {
-    if (typeof as === "string") return as;
-
+  const defaultTag = useMemo<keyof ReactHTML>(() => {
     let value: keyof ReactHTML | undefined = undefined;
 
     switch (type) {
@@ -75,32 +77,17 @@ export const Text = ({
     }
 
     return value;
-  }, [type, as]);
+  }, [type]);
 
-  const element = useMemo<React.ReactElement>(
-    () =>
-      as && React.isValidElement<HTMLElement>(as)
-        ? React.cloneElement(
-            as,
-            {
-              className: classNames(as.props.className, computedClassNames),
-            },
-            <>
-              {as.props.children}
-
-              {children}
-            </>,
-          )
-        : React.createElement(
-            tag,
-            {
-              ...otherProps,
-              className: computedClassNames,
-            },
-            children,
-          ),
-    [as, computedClassNames, children, tag, otherProps],
+  return (
+    <PolymorphicComponent
+      as={as}
+      fallback={defaultTag}
+      commonProps={{
+        className: computedClassNames,
+        children,
+        ...otherProps,
+      }}
+    />
   );
-
-  return element;
 };
