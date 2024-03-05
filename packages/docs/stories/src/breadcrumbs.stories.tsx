@@ -8,7 +8,7 @@ import { faker } from "@faker-js/faker";
 type Story = StoryObj<typeof Breadcrumbs>;
 
 const meta: Meta<typeof Breadcrumbs> = {
-  title: "Layout/Breadcrumbs",
+  title: "Generic/Breadcrumbs",
   ...configureStory(Breadcrumbs, {
     decorators: [
       (Story): React.ReactElement => (
@@ -25,8 +25,10 @@ export default meta;
 export const Component: Story = {
   args: {
     items: [
-      <Breadcrumbs.Item key="1">{faker.lorem.word()}</Breadcrumbs.Item>,
-      <Breadcrumbs.Item key="2">{faker.lorem.word()}</Breadcrumbs.Item>,
+      <Breadcrumbs.Item key="1" as={<a href="/"> {faker.lorem.word()}</a>} />,
+      <Breadcrumbs.Item key="2" as={["a", { href: "../" }]}>
+        {faker.lorem.word()}
+      </Breadcrumbs.Item>,
       <Breadcrumbs.Item key="3" active>
         {faker.lorem.word()}
       </Breadcrumbs.Item>,
