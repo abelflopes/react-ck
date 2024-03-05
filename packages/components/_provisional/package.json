@@ -29,6 +29,7 @@
   "dependencies": {
     "@react-ck/button": "*",
     "@react-ck/icon": "*",
+    "@react-ck/layers": "*",
     "@react-ck/skeleton": "*",
     "@react-ck/react-utils": "*",
     "@react-ck/scss-utils": "*",
