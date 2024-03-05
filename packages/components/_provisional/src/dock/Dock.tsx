@@ -4,6 +4,7 @@ import React, { useMemo } from "react";
 import { DockContext, type DockContextProps } from "./context";
 import { DockItem } from "./DockItem";
 import { DockMainItem } from "./DockMainItem";
+import { ScrollableContainer } from "../scrollable-container";
 
 interface DockProps extends React.HTMLAttributes<HTMLElement> {
   header?: React.ReactNode;
@@ -32,7 +33,7 @@ const Dock = ({
     <DockContext.Provider value={contextValue}>
       <nav className={classNames(styles.root, className)} {...otherProps}>
         {header ? <div className={styles.header}>{header}</div> : null}
-        <div className={styles.content}>{children}</div>
+        <ScrollableContainer className={styles.content}>{children}</ScrollableContainer>
         {footer ? <div className={styles.footer}>{footer}</div> : null}
       </nav>
     </DockContext.Provider>
