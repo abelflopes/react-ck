@@ -1,0 +1,29 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+
+.root {
+  @include text-base;
+  @include text-type(h3);
+
+  display: flex;
+  align-items: center;
+  gap: get-spacing(4);
+  background-color: get-color(neutral-light-2);
+  padding: get-spacing(1);
+
+  .section {
+    flex-basis: 33%;
+    display: flex;
+    align-items: center;
+    gap: get-spacing(2);
+    justify-content: center;
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+}
