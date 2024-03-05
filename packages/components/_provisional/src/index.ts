@@ -11,3 +11,5 @@ export * from "./breadcrumbs";
 export * from "./scrollable-container";
 
 export * from "./position-engine";
+
+export * from "./top-bar";
