@@ -1,0 +1,77 @@
+@import "@react-ck/theme";
+
+.root {
+  position: relative;
+  overflow: auto;
+
+  // all shadows
+  .shadow_x::before,
+  .shadow_x::after,
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 0 get-spacing(1.5) get-spacing(1.5) get-color(neutral-light-1);
+  }
+
+  // shadow x
+  .shadow_x {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translate(var(--scroll-x), var(--scroll-y));
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      height: 100%;
+      width: 0;
+    }
+  }
+
+  // shadow y
+  &::before,
+  &::after {
+    height: 0;
+    width: 100%;
+    transform: translate(var(--scroll-x), var(--scroll-y));
+    pointer-events: none;
+  }
+
+  // shadow top
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // shadow left
+  .shadow_x::before {
+    top: 0;
+    left: 0;
+  }
+
+  // shadow right
+  .shadow_x::after {
+    top: 0;
+    right: 0;
+  }
+
+  // shadow bottom
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  // active shadow
+  &.has-scroll-top::before,
+  &.has-scroll-right .shadow_x::after,
+  &.has-scroll-bottom::after,
+  &.has-scroll-left .shadow_x::before {
+    opacity: 1;
+  }
+}

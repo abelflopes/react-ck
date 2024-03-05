@@ -8,4 +8,6 @@ export * from "./dock";
 
 export * from "./breadcrumbs";
 
+export * from "./scrollable-container";
+
 export * from "./position-engine";
