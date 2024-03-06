@@ -65,7 +65,7 @@ export type InputAdapterProps<
   T extends FormFieldMap,
   KT extends keyof T,
 > = FieldListMap[F] & {
-  key: K;
+  fieldKey: K;
   value: FormValues<T>[KT];
   isTouched: boolean;
   valid: boolean;

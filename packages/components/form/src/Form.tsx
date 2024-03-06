@@ -49,9 +49,9 @@ export const Form = <T extends FormFieldMap>({
   useEffect(() => {
     const tmpFieldElements: React.ReactNode[] = [];
 
-    for (const key in fields) {
-      if (fields[key] !== undefined) {
-        const item = fields[key];
+    for (const fieldKey in fields) {
+      if (fields[fieldKey] !== undefined) {
+        const item = fields[fieldKey];
 
         if (item === undefined) continue;
 
@@ -64,14 +64,14 @@ export const Form = <T extends FormFieldMap>({
           );
         }
 
-        const value = internalValues.values[key];
+        const value = internalValues.values[fieldKey];
 
         const adapterProps = {
-          key,
+          fieldKey,
           value,
-          isTouched: Boolean(isTouched[key]),
-          valid: Boolean(validity.fields[key]?.valid),
-          error: validity.fields[key]?.error,
+          isTouched: Boolean(isTouched[fieldKey]),
+          valid: Boolean(validity.fields[fieldKey]?.valid),
+          error: validity.fields[fieldKey]?.error,
           setInternalValues,
         };
 

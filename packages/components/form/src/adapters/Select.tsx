@@ -4,7 +4,7 @@ import { Select } from "@react-ck/select";
 
 export const SelectAdapter = <K extends string, T extends FormFieldMap, KT extends keyof T>({
   value,
-  key,
+  fieldKey,
   props,
   isTouched,
   valid,
@@ -12,7 +12,7 @@ export const SelectAdapter = <K extends string, T extends FormFieldMap, KT exten
   setInternalValues,
 }: Readonly<InputAdapterProps<"select", K, T, KT>>): React.ReactElement => (
   <Select
-    key={key}
+    key={fieldKey}
     {...props}
     value={typeof value === "string" ? value : ""}
     skin={isTouched && !valid ? "negative" : "default"}
@@ -21,10 +21,10 @@ export const SelectAdapter = <K extends string, T extends FormFieldMap, KT exten
       setInternalValues((v) => ({
         values: {
           ...v.values,
-          [key]: e.currentTarget.value.length > 0 ? e.currentTarget.value : null,
+          [fieldKey]: e.currentTarget.value.length > 0 ? e.currentTarget.value : null,
         },
         changeType: "user",
-        changedField: key,
+        changedField: fieldKey,
       }));
       props.onChange?.(e);
     }}

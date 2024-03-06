@@ -4,7 +4,7 @@ import { Textarea } from "@react-ck/textarea";
 
 export const TextareaAdapter = <K extends string, T extends FormFieldMap, KT extends keyof T>({
   value,
-  key,
+  fieldKey,
   props,
   isTouched,
   valid,
@@ -12,7 +12,6 @@ export const TextareaAdapter = <K extends string, T extends FormFieldMap, KT ext
   setInternalValues,
 }: Readonly<InputAdapterProps<"textarea", K, T, KT>>): React.ReactElement => (
   <Textarea
-    key={key}
     {...props}
     value={typeof value === "string" ? value : ""}
     skin={isTouched && !valid ? "negative" : "default"}
@@ -21,10 +20,10 @@ export const TextareaAdapter = <K extends string, T extends FormFieldMap, KT ext
       setInternalValues((v) => ({
         values: {
           ...v.values,
-          [key]: e.currentTarget.value.length > 0 ? e.currentTarget.value : null,
+          [fieldKey]: e.currentTarget.value.length > 0 ? e.currentTarget.value : null,
         },
         changeType: "user",
-        changedField: key,
+        changedField: fieldKey,
       }));
       props.onChange?.(e);
     }}
