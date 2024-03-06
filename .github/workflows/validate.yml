@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Code Checks
         continue-on-error: true
-        run: npm run lint:code
+        run: npm exec -- lerna run lint:code # avoid using parallel from project commands, CI breaks
 
       - name: Run Typescript Checks
         run: npm run lint:typescript
