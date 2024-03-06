@@ -1,4 +1,5 @@
 import { type Config } from "jest";
+import path from "path";
 
 export const config: Config = {
   testEnvironment: "jsdom",
@@ -7,4 +8,5 @@ export const config: Config = {
   moduleNameMapper: {
     "\\.(css|less|scss|sss|styl)$": "<rootDir>../../../node_modules/jest-css-modules",
   },
+  setupFiles: [path.join(__dirname, "setup.js")],
 };

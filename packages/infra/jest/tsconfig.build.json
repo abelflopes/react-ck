@@ -4,5 +4,5 @@
     "outDir": "./dist",
     "module": "UMD"
   },
-  "include": ["./*.d.ts", "./src/**/*", "./src/index.ts*"]
+  "include": ["./src/index.ts", "./src/setup.ts"]
 }
