@@ -46,7 +46,7 @@ export const AutoHeaders: Story = {
   args: {
     skin: "bordered",
     autoHeaders: true,
-    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
+    data: Object.keys(Array.from(Array.from({ length: 10 }))).map((i) => ({
       "some_column": faker.date.future().toLocaleDateString(),
       "otherColumn": faker.company.buzzNoun(),
       "last-column": <Chip>{faker.commerce.price()}</Chip>,
@@ -58,11 +58,21 @@ export const Sortable: Story = {
   args: {
     skin: "bordered",
     autoHeaders: true,
-    sortable: ["otherColumn", "last-column"],
-    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
-      "some_column": faker.date.future().toLocaleDateString(),
-      "otherColumn": faker.company.buzzNoun(),
-      "last-column": <Chip>{faker.commerce.price()}</Chip>,
-    })),
+    sortable: true,
+    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => {
+      const date = new Date(faker.date.future()).toString();
+
+      return {
+        name: faker.company.buzzNoun(),
+        date,
+        Number: Math.round(Math.random() * 100),
+        Price: (
+          <Chip>
+            {faker.commerce.price()}
+            {faker.finance.currency().symbol}
+          </Chip>
+        ),
+      };
+    }),
   },
 };

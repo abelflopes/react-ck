@@ -19,6 +19,12 @@ export const sortData = <T extends TableData>(
       // if both are numbers
       valueA = Number(valueA);
       valueB = Number(valueB);
+    } else if (
+      [valueA, valueB].every((i) => typeof i === "string" && JSON.stringify(new Date(i)) !== "null")
+    ) {
+      // if both are dates
+      valueA = new Date(String(valueA)).getTime();
+      valueB = new Date(String(valueB)).getTime();
     } else if ([valueA, valueB].every(React.isValidElement)) {
       // if both are react elements
       valueA = (componentToText(valueA) ?? "").trim().toLowerCase();
