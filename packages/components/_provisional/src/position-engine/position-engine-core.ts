@@ -1,4 +1,4 @@
-/* eslint-disable max-lines */
+/* eslint-disable max-lines -- ddd */
 import { type StandardLonghandProperties } from "csstype";
 
 type PositionEngineAlign = "start" | "center" | "end";
@@ -145,6 +145,8 @@ export class PositionEngine {
     let offsetLeft = 0;
     let scrollOffset = 0;
 
+    /* eslint-disable no-console -- still in development */
+
     console.clear();
 
     while (parent) {
@@ -153,8 +155,8 @@ export class PositionEngine {
         offsetLeft += parent.offsetLeft;
         scrollOffset += parent.scrollHeight - parent.offsetHeight;
 
-        // console.log("offsetParent", parent);
-        // console.log("offsetLeft", parent.offsetLeft);
+        console.log("offsetParent", parent);
+        console.log("offsetLeft", parent.offsetLeft);
         console.log(
           "top / height / scrollHeight / scrollTop",
           parent.offsetTop,
@@ -176,6 +178,8 @@ export class PositionEngine {
     console.log("windowHeight", windowHeight);
     console.log("scrollTop", scrollTop);
     console.log("scrollOffset", scrollOffset);
+
+    /* eslint-enable no-console */
 
     return {
       "top-start": {
@@ -270,3 +274,4 @@ export class PositionEngine {
     });
   };
 }
+/* eslint-enable max-lines */

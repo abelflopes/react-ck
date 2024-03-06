@@ -70,6 +70,11 @@ export const Pagination = ({
     [computedSlots, min, slots, total],
   );
 
+  const isDynamic = useCallback(
+    (i: number) => !isGoToLast(i) && !isMoveNext(i) && !isMovePrev(i) && !isGotoFirst(i),
+    [isGoToLast, isGotoFirst, isMoveNext, isMovePrev],
+  );
+
   useEffect(() => {
     setComputedCurrent(current);
   }, [current]);
@@ -110,7 +115,7 @@ export const Pagination = ({
             </Button>
           )}
 
-          {!isGoToLast(i) && !isMoveNext(i) && !isMovePrev(i) && !isGotoFirst(i) && (
+          {isDynamic(i) && (
             <Button
               size="s"
               skin={i + min === computedCurrent ? "secondary" : "ghost"}

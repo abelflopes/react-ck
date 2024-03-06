@@ -30,17 +30,5 @@ export const PositionEngine = ({
     return positionEngine.destroy;
   }, [anchorRef, position, render]);
 
-  useEffect(() => {
-    console.log("new render function");
-  }, [render]);
-
-  useEffect(() => {
-    console.log("new anchorRef");
-  }, [anchorRef]);
-
-  useEffect(() => {
-    console.log("new position");
-  }, [position]);
-
   return renderedElement;
 };

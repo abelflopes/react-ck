@@ -2,19 +2,12 @@ import React, { useCallback, useMemo, useState } from "react";
 import { Table, type TableProps } from "@react-ck/table";
 import * as CC from "change-case";
 import { stringFromObject } from "./utils/string-from-object";
-import { Icon } from "@react-ck/icon";
-import styles from "./styles/index.module.scss";
-import { componentToText } from "./utils/component-to-text";
+import { type SortCallback, type TableData, sortModes, type SortMode } from "./types";
+import { sortData } from "./utils/sort-data";
+import { TableHead } from "./TableHead";
 
 // TODO: add pagination
 // TODO: add section table
-
-const sortModes = ["asc", "desc", "none"] as const;
-
-/** Type representing the data structure for the DataTable component  */
-type TableData = Array<Record<string, React.ReactNode>>;
-
-export type SortCallback<T extends TableData> = (key: keyof T[number]) => void;
 
 /**
  * DataTableProps interface represents the props for the DataTable component.
@@ -47,7 +40,7 @@ export const DataTable = <T extends TableData>({
   onSort,
   ...otherProps
 }: Readonly<DataTableProps<T>>): React.ReactElement => {
-  const [sortMode, setSortMode] = useState<(typeof sortModes)[number]>("none");
+  const [sortMode, setSortMode] = useState<SortMode>("none");
   const [sortKey, setSortKey] = useState<keyof T[number] | undefined>(undefined);
 
   const keys = useMemo(
@@ -90,35 +83,21 @@ export const DataTable = <T extends TableData>({
 
   // Sort data if applicable
   const sortedData = useMemo(() => {
+    if (onSort && sortKey) onSort(sortKey);
+
     if (onSort || sortMode === "none" || !sortKey) return data;
 
-    const k = String(sortKey);
-
-    return [...data].sort((a, b) => {
-      /* eslint-disable @typescript-eslint/no-non-null-assertion -- files always exist */
-      let valueA = a[k]!;
-      let valueB = b[k]!;
-      /* eslint-enable */
-
-      if ([valueA, valueB].every((i) => !Number.isNaN(Number(i)))) {
-        // if both are numbers
-        valueA = Number(valueA);
-        valueB = Number(valueB);
-      } else if ([valueA, valueB].every(React.isValidElement)) {
-        // if both are react elements
-        valueA = (componentToText(valueA) ?? "").trim().toLowerCase();
-        valueB = (componentToText(valueB) ?? "").trim().toLowerCase();
-      } else {
-        // treat as regular strings
-        valueA = String(valueA).trim().toLowerCase();
-        valueB = String(valueB).trim().toLowerCase();
-      }
-
-      if (valueA > valueB) return sortMode === "desc" ? -1 : 1;
-      else if (valueA < valueB) return sortMode === "desc" ? 1 : -1;
-      return 0;
-    });
+    return sortData(data, sortKey, sortMode);
   }, [data, onSort, sortKey, sortMode]);
+
+  function getHeadSorting(key: string): SortMode | null {
+    const matchesKey = sortable === true || (Array.isArray(sortable) && sortable.includes(key));
+
+    if (matchesKey && key === sortKey) return sortMode;
+    else if (matchesKey && key !== sortKey) return "none";
+
+    return null;
+  }
 
   return (
     <Table {...otherProps}>
@@ -126,32 +105,15 @@ export const DataTable = <T extends TableData>({
         <thead>
           <tr>
             {keys.map((key) => (
-              <th
+              <TableHead
                 key={key}
-                className={
-                  sortable === true || (Array.isArray(sortable) && sortable.includes(key))
-                    ? styles.sortable_header
-                    : undefined
-                }
+                sorting={getHeadSorting(key)}
                 onClick={() => {
                   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- FIXME: remove type assertion
                   defaultOnSort(key as keyof T[number]);
                 }}>
                 {computedHeaders[key]}
-
-                {sortable === true ||
-                  (Array.isArray(sortable) && sortable.includes(key) && (
-                    <>
-                      {sortKey === key && sortMode === "asc" && (
-                        <Icon name="chevron-up" className={styles.sortable_header_icon} />
-                      )}
-
-                      {sortKey === key && sortMode === "desc" && (
-                        <Icon name="chevron-down" className={styles.sortable_header_icon} />
-                      )}
-                    </>
-                  ))}
-              </th>
+              </TableHead>
             ))}
           </tr>
         </thead>

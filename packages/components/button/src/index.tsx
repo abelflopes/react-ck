@@ -11,7 +11,7 @@ import {
 /**
  * Props for the Button component
  */
-export interface ButtonProps<T extends HTMLTag>
+export interface ButtonProps<T extends HTMLTag = "button">
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     ConsumerPolymorphicProps<T> {
   /** Defines the color scheme of the button */
