@@ -22,7 +22,12 @@ const mergeProps = <A extends BaseHTMLProps, B extends BaseHTMLProps>(
     ...propsA,
     ...propsB,
     className: classNames(classNameA, classNameB),
-    children: [childrenA, childrenB],
+    children: (
+      <>
+        {childrenA}
+        {childrenB}
+      </>
+    ),
   };
 
   return res;
@@ -30,7 +35,10 @@ const mergeProps = <A extends BaseHTMLProps, B extends BaseHTMLProps>(
 
 type HTMLTagProps<T extends HTMLTag> = NonNullable<Parameters<ReactHTML[T]>[0]>;
 
-type TagConfig<T extends HTMLTag> = T | [T, HTMLTagProps<T> | undefined];
+type TagConfig<T extends HTMLTag> =
+  | T
+  | [T, HTMLTagProps<T> | undefined]
+  | React.ReactElement<HTMLTagProps<T>>;
 
 export type HTMLTag = keyof ReactHTML;
 
@@ -38,7 +46,7 @@ export type BaseHTMLProps = React.HTMLAttributes<HTMLElement>;
 
 export interface ConsumerPolymorphicProps<A extends HTMLTag> {
   /** Specifies the custom element to be used  */
-  as?: TagConfig<A> | React.ReactElement;
+  as?: TagConfig<A>;
 }
 
 export interface PolymorphicComponentProps<D extends HTMLTag, A extends HTMLTag>
@@ -81,10 +89,13 @@ export const PolymorphicComponent = <D extends HTMLTag, A extends HTMLTag>({
     } else if (typeof fallback === "string") {
       // Is Simple Default Tag
       return React.createElement(fallback, computedCommonProps);
+    } else if (Array.isArray(fallback)) {
+      // Is Tag Override with props
+      return React.createElement(fallback[0], mergeProps(fallback[1] ?? {}, computedCommonProps));
     }
 
     // Is Default Tag With PRops
-    return React.createElement(fallback[0], mergeProps(fallback[1] ?? {}, computedCommonProps));
+    return React.cloneElement(fallback, mergeProps(fallback.props, computedCommonProps));
   }, [as, computedCommonProps, fallback]);
 
   return element;
