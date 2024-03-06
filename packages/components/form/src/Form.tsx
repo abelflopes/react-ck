@@ -67,6 +67,7 @@ export const Form = <T extends FormFieldMap>({
         const value = internalValues.values[fieldKey];
 
         const adapterProps = {
+          key: fieldKey,
           fieldKey,
           value,
           isTouched: Boolean(isTouched[fieldKey]),
