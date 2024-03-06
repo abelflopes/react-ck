@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Icon renders correctly 1`] = `
+exports[`snapshot Icon renders correctly 1`] = `
 <svg
   className="root size_text skin_default"
   fill="currentColor"

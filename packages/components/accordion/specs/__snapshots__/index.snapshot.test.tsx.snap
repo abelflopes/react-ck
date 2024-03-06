@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Accordion renders correctly 1`] = `
+exports[`snapshot accordion renders correctly 1`] = `
 <ul
   className="root bordered"
 >

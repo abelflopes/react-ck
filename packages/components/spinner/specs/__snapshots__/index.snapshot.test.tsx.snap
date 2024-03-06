@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Spinner renders correctly 1`] = `
+exports[`snapshot Spinner renders correctly 1`] = `
 <span
   className="root primary"
 >

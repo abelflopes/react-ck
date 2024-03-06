@@ -9,7 +9,7 @@ exports[`snapshot Modal renders correctly 1`] = `
     onClick={[Function]}
   />
   <div
-    className="root card"
+    className="root card bordered vertical spacing_m"
   >
     <div
       className="content"

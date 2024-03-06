@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot DataTable renders correctly 1`] = `
+exports[`snapshot DataTable renders correctly 1`] = `
 <div
   className="root"
   data-testid="table"
@@ -8,19 +8,6 @@ exports[`Snapshot DataTable renders correctly 1`] = `
   <table
     className="table"
   >
-    <thead>
-      <tr>
-        <th
-          onClick={[Function]}
-        />
-        <th
-          onClick={[Function]}
-        />
-        <th
-          onClick={[Function]}
-        />
-      </tr>
-    </thead>
     <tbody>
       <tr>
         <td>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Badge renders correctly 1`] = `
+exports[`snapshot Badge renders correctly 1`] = `
 <span
   className="root neutral"
 >

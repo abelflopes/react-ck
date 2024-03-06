@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Pagination renders correctly 1`] = `
+exports[`snapshot Pagination renders correctly 1`] = `
 <div
   className="root"
 >

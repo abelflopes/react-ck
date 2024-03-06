@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Button renders correctly 1`] = `
+exports[`snapshot Button renders correctly 1`] = `
 <button
   className="root primary size-m"
 >

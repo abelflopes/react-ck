@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot List renders correctly 1`] = `
+exports[`snapshot List renders correctly 1`] = `
 <ul
   className="root bordered"
 >

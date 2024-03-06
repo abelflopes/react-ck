@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Overlay renders correctly 1`] = `
+exports[`snapshot Overlay renders correctly 1`] = `
 <div
   className="root dark"
 />

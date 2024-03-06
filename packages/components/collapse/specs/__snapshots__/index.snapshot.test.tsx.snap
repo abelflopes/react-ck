@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Collapse renders correctly 1`] = `
+exports[`snapshot Collapse renders correctly 1`] = `
 <details>
   <summary
     className="header"

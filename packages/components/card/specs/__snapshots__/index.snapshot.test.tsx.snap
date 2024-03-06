@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Card renders correctly 1`] = `
+exports[`snapshot Card renders correctly 1`] = `
 <div
-  className="root"
+  className="root bordered vertical spacing_m"
 >
   <div
     className="content"

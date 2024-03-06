@@ -1,16 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Progress renders correctly 1`] = `
-<div
+exports[`snapshot Progress renders correctly 1`] = `
+<progress
   className="root"
->
-  <div
-    className="bar"
-    style={
-      {
-        "--value": "50%",
-      }
-    }
-  />
-</div>
+  max={100}
+  value={50}
+/>
 `;

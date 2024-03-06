@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Banner renders correctly 1`] = `
+exports[`snapshot Banner renders correctly 1`] = `
 <div
   className="root"
 >

@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot Alert renders correctly 1`] = `
+exports[`snapshot Alert renders correctly 1`] = `
 <div
   className="root neutral"
 >
-  Alert
+  <div>
+    Alert
+  </div>
 </div>
 `;

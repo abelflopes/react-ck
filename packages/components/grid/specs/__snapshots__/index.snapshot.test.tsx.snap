@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot GridColumn renders correctly 1`] = `
+exports[`snapshot GridColumn renders correctly 1`] = `
 <div
   className="root size_auto"
   style={
@@ -12,7 +12,7 @@ exports[`Snapshot GridColumn renders correctly 1`] = `
 />
 `;
 
-exports[`Snapshot GridContainer renders correctly 1`] = `
+exports[`snapshot GridContainer renders correctly 1`] = `
 <div
   className="root spacing_m wrap"
 />
