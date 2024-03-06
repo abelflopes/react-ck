@@ -46,7 +46,7 @@ export const AutoHeaders: Story = {
   args: {
     skin: "bordered",
     autoHeaders: true,
-    data: Object.keys(Array.from(Array.from({ length: 10 }))).map((i) => ({
+    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
       "some_column": faker.date.future().toLocaleDateString(),
       "otherColumn": faker.company.buzzNoun(),
       "last-column": <Chip>{faker.commerce.price()}</Chip>,
