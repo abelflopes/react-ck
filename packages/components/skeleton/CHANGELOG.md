@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.2...@react-ck/skeleton@1.1.3) (2024-03-06)
+
+
+### Bug Fixes
+
+* remove skeleton debug output ([acf6d6c](https://github.com/abelflopes/react-ck/commit/acf6d6c49b0430c8acd3289282acfefa71145a05))
+* skeleton delay not being applied ([57eb6b7](https://github.com/abelflopes/react-ck/commit/57eb6b785998d4bd26313084618fae385c94ea46))
+
+
+
 ## [1.1.2](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.1...@react-ck/skeleton@1.1.2) (2024-01-24)
 
 **Note:** Version bump only for package @react-ck/skeleton

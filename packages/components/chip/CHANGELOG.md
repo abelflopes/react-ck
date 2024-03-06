@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.5...@react-ck/chip@1.2.6) (2024-03-06)
+
+
+### Bug Fixes
+
+* chip white space prevent breaking ([4fdc49d](https://github.com/abelflopes/react-ck/commit/4fdc49da437c73e137c038df00e850236294574c))
+
+
+
 ## [1.2.5](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.4...@react-ck/chip@1.2.5) (2024-01-25)
 
 **Note:** Version bump only for package @react-ck/chip

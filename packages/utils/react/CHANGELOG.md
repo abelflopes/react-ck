@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.1.1...@react-ck/react-utils@1.2.0) (2024-03-06)
+
+
+### Features
+
+* add component polimorphy util ([e653799](https://github.com/abelflopes/react-ck/commit/e65379984d022ca716a3b040aae03aa65528fcaa))
+* add util to convert component into text ([4580f6c](https://github.com/abelflopes/react-ck/commit/4580f6c4630d179b2dda084cfaa04c518f551efc))
+
+
+### Bug Fixes
+
+* child list misssing key warning ([e05e301](https://github.com/abelflopes/react-ck/commit/e05e3019493b01bf492aa13de775adc7891faa35))
+
+
+
 ## [1.1.1](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.1.0...@react-ck/react-utils@1.1.1) (2024-01-24)
 
 **Note:** Version bump only for package @react-ck/react-utils

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.3.2...@react-ck/button@1.4.0) (2024-03-06)
+
+
+### Features
+
+* add button size "s" & "m" variations ([df0af2c](https://github.com/abelflopes/react-ck/commit/df0af2c0fabf9f445f9ec163fdaa0b3ef6ceab2b))
+* add button size large ([d508604](https://github.com/abelflopes/react-ck/commit/d508604bbb3b05930dcd01c8465f111fe875fdd4))
+* add negative button skin ([7d8369f](https://github.com/abelflopes/react-ck/commit/7d8369f42aaff6ecbb705c17d14fb6adb8736419))
+* add polimorphy to button component ([cac532a](https://github.com/abelflopes/react-ck/commit/cac532aaa2f45a2b3622e6f6838497b191afda19))
+
+
+### Bug Fixes
+
+* icon spacing in button ([0a0fd61](https://github.com/abelflopes/react-ck/commit/0a0fd61c4b69f49f95a24497c3989c7f714af9e6))
+
+
+
 ## [1.3.2](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.3.1...@react-ck/button@1.3.2) (2024-01-24)
 
 **Note:** Version bump only for package @react-ck/button

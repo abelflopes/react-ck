@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.3.0...@react-ck/text@1.4.0) (2024-03-06)
+
+
+### Features
+
+* add smallest text variation ([7de868a](https://github.com/abelflopes/react-ck/commit/7de868aa6d8fb6762e847c33b270a058639a1e38))
+
+
+### Bug Fixes
+
+* fix default text font weight ([049e7c1](https://github.com/abelflopes/react-ck/commit/049e7c1c7fe5dd7fc3e4e029c61f2062410b1baa))
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.2.7...@react-ck/text@1.3.0) (2024-01-24)
 
 

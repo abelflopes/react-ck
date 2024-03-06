@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/abelflopes/react-ck/compare/@react-ck/accordion@1.1.4...@react-ck/accordion@1.1.5) (2024-03-06)
+
+
+### Bug Fixes
+
+* add missing content margin on accordion ([8ee568c](https://github.com/abelflopes/react-ck/commit/8ee568c00c9ed9079f70f424cbe7b07f19371713))
+
+
+
 ## [1.1.4](https://github.com/abelflopes/react-ck/compare/@react-ck/accordion@1.1.3...@react-ck/accordion@1.1.4) (2024-01-24)
 
 **Note:** Version bump only for package @react-ck/accordion

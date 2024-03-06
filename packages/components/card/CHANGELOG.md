@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.2.5...@react-ck/card@1.3.0) (2024-03-06)
+
+
+### Features
+
+* add card skins and variations ([3025143](https://github.com/abelflopes/react-ck/commit/3025143613db7a85d3460bbceecb1cc10bf959bd))
+
+
+
 ## [1.2.5](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.2.4...@react-ck/card@1.2.5) (2024-01-24)
 
 

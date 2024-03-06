@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.3.1...@react-ck/table@1.3.2) (2024-03-06)
+
+
+### Bug Fixes
+
+* align headers to left ([3a97731](https://github.com/abelflopes/react-ck/commit/3a977313415b12abaa27d28d2ab60d9d9bf42d8a))
+* make table fullwidth ([4fa74ef](https://github.com/abelflopes/react-ck/commit/4fa74ef02cea93e884ce625e8ec2f96577f2f793))
+
+
+
 ## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.3.0...@react-ck/table@1.3.1) (2024-01-25)
 
 

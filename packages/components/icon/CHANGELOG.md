@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.4.2...@react-ck/icon@1.5.0) (2024-03-06)
+
+
+### Features
+
+* add chevron icons ([2150d4b](https://github.com/abelflopes/react-ck/commit/2150d4b844fae36d450298b0415825cc12f05f3b))
+* add icons ([1f8d902](https://github.com/abelflopes/react-ck/commit/1f8d9021421cb79dec195fa686b2f930e0e4c491))
+* add trash icon ([50d647d](https://github.com/abelflopes/react-ck/commit/50d647dc04cf323cbb3c40473e14f248bdd2d037))
+
+
+
 ## [1.4.2](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@1.4.1...@react-ck/icon@1.4.2) (2024-01-24)
 
 **Note:** Version bump only for package @react-ck/icon

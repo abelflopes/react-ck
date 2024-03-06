@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.5.1...@react-ck/theme@1.6.0) (2024-03-06)
+
+
+### Features
+
+* add neutral colors ([c832d15](https://github.com/abelflopes/react-ck/commit/c832d159e32badc09399ea077966d6edca9899c1))
+
+
+
 ## [1.5.1](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.5.0...@react-ck/theme@1.5.1) (2024-01-24)
 
 **Note:** Version bump only for package @react-ck/theme
