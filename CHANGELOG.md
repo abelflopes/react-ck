@@ -1,3 +1,60 @@
+## [1.9.0](https://github.com/abelflopes/react-ck/compare/v1.8.1...v1.9.0) (2024-03-06)
+
+
+### Features
+
+* add alert dismiss capability ([8414b6a](https://github.com/abelflopes/react-ck/commit/8414b6a9eecd30ae04dd43f19cf28b2d61768bb1))
+* add automatic date sort ([1fb0097](https://github.com/abelflopes/react-ck/commit/1fb009765e3557f2146803371ee77e9306b8ba84))
+* add button size "s" & "m" variations ([df0af2c](https://github.com/abelflopes/react-ck/commit/df0af2c0fabf9f445f9ec163fdaa0b3ef6ceab2b))
+* add button size large ([d508604](https://github.com/abelflopes/react-ck/commit/d508604bbb3b05930dcd01c8465f111fe875fdd4))
+* add card skins and variations ([3025143](https://github.com/abelflopes/react-ck/commit/3025143613db7a85d3460bbceecb1cc10bf959bd))
+* add chevron icons ([2150d4b](https://github.com/abelflopes/react-ck/commit/2150d4b844fae36d450298b0415825cc12f05f3b))
+* add component polimorphy util ([e653799](https://github.com/abelflopes/react-ck/commit/e65379984d022ca716a3b040aae03aa65528fcaa))
+* add icons ([1f8d902](https://github.com/abelflopes/react-ck/commit/1f8d9021421cb79dec195fa686b2f930e0e4c491))
+* add negative button skin ([7d8369f](https://github.com/abelflopes/react-ck/commit/7d8369f42aaff6ecbb705c17d14fb6adb8736419))
+* add negative button skin ([cc3dbd0](https://github.com/abelflopes/react-ck/commit/cc3dbd0cb63f19b0e3f968008a2a960e85d0951a))
+* add neutral colors ([c832d15](https://github.com/abelflopes/react-ck/commit/c832d159e32badc09399ea077966d6edca9899c1))
+* add pagination component ([ae6e08d](https://github.com/abelflopes/react-ck/commit/ae6e08d5ce034c15a8c44c4314a009f3ed3e6f72))
+* add polimorphy to button component ([cac532a](https://github.com/abelflopes/react-ck/commit/cac532aaa2f45a2b3622e6f6838497b191afda19))
+* add position engine ([3b0e155](https://github.com/abelflopes/react-ck/commit/3b0e1559228dadba86f50da0ae40888f8b4930cc))
+* add position engine ([1090d44](https://github.com/abelflopes/react-ck/commit/1090d44ef5c01d98013dead26ab83b05ff023449))
+* add provisional components - avatar, breadcrumbs, dock, image ([7559e5f](https://github.com/abelflopes/react-ck/commit/7559e5fc5961c42b2dcfe12efee0aedd9a662f83))
+* add scrollable container ([4fbce8f](https://github.com/abelflopes/react-ck/commit/4fbce8fe742ebf7498e05b2e141e256206ed8f90))
+* add smallest text variation ([7de868a](https://github.com/abelflopes/react-ck/commit/7de868aa6d8fb6762e847c33b270a058639a1e38))
+* add top bar ([807c09f](https://github.com/abelflopes/react-ck/commit/807c09f18f102d1cfaa8faaa652fbb7264d8166a))
+* add trash icon ([50d647d](https://github.com/abelflopes/react-ck/commit/50d647dc04cf323cbb3c40473e14f248bdd2d037))
+* add util to convert component into text ([4580f6c](https://github.com/abelflopes/react-ck/commit/4580f6c4630d179b2dda084cfaa04c518f551efc))
+* implement dropdown component ([731e977](https://github.com/abelflopes/react-ck/commit/731e97794564ef180f992cdefed958ae95c5e146))
+* improve external handling of sorting ([927ed8f](https://github.com/abelflopes/react-ck/commit/927ed8f837c23dd65a3a45b6819043ec30a23263))
+* make breadcrumb polymorphic ([c2c7fe5](https://github.com/abelflopes/react-ck/commit/c2c7fe56351372e13c3e2413df66be4667524339))
+* make data-table sortable ([92e1e11](https://github.com/abelflopes/react-ck/commit/92e1e1116e9c017563b69073ed3452161f29b894))
+* use semantic HTML element for progress component ([4ae7abc](https://github.com/abelflopes/react-ck/commit/4ae7abcb202e6a3fd21a359c7a2fc326f4224cfd))
+
+
+### Bug Fixes
+
+* add missing content margin on accordion ([8ee568c](https://github.com/abelflopes/react-ck/commit/8ee568c00c9ed9079f70f424cbe7b07f19371713))
+* align headers to left ([3a97731](https://github.com/abelflopes/react-ck/commit/3a977313415b12abaa27d28d2ab60d9d9bf42d8a))
+* breadcrumb gap spacing ([d095978](https://github.com/abelflopes/react-ck/commit/d09597853f3fb07c5f4a51f933f63cfbb6a37f5d))
+* child list misssing key warning ([e05e301](https://github.com/abelflopes/react-ck/commit/e05e3019493b01bf492aa13de775adc7891faa35))
+* chip white space prevent breaking ([4fdc49d](https://github.com/abelflopes/react-ck/commit/4fdc49da437c73e137c038df00e850236294574c))
+* fix default text font weight ([049e7c1](https://github.com/abelflopes/react-ck/commit/049e7c1c7fe5dd7fc3e4e029c61f2062410b1baa))
+* icon spacing in button ([0a0fd61](https://github.com/abelflopes/react-ck/commit/0a0fd61c4b69f49f95a24497c3989c7f714af9e6))
+* make table fullwidth ([4fa74ef](https://github.com/abelflopes/react-ck/commit/4fa74ef02cea93e884ce625e8ec2f96577f2f793))
+* missing key warning ([49928da](https://github.com/abelflopes/react-ck/commit/49928da9a7b958e4ef090f46f11cb2bed05a47f4))
+* remove skeleton debug output ([acf6d6c](https://github.com/abelflopes/react-ck/commit/acf6d6c49b0430c8acd3289282acfefa71145a05))
+* remove usage of reserved "key" prop ([0f1c020](https://github.com/abelflopes/react-ck/commit/0f1c02041730bd35e612200dcc75ae590efb1a4d))
+* runtime errors ([ffaaa96](https://github.com/abelflopes/react-ck/commit/ffaaa96bbef2dbd5af182fbfe58af44d0fcad379))
+* skeleton delay not being applied ([57eb6b7](https://github.com/abelflopes/react-ck/commit/57eb6b785998d4bd26313084618fae385c94ea46))
+* storybook build ([8e5032d](https://github.com/abelflopes/react-ck/commit/8e5032d5f82b61679457b4866c718d7de8d5072c))
+
+
+### Code Refactoring
+
+* split theme light and dark colors ([804261e](https://github.com/abelflopes/react-ck/commit/804261ef342e118677be612fa1f8286c9e5ba96e))
+* use polimorphy from utils package ([fd56534](https://github.com/abelflopes/react-ck/commit/fd56534ea4fdbe41b0a9c515e9bbbe3927144757))
+* use scrollable container in dock ([f81ef80](https://github.com/abelflopes/react-ck/commit/f81ef80bdfd06a8ac9015be5da48e2608a740dd4))
+
 ## [1.8.1](https://github.com/abelflopes/react-ck/compare/v1.8.0...v1.8.1) (2024-01-25)
 
 
