@@ -64,8 +64,8 @@ export const DataTable = <T extends TableData>({
   );
 
   // Handle sorting
-  const defaultOnSort = useCallback<SortCallback<T>>(
-    (key) => {
+  const defaultOnSort = useCallback(
+    (key: keyof T[number]) => {
       if (!sortable || (Array.isArray(sortable) && !sortable.includes(key))) return;
 
       if (key === sortKey) {
@@ -83,11 +83,13 @@ export const DataTable = <T extends TableData>({
 
   // Sort data if applicable
   const sortedData = useMemo(() => {
-    if (onSort && sortKey) onSort(sortKey);
+    if (!sortKey || sortMode === "none") return data;
 
-    if (onSort || sortMode === "none" || !sortKey) return data;
+    let sortedData = sortData(data, sortKey, sortMode);
 
-    return sortData(data, sortKey, sortMode);
+    if (onSort) sortedData = onSort(data, sortKey, sortMode);
+
+    return sortedData;
   }, [data, onSort, sortKey, sortMode]);
 
   function getHeadSorting(key: string): SortMode | null {
