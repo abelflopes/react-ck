@@ -7,7 +7,7 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/provisional#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/_provisional#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/react-ck.git"
