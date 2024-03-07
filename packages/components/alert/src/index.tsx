@@ -15,7 +15,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Defines if the alert is open */
   open?: boolean;
   /** Close handler */
-  onClose?: () => void;
+  onDismiss?: () => void;
 }
 
 /**
@@ -29,7 +29,7 @@ export const Alert = ({
   skin = "neutral",
   dismissable,
   open = true,
-  onClose,
+  onDismiss,
   children,
   className,
   ...otherProps
@@ -41,10 +41,10 @@ export const Alert = ({
   }, [open]);
 
   useEffect(() => {
-    if (computedOpen === open || !onClose) return;
+    if (computedOpen === open || !onDismiss) return;
 
-    if (!computedOpen) onClose();
-  }, [computedOpen, onClose, open]);
+    if (!computedOpen) onDismiss();
+  }, [computedOpen, onDismiss, open]);
 
   return computedOpen ? (
     <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
