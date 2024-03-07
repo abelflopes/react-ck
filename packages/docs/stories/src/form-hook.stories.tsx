@@ -4,7 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { useForm } from "@react-ck/form/src";
 import * as LoginForm from "@react-ck/form/fixtures/login";
-import { GridColumn, GridContainer } from "@react-ck/grid";
+import { Grid } from "@react-ck/grid";
 import { Card } from "@react-ck/card";
 import { Container } from "@react-ck/container";
 import { Text } from "@react-ck/text";
@@ -56,17 +56,17 @@ export const Component: Story = {
           {form}
         </Container>
 
-        <GridContainer>
+        <Grid>
           {Object.entries({ initialValues, validity, values }).map(([title, obj]) => (
-            <GridColumn key={title}>
+            <Grid.Column key={title}>
               <Card>
                 <Text type="h3">{capitalCase(title)}</Text>
 
                 <code style={{ whiteSpace: "pre" }}>{JSON.stringify(obj, undefined, 2)}</code>
               </Card>
-            </GridColumn>
+            </Grid.Column>
           ))}
-        </GridContainer>
+        </Grid>
       </>
     );
   },

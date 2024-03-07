@@ -3,15 +3,15 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config/src/index";
-import { GridContainer, GridColumn } from "@react-ck/grid/src";
+import { Grid } from "@react-ck/grid";
 import { Card } from "@react-ck/card";
 
-type Story = StoryObj<typeof GridContainer>;
+type Story = StoryObj<typeof Grid>;
 
-const meta: Meta<typeof GridContainer> = {
+const meta: Meta<typeof Grid> = {
   title: "Layout/Grid",
   ...configureStory(
-    GridContainer,
+    Grid,
     {
       decorators: [
         (Story): React.ReactElement => (
@@ -22,7 +22,7 @@ const meta: Meta<typeof GridContainer> = {
       ],
     },
     {
-      subComponents: [GridColumn],
+      subComponents: [Grid.Column],
     },
   ),
 };
@@ -33,45 +33,45 @@ export const Component: Story = {
   args: {
     children: (
       <>
-        <GridColumn size={2}>
+        <Grid.Column size={2}>
           <Card>{faker.lorem.sentence(2)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={2}>
+        <Grid.Column size={2}>
           <Card>{faker.lorem.sentence(2)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={3}>
+        <Grid.Column size={3}>
           <Card>{faker.lorem.sentence(5)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={5}>
+        <Grid.Column size={5}>
           <Card>{faker.lorem.sentence(10)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={6}>
+        <Grid.Column size={6}>
           <Card>{faker.lorem.sentence(10)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={4}>
+        <Grid.Column size={4}>
           <Card>{faker.lorem.sentence(6)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={2}>
+        <Grid.Column size={2}>
           <Card>{faker.lorem.sentence(2)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={2}>
+        <Grid.Column size={2}>
           <Card>{faker.lorem.sentence(1)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size="auto">
+        <Grid.Column size="auto">
           <Card>{faker.lorem.sentence(2)}</Card>
-        </GridColumn>
+        </Grid.Column>
 
-        <GridColumn size={2}>
+        <Grid.Column size={2}>
           <Card>{faker.lorem.sentence(1)}</Card>
-        </GridColumn>
+        </Grid.Column>
       </>
     ),
   },

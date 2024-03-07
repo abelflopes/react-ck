@@ -2,6 +2,7 @@ import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import React, { useMemo, useState } from "react";
 import { CardContext, type CardContextValue } from "./context";
+import { CardImage } from "./CardImage";
 
 /**
  * Props for the Card component
@@ -22,7 +23,7 @@ interface CardProps extends Readonly<React.HTMLAttributes<HTMLDivElement>> {
  * @returns a React element
  */
 
-export const Card = ({
+const Card = ({
   skin = "bordered",
   variation = "vertical",
   spacing = "m",
@@ -61,3 +62,7 @@ export const Card = ({
     </CardContext.Provider>
   );
 };
+
+Card.Image = CardImage;
+
+export { Card, type CardProps };

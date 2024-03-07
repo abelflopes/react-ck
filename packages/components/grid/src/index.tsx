@@ -2,8 +2,9 @@ import React, { useCallback, useMemo, useState } from "react";
 import styles from "./styles/container.module.scss";
 import classNames from "classnames";
 import { GridContext, type GridContextProps } from "./context";
+import { GridColumn } from "./Column";
 
-export interface GridContainerProps extends React.HTMLAttributes<HTMLHRElement> {
+interface GridProps extends React.HTMLAttributes<HTMLHRElement> {
   /** The spacing between columns in the grid  */
   spacing?: "s" | "m" | "l" | "none";
   /** Whether to allow grid items to wrap to the next line  */
@@ -16,12 +17,12 @@ export interface GridContainerProps extends React.HTMLAttributes<HTMLHRElement> 
  * @returns a React element
  */
 
-export const GridContainer = ({
+const Grid = ({
   spacing = "m",
   wrap = true,
   className,
   ...otherProps
-}: Readonly<GridContainerProps>): React.ReactElement => {
+}: Readonly<GridProps>): React.ReactElement => {
   const [columnsCount, setColumnsCount] = useState(0);
 
   const registerColumn = useCallback<GridContextProps["registerColumn"]>(() => {
@@ -56,3 +57,7 @@ export const GridContainer = ({
     </GridContext.Provider>
   );
 };
+
+Grid.Column = GridColumn;
+
+export { Grid, type GridProps };
