@@ -72,6 +72,18 @@ export const Component: Story = {
         <Grid.Column size={2}>
           <Card>{faker.lorem.sentence(1)}</Card>
         </Grid.Column>
+
+        <Grid.Column>
+          <Card>{faker.lorem.sentence(1)}</Card>
+        </Grid.Column>
+
+        <Grid.Column>
+          <Card>{faker.lorem.sentence(3)}</Card>
+        </Grid.Column>
+
+        <Grid.Column>
+          <Card>{faker.lorem.sentence(7)}</Card>
+        </Grid.Column>
       </>
     ),
   },
