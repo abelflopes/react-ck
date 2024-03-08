@@ -18,12 +18,12 @@
 
 .vertical {
   @include define-css-var(container, spacing-y, 30px);
-}
 
-.small {
-  @include define-css-var(container, spacing-y, 16px);
-}
+  &.small {
+    @include define-css-var(container, spacing-y, 16px);
+  }
 
-.big {
-  @include define-css-var(container, spacing-y, 60px);
+  &.big {
+    @include define-css-var(container, spacing-y, 60px);
+  }
 }
