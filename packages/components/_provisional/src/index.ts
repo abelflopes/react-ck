@@ -13,3 +13,5 @@ export * from "./scrollable-container";
 export * from "./position-engine";
 
 export * from "./top-bar";
+
+export * from "./snackbar";

@@ -1,0 +1,18 @@
+@import "@react-ck/theme";
+
+.root {
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  max-height: 100%;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+  display: flex;
+  gap: get-spacing(1);
+  padding: get-spacing(2) get-spacing(1);
+  overflow: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.1));
+}
