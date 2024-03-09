@@ -3,7 +3,7 @@ import { create } from "@storybook/theming";
 
 const theme = create({
   base: "light",
-  brandTitle: "RCK",
+  brandTitle: "React CK",
   brandUrl: "/",
   brandImage: "./logo.svg",
   colorPrimary: "#783192",

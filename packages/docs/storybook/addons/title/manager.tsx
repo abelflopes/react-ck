@@ -6,6 +6,6 @@ addons.register("page-title", (api) => {
     const { title } = api.getCurrentStoryData();
     const [name] = [...title.split("/")].reverse();
 
-    document.title = `RCK | ${name}`;
+    document.title = `React CK | ${name}`;
   });
 });

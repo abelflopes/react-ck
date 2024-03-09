@@ -44,7 +44,7 @@ export const configureStory = <T,>(
         ((): React.ReactElement => (
           <>
             <Title>
-              RCK | React {isComponent(component) ? capitalCase(component.displayName) : ""}{" "}
+              React CK | {isComponent(component) ? capitalCase(component.displayName) : ""}{" "}
               {extra?.type ?? "Component"}{" "}
             </Title>
 
