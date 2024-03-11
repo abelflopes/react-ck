@@ -17,7 +17,7 @@ export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPol
   /** Adds margin to the text element  */
   margin?: boolean;
   /** Specifies the type/visual variation of text element to be rendered  */
-  type?: "huge" | "soft" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
+  type?: "banner" | "soft" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
   /* Specifies the visual style variation(s) for the text */
   variation?: TextVariation | TextVariation[];
 }
@@ -67,7 +67,7 @@ export const Text = <T extends HTMLTag>({
 
     switch (type) {
       case "soft":
-      case "huge": {
+      case "banner": {
         value = "h1";
         break;
       }
