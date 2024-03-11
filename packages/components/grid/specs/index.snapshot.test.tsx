@@ -1,17 +1,17 @@
 import React from "react";
-import { GridContainer, GridColumn } from "../src/index";
+import { Grid } from "../src/index";
 import renderer from "react-test-renderer";
 
 describe("snapshot GridContainer", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<GridContainer />).toJSON();
+    const tree = renderer.create(<Grid />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
 
 describe("snapshot GridColumn", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<GridColumn />).toJSON();
+    const tree = renderer.create(<Grid.Column />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
