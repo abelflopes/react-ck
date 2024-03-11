@@ -39,6 +39,7 @@
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^18.0.0",
     "eslint": "^8.53.0",
+    "eslint-plugin-compat": "^4.2.0",
     "husky": "^8.0.3",
     "lerna": "^7.4.2",
     "prettier": "^3.2.5",
