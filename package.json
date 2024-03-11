@@ -22,6 +22,7 @@
     "test:snapshot": "lerna run test:snapshot --parallel --stream",
     "test:snapshot:update": "lerna run test:snapshot:update --parallel",
     "lint": "npx npm-run-all --sequential lint:*",
+    "lint:style": "stylelint '**/*.scss'",
     "lint:code": "lerna run lint:code --parallel --stream",
     "lint:code:fix": "lerna run lint:code --parallel --stream -- --fix",
     "lint:typescript": "lerna run lint:typescript",
@@ -40,9 +41,16 @@
     "eslint": "^8.53.0",
     "husky": "^8.0.3",
     "lerna": "^7.4.2",
-    "prettier": "^3.0.3",
+    "prettier": "^3.2.5",
     "semantic-release": "^22.0.5",
-    "semantic-release-config-conventional": "^1.0.1"
+    "semantic-release-config-conventional": "^1.0.1",
+    "stylelint": "^16.2.1",
+    "stylelint-config-css-modules": "^4.4.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-no-unsupported-browser-features": "^8.0.1",
+    "stylelint-prettier": "^5.0.0"
   },
   "workspaces": [
     "packages/*/*"
