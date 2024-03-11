@@ -36,7 +36,8 @@ export const FormField = ({
     {label ? (
       <Text
         className={styles.label}
-        variation={["bold", "small"]}
+        skin="bold"
+        variation="small"
         margin={false}
         as={<label htmlFor="aaa">{label}</label>}
       />

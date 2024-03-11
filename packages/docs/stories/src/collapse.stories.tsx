@@ -28,7 +28,7 @@ export const Component: Story = {
     layout: "padded",
   },
   args: {
-    header: <Text type="h2">{faker.lorem.sentence()}</Text>,
+    header: <Text variation="h2">{faker.lorem.sentence()}</Text>,
     children: <Text>{faker.lorem.sentence()}</Text>,
   },
 };

@@ -50,7 +50,7 @@ export const Alert = ({
     <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
       <div>
         {heading ? (
-          <Text type="h4" as="p" variation="bold" margin={false} className={styles.heading}>
+          <Text variation="h4" as="p" skin="bold" margin={false} className={styles.heading}>
             {heading}
           </Text>
         ) : null}

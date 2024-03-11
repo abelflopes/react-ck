@@ -3,7 +3,7 @@
 
 .root {
   @include text-base;
-  @include text-type(h3);
+  @include text-variation(h3);
 
   display: flex;
   justify-content: center;

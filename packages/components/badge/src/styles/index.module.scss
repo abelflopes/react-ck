@@ -6,7 +6,7 @@
   $size: get-spacing(2);
 
   @include text-base;
-  @include text-type(extra-small);
+  @include text-variation(smallest);
 
   background-color: get-css-var(badge, background-color);
   display: inline-block;

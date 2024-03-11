@@ -34,7 +34,7 @@ export const Component: Story = {
     src: faker.image.urlPicsumPhotos(),
     children: (
       <>
-        <Text type="banner">{faker.lorem.sentence()}</Text>
+        <Text variation="banner">{faker.lorem.sentence()}</Text>
 
         <Text>{faker.lorem.sentence()}</Text>
 

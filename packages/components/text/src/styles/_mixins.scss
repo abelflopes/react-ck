@@ -17,16 +17,17 @@
   }
 }
 
+@mixin text-skin($key) {
+  @include text-variant($key, $text-skins);
+}
+
 @mixin text-variation($key) {
   @include text-variant($key, $text-variations);
 }
 
-@mixin text-type($key) {
-  @include text-variant($key, $text-types);
-}
-
 @mixin text-base {
-  @include text-type(p);
+  @include text-skin(base);
+  @include text-variation(p);
   @include define-css-var(text, color, get-color(neutral-dark-5));
   @include define-css-var(text, text-decoration, none);
 

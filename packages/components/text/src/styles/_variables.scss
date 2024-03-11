@@ -3,28 +3,57 @@
 
 // TODO: add values to theme
 
-$text-types: (
-  p: (
+$text-skins: (
+  base: (
     default: (
       font-family: get-css-var(font, family),
-      font-size: get-css-var(font, base-size),
-      line-height: 24px,
-      font-weight: 400,
       color: get-color(neutral-dark-5),
-    ),
-    hover: (),
-  ),
-  banner: (
-    default: (
-      font-size: 60px,
-      font-weight: 700,
-      line-height: 60px,
     ),
     hover: (),
   ),
   soft: (
     default: (
       color: get-color(neutral-dark-1),
+    ),
+    hover: (),
+  ),
+  bold: (
+    default: (
+      font-weight: 700,
+    ),
+    hover: (),
+  ),
+  link: (
+    default: (
+      color: get-color(highlight-alt),
+    ),
+    hover: (
+      color: get-color(highlight-alt-dark),
+    ),
+  ),
+  link_hidden: (
+    default: (
+      text-decoration: none,
+    ),
+    hover: (
+      color: get-color(highlight-alt-dark),
+      text-decoration: underline,
+    ),
+  ),
+  inverted: (
+    default: (
+      color: get-color(neutral-light-1),
+    ),
+    hover: (),
+  ),
+);
+
+$text-variations: (
+  banner: (
+    default: (
+      font-size: 60px,
+      font-weight: 700,
+      line-height: 60px,
     ),
     hover: (),
   ),
@@ -65,22 +94,11 @@ $text-types: (
     default: (),
     hover: (),
   ),
-  extra-small: (
+  p: (
     default: (
-      font-size: 9px,
+      font-size: get-css-var(font, base-size),
+      line-height: 24px,
       font-weight: 400,
-      line-height: 12px,
-    ),
-    hover: (),
-  ),
-);
-
-$text-variations: (
-  smallest: (
-    default: (
-      font-size: 12px,
-      font-weight: 400,
-      line-height: 16px,
     ),
     hover: (),
   ),
@@ -92,32 +110,19 @@ $text-variations: (
     ),
     hover: (),
   ),
-  bold: (
+  extra-small: (
     default: (
-      font-weight: 700,
+      font-size: 12px,
+      font-weight: 400,
+      line-height: 16px,
     ),
     hover: (),
   ),
-  link: (
+  smallest: (
     default: (
-      color: get-color(highlight-alt),
-    ),
-    hover: (
-      color: get-color(highlight-alt-dark),
-    ),
-  ),
-  link_hidden: (
-    default: (
-      text-decoration: none,
-    ),
-    hover: (
-      color: get-color(highlight-alt-dark),
-      text-decoration: underline,
-    ),
-  ),
-  inverted: (
-    default: (
-      color: get-color(neutral-light-1),
+      font-size: 9px,
+      font-weight: 400,
+      line-height: 12px,
     ),
     hover: (),
   ),

@@ -22,7 +22,7 @@
   }
 }
 
-// Types
+// Variation
 
 .h1,
 .h2,
@@ -30,20 +30,20 @@
 .h4,
 .h5,
 .h6 {
-  // Force block display in case of component    with inline element
+  // Force block display in case of component with inline element
   display: block;
 }
 
-@each $type in map-keys($text-types) {
-  .#{$type} {
-    @include text-type($type);
+@each $variation in map-keys($text-variations) {
+  .variation_#{$variation} {
+    @include text-variation($variation);
   }
 }
 
-// Variations
+// Skins
 
-@each $variation in map-keys($text-variations) {
-  .#{$variation} {
-    @include text-variation($variation);
+@each $skin in map-keys($text-skins) {
+  .skin_#{$skin} {
+    @include text-skin($skin);
   }
 }

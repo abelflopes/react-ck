@@ -4,7 +4,7 @@
 
 .root {
   @include text-base;
-  @include text-type(soft);
+  @include text-skin(soft);
 
   position: relative;
   display: flex;

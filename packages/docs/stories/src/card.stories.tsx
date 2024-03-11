@@ -35,7 +35,7 @@ export const Component: Story = {
       <>
         <Card.Image src={faker.image.urlPicsumPhotos({ width: 320, height: 100 })} />
 
-        <Text type="h2">{faker.lorem.sentence(4)}</Text>
+        <Text variation="h2">{faker.lorem.sentence(4)}</Text>
 
         <Text>{faker.lorem.sentence(6)}</Text>
       </>

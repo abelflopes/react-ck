@@ -11,15 +11,22 @@ import {
   type BaseHTMLProps,
 } from "@react-ck/react-utils";
 
-export type TextVariation = "smallest" | "small" | "bold" | "link" | "link_hidden" | "inverted";
+export type TextSkin = "default" | "bold" | "link" | "link_hidden" | "inverted" | "soft";
+
+export type TextVariation =
+  | "banner"
+  | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">
+  | "small"
+  | "extra-small"
+  | "smallest";
 
 export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPolymorphicProps<T> {
   /** Adds margin to the text element  */
   margin?: boolean;
-  /** Specifies the type/visual variation of text element to be rendered  */
-  type?: "banner" | "soft" | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">;
-  /* Specifies the visual style variation(s) for the text */
-  variation?: TextVariation | TextVariation[];
+  /** Specifies the type/visual skin of text element to be rendered  */
+  variation?: TextVariation;
+  /* Specifies the visual style variations for the text */
+  skin?: TextSkin | TextSkin[];
 }
 
 /**
@@ -32,52 +39,51 @@ export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPol
 export const Text = <T extends HTMLTag>({
   as,
   margin = true,
-  type = "p",
-  variation,
+  variation = "p",
+  skin = "default",
   className,
   children,
   ...otherProps
 }: Readonly<TextProps<T>>): React.ReactElement => {
   const theme = useThemeContext();
 
-  const computedVariations = useMemo(
-    () => (Array.isArray(variation) ? variation : variation && [variation]),
-    [variation],
-  );
+  const computedSkins = useMemo(() => (Array.isArray(skin) ? skin : skin && [skin]), [skin]);
 
   const computedClassNames = useMemo(
     () =>
       classNames(
         styles.root,
-        styles[type],
+        styles[`variation_${variation}`],
         {
           [`${styles.margin}`]: margin,
         },
-        computedVariations?.filter((index) => index !== "inverted").map((index) => styles[index]),
+        computedSkins.filter((skin) => skin !== "inverted").map((skin) => styles[`skin_${skin}`]),
         {
-          [`${styles.inverted}`]: computedVariations?.includes("inverted") ?? theme.inverted,
+          [`${styles.skin_inverted}`]: computedSkins.includes("inverted") || theme.inverted,
         },
         className,
       ),
-    [className, computedVariations, theme, margin, type],
+    [variation, margin, computedSkins, theme.inverted, className],
   );
 
   const defaultTag = useMemo<keyof ReactHTML>(() => {
     let value: keyof ReactHTML | undefined = undefined;
 
-    switch (type) {
-      case "soft":
-      case "banner": {
+    switch (variation) {
+      case "banner":
         value = "h1";
         break;
-      }
-      default: {
-        value = type;
-      }
+      case "small":
+      case "extra-small":
+      case "smallest":
+        value = "p";
+        break;
+      default:
+        value = variation;
     }
 
     return value;
-  }, [type]);
+  }, [variation]);
 
   return (
     <PolymorphicComponent

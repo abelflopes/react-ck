@@ -60,7 +60,7 @@ export const Component: Story = {
           {Object.entries({ initialValues, validity, values }).map(([title, obj]) => (
             <Grid.Column key={title}>
               <Card>
-                <Text type="h3">{capitalCase(title)}</Text>
+                <Text variation="h3">{capitalCase(title)}</Text>
 
                 <code style={{ whiteSpace: "pre" }}>{JSON.stringify(obj, undefined, 2)}</code>
               </Card>

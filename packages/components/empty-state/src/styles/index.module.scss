@@ -3,8 +3,8 @@
 
 .root {
   @include text-base;
-  @include text-type(soft);
-  @include text-variation(bold);
+  @include text-skin(soft);
+  @include text-skin(bold);
 
   width: 100%;
   height: 100%;
