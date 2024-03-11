@@ -29,7 +29,8 @@
     "clean": "lerna exec -- rm -rf dist specs/coverage",
     "clean:cache": "lerna exec -- rm -rf .eslintcache",
     "clean:deps": "lerna exec -- rm -rf node_modules && rm -rf node_modules",
-    "todo": "npx leasot '**/**' '.**/**' -i '**/node_modules/**' -S -x"
+    "audit": "sh ./scripts/audit.sh && lerna exec --stream --concurrency 1 -- sh ../../../scripts/audit.sh",
+    "todo": "npx leasot '{.,*}**' -i '**/node_modules/**' -S -x"
   },
   "devDependencies": {
     "@abelflopes/eslint-config-tsr-pro": "^2.0.0",
