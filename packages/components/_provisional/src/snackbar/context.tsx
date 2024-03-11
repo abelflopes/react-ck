@@ -1,5 +1,5 @@
 import React from "react";
-import { ElementCreator, Item } from "./types";
+import { type ElementCreator, type Item } from "./types";
 
 export interface SnackbarContextProps {
   add: (elementCreator: ElementCreator) => Item["id"];

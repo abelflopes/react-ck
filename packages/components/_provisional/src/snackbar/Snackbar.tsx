@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useState } from "react";
 import { SnackbarContext, type SnackbarContextProps } from "./context";
 import { generateId } from "./utils";
 import { Layer } from "@react-ck/layers";
-import { ElementCreator, type Item } from "./types";
+import { type ElementCreator, type Item } from "./types";
 import { SnackbarItem } from "./SnackbarItem";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
