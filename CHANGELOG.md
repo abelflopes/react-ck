@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/abelflopes/react-ck/compare/v1.10.0...v1.10.1) (2024-03-12)
+
+
+### Bug Fixes
+
+* text default paragraph margin ([9619375](https://github.com/abelflopes/react-ck/commit/96193758a3ca2057fdcf441a6ef22b45c537220d))
+
 ## [1.10.0](https://github.com/abelflopes/react-ck/compare/v1.9.0...v1.10.0) (2024-03-12)
 
 
