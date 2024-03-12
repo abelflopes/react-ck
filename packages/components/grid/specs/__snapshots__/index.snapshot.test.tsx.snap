@@ -2,11 +2,12 @@
 
 exports[`snapshot GridColumn renders correctly 1`] = `
 <div
-  className="root size_auto"
+  className="root"
   style={
     {
       "--columns": 0,
-      "--size": "auto",
+      "--index": undefined,
+      "--size": undefined,
     }
   }
 />

@@ -8,7 +8,7 @@ exports[`snapshot Form renders correctly 1`] = `
     className="root default"
   >
     <label
-      className="root p bold small label"
+      className="root variation_small skin_bold margin_none label"
       htmlFor="aaa"
     >
       Email Address
@@ -24,7 +24,7 @@ exports[`snapshot Form renders correctly 1`] = `
       />
     </div>
     <p
-      className="root p small description"
+      className="root variation_small skin_default margin_none description"
     >
       Your work email address
     </p>
@@ -33,7 +33,7 @@ exports[`snapshot Form renders correctly 1`] = `
     className="root default"
   >
     <label
-      className="root p bold small label"
+      className="root variation_small skin_bold margin_none label"
       htmlFor="aaa"
     >
       Password
@@ -50,7 +50,7 @@ exports[`snapshot Form renders correctly 1`] = `
       />
     </div>
     <p
-      className="root p small description"
+      className="root variation_small skin_default margin_none description"
     >
       Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters
     </p>
@@ -59,7 +59,7 @@ exports[`snapshot Form renders correctly 1`] = `
     className="root default"
   >
     <label
-      className="root p bold small label"
+      className="root variation_small skin_bold margin_none label"
       htmlFor="aaa"
     >
       Repeat Password

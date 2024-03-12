@@ -2,7 +2,7 @@
 
 exports[`snapshot Text renders correctly 1`] = `
 <p
-  className="root p margin"
+  className="root variation_p skin_default"
 >
   Text
 </p>
