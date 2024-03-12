@@ -47,7 +47,14 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
         {
           test: /\.s[ac]ss$/iu,
           use: [
-            "style-loader",
+            {
+              loader: "style-loader",
+              options: {
+                attributes: {
+                  "data-module": options?.cssHashSalt,
+                },
+              },
+            },
             {
               loader: "css-loader",
               options: {

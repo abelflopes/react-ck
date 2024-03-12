@@ -1,6 +1,7 @@
 import { Meta, Typeset } from "@storybook/blocks";
 import { defaultTheme } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
+import { TextDemo } from "./util/Text";
 
 <Meta title="Generic/Text/Variations" />
 
@@ -8,9 +9,4 @@ import { faker } from "@faker-js/faker";
 
 This page showcases the diverse styling options available for text elements in the React-CK framework. With a focus on enhancing readability and aesthetics, these variations provide developers with the tools to create visually appealing textual content within their applications.
 
-<Typeset
-  fontSizes={["60px", defaultTheme.font["base-size"]]}
-  fontWeight={500}
-  sampleText={faker.lorem.sentence()}
-  fontFamily={defaultTheme.font.family}
-/>
+<TextDemo />

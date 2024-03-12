@@ -49,12 +49,16 @@ const config: StorybookConfig = {
   ],
   // Extend / verride webpack config
   async webpackFinal(config) {
-    const packagesConfig = getWebpackConfig();
+    const packagesConfig = getWebpackConfig({
+      cssHashSalt: "storybook-styles",
+    });
 
     // Add same styling rules as used on package compilation
     const cssRule = packagesConfig.module?.rules?.find(
       (i) => !!i && i !== "..." && "test" in i && i.test?.toString() === "/\\.s[ac]ss$/iu",
     );
+
+    console.log("cssRule", cssRule);
 
     config.module?.rules?.push(cssRule);
 
