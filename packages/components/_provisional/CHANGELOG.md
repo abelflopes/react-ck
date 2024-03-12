@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.1.0...@react-ck/provisional@1.2.0) (2024-03-12)
+
+
+### Features
+
+* add snackbar component ([6056809](https://github.com/abelflopes/react-ck/commit/6056809245903b8f7e8c713367b7ffcbf8a993c2))
+
+
+
 ## 1.1.0 (2024-03-06)
 
 

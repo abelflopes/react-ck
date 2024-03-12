@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.1.9...@react-ck/container@1.1.10) (2024-03-12)
+
+
+### Bug Fixes
+
+* container props interfering with rendered style ([9879648](https://github.com/abelflopes/react-ck/commit/9879648e013659271764ab9aa432d41f973d8548))
+
+
+
 ## [1.1.9](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.1.8...@react-ck/container@1.1.9) (2024-03-06)
 
 **Note:** Version bump only for package @react-ck/container

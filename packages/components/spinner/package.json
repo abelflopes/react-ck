@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/spinner",
   "private": false,
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -32,8 +32,8 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/icon": "^1.5.0",
-    "@react-ck/theme": "^1.6.0",
+    "@react-ck/icon": "^1.5.1",
+    "@react-ck/theme": "^1.6.1",
     "classnames": "^2.3.2"
   }
 }
