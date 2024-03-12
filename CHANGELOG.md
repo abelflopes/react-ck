@@ -1,3 +1,26 @@
+## [1.10.0](https://github.com/abelflopes/react-ck/compare/v1.9.0...v1.10.0) (2024-03-12)
+
+
+### Features
+
+* add index css variable to column count ([cc227bb](https://github.com/abelflopes/react-ck/commit/cc227bbcce8d9a96d547396ea8804a7cb62d45d2))
+* add snackbar component ([6056809](https://github.com/abelflopes/react-ck/commit/6056809245903b8f7e8c713367b7ffcbf8a993c2))
+* allow grid column to have natural content size ([a9484a2](https://github.com/abelflopes/react-ck/commit/a9484a208be7191be043342ed06b7e64c926d6eb))
+
+
+### Bug Fixes
+
+* container props interfering with rendered style ([9879648](https://github.com/abelflopes/react-ck/commit/9879648e013659271764ab9aa432d41f973d8548))
+
+
+### Code Refactoring
+
+* convert subcomponents to compound component approach ([d15a430](https://github.com/abelflopes/react-ck/commit/d15a4302dc69bea5a9a09c80832b28dafe51c387))
+* rename alert close handler for consistency with other props ([de610db](https://github.com/abelflopes/react-ck/commit/de610db1f85664df05ac84e3a74fd1a3850157e4))
+* rename text type ([6b71051](https://github.com/abelflopes/react-ck/commit/6b710516f5bc912757f59b4cd734b730348a59d1))
+* update text component props, use explicit variation & skin ([3cf759d](https://github.com/abelflopes/react-ck/commit/3cf759dbbd6622d4329d8a71bdd36221f5ebff2c))
+* update text props and variations ([24d47d2](https://github.com/abelflopes/react-ck/commit/24d47d2afaa2a88737d20fdd2f74fac4533024e4))
+
 ## [1.9.0](https://github.com/abelflopes/react-ck/compare/v1.8.1...v1.9.0) (2024-03-06)
 
 
