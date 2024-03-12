@@ -26,13 +26,13 @@
 
 .margin_both,
 .margin_top,
-.variation_p {
+p.variation_p {
   @include define-css-var(text, margin-top, get-css-var(text, font-size));
 }
 
 .margin_both,
 .margin_bottom,
-.variation_p {
+p.variation_p {
   @include define-css-var(text, margin-bottom, get-css-var(text, font-size));
 }
 
