@@ -13,7 +13,11 @@ describe("unit GridContainer", () => {
 
 describe("unit GridColumn", () => {
   it("renders correctly", async () => {
-    render(<Grid.Column data-testid="column" />);
+    render(
+      <Grid>
+        <Grid.Column data-testid="column" />
+      </Grid>,
+    );
     const find = await screen.findByTestId("column");
     expect(find).toBeInTheDocument();
   });
