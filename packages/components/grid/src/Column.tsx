@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles/column.module.scss";
 import classNames from "classnames";
 import { useGridContext } from "./hooks";
@@ -16,19 +16,22 @@ export const GridColumn = ({
   style,
   ...otherProps
 }: Readonly<GridColumnProps>): React.ReactElement => {
+  const [index, setIndex] = useState<number | undefined>(undefined);
   const { columnsCount, registerColumn } = useGridContext();
 
   useEffect(() => {
-    const deregisterColumn = registerColumn();
+    const { index, deregister } = registerColumn();
 
-    return deregisterColumn;
+    setIndex(index);
+
+    return deregister;
   }, [registerColumn]);
 
   return (
     <div
       style={{
         ...style,
-        ...{ "--size": size, "--columns": columnsCount },
+        ...{ "--size": size, "--columns": columnsCount, "--index": index },
       }}
       className={classNames(
         styles.root,

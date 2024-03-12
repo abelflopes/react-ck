@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./styles/container.module.scss";
 import classNames from "classnames";
 import { GridContext, type GridContextProps } from "./context";
@@ -23,13 +23,18 @@ const Grid = ({
   className,
   ...otherProps
 }: Readonly<GridProps>): React.ReactElement => {
+  const index = useRef(0);
   const [columnsCount, setColumnsCount] = useState(0);
 
   const registerColumn = useCallback<GridContextProps["registerColumn"]>(() => {
     setColumnsCount((v) => v + 1);
 
-    return () => {
-      setColumnsCount((v) => v - 1);
+    return {
+      index: (index.current += 1),
+      deregister: (): void => {
+        index.current -= 1;
+        setColumnsCount((v) => v - 1);
+      },
     };
   }, []);
 
