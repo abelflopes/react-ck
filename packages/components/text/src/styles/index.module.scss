@@ -10,16 +10,40 @@
 
   margin-top: get-css-var(text, margin-top);
   margin-bottom: get-css-var(text, margin-bottom);
+}
 
-  &:not(:only-child).margin {
-    &:not(.p, a) {
-      @include define-css-var(text, margin-bottom, calc(#{get-css-var(text, font-size)} * 0.75));
-    }
+// Margin
 
-    & + & {
-      @include define-css-var(text, margin-top, get-css-var(text, font-size));
-    }
-  }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @include define-css-var(text, margin-top, get-css-var(text, font-size));
+  @include define-css-var(text, margin-bottom, calc(#{get-css-var(text, font-size)} * 0.75));
+}
+
+.margin_both,
+.margin_top,
+.variation_p {
+  @include define-css-var(text, margin-top, get-css-var(text, font-size));
+}
+
+.margin_both,
+.margin_bottom,
+.variation_p {
+  @include define-css-var(text, margin-bottom, get-css-var(text, font-size));
+}
+
+.margin_none,
+.margin_top {
+  @include define-css-var(text, margin-bottom, 0);
+}
+
+.margin_none,
+.margin_bottom {
+  @include define-css-var(text, margin-top, 0);
 }
 
 // Variation

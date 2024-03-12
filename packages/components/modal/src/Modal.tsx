@@ -95,7 +95,7 @@ export const Modal = ({
                 <header
                   {...props.header}
                   className={classNames(styles.header, props.header.className)}>
-                  <Text variation="h3" as="p" margin={false}>
+                  <Text variation="h3" as="p" margin="none">
                     {props.header.heading}
                   </Text>
 

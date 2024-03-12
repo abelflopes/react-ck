@@ -22,7 +22,7 @@ export type TextVariation =
 
 export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPolymorphicProps<T> {
   /** Adds margin to the text element  */
-  margin?: boolean;
+  margin?: "default" | "top" | "bottom" | "both" | "none";
   /** Specifies the type/visual skin of text element to be rendered  */
   variation?: TextVariation;
   /* Specifies the visual style variations for the text */
@@ -38,7 +38,7 @@ export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPol
 
 export const Text = <T extends HTMLTag>({
   as,
-  margin = true,
+  margin = "default",
   variation = "p",
   skin = "default",
   className,
@@ -54,11 +54,9 @@ export const Text = <T extends HTMLTag>({
       classNames(
         styles.root,
         styles[`variation_${variation}`],
-        {
-          [`${styles.margin}`]: margin,
-        },
         computedSkins.filter((skin) => skin !== "inverted").map((skin) => styles[`skin_${skin}`]),
         {
+          [`${styles[`margin_${margin}`]}`]: margin !== "default",
           [`${styles.skin_inverted}`]: computedSkins.includes("inverted") || theme.inverted,
         },
         className,

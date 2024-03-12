@@ -60,7 +60,7 @@ $text-variations: (
   h1: (
     default: (
       font-size: 29px,
-      font-weight: 500,
+      font-weight: 600,
       line-height: 36px,
     ),
     hover: (),
@@ -68,7 +68,7 @@ $text-variations: (
   h2: (
     default: (
       font-size: 24px,
-      font-weight: 500,
+      font-weight: 600,
       line-height: 36px,
       color: get-color(neutral-dark-4),
     ),
@@ -77,21 +77,33 @@ $text-variations: (
   h3: (
     default: (
       font-size: 20px,
-      font-weight: 500,
+      font-weight: 600,
       line-height: 24px,
     ),
     hover: (),
   ),
   h4: (
-    default: (),
+    default: (
+      font-size: 18px,
+      font-weight: 600,
+      line-height: 22px,
+    ),
     hover: (),
   ),
   h5: (
-    default: (),
+    default: (
+      font-size: 16px,
+      font-weight: 600,
+      line-height: 20px,
+    ),
     hover: (),
   ),
   h6: (
-    default: (),
+    default: (
+      font-size: 14px,
+      font-weight: 600,
+      line-height: 18px,
+    ),
     hover: (),
   ),
   p: (

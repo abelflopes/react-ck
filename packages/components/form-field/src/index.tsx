@@ -38,7 +38,7 @@ export const FormField = ({
         className={styles.label}
         skin="bold"
         variation="small"
-        margin={false}
+        margin="none"
         as={<label htmlFor="aaa">{label}</label>}
       />
     ) : null}
@@ -46,13 +46,13 @@ export const FormField = ({
     <div className={styles.content}>{children}</div>
 
     {description ? (
-      <Text className={styles.description} variation="small" margin={false}>
+      <Text className={styles.description} variation="small" margin="none">
         {description}
       </Text>
     ) : null}
 
     {validationMessage ? (
-      <Text className={styles.validation_message} variation="small" margin={false}>
+      <Text className={styles.validation_message} variation="small" margin="none">
         {validationMessage}
       </Text>
     ) : null}

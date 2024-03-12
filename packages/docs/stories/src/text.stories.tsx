@@ -35,14 +35,14 @@ export const Inverted: Story = {
     },
   },
   args: {
-    variation: "inverted",
+    skin: "inverted",
     children: faker.lorem.sentence(),
   },
 };
 
 export const Link: Story = {
   args: {
-    variation: "link",
+    skin: "link",
     as: <a href="#some-link">{faker.lorem.sentence()}</a>,
   },
 };
