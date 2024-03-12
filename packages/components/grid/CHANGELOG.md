@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/grid@1.2.9...@react-ck/grid@1.3.0) (2024-03-12)
+
+
+### Features
+
+* add index css variable to column count ([cc227bb](https://github.com/abelflopes/react-ck/commit/cc227bbcce8d9a96d547396ea8804a7cb62d45d2))
+* allow grid column to have natural content size ([a9484a2](https://github.com/abelflopes/react-ck/commit/a9484a208be7191be043342ed06b7e64c926d6eb))
+
+
+
 ## [1.2.9](https://github.com/abelflopes/react-ck/compare/@react-ck/grid@1.2.8...@react-ck/grid@1.2.9) (2024-03-06)
 
 **Note:** Version bump only for package @react-ck/grid
