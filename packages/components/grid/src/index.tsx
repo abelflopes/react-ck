@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import styles from "./styles/container.module.scss";
 import classNames from "classnames";
 import { GridContext, type GridContextProps } from "./context";
