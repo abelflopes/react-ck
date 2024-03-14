@@ -57,9 +57,7 @@ jobs:
         run: npm run test
 
       - name: Build
-        run: |
-          npm run build:infra
-          npm run build
+        run: npm run build
 
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
