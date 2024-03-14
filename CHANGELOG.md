@@ -1,3 +1,15 @@
+## [1.11.0](https://github.com/abelflopes/react-ck/compare/v1.10.1...v1.11.0) (2024-03-14)
+
+
+### Features
+
+* implement global package build ([4ece2fd](https://github.com/abelflopes/react-ck/commit/4ece2fd70ddc056e407e8aec5447edf3b4ed6272))
+
+
+### Bug Fixes
+
+* missing files entry on package configuration ([efd35cb](https://github.com/abelflopes/react-ck/commit/efd35cb87f9b6fc6e4b9f6c9937c80880e555481))
+
 ## [1.10.1](https://github.com/abelflopes/react-ck/compare/v1.10.0...v1.10.1) (2024-03-12)
 
 
