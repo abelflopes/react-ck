@@ -44,6 +44,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Build test apps
+        run: npm run build:apps
+
   lint_commits:
     name: Validate Commits
     runs-on: ubuntu-latest
