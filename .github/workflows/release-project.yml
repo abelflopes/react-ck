@@ -11,9 +11,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - run: echo 'The triggering workflow passed'
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: |
+          echo 'The triggering workflow failed'
+          exit 1
   release-project:
     name: Release Project
     runs-on: ubuntu-latest
+    needs: on-success
     permissions:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
