@@ -56,6 +56,19 @@ jobs:
       - name: Run Tests
         run: npm run test
 
+      # if publish to github
+      # - name: Setup npm auth
+      #   run: |
+      #     echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+      #     echo "@abelflopes:registry=https://npm.pkg.github.com" >> .npmrc
+      #     echo "access=public" >> .npmrc
+
+      # required for lerna + prebuild of packages/library/react-ck
+      - name: Set git user
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
       - name: Build
         run: npm run build
 
@@ -70,19 +83,6 @@ jobs:
 
       - name: Verify NPM Access
         run: npm whoami
-
-      # if publish to github
-      # - name: Setup npm auth
-      #   run: |
-      #     echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
-      #     echo "@abelflopes:registry=https://npm.pkg.github.com" >> .npmrc
-      #     echo "access=public" >> .npmrc
-
-      # required for lerna
-      - name: Set git user
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Show git user
         run: git config --list
