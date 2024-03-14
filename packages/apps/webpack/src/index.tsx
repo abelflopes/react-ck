@@ -13,7 +13,7 @@ const App = (): React.ReactElement => (
   <React.StrictMode>
     <Manager>
       <Container spacingY>
-        <Text variation="h1">Parcel App</Text>
+        <Text variation="h1">Webpack App</Text>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate a assumenda nulla
           minus corporis nisi commodi dolores, minima facilis quis, maxime perspiciatis non facere

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "parcel ./index.html --no-cache"
+    "start": "parcel ./index.html --no-cache --cache-dir ./cache",
+    "build": "parcel build ./index.html --no-cache --cache-dir ./cache"
   },
   "dependencies": {
     "react": "^18.2.0",
