@@ -1,0 +1,7 @@
+{
+  "extends": "@react-ck/typescript-config/tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist"
+  },
+  "include": ["./src/index.ts*"]
+}
