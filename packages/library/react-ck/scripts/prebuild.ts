@@ -7,6 +7,8 @@ import bformat from "bunyan-format";
 
 // Config
 
+const projectRoot = path.resolve(__dirname, "../../../../");
+const rootPackageLock = path.resolve(projectRoot, "./package-lock.json");
 const currPackagePath = path.resolve(__dirname, "../package.json");
 const packagesRoot = path.resolve(__dirname, "../../../");
 const destTsFile = path.resolve(__dirname, "../src/index.ts");
@@ -123,6 +125,10 @@ logger.info("Installing packages", packagesToInstall);
 
 execSync(installCommand, { stdio: "inherit" });
 
+// Update root package lock
+
+execSync("npm i", { stdio: "inherit", cwd: projectRoot });
+
 // Generate ts files
 
 logger.info("Generating TS file...", destTsFile);
@@ -160,6 +166,7 @@ fs.writeFileSync(destScssFile, scssFileContents, {
 try {
   logger.info("Adding to git...", currPackagePath);
 
+  execSync(`git add ${rootPackageLock}`, { stdio: "inherit" });
   execSync(`git add ${currPackagePath}`, { stdio: "inherit" });
 
   logger.info("Sending commit to git...", currPackagePath);
