@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/abelflopes/react-ck/compare/@react-ck/progress@1.2.3...@react-ck/progress@1.2.4) (2024-03-15)
+
+**Note:** Version bump only for package @react-ck/progress
+
+
+
+
+
 ## [1.2.3](https://github.com/abelflopes/react-ck/compare/@react-ck/progress@1.2.2...@react-ck/progress@1.2.3) (2024-03-15)
 
 **Note:** Version bump only for package @react-ck/progress
