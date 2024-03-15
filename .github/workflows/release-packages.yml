@@ -90,3 +90,9 @@ jobs:
       - name: Release Packages
         # https://github.com/lerna/lerna/tree/main/libs/commands/publish#readme
         run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' || '' }}
+
+      - name: Update lockfile
+        run: |
+          npm i
+          git add package-lock.json
+          git commit -m "build: update lockfile"
