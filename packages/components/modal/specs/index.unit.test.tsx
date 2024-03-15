@@ -9,9 +9,11 @@ describe("unit Modal", () => {
     const content = "Modal";
     render(
       <LayersProvider>
-        <Modal.Header heading="Heading" />
-        {content}
-        <Modal.Footer>Footer</Modal.Footer>
+        <Modal>
+          <Modal.Header heading="Heading" />
+          {content}
+          <Modal.Footer>Footer</Modal.Footer>
+        </Modal>
       </LayersProvider>,
     );
     const find = await screen.findByText(content);
