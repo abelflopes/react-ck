@@ -98,6 +98,6 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
     externalsPresets: {
       web: true,
     },
-    stats: mode === "development" ? "normal" : "summary",
+    stats: mode === "development" ? "summary" : "normal",
   };
 };
