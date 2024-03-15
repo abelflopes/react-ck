@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.4](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.4.3...@react-ck/text@1.4.4) (2024-03-15)
+
+
+### Bug Fixes
+
+* text not displaying margins ([68f461f](https://github.com/abelflopes/react-ck/commit/68f461f133b8e82a4e1bbe90f4805e7d552e0bf7))
+
+
+
 ## [1.4.3](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.4.2...@react-ck/text@1.4.3) (2024-03-15)
 
 

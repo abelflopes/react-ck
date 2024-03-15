@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/abelflopes/react-ck/compare/react-ck@1.2.0...react-ck@1.2.1) (2024-03-15)
+
+
+### Bug Fixes
+
+* fix build, compile with tsc instead of webpack ([c7ac746](https://github.com/abelflopes/react-ck/commit/c7ac7464591ce7a392774125c9b4adaa5d79a80b))
+
+
+
 ## [1.2.0](https://github.com/abelflopes/react-ck/compare/react-ck@1.1.3...react-ck@1.2.0) (2024-03-15)
 
 
