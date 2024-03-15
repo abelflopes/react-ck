@@ -14,12 +14,12 @@
 
 // Margin
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+.variation_h1,
+.variation_h2,
+.variation_h3,
+.variation_h4,
+.variation_h5,
+.variation_h6 {
   @include define-css-var(text, margin-top, get-css-var(text, font-size));
   @include define-css-var(text, margin-bottom, calc(#{get-css-var(text, font-size)} * 0.75));
 }
@@ -48,12 +48,12 @@ p.variation_p {
 
 // Variation
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+.variation_h1,
+.variation_h2,
+.variation_h3,
+.variation_h4,
+.variation_h5,
+.variation_h6 {
   // Force block display in case of component with inline element
   display: block;
 }
