@@ -1,9 +1,10 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Manager } from "@react-ck/manager";
-import { Text } from "@react-ck/text";
-import { Button } from "@react-ck/button";
-import { Container } from "@react-ck/container";
+import { Button, Container, Manager, Text } from "react-ck";
+
+import * as RCK from "react-ck";
+
+console.log("RCK", RCK);
 
 const el = document.querySelector("#root");
 

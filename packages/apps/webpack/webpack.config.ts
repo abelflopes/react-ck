@@ -34,4 +34,5 @@ export default ((): Configuration & { devServer: DevServerConfiguration } => ({
   devServer: {
     allowedHosts: "all",
   },
+  stats: "summary",
 }))();
