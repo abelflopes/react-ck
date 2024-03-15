@@ -16,13 +16,12 @@
   },
   "scripts": {
     "prebuild": "ts-node-dev ./scripts/prebuild.ts",
-    "build": "NODE_ENV=production webpack",
+    "build": "tsc -p tsconfig.build.json",
     "lint:typescript": "tsc --noEmit",
     "lint:code": "eslint . --ext ts,tsx --cache"
   },
   "devDependencies": {
     "@react-ck/typescript-config": "*",
-    "@react-ck/webpack-config": "*",
     "@types/bunyan": "^1.8.11",
     "@types/bunyan-format": "^0.2.9",
     "bunyan": "^1.8.15",
