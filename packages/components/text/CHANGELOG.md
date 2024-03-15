@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.4.2...@react-ck/text@1.4.3) (2024-03-15)
+
+
+### Bug Fixes
+
+* missing files entry on package configuration ([efd35cb](https://github.com/abelflopes/react-ck/commit/efd35cb87f9b6fc6e4b9f6c9937c80880e555481))
+
+
+
 ## [1.4.2](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.4.1...@react-ck/text@1.4.2) (2024-03-12)
 
 

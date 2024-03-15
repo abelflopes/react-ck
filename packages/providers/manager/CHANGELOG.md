@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/abelflopes/react-ck/compare/@react-ck/manager@1.1.6...@react-ck/manager@1.1.7) (2024-03-15)
+
+**Note:** Version bump only for package @react-ck/manager
+
+
+
+
+
 ## [1.1.6](https://github.com/abelflopes/react-ck/compare/@react-ck/manager@1.1.5...@react-ck/manager@1.1.6) (2024-03-12)
 
 **Note:** Version bump only for package @react-ck/manager

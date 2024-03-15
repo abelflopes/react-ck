@@ -1,3 +1,12 @@
+## [1.12.0](https://github.com/abelflopes/react-ck/compare/v1.11.0...v1.12.0) (2024-03-15)
+
+
+### Features
+
+* **react-ck:** update library packages ([7d8606f](https://github.com/abelflopes/react-ck/commit/7d8606ff3b854ce6fd47f56cfef01d3cfc18b516))
+* **react-ck:** update library packages ([a5215db](https://github.com/abelflopes/react-ck/commit/a5215dbf686e26bb8abebc0d91770d22d4762034))
+* **react-ck:** update library packages ([76252a5](https://github.com/abelflopes/react-ck/commit/76252a53cb6e998bb01704a679d8a9fc44a1b132))
+
 ## [1.10.1](https://github.com/abelflopes/react-ck/compare/v1.10.0...v1.10.1) (2024-03-12)
 
 
