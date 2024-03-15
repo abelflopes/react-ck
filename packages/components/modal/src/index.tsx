@@ -8,6 +8,8 @@ import { Icon } from "@react-ck/icon";
 import { Button } from "@react-ck/button";
 import { Text } from "@react-ck/text";
 import { Layer } from "@react-ck/layers";
+import { ModalHeader } from "./ModalHeader";
+import { ModalFooter } from "./ModalFooter";
 
 /**
  * ModalProps interface represents the properties for the Modal component.
@@ -32,7 +34,7 @@ interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
  * @returns a React element
  */
 
-export const Modal = ({
+const Modal = ({
   open = true,
   dismissable = true,
   children,
@@ -120,3 +122,9 @@ export const Modal = ({
     )
   );
 };
+
+Modal.Header = ModalHeader;
+
+Modal.Footer = ModalFooter;
+
+export { Modal, type ModalProps };

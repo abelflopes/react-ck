@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, ModalFooter, ModalHeader } from "../src/index";
+import { Modal } from "../src/index";
 import { LayersProvider } from "@react-ck/layers";
 import { getActRender } from "@react-ck/jest-config";
 
@@ -8,8 +8,8 @@ describe("snapshot Modal", () => {
     const component = await getActRender(
       <LayersProvider>
         <Modal>
-          <ModalHeader heading="Heading" />
-          <ModalFooter>Footer</ModalFooter>
+          <Modal.Header heading="Heading" />
+          <Modal.Footer>Footer</Modal.Footer>
         </Modal>
       </LayersProvider>,
     );

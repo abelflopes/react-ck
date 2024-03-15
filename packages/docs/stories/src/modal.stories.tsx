@@ -4,7 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
 import { configureStory } from "@react-ck/story-config";
-import { Modal, ModalHeader, ModalFooter } from "@react-ck/modal/src";
+import { Modal } from "@react-ck/modal/src";
 import { Button } from "@react-ck/button";
 
 type Story = StoryObj<typeof Modal>;
@@ -33,13 +33,13 @@ export const Component: Story = {
   args: {
     children: (
       <>
-        <ModalHeader heading={faker.lorem.sentence(4)} />
+        <Modal.Header heading={faker.lorem.sentence(4)} />
 
         <Text>{faker.lorem.sentence(6)}</Text>
 
-        <ModalFooter>
+        <Modal.Footer>
           <Button>{faker.lorem.word()}</Button>
-        </ModalFooter>
+        </Modal.Footer>
       </>
     ),
   },
