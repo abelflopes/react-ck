@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
-import { Select, SelectOption } from "@react-ck/select/src";
+import { Select } from "@react-ck/select/src";
 import { Normal as FormFieldNormal, Validation as FormFieldValidation } from "./form-field.stories";
 import { objectExclude } from "../utils/object-exclude";
 
@@ -30,15 +30,15 @@ export const Normal: Story = {
     required: true,
     children: (
       <>
-        <SelectOption value="" selected disabled>
+        <Select.Option value="" selected disabled>
           Select Value
-        </SelectOption>
+        </Select.Option>
 
-        <SelectOption>{faker.lorem.word()}</SelectOption>
+        <Select.Option>{faker.lorem.word()}</Select.Option>
 
-        <SelectOption>{faker.lorem.word()}</SelectOption>
+        <Select.Option>{faker.lorem.word()}</Select.Option>
 
-        <SelectOption>{faker.lorem.word()}</SelectOption>
+        <Select.Option>{faker.lorem.word()}</Select.Option>
       </>
     ),
   },
@@ -50,15 +50,15 @@ export const Validation: Story = {
     required: true,
     children: (
       <>
-        <SelectOption value="" selected disabled>
+        <Select.Option value="" selected disabled>
           Select Value
-        </SelectOption>
+        </Select.Option>
 
-        <SelectOption>{faker.lorem.word()}</SelectOption>
+        <Select.Option>{faker.lorem.word()}</Select.Option>
 
-        <SelectOption>{faker.lorem.word()}</SelectOption>
+        <Select.Option>{faker.lorem.word()}</Select.Option>
 
-        <SelectOption>{faker.lorem.word()}</SelectOption>
+        <Select.Option>{faker.lorem.word()}</Select.Option>
       </>
     ),
   },

@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { FormField, type FormFieldProps } from "@react-ck/form-field";
+import { SelectOption } from "./SelectOption";
 
-export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: FormFieldProps["label"];
   skin?: FormFieldProps["skin"];
   description?: FormFieldProps["description"];
@@ -17,7 +18,7 @@ export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElemen
  * @returns a React element
  */
 
-export const Select = ({
+const Select = ({
   skin = "default",
   label,
   description,
@@ -29,3 +30,7 @@ export const Select = ({
     <select {...props} className={classNames(className, styles.root)} />
   </FormField>
 );
+
+Select.Option = SelectOption;
+
+export { Select, type SelectProps };
