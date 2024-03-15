@@ -1,3 +1,24 @@
+## [1.13.0](https://github.com/abelflopes/react-ck/compare/v1.12.0...v1.13.0) (2024-03-15)
+
+
+### Features
+
+* **react-ck:** update library packages ([34f4a96](https://github.com/abelflopes/react-ck/commit/34f4a96ed94520c38161550844a5e5f7a602ebeb))
+* **react-ck:** update library packages ([af1ab1e](https://github.com/abelflopes/react-ck/commit/af1ab1e5891b5f166a8dd4fd78d1f1d71b5219c9))
+* **react-ck:** update library packages ([58286ac](https://github.com/abelflopes/react-ck/commit/58286ac5133a7ff16e516ac9462ff0846e2f5e1f))
+
+
+### Bug Fixes
+
+* fix build, compile with tsc instead of webpack ([c7ac746](https://github.com/abelflopes/react-ck/commit/c7ac7464591ce7a392774125c9b4adaa5d79a80b))
+* text not displaying margins ([68f461f](https://github.com/abelflopes/react-ck/commit/68f461f133b8e82a4e1bbe90f4805e7d552e0bf7))
+* webpack log level in devlopment vs prod ([8c54b83](https://github.com/abelflopes/react-ck/commit/8c54b8303e4ade126e939163dffa0027d368b44a))
+
+
+### Code Refactoring
+
+* use global library in test apps ([3fe4ed1](https://github.com/abelflopes/react-ck/commit/3fe4ed1f08bb8131fcf9dc27e3a7018e82de4707))
+
 ## [1.12.0](https://github.com/abelflopes/react-ck/compare/v1.11.0...v1.12.0) (2024-03-15)
 
 
