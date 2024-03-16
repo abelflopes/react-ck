@@ -27,6 +27,8 @@ interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
 
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-modal-dialog-with-a-portal
 
+let openModals = 0;
+
 /**
  * Modal is a full screen overlay that sits atop the page content.
  * It’s used to focus attention on an important task or message and requires user input to be dismissed.
@@ -81,6 +83,18 @@ const Modal = ({
   useEffect(() => {
     setInternalOpen(open);
   }, [open]);
+
+  // Lock scroll if there are open modals
+  useEffect(() => {
+    if (internalOpen) openModals += 1;
+    else openModals -= 1;
+
+    if (openModals > 1) {
+      document.body.classList.add(`${styles.lock_scroll}`);
+    } else {
+      document.body.classList.remove(`${styles.lock_scroll}`);
+    }
+  }, [internalOpen, onClose, onOpen]);
 
   return (
     internalOpen && (
