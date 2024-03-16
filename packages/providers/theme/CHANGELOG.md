@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.5](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.6.4...@react-ck/theme@1.6.5) (2024-03-15)
+
+**Note:** Version bump only for package @react-ck/theme
+
+
+
+
+
 ## [1.6.4](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.6.3...@react-ck/theme@1.6.4) (2024-03-15)
 
 **Note:** Version bump only for package @react-ck/theme

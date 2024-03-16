@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/abelflopes/react-ck/compare/@react-ck/badge@1.1.5...@react-ck/badge@1.1.6) (2024-03-15)
+
+**Note:** Version bump only for package @react-ck/badge
+
+
+
+
+
 ## [1.1.5](https://github.com/abelflopes/react-ck/compare/@react-ck/badge@1.1.4...@react-ck/badge@1.1.5) (2024-03-15)
 
 **Note:** Version bump only for package @react-ck/badge
