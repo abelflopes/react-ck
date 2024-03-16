@@ -1,9 +1,9 @@
-# build output
-dist
-
 # markdown files - prevent tables formatting
 **/*.md
 **/*.mdx
 
 # generated files
+dist
+cache
 packages/docs/storybook/public/packages-info.json
+
