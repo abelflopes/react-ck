@@ -34,7 +34,7 @@
     "todo": "npx leasot '{.,*}**' -i '**/node_modules/**' -S -x"
   },
   "devDependencies": {
-    "@abelflopes/eslint-config-tsr-pro": "^2.0.0",
+    "@abelflopes/eslint-config-tsr-pro": "^2.0.1",
     "@abelflopes/prettier-config-pro": "^1.0.0",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^18.0.0",
