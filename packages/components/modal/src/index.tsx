@@ -89,11 +89,8 @@ const Modal = ({
     if (internalOpen) openModals += 1;
     else openModals -= 1;
 
-    if (openModals > 1) {
-      document.body.classList.add(`${styles.lock_scroll}`);
-    } else {
-      document.body.classList.remove(`${styles.lock_scroll}`);
-    }
+    if (openModals > 1) document.body.classList.add(`${styles.lock_scroll}`);
+    else document.body.classList.remove(`${styles.lock_scroll}`);
   }, [internalOpen, onClose, onOpen]);
 
   return (
