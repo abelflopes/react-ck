@@ -19,8 +19,8 @@ addons.register("links-toolbar", () => {
           Make a Request
         </IconButton>
 
-        <IconButton placeholder="Repo" href={packageJson.homepage}>
-          Repo
+        <IconButton placeholder="GitHub" href={packageJson.homepage}>
+          GitHub
         </IconButton>
       </>
     ),
