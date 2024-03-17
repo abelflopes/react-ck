@@ -16,6 +16,7 @@
   },
   "scripts": {
     "prebuild": "ts-node-dev ./scripts/prebuild.ts",
+    "prepublish": "ts-node-dev ./scripts/prepublish.ts",
     "build": "tsc -p tsconfig.build.json",
     "lint:typescript": "tsc --noEmit",
     "lint:code": "eslint . --ext ts,tsx --cache"

@@ -2,27 +2,19 @@ import path from "path";
 import fs from "fs";
 import { globSync } from "glob";
 import { execSync } from "child_process";
-import bunyan from "bunyan";
-import bformat from "bunyan-format";
-
-// Config
-
-const projectRoot = path.resolve(__dirname, "../../../../");
-const rootPackageLock = path.resolve(projectRoot, "./package-lock.json");
-const currPackagePath = path.resolve(__dirname, "../package.json");
-const packagesRoot = path.resolve(__dirname, "../../../");
-const destTsFile = path.resolve(__dirname, "../src/index.ts");
-const destScssFile = path.resolve(__dirname, "../src/styles/index.scss");
+import {
+  currPackagePath,
+  destScssFile,
+  destTsFile,
+  logger,
+  packagesRoot,
+  projectRoot,
+  rootPackageLock,
+} from "./common";
 
 // Util
 
 const stripSpecialChars = (value: string): string => value.replace(/[^0-9a-zA-Z]+/gu, "");
-
-const logger = bunyan.createLogger({
-  name: "Library prebuild",
-  level: "debug",
-  stream: bformat({ outputMode: "short" }),
-});
 
 type PackageJson = {
   name?: string;
@@ -171,7 +163,7 @@ try {
 
   logger.info("Sending commit to git...", currPackagePath);
 
-  execSync(`git commit -m "feat(react-ck): update library packages"`, { stdio: "inherit" });
+  execSync(`git commit -m "feat(react-ck): global library package"`, { stdio: "inherit" });
 } catch (error) {
   logger.error(error instanceof Error ? error.message : error);
 }
