@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@1.1.8...@react-ck/modal@1.1.9) (2024-03-16)
+
+
+### Bug Fixes
+
+* modal z-index and apply scroll lock when opened ([0ee2ea6](https://github.com/abelflopes/react-ck/commit/0ee2ea60156389b54af964ebb76698ae2fa7a529))
+
+
+
 ## [1.1.8](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@1.1.7...@react-ck/modal@1.1.8) (2024-03-15)
 
 **Note:** Version bump only for package @react-ck/modal
