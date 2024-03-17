@@ -87,6 +87,9 @@ jobs:
       - name: Show git user
         run: git config --list
 
+      - name: Run pre publish script
+        run: npm exec -- lerna run prepublish --stream
+
       - name: Release Packages
         # https://github.com/lerna/lerna/tree/main/libs/commands/publish#readme
         run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' || '' }}
