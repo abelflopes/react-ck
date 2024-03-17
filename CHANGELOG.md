@@ -1,3 +1,28 @@
+## [1.14.0](https://github.com/abelflopes/react-ck/compare/v1.13.0...v1.14.0) (2024-03-17)
+
+
+### Features
+
+* **react-ck:** update library packages ([7dbcb1a](https://github.com/abelflopes/react-ck/commit/7dbcb1acd3330db6dcf6a0bf86399c6301e56ddf))
+* **react-ck:** update library packages ([ccd064b](https://github.com/abelflopes/react-ck/commit/ccd064b39376ade4818d5c9f6da5c711295e97d4))
+* **react-ck:** update library packages ([f11fbf4](https://github.com/abelflopes/react-ck/commit/f11fbf43f217340ee6b86b0ac5e75b0e08c477c6))
+* **react-ck:** update library packages ([73335fb](https://github.com/abelflopes/react-ck/commit/73335fb4a42541c46510bdeb38b1a394328ef2fd))
+* **react-ck:** update library packages ([2e20953](https://github.com/abelflopes/react-ck/commit/2e2095347468311a56431c2972fad3e47ad589af))
+* **react-ck:** update library packages ([eab5692](https://github.com/abelflopes/react-ck/commit/eab5692390377d2eca3585bd82a9228a865aa682))
+
+
+### Bug Fixes
+
+* modal z-index and apply scroll lock when opened ([0ee2ea6](https://github.com/abelflopes/react-ck/commit/0ee2ea60156389b54af964ebb76698ae2fa7a529))
+* remove spacing from table outer border ([95aef75](https://github.com/abelflopes/react-ck/commit/95aef7514f170549356e0a150f66694191161004))
+
+
+### Code Refactoring
+
+* use common app component for demo apps ([cb6f99b](https://github.com/abelflopes/react-ck/commit/cb6f99b004a0f547d31da239d81022737847936f))
+* use modal header and modal footer as compound components ([12623fb](https://github.com/abelflopes/react-ck/commit/12623fb794eb2702887057d586448242fb23bddf))
+* use select option as compound component ([031cb29](https://github.com/abelflopes/react-ck/commit/031cb290b6d6b6b217b1b68f530a61129c6a2a14))
+
 ## [1.13.0](https://github.com/abelflopes/react-ck/compare/v1.12.0...v1.13.0) (2024-03-15)
 
 
