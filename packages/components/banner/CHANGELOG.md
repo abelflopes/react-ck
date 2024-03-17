@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.16](https://github.com/abelflopes/react-ck/compare/@react-ck/banner@1.1.15...@react-ck/banner@1.1.16) (2024-03-17)
+
+**Note:** Version bump only for package @react-ck/banner
+
+
+
+
+
 ## [1.1.15](https://github.com/abelflopes/react-ck/compare/@react-ck/banner@1.1.14...@react-ck/banner@1.1.15) (2024-03-16)
 
 **Note:** Version bump only for package @react-ck/banner
