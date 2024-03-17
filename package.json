@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.13.0",
   "author": "Abel Lopes (@abelflopes)",
-  "description": "Monorepo PoC/Template with independent versioning for the whole project and its packages",
+  "description": "React Component Kit - React Components & Utils",
   "homepage": "https://github.com/abelflopes/react-ck",
   "repository": {
     "type": "git",
