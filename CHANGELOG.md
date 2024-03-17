@@ -1,3 +1,20 @@
+## [1.16.0](https://github.com/abelflopes/react-ck/compare/v1.15.0...v1.16.0) (2024-03-17)
+
+
+### Features
+
+* **react-ck:** global library package ([91df48c](https://github.com/abelflopes/react-ck/commit/91df48c50aff2fe68413a971e9ce9a9a17bbebe5))
+
+
+### Bug Fixes
+
+* remove missing file on package config ([d7fcc5f](https://github.com/abelflopes/react-ck/commit/d7fcc5f8917947900442420434f44361624a3bfa))
+
+
+### Code Refactoring
+
+* remove publish scripts from prebuild ([27ea573](https://github.com/abelflopes/react-ck/commit/27ea573a8c5729697eeda0e3b1321af506a44752))
+
 ## [1.15.0](https://github.com/abelflopes/react-ck/compare/v1.14.0...v1.15.0) (2024-03-17)
 
 

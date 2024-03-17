@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.11](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.1.10...@react-ck/layers@1.1.11) (2024-03-17)
+
+
+### Bug Fixes
+
+* remove missing file on package config ([d7fcc5f](https://github.com/abelflopes/react-ck/commit/d7fcc5f8917947900442420434f44361624a3bfa))
+
+
+
 ## [1.1.10](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.1.9...@react-ck/layers@1.1.10) (2024-03-17)
 
 **Note:** Version bump only for package @react-ck/layers
