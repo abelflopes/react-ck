@@ -92,8 +92,11 @@ jobs:
         run: npm exec -- lerna publish ${{ inputs.positional != 'default' && inputs.positional || '' }} --yes --no-private ${{ inputs.force_publish && '--force-publish' || '' }}
 
       - name: Update lockfile
+        continue-on-error: true # if there are no changes to the lockfile
         run: |
           npm i
+          git fetch
+          git pull
           git add package-lock.json
           git commit -m "build: update lockfile [no ci]"
           git push
