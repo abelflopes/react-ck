@@ -30,7 +30,7 @@ export const defaultTheme: Theme = {
     "status-negative-light": "#fed7d7",
     "status-negative": "#ed6d6d",
     "status-negative-dark": "#9b2c2c",
-    "overlay-light": "rgba(255,255,255, .2)",
+    "overlay-light": "rgba(255,255,255, .4)",
     "overlay-dark": "rgba(0,0,0,.2)",
   },
   font: {
