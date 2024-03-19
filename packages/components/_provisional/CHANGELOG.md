@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.2.9...@react-ck/provisional@1.3.0) (2024-03-19)
+
+
+### Features
+
+* add overlay spinner component ([a9ae730](https://github.com/abelflopes/react-ck/commit/a9ae73046b61b1dc5a97e24340070d1b812dde14))
+
+
+### Bug Fixes
+
+* **scrollable-container:** put shadows on top of content ([e475e92](https://github.com/abelflopes/react-ck/commit/e475e92e04e81bd135616fa5bde70e9cd8a67a05))
+
+
+
 ## [1.2.9](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.2.8...@react-ck/provisional@1.2.9) (2024-03-17)
 
 **Note:** Version bump only for package @react-ck/provisional

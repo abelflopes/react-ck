@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.18](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.1.17...@react-ck/container@1.1.18) (2024-03-19)
+
+**Note:** Version bump only for package @react-ck/container
+
+
+
+
+
 ## [1.1.17](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.1.16...@react-ck/container@1.1.17) (2024-03-17)
 
 **Note:** Version bump only for package @react-ck/container

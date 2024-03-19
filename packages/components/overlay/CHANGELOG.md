@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.1.17...@react-ck/overlay@1.2.0) (2024-03-19)
+
+
+### Features
+
+* add overlay spinner component ([a9ae730](https://github.com/abelflopes/react-ck/commit/a9ae73046b61b1dc5a97e24340070d1b812dde14))
+
+
+
 ## [1.1.17](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.1.16...@react-ck/overlay@1.1.17) (2024-03-17)
 
 **Note:** Version bump only for package @react-ck/overlay
