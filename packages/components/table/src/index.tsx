@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
+import { ScrollableContainer } from "@react-ck/provisional";
 
 export interface TableProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Specifies the visual style of the table  */
@@ -22,16 +23,34 @@ export const Table = ({
   scrollable,
   ...otherProps
 }: Readonly<TableProps>): React.ReactElement => (
-  <div
-    {...otherProps}
-    className={classNames(
-      styles.root,
-      {
-        [`${styles.scrollable}`]: scrollable,
-        [`${styles[skin]}`]: skin !== "default",
-      },
-      className,
-    )}>
-    <table className={styles.table}>{children}</table>
-  </div>
+  <>
+    {scrollable ? (
+      <ScrollableContainer
+        {...otherProps}
+        className={classNames(
+          styles.root,
+          {
+            [`${styles.scrollable}`]: scrollable,
+            [`${styles[skin]}`]: skin !== "default",
+          },
+          className,
+        )}>
+        <table className={styles.table}>{children}</table>
+      </ScrollableContainer>
+    ) : null}
+
+    {!scrollable && (
+      <div
+        {...otherProps}
+        className={classNames(
+          styles.root,
+          {
+            [`${styles[skin]}`]: skin !== "default",
+          },
+          className,
+        )}>
+        <table className={styles.table}>{children}</table>
+      </div>
+    )}
+  </>
 );
