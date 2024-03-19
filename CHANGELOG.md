@@ -1,3 +1,17 @@
+## [1.20.0](https://github.com/abelflopes/react-ck/compare/v1.19.0...v1.20.0) (2024-03-19)
+
+
+### Features
+
+* add overlay spinner component ([a9ae730](https://github.com/abelflopes/react-ck/commit/a9ae73046b61b1dc5a97e24340070d1b812dde14))
+* **react-ck:** global library package ([2c7643d](https://github.com/abelflopes/react-ck/commit/2c7643d31412429de2d0c1b4c117a0a617ba48d8))
+
+
+### Bug Fixes
+
+* **scrollable-container:** put shadows on top of content ([e475e92](https://github.com/abelflopes/react-ck/commit/e475e92e04e81bd135616fa5bde70e9cd8a67a05))
+* **table:** use scrollable container ([402360c](https://github.com/abelflopes/react-ck/commit/402360cff7a9d80a5649cf308a55c1a005d68ad7))
+
 ## [1.19.0](https://github.com/abelflopes/react-ck/compare/v1.18.0...v1.19.0) (2024-03-17)
 
 
