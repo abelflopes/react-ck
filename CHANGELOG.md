@@ -1,3 +1,24 @@
+## [1.19.0](https://github.com/abelflopes/react-ck/compare/v1.18.0...v1.19.0) (2024-03-17)
+
+
+### Features
+
+* **react-ck:** global library package ([52aae02](https://github.com/abelflopes/react-ck/commit/52aae02838f921ab89e13552f0ef2e744a6c13ac))
+
+## [1.18.0](https://github.com/abelflopes/react-ck/compare/v1.17.0...v1.18.0) (2024-03-17)
+
+
+### Features
+
+* **react-ck:** global library package ([7307359](https://github.com/abelflopes/react-ck/commit/73073591e29086b8cf08d59de052e7acd7d171e4))
+
+## [1.17.0](https://github.com/abelflopes/react-ck/compare/v1.16.0...v1.17.0) (2024-03-17)
+
+
+### Features
+
+* **react-ck:** global library package ([727bf95](https://github.com/abelflopes/react-ck/commit/727bf95dc21cbab2751825d49853e44a9c390c8f))
+
 ## [1.16.0](https://github.com/abelflopes/react-ck/compare/v1.15.0...v1.16.0) (2024-03-17)
 
 

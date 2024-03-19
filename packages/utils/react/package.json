@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/react-utils",
   "private": false,
-  "version": "1.2.7",
+  "version": "1.2.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
