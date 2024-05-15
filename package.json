@@ -10,7 +10,7 @@
     "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "lerna run start --parallel --stream --ignore @react-ck/*config* --ignore @react-ck/*app*",
     "start:apps": "lerna run start --parallel --stream --scope @react-ck/*app*",
     "build": "lerna run build --stream --ignore @react-ck/*config* --ignore @react-ck/*docs* --ignore @react-ck/*app*",
@@ -36,11 +36,11 @@
   "devDependencies": {
     "@abelflopes/eslint-config-tsr-pro": "^2.0.1",
     "@abelflopes/prettier-config-pro": "^1.0.0",
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^18.0.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "eslint": "^8.53.0",
     "eslint-plugin-compat": "^4.2.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "lerna": "^7.4.2",
     "prettier": "^3.2.5",
     "semantic-release": "^22.0.5",
