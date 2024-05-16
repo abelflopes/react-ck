@@ -67,9 +67,5 @@ const meta: Meta<typeof App> = {
 
 export default meta;
 
-export const Component: Story = {
-  parameters: {
-    docs: { page: null },
-  },
-};
+export const Component: Story = {};
 /* eslint-enable */
