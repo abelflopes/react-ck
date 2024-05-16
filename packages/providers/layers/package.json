@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@react-ck/elevation": "^1.1.11",
-    "@react-ck/react-utils": "^1.2.9"
+    "@react-ck/react-utils": "^1.2.9",
+    "@react-ck/theme": "^1.7.0"
   }
 }
