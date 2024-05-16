@@ -23,6 +23,8 @@ export interface ButtonProps<T extends HTMLTag = "button">
    * This can be any valid React node, allowing integration of icons or custom SVG components.
    */
   icon?: React.ReactNode;
+  /** Ref for the root element */
+  rootRef?: React.ForwardedRef<HTMLButtonElement>;
 }
 
 /**
@@ -40,6 +42,7 @@ export const Button = <T extends HTMLTag>({
   icon,
   children,
   className,
+  rootRef,
   ...otherProps
 }: Readonly<ButtonProps<T>>): React.ReactElement => {
   const isIconOnly = useMemo(
@@ -59,7 +62,13 @@ export const Button = <T extends HTMLTag>({
   return (
     <PolymorphicComponent
       as={as}
-      fallback={["button", otherProps]}
+      fallback={[
+        "button",
+        {
+          ref: rootRef,
+          ...otherProps,
+        },
+      ]}
       commonProps={{
         className: classNames(
           styles.root,
