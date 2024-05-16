@@ -13,6 +13,17 @@ const meta: Meta<typeof Dropdown> = {
       (Story): React.ReactElement => (
         <Manager>
           <Story />
+          <div
+            style={{
+              background: "#fee",
+              overflow: "scroll",
+              width: "150%",
+              height: 200,
+              paddingLeft: 200,
+              marginLeft: 200,
+            }}>
+            <Story />
+          </div>
         </Manager>
       ),
     ],

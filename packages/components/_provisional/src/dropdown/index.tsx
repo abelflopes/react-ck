@@ -7,7 +7,7 @@ export interface DropdownProps {
 }
 
 export const Dropdown = ({
-  position = "bottom-center",
+  position = "top-center",
 }: Readonly<DropdownProps>): React.ReactElement => {
   const [sizeToggle, setSizeToggle] = useState(true);
   const rootRef = useRef<HTMLButtonElement>(null);
@@ -27,13 +27,16 @@ export const Dropdown = ({
           <Layer elevation="popup">
             <p
               style={{
-                ...style,
                 color: "blue",
                 margin: 0,
                 background: "#ccc",
                 padding: 10,
                 boxSizing: "border-box",
                 overflow: "auto",
+                outline: "1px solid red",
+                outlineOffset: -2,
+                opacity: 0.7,
+                ...style,
               }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum tenetur
               possimus fugiat in, iusto tempora accusantium eum quas enim beatae nihil qui quod
@@ -66,11 +69,12 @@ export const Dropdown = ({
       porro ab quidem cum, officiis ut facilis minima. Mollitia debitis, enim excepturi explicabo
       labore, inventore dignissimos eligendi laboriosam molestiae quos reiciendis repellendus.
       Beatae aliquid dolorem odit, laborum rem cupiditate culpa! Nesciunt saepe aliquam
-      necessitatibus officiis dignissimos! Libero, illo dolorum ipsa recusandae facere quas quo
-      temporibus natus, unde id at. Quo molestias quisquam qui, magnam eligendi in quis nesciunt,
-      earum tenetur hic voluptatem iusto. Quae nemo minima pariatur tenetur natus laudantium
-      perspiciatis! Rem recusandae dolorem quasi expedita dicta, maiores facilis vitae, officia
-      ipsam a suscipit. Esse, repudiandae iste?
+      necessitatibus officiis dignissimos!
+      <div style={{ background: "#eee", height: 20, width: "150%" }} />
+      Libero, illo dolorum ipsa recusandae facere quas quo temporibus natus, unde id at. Quo
+      molestias quisquam qui, magnam eligendi in quis nesciunt, earum tenetur hic voluptatem iusto.
+      Quae nemo minima pariatur tenetur natus laudantium perspiciatis! Rem recusandae dolorem quasi
+      expedita dicta, maiores facilis vitae, officia ipsam a suscipit. Esse, repudiandae iste?
     </>
   );
 };

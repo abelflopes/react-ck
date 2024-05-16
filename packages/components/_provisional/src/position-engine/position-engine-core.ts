@@ -141,116 +141,137 @@ export class PositionEngine {
 
     let parent = this.options.element.offsetParent;
 
-    let offsetTop = 0;
-    let offsetLeft = 0;
-    let scrollOffset = 0;
+    let accOffsetTop = 0;
+    let accOffsetLeft = 0;
+    let accScrollTop = scrollTop;
+    let accScrollLeft = scrollLeft;
 
     /* eslint-disable no-console -- still in development */
 
     console.clear();
 
+    console.group("Measure parent offset");
+
     while (parent) {
       if (parent instanceof HTMLElement) {
-        offsetTop += parent.offsetTop;
-        offsetLeft += parent.offsetLeft;
-        scrollOffset += parent.scrollHeight - parent.offsetHeight;
+        accOffsetTop += parent.offsetTop;
+        accOffsetLeft += parent.offsetLeft;
+        accScrollTop += parent.scrollTop;
+        accScrollLeft += parent.scrollLeft;
 
-        console.log("offsetParent", parent);
+        console.group("offsetParent", parent);
+        console.log("position", window.getComputedStyle(parent).position);
+        console.log("marginTop", window.getComputedStyle(parent).marginTop);
+        console.log("paddingTop", window.getComputedStyle(parent).paddingTop);
+        console.log("offsetTop", parent.offsetTop);
         console.log("offsetLeft", parent.offsetLeft);
-        console.log(
-          "top / height / scrollHeight / scrollTop",
-          parent.offsetTop,
-          parent.offsetHeight,
-          parent.scrollHeight,
-          parent.scrollTop,
-        );
+        console.log("offsetHeight", parent.offsetHeight);
+        console.log("offsetWidth", parent.offsetWidth);
+        console.log("clientHeight", parent.clientHeight);
+        console.log("clientWidth", parent.clientWidth);
+        console.log("scrollHeight", parent.scrollHeight);
+        console.log("scrollTop", parent.scrollTop);
+        console.log("scrollLengthTop", parent.scrollHeight - parent.offsetHeight);
+        console.log("scrollWidth", parent.scrollWidth);
+        console.log("scrollLeft", parent.scrollLeft);
+        console.log("scrollLengthLeft", parent.scrollWidth - parent.offsetWidth);
+        console.log("rect", parent.getBoundingClientRect());
+        console.groupEnd();
       }
 
       parent = parent instanceof HTMLElement ? parent.offsetParent : null;
     }
+    console.groupEnd();
 
-    console.log("total offsetLeft", offsetLeft);
-    console.log("total offsetTop", offsetTop);
-    console.log("height", availableSpace["top-start"].y);
+    console.group("Acc ---------------------");
+    console.log("accOffsetLeft", accOffsetLeft);
+    console.log("accOffsetTop", accOffsetTop);
+    console.log("accScrollLeft", accScrollLeft);
+    console.log("accScrollTop", accScrollTop);
+    console.groupEnd();
+
+    console.group("Render ------------------");
+    console.log("availableSpace", availableSpace);
     console.log("rect.top", rect.top);
     console.log("rect.bottom", rect.bottom);
     console.log("rect.height", rect.height);
     console.log("windowHeight", windowHeight);
+    console.log("windowWidth", windowWidth);
     console.log("scrollTop", scrollTop);
-    console.log("scrollOffset", scrollOffset);
+    console.groupEnd();
 
     /* eslint-enable no-console */
 
     return {
       "top-start": {
-        bottom: `${windowHeight - rect.top - scrollTop}px`,
-        left: `${scrollLeft + rect.left}px`,
+        bottom: `${windowHeight - rect.top - accScrollTop}px`,
+        left: `${accScrollLeft + rect.left}px`,
         maxWidth: `${availableSpace["top-start"].x}px`,
         maxHeight: `${availableSpace["top-start"].y}px`,
       },
       "top-center": {
-        bottom: `${windowHeight - rect.top - scrollTop}px`,
-        left: `${scrollLeft + rect.left}px`,
+        bottom: `${windowHeight - rect.top - accScrollTop}px`,
+        left: `${accScrollLeft + rect.left - accOffsetLeft}px`,
         width: `${availableSpace["top-center"].x}px`,
         maxHeight: `${availableSpace["top-center"].y}px`,
       },
       "top-end": {
-        bottom: `${windowHeight - rect.top - scrollTop}px`,
-        right: `${windowWidth - rect.right - scrollLeft}px`,
+        bottom: `${windowHeight - rect.top - accScrollTop}px`,
+        right: `${windowWidth - rect.right - accScrollLeft}px`,
         maxWidth: `${availableSpace["top-end"].x}px`,
         maxHeight: `${availableSpace["top-end"].y}px`,
       },
       "right-start": {
-        top: `${rect.top + scrollTop - offsetTop}px`,
-        left: `${scrollLeft + rect.right - offsetLeft}px`,
+        top: `${rect.top + accScrollTop - accOffsetTop}px`,
+        left: `${accScrollLeft + rect.right - accOffsetLeft}px`,
         maxWidth: `${availableSpace["right-start"].x}px`,
         maxHeight: `${availableSpace["right-start"].y}px`,
       },
       "right-center": {
-        top: `${rect.top + scrollTop - offsetTop}px`,
-        left: `${scrollLeft + rect.right - offsetLeft}px`,
+        top: `${rect.top + accScrollTop - accOffsetTop}px`,
+        left: `${accScrollLeft + rect.right - accOffsetLeft}px`,
         maxWidth: `${availableSpace["right-center"].x}px`,
         height: `${availableSpace["right-center"].y}px`,
       },
       "right-end": {
-        bottom: `${windowHeight - rect.bottom - scrollTop}px`,
-        left: `${scrollLeft + rect.right - offsetLeft}px`,
+        bottom: `${windowHeight - rect.bottom - accScrollTop + accOffsetTop}px`,
+        left: `${accScrollLeft + rect.right - accOffsetLeft}px`,
         maxWidth: `${availableSpace["right-end"].x}px`,
         maxHeight: `${availableSpace["right-end"].y}px`,
       },
       "bottom-start": {
-        top: `${scrollTop + rect.bottom - offsetTop}px`,
-        left: `${scrollLeft + rect.left - offsetLeft}px`,
+        top: `${accScrollTop + rect.bottom - accOffsetTop}px`,
+        left: `${accScrollLeft + rect.left - accOffsetLeft}px`,
         maxWidth: `${availableSpace["bottom-start"].x}px`,
         maxHeight: `${availableSpace["bottom-start"].y}px`,
       },
       "bottom-center": {
-        top: `${scrollTop + rect.bottom - offsetTop}px`,
-        left: `${scrollLeft + rect.left - offsetLeft}px`,
+        top: `${accScrollTop + rect.bottom - accOffsetTop}px`,
+        left: `${accScrollLeft + rect.left - accOffsetLeft}px`,
         width: `${availableSpace["bottom-center"].x}px`,
         maxHeight: `${availableSpace["bottom-center"].y}px`,
       },
       "bottom-end": {
-        top: `${scrollTop + rect.bottom - offsetTop}px`,
-        right: `${windowWidth - rect.right - offsetLeft}px`,
+        top: `${accScrollTop + rect.bottom - accOffsetTop}px`,
+        right: `${windowWidth - rect.right - accOffsetLeft - accScrollLeft}px`,
         maxWidth: `${availableSpace["bottom-end"].x}px`,
         maxHeight: `${availableSpace["bottom-end"].y}px`,
       },
       "left-start": {
-        top: `${rect.top + scrollTop - offsetTop}px`,
-        right: `${windowWidth - scrollLeft - rect.left - offsetLeft}px`,
+        top: `${rect.top + accScrollTop - accOffsetTop}px`,
+        right: `${windowWidth - rect.left - accOffsetLeft - accScrollLeft}px`,
         maxWidth: `${availableSpace["left-start"].x}px`,
         maxHeight: `${availableSpace["left-start"].y}px`,
       },
       "left-center": {
-        top: `${rect.top + scrollTop - offsetTop}px`,
-        right: `${windowWidth - scrollLeft - rect.left - offsetLeft}px`,
+        top: `${rect.top + accScrollTop - accOffsetTop}px`,
+        right: `${windowWidth - rect.left - accOffsetLeft - accScrollLeft}px`,
         maxWidth: `${availableSpace["left-center"].x}px`,
         height: `${availableSpace["left-center"].y}px`,
       },
       "left-end": {
-        bottom: `${windowHeight - rect.bottom - scrollTop}px`,
-        right: `${windowWidth - scrollLeft - rect.left - offsetLeft}px`,
+        bottom: `${windowHeight - rect.bottom - accScrollTop + accOffsetTop}px`,
+        right: `${windowWidth - rect.left - accOffsetLeft - accScrollLeft}px`,
         maxWidth: `${availableSpace["left-end"].x}px`,
         maxHeight: `${availableSpace["left-end"].y}px`,
       },
