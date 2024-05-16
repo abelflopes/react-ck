@@ -2,9 +2,12 @@ import classNames from "classnames";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 
-export type ScrollableContainerProps = React.HTMLAttributes<HTMLDivElement>;
+export interface ScrollableContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  horizontal?: boolean;
+}
 
 export const ScrollableContainer = ({
+  horizontal = true,
   className,
   onScroll,
   children,
@@ -89,7 +92,7 @@ export const ScrollableContainer = ({
         ["--scroll-y" as keyof React.CSSProperties]: scrollPos.y,
       }}
       onScroll={handleScroll}>
-      <div className={styles.shadow_x} />
+      {horizontal ? <div className={styles.shadow_x} /> : null}
       {children}
     </div>
   );

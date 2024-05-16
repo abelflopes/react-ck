@@ -3,6 +3,7 @@ import * as PositionEngineCore from "./position-engine-core";
 
 export interface PositionEngineProps {
   position: PositionEngineCore.PositionEngineOptions["position"];
+  exclude?: PositionEngineCore.PositionEngineOptions["exclude"];
   anchorRef: React.RefObject<HTMLElement>;
   render: (
     ...args: Parameters<PositionEngineCore.PositionEngineOptions["onRender"]>
@@ -13,6 +14,7 @@ export const PositionEngine = ({
   anchorRef,
   render,
   position,
+  exclude,
 }: Readonly<PositionEngineProps>): React.ReactNode => {
   const [renderedElement, setRenderedElement] = useState<React.ReactNode>();
 
@@ -21,6 +23,7 @@ export const PositionEngine = ({
 
     const positionEngine = new PositionEngineCore.PositionEngine({
       position,
+      exclude,
       element: anchorRef.current,
       onRender: (...args): void => {
         setRenderedElement(render(...args));
@@ -28,7 +31,7 @@ export const PositionEngine = ({
     });
 
     return positionEngine.destroy;
-  }, [anchorRef, position, render]);
+  }, [anchorRef, position, render, exclude]);
 
   return renderedElement;
 };
