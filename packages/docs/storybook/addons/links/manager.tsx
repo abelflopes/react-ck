@@ -11,15 +11,27 @@ addons.register("links-toolbar", () => {
     type: types.TOOLEXTRA,
     render: () => (
       <>
-        <IconButton placeholder="Report an issue" href={`${packageJson.homepage}/issues`}>
+        <IconButton
+          placeholder="Report an issue"
+          href={`${packageJson.homepage}/issues`}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}>
           Report an Issue
         </IconButton>
 
-        <IconButton placeholder="Make a Request" href={`${packageJson.homepage}/discussions`}>
+        <IconButton
+          placeholder="Make a Request"
+          href={`${packageJson.homepage}/discussions`}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}>
           Make a Request
         </IconButton>
 
-        <IconButton placeholder="GitHub" href={packageJson.homepage}>
+        <IconButton
+          placeholder="GitHub"
+          href={packageJson.homepage}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}>
           GitHub
         </IconButton>
       </>

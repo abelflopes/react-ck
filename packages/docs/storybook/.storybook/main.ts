@@ -58,8 +58,6 @@ const config: StorybookConfig = {
       (i) => !!i && i !== "..." && "test" in i && i.test?.toString() === "/\\.s[ac]ss$/iu",
     );
 
-    console.log("cssRule", cssRule);
-
     config.module?.rules?.push(cssRule);
 
     // Reduce log noise
