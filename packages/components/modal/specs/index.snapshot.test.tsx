@@ -6,7 +6,7 @@ import { getActRender } from "@react-ck/jest-config";
 describe("snapshot Modal", () => {
   it("renders correctly", async () => {
     const component = await getActRender(
-      <LayersProvider>
+      <LayersProvider usePortal={false}>
         <Modal>
           <Modal.Header heading="Heading" />
           <Modal.Footer>Footer</Modal.Footer>
