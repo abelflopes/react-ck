@@ -6,7 +6,7 @@ import { elevationMap } from "@react-ck/elevation";
 /** Data type for a layer with an additional 'id' property  */
 type LayerList = Array<LayerData & { id: string }>;
 
-export interface LayersProviderProps {
+export interface LayersProviderProps extends Pick<LayersContextProps, "usePortal"> {
   /** The child components to be wrapped by the LayersProvider  */
   children?: React.ReactNode;
 }
@@ -18,7 +18,10 @@ export interface LayersProviderProps {
  * @returns The rendered LayersProvider component
  */
 
-export const LayersProvider = ({ children }: Readonly<LayersProviderProps>): React.ReactElement => {
+export const LayersProvider = ({
+  children,
+  usePortal,
+}: Readonly<LayersProviderProps>): React.ReactElement => {
   const currlayer = useRef<number>(0);
   const [layers, setLayers] = useState<LayerList>([]);
 
@@ -41,7 +44,10 @@ export const LayersProvider = ({ children }: Readonly<LayersProviderProps>): Rea
     };
   }, []);
 
-  const contextValue = useMemo<LayersContextProps>(() => ({ createLayer }), [createLayer]);
+  const contextValue = useMemo<LayersContextProps>(
+    () => ({ createLayer, usePortal }),
+    [createLayer, usePortal],
+  );
 
   // Sort layers by elevation
   const computedLayers = useMemo(

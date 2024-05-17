@@ -23,13 +23,15 @@ export interface LayerProps {
 
 export const Layer = ({ elevation, children }: Readonly<LayerProps>): React.ReactNode => {
   const theme = useThemeContext();
-  const { createLayer } = useContext(LayersContext);
+  const { createLayer, usePortal } = useContext(LayersContext);
 
   /** Generates the portal element wrapped by theme */
   const layerElement = useMemo(
     () =>
-      createPortal(<ThemeProvider theme={theme.theme}>{children}</ThemeProvider>, document.body),
-    [children, theme.theme],
+      usePortal
+        ? createPortal(<ThemeProvider theme={theme.theme}>{children}</ThemeProvider>, document.body)
+        : children,
+    [children, theme.theme, usePortal],
   );
 
   /** Renders the layer */

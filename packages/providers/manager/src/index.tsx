@@ -1,11 +1,14 @@
 import React from "react";
 import { ThemeProvider, type ThemeProviderProps } from "@react-ck/theme";
-import { LayersProvider } from "@react-ck/layers";
+import { LayersProvider, type LayersProviderProps } from "@react-ck/layers";
 
 /** Props for the Manager component  */
 export interface ManagerProps {
   /** Properties of the {@link ThemeProvider} */
   theme?: Omit<ThemeProviderProps, "children">;
+  /** If true, renders app layers on document body instead of on same level of root element,
+   * if set to false keep in mind that tit might affect positioning of floating elements */
+  usePortal?: LayersProviderProps["usePortal"];
   /** Content slot */
   children: React.ReactNode;
 }
@@ -15,8 +18,12 @@ export interface ManagerProps {
  * @param props - {@link ManagerProps}
  * @returns The provided content wrapped by theme & layers providers.
  */
-export const Manager = ({ theme, children }: Readonly<ManagerProps>): React.ReactElement => (
+export const Manager = ({
+  theme,
+  children,
+  usePortal = true,
+}: Readonly<ManagerProps>): React.ReactElement => (
   <ThemeProvider {...theme}>
-    <LayersProvider>{children}</LayersProvider>
+    <LayersProvider usePortal={usePortal}>{children}</LayersProvider>
   </ThemeProvider>
 );
