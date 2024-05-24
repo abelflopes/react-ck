@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.3.0...@react-ck/provisional@1.4.0) (2024-05-24)
+
+
+### Features
+
+* implement dropdown with positioning engine ([7293105](https://github.com/abelflopes/react-ck/commit/7293105fbf1ff42f4312477b7a076440c4c6f8c6))
+
+
+### Bug Fixes
+
+* positioning engine ([ae965d8](https://github.com/abelflopes/react-ck/commit/ae965d8b40f85a8e1494c4bad69dfd94940da1d2))
+* snackbar z-index ([588ae3c](https://github.com/abelflopes/react-ck/commit/588ae3c9e4dc059bee002cf86a33d6ae9d70b77d))
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.2.9...@react-ck/provisional@1.3.0) (2024-03-19)
 
 
