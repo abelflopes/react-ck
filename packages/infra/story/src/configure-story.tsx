@@ -12,7 +12,7 @@ import {
 import { capitalCase } from "change-case";
 
 interface ConfigureStoryExtra {
-  subComponents?: [unknown];
+  subComponents?: unknown[];
   type?: "Component" | "Hook";
 }
 
