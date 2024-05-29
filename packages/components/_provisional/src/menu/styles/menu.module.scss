@@ -1,0 +1,36 @@
+@import "@react-ck/theme";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: solid get-css-var(spacing, border) get-color(neutral-light-3);
+}
+
+.header {
+  border-bottom: solid get-css-var(spacing, border) get-color(neutral-light-3);
+}
+
+.footer {
+  border-top: solid get-css-var(spacing, border) get-color(neutral-light-3);
+}
+
+.header,
+.footer,
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: get-spacing(1);
+  padding: get-spacing(1);
+}
+
+.header,
+.footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.content {
+  flex-grow: 1;
+  flex-shrink: 1;
+}

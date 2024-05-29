@@ -1,0 +1,17 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+
+.root {
+  @include text-base;
+  @include text-variation(h3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: get-spacing(1);
+
+  &.expanded {
+    justify-content: flex-start;
+    padding-right: get-spacing(1);
+  }
+}
