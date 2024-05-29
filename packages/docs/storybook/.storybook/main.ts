@@ -8,7 +8,6 @@ const config: StorybookConfig = {
     "../addons/title",
     "../addons/links",
     "../addons/package-info",
-    "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
     "@whitespace/storybook-addon-html",
