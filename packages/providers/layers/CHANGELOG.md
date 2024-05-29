@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.1.14...@react-ck/layers@1.2.0) (2024-05-24)
+
+
+### Features
+
+* allow rendering layers without react portal ([a37e0de](https://github.com/abelflopes/react-ck/commit/a37e0de01ab4778386798292221bd3078646d8fc))
+
+
+
 ## [1.1.14](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.1.13...@react-ck/layers@1.1.14) (2024-03-19)
 
 **Note:** Version bump only for package @react-ck/layers

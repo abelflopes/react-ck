@@ -1,3 +1,24 @@
+## [1.21.0](https://github.com/abelflopes/react-ck/compare/v1.20.0...v1.21.0) (2024-05-24)
+
+
+### Features
+
+* add button ref ([7db6790](https://github.com/abelflopes/react-ck/commit/7db6790c7e7d3e71f4e0afe0446749678321e61f))
+* allow rendering layers without react portal ([a37e0de](https://github.com/abelflopes/react-ck/commit/a37e0de01ab4778386798292221bd3078646d8fc))
+* implement dropdown with positioning engine ([7293105](https://github.com/abelflopes/react-ck/commit/7293105fbf1ff42f4312477b7a076440c4c6f8c6))
+* **react-ck:** global library package ([f3ff0e5](https://github.com/abelflopes/react-ck/commit/f3ff0e50213d9c66b87c1c0c7bf0473a9fc9aefa))
+
+
+### Bug Fixes
+
+* positioning engine ([ae965d8](https://github.com/abelflopes/react-ck/commit/ae965d8b40f85a8e1494c4bad69dfd94940da1d2))
+* snackbar z-index ([588ae3c](https://github.com/abelflopes/react-ck/commit/588ae3c9e4dc059bee002cf86a33d6ae9d70b77d))
+
+
+### Code Refactoring
+
+* use portal to render layers ([efd0a4f](https://github.com/abelflopes/react-ck/commit/efd0a4f5bc8ec08649b7da6552088eee4286b0f3))
+
 ## [1.20.0](https://github.com/abelflopes/react-ck/compare/v1.19.0...v1.20.0) (2024-03-19)
 
 

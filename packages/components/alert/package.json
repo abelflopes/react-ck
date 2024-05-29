@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/alert",
   "private": false,
-  "version": "1.2.9",
+  "version": "1.2.10",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -32,7 +32,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/button": "^1.4.9",
+    "@react-ck/button": "^1.5.0",
     "@react-ck/icon": "^1.5.9",
     "@react-ck/text": "^1.4.9",
     "@react-ck/theme": "^1.7.0",
