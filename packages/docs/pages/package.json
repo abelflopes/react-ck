@@ -13,6 +13,6 @@
   "dependencies": {
     "@react-ck/manager": "*",
     "@react-ck/text": "*",
-    "@storybook/blocks": "^7.5.1"
+    "@storybook/blocks": "^8.1.4"
   }
 }
