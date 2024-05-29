@@ -2,16 +2,14 @@
 @import "@react-ck/text";
 
 .root {
-  @include text-base;
-  @include text-variation(h3);
+  display: block;
+  background-color: get-color(neutral-light-2);
+  min-height: get-css-var(spacing, border);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: get-spacing(1);
+  &.text {
+    @include text-base;
+    @include text-variation(extra-small);
 
-  &.expanded {
-    justify-content: flex-start;
-    padding-right: get-spacing(1);
+    padding: #{get-spacing(0.25)} #{get-spacing()};
   }
 }

@@ -1,21 +1,18 @@
-import React from "react";
 import styles from "./styles/menu-divider.module.scss";
+import React from "react";
 import classNames from "classnames";
-import { Avatar, type AvatarProps } from "../avatar";
 
 export interface MenuDividerProps extends React.HTMLAttributes<HTMLSpanElement> {
-  image: AvatarProps["image"];
-  label: AvatarProps["name"];
+  /** Passing a children will render a labeled separator, while omitting children will render a simple line separator */
+  children?: React.ReactNode;
 }
 
 export const MenuDivider = ({
-  image,
-  label,
   className,
+  children,
   ...otherProps
 }: Readonly<MenuDividerProps>): React.ReactElement => (
-  <span className={classNames(styles.root, className)} {...otherProps}>
-    <Avatar name={label} image={image} />
-    ssss
+  <span className={classNames(styles.root, children && styles.text, className)} {...otherProps}>
+    {children}
   </span>
 );

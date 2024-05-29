@@ -1,9 +1,30 @@
 @import "@react-ck/theme";
+@import "@react-ck/text";
 
 .root {
-  border-radius: get-spacing(1);
+  @include text-base;
 
-  &.expanded {
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  gap: get-spacing();
+  padding: get-spacing();
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover:not(.disabled),
+  &.highlighted {
+    background-color: get-color(neutral-light-2);
+  }
+
+  &.selected {
+    background-color: get-color(highlight-primary);
+    color: get-color(neutral-light-1);
+  }
+
+  &.disabled {
+    // TODO: create shared mixin
+    cursor: not-allowed;
+    opacity: 0.4;
+    filter: grayscale(1);
   }
 }

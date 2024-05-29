@@ -1,24 +1,35 @@
-import React from "react";
-import { Button, type ButtonProps } from "@react-ck/button";
 import styles from "./styles/menu-item.module.scss";
+import React from "react";
 import classNames from "classnames";
 
-export interface MenuItemProps extends Omit<ButtonProps, "children" | "skin" | "icon"> {
-  icon: NonNullable<React.ReactNode>;
-  active: boolean;
+export interface MenuItemProps extends React.HTMLAttributes<HTMLElement> {
+  selected?: boolean;
+  highlighted?: boolean;
+  icon?: NonNullable<React.ReactNode>;
+  disabled?: boolean;
 }
 
 export const MenuItem = ({
   icon,
-  active,
+  selected,
+  highlighted,
+  disabled,
   className,
+  children,
   ...otherProps
 }: Readonly<MenuItemProps>): React.ReactElement => (
-  <Button
-    className={classNames(styles.root, className)}
-    skin={active ? "primary" : "ghost"}
-    icon={icon}
+  <li
+    className={classNames(
+      styles.root,
+      {
+        [`${styles.disabled}`]: disabled,
+        [`${styles.selected}`]: selected,
+        [`${styles.highlighted}`]: highlighted,
+      },
+      className,
+    )}
     {...otherProps}>
-    sss{" "}
-  </Button>
+    {icon}
+    {children}
+  </li>
 );
