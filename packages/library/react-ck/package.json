@@ -68,5 +68,6 @@
     "@react-ck/text": "^1.4.9",
     "@react-ck/textarea": "^1.2.10",
     "@react-ck/theme": "^1.7.0"
-  }
+  },
+  "gitHead": "2e19dce9ac83062a4690d735bb3a1f7552c9a5c6"
 }
