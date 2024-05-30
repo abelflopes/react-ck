@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import React from "react";
-import { Icon, type IconProps, Spinner as SpinnerIcon } from "@react-ck/icon";
+import { Icon, type IconProps, IconSpinner } from "@react-ck/icon";
 
 export interface SpinnerProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, "children"> {
   size?: IconProps["size"];
@@ -22,6 +22,6 @@ export const Spinner = ({
   ...otherProps
 }: Readonly<SpinnerProps>): React.ReactElement => (
   <span {...otherProps} className={classNames(styles.root, styles[skin], className)}>
-    <Icon Icon={SpinnerIcon} size={size} />
+    <Icon Icon={IconSpinner} size={size} />
   </span>
 );

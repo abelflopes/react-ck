@@ -6,7 +6,7 @@ import { elevationMap } from "@react-ck/elevation";
 /** Data type for a layer with an additional 'id' property  */
 type LayerList = Array<LayerData & { id: string }>;
 
-export interface LayersProviderProps extends Pick<LayersContextProps, "usePortal"> {
+export interface LayersProviderProps extends Partial<Pick<LayersContextProps, "usePortal">> {
   /** The child components to be wrapped by the LayersProvider  */
   children?: React.ReactNode;
 }
@@ -20,7 +20,7 @@ export interface LayersProviderProps extends Pick<LayersContextProps, "usePortal
 
 export const LayersProvider = ({
   children,
-  usePortal,
+  usePortal = true,
 }: Readonly<LayersProviderProps>): React.ReactElement => {
   const currlayer = useRef<number>(0);
   const [layers, setLayers] = useState<LayerList>([]);

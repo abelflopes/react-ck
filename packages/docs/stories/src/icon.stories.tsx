@@ -2,7 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Icon } from "@react-ck/icon/src";
+import { Icon, IconBellFill, IconGitHub } from "@react-ck/icon/src";
 
 type Story = StoryObj<typeof Icon>;
 
@@ -23,7 +23,7 @@ export default meta;
 
 export const Normal: Story = {
   args: {
-    name: "bell-filled",
+    Icon: IconBellFill,
   },
 };
 
@@ -35,6 +35,6 @@ export const Inverted: Story = {
   },
   args: {
     skin: "inverted",
-    name: "github",
+    Icon: IconGitHub,
   },
 };

@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Dock } from "@react-ck/provisional/src";
-import { Bell, Cog, Folder, Home, Icon, UserCircle } from "@react-ck/icon";
+import { IconBell, IconCog, IconFolder, IconHome, Icon, IconUserCircle } from "@react-ck/icon";
 import { faker } from "@faker-js/faker";
 
 type Story = StoryObj<typeof Dock>;
@@ -25,16 +25,16 @@ const header = <Dock.MainItem label={faker.company.name()} image={faker.image.av
 
 const footer = (
   <>
-    <Dock.Item icon={<Icon Icon={Bell} />} label="Notifications" active={false} />
-    <Dock.Item icon={<Icon Icon={Cog} />} label="Settings" active={false} />
-    <Dock.Item icon={<Icon Icon={UserCircle} />} label="Profile" active={false} />
+    <Dock.Item icon={<Icon Icon={IconBell} />} label="Notifications" active={false} />
+    <Dock.Item icon={<Icon Icon={IconCog} />} label="Settings" active={false} />
+    <Dock.Item icon={<Icon Icon={IconUserCircle} />} label="Profile" active={false} />
   </>
 );
 
 const children = (
   <>
-    <Dock.Item icon={<Icon Icon={Home} />} label="Home" active />
-    <Dock.Item icon={<Icon Icon={Folder} />} label="Projects" active={false} />
+    <Dock.Item icon={<Icon Icon={IconHome} />} label="Home" active />
+    <Dock.Item icon={<Icon Icon={IconFolder} />} label="Projects" active={false} />
   </>
 );
 

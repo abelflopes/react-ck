@@ -5,7 +5,7 @@ import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
 import { Button } from "@react-ck/button/src";
-import { Close, Icon } from "@react-ck/icon";
+import { IconClose, Icon } from "@react-ck/icon";
 
 type Story = StoryObj<typeof Button>;
 
@@ -42,7 +42,7 @@ export const IconButton: Story = {
   args: {
     size: "s",
     skin: "ghost",
-    icon: <Icon Icon={Close} />,
+    icon: <Icon Icon={IconClose} />,
   },
 };
 

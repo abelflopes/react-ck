@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { type SortMode } from "./types";
-import { ChevronDown, ChevronUp, Icon } from "@react-ck/icon";
+import { IconChevronDown, IconChevronUp, Icon } from "@react-ck/icon";
 import styles from "./styles/index.module.scss";
 
 export interface TableHeadProps extends React.TdHTMLAttributes<HTMLTableCellElement> {
@@ -22,8 +22,8 @@ export const TableHead = ({
     })}>
     {children}
 
-    {sorting === "asc" && <Icon Icon={ChevronUp} className={styles.sortable_header_icon} />}
+    {sorting === "asc" && <Icon Icon={IconChevronUp} className={styles.sortable_header_icon} />}
 
-    {sorting === "desc" && <Icon Icon={ChevronDown} className={styles.sortable_header_icon} />}
+    {sorting === "desc" && <Icon Icon={IconChevronDown} className={styles.sortable_header_icon} />}
   </th>
 );

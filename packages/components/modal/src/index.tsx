@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ModalContext, type ModalContextProps, type ModalContextValue } from "./context";
 import { Card } from "@react-ck/card";
 import { Overlay } from "@react-ck/overlay";
-import { Close, Icon } from "@react-ck/icon";
+import { IconClose, Icon } from "@react-ck/icon";
 import { Button } from "@react-ck/button";
 import { Text } from "@react-ck/text";
 import { Layer } from "@react-ck/layers";
@@ -113,7 +113,7 @@ const Modal = ({
                   </Text>
 
                   {dismissable ? (
-                    <Button skin="ghost" icon={<Icon Icon={Close} />} onClick={handleClose} />
+                    <Button skin="ghost" icon={<Icon Icon={IconClose} />} onClick={handleClose} />
                   ) : null}
                 </header>
               ) : null}

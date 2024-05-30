@@ -14,38 +14,38 @@ import {
 } from "react-icons/cg";
 import { FaRegCircleUser } from "react-icons/fa6";
 
-export const Bell = BsBell;
+export const IconBell = BsBell;
 
-export const BellFill = BsBellFill;
+export const IconBellFill = BsBellFill;
 
-export const Close = GrClose;
+export const IconClose = GrClose;
 
-export const Linkedin = SiLinkedin;
+export const IconLinkedin = SiLinkedin;
 
-export const CodersRank = SiCodersrank;
+export const IconCodersRank = SiCodersrank;
 
-export const Npm = SiNpm;
+export const IconNpm = SiNpm;
 
-export const Codepen = SiCodepen;
+export const IconCodepen = SiCodepen;
 
-export const GitHub = SiGithub;
+export const IconGitHub = SiGithub;
 
-export const Spinner = CgSpinnerTwoAlt;
+export const IconSpinner = CgSpinnerTwoAlt;
 
-export const ChevronLeft = CgChevronLeft;
+export const IconChevronLeft = CgChevronLeft;
 
-export const ChevronRight = CgChevronRight;
+export const IconChevronRight = CgChevronRight;
 
-export const ChevronUp = CgChevronUp;
+export const IconChevronUp = CgChevronUp;
 
-export const ChevronDown = CgChevronDown;
+export const IconChevronDown = CgChevronDown;
 
-export const Trash = CgTrash;
+export const IconTrash = CgTrash;
 
-export const Home = CgHome;
+export const IconHome = CgHome;
 
-export const Cog = TbSettings;
+export const IconCog = TbSettings;
 
-export const Folder = TbFolder;
+export const IconFolder = TbFolder;
 
-export const UserCircle = FaRegCircleUser;
+export const IconUserCircle = FaRegCircleUser;
