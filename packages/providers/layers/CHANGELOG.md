@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.2.0...@react-ck/layers@1.2.1) (2024-05-30)
+
+
+### Bug Fixes
+
+* icon names conflicting with component exports on main lib package ([ad5d802](https://github.com/abelflopes/react-ck/commit/ad5d8023ac4090c1c564093adbca165b9a5bf63d))
+
+
+
 ## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.1.14...@react-ck/layers@1.2.0) (2024-05-24)
 
 

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.4.0...@react-ck/provisional@2.0.0) (2024-05-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* make icons library tree-shakable
+
+### Features
+
+* add menu component ([5b04991](https://github.com/abelflopes/react-ck/commit/5b04991fd5237a655421b3e0a6abf254129eb0ba))
+
+
+### Bug Fixes
+
+* icon names conflicting with component exports on main lib package ([ad5d802](https://github.com/abelflopes/react-ck/commit/ad5d8023ac4090c1c564093adbca165b9a5bf63d))
+* make icons library tree-shakable ([131264a](https://github.com/abelflopes/react-ck/commit/131264aadd18b710e84b4d1ccdad5d8c6a48f3d8))
+
+
+
 ## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.3.0...@react-ck/provisional@1.4.0) (2024-05-24)
 
 

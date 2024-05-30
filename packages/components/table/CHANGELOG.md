@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.13](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.3.12...@react-ck/table@1.3.13) (2024-05-30)
+
+**Note:** Version bump only for package @react-ck/table
+
+
+
+
+
 ## [1.3.12](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.3.11...@react-ck/table@1.3.12) (2024-05-24)
 
 **Note:** Version bump only for package @react-ck/table
