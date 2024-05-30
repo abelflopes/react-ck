@@ -1,3 +1,23 @@
+## [2.0.0](https://github.com/abelflopes/react-ck/compare/v1.21.0...v2.0.0) (2024-05-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* make icons library tree-shakable
+
+### Features
+
+* add menu component ([5b04991](https://github.com/abelflopes/react-ck/commit/5b04991fd5237a655421b3e0a6abf254129eb0ba))
+* **react-ck:** global library package ([104678a](https://github.com/abelflopes/react-ck/commit/104678ad0d5b35fee7770fa1bc0fd5b2dc319f1b))
+* **react-ck:** global library package ([cd77203](https://github.com/abelflopes/react-ck/commit/cd77203bdc9b37c8cfe4bb17e6b408f831ebbf00))
+
+
+### Bug Fixes
+
+* icon names conflicting with component exports on main lib package ([ad5d802](https://github.com/abelflopes/react-ck/commit/ad5d8023ac4090c1c564093adbca165b9a5bf63d))
+* make icons library tree-shakable ([131264a](https://github.com/abelflopes/react-ck/commit/131264aadd18b710e84b4d1ccdad5d8c6a48f3d8))
+* storybook crashing when entering variation pages ([a3aa4ec](https://github.com/abelflopes/react-ck/commit/a3aa4ec4b06f031eacf8236cb1d5f6de3c61e14c))
+
 ## [1.21.0](https://github.com/abelflopes/react-ck/compare/v1.20.0...v1.21.0) (2024-05-24)
 
 
