@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { Icon } from "@react-ck/icon";
+import { ChevronRight, Icon } from "@react-ck/icon";
 import { BreadcrumbItem } from "./BreadcrumbItem";
 
 interface BreadcrumbsProps extends Omit<React.HTMLAttributes<HTMLElement>, "children"> {
@@ -14,7 +14,7 @@ const Breadcrumbs = ({
   ...otherProps
 }: Readonly<BreadcrumbsProps>): React.ReactElement => {
   const computedItems = useMemo(
-    () => items.flatMap((i, k) => (k === 0 ? i : [<Icon key="_" name="chevron-right" />, i])),
+    () => items.flatMap((i, k) => (k === 0 ? i : [<Icon key="_" Icon={ChevronRight} />, i])),
     [items],
   );
 

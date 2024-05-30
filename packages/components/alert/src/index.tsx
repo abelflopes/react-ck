@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import { Text } from "@react-ck/text";
 import { Button } from "@react-ck/button";
-import { Icon } from "@react-ck/icon";
+import { Close, Icon } from "@react-ck/icon";
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Main title of the alert */
@@ -60,7 +60,7 @@ export const Alert = ({
 
       {dismissable ? (
         <Button
-          icon={<Icon name="close" />}
+          icon={<Icon Icon={Close} />}
           size="s"
           skin="ghost"
           onClick={() => {

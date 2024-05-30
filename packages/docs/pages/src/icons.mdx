@@ -1,6 +1,6 @@
 import { Meta, Title, IconGallery, IconItem } from "@storybook/blocks";
 import { Icon } from "@react-ck/icon/src";
-import icons from "@react-ck/icon/src/icons";
+import * as icons from "@react-ck/icon/src/icons";
 import { Input } from "@react-ck/input/src";
 import { Manager } from "@react-ck/manager/src";
 
@@ -9,7 +9,7 @@ import { Manager } from "@react-ck/manager/src";
 export function Demo ()  {
   const [search, setSearch] = React.useState("");
   const filteredIcons = Object.keys(icons).filter(function (i) {
-    return i.includes(search)
+    return i.toLowerCase().includes(search.toLowerCase())
   });
 
 return (
@@ -27,7 +27,7 @@ return (
     <IconGallery>
       {filteredIcons.map((icon) => (
         <IconItem key={icon} name={icon}>
-          <Icon name={icon} />
+          <Icon Icon={icons[icon]} />
         </IconItem>
       ))}
 

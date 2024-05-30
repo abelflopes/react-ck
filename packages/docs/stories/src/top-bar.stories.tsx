@@ -4,7 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Breadcrumbs, TopBar } from "@react-ck/provisional/src";
 import { Button } from "@react-ck/button";
-import { Icon } from "@react-ck/icon";
+import { ChevronLeft, Icon } from "@react-ck/icon";
 
 type Story = StoryObj<typeof TopBar>;
 
@@ -36,7 +36,7 @@ export const Component: Story = {
             skin="secondary"
             as={["a", { href: "/" }]}
             size="s"
-            icon={<Icon name="chevron-left" />}>
+            icon={<Icon Icon={ChevronLeft} />}>
             Back
           </Button>,
           <Breadcrumbs.Item key="2">Some Company</Breadcrumbs.Item>,

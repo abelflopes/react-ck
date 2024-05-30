@@ -3,17 +3,15 @@ import styles from "./styles/index.module.scss";
 import React, { type SVGAttributes } from "react";
 // Icons
 import { type IconType } from "react-icons";
-import icons from "./icons";
 import { useThemeContext } from "@react-ck/theme";
 import classNames from "classnames";
 
 export interface IconProps extends Omit<IconType, "size"> {
   size?: "text" | "m" | "l";
   skin?: "default" | "inverted";
-  /** Specifies the name of the icon to be rendered */
-  name: keyof typeof icons;
   /** Additional CSS class */
   className?: SVGAttributes<SVGElement>["className"];
+  Icon: IconType;
 }
 
 /**
@@ -25,13 +23,11 @@ export interface IconProps extends Omit<IconType, "size"> {
 export const Icon = ({
   size = "text",
   skin = "default",
-  name,
   className,
+  Icon,
   ...otherProps
 }: Readonly<IconProps>): React.ReactElement => {
   const themeContext = useThemeContext();
-
-  const Icon: IconType = icons[name];
 
   return (
     <Icon
