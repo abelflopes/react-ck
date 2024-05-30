@@ -31,14 +31,14 @@ export const Component: Story = {
   args: {
     open: true,
   },
-  render: ({ open }): React.ReactElement => {
+  render: ({ open, position }): React.ReactElement => {
     // eslint-disable-next-line react-hooks/rules-of-hooks -- exception for storybook
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     return (
       <>
         <Button rootRef={buttonRef}>Button</Button>
-        <Dropdown anchor={buttonRef} open={open}>
+        <Dropdown anchor={buttonRef} open={open} position={position}>
           Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla est, quidem
           enim a molestias accusantium quo officia provident maxime voluptatem, beatae delectus
           aliquid ipsa perferendis accusamus! Eius, laborum quisquam. Eius soluta deserunt
