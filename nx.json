@@ -1,0 +1,23 @@
+{
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    },
+    "test:unit": {
+      "cache": true
+    },
+    "test:snapshot": {
+      "cache": true
+    },
+    "lint:style": {
+      "cache": true
+    },
+    "lint:code": {
+      "cache": true
+    },
+    "lint:typescript": {
+      "cache": true
+    }
+  }
+}

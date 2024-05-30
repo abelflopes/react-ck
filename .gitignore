@@ -4,3 +4,4 @@ dist
 **/specs/coverage
 *.log
 .eslintcache
+.nx
