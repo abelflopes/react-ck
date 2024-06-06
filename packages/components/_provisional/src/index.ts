@@ -19,3 +19,5 @@ export * from "./snackbar";
 export * from "./overlay-spinner";
 
 export * from "./menu";
+
+export * from "./tooltip";
