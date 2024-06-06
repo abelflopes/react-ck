@@ -21,3 +21,5 @@ export * from "./overlay-spinner";
 export * from "./menu";
 
 export * from "./tooltip";
+
+export * from "./popover";
