@@ -1,7 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import { type SortMode } from "./types";
-import { IconChevronDown, IconChevronUp, Icon } from "@react-ck/icon";
+import { Icon } from "@react-ck/icon";
+import { IconChevronUp } from "@react-ck/icon/icons/IconChevronUp";
+import { IconChevronDown } from "@react-ck/icon/icons/IconChevronDown";
 import styles from "./styles/index.module.scss";
 
 export interface TableHeadProps extends React.TdHTMLAttributes<HTMLTableCellElement> {

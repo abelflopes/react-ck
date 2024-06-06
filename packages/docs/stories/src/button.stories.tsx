@@ -5,7 +5,8 @@ import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
 import { Button } from "@react-ck/button/src";
-import { IconClose, Icon } from "@react-ck/icon";
+import { Icon } from "@react-ck/icon/src";
+import { IconClose } from "@react-ck/icon/icons/IconClose";
 
 type Story = StoryObj<typeof Button>;
 

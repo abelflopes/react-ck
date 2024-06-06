@@ -1,0 +1,8 @@
+{
+  "extends": "@react-ck/typescript-config/tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./icons",
+    "rootDir": "./src/icons"
+  },
+  "include": ["./src/icons/*.ts"]
+}

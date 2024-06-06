@@ -2,7 +2,9 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Icon, IconBellFill, IconGitHub } from "@react-ck/icon/src";
+import { Icon } from "@react-ck/icon/src";
+import { IconGitHub } from "@react-ck/icon/icons/IconGitHub";
+import { IconBellFill } from "@react-ck/icon/icons/IconBellFill";
 
 type Story = StoryObj<typeof Icon>;
 

@@ -7,7 +7,8 @@ import { Text } from "@react-ck/text/src";
 import { Button } from "@react-ck/button/src";
 import { configureStory } from "@react-ck/story-config";
 import { Banner } from "@react-ck/banner/src";
-import { Icon, IconLinkedin } from "@react-ck/icon";
+import { Icon } from "@react-ck/icon/src";
+import { IconLinkedin } from "@react-ck/icon/icons/IconLinkedin";
 
 type Story = StoryObj<typeof Banner>;
 

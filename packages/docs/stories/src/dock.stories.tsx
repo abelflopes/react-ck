@@ -3,8 +3,13 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Dock } from "@react-ck/provisional/src";
-import { IconBell, IconCog, IconFolder, IconHome, Icon, IconUserCircle } from "@react-ck/icon";
+import { Icon } from "@react-ck/icon/src";
 import { faker } from "@faker-js/faker";
+import { IconBell } from "@react-ck/icon/icons/IconBell";
+import { IconCog } from "@react-ck/icon/icons/IconCog";
+import { IconFolder } from "@react-ck/icon/icons/IconFolder";
+import { IconHome } from "@react-ck/icon/icons/IconHome";
+import { IconUserCircle } from "@react-ck/icon/icons/IconUserCircle";
 
 type Story = StoryObj<typeof Dock>;
 

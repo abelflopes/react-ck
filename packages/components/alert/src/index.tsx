@@ -3,7 +3,8 @@ import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import { Text } from "@react-ck/text";
 import { Button } from "@react-ck/button";
-import { IconClose, Icon } from "@react-ck/icon";
+import { Icon } from "@react-ck/icon";
+import { IconClose } from "@react-ck/icon/icons/IconClose";
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Main title of the alert */

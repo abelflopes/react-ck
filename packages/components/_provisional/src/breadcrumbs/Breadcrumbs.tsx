@@ -1,7 +1,8 @@
 import React, { useMemo } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { IconChevronRight, Icon } from "@react-ck/icon";
+import { Icon } from "@react-ck/icon";
+import { IconChevronRight } from "@react-ck/icon/icons/IconChevronRight";
 import { BreadcrumbItem } from "./BreadcrumbItem";
 
 interface BreadcrumbsProps extends Omit<React.HTMLAttributes<HTMLElement>, "children"> {

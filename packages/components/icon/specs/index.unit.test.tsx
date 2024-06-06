@@ -1,7 +1,8 @@
 import React from "react";
-import { Icon, IconBellFill } from "../src/index";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { Icon } from "../src/index";
+import { IconBellFill } from "../src/icons/IconBellFill";
 
 describe("unit Icon", () => {
   it("renders correctly", async () => {

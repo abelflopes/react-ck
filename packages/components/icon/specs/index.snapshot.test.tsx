@@ -1,6 +1,7 @@
 import React from "react";
-import { Icon, IconBellFill } from "../src/index";
 import renderer from "react-test-renderer";
+import { Icon } from "../src/index";
+import { IconBellFill } from "../src/icons/IconBellFill";
 
 describe("snapshot Icon", () => {
   it("renders correctly", () => {

@@ -3,8 +3,9 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Breadcrumbs, TopBar } from "@react-ck/provisional/src";
-import { Button } from "@react-ck/button";
-import { IconChevronLeft, Icon } from "@react-ck/icon";
+import { Button } from "@react-ck/button/src";
+import { Icon } from "@react-ck/icon/src";
+import { IconChevronLeft } from "@react-ck/icon/icons/IconChevronLeft";
 
 type Story = StoryObj<typeof TopBar>;
 

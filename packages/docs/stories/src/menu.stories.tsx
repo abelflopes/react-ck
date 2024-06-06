@@ -3,8 +3,9 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Menu } from "@react-ck/provisional/src";
-import { Icon, IconUserCircle } from "@react-ck/icon";
+import { Icon } from "@react-ck/icon/src";
 import { faker } from "@faker-js/faker";
+import { IconUserCircle } from "@react-ck/icon/icons/IconUserCircle";
 
 type Story = StoryObj<typeof Menu>;
 
