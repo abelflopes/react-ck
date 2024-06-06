@@ -1,0 +1,31 @@
+@import "@react-ck/theme";
+
+.root {
+  color: get-css-var(icon, color);
+  font-size: get-css-var(icon, size);
+
+  // Add margin for icons next to each other
+  & + & {
+    margin-left: get-spacing(1);
+  }
+}
+
+.size_text {
+  @include define-css-var(icon, size, 1.1em);
+}
+
+.size_m {
+  @include define-css-var(icon, size, get-spacing(1.5));
+}
+
+.size_l {
+  @include define-css-var(icon, size, get-spacing(5));
+}
+
+.skin_default {
+  @include define-css-var(icon, color, currentColor);
+}
+
+.skin_inverted {
+  @include define-css-var(icon, color, get-color(neutral-light-1));
+}
