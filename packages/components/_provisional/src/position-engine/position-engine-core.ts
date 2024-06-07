@@ -1,9 +1,9 @@
 /* eslint-disable max-lines -- ddd */
 import { type StandardLonghandProperties } from "csstype";
 
-type PositionEngineAlign = "start" | "center" | "end";
-
 type PositionEngineBasePosition = "top" | "bottom" | "left" | "right";
+
+type PositionEngineAlign = "start" | "center" | "end" | "full";
 
 type PositionEngineStyle = Pick<
   StandardLonghandProperties,
@@ -89,6 +89,10 @@ export class PositionEngine {
         x: rect.width,
         y: rect.top,
       },
+      "top-full": {
+        x: document.body.clientWidth,
+        y: rect.top,
+      },
       "top-end": {
         x: rect.right,
         y: rect.top,
@@ -100,6 +104,10 @@ export class PositionEngine {
       "right-center": {
         x: windowWidth - rect.right,
         y: rect.height,
+      },
+      "right-full": {
+        x: windowWidth - rect.right,
+        y: document.body.clientHeight,
       },
       "right-end": {
         x: windowWidth - rect.right,
@@ -113,6 +121,10 @@ export class PositionEngine {
         x: rect.width,
         y: windowHeight - rect.bottom,
       },
+      "bottom-full": {
+        x: document.body.clientWidth,
+        y: windowHeight - rect.bottom,
+      },
       "bottom-end": {
         x: rect.right,
         y: windowHeight - rect.bottom,
@@ -124,6 +136,10 @@ export class PositionEngine {
       "left-center": {
         x: rect.left,
         y: rect.height,
+      },
+      "left-full": {
+        x: rect.left,
+        y: document.body.clientHeight,
       },
       "left-end": {
         x: rect.left,
@@ -150,6 +166,12 @@ export class PositionEngine {
         width: `${availableSpace["top-center"].x}px`,
         maxHeight: `${availableSpace["top-center"].y}px`,
       },
+      "top-full": {
+        bottom: `${windowHeight - rect.top}px`,
+        left: `0px`,
+        width: `${availableSpace["top-full"].x}px`,
+        maxHeight: `${availableSpace["top-full"].y}px`,
+      },
       "top-end": {
         bottom: `${windowHeight - rect.top}px`,
         right: `${windowWidth - rect.right}px`,
@@ -167,6 +189,12 @@ export class PositionEngine {
         left: `${rect.right}px`,
         maxWidth: `${availableSpace["right-center"].x}px`,
         height: `${availableSpace["right-center"].y}px`,
+      },
+      "right-full": {
+        top: `0px`,
+        left: `${rect.right}px`,
+        maxWidth: `${availableSpace["right-full"].x}px`,
+        height: `${availableSpace["right-full"].y}px`,
       },
       "right-end": {
         bottom: `${windowHeight - rect.bottom}px`,
@@ -186,6 +214,12 @@ export class PositionEngine {
         width: `${availableSpace["bottom-center"].x}px`,
         maxHeight: `${availableSpace["bottom-center"].y}px`,
       },
+      "bottom-full": {
+        top: `${rect.bottom}px`,
+        left: `0px`,
+        width: `${availableSpace["bottom-full"].x}px`,
+        maxHeight: `${availableSpace["bottom-full"].y}px`,
+      },
       "bottom-end": {
         top: `${rect.bottom}px`,
         right: `${windowWidth - rect.right}px`,
@@ -203,6 +237,12 @@ export class PositionEngine {
         right: `${windowWidth - rect.left}px`,
         maxWidth: `${availableSpace["left-center"].x}px`,
         height: `${availableSpace["left-center"].y}px`,
+      },
+      "left-full": {
+        top: `0px`,
+        right: `${windowWidth - rect.left}px`,
+        maxWidth: `${availableSpace["left-full"].x}px`,
+        height: `${availableSpace["left-full"].y}px`,
       },
       "left-end": {
         bottom: `${windowHeight - rect.bottom}px`,

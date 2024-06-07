@@ -62,6 +62,7 @@ export const Tooltip = ({
   return (
     internalOpen && (
       <PositionEngine
+        exclude={["full"]}
         position={position}
         anchorRef={anchor}
         render={({ style, position }) => (
