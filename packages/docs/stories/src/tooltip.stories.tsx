@@ -31,7 +31,7 @@ export default meta;
 export const Component: Story = {
   args: {
     open: undefined,
-    position: undefined,
+    position: "top-center",
   },
   render: ({ open, position }): React.ReactElement => {
     // eslint-disable-next-line react-hooks/rules-of-hooks -- exception for storybook
@@ -39,7 +39,7 @@ export const Component: Story = {
 
     return (
       <>
-        <Button rootRef={buttonRef}>Button</Button>
+        <Button rootRef={buttonRef}>Hover me</Button>
         <Tooltip anchor={buttonRef} open={open} position={position}>
           {faker.lorem.sentence(5)}
         </Tooltip>
