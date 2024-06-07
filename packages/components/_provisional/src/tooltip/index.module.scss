@@ -1,17 +1,133 @@
 @import "@react-ck/theme";
 @import "@react-ck/elevation";
+@import "@react-ck/text";
 
-$padding-v: #{get-spacing(0.5)};
+$outer-spacing: get-spacing(1);
+$inner-spacing-y: get-spacing(1);
+$inner-spacing-x: get-spacing(2);
+$caret-spacing: get-spacing(1.66);
+
+@mixin animation-initial {
+  opacity: 0;
+}
+
+@keyframes appear {
+  from {
+    @include animation-initial;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .container {
-  padding: #{$padding-v} 0;
+  @include define-css-var(tooltip, max-height, var(--pe-max-height));
+  @include define-css-var(tooltip, max-width, var(--pe-max-width));
+  @include define-css-var(tooltip, container-padding-x, 0);
+  @include define-css-var(tooltip, container-padding-y, 0);
+
+  padding: #{get-css-var(tooltip, container-padding-y)} #{get-css-var(tooltip, container-padding-x)};
   box-sizing: border-box;
   z-index: map-get-strict($elevation, popup);
+
+  @include animation-initial;
+
+  will-change: opacity;
+  animation: appear 0.2s ease forwards;
+
+  // Apply vertical spacing
+  &[class*="top"],
+  &[class*="bottom"] {
+    @include define-css-var(tooltip, container-padding-y, $outer-spacing);
+    @include define-css-var(
+      tooltip,
+      max-height,
+      calc(var(--pe-max-height) - #{$outer-spacing} * 2)
+    );
+
+    &[class*="start"] .content::before {
+      left: $caret-spacing;
+    }
+
+    &[class*="center"] .content::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &[class*="end"] .content::before {
+      right: $caret-spacing;
+    }
+  }
+
+  &[class*="left"],
+  &[class*="right"] {
+    @include define-css-var(tooltip, container-padding-x, $outer-spacing);
+    @include define-css-var(tooltip, max-width, calc(var(--pe-max-width) - #{$outer-spacing} * 2));
+
+    &[class*="start"] .content::before {
+      top: $caret-spacing;
+    }
+
+    &[class*="center"] .content::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &[class*="end"] .content::before {
+      bottom: $caret-spacing;
+    }
+  }
+
+  &[class*="top"] {
+    .content::before {
+      top: 100%;
+      border-color: get-color(neutral-light-1) transparent transparent transparent;
+      filter: drop-shadow(0 3px 2px get-color(neutral-light-3));
+    }
+  }
+
+  &[class*="bottom"] {
+    .content::before {
+      bottom: 100%;
+      border-color: transparent transparent get-color(neutral-light-1) transparent;
+      filter: drop-shadow(0 -3px 2px get-color(neutral-light-3));
+    }
+  }
+
+  &[class*="left"] {
+    .content::before {
+      left: 100%;
+      border-color: transparent transparent transparent get-color(neutral-light-1);
+      filter: drop-shadow(3px 0 2px get-color(neutral-light-3));
+    }
+  }
+
+  &[class*="right"] {
+    .content::before {
+      right: 100%;
+      border-color: transparent get-color(neutral-light-1) transparent transparent;
+      filter: drop-shadow(-3px 0 2px get-color(neutral-light-3));
+    }
+  }
 }
 
 .content {
-  padding: get-spacing(2);
-  max-height: calc(var(--pe-max-height) - #{$padding-v} * 2);
-  max-width: var(--pe-max-width);
+  @include text-base;
+  @include text-variation(extra-small);
+
+  position: relative;
+  padding: #{$inner-spacing-y} #{$inner-spacing-x};
+  max-height: get-css-var(tooltip, max-height);
+  max-width: get-css-var(tooltip, max-width);
   box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-width: get-spacing(0.66);
+    width: 0px;
+    height: 0px;
+  }
 }
