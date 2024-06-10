@@ -1,3 +1,37 @@
+## [3.0.0](https://github.com/abelflopes/react-ck/compare/v2.0.0...v3.0.0) (2024-06-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **icon:** allow any content type as icon
+* isolate icons from main bundle
+
+### Features
+
+* add full positioning for position engine ([d3dd36a](https://github.com/abelflopes/react-ck/commit/d3dd36aa38b433eabde8a9138d4cca38052e76bc))
+* **icon:** allow any content type as icon ([c1533d7](https://github.com/abelflopes/react-ck/commit/c1533d7700764859ee55a86aa3a42a75faf91a14))
+* implement tooltip base functionality ([f60642f](https://github.com/abelflopes/react-ck/commit/f60642f4f50912be424b2070ab9cbe34e29d832b))
+* **react-ck:** global library package ([cc1dfb3](https://github.com/abelflopes/react-ck/commit/cc1dfb31802bbdb80700efab428938ff7b6a764c))
+
+
+### Bug Fixes
+
+* apply classname in input root ([90d364c](https://github.com/abelflopes/react-ck/commit/90d364c48a0bdae9b2eafc532695dc1f20e7ca36))
+* broken elevation compilation ([5087353](https://github.com/abelflopes/react-ck/commit/5087353677a29b8db88998cabb0d44e462668178))
+* card shadow color ([5164977](https://github.com/abelflopes/react-ck/commit/516497755cd2db4cb449e1f9b4399cf4d4c81007))
+* remove unused import ([f00423f](https://github.com/abelflopes/react-ck/commit/f00423fc6b4c80b8c1f3f997cdd5614c4e5e6f57))
+
+
+### Code Refactoring
+
+* isolate icons from main bundle ([957742e](https://github.com/abelflopes/react-ck/commit/957742e12cbdeabd4d51272b05cf61e182463ef4))
+
+
+### Changes Reverted
+
+* remove generated file ([f6d6bc6](https://github.com/abelflopes/react-ck/commit/f6d6bc6096fd792aa2361e66549cbcd5f1a492a7))
+* restore removed file ([aa46133](https://github.com/abelflopes/react-ck/commit/aa4613323449de4761c1e0c2328d79a066340648))
+
 ## [2.0.0](https://github.com/abelflopes/react-ck/compare/v1.21.0...v2.0.0) (2024-05-30)
 
 
