@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@2.0.0...@react-ck/alert@3.0.0) (2024-06-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **icon:** allow any content type as icon
+* isolate icons from main bundle
+
+### Features
+
+* **icon:** allow any content type as icon ([c1533d7](https://github.com/abelflopes/react-ck/commit/c1533d7700764859ee55a86aa3a42a75faf91a14))
+
+
+### Code Refactoring
+
+* isolate icons from main bundle ([957742e](https://github.com/abelflopes/react-ck/commit/957742e12cbdeabd4d51272b05cf61e182463ef4))
+
+
+
 ## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@1.2.10...@react-ck/alert@2.0.0) (2024-05-30)
 
 

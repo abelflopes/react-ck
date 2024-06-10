@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.3.9...@react-ck/card@1.4.0) (2024-06-10)
+
+
+### Features
+
+* implement tooltip base functionality ([f60642f](https://github.com/abelflopes/react-ck/commit/f60642f4f50912be424b2070ab9cbe34e29d832b))
+
+
+### Bug Fixes
+
+* card shadow color ([5164977](https://github.com/abelflopes/react-ck/commit/516497755cd2db4cb449e1f9b4399cf4d4c81007))
+
+
+
 ## [1.3.9](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.3.8...@react-ck/card@1.3.9) (2024-03-19)
 
 **Note:** Version bump only for package @react-ck/card

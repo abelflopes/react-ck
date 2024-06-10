@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/abelflopes/react-ck/compare/react-ck@1.2.10...react-ck@2.0.0) (2024-06-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* isolate icons from main bundle
+
+### Features
+
+* **react-ck:** global library package ([104678a](https://github.com/abelflopes/react-ck/commit/104678ad0d5b35fee7770fa1bc0fd5b2dc319f1b))
+
+
+### Code Refactoring
+
+* isolate icons from main bundle ([957742e](https://github.com/abelflopes/react-ck/commit/957742e12cbdeabd4d51272b05cf61e182463ef4))
+
+
+
 ## [1.2.10](https://github.com/abelflopes/react-ck/compare/react-ck@1.2.9...react-ck@1.2.10) (2024-05-30)
 
 **Note:** Version bump only for package react-ck
