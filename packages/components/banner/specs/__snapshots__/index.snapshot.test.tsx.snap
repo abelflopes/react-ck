@@ -5,7 +5,7 @@ exports[`snapshot Banner renders correctly 1`] = `
   className="root"
 >
   <div
-    className="root horizontal vertical big container"
+    className="kp4_BsUpQLhmUXzN0B14 WU6GfUbfWlTPlG_i3J4A hrZ_pUuCssLPjgirGaOt mDWveltSsvcVWs2x4y9J container"
   >
     Banner
   </div>
@@ -14,7 +14,7 @@ exports[`snapshot Banner renders correctly 1`] = `
     src="some-image-url"
   />
   <div
-    className="root dark"
+    className="rk8l3g0A2mGII3w6SvSF qQYf3MYVVZHC5SpUasDq"
   />
 </div>
 `;

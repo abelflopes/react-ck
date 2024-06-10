@@ -5,49 +5,52 @@ exports[`snapshot Modal renders correctly 1`] = `
   className="root"
 >
   <div
-    className="root dark clickable_overlay"
+    className="rk8l3g0A2mGII3w6SvSF qQYf3MYVVZHC5SpUasDq clickable_overlay"
     onClick={[Function]}
   />
   <div
-    className="root card bordered vertical spacing_m"
+    className="SmAmdC1tY93qCVF4nESS card Bgpa5QimcVecwdpO6Yp_ ykZbCp70yT2_ZlQi1eYm DWhyP7nczWLupx5rp_u0"
   >
     <div
-      className="content"
+      className="NDjiBgEFxz6jHvUefwHF"
     >
       <header
         className="header"
         heading="Heading"
       >
         <p
-          className="root variation_h3 skin_default margin_none"
+          className="pUPZy0cW04sX8Z7LYFoW vp2Bf4A4dZccdeXkj868 _16mfmmOgUx7ABbG4_gY"
         >
           Heading
         </p>
         <button
-          className="root ghost size-m icon-only"
+          className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A iFlqPKpeR75gwXXvY2Sc o__iZDgMRfw5cnm6KAMN"
           onClick={[Function]}
         >
-          <svg
-            className="root size_text skin_default"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="VsR_m2r2hGIr7NfX85BU YEVFelv_bfcF2Ee4WG8g sf93RNkSSnS5VkGCtSLh"
           >
-            <path
-              d="M3,3 L21,21 M3,21 L21,3"
-              fill="none"
-              strokeWidth="2"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3,3 L21,21 M3,21 L21,3"
+                fill="none"
+                strokeWidth="2"
+              />
+            </svg>
+          </span>
         </button>
       </header>
       <main
