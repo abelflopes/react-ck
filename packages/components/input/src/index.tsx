@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles/index.module.scss";
-import classNames from "classnames";
 import { FormField, type FormFieldProps } from "@react-ck/form-field";
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "children"> {
@@ -24,7 +23,7 @@ export const Input = ({
   className,
   ...props
 }: Readonly<InputProps>): React.ReactElement => (
-  <FormField {...{ skin, label, description, validationMessage }}>
-    <input {...props} className={classNames(className, styles.root)} />
+  <FormField {...{ skin, label, description, validationMessage }} className={className}>
+    <input {...props} className={styles.root} />
   </FormField>
 );
