@@ -33,7 +33,8 @@ iconMap.forEach((data) => {
 logger.info(`Generating all ${iconMap.length} icons bundle`);
 ((): void => {
   let fileContents = banner;
-  fileContents += iconMap.map(generateIconExport).join("\n");
+  fileContents += iconMap.map(generateIconExport).join("\n\n");
+  fileContents += "\n";
 
   fs.writeFileSync(path.resolve(destFolder, `./All.ts`), fileContents, {
     encoding: "utf-8",
