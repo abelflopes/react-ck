@@ -20,7 +20,8 @@
     "test": "npx -y npm-run-all -s test:*",
     "test:unit": "jest --testPathPattern=\".unit.*\"",
     "test:snapshot": "jest --testPathPattern=\".snapshot.*\"",
-    "test:snapshot:update": "jest --testPathPattern=\".snapshot.*\" -u"
+    "test:snapshot:update": "jest --testPathPattern=\".snapshot.*\" -u",
+    "clean": "rm -rf icons src/icons"
   },
   "devDependencies": {
     "@react-ck/babel-config": "^1.0.0",
