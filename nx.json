@@ -4,6 +4,10 @@
       "cache": true,
       "dependsOn": ["^build"]
     },
+    "prebuild": {
+      "cache": true,
+      "dependsOn": ["^prebuild"]
+    },
     "test:unit": {
       "cache": true
     },

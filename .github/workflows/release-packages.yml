@@ -54,7 +54,7 @@ jobs:
         run: npm run build:infra
         
       - name: Prebuild
-        run: npm exec -- lerna run prebuild
+        run: npm run prebuild
 
       - name: Run Tests
         run: npm run test

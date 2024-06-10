@@ -5,43 +5,43 @@ exports[`snapshot Pagination renders correctly 1`] = `
   className="root"
 >
   <button
-    className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A v8zUmjB0cGdl6WakyvEG"
+    className="root ghost size-s"
     onClick={[Function]}
   >
     1
   </button>
   <button
-    className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A v8zUmjB0cGdl6WakyvEG"
+    className="root ghost size-s"
     onClick={[Function]}
   >
     ...
   </button>
   <button
-    className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A v8zUmjB0cGdl6WakyvEG"
+    className="root ghost size-s"
     onClick={[Function]}
   >
     9
   </button>
   <button
-    className="DC_YTmu4cc8lQzC7BBU0 _32QMon0mydW2y9rpt4j v8zUmjB0cGdl6WakyvEG"
+    className="root secondary size-s"
     onClick={[Function]}
   >
     10
   </button>
   <button
-    className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A v8zUmjB0cGdl6WakyvEG"
+    className="root ghost size-s"
     onClick={[Function]}
   >
     11
   </button>
   <button
-    className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A v8zUmjB0cGdl6WakyvEG"
+    className="root ghost size-s"
     onClick={[Function]}
   >
     ...
   </button>
   <button
-    className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A v8zUmjB0cGdl6WakyvEG"
+    className="root ghost size-s"
     onClick={[Function]}
   >
     20

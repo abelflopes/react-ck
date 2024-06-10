@@ -2,10 +2,10 @@
 
 exports[`snapshot Textarea renders correctly 1`] = `
 <div
-  className="NaLu6jjg8ioYX0M15ekJ PUaNxjsha8suLGUznxre"
+  className="root default"
 >
   <div
-    className="LHcw_bAar8seHNvq7EEn"
+    className="content"
   >
     <textarea
       className="root"

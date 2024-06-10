@@ -2,14 +2,14 @@
 
 exports[`snapshot accordion renders correctly 1`] = `
 <ul
-  className="S4RfvZYq8oBYyg8Tvc11 Fz1r5c2DeOTDEJJNyZ3e"
+  className="root bordered"
 >
   <li
-    className="FlSuusuTeSFELqaUEEDm"
+    className="item"
   >
     <details>
       <summary
-        className="oh25tCczSn9Fx8RaqvtQ"
+        className="header"
       >
         item 1
       </summary>
@@ -21,11 +21,11 @@ exports[`snapshot accordion renders correctly 1`] = `
     </details>
   </li>
   <li
-    className="FlSuusuTeSFELqaUEEDm"
+    className="item"
   >
     <details>
       <summary
-        className="oh25tCczSn9Fx8RaqvtQ"
+        className="header"
       >
         item 2
       </summary>

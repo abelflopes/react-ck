@@ -13,6 +13,7 @@
     "prepare": "husky",
     "start": "lerna run start --parallel --stream --ignore @react-ck/*config* --ignore @react-ck/*app*",
     "start:apps": "lerna run start --parallel --stream --scope @react-ck/*app*",
+    "prebuild": "lerna run prebuild && lerna run build --scope @react-ck/icon",
     "build": "lerna run build --stream --ignore @react-ck/*config* --ignore @react-ck/*docs* --ignore @react-ck/*app*",
     "build:infra": "lerna run build --scope @react-ck/*config*",
     "build:docs": "lerna run build --scope @react-ck/*docs*",

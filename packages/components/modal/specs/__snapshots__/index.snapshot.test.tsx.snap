@@ -5,26 +5,26 @@ exports[`snapshot Modal renders correctly 1`] = `
   className="root"
 >
   <div
-    className="rk8l3g0A2mGII3w6SvSF qQYf3MYVVZHC5SpUasDq clickable_overlay"
+    className="root dark clickable_overlay"
     onClick={[Function]}
   />
   <div
-    className="SmAmdC1tY93qCVF4nESS card Bgpa5QimcVecwdpO6Yp_ ykZbCp70yT2_ZlQi1eYm DWhyP7nczWLupx5rp_u0"
+    className="root card bordered vertical spacing_m"
   >
     <div
-      className="NDjiBgEFxz6jHvUefwHF"
+      className="content"
     >
       <header
         className="header"
         heading="Heading"
       >
         <p
-          className="pUPZy0cW04sX8Z7LYFoW vp2Bf4A4dZccdeXkj868 _16mfmmOgUx7ABbG4_gY"
+          className="root variation_h3 skin_default margin_none"
         >
           Heading
         </p>
         <button
-          className="DC_YTmu4cc8lQzC7BBU0 jhpuj9VM9i_WxlBNM05A iFlqPKpeR75gwXXvY2Sc o__iZDgMRfw5cnm6KAMN"
+          className="root ghost size-m icon-only"
           onClick={[Function]}
         >
           <span

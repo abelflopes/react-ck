@@ -5,44 +5,44 @@ exports[`snapshot Form renders correctly 1`] = `
   className="root"
 >
   <div
-    className="NaLu6jjg8ioYX0M15ekJ PUaNxjsha8suLGUznxre"
+    className="root default"
   >
     <label
-      className="pUPZy0cW04sX8Z7LYFoW t1q5XBXcHN6y1euKcGAS JhzPqY7lkN_IdOIhdwHd _16mfmmOgUx7ABbG4_gY"
+      className="root variation_small skin_bold margin_none label"
       htmlFor="aaa"
     >
       Email Address
     </label>
     <div
-      className="LHcw_bAar8seHNvq7EEn"
+      className="content"
     >
       <input
-        className="tl3JnF9uboqhTNnw4NrU"
+        className="root"
         onChange={[Function]}
         placeholder="john-doe@aaa.com"
         value=""
       />
     </div>
     <p
-      className="pUPZy0cW04sX8Z7LYFoW t1q5XBXcHN6y1euKcGAS _16mfmmOgUx7ABbG4_gY"
+      className="root variation_small skin_default margin_none description"
     >
       Your work email address
     </p>
   </div>
   <div
-    className="NaLu6jjg8ioYX0M15ekJ PUaNxjsha8suLGUznxre"
+    className="root default"
   >
     <label
-      className="pUPZy0cW04sX8Z7LYFoW t1q5XBXcHN6y1euKcGAS JhzPqY7lkN_IdOIhdwHd _16mfmmOgUx7ABbG4_gY"
+      className="root variation_small skin_bold margin_none label"
       htmlFor="aaa"
     >
       Password
     </label>
     <div
-      className="LHcw_bAar8seHNvq7EEn"
+      className="content"
     >
       <input
-        className="tl3JnF9uboqhTNnw4NrU"
+        className="root"
         onChange={[Function]}
         placeholder="Strong password"
         type="password"
@@ -50,25 +50,25 @@ exports[`snapshot Form renders correctly 1`] = `
       />
     </div>
     <p
-      className="pUPZy0cW04sX8Z7LYFoW t1q5XBXcHN6y1euKcGAS _16mfmmOgUx7ABbG4_gY"
+      className="root variation_small skin_default margin_none description"
     >
       Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters
     </p>
   </div>
   <div
-    className="NaLu6jjg8ioYX0M15ekJ PUaNxjsha8suLGUznxre"
+    className="root default"
   >
     <label
-      className="pUPZy0cW04sX8Z7LYFoW t1q5XBXcHN6y1euKcGAS JhzPqY7lkN_IdOIhdwHd _16mfmmOgUx7ABbG4_gY"
+      className="root variation_small skin_bold margin_none label"
       htmlFor="aaa"
     >
       Repeat Password
     </label>
     <div
-      className="LHcw_bAar8seHNvq7EEn"
+      className="content"
     >
       <input
-        className="tl3JnF9uboqhTNnw4NrU"
+        className="root"
         onChange={[Function]}
         placeholder="Repeat password"
         type="password"
