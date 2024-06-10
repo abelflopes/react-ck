@@ -28,6 +28,9 @@ jobs:
       - name: Build config packages
         run: npm run build:infra
 
+      - name: Build
+        run: npm run build
+
       - name: Run Tests
         run: npm run test
 
@@ -40,9 +43,6 @@ jobs:
 
       - name: Run Formatting Checks
         run: npm run format
-
-      - name: Build
-        run: npm run build
 
       - name: Build test apps
         run: npm run build:apps
