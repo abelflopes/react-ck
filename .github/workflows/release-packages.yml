@@ -52,7 +52,7 @@ jobs:
 
       - name: Build config packages
         run: npm run build:infra
-        
+
       - name: Prebuild
         run: npm run prebuild
 
