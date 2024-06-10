@@ -1,0 +1,24 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+
+.root {
+  background: get-color(neutral-light-3);
+  padding: get-spacing(1);
+  gap: get-spacing(1);
+  display: flex;
+}
+
+.field {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.error {
+  @include text-base;
+  @include text-variation(smallest);
+
+  margin: 0;
+  background-color: get-color(status-negative);
+  color: get-color(neutral-light-1);
+  padding: get-spacing(0.25) get-spacing(1);
+}

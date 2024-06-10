@@ -1,0 +1,64 @@
+@import "@react-ck/theme";
+@import "@react-ck/text";
+
+$spacing-y: get-spacing(0.5);
+
+.root {
+  margin-left: get-css-var(chat-message, margin-left);
+  margin-right: get-css-var(chat-message, margin-right);
+
+  &:not(:first-child) {
+    margin-top: $spacing-y;
+  }
+
+  &.received {
+    @include define-css-var(chat-message, background-color, get-color(neutral-light-3));
+    @include define-css-var(chat-message, color, get-color(neutral-dark-4));
+    @include define-css-var(chat-message, margin-right, auto);
+  }
+
+  &.sent {
+    @include define-css-var(chat-message, background-color, get-color(highlight-primary));
+    @include define-css-var(chat-message, color, get-color(neutral-light-1));
+    @include define-css-var(chat-message, margin-left, auto);
+
+    .sender {
+      text-align: right;
+    }
+  }
+
+  &.sent + &.sent {
+    margin-top: get-spacing(0.1);
+
+    .sender {
+      display: none;
+    }
+  }
+
+  &.received + &.received {
+    margin-top: get-spacing(0.1);
+
+    .sender {
+      display: none;
+    }
+  }
+}
+
+.text {
+  @include text-base;
+  @include text-variation(extra-small);
+
+  background-color: get-css-var(chat-message, background-color);
+  color: get-css-var(chat-message, color);
+  border-radius: get-spacing(2);
+  padding: get-spacing(1) get-spacing(1.5);
+  word-break: break-word;
+}
+
+.sender {
+  @include text-base;
+  @include text-variation(smallest);
+
+  color: get-color(neutral-dark-1);
+  padding: 0 get-spacing(-5);
+}

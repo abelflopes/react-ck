@@ -23,3 +23,5 @@ export * from "./menu";
 export * from "./tooltip";
 
 export * from "./popover";
+
+export * from "./chat";
