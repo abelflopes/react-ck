@@ -53,6 +53,7 @@ jobs:
       - name: Build
         run: |
           npm run build:infra
+          npm run prebuild
           npm run build:docs
 
       - name: Setup Pages
