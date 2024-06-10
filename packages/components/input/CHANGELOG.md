@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.11](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.3.10...@react-ck/input@1.3.11) (2024-06-10)
+
+
+### Bug Fixes
+
+* apply classname in input root ([90d364c](https://github.com/abelflopes/react-ck/commit/90d364c48a0bdae9b2eafc532695dc1f20e7ca36))
+
+
+
 ## [1.3.10](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.3.9...@react-ck/input@1.3.10) (2024-03-19)
 
 **Note:** Version bump only for package @react-ck/input

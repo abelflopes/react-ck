@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@2.0.0...@react-ck/provisional@3.0.0) (2024-06-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **icon:** allow any content type as icon
+* isolate icons from main bundle
+
+### Features
+
+* add full positioning for position engine ([d3dd36a](https://github.com/abelflopes/react-ck/commit/d3dd36aa38b433eabde8a9138d4cca38052e76bc))
+* **icon:** allow any content type as icon ([c1533d7](https://github.com/abelflopes/react-ck/commit/c1533d7700764859ee55a86aa3a42a75faf91a14))
+* implement tooltip base functionality ([f60642f](https://github.com/abelflopes/react-ck/commit/f60642f4f50912be424b2070ab9cbe34e29d832b))
+
+
+### Bug Fixes
+
+* remove unused import ([f00423f](https://github.com/abelflopes/react-ck/commit/f00423fc6b4c80b8c1f3f997cdd5614c4e5e6f57))
+
+
+### Code Refactoring
+
+* isolate icons from main bundle ([957742e](https://github.com/abelflopes/react-ck/commit/957742e12cbdeabd4d51272b05cf61e182463ef4))
+
+
+
 ## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@1.4.0...@react-ck/provisional@2.0.0) (2024-05-30)
 
 
