@@ -6,7 +6,13 @@ import { IconBellFill } from "../src/icons/IconBellFill";
 
 describe("unit Icon", () => {
   it("renders correctly", async () => {
-    render(<Icon Icon={IconBellFill} data-testid="icon" />);
+    render(
+      <Icon data-testid="icon">
+        <Icon>
+          <IconBellFill />
+        </Icon>
+      </Icon>,
+    );
     const find = await screen.findByTestId("icon");
     expect(find).toBeInTheDocument();
   });

@@ -54,8 +54,12 @@ export const ChatPrompt = ({
           autoFocus
           required
         />
-        <Button>
-          {/* <Icon Icon={<LuSendHorizonal size="20" />} /> */}
+        <Button
+          icon={
+            <Icon>
+              <LuSendHorizonal />
+            </Icon>
+          }>
           Send
         </Button>
       </form>

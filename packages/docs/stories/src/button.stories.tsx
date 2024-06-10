@@ -43,7 +43,11 @@ export const IconButton: Story = {
   args: {
     size: "s",
     skin: "ghost",
-    icon: <Icon Icon={IconClose} />,
+    icon: (
+      <Icon>
+        <IconClose />
+      </Icon>
+    ),
   },
 };
 

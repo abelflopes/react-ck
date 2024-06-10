@@ -37,7 +37,11 @@ export const Component: Story = {
             skin="secondary"
             as={["a", { href: "/" }]}
             size="s"
-            icon={<Icon Icon={IconChevronLeft} />}>
+            icon={
+              <Icon>
+                <IconChevronLeft />
+              </Icon>
+            }>
             Back
           </Button>,
           <Breadcrumbs.Item key="2">Some Company</Breadcrumbs.Item>,

@@ -5,7 +5,13 @@ import { IconBellFill } from "../src/icons/IconBellFill";
 
 describe("snapshot Icon", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Icon Icon={IconBellFill} />).toJSON();
+    const tree = renderer
+      .create(
+        <Icon>
+          <IconBellFill />
+        </Icon>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

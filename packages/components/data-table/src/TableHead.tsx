@@ -24,8 +24,16 @@ export const TableHead = ({
     })}>
     {children}
 
-    {sorting === "asc" && <Icon Icon={IconChevronUp} className={styles.sortable_header_icon} />}
+    {sorting === "asc" && (
+      <Icon className={styles.sortable_header_icon}>
+        <IconChevronUp />
+      </Icon>
+    )}
 
-    {sorting === "desc" && <Icon Icon={IconChevronDown} className={styles.sortable_header_icon} />}
+    {sorting === "desc" && (
+      <Icon className={styles.sortable_header_icon}>
+        <IconChevronDown />
+      </Icon>
+    )}
   </th>
 );

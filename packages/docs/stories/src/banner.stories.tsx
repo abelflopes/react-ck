@@ -39,7 +39,9 @@ export const Component: Story = {
 
         <Text>{faker.lorem.sentence()}</Text>
 
-        <Icon Icon={IconLinkedin} />
+        <Icon>
+          <IconLinkedin />
+        </Icon>
       </>
     ),
     actions: [

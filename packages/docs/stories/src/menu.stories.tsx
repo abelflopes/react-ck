@@ -30,14 +30,40 @@ const meta: Meta<typeof Menu> = {
 
 const children = (
   <>
-    <Menu.Item icon={<Icon Icon={IconUserCircle} />} selected>
+    <Menu.Item
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }
+      selected>
       {faker.person.firstName()}
     </Menu.Item>
-    <Menu.Item icon={<Icon Icon={IconUserCircle} />}>{faker.person.firstName()}</Menu.Item>
-    <Menu.Item icon={<Icon Icon={IconUserCircle} />} highlighted>
+    <Menu.Item
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }>
       {faker.person.firstName()}
     </Menu.Item>
-    <Menu.Item icon={<Icon Icon={IconUserCircle} />}>{faker.person.firstName()}</Menu.Item>
+    <Menu.Item
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }
+      highlighted>
+      {faker.person.firstName()}
+    </Menu.Item>
+    <Menu.Item
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }>
+      {faker.person.firstName()}
+    </Menu.Item>
     <Menu.Divider />
     <Menu.Item>{faker.animal.type()}</Menu.Item>
     <Menu.Item disabled>{faker.animal.type()}</Menu.Item>

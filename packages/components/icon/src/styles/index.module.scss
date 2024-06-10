@@ -3,10 +3,17 @@
 .root {
   color: get-css-var(icon, color);
   font-size: get-css-var(icon, size);
+  line-height: get-css-var(icon, size);
+  height: get-css-var(icon, size);
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  // Add margin for icons next to each other
-  & + & {
-    margin-left: get-spacing(1);
+  > * {
+    height: inherit;
+    width: 100%;
+    aspect-ratio: inherit;
   }
 }
 

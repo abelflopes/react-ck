@@ -61,7 +61,11 @@ export const Alert = ({
 
       {dismissable ? (
         <Button
-          icon={<Icon Icon={IconClose} />}
+          icon={
+            <Icon>
+              <IconClose />
+            </Icon>
+          }
           size="s"
           skin="ghost"
           onClick={() => {

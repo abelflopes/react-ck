@@ -23,6 +23,8 @@ export const Spinner = ({
   ...otherProps
 }: Readonly<SpinnerProps>): React.ReactElement => (
   <span {...otherProps} className={classNames(styles.root, styles[skin], className)}>
-    <Icon Icon={IconSpinner} size={size} />
+    <Icon size={size}>
+      <IconSpinner />
+    </Icon>
   </span>
 );

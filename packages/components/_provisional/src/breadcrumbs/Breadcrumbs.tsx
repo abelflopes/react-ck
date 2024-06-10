@@ -15,7 +15,17 @@ const Breadcrumbs = ({
   ...otherProps
 }: Readonly<BreadcrumbsProps>): React.ReactElement => {
   const computedItems = useMemo(
-    () => items.flatMap((i, k) => (k === 0 ? i : [<Icon key="_" Icon={IconChevronRight} />, i])),
+    () =>
+      items.flatMap((i, k) =>
+        k === 0
+          ? i
+          : [
+              <Icon key="_">
+                <IconChevronRight />
+              </Icon>,
+              i,
+            ],
+      ),
     [items],
   );
 

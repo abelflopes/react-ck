@@ -114,7 +114,15 @@ const Modal = ({
                   </Text>
 
                   {dismissable ? (
-                    <Button skin="ghost" icon={<Icon Icon={IconClose} />} onClick={handleClose} />
+                    <Button
+                      skin="ghost"
+                      icon={
+                        <Icon>
+                          <IconClose />
+                        </Icon>
+                      }
+                      onClick={handleClose}
+                    />
                   ) : null}
                 </header>
               ) : null}

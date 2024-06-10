@@ -30,16 +30,56 @@ const header = <Dock.MainItem label={faker.company.name()} image={faker.image.av
 
 const footer = (
   <>
-    <Dock.Item icon={<Icon Icon={IconBell} />} label="Notifications" active={false} />
-    <Dock.Item icon={<Icon Icon={IconCog} />} label="Settings" active={false} />
-    <Dock.Item icon={<Icon Icon={IconUserCircle} />} label="Profile" active={false} />
+    <Dock.Item
+      label="Notifications"
+      active={false}
+      icon={
+        <Icon>
+          <IconBell />
+        </Icon>
+      }
+    />
+    <Dock.Item
+      label="Settings"
+      active={false}
+      icon={
+        <Icon>
+          <IconCog />
+        </Icon>
+      }
+    />
+    <Dock.Item
+      label="Profile"
+      active={false}
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }
+    />
   </>
 );
 
 const children = (
   <>
-    <Dock.Item icon={<Icon Icon={IconHome} />} label="Home" active />
-    <Dock.Item icon={<Icon Icon={IconFolder} />} label="Projects" active={false} />
+    <Dock.Item
+      label="Home"
+      icon={
+        <Icon>
+          <IconHome />
+        </Icon>
+      }
+      active
+    />
+    <Dock.Item
+      label="Projects"
+      active={false}
+      icon={
+        <Icon>
+          <IconFolder />
+        </Icon>
+      }
+    />
   </>
 );
 

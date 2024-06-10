@@ -1,17 +1,12 @@
 import styles from "./styles/index.module.scss";
-/// React
-import React, { type SVGAttributes } from "react";
-// Icons
-import { type IconType } from "react-icons";
+import React from "react";
 import { useThemeContext } from "@react-ck/theme";
 import classNames from "classnames";
 
-export interface IconProps extends Omit<IconType, "size"> {
+export interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: "text" | "m" | "l";
   skin?: "default" | "inverted";
-  /** Additional CSS class */
-  className?: SVGAttributes<SVGElement>["className"];
-  Icon: IconType;
+  children: NonNullable<React.ReactNode>;
 }
 
 /**
@@ -24,13 +19,13 @@ export const Icon = ({
   size = "text",
   skin = "default",
   className,
-  Icon,
+  children,
   ...otherProps
 }: Readonly<IconProps>): React.ReactElement => {
   const themeContext = useThemeContext();
 
   return (
-    <Icon
+    <span
       {...otherProps}
       className={classNames(
         styles.root,
@@ -40,7 +35,8 @@ export const Icon = ({
           [`${styles.skin_inverted}`]: themeContext.inverted || skin === "inverted",
         },
         className,
-      )}
-    />
+      )}>
+      {children}
+    </span>
   );
 };
