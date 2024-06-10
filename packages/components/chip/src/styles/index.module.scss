@@ -5,14 +5,14 @@
 .root {
   @include text-base;
 
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 8px;
   background-color: get-css-var(chip, background-color);
   color: get-css-var(chip, color);
-  padding: 4px 8px;
-  line-height: 18px;
   font-size: 12px;
   font-weight: 700;
-  display: inline-flex;
-  border-radius: 8px;
+  line-height: 18px;
   white-space: nowrap;
 }
 

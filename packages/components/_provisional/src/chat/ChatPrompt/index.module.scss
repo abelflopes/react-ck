@@ -2,10 +2,10 @@
 @import "@react-ck/text";
 
 .root {
-  background: get-color(neutral-light-3);
-  padding: get-spacing(1);
-  gap: get-spacing(1);
   display: flex;
+  padding: get-spacing(1);
+  background: get-color(neutral-light-3);
+  gap: get-spacing(1);
 }
 
 .field {
@@ -17,8 +17,8 @@
   @include text-base;
   @include text-variation(smallest);
 
+  padding: get-spacing(0.25) get-spacing(1);
   margin: 0;
   background-color: get-color(status-negative);
   color: get-color(neutral-light-1);
-  padding: get-spacing(0.25) get-spacing(1);
 }

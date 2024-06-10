@@ -2,20 +2,22 @@
 @import "@react-ck/scss-utils";
 
 .root {
-  background-color: get-color(neutral-light-3);
-  border: none;
-  height: get-css-var(divider, height);
   width: get-css-var(divider, width);
+  height: get-css-var(divider, height);
+  border: none;
+  background-color: get-color(neutral-light-3);
 }
 
 .horizontal {
   @include define-css-var(divider, width, 100%);
   @include define-css-var(divider, height, get-css-var(spacing, border));
+
   min-width: get-spacing(2);
 }
 
 .vertical {
   @include define-css-var(divider, width, get-css-var(spacing, border));
   @include define-css-var(divider, height, 100%);
+
   min-height: get-spacing(2);
 }

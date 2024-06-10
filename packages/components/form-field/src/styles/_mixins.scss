@@ -5,14 +5,13 @@
 @mixin form-field-input {
   @include text-base;
 
-  background: transparent;
-  color: get-color(neutral-dark-5);
-  border: none;
   width: 100%;
+  box-sizing: border-box;
   padding: get-spacing(1) get-spacing(2);
   border: none;
+  background: transparent;
+  color: get-color(neutral-dark-5);
   outline: none;
-  box-sizing: border-box;
 
   &::placeholder {
     color: get-color(neutral-dark-1);

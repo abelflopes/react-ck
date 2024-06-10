@@ -2,8 +2,8 @@
 
 .root {
   display: flex;
-  flex-direction: column;
   height: 100%;
+  flex-direction: column;
   border-right: solid get-css-var(spacing, border) get-color(neutral-light-3);
 }
 
@@ -20,8 +20,8 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: get-spacing(1);
   padding: get-spacing(1);
+  gap: get-spacing(1);
 }
 
 .header,

@@ -50,7 +50,7 @@ export const ChatPrompt = ({
           name="message"
           type="text"
           placeholder={placeholder}
-          // eslint-disable-next-line jsx-a11y/no-autofocus - exception for chat
+          // eslint-disable-next-line jsx-a11y/no-autofocus -- Exception case
           autoFocus
           required
         />

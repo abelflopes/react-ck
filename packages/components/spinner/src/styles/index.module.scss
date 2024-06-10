@@ -14,8 +14,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: get-css-var(spinner, color);
   animation: spin 1.5s infinite linear;
+  color: get-css-var(spinner, color);
 }
 
 .text {

@@ -2,17 +2,17 @@
 @import "@react-ck/scss-utils";
 
 .root {
-  padding: calc(#{get-css-var(grid-container, gap)} * 0.5);
   box-sizing: border-box;
+  padding: calc(#{get-css-var(grid-container, gap)} * 0.5);
 }
 
 .size_defined {
   width: calc((100% / 12 * var(--size)));
-  flex-shrink: 0;
   flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .size_auto {
-  flex-shrink: 1;
   flex-grow: 1;
+  flex-shrink: 1;
 }

@@ -4,14 +4,14 @@
 $padding-v: #{get-spacing(0.5)};
 
 .container {
-  padding: #{$padding-v} 0;
-  box-sizing: border-box;
   z-index: map-get-strict($elevation, popup);
+  box-sizing: border-box;
+  padding: #{$padding-v} 0;
 }
 
 .content {
-  padding: get-spacing(2);
-  max-height: calc(var(--pe-max-height) - #{$padding-v} * 2);
   max-width: var(--pe-max-width);
+  max-height: calc(var(--pe-max-height) - #{$padding-v} * 2);
   box-sizing: border-box;
+  padding: get-spacing(2);
 }

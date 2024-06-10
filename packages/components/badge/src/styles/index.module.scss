@@ -8,16 +8,16 @@
   @include text-base;
   @include text-variation(smallest);
 
-  background-color: get-css-var(badge, background-color);
   display: inline-block;
-  text-align: center;
   overflow: hidden;
-  text-overflow: ellipsis;
-  color: get-css-var(badge, color);
-  border-radius: 50%;
   width: $size;
   height: $size;
+  border-radius: 50%;
+  background-color: get-css-var(badge, background-color);
+  color: get-css-var(badge, color);
   line-height: $size;
+  text-align: center;
+  text-overflow: ellipsis;
 }
 
 @each $key, $props in $badge-styles {

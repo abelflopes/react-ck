@@ -1,18 +1,18 @@
 @import "@react-ck/theme";
 
 .root {
+  display: inline-flex;
+  height: get-css-var(icon, size);
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
   color: get-css-var(icon, color);
   font-size: get-css-var(icon, size);
   line-height: get-css-var(icon, size);
-  height: get-css-var(icon, size);
-  aspect-ratio: 1 / 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 
   > * {
-    height: inherit;
     width: 100%;
+    height: inherit;
     aspect-ratio: inherit;
   }
 }

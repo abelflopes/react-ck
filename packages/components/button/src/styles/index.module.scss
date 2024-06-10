@@ -3,19 +3,18 @@
 
 .root {
   @include text-base;
-
   @include define-css-var(button, border-radius, get-spacing(1));
 
-  background-color: get-css-var(button, background-color);
-  color: get-css-var(button, color);
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: get-css-var(button, padding-y) get-css-var(button, padding-x);
+  border: none;
   border-radius: get-css-var(button, border-radius);
+  background-color: get-css-var(button, background-color);
+  color: get-css-var(button, color);
+  cursor: pointer;
+  font-weight: 700;
   transition: background-color 0.2s ease;
 
   &:disabled {
@@ -24,6 +23,7 @@
 
   &.icon-only {
     @include define-css-var(button, border-radius, 50%);
+
     aspect-ratio: 1/1;
   }
 }
@@ -55,7 +55,6 @@
   &.icon-only {
     @include define-css-var(button, padding-y, get-spacing(0.66));
     @include define-css-var(button, padding-x, get-spacing(0.66));
-
     @include text-variation(extra-small);
   }
 }
@@ -97,8 +96,8 @@
 }
 
 .icon {
-  margin-right: get-spacing(0.5);
-  margin-left: get-spacing(-0.5);
   display: inline-flex;
   align-items: center;
+  margin-right: get-spacing(0.5);
+  margin-left: get-spacing(-0.5);
 }

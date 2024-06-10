@@ -5,8 +5,8 @@
   @include define-css-var(container, spacing-y, 0);
   @include define-css-var(container, spacing-x, 0);
 
-  box-sizing: border-box;
   max-width: get-css-var(container, max-width);
+  box-sizing: border-box;
   padding: get-css-var(container, spacing-y) get-css-var(container, spacing-x);
   margin: 0 auto;
 }

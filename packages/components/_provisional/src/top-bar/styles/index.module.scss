@@ -7,16 +7,16 @@
 
   display: flex;
   align-items: center;
-  gap: get-spacing(4);
-  background-color: get-color(neutral-light-2);
   padding: get-spacing(1);
+  background-color: get-color(neutral-light-2);
+  gap: get-spacing(4);
 
   .section {
-    flex-basis: 33%;
     display: flex;
+    flex-basis: 33%;
     align-items: center;
-    gap: get-spacing(2);
     justify-content: center;
+    gap: get-spacing(2);
 
     &:first-child {
       justify-content: flex-start;

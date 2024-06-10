@@ -35,9 +35,7 @@ export const Component: Story = {
       type: "error",
       description: "The prompt is not responding. Please try again later.",
     },
-    onSend: (m) => {
-      console.log("send message", m);
-    },
+    onSend: () => undefined,
     children: (
       <>
         <Chat.Message senderName="Leslie" type="sent">
@@ -47,7 +45,7 @@ export const Component: Story = {
           How are you?
         </Chat.Message>
         <Chat.Message senderName="Mike" type="received">
-          I'm good, thank you.
+          I&apos;m good, thank you.
         </Chat.Message>
       </>
     ),
@@ -61,9 +59,7 @@ export const Empty: Story = {
       type: "error",
       description: "The prompt is not responding. Please try again later.",
     },
-    onSend: (m) => {
-      console.log("send message", m);
-    },
+    onSend: () => undefined,
     children: <EmptyState>The chat is empty, send the first message</EmptyState>,
   },
 };

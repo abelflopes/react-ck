@@ -4,15 +4,15 @@
 .root {
   @include define-css-var(modal, spacing, get-spacing(5));
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: fixed;
+  z-index: map-get-strict($elevation, overlay);
   top: 0;
   left: 0;
-  height: 100%;
+  display: flex;
   width: 100%;
-  z-index: map-get-strict($elevation, overlay);
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .lock_scroll {
@@ -31,14 +31,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: get-css-var(modal, spacing);
   margin-bottom: get-css-var(modal, spacing);
+  gap: get-css-var(modal, spacing);
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: get-css-var(modal, spacing);
   margin-top: get-css-var(modal, spacing);
+  gap: get-css-var(modal, spacing);
 }

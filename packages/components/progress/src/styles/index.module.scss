@@ -1,11 +1,9 @@
 @import "@react-ck/theme";
 
 .root {
-  -webkit-appearance: none;
-  appearance: none;
-
   width: 100%;
   height: get-spacing(0.5);
+  appearance: none;
 
   &::-webkit-progress-value,
   &::-webkit-progress-bar {

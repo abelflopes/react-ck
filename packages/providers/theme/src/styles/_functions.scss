@@ -3,6 +3,7 @@
 
 @function get-color($name) {
   $colors: map-get-strict($theme-type, "color");
+
   @if validate-map-key($colors, $name) {
     @return get-css-var(color, $name);
   }

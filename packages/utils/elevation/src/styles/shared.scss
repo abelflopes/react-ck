@@ -2,14 +2,9 @@
 
 /// Map of elevation levels for different UI elements
 $elevation: (
-  /// Base level elevation
-  "root": 1,
-  /// Elevation for sticky or navigation elements
-  "sticky": 100,
-  /// Elevation for floating non-blocking elements
-  "floating": 200,
-  /// Elevation for blocking elements
-  "overlay": 300,
-  /// Elevation for high relevance floating blocking elements
-  "popup": 400
+  /**/ base level elevation * /"root": 1,
+  /**/ elevation for sticky or navigation elements * /"sticky": 100,
+  /**/ elevation for floating non-blocking elements * /"floating": 200,
+  /**/ elevation for blocking elements * /"overlay": 300,
+  /**/ elevation for high relevance floating blocking elements * /"popup": 400
 );

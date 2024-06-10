@@ -23,6 +23,7 @@
     "test:snapshot:update": "lerna run test:snapshot:update --parallel",
     "lint": "npx npm-run-all --sequential lint:*",
     "lint:style": "stylelint '**/*.scss'",
+    "lint:style:fix": "stylelint '**/*.scss' --fix",
     "lint:code": "lerna run lint:code --stream",
     "lint:code:fix": "lerna run lint:code --parallel --stream -- --fix",
     "lint:typescript": "lerna run lint:typescript",

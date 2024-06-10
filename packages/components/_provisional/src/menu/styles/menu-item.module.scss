@@ -6,9 +6,9 @@
 
   display: flex;
   align-items: center;
-  gap: get-spacing();
   padding: get-spacing();
   cursor: pointer;
+  gap: get-spacing();
   transition: all 0.2s;
 
   &:hover:not(.disabled),
@@ -24,7 +24,7 @@
   &.disabled {
     // TODO: create shared mixin
     cursor: not-allowed;
-    opacity: 0.4;
     filter: grayscale(1);
+    opacity: 0.4;
   }
 }

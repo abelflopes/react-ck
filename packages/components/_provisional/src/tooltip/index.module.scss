@@ -15,6 +15,7 @@ $caret-spacing: get-spacing(1.66);
   from {
     @include animation-initial;
   }
+
   to {
     opacity: 1;
   }
@@ -26,14 +27,13 @@ $caret-spacing: get-spacing(1.66);
   @include define-css-var(tooltip, container-padding-x, 0);
   @include define-css-var(tooltip, container-padding-y, 0);
 
-  padding: #{get-css-var(tooltip, container-padding-y)} #{get-css-var(tooltip, container-padding-x)};
-  box-sizing: border-box;
   z-index: map-get-strict($elevation, popup);
+  box-sizing: border-box;
+  padding: #{get-css-var(tooltip, container-padding-y)} #{get-css-var(tooltip, container-padding-x)};
+  animation: appear 0.2s ease forwards;
+  will-change: opacity;
 
   @include animation-initial;
-
-  will-change: opacity;
-  animation: appear 0.2s ease forwards;
 
   // Apply vertical spacing
   &[class*="top"],
@@ -81,7 +81,7 @@ $caret-spacing: get-spacing(1.66);
   &[class*="top"] {
     .content::before {
       top: 100%;
-      border-color: get-color(neutral-light-1) transparent transparent transparent;
+      border-color: get-color(neutral-light-1) transparent transparent;
       filter: drop-shadow(0 3px 2px get-color(neutral-light-3));
     }
   }
@@ -89,7 +89,7 @@ $caret-spacing: get-spacing(1.66);
   &[class*="bottom"] {
     .content::before {
       bottom: 100%;
-      border-color: transparent transparent get-color(neutral-light-1) transparent;
+      border-color: transparent transparent get-color(neutral-light-1);
       filter: drop-shadow(0 -3px 2px get-color(neutral-light-3));
     }
   }
@@ -116,18 +116,18 @@ $caret-spacing: get-spacing(1.66);
   @include text-variation(extra-small);
 
   position: relative;
-  padding: #{$inner-spacing-y} #{$inner-spacing-x};
-  max-height: get-css-var(tooltip, max-height);
   max-width: get-css-var(tooltip, max-width);
+  max-height: get-css-var(tooltip, max-height);
   box-sizing: border-box;
+  padding: #{$inner-spacing-y} #{$inner-spacing-x};
 
   &::before {
-    content: "";
     position: absolute;
     display: block;
-    border-style: solid;
+    width: 0;
+    height: 0;
     border-width: get-spacing(0.66);
-    width: 0px;
-    height: 0px;
+    border-style: solid;
+    content: "";
   }
 }

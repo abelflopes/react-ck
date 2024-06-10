@@ -3,8 +3,8 @@
 
 .root {
   display: block;
-  background-color: get-color(neutral-light-2);
   min-height: get-css-var(spacing, border);
+  background-color: get-color(neutral-light-2);
 
   &.text {
     @include text-base;

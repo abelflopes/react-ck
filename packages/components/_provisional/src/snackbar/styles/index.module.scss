@@ -3,18 +3,18 @@
 
 .root {
   position: fixed;
-  flex-direction: column;
+  z-index: map-get-strict($elevation, popup);
   top: 0;
   right: 0;
-  max-height: 100%;
+  display: flex;
+  overflow: auto;
   width: 100%;
   max-width: 480px;
+  max-height: 100%;
   box-sizing: border-box;
-  display: flex;
-  gap: get-spacing(1);
+  flex-direction: column;
   padding: get-spacing(2) get-spacing(1);
-  overflow: auto;
+  filter: drop-shadow(0 1px 5px rgb(0 0 0 / 10%));
+  gap: get-spacing(1);
   pointer-events: none;
-  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.1));
-  z-index: map-get-strict($elevation, popup);
 }

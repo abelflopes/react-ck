@@ -6,7 +6,6 @@
   @include define-css-var(table, border-color, transparent);
 
   box-sizing: border-box;
-
   border: solid get-css-var(spacing, border) get-css-var(table, border-color);
   border-radius: get-spacing(1);
 }

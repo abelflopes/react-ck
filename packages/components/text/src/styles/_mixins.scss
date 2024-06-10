@@ -31,10 +31,10 @@
   @include define-css-var(text, color, get-color(neutral-dark-5));
   @include define-css-var(text, text-decoration, none);
 
+  color: get-css-var(text, color);
   font-family: get-css-var(text, font-family);
   font-size: get-css-var(text, font-size);
   font-weight: get-css-var(text, font-weight);
   line-height: get-css-var(text, line-height);
   text-decoration: get-css-var(text, text-decoration);
-  color: get-css-var(text, color);
 }

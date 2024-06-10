@@ -4,12 +4,12 @@
 .root {
   @include define-css-var(divider, border-color, transparent);
 
-  margin: 0;
+  overflow: hidden;
   padding: 0;
-  list-style: none;
   border: solid get-css-var(spacing, border) get-css-var(divider, border-color);
   border-radius: get-spacing(2);
-  overflow: hidden;
+  margin: 0;
+  list-style: none;
 }
 
 .item {

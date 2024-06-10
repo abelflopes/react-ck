@@ -2,15 +2,15 @@
 @import "@react-ck/scss-utils";
 
 .root {
-  background-color: get-css-var(overlay, color);
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
   display: flex;
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
+  background-color: get-css-var(overlay, color);
 }
 
 @each $variation in (dark, light) {
