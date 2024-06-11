@@ -5,7 +5,9 @@
   "main": "src/index.tsx",
   "dependencies": {
     "react": "^18.2.0",
-    "react-ck": "*"
+    "react-ck": "*",
+    "react-router": "^6.23.1",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@react-ck/typescript-config": "^1.0.0",
