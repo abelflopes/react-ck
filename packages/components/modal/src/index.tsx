@@ -21,9 +21,8 @@ interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Determines whether the modal is open or closed */
   open?: boolean;
   /** Determines if the modal can be dismissed by clicking outside or close button  */
-  dismissable?: boolean;
-  onOpen?: () => void;
-  onClose?: () => void;
+  dismissible?: boolean;
+  onDismiss?: () => void;
 }
 
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-modal-dialog-with-a-portal
@@ -39,11 +38,10 @@ let openModals = 0;
 
 const Modal = ({
   open = true,
-  dismissable = true,
+  dismissible = true,
   children,
   className,
-  onOpen,
-  onClose,
+  onDismiss,
   ...otherProps
 }: Readonly<ModalProps>): React.ReactNode => {
   // Internal open state, allows component to be uncontrolled
@@ -62,9 +60,11 @@ const Modal = ({
 
   // Close callback
   const handleClose = useCallback(() => {
-    if (!dismissable) return;
+    if (!dismissible) return;
+    console.log("handleClose setInternalOpen", false);
     setInternalOpen(false);
-  }, [dismissable]);
+    onDismiss?.();
+  }, [dismissible, onDismiss]);
 
   // Build context for child compound components
   const contextProps = useMemo<ModalContextProps>(
@@ -74,16 +74,18 @@ const Modal = ({
     [setContextValue],
   );
 
-  // Invoke open / close handlers
-  useEffect(() => {
-    if (internalOpen) onOpen?.();
-    else onClose?.();
-  }, [internalOpen, onClose, onOpen]);
-
   // Synchronize internal state with external state
   useEffect(() => {
+    console.log("setInternalOpen", open);
+
     setInternalOpen(open);
-  }, [open]);
+
+    if (!open) onDismiss?.();
+  }, [onDismiss, open]);
+
+  useEffect(() => {
+    console.log("internalOpen", internalOpen);
+  }, [internalOpen]);
 
   // Lock scroll if there are open modals
   useEffect(() => {
@@ -92,14 +94,14 @@ const Modal = ({
 
     if (openModals > 1) document.body.classList.add(`${styles.lock_scroll}`);
     else document.body.classList.remove(`${styles.lock_scroll}`);
-  }, [internalOpen, onClose, onOpen]);
+  }, [internalOpen]);
 
   return (
     internalOpen && (
       <Layer elevation="overlay">
         <div {...otherProps} className={classNames(styles.root, className)}>
           <Overlay
-            className={classNames(dismissable && styles.clickable_overlay)}
+            className={classNames(dismissible && styles.clickable_overlay)}
             onClick={handleClose}
           />
 
@@ -113,7 +115,7 @@ const Modal = ({
                     {props.header.heading}
                   </Text>
 
-                  {dismissable ? (
+                  {dismissible ? (
                     <Button
                       skin="ghost"
                       icon={
