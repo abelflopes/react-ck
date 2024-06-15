@@ -34,6 +34,7 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
       library: {
         type: "module",
       },
+      clean: true,
     },
     experiments: {
       outputModule: true,
@@ -79,6 +80,8 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
           exclude: /node_modules/u,
           loader: "ts-loader",
           options: {
+            logLevel: "info",
+            onlyCompileBundledFiles: true,
             configFile: "tsconfig.build.json",
             compilerOptions: {
               sourceMap: true,
