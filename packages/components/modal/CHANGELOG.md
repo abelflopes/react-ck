@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.0.0...@react-ck/modal@3.0.1) (2024-06-15)
+
+
+### Bug Fixes
+
+* modal open / close handlers ([f933ba2](https://github.com/abelflopes/react-ck/commit/f933ba2333d5a7ca31c260a62e2b59caa02a7b72))
+
+
+
 ## [3.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@2.0.0...@react-ck/modal@3.0.0) (2024-06-10)
 
 
