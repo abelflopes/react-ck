@@ -1,3 +1,22 @@
+## [3.2.0](https://github.com/abelflopes/react-ck/compare/v3.1.0...v3.2.0) (2024-06-15)
+
+
+### Features
+
+* add button fullwidth variation ([35a0799](https://github.com/abelflopes/react-ck/commit/35a0799ad82c9da241fd91b8bb77b833f3d0bae5))
+* allow rendering children inside form ([08f43de](https://github.com/abelflopes/react-ck/commit/08f43de05b93aeb59c1b763337c00f276df1d564))
+* **react-ck:** global library package ([4971283](https://github.com/abelflopes/react-ck/commit/4971283143062e57e04877dfd91fae27d598869b))
+* **react-ck:** global library package ([cf52c55](https://github.com/abelflopes/react-ck/commit/cf52c55b2c5cb864bd97cd11a791c2adcb95ff8b))
+
+
+### Bug Fixes
+
+* add missing package files export ([a08fa5f](https://github.com/abelflopes/react-ck/commit/a08fa5fb5e515ed4bf978ffd77c2b86309e8c5f9))
+* disallow passing children to overlay spinner ([0119161](https://github.com/abelflopes/react-ck/commit/01191615a8b28ce142617bc7ff0b253bbce56205))
+* image default width ([d8b3468](https://github.com/abelflopes/react-ck/commit/d8b34684c633a50791d792479cb2d349dc0592f1))
+* image default width ([9b25bcd](https://github.com/abelflopes/react-ck/commit/9b25bcd0b2fd54e2a1cfebdca26040a1c6b5cd26))
+* remove log from modal ([b257a8b](https://github.com/abelflopes/react-ck/commit/b257a8b5af3cb5cc203e821c6a032f56969a0822))
+
 ## [3.1.0](https://github.com/abelflopes/react-ck/compare/v3.0.0...v3.1.0) (2024-06-15)
 
 
