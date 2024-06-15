@@ -28,7 +28,7 @@ type BaseFieldListMap<K extends Record<FieldTypes, unknown>> = K;
 
 export type FieldListMap = BaseFieldListMap<{
   input: Field<"input", InputProps>;
-  select: Field<"select", SelectProps>;
+  select: Field<"select", SelectProps & { options: Array<{ value: string; label: string }> }>;
   textarea: Field<"textarea", TextareaProps>;
 }>;
 

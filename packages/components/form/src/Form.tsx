@@ -21,6 +21,7 @@ export interface FormProps<T extends FormFieldMap>
   onValidityChange?: (validity: FormValidity<T>) => void;
   values: FormValues<T>;
   validators?: FormValidators<T>;
+  children?: React.ReactNode;
 }
 
 export const Form = <T extends FormFieldMap>({
@@ -30,6 +31,7 @@ export const Form = <T extends FormFieldMap>({
   values,
   validators,
   className,
+  children,
   ...props
 }: Readonly<FormProps<T>>): React.ReactElement => {
   const [internalValues, setInternalValues] = useState<InternalValues<T>>({
@@ -158,6 +160,7 @@ export const Form = <T extends FormFieldMap>({
   return (
     <div {...props} className={classNames(className, styles.root)}>
       {fieldElements}
+      {children}
     </div>
   );
 };
