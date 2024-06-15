@@ -1,3 +1,21 @@
+## [3.1.0](https://github.com/abelflopes/react-ck/compare/v3.0.0...v3.1.0) (2024-06-15)
+
+
+### Features
+
+* **react-ck:** global library package ([6eb1e8c](https://github.com/abelflopes/react-ck/commit/6eb1e8c86e5167cbc9e32583f6f66b9646a06758))
+* **react-ck:** global library package ([9552645](https://github.com/abelflopes/react-ck/commit/9552645ddf1d5b3017bec67820700a4a6f2be912))
+
+
+### Bug Fixes
+
+* modal open / close handlers ([f933ba2](https://github.com/abelflopes/react-ck/commit/f933ba2333d5a7ca31c260a62e2b59caa02a7b72))
+
+
+### Code Refactoring
+
+* add routes to demo apps ([c6347fc](https://github.com/abelflopes/react-ck/commit/c6347fca7541fc3a82715fcd116f31b7a3cfc792))
+
 ## [3.0.0](https://github.com/abelflopes/react-ck/compare/v2.0.0...v3.0.0) (2024-06-10)
 
 
