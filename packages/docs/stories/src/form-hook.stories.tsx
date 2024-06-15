@@ -13,7 +13,7 @@ import { capitalCase } from "change-case";
 type Story = StoryObj<typeof useForm>;
 
 const meta: Meta<typeof useForm> = {
-  title: "Form/Form Hook",
+  title: "Form/Form/Form Hook",
   ...configureStory(
     useForm,
     {
