@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "/dist"
+    "/dist",
+    "/icons"
   ],
   "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/icon#readme",
   "repository": {
