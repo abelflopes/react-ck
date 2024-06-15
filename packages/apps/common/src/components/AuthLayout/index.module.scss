@@ -1,0 +1,21 @@
+@import "../../../../../library//react-ck/";
+
+.root {
+  height: 100dvmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: get-spacing(1);
+}

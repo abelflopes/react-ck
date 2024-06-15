@@ -15,6 +15,7 @@ const baseCfg = getWebpackConfig({
  * transpileOnly
  * react fast refresh
  * incremental
+ * TS / HMR : https://www.npmjs.com/package/ts-loader#hot-module-replacement
  */
 
 export default ((): Configuration & { devServer: DevServerConfiguration } => ({

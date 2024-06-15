@@ -4,6 +4,7 @@
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {
+    "@drvida/fe-api": "file:./../../../../dr-vida/packages/api/fe-api",
     "react": "^18.2.0",
     "react-ck": "*",
     "react-router": "^6.23.1",

@@ -6,6 +6,10 @@
 export const routesList = {
   root: "/",
   home: "/home",
+  login: "/login",
+  termsOfService: "/terms-of-service",
+  privacyPolicy: "/privacy-policy",
+  quote: "/quote",
   error: "*",
 } as const;
 
