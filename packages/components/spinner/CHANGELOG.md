@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/spinner@3.0.0...@react-ck/spinner@3.0.1) (2024-06-15)
+
+**Note:** Version bump only for package @react-ck/spinner
+
+
+
+
+
 ## [3.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/spinner@2.0.0...@react-ck/spinner@3.0.0) (2024-06-10)
 
 
