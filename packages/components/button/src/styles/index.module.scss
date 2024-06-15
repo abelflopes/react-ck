@@ -28,6 +28,10 @@
   }
 }
 
+.fullwidth {
+  width: 100%;
+}
+
 .size-l {
   @include define-css-var(button, padding-y, get-spacing(2));
   @include define-css-var(button, padding-x, get-spacing(3));

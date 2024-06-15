@@ -25,6 +25,8 @@ export interface ButtonProps<T extends HTMLTag = "button">
   icon?: React.ReactNode;
   /** Ref for the root element */
   rootRef?: React.ForwardedRef<HTMLButtonElement>;
+  /** Make button occupy whole available horizontal space */
+  fullWidth?: boolean;
 }
 
 /**
@@ -43,6 +45,7 @@ export const Button = <T extends HTMLTag>({
   children,
   className,
   rootRef,
+  fullWidth,
   ...otherProps
 }: Readonly<ButtonProps<T>>): React.ReactElement => {
   const isIconOnly = useMemo(
@@ -76,6 +79,7 @@ export const Button = <T extends HTMLTag>({
           styles[`size-${size}`],
           {
             [`${styles["icon-only"]}`]: isIconOnly,
+            [`${styles.fullwidth}`]: fullWidth,
           },
           className,
         ),
