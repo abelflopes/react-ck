@@ -61,7 +61,6 @@ const Modal = ({
   // Close callback
   const handleClose = useCallback(() => {
     if (!dismissible) return;
-    console.log("handleClose setInternalOpen", false);
     setInternalOpen(false);
     onDismiss?.();
   }, [dismissible, onDismiss]);
