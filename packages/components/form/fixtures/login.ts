@@ -27,6 +27,16 @@ export const fields = {
       placeholder: "Repeat password",
     },
   },
+  as: {
+    type: "select",
+    props: {
+      label: "Log in as",
+      options: [
+        { value: "1", label: "Client" },
+        { value: "2", label: "Admin" },
+      ],
+    },
+  },
 } satisfies FormFieldMap;
 
 export type Values = FormValues<typeof fields>;
@@ -51,4 +61,5 @@ export const values = {
   email: "",
   password: "",
   passwordRepeat: "",
+  as: null,
 } satisfies FormValues<typeof fields>;
