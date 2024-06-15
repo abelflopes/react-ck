@@ -6,6 +6,7 @@ import { Skeleton } from "@react-ck/skeleton";
 export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   /** Required img alt description */
   alt: string;
+  fullWidth?: boolean;
 }
 
 export const Image = ({
@@ -14,6 +15,7 @@ export const Image = ({
   hidden,
   onLoad,
   onError,
+  fullWidth,
   ...otherProps
 }: Readonly<ImageProps>): React.ReactElement => {
   const [shouldDisplay, setShouldDisplay] = useState(false);
@@ -38,7 +40,9 @@ export const Image = ({
     <>
       {!shouldDisplay && <Skeleton className={className} />}
       <img
-        className={classNames(className, styles.root)}
+        className={classNames(className, styles.root, {
+          [`${styles.fullwidth}`]: fullWidth,
+        })}
         alt={alt}
         onLoad={computedOnLoad}
         onError={computedOnError}
