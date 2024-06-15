@@ -30,7 +30,7 @@
     "glob": "^10.3.10",
     "ts-node-dev": "^2.0.0"
   },
-  "gitHead": "2099fdce210e9f0807eac86f179f7b21106914be",
+  "gitHead": "7a52df1185f49262f5d1b81e4c601d00c0689384",
   "dependencies": {
     "@react-ck/accordion": "^1.1.17",
     "@react-ck/alert": "^3.0.2",
