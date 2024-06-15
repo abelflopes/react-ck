@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.5.3...@react-ck/button@1.6.0) (2024-06-15)
+
+
+### Features
+
+* add button fullwidth variation ([35a0799](https://github.com/abelflopes/react-ck/commit/35a0799ad82c9da241fd91b8bb77b833f3d0bae5))
+
+
+
 ## [1.5.3](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.5.2...@react-ck/button@1.5.3) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/button

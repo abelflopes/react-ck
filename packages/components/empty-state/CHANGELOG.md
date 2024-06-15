@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.15](https://github.com/abelflopes/react-ck/compare/@react-ck/empty-state@1.1.14...@react-ck/empty-state@1.1.15) (2024-06-15)
+
+**Note:** Version bump only for package @react-ck/empty-state
+
+
+
+
+
 ## [1.1.14](https://github.com/abelflopes/react-ck/compare/@react-ck/empty-state@1.1.13...@react-ck/empty-state@1.1.14) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/empty-state
