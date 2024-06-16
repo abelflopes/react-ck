@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.0.1...@react-ck/provisional@3.0.2) (2024-06-15)
+
+
+### Bug Fixes
+
+* disallow passing children to overlay spinner ([0119161](https://github.com/abelflopes/react-ck/commit/01191615a8b28ce142617bc7ff0b253bbce56205))
+* image default width ([d8b3468](https://github.com/abelflopes/react-ck/commit/d8b34684c633a50791d792479cb2d349dc0592f1))
+* image default width ([9b25bcd](https://github.com/abelflopes/react-ck/commit/9b25bcd0b2fd54e2a1cfebdca26040a1c6b5cd26))
+
+
+
 ## [3.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.0.0...@react-ck/provisional@3.0.1) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/provisional

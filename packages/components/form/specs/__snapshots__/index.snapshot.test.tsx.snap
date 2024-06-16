@@ -76,5 +76,47 @@ exports[`snapshot Form renders correctly 1`] = `
       />
     </div>
   </div>
+  <div
+    className="root default"
+  >
+    <label
+      className="root variation_small skin_bold margin_none label"
+      htmlFor="aaa"
+    >
+      Log in as
+    </label>
+    <div
+      className="content"
+    >
+      <select
+        className="root"
+        onChange={[Function]}
+        options={
+          [
+            {
+              "label": "Client",
+              "value": "1",
+            },
+            {
+              "label": "Admin",
+              "value": "2",
+            },
+          ]
+        }
+        value=""
+      >
+        <option
+          value="1"
+        >
+          Client
+        </option>
+        <option
+          value="2"
+        >
+          Admin
+        </option>
+      </select>
+    </div>
+  </div>
 </div>
 `;

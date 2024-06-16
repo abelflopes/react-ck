@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form@1.1.12...@react-ck/form@1.2.0) (2024-06-15)
+
+
+### Features
+
+* allow rendering children inside form ([08f43de](https://github.com/abelflopes/react-ck/commit/08f43de05b93aeb59c1b763337c00f276df1d564))
+
+
+
 ## [1.1.12](https://github.com/abelflopes/react-ck/compare/@react-ck/form@1.1.11...@react-ck/form@1.1.12) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/form
