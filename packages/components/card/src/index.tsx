@@ -24,7 +24,7 @@ interface CardProps extends Readonly<React.HTMLAttributes<HTMLDivElement>> {
  */
 
 const Card = ({
-  skin = "bordered",
+  skin = "shadowed",
   variation = "vertical",
   spacing = "m",
   children,
