@@ -9,7 +9,7 @@ export const routesList = {
   login: "/login",
   termsOfService: "/terms-of-service",
   privacyPolicy: "/privacy-policy",
-  quote: "/quote",
+  chat: "/chat",
   error: "*",
 } as const;
 

@@ -4,5 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: get-spacing(1);
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  > * {
+    @include text-base;
+    @include text-skin(link);
+
+    padding: get-spacing(2) get-spacing(2);
+
+    &:hover {
+      background-color: get-color(neutral-light-2);
+    }
+  }
 }

@@ -8,7 +8,7 @@ import { HomePage } from "../pages/Home";
 import { LoginPage } from "../pages/Login";
 import { TermsOfServicePage } from "../pages/TermsOfService";
 import { PrivacyPolicyPage } from "../pages/PrivacyPolicy";
-import { QuotePage } from "../pages/Quote";
+import { ChatPage } from "../pages/Chat";
 
 type ViewsMap = { [key in RouteIndex]: NonNullable<RouteProps["Component"]> };
 
@@ -18,6 +18,6 @@ export const viewsMap: ViewsMap = {
   termsOfService: () => <TermsOfServicePage />,
   privacyPolicy: () => <PrivacyPolicyPage />,
   login: () => <LoginPage />,
-  quote: () => <QuotePage />,
+  chat: () => <ChatPage />,
   error: () => <ErrorPage />,
 };

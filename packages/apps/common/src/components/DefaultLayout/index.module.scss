@@ -1,0 +1,11 @@
+@import "../../../../../library//react-ck/";
+
+.root {
+  display: flex;
+  height: 100%;
+}
+
+.container {
+  flex-grow: 1;
+  flex-shrink: 1;
+}

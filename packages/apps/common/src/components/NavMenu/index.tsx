@@ -7,6 +7,6 @@ export const NavMenu = (): React.ReactElement => (
   <nav className={styles.root}>
     <NavLink to={generatePath(routesList.home)}>Home</NavLink>
     <NavLink to={generatePath(routesList.login)}>Login</NavLink>
-    <NavLink to={generatePath(routesList.quote)}>Quote</NavLink>
+    <NavLink to={generatePath(routesList.chat)}>Chat</NavLink>
   </nav>
 );

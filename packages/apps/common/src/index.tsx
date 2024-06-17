@@ -1,3 +1,4 @@
+import "./index.scss";
 import React from "react";
 import { Manager } from "react-ck";
 import { DefaultRouter } from "./routes/Default";
