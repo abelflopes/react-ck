@@ -16,6 +16,7 @@
   cursor: pointer;
   font-weight: 700;
   transition: background-color 0.2s ease;
+  box-sizing: border-box;
 
   &:disabled {
     cursor: not-allowed;
