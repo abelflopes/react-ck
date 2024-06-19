@@ -1,6 +1,6 @@
 import React from "react";
 
-interface HeaderProps extends Omit<React.HTMLAttributes<HTMLElement>, "children"> {
+export interface HeaderProps extends Omit<React.HTMLAttributes<HTMLElement>, "children"> {
   heading?: string;
 }
 

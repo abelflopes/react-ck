@@ -7,4 +7,7 @@ import { viteCommonjs } from "@originjs/vite-plugin-commonjs";
 export default defineConfig({
   base: "./",
   plugins: [react(), reactRefresh(), viteCommonjs()],
+  build: {
+    commonjsOptions: { transformMixedEsModules: true },
+  },
 });
