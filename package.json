@@ -11,6 +11,7 @@
   },
   "scripts": {
     "prepare": "husky",
+    "prestart": "npm run prebuild",
     "start": "lerna run start --parallel --stream --ignore @react-ck/*config* --ignore @react-ck/*app*",
     "start:apps": "lerna run start --parallel --stream --scope @react-ck/*app*",
     "prebuild": "lerna run prebuild && lerna run build --scope @react-ck/icon",
