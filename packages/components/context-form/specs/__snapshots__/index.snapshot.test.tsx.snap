@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot Context Form renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="root default"
+  >
+    <label
+      className="root variation_small skin_bold margin_none label"
+      htmlFor="aaa"
+    >
+      Username
+    </label>
+    <div
+      className="content"
+    >
+      <input
+        className="root"
+        name="username"
+        onChange={[Function]}
+        placeholder="JohnDoe"
+      />
+    </div>
+    <p
+      className="root variation_small skin_default margin_none description"
+    >
+      Add a respectful alias name
+    </p>
+  </div>
+  <div
+    className="root negative"
+  >
+    <label
+      className="root variation_small skin_bold margin_none label"
+      htmlFor="aaa"
+    >
+      Email
+    </label>
+    <div
+      className="content"
+    >
+      <input
+        className="root"
+        defaultValue="aaaaaa.s"
+        name="email"
+        onChange={[Function]}
+        placeholder="john-doe@company.com"
+        type="email"
+      />
+    </div>
+    <p
+      className="root variation_small skin_default margin_none description"
+    >
+      Add your email address
+    </p>
+    <p
+      className="root variation_small skin_default margin_none validation_message"
+    >
+      Invalid email
+    </p>
+  </div>
+  <div
+    className="root default"
+  >
+    <label
+      className="root variation_small skin_bold margin_none label"
+      htmlFor="aaa"
+    >
+      Address
+    </label>
+    <div
+      className="content"
+    >
+      <textarea
+        className="root"
+        name="address"
+        placeholder="St John's st. 12"
+      />
+    </div>
+    <p
+      className="root variation_small skin_default margin_none description"
+    >
+      Add your residential address
+    </p>
+  </div>
+</form>
+`;
