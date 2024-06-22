@@ -6,7 +6,7 @@ import { type Theme } from "../types";
 
 export const defaultTheme: Theme = {
   color: {
-    "highlight-primary-light": "hsl(185deg 50% 85%)",
+    "highlight-primary-light": "hsl(185deg 50% 90%)",
     "highlight-primary": "hsl(185deg 50% 55%)",
     "highlight-primary-dark": "hsl(185deg 50% 35%)",
     "highlight-alt": "#0052cc",
