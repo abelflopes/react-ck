@@ -10,6 +10,7 @@
  *
  * Stylelint CSS modules
  * https://www.npmjs.com/package/stylelint-config-css-modules
+ * https://github.com/pascalduez/stylelint-config-css-modules/blob/main/index.js
  *
  * Stylelint prettier
  * https://www.npmjs.com/package/stylelint-prettier
@@ -19,6 +20,7 @@
  *
  * No unsupported browser features
  * https://www.npmjs.com/package/stylelint-no-unsupported-browser-features
+ *
  */
 
 /** @type import("stylelint").Config */
@@ -33,6 +35,48 @@ const config = {
   plugins: ["stylelint-no-unsupported-browser-features"],
   defaultSeverity: "warning",
   rules: {
+    "scss/no-global-function-names": [
+      true,
+      {
+        severity: "error",
+      },
+    ],
+    "scss/no-unused-private-members": [
+      true,
+      {
+        severity: "error",
+      },
+    ],
+    "scss/load-no-partial-leading-underscore": [
+      true,
+      {
+        severity: "error",
+      },
+    ],
+    "scss/at-use-no-redundant-alias": [
+      true,
+      {
+        severity: "error",
+      },
+    ],
+    "scss/at-use-no-unnamespaced": [
+      true,
+      {
+        severity: "error",
+      },
+    ],
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        severity: "error",
+      },
+    ],
+    "scss/property-no-unknown": [
+      true,
+      {
+        severity: "error",
+      },
+    ],
     "scss/function-no-unknown": [
       true,
       {
