@@ -1,11 +1,11 @@
-@import "@react-ck/theme";
-@import "@react-ck/text";
+@use "@react-ck/theme";
+@use "@react-ck/text";
 
 $border-radius: get-css-var(card, border-radius);
 
 .root {
-  @include text-base;
-  @include define-css-var(card, border-radius, get-spacing(1));
+  @include text.text-base;
+  @include theme.define-css-var(card, border-radius, theme.get-spacing(1));
 
   border-radius: $border-radius;
   background-color: get-color(neutral-light-1);
@@ -39,7 +39,7 @@ $border-radius: get-css-var(card, border-radius);
 }
 
 .ghost {
-  @include define-css-var(card, border-radius, 0);
+  @include theme.define-css-var(card, border-radius, 0);
 }
 
 // Variations
@@ -57,15 +57,15 @@ $border-radius: get-css-var(card, border-radius);
 // Spacing
 
 .spacing_s {
-  @include define-css-var(card, spacing, get-spacing(1));
+  @include theme.define-css-var(card, spacing, theme.get-spacing(1));
 }
 
 .spacing_m {
-  @include define-css-var(card, spacing, get-spacing(2));
+  @include theme.define-css-var(card, spacing, theme.get-spacing(2));
 }
 
 .spacing_l {
-  @include define-css-var(card, spacing, get-spacing(3));
+  @include theme.define-css-var(card, spacing, theme.get-spacing(3));
 }
 
 // Content
