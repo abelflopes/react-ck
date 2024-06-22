@@ -34,7 +34,7 @@
     "clean:dist": "lerna exec -- rm -rf dist specs/coverage && lerna run clean",
     "clean:cache": "lerna exec -- rm -rf .eslintcache cache",
     "clean:deps": "lerna exec -- rm -rf node_modules && rm -rf node_modules",
-    "audit": "sh ./scripts/audit.sh && lerna exec --stream --concurrency 1 -- sh ../../../scripts/audit.sh",
+    "audit": "sh ./scripts/audit.sh && lerna exec --concurrency 1 -- sh ../../../scripts/audit.sh",
     "todo": "npx leasot '{.,*}**' -i '**/node_modules/**' -S -x"
   },
   "devDependencies": {
