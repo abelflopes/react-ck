@@ -1,14 +1,14 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
 
-$border-radius: get-css-var(card, border-radius);
+$border-radius: theme.get-css-var(card, border-radius);
 
 .root {
   @include text.text-base;
   @include theme.define-css-var(card, border-radius, theme.get-spacing(1));
 
   border-radius: $border-radius;
-  background-color: get-color(neutral-light-1);
+  background-color: theme.get-color(neutral-light-1);
   transition: box-shadow 0.3s ease;
 }
 
@@ -30,8 +30,9 @@ $border-radius: get-css-var(card, border-radius);
 
 // Skins
 
-.bordered {
-  border: solid get-css-var(spacing, border) get-color(neutral-light-2);
+.bordered,
+.shadowed {
+  border: solid theme.get-css-var(spacing, border) theme.get-color(neutral-light-2);
 }
 
 .shadowed {
@@ -71,7 +72,7 @@ $border-radius: get-css-var(card, border-radius);
 // Content
 
 .content {
-  padding: get-css-var(card, spacing);
+  padding: theme.get-css-var(card, spacing);
 }
 
 .image {
