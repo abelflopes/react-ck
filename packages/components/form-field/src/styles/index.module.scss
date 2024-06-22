@@ -7,16 +7,10 @@
   flex-direction: column;
   gap: get-spacing(0.1);
 
-  .label {
-  }
-
   .content {
     border: solid #{get-css-var(form-field, border-color)} #{get-css-var(spacing, border)};
     border-radius: get-spacing(1);
-    background: get-color(neutral-light-2);
-  }
-
-  .description {
+    background: get-color(neutral-light-1);
   }
 
   .validation_message {

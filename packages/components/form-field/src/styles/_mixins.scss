@@ -7,11 +7,15 @@
 
   width: 100%;
   box-sizing: border-box;
-  padding: get-spacing(1) get-spacing(2);
+  padding: get-spacing(0.75) get-spacing(1);
   border: none;
   background: transparent;
   color: get-color(neutral-dark-5);
   outline: none;
+
+  &::placeholder {
+    color: get-color(neutral-dark-1);
+  }
 
   &::placeholder {
     color: get-color(neutral-dark-1);

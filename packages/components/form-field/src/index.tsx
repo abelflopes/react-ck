@@ -34,19 +34,13 @@ export const FormField = ({
 }: Readonly<FormFieldProps>): React.ReactElement => (
   <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
     {label ? (
-      <Text
-        className={styles.label}
-        skin="bold"
-        variation="small"
-        margin="none"
-        as={<label htmlFor="aaa">{label}</label>}
-      />
+      <Text variation="small" margin="none" as={<label htmlFor="aaa">{label}</label>} />
     ) : null}
 
     <div className={styles.content}>{children}</div>
 
     {description ? (
-      <Text className={styles.description} variation="small" margin="none">
+      <Text variation="small" margin="none">
         {description}
       </Text>
     ) : null}
