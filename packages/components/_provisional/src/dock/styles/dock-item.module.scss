@@ -1,8 +1,6 @@
 @import "@react-ck/theme";
 
 .root {
-  border-radius: get-spacing(1);
-
   &.expanded {
     justify-content: flex-start;
   }
