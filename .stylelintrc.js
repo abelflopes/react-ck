@@ -35,6 +35,12 @@ const config = {
   plugins: ["stylelint-no-unsupported-browser-features"],
   defaultSeverity: "warning",
   rules: {
+    "at-rule-disallowed-list": [
+      "import",
+      {
+        severity: "warning",
+      },
+    ],
     "scss/no-global-function-names": [
       true,
       {
