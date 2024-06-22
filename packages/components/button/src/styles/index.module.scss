@@ -77,11 +77,12 @@
 }
 
 .secondary {
-  @include theme.define-css-var(button, background-color, theme.get-color(neutral-light-2));
-  @include theme.define-css-var(button, color, theme.get-color(neutral-dark-4));
+  @include theme.define-css-var(button, background-color, theme.get-color(highlight-primary-light));
+  @include theme.define-css-var(button, color, theme.get-color(highlight-primary-dark));
 
   &:hover {
-    @include theme.define-css-var(button, background-color, theme.get-color(neutral-light-3));
+    @include theme.define-css-var(button, background-color, theme.get-color(highlight-primary));
+    @include theme.define-css-var(button, color, theme.get-color(neutral-light-1));
   }
 }
 
