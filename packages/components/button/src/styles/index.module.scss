@@ -1,20 +1,19 @@
-@import "@react-ck/theme";
-@import "@react-ck/text";
+@use "@react-ck/theme";
+@use "@react-ck/text";
 
 .root {
-  @include text-base;
-  @include define-css-var(button, border-radius, get-spacing(1));
+  @include text.text-base;
+  @include theme.define-css-var(button, border-radius, theme.get-spacing(1));
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: get-css-var(button, padding-y) get-css-var(button, padding-x);
+  padding: theme.get-css-var(button, padding-y) theme.get-css-var(button, padding-x);
   border: none;
-  border-radius: get-css-var(button, border-radius);
-  background-color: get-css-var(button, background-color);
-  color: get-css-var(button, color);
+  border-radius: theme.get-css-var(button, border-radius);
+  background-color: theme.get-css-var(button, background-color);
+  color: theme.get-css-var(button, color);
   cursor: pointer;
-  font-weight: 700;
   transition: background-color 0.2s ease;
   box-sizing: border-box;
 
@@ -23,7 +22,7 @@
   }
 
   &.icon-only {
-    @include define-css-var(button, border-radius, 50%);
+    @include theme.define-css-var(button, border-radius, 50%);
 
     aspect-ratio: 1/1;
   }
@@ -34,79 +33,83 @@
 }
 
 .size-l {
-  @include define-css-var(button, padding-y, get-spacing(2));
-  @include define-css-var(button, padding-x, get-spacing(3));
+  @include theme.define-css-var(button, padding-y, theme.get-spacing(2));
+  @include theme.define-css-var(button, padding-x, theme.get-spacing(3));
 
   &.icon-only {
-    @include define-css-var(button, padding-y, get-spacing(1.5));
-    @include define-css-var(button, padding-x, get-spacing(1.5));
+    @include theme.define-css-var(button, padding-y, theme.get-spacing(1.5));
+    @include theme.define-css-var(button, padding-x, theme.get-spacing(1.5));
   }
 }
 
 .size-m {
-  @include define-css-var(button, padding-y, get-spacing(1));
-  @include define-css-var(button, padding-x, get-spacing(2));
+  @include theme.define-css-var(button, padding-y, theme.get-spacing(0.75));
+  @include theme.define-css-var(button, padding-x, theme.get-spacing(2));
 
   &.icon-only {
-    @include define-css-var(button, padding-y, get-spacing(1));
-    @include define-css-var(button, padding-x, get-spacing(1));
+    @include theme.define-css-var(button, padding-y, theme.get-spacing(1));
+    @include theme.define-css-var(button, padding-x, theme.get-spacing(1));
   }
 }
 
 .size-s {
-  @include define-css-var(button, padding-y, get-spacing(0.25));
-  @include define-css-var(button, padding-x, get-spacing(1.25));
+  @include theme.define-css-var(button, padding-y, theme.get-spacing(0.25));
+  @include theme.define-css-var(button, padding-x, theme.get-spacing(1.25));
 
   &.icon-only {
-    @include define-css-var(button, padding-y, get-spacing(0.66));
-    @include define-css-var(button, padding-x, get-spacing(0.66));
-    @include text-variation(extra-small);
+    @include theme.define-css-var(button, padding-y, theme.get-spacing(0.66));
+    @include theme.define-css-var(button, padding-x, theme.get-spacing(0.66));
+    @include text.text-variation(extra-small);
   }
 }
 
 .primary {
-  @include define-css-var(button, background-color, get-color(highlight-primary));
-  @include define-css-var(button, color, get-color(neutral-light-1));
+  @include theme.define-css-var(button, background-color, theme.get-color(highlight-primary));
+  @include theme.define-css-var(button, color, theme.get-color(neutral-light-1));
 
   &:hover {
-    @include define-css-var(button, background-color, get-color(highlight-primary-dark));
+    @include theme.define-css-var(
+      button,
+      background-color,
+      theme.get-color(highlight-primary-dark)
+    );
   }
 }
 
 .secondary {
-  @include define-css-var(button, background-color, get-color(neutral-light-2));
-  @include define-css-var(button, color, get-color(neutral-dark-4));
+  @include theme.define-css-var(button, background-color, theme.get-color(neutral-light-2));
+  @include theme.define-css-var(button, color, theme.get-color(neutral-dark-4));
 
   &:hover {
-    @include define-css-var(button, background-color, get-color(neutral-light-3));
+    @include theme.define-css-var(button, background-color, theme.get-color(neutral-light-3));
   }
 }
 
 .ghost {
-  @include define-css-var(button, background-color, transparent);
-  @include define-css-var(button, color, get-color(neutral-dark-4));
+  @include theme.define-css-var(button, background-color, transparent);
+  @include theme.define-css-var(button, color, theme.get-color(neutral-dark-4));
 
   &:hover {
-    @include define-css-var(button, background-color, get-color(neutral-light-2));
+    @include theme.define-css-var(button, background-color, theme.get-color(neutral-light-2));
   }
 }
 
 .negative {
-  @include define-css-var(button, background-color, get-color(status-negative));
-  @include define-css-var(button, color, get-color(neutral-light-1));
+  @include theme.define-css-var(button, background-color, theme.get-color(status-negative));
+  @include theme.define-css-var(button, color, theme.get-color(neutral-light-1));
 
   &:hover {
-    @include define-css-var(button, background-color, get-color(status-negative-dark));
+    @include theme.define-css-var(button, background-color, theme.get-color(status-negative-dark));
   }
 }
 
 .bordered {
-  border: solid get-css-var(spacing, border) get-color(neutral-light-2);
+  border: solid theme.get-css-var(spacing, border) theme.get-color(neutral-light-2);
 }
 
 .icon {
   display: inline-flex;
   align-items: center;
-  margin-right: get-spacing(0.5);
-  margin-left: get-spacing(-0.5);
+  margin-right: theme.get-spacing(0.5);
+  margin-left: theme.get-spacing(-0.5);
 }
