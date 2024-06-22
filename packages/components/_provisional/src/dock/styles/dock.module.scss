@@ -1,18 +1,18 @@
-@import "@react-ck/theme";
+@a "@react-ck/theme";
 
 .root {
   display: flex;
   height: 100%;
   flex-direction: column;
-  border-right: solid get-css-var(spacing, border) get-color(neutral-light-3);
+  border-right: solid get-css-var(spacing, border) get-color(neutral-light-2);
 }
 
 .header {
-  border-bottom: solid get-css-var(spacing, border) get-color(neutral-light-3);
+  border-bottom: solid get-css-var(spacing, border) get-color(neutral-light-2);
 }
 
 .footer {
-  border-top: solid get-css-var(spacing, border) get-color(neutral-light-3);
+  border-top: solid get-css-var(spacing, border) get-color(neutral-light-2);
 }
 
 .header,

@@ -12,7 +12,7 @@ $spacing-y: get-spacing(0.5);
   }
 
   &.received {
-    @include define-css-var(chat-message, background-color, get-color(neutral-light-3));
+    @include define-css-var(chat-message, background-color, get-color(neutral-light-2));
     @include define-css-var(chat-message, color, get-color(neutral-dark-4));
     @include define-css-var(chat-message, margin-right, auto);
   }

@@ -1,61 +1,82 @@
 @import "@react-ck/theme";
 @import "@react-ck/text";
 
+$border-radius: get-css-var(card, border-radius);
+
 .root {
   @include text-base;
-  @include define-css-var(card, border-radius, get-spacing(2));
+  @include define-css-var(card, border-radius, get-spacing(1));
 
-  border-radius: get-css-var(card, border-radius);
+  border-radius: $border-radius;
   background-color: get-color(neutral-light-1);
+  transition: box-shadow 0.3s ease;
+}
 
-  // Skins
+// Interaction styles
 
+.hoverable:hover {
   &.bordered {
-    border: solid get-css-var(spacing, border) get-color(neutral-light-2);
+    box-shadow: 0px 1px 3px 0px #00000029;
   }
 
   &.shadowed {
-    box-shadow: 0 0 10px 0 get-color(overlay-dark);
+    box-shadow: 0px 1px 6px 0px #00000035;
   }
+}
 
-  &.ghost {
-    @include define-css-var(card, border-radius, 0);
-  }
+.clickable {
+  cursor: pointer;
+}
 
-  // Variations
+// Skins
 
-  &.horizontal {
-    display: flex;
-  }
+.bordered {
+  border: solid get-css-var(spacing, border) get-color(neutral-light-2);
+}
 
-  &.vertical {
-    .image {
-      width: 100%;
-    }
-  }
+.shadowed {
+  box-shadow: 0px 1px 3px 0px #00000029;
+}
 
-  // Spacing
+.ghost {
+  @include define-css-var(card, border-radius, 0);
+}
 
-  &.spacing_s {
-    @include define-css-var(card, spacing, get-spacing(1));
-  }
+// Variations
 
-  &.spacing_m {
-    @include define-css-var(card, spacing, get-spacing(2));
-  }
+.horizontal {
+  display: flex;
+}
 
-  &.spacing_l {
-    @include define-css-var(card, spacing, get-spacing(3));
-  }
-
-  // Content
-
-  .content {
-    padding: get-css-var(card, spacing);
-  }
-
+.vertical {
   .image {
-    display: block;
-    object-fit: cover;
+    width: 100%;
   }
+}
+
+// Spacing
+
+.spacing_s {
+  @include define-css-var(card, spacing, get-spacing(1));
+}
+
+.spacing_m {
+  @include define-css-var(card, spacing, get-spacing(2));
+}
+
+.spacing_l {
+  @include define-css-var(card, spacing, get-spacing(3));
+}
+
+// Content
+
+.content {
+  padding: get-css-var(card, spacing);
+}
+
+.image {
+  display: block;
+  object-fit: cover;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
 }

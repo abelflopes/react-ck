@@ -10,6 +10,8 @@ import { CardImage } from "./CardImage";
 interface CardProps extends Readonly<React.HTMLAttributes<HTMLDivElement>> {
   /** Defines card style */
   skin?: "bordered" | "shadowed" | "ghost";
+  /** Applies interactivity styles  */
+  interaction?: "hover" | "click";
   /** Defines card orientation */
   variation?: "vertical" | "horizontal";
   /** Controls the amount of spacing between card limits */
@@ -24,7 +26,8 @@ interface CardProps extends Readonly<React.HTMLAttributes<HTMLDivElement>> {
  */
 
 const Card = ({
-  skin = "shadowed",
+  skin = "bordered",
+  interaction,
   variation = "vertical",
   spacing = "m",
   children,
@@ -48,6 +51,8 @@ const Card = ({
         {...otherProps}
         className={classNames(styles.root, className, styles[skin], styles[variation], {
           [`${styles[`spacing_${spacing}`]}`]: spacing !== "none",
+          [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
+          [`${styles.clickable}`]: interaction === "click",
         })}>
         {contextValue.image ? (
           <img

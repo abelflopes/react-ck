@@ -11,7 +11,14 @@ import {
   type BaseHTMLProps,
 } from "@react-ck/react-utils";
 
-export type TextSkin = "default" | "bold" | "link" | "link_hidden" | "inverted" | "soft";
+export type TextSkin =
+  | "default"
+  | "bold"
+  | "link"
+  | "link_hidden"
+  | "inverted"
+  | "soft"
+  | "highlight-primary";
 
 export type TextVariation =
   | "banner"

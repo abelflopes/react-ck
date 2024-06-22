@@ -29,15 +29,31 @@ const meta: Meta<typeof Card> = {
 
 export default meta;
 
-export const Component: Story = {
+export const Base: Story = {
+  args: {
+    children: (
+      <>
+        <Text skin="bold" margin="none">
+          {faker.lorem.sentence(4)}
+        </Text>
+
+        <Text margin="none">{faker.lorem.sentence(16)}</Text>
+      </>
+    ),
+  },
+};
+
+export const CardImage: Story = {
   args: {
     children: (
       <>
         <Card.Image src={faker.image.urlPicsumPhotos({ width: 320, height: 100 })} />
 
-        <Text variation="h2">{faker.lorem.sentence(4)}</Text>
+        <Text skin="bold" margin="none">
+          {faker.lorem.sentence(4)}
+        </Text>
 
-        <Text>{faker.lorem.sentence(6)}</Text>
+        <Text margin="none">{faker.lorem.sentence(16)}</Text>
       </>
     ),
   },
