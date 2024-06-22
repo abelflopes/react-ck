@@ -7,6 +7,7 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLElement> {
   name: string;
   image?: string;
   size?: "s" | "m" | "l";
+  skin?: "square" | "rounded";
 }
 
 export const Avatar = ({
@@ -14,6 +15,7 @@ export const Avatar = ({
   image,
   size = "m",
   className,
+  skin = "rounded",
   ...otherProps
 }: Readonly<AvatarProps>): React.ReactElement => {
   const initials = name
@@ -24,7 +26,9 @@ export const Avatar = ({
     .toUpperCase();
 
   return (
-    <figure className={classNames(styles.root, styles[`size_${size}`], className)} {...otherProps}>
+    <figure
+      className={classNames(styles.root, styles[`size_${size}`], styles[`skin_${skin}`], className)}
+      {...otherProps}>
       {!image && <figcaption>{initials}</figcaption>}
       {image ? <Image alt={name} src={image} className={styles.image} /> : null}
     </figure>
