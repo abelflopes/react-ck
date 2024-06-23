@@ -1,14 +1,13 @@
-// React
 import React, { useCallback } from "react";
-// Styles
+import classNames from "classnames";
 import styles from "./index.module.scss";
-// Icons - https://react-icons.github.io/react-icons
-import { LuSendHorizonal } from "react-icons/lu";
-// Components
 import { Button } from "@react-ck/button";
 import { Input } from "@react-ck/input";
 import { Icon } from "@react-ck/icon";
-import classNames from "classnames";
+import { IconLightning } from "@react-ck/icon/icons/IconLightning";
+import { IconAttach } from "@react-ck/icon/icons/IconAttach";
+import { IconDocument } from "@react-ck/icon/icons/IconDocument";
+import { IconArrowRightCircle } from "@react-ck/icon/icons/IconArrowRightCircle";
 
 export interface ChatPromptProps {
   placeholder: string;
@@ -41,27 +40,54 @@ export const ChatPrompt = ({
   return (
     <>
       {status ? (
-        <p className={classNames(status.type === "error" && styles.error)}>{status.description}</p>
+        <p className={classNames(styles.description, status.type === "error" && styles.error)}>
+          {status.description}
+        </p>
       ) : null}
       <form className={styles.root} onSubmit={onSubmit}>
+        <Icon size="m">
+          <IconLightning />
+        </Icon>
         <Input
           className={styles.field}
           autoComplete="off"
           name="message"
           type="text"
+          skin="ghost"
           placeholder={placeholder}
           // eslint-disable-next-line jsx-a11y/no-autofocus -- Exception case
           autoFocus
           required
         />
-        <Button
-          icon={
-            <Icon>
-              <LuSendHorizonal />
-            </Icon>
-          }>
-          Send
-        </Button>
+        <div>
+          <Button
+            size="s"
+            skin="ghost"
+            icon={
+              <Icon>
+                <IconDocument />
+              </Icon>
+            }
+          />
+          <Button
+            size="s"
+            skin="ghost"
+            icon={
+              <Icon>
+                <IconAttach />
+              </Icon>
+            }
+          />
+          <Button
+            size="s"
+            skin="ghost"
+            icon={
+              <Icon>
+                <IconArrowRightCircle />
+              </Icon>
+            }
+          />
+        </div>
       </form>
     </>
   );

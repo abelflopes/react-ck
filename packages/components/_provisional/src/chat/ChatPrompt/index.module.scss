@@ -3,9 +3,11 @@
 
 .root {
   display: flex;
+  align-items: center;
   padding: get-spacing(1);
-  background: get-color(neutral-light-2);
+  border-radius: get-spacing(1);
   gap: get-spacing(1);
+  border: solid get-css-var(spacing, border) get-color(highlight-primary-light);
 }
 
 .field {
@@ -13,12 +15,14 @@
   flex-shrink: 1;
 }
 
-.error {
+.description {
   @include text-base;
   @include text-variation(smallest);
 
-  padding: get-spacing(0.25) get-spacing(1);
-  margin: 0;
-  background-color: get-color(status-negative);
-  color: get-color(neutral-light-1);
+  color: get-color(neutral-dark-1);
+  margin: 0 0 get-spacing(0.3);
+
+  &.error {
+    color: get-color(status-negative);
+  }
 }
