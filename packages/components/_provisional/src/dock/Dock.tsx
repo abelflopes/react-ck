@@ -5,7 +5,6 @@ import { DockContext, type DockContextProps } from "./context";
 import { DockItem } from "./DockItem";
 import { DockMainItem } from "./DockMainItem";
 import { ScrollableContainer } from "../scrollable-container";
-import { Divider } from "@react-ck/divider";
 
 interface DockProps extends React.HTMLAttributes<HTMLElement> {
   header?: React.ReactNode;
