@@ -27,6 +27,7 @@
     "@react-ck/button": "^1.0.0",
     "@react-ck/card": "^1.0.0",
     "@react-ck/chip": "^1.0.0",
+    "@react-ck/context-form": "^1.0.0",
     "@react-ck/collapse": "^1.0.0",
     "@react-ck/container": "^1.0.0",
     "@react-ck/data-table": "^1.0.0",

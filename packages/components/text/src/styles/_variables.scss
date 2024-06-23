@@ -17,6 +17,12 @@ $text-skins: (
     ),
     hover: (),
   ),
+  highlight-primary: (
+    default: (
+      color: get-color(highlight-primary),
+    ),
+    hover: (),
+  ),
   bold: (
     default: (
       font-weight: 700,

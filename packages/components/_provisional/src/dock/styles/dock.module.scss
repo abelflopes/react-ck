@@ -4,15 +4,14 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  border-right: solid get-css-var(spacing, border) get-color(neutral-light-3);
 }
 
 .header {
-  border-bottom: solid get-css-var(spacing, border) get-color(neutral-light-3);
+  border-bottom: solid get-css-var(spacing, border) get-color(neutral-light-2);
 }
 
 .footer {
-  border-top: solid get-css-var(spacing, border) get-color(neutral-light-3);
+  border-top: solid get-css-var(spacing, border) get-color(neutral-light-2);
 }
 
 .header,
@@ -33,4 +32,13 @@
 .content {
   flex-grow: 1;
   flex-shrink: 1;
+}
+
+.skin_default {
+  border-right: solid get-css-var(spacing, border) get-color(neutral-light-2);
+}
+
+.skin_shadowed {
+  border-radius: get-spacing(1);
+  box-shadow: 0px 1px 3px 0px #00000029;
 }

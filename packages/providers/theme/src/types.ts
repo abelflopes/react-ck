@@ -10,7 +10,6 @@ export interface Theme {
     "neutral-light-2": string;
     "neutral-light-3": string;
     "neutral-light-4": string;
-    "neutral-light-5": string;
     "neutral-dark-1": string;
     "neutral-dark-3": string;
     "neutral-dark-2": string;

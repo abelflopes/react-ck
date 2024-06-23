@@ -22,7 +22,7 @@ export const DockMainItem = ({
       className={classNames(styles.root, expanded && styles.expanded, className)}
       title={expanded ? undefined : label}
       {...otherProps}>
-      <Avatar name={label} image={image} />
+      <Avatar name={label} image={image} skin="square" />
 
       {expanded ? label : null}
     </span>

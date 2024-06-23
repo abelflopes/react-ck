@@ -1,7 +1,9 @@
 import { useContext, useEffect } from "react";
 import { ModalContext, type ModalContextValue } from "./context";
 
-export const ModalFooter = (props: NonNullable<ModalContextValue["footer"]>): undefined => {
+export type ModalFooterProps = ModalContextValue["footer"];
+
+export const ModalFooter = (props: NonNullable<ModalFooterProps>): undefined => {
   const context = useContext(ModalContext);
 
   useEffect(() => {

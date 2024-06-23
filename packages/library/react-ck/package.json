@@ -41,6 +41,7 @@
     "@react-ck/chip": "^1.2.18",
     "@react-ck/collapse": "^1.1.18",
     "@react-ck/container": "^1.1.21",
+    "@react-ck/context-form": "^1.0.0",
     "@react-ck/data-table": "^3.0.2",
     "@react-ck/divider": "^1.2.14",
     "@react-ck/elevation": "^1.1.14",

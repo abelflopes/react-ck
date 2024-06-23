@@ -12,6 +12,32 @@
   margin-bottom: get-css-var(text, margin-bottom);
 }
 
+// Variation
+
+.variation_h1,
+.variation_h2,
+.variation_h3,
+.variation_h4,
+.variation_h5,
+.variation_h6 {
+  // Force block display in case of component with inline element
+  display: block;
+}
+
+@each $variation in map-keys($text-variations) {
+  .variation_#{$variation} {
+    @include text-variation($variation);
+  }
+}
+
+// Skins
+
+@each $skin in map-keys($text-skins) {
+  .skin_#{$skin} {
+    @include text-skin($skin);
+  }
+}
+
 // Margin
 
 .variation_h1,
@@ -38,36 +64,10 @@ p.variation_p {
 
 .margin_none,
 .margin_top {
-  @include define-css-var(text, margin-bottom, 0);
+  @include define-css-var(text, margin-bottom, 0, true);
 }
 
 .margin_none,
 .margin_bottom {
-  @include define-css-var(text, margin-top, 0);
-}
-
-// Variation
-
-.variation_h1,
-.variation_h2,
-.variation_h3,
-.variation_h4,
-.variation_h5,
-.variation_h6 {
-  // Force block display in case of component with inline element
-  display: block;
-}
-
-@each $variation in map-keys($text-variations) {
-  .variation_#{$variation} {
-    @include text-variation($variation);
-  }
-}
-
-// Skins
-
-@each $skin in map-keys($text-skins) {
-  .skin_#{$skin} {
-    @include text-skin($skin);
-  }
+  @include define-css-var(text, margin-top, 0, true);
 }

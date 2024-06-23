@@ -3,6 +3,10 @@ $form-field-styles: (
     border-color: get-color(neutral-light-2),
     color: get-color(neutral-dark-4),
   ),
+  ghost: (
+    border-color: transparent,
+    color: get-color(neutral-dark-4),
+  ),
   negative: (
     border-color: get-color(status-negative-dark),
     color: get-color(status-negative-dark),

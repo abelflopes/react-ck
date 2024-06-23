@@ -14,7 +14,7 @@
 }
 
 .tab {
-  @include define-css-var(tabs, border-color, get-color(neutral-light-3));
+  @include define-css-var(tabs, border-color, get-color(neutral-light-2));
   @include text-base;
 
   padding: get-spacing(1) get-spacing(2);

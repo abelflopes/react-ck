@@ -1,4 +1,4 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
 @import "@react-ck/text";
 
 .root {
@@ -7,16 +7,16 @@
 
   display: flex;
   align-items: center;
-  padding: get-spacing(1);
-  background-color: get-color(neutral-light-2);
-  gap: get-spacing(4);
+  padding: theme.get-spacing(1);
+  background-color: theme.get-color(neutral-light-2);
+  gap: theme.get-spacing(4);
 
   .section {
     display: flex;
     flex-basis: 33%;
     align-items: center;
     justify-content: center;
-    gap: get-spacing(2);
+    gap: theme.get-spacing(2);
 
     &:first-child {
       justify-content: flex-start;

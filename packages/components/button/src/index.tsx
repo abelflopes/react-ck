@@ -15,7 +15,7 @@ export interface ButtonProps<T extends HTMLTag = "button">
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     ConsumerPolymorphicProps<T> {
   /** Defines the color scheme of the button */
-  skin?: "primary" | "secondary" | "ghost" | "negative";
+  skin?: "primary" | "secondary" | "ghost" | "negative" | "bordered";
   /** Defines the scale of the button */
   size?: "s" | "m" | "l";
   /**

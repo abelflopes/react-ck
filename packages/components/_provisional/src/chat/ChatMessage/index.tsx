@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from "react";
 // Utils
 import classNames from "classnames";
 
-interface ChatMessageProps {
+export interface ChatMessageProps {
   senderName: string;
   children: React.ReactNode;
   type: "sent" | "received";

@@ -4,6 +4,8 @@ export type IconMap = Array<{
   export: string;
 }>;
 
+// https://react-icons.github.io/react-icons/
+
 export const iconMap = [
   {
     import: "BsBell",
@@ -94,5 +96,25 @@ export const iconMap = [
     import: "FaRegCircleUser",
     module: "react-icons/fa6",
     export: "IconUserCircle",
+  },
+  {
+    import: "HiOutlineLightningBolt",
+    module: "react-icons/hi",
+    export: "IconLightning",
+  },
+  {
+    import: "GrDocumentText",
+    module: "react-icons/gr",
+    export: "IconDocument",
+  },
+  {
+    import: "BsArrowRightCircleFill",
+    module: "react-icons/bs",
+    export: "IconArrowRightCircle",
+  },
+  {
+    import: "IoMdAttach",
+    module: "react-icons/io",
+    export: "IconAttach",
   },
 ];

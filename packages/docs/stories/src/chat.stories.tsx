@@ -28,12 +28,36 @@ const meta: Meta<typeof Chat> = {
 
 export default meta;
 
-export const Component: Story = {
+export const Normal: Story = {
+  args: {
+    placeholder: "Ask me anything...",
+    status: {
+      type: "loading",
+      description: "Someone is writing...",
+    },
+    onSend: () => undefined,
+    children: (
+      <>
+        <Chat.Message senderName="Leslie" type="sent">
+          Hello
+        </Chat.Message>
+        <Chat.Message senderName="Leslie" type="sent">
+          How are you?
+        </Chat.Message>
+        <Chat.Message senderName="Mike" type="received">
+          I&apos;m good, thank you.
+        </Chat.Message>
+      </>
+    ),
+  },
+};
+
+export const Error: Story = {
   args: {
     placeholder: "Ask me anything...",
     status: {
       type: "error",
-      description: "The prompt is not responding. Please try again later.",
+      description: "The server is not responding. Please try again later.",
     },
     onSend: () => undefined,
     children: (
@@ -55,10 +79,6 @@ export const Component: Story = {
 export const Empty: Story = {
   args: {
     placeholder: "Ask me anything...",
-    status: {
-      type: "error",
-      description: "The prompt is not responding. Please try again later.",
-    },
     onSend: () => undefined,
     children: <EmptyState>The chat is empty, send the first message</EmptyState>,
   },

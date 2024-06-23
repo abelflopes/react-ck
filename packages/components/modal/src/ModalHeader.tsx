@@ -1,7 +1,9 @@
 import { useContext, useEffect } from "react";
 import { ModalContext, type ModalContextValue } from "./context";
 
-export const ModalHeader = (props: NonNullable<ModalContextValue["header"]>): undefined => {
+export type ModalHeaderProps = ModalContextValue["header"];
+
+export const ModalHeader = (props: NonNullable<ModalHeaderProps>): undefined => {
   const context = useContext(ModalContext);
 
   useEffect(() => {

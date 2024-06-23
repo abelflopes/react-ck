@@ -75,16 +75,10 @@ const Modal = ({
 
   // Synchronize internal state with external state
   useEffect(() => {
-    console.log("setInternalOpen", open);
-
     setInternalOpen(open);
 
     if (!open) onDismiss?.();
   }, [onDismiss, open]);
-
-  useEffect(() => {
-    console.log("internalOpen", internalOpen);
-  }, [internalOpen]);
 
   // Lock scroll if there are open modals
   useEffect(() => {
