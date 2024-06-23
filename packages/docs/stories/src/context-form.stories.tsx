@@ -32,10 +32,12 @@ export default meta;
 export const Component: Story = {
   args: {
     onValuesChange: (values) => {
+      // eslint-disable-next-line no-console -- used to debug
       console.log("onValuesChange", values);
     },
     onSubmit: ({ values, e }) => {
       e.preventDefault();
+      // eslint-disable-next-line no-console -- used to debug
       console.log("onSubmit", values, e);
     },
     children: (
