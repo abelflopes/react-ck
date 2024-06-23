@@ -25,7 +25,7 @@ export type TextVariation =
   | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">
   | "small"
   | "extra-small"
-  | "smallest";
+  | "extra-small";
 
 export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPolymorphicProps<T> {
   /** Adds margin to the text element  */
@@ -80,7 +80,7 @@ export const Text = <T extends HTMLTag>({
         break;
       case "small":
       case "extra-small":
-      case "smallest":
+      case "extra-small":
         value = "p";
         break;
       default:

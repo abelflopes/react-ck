@@ -16,7 +16,6 @@ const variations: TextVariation[] = [
   "p",
   "small",
   "extra-small",
-  "smallest",
 ];
 
 const sampleText = faker.lorem.sentence(3);
