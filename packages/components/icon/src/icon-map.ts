@@ -110,11 +110,11 @@ export const iconMap = [
   {
     import: "BsArrowRightCircleFill",
     module: "react-icons/bs",
-    export: "ArrowRightCircleFill",
+    export: "IconArrowRightCircle",
   },
   {
     import: "IoMdAttach",
     module: "react-icons/io",
-    export: "Attach",
+    export: "IconAttach",
   },
 ];
