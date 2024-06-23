@@ -7,6 +7,7 @@
     "@drvida/fe-api": "file:./../../../../dr-vida/packages/api/fe-api",
     "react": "^18.2.0",
     "react-ck": "*",
+    "@react-ck/icon": "*",
     "react-router": "^6.23.1",
     "react-router-dom": "^6.23.1"
   },
