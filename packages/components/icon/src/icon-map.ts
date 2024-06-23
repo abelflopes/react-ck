@@ -117,4 +117,14 @@ export const iconMap = [
     module: "react-icons/io",
     export: "IconAttach",
   },
+  {
+    import: "IoChatbubblesOutline",
+    module: "react-icons/io5",
+    export: "Chat",
+  },
+  {
+    import: "IoMdNotificationsOutline",
+    module: "react-icons/io",
+    export: "Notification",
+  },
 ];
