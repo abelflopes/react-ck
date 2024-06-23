@@ -79,7 +79,6 @@ export const Text = <T extends HTMLTag>({
         break;
       case "small":
       case "extra-small":
-      case "extra-small":
         value = "p";
         break;
       default:
