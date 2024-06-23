@@ -24,7 +24,6 @@ export type TextVariation =
   | "banner"
   | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">
   | "small"
-  | "extra-small"
   | "extra-small";
 
 export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPolymorphicProps<T> {
