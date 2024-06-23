@@ -8,8 +8,8 @@ exports[`snapshot Context Form renders correctly 1`] = `
     className="root default"
   >
     <label
-      className="root variation_small skin_bold margin_none label"
-      htmlFor="aaa"
+      className="root variation_small skin_default margin_none"
+      htmlFor=":r0:"
     >
       Username
     </label>
@@ -24,7 +24,7 @@ exports[`snapshot Context Form renders correctly 1`] = `
       />
     </div>
     <p
-      className="root variation_small skin_default margin_none description"
+      className="root variation_small skin_default margin_none"
     >
       Add a respectful alias name
     </p>
@@ -33,8 +33,8 @@ exports[`snapshot Context Form renders correctly 1`] = `
     className="root negative"
   >
     <label
-      className="root variation_small skin_bold margin_none label"
-      htmlFor="aaa"
+      className="root variation_small skin_default margin_none"
+      htmlFor=":r1:"
     >
       Email
     </label>
@@ -51,7 +51,7 @@ exports[`snapshot Context Form renders correctly 1`] = `
       />
     </div>
     <p
-      className="root variation_small skin_default margin_none description"
+      className="root variation_small skin_default margin_none"
     >
       Add your email address
     </p>
@@ -65,8 +65,8 @@ exports[`snapshot Context Form renders correctly 1`] = `
     className="root default"
   >
     <label
-      className="root variation_small skin_bold margin_none label"
-      htmlFor="aaa"
+      className="root variation_small skin_default margin_none"
+      htmlFor=":r2:"
     >
       Address
     </label>
@@ -80,7 +80,7 @@ exports[`snapshot Context Form renders correctly 1`] = `
       />
     </div>
     <p
-      className="root variation_small skin_default margin_none description"
+      className="root variation_small skin_default margin_none"
     >
       Add your residential address
     </p>
