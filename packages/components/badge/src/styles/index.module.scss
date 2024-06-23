@@ -6,7 +6,7 @@
   $size: get-spacing(2);
 
   @include text-base;
-  @include text-variation(smallest);
+  @include text-variation(extra-small);
 
   display: inline-block;
   overflow: hidden;

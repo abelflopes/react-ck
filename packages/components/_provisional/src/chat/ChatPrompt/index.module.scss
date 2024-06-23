@@ -17,7 +17,7 @@
 
 .description {
   @include text-base;
-  @include text-variation(smallest);
+  @include text-variation(extra-small);
 
   color: get-color(neutral-dark-1);
   margin: 0 0 get-spacing(0.3);

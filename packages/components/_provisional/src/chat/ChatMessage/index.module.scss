@@ -57,7 +57,7 @@ $spacing-y: get-spacing(0.5);
 
 .sender {
   @include text-base;
-  @include text-variation(smallest);
+  @include text-variation(extra-small);
 
   padding: 0 get-spacing(-5);
   color: get-color(neutral-dark-1);
