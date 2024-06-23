@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.4](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.7.3...@react-ck/theme@1.7.4) (2024-06-23)
+
+
+### Bug Fixes
+
+* lighten highlight primary light color ([a1ff907](https://github.com/abelflopes/react-ck/commit/a1ff907f22a779cbe9d5587ba8c614cec7f94744))
+* minor improvements ([057fc73](https://github.com/abelflopes/react-ck/commit/057fc73a40b858d25f8e3e60cea7d4ec9fe021ed))
+
+
+
 ## [1.7.3](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.7.2...@react-ck/theme@1.7.3) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/theme

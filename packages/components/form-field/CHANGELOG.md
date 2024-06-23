@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.1.13...@react-ck/form-field@1.2.0) (2024-06-23)
+
+
+### Features
+
+* expose form field context with id and skin ([7143b75](https://github.com/abelflopes/react-ck/commit/7143b751538745d54142cf4e1409b5cf5207476a))
+* update form field styles ([8a15516](https://github.com/abelflopes/react-ck/commit/8a15516537296b0d7c42aa48496ffa2cda8d22e0))
+
+
+
 ## [1.1.13](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.1.12...@react-ck/form-field@1.1.13) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/form-field

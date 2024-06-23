@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.4.2...@react-ck/card@1.4.3) (2024-06-23)
+
+
+### Bug Fixes
+
+* default card skin ([61a70d4](https://github.com/abelflopes/react-ck/commit/61a70d41892c094c3941b48a920165c5a6d14729))
+* minor improvements ([057fc73](https://github.com/abelflopes/react-ck/commit/057fc73a40b858d25f8e3e60cea7d4ec9fe021ed))
+
+
+
 ## [1.4.2](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.4.1...@react-ck/card@1.4.2) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/card
