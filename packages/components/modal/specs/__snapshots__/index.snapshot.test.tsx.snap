@@ -9,59 +9,66 @@ exports[`snapshot Modal renders correctly 1`] = `
     onClick={[Function]}
   />
   <div
-    className="root card bordered vertical spacing_m"
+    className="card"
   >
-    <div
-      className="content"
+    <header
+      className="header"
+      heading="Heading"
     >
-      <header
-        className="header"
-        heading="Heading"
+      <p
+        className="root variation_h3 skin_default margin_none"
       >
-        <p
-          className="root variation_h3 skin_default margin_none"
+        Heading
+      </p>
+      <button
+        className="root ghost size-m icon-only"
+        onClick={[Function]}
+      >
+        <span
+          className="root size_text skin_default"
         >
-          Heading
-        </p>
-        <button
-          className="root ghost size-m icon-only"
-          onClick={[Function]}
-        >
-          <span
-            className="root size_text skin_default"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                {
-                  "color": undefined,
-                }
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              {
+                "color": undefined,
               }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3,3 L21,21 M3,21 L21,3"
-                fill="none"
-                strokeWidth="2"
-              />
-            </svg>
-          </span>
-        </button>
-      </header>
-      <main
-        className="content"
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3,3 L21,21 M3,21 L21,3"
+              fill="none"
+              strokeWidth="2"
+            />
+          </svg>
+        </span>
+      </button>
+    </header>
+    <div
+      className="root"
+      onScroll={[Function]}
+      style={
+        {
+          "--scroll-x": "0px",
+          "--scroll-y": "0px",
+        }
+      }
+    >
+      <div
+        className="shadow_x"
       />
-      <footer
-        className="footer"
-      >
-        Footer
-      </footer>
     </div>
+    <footer
+      className="footer"
+    >
+      Footer
+    </footer>
   </div>
 </div>
 `;
