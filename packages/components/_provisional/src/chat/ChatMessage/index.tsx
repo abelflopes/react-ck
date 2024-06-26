@@ -1,4 +1,4 @@
-import * as styles from "./index.module.scss";
+import styles from "./index.module.scss";
 /// React
 import React, { useRef, useEffect } from "react";
 // Utils

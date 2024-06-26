@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import { Text } from "@react-ck/text";
 import { Button } from "@react-ck/button";
 import { Icon } from "@react-ck/icon";

@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Overlay, type OverlayProps } from "@react-ck/overlay";
 import { Spinner } from "@react-ck/spinner";

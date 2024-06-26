@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Skeleton } from "@react-ck/skeleton";
 

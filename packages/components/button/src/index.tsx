@@ -1,5 +1,5 @@
 import React, { isValidElement, useEffect, useMemo } from "react";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import {
   getDisplayName,

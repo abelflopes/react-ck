@@ -1,4 +1,4 @@
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import React from "react";
 import { useThemeContext } from "@react-ck/theme";
 import classNames from "classnames";

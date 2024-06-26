@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { DockContext } from "./context";
 import { Button, type ButtonProps } from "@react-ck/button";
-import * as styles from "./styles/dock-item.module.scss";
+import styles from "./styles/dock-item.module.scss";
 import classNames from "classnames";
 
 export interface DockItemProps extends Omit<ButtonProps, "children" | "skin" | "icon"> {

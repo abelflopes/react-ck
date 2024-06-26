@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Container } from "@react-ck/container";
 import { ThemeContextProvider } from "@react-ck/theme";

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import React from "react";
 import { Icon, type IconProps } from "@react-ck/icon";
 import { IconSpinner } from "@react-ck/icon/icons/IconSpinner";

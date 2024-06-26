@@ -1,4 +1,4 @@
-import * as styles from "./styles/menu-item.module.scss";
+import styles from "./styles/menu-item.module.scss";
 import React from "react";
 import classNames from "classnames";
 

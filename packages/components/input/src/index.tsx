@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import { FormField, type FormFieldProps } from "@react-ck/form-field";
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "children"> {

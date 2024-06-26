@@ -19,7 +19,7 @@
     "@react-ck/typescript-config": "^1.0.0",
     "@react-ck/webpack-config": "^1.0.0",
     "@storybook/react-webpack5": "^7.5.2",
-    "css-loader": "^7.1.2",
+    "css-loader": "^6.8.1",
     "glob": "^10.3.10",
     "ts-node-dev": "^2.0.0",
     "type-fest": "^4.7.1"

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import * as styles from "./styles/dock.module.scss";
+import styles from "./styles/dock.module.scss";
 import React, { useMemo } from "react";
 import { DockContext, type DockContextProps } from "./context";
 import { DockItem } from "./DockItem";

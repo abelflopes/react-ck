@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useRef, useState } from "react";
-import * as styles from "./styles/container.module.scss";
+import styles from "./styles/container.module.scss";
 import classNames from "classnames";
 import { GridContext, type GridContextProps } from "./context";
 import { GridColumn } from "./Column";

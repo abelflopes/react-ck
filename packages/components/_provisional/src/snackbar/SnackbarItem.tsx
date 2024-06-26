@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./styles/item.module.scss";
+import styles from "./styles/item.module.scss";
 import classNames from "classnames";
 
 export type SnackbarItemProps = React.HTMLAttributes<HTMLDivElement>;

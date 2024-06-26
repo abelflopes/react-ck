@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DockContext } from "./context";
-import * as styles from "./styles/dock-main-item.module.scss";
+import styles from "./styles/dock-main-item.module.scss";
 import classNames from "classnames";
 import { Avatar, type AvatarProps } from "../avatar";
 

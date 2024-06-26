@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import React, { useMemo, useState } from "react";
 import { CardContext, type CardContextValue } from "./context";
 import { CardImage } from "./CardImage";

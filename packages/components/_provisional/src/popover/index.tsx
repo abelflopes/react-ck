@@ -3,7 +3,7 @@ import { Layer } from "@react-ck/layers";
 import { PositionEngine, type PositionEngineProps } from "../position-engine";
 import { ScrollableContainer } from "../scrollable-container";
 import { Card } from "@react-ck/card";
-import * as styles from "./index.module.scss";
+import styles from "./index.module.scss";
 
 export interface PopoverProps {
   anchor: PositionEngineProps["anchorRef"];

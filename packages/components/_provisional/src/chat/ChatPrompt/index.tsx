@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import classNames from "classnames";
-import * as styles from "./index.module.scss";
+import styles from "./index.module.scss";
 import { Button } from "@react-ck/button";
 import { Input } from "@react-ck/input";
 import { Icon } from "@react-ck/icon";

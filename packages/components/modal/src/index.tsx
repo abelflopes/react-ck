@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import * as styles from "./styles/index.module.scss";
+import styles from "./styles/index.module.scss";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ModalContext, type ModalContextProps, type ModalContextValue } from "./context";
 import { Overlay } from "@react-ck/overlay";

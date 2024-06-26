@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import * as styles from "./styles/column.module.scss";
+import styles from "./styles/column.module.scss";
 import classNames from "classnames";
 import { useGridContext } from "./hooks";
 
