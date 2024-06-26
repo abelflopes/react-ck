@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 // Utils
 import classNames from "classnames";
 // Styles
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 
 interface ProgressProps
   extends Omit<React.ProgressHTMLAttributes<HTMLProgressElement>, "children"> {

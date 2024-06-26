@@ -4,7 +4,7 @@ import { type SortMode } from "./types";
 import { Icon } from "@react-ck/icon";
 import { IconChevronUp } from "@react-ck/icon/icons/IconChevronUp";
 import { IconChevronDown } from "@react-ck/icon/icons/IconChevronDown";
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 
 export interface TableHeadProps extends React.TdHTMLAttributes<HTMLTableCellElement> {
   sorting: SortMode | null;

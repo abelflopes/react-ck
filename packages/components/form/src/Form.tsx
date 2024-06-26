@@ -7,7 +7,7 @@ import {
   type FormValues,
 } from "./types";
 import classNames from "classnames";
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 import { InputAdapter } from "./adapters/Input";
 import { TextareaAdapter } from "./adapters/Textarea";
 import { SelectAdapter } from "./adapters/Select";

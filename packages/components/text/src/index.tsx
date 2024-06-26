@@ -1,4 +1,4 @@
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 /// React
 import React, { type ReactHTML, useMemo } from "react";
 // Utils

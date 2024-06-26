@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 
 export interface TabsItem {
   heading: NonNullable<React.ReactNode>;

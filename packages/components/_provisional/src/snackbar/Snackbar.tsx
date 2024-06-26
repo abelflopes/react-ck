@@ -4,7 +4,7 @@ import { generateId } from "./utils";
 import { Layer } from "@react-ck/layers";
 import { type ElementCreator, type Item } from "./types";
 import { SnackbarItem } from "./SnackbarItem";
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 export interface SnackbarProps extends React.HTMLAttributes<HTMLDivElement> {

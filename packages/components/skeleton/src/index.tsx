@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 // Utils
 import classNames from "classnames";
 // Styles
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 
 interface SkeletonProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
   variation?: "default" | "text";

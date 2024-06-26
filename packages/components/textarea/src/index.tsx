@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { FormField, type FormFieldProps } from "@react-ck/form-field";
 

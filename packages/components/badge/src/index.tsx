@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 import React from "react";
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {

@@ -1,4 +1,4 @@
-import styles from "./index.module.scss";
+import * as styles from "./index.module.scss";
 import React, { useEffect, useState } from "react";
 import { Layer } from "@react-ck/layers";
 import { PositionEngine, type PositionEngineProps } from "../position-engine";

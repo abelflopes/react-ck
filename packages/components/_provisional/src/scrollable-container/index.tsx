@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import styles from "./index.module.scss";
+import * as styles from "./index.module.scss";
 
 export interface ScrollableContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   horizontal?: boolean;

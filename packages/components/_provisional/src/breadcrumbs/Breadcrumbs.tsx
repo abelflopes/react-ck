@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import styles from "./styles/index.module.scss";
+import * as styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Icon } from "@react-ck/icon";
 import { IconChevronRight } from "@react-ck/icon/icons/IconChevronRight";
