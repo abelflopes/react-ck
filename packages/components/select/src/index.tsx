@@ -4,8 +4,6 @@ import classNames from "classnames";
 import { FormField, type FormFieldProps } from "@react-ck/form-field";
 import { SelectOption } from "./SelectOption";
 
-console.log("styles", styles);
-
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: FormFieldProps["label"];
   skin?: FormFieldProps["skin"];
