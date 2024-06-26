@@ -13,7 +13,7 @@
 
     position: absolute;
     display: block;
-    box-shadow: 0 0 theme.get-spacing(4) theme.get-spacing(2) theme.get-color(neutral-light-2);
+    box-shadow: 0 0 theme.get-spacing(4) theme.get-spacing(2) theme.get-color(overlay-dark);
     content: "";
     opacity: 0;
     transition: opacity 0.3s ease;
