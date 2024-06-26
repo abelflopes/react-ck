@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/abelflopes/react-ck/compare/@react-ck/spinner@3.0.3...@react-ck/spinner@3.0.4) (2024-06-26)
+
+
+### Reverts
+
+* update style loaders ([e9afed3](https://github.com/abelflopes/react-ck/commit/e9afed309e7893e95b4b02cceb7e9636670740b8))
+
+
+
 ## [3.0.3](https://github.com/abelflopes/react-ck/compare/@react-ck/spinner@3.0.2...@react-ck/spinner@3.0.3) (2024-06-23)
 
 **Note:** Version bump only for package @react-ck/spinner

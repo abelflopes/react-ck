@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@3.1.0...@react-ck/icon@3.1.1) (2024-06-26)
+
+
+### Reverts
+
+* update style loaders ([e9afed3](https://github.com/abelflopes/react-ck/commit/e9afed309e7893e95b4b02cceb7e9636670740b8))
+
+
+
 ## [3.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@3.0.2...@react-ck/icon@3.1.0) (2024-06-23)
 
 

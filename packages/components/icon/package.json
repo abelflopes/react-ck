@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/icon",
   "private": false,
-  "version": "3.1.0",
+  "version": "3.1.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -37,7 +37,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/theme": "^1.7.4",
+    "@react-ck/theme": "^1.7.5",
     "classnames": "^2.3.2",
     "react-icons": "^4.10.1"
   }

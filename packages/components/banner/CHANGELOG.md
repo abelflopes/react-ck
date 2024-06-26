@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.23](https://github.com/abelflopes/react-ck/compare/@react-ck/banner@1.1.22...@react-ck/banner@1.1.23) (2024-06-26)
+
+
+### Reverts
+
+* update style loaders ([e9afed3](https://github.com/abelflopes/react-ck/commit/e9afed309e7893e95b4b02cceb7e9636670740b8))
+
+
+
 ## [1.1.22](https://github.com/abelflopes/react-ck/compare/@react-ck/banner@1.1.21...@react-ck/banner@1.1.22) (2024-06-23)
 
 

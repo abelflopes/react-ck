@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.2.14...@react-ck/select@1.3.0) (2024-06-26)
+
+
+### Features
+
+* reuse card, container and scrollable container for modal ([e5bdc40](https://github.com/abelflopes/react-ck/commit/e5bdc40c953a5336aad33cf01a362534087e1ff7))
+
+
+### Bug Fixes
+
+* remove logs ([384effc](https://github.com/abelflopes/react-ck/commit/384effcbf446f2f54900485969dd2c318c517a74))
+
+
+### Reverts
+
+* update style loaders ([e9afed3](https://github.com/abelflopes/react-ck/commit/e9afed309e7893e95b4b02cceb7e9636670740b8))
+
+
+
 ## [1.2.14](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.2.13...@react-ck/select@1.2.14) (2024-06-23)
 
 **Note:** Version bump only for package @react-ck/select

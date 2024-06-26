@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/card",
   "private": false,
-  "version": "1.4.3",
+  "version": "1.5.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/shared.scss",
@@ -34,8 +34,8 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/text": "^1.5.0",
-    "@react-ck/theme": "^1.7.4",
+    "@react-ck/text": "^1.5.1",
+    "@react-ck/theme": "^1.7.5",
     "classnames": "^2.3.2"
   }
 }

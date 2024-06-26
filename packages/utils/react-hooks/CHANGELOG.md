@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/abelflopes/react-ck/compare/@react-ck/react-hooks@1.0.7...@react-ck/react-hooks@1.0.8) (2024-06-26)
+
+**Note:** Version bump only for package @react-ck/react-hooks
+
+
+
+
+
 ## [1.0.7](https://github.com/abelflopes/react-ck/compare/@react-ck/react-hooks@1.0.6...@react-ck/react-hooks@1.0.7) (2024-06-23)
 
 **Note:** Version bump only for package @react-ck/react-hooks

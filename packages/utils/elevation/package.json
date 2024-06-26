@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/elevation",
   "private": false,
-  "version": "1.1.15",
+  "version": "1.1.16",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/shared.scss",
