@@ -1,15 +1,9 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
-
-$border-radius: theme.get-css-var(card, border-radius);
+@use "shared";
 
 .root {
-  @include text.text-base;
-  @include theme.define-css-var(card, border-radius, theme.get-spacing(1));
-
-  border-radius: $border-radius;
-  background-color: theme.get-color(neutral-light-1);
-  transition: box-shadow 0.3s ease;
+  @include shared.base;
 }
 
 // Interaction styles
@@ -30,17 +24,16 @@ $border-radius: theme.get-css-var(card, border-radius);
 
 // Skins
 
-.bordered,
 .shadowed {
-  border: solid theme.get-css-var(spacing, border) theme.get-color(neutral-light-2);
+  @include shared.skin-bordered;
 }
 
 .shadowed {
-  box-shadow: 0px 1px 3px 0px #00000029;
+  @include shared.skin-shadowed;
 }
 
 .ghost {
-  @include theme.define-css-var(card, border-radius, 0);
+  @include shared.skin-ghost;
 }
 
 // Variations
@@ -58,15 +51,15 @@ $border-radius: theme.get-css-var(card, border-radius);
 // Spacing
 
 .spacing_s {
-  @include theme.define-css-var(card, spacing, theme.get-spacing(1));
+  @include shared.spacing-s;
 }
 
 .spacing_m {
-  @include theme.define-css-var(card, spacing, theme.get-spacing(2));
+  @include shared.spacing-m;
 }
 
 .spacing_l {
-  @include theme.define-css-var(card, spacing, theme.get-spacing(3));
+  @include shared.spacing-l;
 }
 
 // Content
@@ -78,6 +71,6 @@ $border-radius: theme.get-css-var(card, border-radius);
 .image {
   display: block;
   object-fit: cover;
-  border-top-left-radius: $border-radius;
-  border-top-right-radius: $border-radius;
+  border-top-left-radius: theme.get-css-var(card, border-radius);
+  border-top-right-radius: theme.get-css-var(card, border-radius);
 }

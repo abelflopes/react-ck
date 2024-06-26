@@ -8,6 +8,8 @@
   border-radius: theme.get-css-var(card, border-radius);
   background-color: theme.get-color(neutral-light-1);
   transition: box-shadow 0.3s ease;
+  padding: theme.get-css-var(card, spacing);
+  box-sizing: border-box;
 }
 
 // Skins

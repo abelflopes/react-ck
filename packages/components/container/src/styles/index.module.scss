@@ -1,3 +1,4 @@
+@use "shared";
 @import "@react-ck/theme";
 @import "@react-ck/scss-utils";
 
@@ -12,18 +13,18 @@
 }
 
 .horizontal {
-  @include define-css-var(container, max-width, 1300px);
-  @include define-css-var(container, spacing-x, 50px);
+  @include define-css-var(container, max-width, shared.$container-max-width);
+  @include define-css-var(container, spacing-x, get-spacing(5));
 }
 
 .vertical {
-  @include define-css-var(container, spacing-y, 30px);
+  @include define-css-var(container, spacing-y, get-spacing(3));
 
   &.small {
-    @include define-css-var(container, spacing-y, 16px);
+    @include define-css-var(container, spacing-y, get-spacing(2));
   }
 
   &.big {
-    @include define-css-var(container, spacing-y, 60px);
+    @include define-css-var(container, spacing-y, get-spacing(6));
   }
 }

@@ -1,8 +1,20 @@
+@use "@react-ck/card";
+@use "@react-ck/container";
+
 @import "@react-ck/theme";
 @import "@react-ck/elevation";
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .root {
-  @include define-css-var(modal, spacing, get-spacing(5));
+  @include define-css-var(modal, spacing, get-spacing(3));
 
   position: fixed;
   z-index: map-get-strict($elevation, overlay);
@@ -13,18 +25,32 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  animation: appear 0.3s ease-in forwards;
+  padding: calc(get-css-var(modal, spacing) * 2);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
+// Add to document body to prevent back scrolling
 .lock_scroll {
   overflow: hidden;
 }
 
+// Extend overlay component styles
 .clickable_overlay {
   cursor: pointer;
 }
 
 .card {
-  position: relative;
+  @include card.base;
+  @include card.skin-shadowed;
+
+  display: flex;
+  flex-direction: column;
+  position: relative; // Bring to front (z-index)
+  max-height: 100%;
+  padding: get-css-var(modal, spacing);
+  max-width: container.$container-max-width;
 }
 
 .header {

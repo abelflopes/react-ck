@@ -34,9 +34,11 @@
   "dependencies": {
     "@react-ck/button": "^1.7.0",
     "@react-ck/card": "^1.4.3",
+    "@react-ck/container": "^1.1.22",
     "@react-ck/icon": "^3.1.0",
     "@react-ck/layers": "^1.2.5",
     "@react-ck/overlay": "^1.2.4",
+    "@react-ck/provisional": "^3.1.0",
     "@react-ck/react-utils": "^1.2.11",
     "@react-ck/text": "^1.5.0",
     "@react-ck/theme": "^1.7.4",

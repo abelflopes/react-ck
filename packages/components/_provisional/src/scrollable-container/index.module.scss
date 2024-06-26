@@ -1,4 +1,4 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
 
 .root {
   position: relative;
@@ -9,12 +9,14 @@
   .shadow_x::after,
   &::before,
   &::after {
+    @include theme.define-css-var(scrollable-container, transition-duration, 2s);
+
     position: absolute;
     display: block;
-    box-shadow: 0 0 get-spacing(1.5) get-spacing(1.5) get-color(neutral-light-1);
+    box-shadow: 0 0 theme.get-spacing(4) theme.get-spacing(2) theme.get-color(neutral-light-2);
     content: "";
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
   }
 
   // shadow x
@@ -41,6 +43,7 @@
     z-index: 1;
     width: 100%;
     height: 0;
+    background-color: rgba(2555, 255, 255, 0.5);
     pointer-events: none;
     transform: translate(var(--scroll-x), var(--scroll-y));
   }

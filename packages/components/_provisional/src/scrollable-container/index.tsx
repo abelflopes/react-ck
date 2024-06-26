@@ -27,6 +27,9 @@ export const ScrollableContainer = ({
     y: "0px",
   });
 
+  const [show, setShow] = useState(true);
+  const showTimeout = useRef<ReturnType<typeof setTimeout>>();
+
   const update = useCallback(() => {
     if (!rootRef.current) return;
 
@@ -55,6 +58,14 @@ export const ScrollableContainer = ({
   const handleScroll = useCallback<React.UIEventHandler<HTMLDivElement>>(
     (e) => {
       update();
+
+      clearTimeout(showTimeout.current);
+      setShow(false);
+
+      showTimeout.current = setTimeout(() => {
+        setShow(true);
+      }, 200);
+
       onScroll?.(e);
     },
     [onScroll, update],
@@ -71,6 +82,7 @@ export const ScrollableContainer = ({
 
     return () => {
       ro.disconnect();
+      clearTimeout(showTimeout.current);
     };
   }, [update]);
 
@@ -78,12 +90,16 @@ export const ScrollableContainer = ({
     <div
       ref={rootRef}
       {...otherProps}
-      className={classNames(className, styles.root, {
-        [`${styles["has-scroll-top"]}`]: hasScroll.top,
-        [`${styles["has-scroll-right"]}`]: hasScroll.right,
-        [`${styles["has-scroll-bottom"]}`]: hasScroll.bottom,
-        [`${styles["has-scroll-left"]}`]: hasScroll.left,
-      })}
+      className={classNames(
+        className,
+        styles.root,
+        show && {
+          [`${styles["has-scroll-top"]}`]: hasScroll.top,
+          [`${styles["has-scroll-right"]}`]: hasScroll.right,
+          [`${styles["has-scroll-bottom"]}`]: hasScroll.bottom,
+          [`${styles["has-scroll-left"]}`]: hasScroll.left,
+        },
+      )}
       style={{
         ...style,
         // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- needed since types do not include CSS variables

@@ -10,7 +10,7 @@
     "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky && npm run build:infra",
     "prestart": "npm run prebuild",
     "start": "lerna run start --parallel --stream --ignore @react-ck/*config* --ignore @react-ck/*app*",
     "start:apps": "lerna run start --parallel --stream --scope @react-ck/*app*",

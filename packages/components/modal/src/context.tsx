@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface HeaderProps extends Omit<React.HTMLAttributes<HTMLElement>, "children"> {
-  heading?: string;
+  heading?: React.ReactNode;
 }
 
 export interface ModalContextValue {

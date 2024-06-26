@@ -2,13 +2,13 @@ import classNames from "classnames";
 import * as styles from "./styles/index.module.scss";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ModalContext, type ModalContextProps, type ModalContextValue } from "./context";
-import { Card } from "@react-ck/card";
 import { Overlay } from "@react-ck/overlay";
 import { Icon } from "@react-ck/icon";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
 import { Button } from "@react-ck/button";
 import { Text } from "@react-ck/text";
 import { Layer } from "@react-ck/layers";
+import { ScrollableContainer } from "@react-ck/provisional";
 import { ModalHeader } from "./ModalHeader";
 import { ModalFooter } from "./ModalFooter";
 
@@ -98,7 +98,7 @@ const Modal = ({
             onClick={handleClose}
           />
 
-          <Card className={styles.card}>
+          <div className={styles.card}>
             <ModalContext.Provider value={contextProps}>
               {props.header ? (
                 <header
@@ -122,7 +122,7 @@ const Modal = ({
                 </header>
               ) : null}
 
-              <main className={styles.content}>{children}</main>
+              <ScrollableContainer>{children}</ScrollableContainer>
 
               {props.footer ? (
                 <footer
@@ -131,7 +131,7 @@ const Modal = ({
                 />
               ) : null}
             </ModalContext.Provider>
-          </Card>
+          </div>
         </div>
       </Layer>
     )

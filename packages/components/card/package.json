@@ -4,8 +4,10 @@
   "version": "1.4.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sass": "src/styles/shared.scss",
   "files": [
-    "/dist"
+    "/dist",
+    "/src/styles"
   ],
   "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/card#readme",
   "repository": {

@@ -4,7 +4,9 @@
   "version": "1.1.22",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sass": "src/styles/shared.scss",
   "files": [
+    "/src/styles",
     "/dist"
   ],
   "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/banner#readme",
