@@ -1,3 +1,28 @@
+## [3.4.0](https://github.com/abelflopes/react-ck/compare/v3.3.0...v3.4.0) (2024-06-26)
+
+
+### Features
+
+* add card shared style resources ([3f8b388](https://github.com/abelflopes/react-ck/commit/3f8b388485e64164fe36ae4c98c411985cf68c68))
+* **react-ck:** global library package ([cba7ce3](https://github.com/abelflopes/react-ck/commit/cba7ce3f2c0a7a9f81ac5d77894a7b2fa00e8631))
+* reuse card, container and scrollable container for modal ([e5bdc40](https://github.com/abelflopes/react-ck/commit/e5bdc40c953a5336aad33cf01a362534087e1ff7))
+
+
+### Bug Fixes
+
+* remove logs ([384effc](https://github.com/abelflopes/react-ck/commit/384effcbf446f2f54900485969dd2c318c517a74))
+* scrollable container shadow color ([8ac8b46](https://github.com/abelflopes/react-ck/commit/8ac8b46180eac6e51f4c0d86d2e2e588eee5103f))
+
+
+### Code Refactoring
+
+* upgrade style loaders ([67e5646](https://github.com/abelflopes/react-ck/commit/67e56463143aa9c1f5f75245a7943c1657523850))
+
+
+### Changes Reverted
+
+* update style loaders ([e9afed3](https://github.com/abelflopes/react-ck/commit/e9afed309e7893e95b4b02cceb7e9636670740b8))
+
 ## [3.3.0](https://github.com/abelflopes/react-ck/compare/v3.2.0...v3.3.0) (2024-06-23)
 
 
