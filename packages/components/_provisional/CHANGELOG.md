@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.0.2...@react-ck/provisional@3.1.0) (2024-06-23)
+
+
+### Features
+
+* add squared variation for avatar ([24f6ecf](https://github.com/abelflopes/react-ck/commit/24f6ecfe9a03375ee235a91d12e78943f1b9721f))
+* update chat prompt UI ([86f9287](https://github.com/abelflopes/react-ck/commit/86f92874dac2fbe357243fca66791e8e7c07ac8b))
+* update dock styles ([ab78d42](https://github.com/abelflopes/react-ck/commit/ab78d426318736a700e291850310e0ca4654f366))
+* update sizes & remove redundant variation ([93e2755](https://github.com/abelflopes/react-ck/commit/93e2755f0df934e18db5af39c971edebbf9c7fe9))
+
+
+### Bug Fixes
+
+* add auto height for shadow dock slin ([274ad38](https://github.com/abelflopes/react-ck/commit/274ad380a6960eef33b67f92dbd18c8b0156a631))
+* minor improvements ([057fc73](https://github.com/abelflopes/react-ck/commit/057fc73a40b858d25f8e3e60cea7d4ec9fe021ed))
+* types not being generated correctly ([2c3d512](https://github.com/abelflopes/react-ck/commit/2c3d5127d80837fa1ed28fcc5aeb98540b51f6c2))
+
+
+
 ## [3.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.0.1...@react-ck/provisional@3.0.2) (2024-06-15)
 
 

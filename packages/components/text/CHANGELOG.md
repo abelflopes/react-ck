@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.4.12...@react-ck/text@1.5.0) (2024-06-23)
+
+
+### Features
+
+* update sizes & remove redundant variation ([93e2755](https://github.com/abelflopes/react-ck/commit/93e2755f0df934e18db5af39c971edebbf9c7fe9))
+
+
+### Bug Fixes
+
+* minor improvements ([057fc73](https://github.com/abelflopes/react-ck/commit/057fc73a40b858d25f8e3e60cea7d4ec9fe021ed))
+* remove duplicated case condition ([114e754](https://github.com/abelflopes/react-ck/commit/114e754485fd53df79423a31352cfc22ffbcd866))
+* remove duplicated text variation in type ([9264861](https://github.com/abelflopes/react-ck/commit/9264861ad96af2846fc448852f1c2030a33254fd))
+
+
+
 ## [1.4.12](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.4.11...@react-ck/text@1.4.12) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/text

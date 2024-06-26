@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.6.0...@react-ck/button@1.7.0) (2024-06-23)
+
+
+### Features
+
+* make icon button rounded ([3d1c104](https://github.com/abelflopes/react-ck/commit/3d1c1043e99f1efae50212b1c878710ae6c863d3))
+* update button styles ([791d5b8](https://github.com/abelflopes/react-ck/commit/791d5b85d035c3de8468a9e4ffbecf1fd4967216))
+
+
+### Bug Fixes
+
+* add border box to button ([3b1262f](https://github.com/abelflopes/react-ck/commit/3b1262f5d269718c6f5d3cbdb9093601f90518cb))
+* button skin color ([5b26d14](https://github.com/abelflopes/react-ck/commit/5b26d140b69011357602490301b022ebbc7647d6))
+* minor improvements ([057fc73](https://github.com/abelflopes/react-ck/commit/057fc73a40b858d25f8e3e60cea7d4ec9fe021ed))
+
+
+
 ## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.5.3...@react-ck/button@1.6.0) (2024-06-15)
 
 

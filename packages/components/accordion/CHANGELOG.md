@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.18](https://github.com/abelflopes/react-ck/compare/@react-ck/accordion@1.1.17...@react-ck/accordion@1.1.18) (2024-06-23)
+
+**Note:** Version bump only for package @react-ck/accordion
+
+
+
+
+
 ## [1.1.17](https://github.com/abelflopes/react-ck/compare/@react-ck/accordion@1.1.16...@react-ck/accordion@1.1.17) (2024-06-15)
 
 **Note:** Version bump only for package @react-ck/accordion

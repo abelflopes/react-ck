@@ -1,3 +1,45 @@
+## [3.3.0](https://github.com/abelflopes/react-ck/compare/v3.2.0...v3.3.0) (2024-06-23)
+
+
+### Features
+
+* add context form to main lib ([d3d6ab5](https://github.com/abelflopes/react-ck/commit/d3d6ab5158edee4f41176df72ecd05003c17ea15))
+* add icons ([0ad7f10](https://github.com/abelflopes/react-ck/commit/0ad7f10b7ddeddd486f5d07ad104638b4e7bb035))
+* add icons ([24eb95e](https://github.com/abelflopes/react-ck/commit/24eb95ef50728d848964b8ec5d9e1492dc19a5d8))
+* add squared variation for avatar ([24f6ecf](https://github.com/abelflopes/react-ck/commit/24f6ecfe9a03375ee235a91d12e78943f1b9721f))
+* expose form field context with id and skin ([7143b75](https://github.com/abelflopes/react-ck/commit/7143b751538745d54142cf4e1409b5cf5207476a))
+* make icon button rounded ([3d1c104](https://github.com/abelflopes/react-ck/commit/3d1c1043e99f1efae50212b1c878710ae6c863d3))
+* **react-ck:** global library package ([38768ba](https://github.com/abelflopes/react-ck/commit/38768ba91a61eb09327aff76e1f511f84a2e88af))
+* **react-ck:** global library package ([6e83b1c](https://github.com/abelflopes/react-ck/commit/6e83b1cbbf109da5a4830ad0b291e64d7d165a0d))
+* update button styles ([791d5b8](https://github.com/abelflopes/react-ck/commit/791d5b85d035c3de8468a9e4ffbecf1fd4967216))
+* update chat prompt UI ([86f9287](https://github.com/abelflopes/react-ck/commit/86f92874dac2fbe357243fca66791e8e7c07ac8b))
+* update dock styles ([ab78d42](https://github.com/abelflopes/react-ck/commit/ab78d426318736a700e291850310e0ca4654f366))
+* update form field styles ([8a15516](https://github.com/abelflopes/react-ck/commit/8a15516537296b0d7c42aa48496ffa2cda8d22e0))
+* update sizes & remove redundant variation ([93e2755](https://github.com/abelflopes/react-ck/commit/93e2755f0df934e18db5af39c971edebbf9c7fe9))
+
+
+### Bug Fixes
+
+* add auto height for shadow dock slin ([274ad38](https://github.com/abelflopes/react-ck/commit/274ad380a6960eef33b67f92dbd18c8b0156a631))
+* add border box to button ([3b1262f](https://github.com/abelflopes/react-ck/commit/3b1262f5d269718c6f5d3cbdb9093601f90518cb))
+* button skin color ([5b26d14](https://github.com/abelflopes/react-ck/commit/5b26d140b69011357602490301b022ebbc7647d6))
+* default card skin ([61a70d4](https://github.com/abelflopes/react-ck/commit/61a70d41892c094c3941b48a920165c5a6d14729))
+* icon export names ([6248700](https://github.com/abelflopes/react-ck/commit/6248700c84f63281594283f416624e484695ffa9))
+* lighten highlight primary light color ([a1ff907](https://github.com/abelflopes/react-ck/commit/a1ff907f22a779cbe9d5587ba8c614cec7f94744))
+* minor improvements ([057fc73](https://github.com/abelflopes/react-ck/commit/057fc73a40b858d25f8e3e60cea7d4ec9fe021ed))
+* modal exports ([3a131c3](https://github.com/abelflopes/react-ck/commit/3a131c346c60c08d5082cd78ac54ce3f440967bd))
+* remove duplicated case condition ([114e754](https://github.com/abelflopes/react-ck/commit/114e754485fd53df79423a31352cfc22ffbcd866))
+* remove duplicated text variation in type ([9264861](https://github.com/abelflopes/react-ck/commit/9264861ad96af2846fc448852f1c2030a33254fd))
+* types not being generated correctly ([2c3d512](https://github.com/abelflopes/react-ck/commit/2c3d5127d80837fa1ed28fcc5aeb98540b51f6c2))
+
+
+### Code Refactoring
+
+* add bordered variation ([5497a25](https://github.com/abelflopes/react-ck/commit/5497a25b2d366d8123a4ae36db9de0167ec9274a))
+* replace scss [@import](https://github.com/import) with [@use](https://github.com/use) ([f6ce04d](https://github.com/abelflopes/react-ck/commit/f6ce04d955c9b86725ecb33cef3ff9160282261c))
+* update apps ([155887e](https://github.com/abelflopes/react-ck/commit/155887e70ce7dbea0159d950390fc0a0481e949c))
+* use [@use](https://github.com/use) instead of [@import](https://github.com/import) ([0b725c5](https://github.com/abelflopes/react-ck/commit/0b725c58c708b9a1738617c51a0986489ffcb9e3))
+
 ## [3.2.0](https://github.com/abelflopes/react-ck/compare/v3.1.0...v3.2.0) (2024-06-15)
 
 
