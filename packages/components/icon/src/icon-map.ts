@@ -120,11 +120,41 @@ export const iconMap = [
   {
     import: "IoChatbubblesOutline",
     module: "react-icons/io5",
-    export: "Chat",
+    export: "IconChat",
   },
   {
     import: "IoMdNotificationsOutline",
     module: "react-icons/io",
-    export: "Notification",
+    export: "IconNotification",
+  },
+  {
+    import: "HiPlus",
+    module: "react-icons/hi",
+    export: "IconPlus",
+  },
+  {
+    import: "FiTrash2",
+    module: "react-icons/fi",
+    export: "IconDelete",
+  },
+  {
+    import: "BiImport",
+    module: "react-icons/bi",
+    export: "IconImport",
+  },
+  {
+    import: "BiExport",
+    module: "react-icons/bi",
+    export: "IconExport",
+  },
+  {
+    import: "FaCloudDownloadAlt",
+    module: "react-icons/fa",
+    export: "IconDownload",
+  },
+  {
+    import: "FaCloudUploadAlt",
+    module: "react-icons/fa",
+    export: "IconUpload",
   },
 ];
