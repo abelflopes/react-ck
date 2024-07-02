@@ -4,19 +4,15 @@
 .root {
   @include text-base;
   @include text-skin(soft);
-  @include text-skin(bold);
 
   display: flex;
+  flex-direction: column;
+  gap: get-spacing(2);
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  padding: get-spacing(2);
-  color: #bbb;
-  // TODO: text variation
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
+  padding: get-spacing(3);
   text-align: center;
 }
