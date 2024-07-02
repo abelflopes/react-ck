@@ -2,4 +2,14 @@
 
 .root {
   list-style: none;
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.horizontal {
+  height: get-spacing(10);
+  flex-direction: row;
 }

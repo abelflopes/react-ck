@@ -3,13 +3,30 @@
 
 .root {
   display: block;
-  min-height: get-css-var(spacing, border);
   background-color: get-color(neutral-light-2);
+  box-sizing: border-box;
 
   &.text {
     @include text-base;
     @include text-variation(extra-small);
+  }
 
-    padding: #{get-spacing(0.25)} #{get-spacing()};
+  &.vertical {
+    min-height: get-css-var(spacing, border);
+
+    &.text {
+      padding: #{get-spacing(0.25)} #{get-spacing()};
+    }
+  }
+
+  &.horizontal {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    height: 100%;
+    min-width: get-css-var(spacing, border);
+
+    &.text {
+      padding: #{get-spacing()} #{get-spacing(0.25)};
+    }
   }
 }

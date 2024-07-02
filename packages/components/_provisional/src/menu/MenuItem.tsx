@@ -1,35 +1,33 @@
 import styles from "./styles/menu-item.module.scss";
-import React from "react";
+import React, { useContext } from "react";
 import classNames from "classnames";
+import { MenuContext } from "./context";
 
 export interface MenuItemProps extends React.HTMLAttributes<HTMLElement> {
-  selected?: boolean;
-  highlighted?: boolean;
+  skin?: "default" | "primary" | "secondary" | "disabled";
   icon?: NonNullable<React.ReactNode>;
-  disabled?: boolean;
 }
 
 export const MenuItem = ({
+  skin = "default",
   icon,
-  selected,
-  highlighted,
-  disabled,
   className,
   children,
   ...otherProps
-}: Readonly<MenuItemProps>): React.ReactElement => (
-  <li
-    className={classNames(
-      styles.root,
-      {
-        [`${styles.disabled}`]: disabled,
-        [`${styles.selected}`]: selected,
-        [`${styles.highlighted}`]: highlighted,
-      },
-      className,
-    )}
-    {...otherProps}>
-    {icon}
-    {children}
-  </li>
-);
+}: Readonly<MenuItemProps>): React.ReactElement => {
+  const menuContext = useContext(MenuContext);
+
+  return (
+    <li
+      className={classNames(
+        styles.root,
+        skin !== "default" && styles[skin],
+        styles[menuContext.variation],
+        className,
+      )}
+      {...otherProps}>
+      {icon}
+      {children}
+    </li>
+  );
+};

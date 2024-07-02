@@ -36,7 +36,7 @@ const children = (
           <IconUserCircle />
         </Icon>
       }
-      selected>
+      skin="primary">
       {faker.person.firstName()}
     </Menu.Item>
     <Menu.Item
@@ -53,7 +53,7 @@ const children = (
           <IconUserCircle />
         </Icon>
       }
-      highlighted>
+      skin="secondary">
       {faker.person.firstName()}
     </Menu.Item>
     <Menu.Item
@@ -66,19 +66,36 @@ const children = (
     </Menu.Item>
     <Menu.Divider />
     <Menu.Item>{faker.animal.type()}</Menu.Item>
-    <Menu.Item disabled>{faker.animal.type()}</Menu.Item>
+    <Menu.Item skin="disabled">{faker.animal.type()}</Menu.Item>
     <Menu.Item>{faker.animal.type()}</Menu.Item>
     <Menu.Divider>Companies</Menu.Divider>
     <Menu.Item>{faker.company.name()}</Menu.Item>
-    <Menu.Item>{faker.company.name()}</Menu.Item>
+    <Menu.Item
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }>
+      {faker.company.name()}
+      <br />
+      {faker.company.buzzNoun()}
+      <br />
+      {faker.company.buzzVerb()}
+    </Menu.Item>
   </>
 );
 
 export default meta;
 
-export const Component: Story = {
+export const Default: Story = {
   args: {
-    expanded: false,
+    children,
+  },
+};
+
+export const horizontal: Story = {
+  args: {
+    variation: "horizontal",
     children,
   },
 };
