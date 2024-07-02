@@ -34,6 +34,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
+    "@react-ck/react-utils": "^1.2.12",
     "@react-ck/text": "^1.5.1",
     "@react-ck/theme": "^1.7.5",
     "classnames": "^2.3.2"

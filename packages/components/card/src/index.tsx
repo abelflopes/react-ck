@@ -3,11 +3,18 @@ import styles from "./styles/index.module.scss";
 import React, { useMemo, useState } from "react";
 import { CardContext, type CardContextValue } from "./context";
 import { CardImage } from "./CardImage";
+import {
+  PolymorphicComponent,
+  type ConsumerPolymorphicProps,
+  type HTMLTag,
+} from "@react-ck/react-utils";
 
 /**
  * Props for the Card component
  */
-interface CardProps extends Readonly<React.HTMLAttributes<HTMLDivElement>> {
+interface CardProps<T extends HTMLTag = "div">
+  extends React.ButtonHTMLAttributes<HTMLDivElement>,
+    ConsumerPolymorphicProps<T> {
   /** Defines card style */
   skin?: "bordered" | "shadowed" | "ghost";
   /** Applies interactivity styles  */
@@ -26,6 +33,7 @@ interface CardProps extends Readonly<React.HTMLAttributes<HTMLDivElement>> {
  */
 
 const Card = ({
+  as,
   skin = "bordered",
   interaction,
   variation = "vertical",
@@ -47,13 +55,21 @@ const Card = ({
 
   return (
     <CardContext.Provider value={contextProps}>
-      <div
-        {...otherProps}
-        className={classNames(styles.root, className, styles[skin], styles[variation], {
-          [`${styles[`spacing_${spacing}`]}`]: spacing !== "none",
-          [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
-          [`${styles.clickable}`]: interaction === "click",
-        })}>
+      <PolymorphicComponent
+        as={as}
+        fallback={[
+          "div",
+          {
+            ...otherProps,
+          },
+        ]}
+        commonProps={{
+          className: classNames(styles.root, className, styles[skin], styles[variation], {
+            [`${styles[`spacing_${spacing}`]}`]: spacing !== "none",
+            [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
+            [`${styles.clickable}`]: interaction === "click",
+          }),
+        }}>
         {contextValue.image ? (
           <img
             {...contextValue.image}
@@ -61,9 +77,8 @@ const Card = ({
             className={classNames(styles.image, contextValue.image.className)}
           />
         ) : null}
-
         <div className={styles.content}>{children}</div>
-      </div>
+      </PolymorphicComponent>
     </CardContext.Provider>
   );
 };

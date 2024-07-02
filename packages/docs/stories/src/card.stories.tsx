@@ -29,7 +29,7 @@ const meta: Meta<typeof Card> = {
 
 export default meta;
 
-export const Base: Story = {
+export const Default: Story = {
   args: {
     children: (
       <>
@@ -49,6 +49,22 @@ export const CardImage: Story = {
       <>
         <Card.Image src={faker.image.urlPicsumPhotos({ width: 320, height: 100 })} />
 
+        <Text skin="bold" margin="none">
+          {faker.lorem.sentence(4)}
+        </Text>
+
+        <Text margin="none">{faker.lorem.sentence(16)}</Text>
+      </>
+    ),
+  },
+};
+
+export const AsLink: Story = {
+  args: {
+    as: <a href="/" target="__blank" aria-label="Link to somewhere" />,
+    interaction: "click",
+    children: (
+      <>
         <Text skin="bold" margin="none">
           {faker.lorem.sentence(4)}
         </Text>
