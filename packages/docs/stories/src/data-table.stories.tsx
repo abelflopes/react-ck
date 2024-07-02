@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Chip } from "@react-ck/chip/src";
 import { configureStory } from "@react-ck/story-config";
 import { DataTable } from "@react-ck/data-table/src";
+import { Input } from "@react-ck/input/src";
+import { Text } from "@react-ck/text/src";
+import { Alert } from "@react-ck/alert/src";
 
 type Story = StoryObj<typeof DataTable>;
 
@@ -75,4 +78,46 @@ export const Sortable: Story = {
       };
     }),
   },
+};
+
+export const WithStatefulChildren: Story = {
+  /* eslint-disable react-hooks/rules-of-hooks -- lint unable to identify that component is react */
+  render: (): React.ReactElement => {
+    const [value, setValue] = useState("");
+
+    return (
+      <>
+        <Text>
+          Stateful content inside data table might induce re-renders. In case of inputs, they will
+          use focus. To mitigate this, assign state only on the end of change, as on blur event.
+          <br /> <br />
+          You can also use the Table component directly to avoid this workaround.
+        </Text>
+
+        <Alert>Value: &quot;{value}&quot;</Alert>
+
+        <br />
+
+        <DataTable
+          skin="bordered"
+          autoHeaders
+          data={[
+            {
+              airline: faker.airline.airline().name,
+              someInput: (
+                <Input
+                  placeholder="Description"
+                  defaultValue={value}
+                  onBlur={(e) => {
+                    setValue(e.target.value);
+                  }}
+                />
+              ),
+            },
+          ]}
+        />
+      </>
+    );
+  },
+  /* eslint-enable */
 };
