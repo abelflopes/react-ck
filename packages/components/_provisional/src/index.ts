@@ -25,3 +25,5 @@ export * from "./tooltip";
 export * from "./popover";
 
 export * from "./chat";
+
+export * from "./file-uploader";
