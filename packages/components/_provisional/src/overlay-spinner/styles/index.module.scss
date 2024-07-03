@@ -1,5 +1,5 @@
+@use "@react-ck/elevation";
 @import "@react-ck/theme";
-@import "@react-ck/text";
 
 .container {
   position: relative;
@@ -10,6 +10,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
+  z-index: map-get-strict(elevation.$elevation, "overlay");
 
   &__active {
     opacity: 1;
