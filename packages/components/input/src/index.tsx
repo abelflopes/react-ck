@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import styles from "./styles/index.module.scss";
-import { FormField, type FormFieldProps } from "@react-ck/form-field";
+import { useFormFieldContext, type FormFieldProps } from "@react-ck/form-field";
+import classNames from "classnames";
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "children"> {
-  label?: FormFieldProps["label"];
   skin?: FormFieldProps["skin"];
-  description?: FormFieldProps["description"];
-  validationMessage?: FormFieldProps["validationMessage"];
 }
 
 /**
@@ -16,14 +14,40 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
  */
 
 export const Input = ({
-  skin = "default",
-  label,
-  description,
-  validationMessage,
+  skin,
+  id,
   className,
   ...props
-}: Readonly<InputProps>): React.ReactElement => (
-  <FormField {...{ skin, label, description, validationMessage }} className={className}>
-    <input {...props} className={styles.root} />
-  </FormField>
-);
+}: Readonly<InputProps>): React.ReactElement => {
+  const formFieldContext = useFormFieldContext();
+
+  const computedSkin = useMemo(
+    () => formFieldContext?.skin ?? skin ?? "default",
+    [formFieldContext?.skin, skin],
+  );
+
+  const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
+
+  // Validate usage inside form field
+  useEffect(() => {
+    // Is not inside form field, skip
+    if (formFieldContext === undefined) return;
+
+    // Is inside form field
+    if (skin) throw new Error("When using input inside form field, define skin on the form field");
+    else if (id) throw new Error("When using input inside form field, define id on the form field");
+  }, [formFieldContext, id, skin]);
+
+  return (
+    <input
+      {...props}
+      id={computedId}
+      className={classNames(
+        styles.root,
+        formFieldContext === undefined && styles.standalone,
+        className,
+        styles[`skin_${computedSkin}`],
+      )}
+    />
+  );
+};

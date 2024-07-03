@@ -1,27 +1,33 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
-@import "@react-ck/text";
+@use "@react-ck/theme";
+@use "@react-ck/text";
+@use "variables";
 
 @mixin form-field-input {
-  @include text-base;
+  @include text.text-base;
 
   width: 100%;
   box-sizing: border-box;
-  padding: get-spacing(0.75) get-spacing(1);
+  padding: theme.get-spacing(0.75) theme.get-spacing(1);
   border: none;
   background: transparent;
-  color: get-color(neutral-dark-5);
+  color: theme.get-color(neutral-dark-5);
   outline: none;
 
   &::placeholder {
-    color: get-color(neutral-dark-1);
+    color: theme.get-color(neutral-dark-1);
   }
 
   &::placeholder {
-    color: get-color(neutral-dark-1);
+    color: theme.get-color(neutral-dark-1);
   }
 
   &:disabled {
     cursor: not-allowed;
   }
+}
+
+@mixin form-field-container {
+  border: solid #{theme.get-css-var(form-field, border-color)} variables.$form-field-border-width;
+  border-radius: theme.get-spacing(1);
+  background: theme.get-color(neutral-light-1);
 }

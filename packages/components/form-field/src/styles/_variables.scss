@@ -1,22 +1,26 @@
+@use "@react-ck/theme";
+
+$form-field-border-width: theme.get-css-var(spacing, border);
+
 $form-field-styles: (
   default: (
-    border-color: get-color(neutral-light-2),
-    color: get-color(neutral-dark-4),
+    border-color: theme.get-color(neutral-light-2),
+    color: theme.get-color(neutral-dark-4),
   ),
   ghost: (
     border-color: transparent,
-    color: get-color(neutral-dark-4),
+    color: theme.get-color(neutral-dark-4),
   ),
   negative: (
-    border-color: get-color(status-negative-dark),
-    color: get-color(status-negative-dark),
+    border-color: theme.get-color(status-negative-dark),
+    color: theme.get-color(status-negative-dark),
   ),
   average: (
-    border-color: get-color(status-average-dark),
-    color: get-color(status-average-dark),
+    border-color: theme.get-color(status-average-dark),
+    color: theme.get-color(status-average-dark),
   ),
   positive: (
-    border-color: get-color(status-positive-dark),
-    color: get-color(status-positive-dark),
+    border-color: theme.get-color(status-positive),
+    color: theme.get-color(status-positive-dark),
   ),
 );

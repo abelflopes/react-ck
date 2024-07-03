@@ -1,3 +1,4 @@
+@use "shared";
 @import "@react-ck/theme";
 @import "@react-ck/text";
 @import "variables";
@@ -8,9 +9,7 @@
   gap: get-spacing(0.1);
 
   .content {
-    border: solid #{get-css-var(form-field, border-color)} #{get-css-var(spacing, border)};
-    border-radius: get-spacing(1);
-    background: get-color(neutral-light-1);
+    @include shared.form-field-container;
   }
 
   .validation_message {

@@ -5,9 +5,7 @@ export interface FormFieldContextProps {
   id: string;
 }
 
-export const FormFieldContext = React.createContext<FormFieldContextProps>({
-  id: "",
-  skin: "default",
-});
+export const FormFieldContext = React.createContext<FormFieldContextProps | undefined>(undefined);
 
-export const useFormFieldContext = (): FormFieldContextProps => React.useContext(FormFieldContext);
+export const useFormFieldContext = (): FormFieldContextProps | undefined =>
+  React.useContext(FormFieldContext);
