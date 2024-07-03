@@ -3,28 +3,58 @@
 @import "@react-ck/scss-utils";
 
 .root {
-  @include define-css-var(container, spacing-y, 0);
-  @include define-css-var(container, spacing-x, 0);
-
   max-width: get-css-var(container, max-width);
   box-sizing: border-box;
   padding: get-css-var(container, spacing-y) get-css-var(container, spacing-x);
   margin: 0 auto;
 }
 
-.horizontal {
-  @include define-css-var(container, max-width, shared.$container-max-width);
+// Container size
+
+.size_l {
+  @include define-css-var(container, max-width, shared.$container-width-large);
+}
+
+.size_m {
+  @include define-css-var(container, max-width, shared.$container-width-medium);
+}
+
+.size_s {
+  @include define-css-var(container, max-width, shared.$container-width-small);
+}
+
+// Container Spacing Vertical
+
+.spacing_y_none {
+  @include define-css-var(container, spacing-y, 0);
+}
+
+.spacing_y_s {
+  @include define-css-var(container, spacing-y, get-spacing(2));
+}
+
+.spacing_y_m {
+  @include define-css-var(container, spacing-y, get-spacing(3));
+}
+
+.spacing_y_l {
+  @include define-css-var(container, spacing-y, get-spacing(6));
+}
+
+// Container Spacing Horizontal
+
+.spacing_x_none {
+  @include define-css-var(container, spacing-x, 0);
+}
+
+.spacing_x_s {
+  @include define-css-var(container, spacing-x, get-spacing(2));
+}
+
+.spacing_x_m {
   @include define-css-var(container, spacing-x, get-spacing(5));
 }
 
-.vertical {
-  @include define-css-var(container, spacing-y, get-spacing(3));
-
-  &.small {
-    @include define-css-var(container, spacing-y, get-spacing(2));
-  }
-
-  &.big {
-    @include define-css-var(container, spacing-y, get-spacing(6));
-  }
+.spacing_x_l {
+  @include define-css-var(container, spacing-x, get-spacing(8));
 }

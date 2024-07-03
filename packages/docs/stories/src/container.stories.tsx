@@ -25,9 +25,6 @@ export default meta;
 
 export const Component: Story = {
   args: {
-    spacingX: true,
-    spacingY: true,
-    variation: "big",
     children: <Text>{faker.lorem.sentence({ min: 50, max: 200 })}</Text>,
   },
 };

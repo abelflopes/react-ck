@@ -52,7 +52,7 @@ export const Component: Story = {
 
     return (
       <>
-        <Container spacingX={false} spacingY>
+        <Container spacingX="none" spacingY="m">
           {form}
         </Container>
 

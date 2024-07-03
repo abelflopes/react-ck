@@ -1,21 +1,17 @@
-import React, { useMemo } from "react";
+import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 /** Represents the possible variations for the Container component  */
-type ContainerVariation =
-  /** Reduces the spacing */
-  | "small"
-  /** Increases the spacing */
-  | "big";
+type ContainerSpacing = "s" | "m" | "l" | "none";
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Specifies the variation(s) of the container  */
-  variation?: ContainerVariation | ContainerVariation[];
+  /** Container maximum width */
+  size?: "s" | "m" | "l";
   /** Adds horizontal spacing to the container  */
-  spacingX?: boolean;
+  spacingX?: ContainerSpacing;
   /** Adds vertical spacing to the container  */
-  spacingY?: boolean;
+  spacingY?: ContainerSpacing;
 }
 
 /**
@@ -26,27 +22,20 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
  */
 
 export const Container = ({
-  variation,
-  spacingX = true,
-  spacingY,
+  size = "l",
+  spacingX = "m",
+  spacingY = "none",
   className,
   ...otherProps
-}: Readonly<ContainerProps>): React.ReactElement => {
-  const computedVariations = useMemo(() => {
-    if (!variation) return [];
-    else if (Array.isArray(variation)) return variation;
-    return [variation];
-  }, [variation]);
-
-  return (
-    <div
-      className={classNames(
-        styles.root,
-        { [`${styles.horizontal}`]: spacingX, [`${styles.vertical}`]: spacingY },
-        computedVariations.map((index) => styles[index]),
-        className,
-      )}
-      {...otherProps}
-    />
-  );
-};
+}: Readonly<ContainerProps>): React.ReactElement => (
+  <div
+    className={classNames(
+      styles.root,
+      `${styles[`size_${size}`]}`,
+      `${styles[`spacing_x_${spacingX}`]}`,
+      `${styles[`spacing_y_${spacingY}`]}`,
+      className,
+    )}
+    {...otherProps}
+  />
+);

@@ -34,7 +34,7 @@ export const Banner = ({
       inverted: true,
     }}>
     <div className={classNames(styles.root, className)} {...otherProps}>
-      <Container className={styles.container} variation="big" spacingY>
+      <Container className={styles.container} spacingY="l">
         {children}
 
         {actions?.length ? <div className={styles.actions}>{actions}</div> : null}
