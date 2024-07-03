@@ -4,8 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
 import { Select } from "@react-ck/select/src";
-import { Normal as FormFieldNormal, Validation as FormFieldValidation } from "./form-field.stories";
-import { objectExclude } from "../utils/object-exclude";
+import { FormField } from "@react-ck/form-field/src";
 
 type Story = StoryObj<typeof Select>;
 
@@ -22,44 +21,50 @@ const meta: Meta<typeof Select> = {
   }),
 };
 
+const children = (
+  <>
+    <Select.Option value="" selected disabled>
+      Select Value
+    </Select.Option>
+
+    <Select.Option>{faker.lorem.word()}</Select.Option>
+
+    <Select.Option>{faker.lorem.word()}</Select.Option>
+
+    <Select.Option>{faker.lorem.word()}</Select.Option>
+  </>
+);
+
 export default meta;
 
 export const Normal: Story = {
   args: {
-    ...objectExclude(FormFieldNormal.args ?? {}, ["children"]),
-    required: true,
-    children: (
-      <>
-        <Select.Option value="" selected disabled>
-          Select Value
-        </Select.Option>
-
-        <Select.Option>{faker.lorem.word()}</Select.Option>
-
-        <Select.Option>{faker.lorem.word()}</Select.Option>
-
-        <Select.Option>{faker.lorem.word()}</Select.Option>
-      </>
-    ),
+    children,
   },
 };
 
 export const Validation: Story = {
   args: {
-    ...objectExclude(FormFieldValidation.args ?? {}, ["children"]),
+    skin: "negative",
     required: true,
-    children: (
-      <>
-        <Select.Option value="" selected disabled>
-          Select Value
-        </Select.Option>
+    children,
+  },
+};
 
-        <Select.Option>{faker.lorem.word()}</Select.Option>
-
-        <Select.Option>{faker.lorem.word()}</Select.Option>
-
-        <Select.Option>{faker.lorem.word()}</Select.Option>
-      </>
+export const WithFormField: Story = {
+  decorators: [
+    (Story: () => React.ReactElement): React.ReactElement => (
+      <FormField
+        skin="negative"
+        label="Your preference"
+        description="Insert your preferred value"
+        validationMessage="Required field">
+        <Story />
+      </FormField>
     ),
+  ],
+  args: {
+    required: true,
+    children,
   },
 };

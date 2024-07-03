@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { FormField, type FormFieldProps } from "@react-ck/form-field";
+import { FormField, useFormFieldContext, type FormFieldProps } from "@react-ck/form-field";
 import { SelectOption } from "./SelectOption";
 
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  label?: FormFieldProps["label"];
   skin?: FormFieldProps["skin"];
-  description?: FormFieldProps["description"];
-  validationMessage?: FormFieldProps["validationMessage"];
 }
 
 /**
@@ -18,18 +15,40 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
  * @returns a React element
  */
 
-const Select = ({
-  skin = "default",
-  label,
-  description,
-  validationMessage,
-  className,
-  ...props
-}: Readonly<SelectProps>): React.ReactElement => (
-  <FormField {...{ skin, label, description, validationMessage }}>
-    <select {...props} className={classNames(className, styles.root)} />
-  </FormField>
-);
+const Select = ({ skin, id, className, ...props }: Readonly<SelectProps>): React.ReactElement => {
+  const formFieldContext = useFormFieldContext();
+
+  const computedSkin = useMemo(
+    () => formFieldContext?.skin ?? skin ?? "default",
+    [formFieldContext?.skin, skin],
+  );
+
+  const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
+
+  // Validate usage inside form field
+  useEffect(() => {
+    // Is not inside form field, skip
+    if (formFieldContext === undefined) return;
+
+    // Is inside form field
+    if (skin) throw new Error("When using select inside form field, define skin on the form field");
+    else if (id)
+      throw new Error("When using select inside form field, define id on the form field");
+  }, [formFieldContext, id, skin]);
+
+  return (
+    <select
+      {...props}
+      id={computedId}
+      className={classNames(
+        styles.root,
+        formFieldContext === undefined && styles.standalone,
+        className,
+        styles[`skin_${computedSkin}`],
+      )}
+    />
+  );
+};
 
 Select.Option = SelectOption;
 
