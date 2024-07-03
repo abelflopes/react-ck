@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot Autocomplete renders correctly 1`] = `
+<div
+  className="root default"
+>
+  <div
+    className="content"
+  >
+    <autocomplete
+      className="root"
+    />
+  </div>
+</div>
+`;

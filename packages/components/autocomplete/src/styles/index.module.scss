@@ -1,0 +1,21 @@
+@use "@react-ck/theme";
+@use "@react-ck/form-field";
+
+// TODO: fix height offset between standalone and non-standalone (border)
+
+.root {
+  @include form-field.form-field-input;
+}
+
+// When not inside form field, has own border, etc
+.standalone {
+  @include form-field.form-field-container;
+
+  @each $key, $props in form-field.$form-field-styles {
+    &.skin_#{$key} {
+      @each $propKey, $propValue in $props {
+        @include theme.define-css-var(form-field, $propKey, $propValue);
+      }
+    }
+  }
+}
