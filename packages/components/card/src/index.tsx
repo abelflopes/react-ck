@@ -32,7 +32,7 @@ interface CardProps<T extends HTMLTag = "div">
  * @returns a React element
  */
 
-const Card = ({
+const Card = <T extends HTMLTag>({
   as,
   skin = "bordered",
   interaction,
@@ -41,7 +41,7 @@ const Card = ({
   children,
   className,
   ...otherProps
-}: Readonly<CardProps>): React.ReactElement => {
+}: Readonly<CardProps<T>>): React.ReactElement => {
   const [contextValue, setContextValue] = useState<CardContextValue>({
     image: undefined,
   });
