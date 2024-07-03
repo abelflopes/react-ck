@@ -2,32 +2,43 @@ import styles from "./styles/menu-item.module.scss";
 import React, { useContext } from "react";
 import classNames from "classnames";
 import { MenuContext } from "./context";
+import {
+  PolymorphicComponent,
+  type ConsumerPolymorphicProps,
+  type HTMLTag,
+} from "@react-ck/react-utils";
 
-export interface MenuItemProps extends React.HTMLAttributes<HTMLElement> {
+export interface MenuItemProps<T extends HTMLTag = "li">
+  extends React.HTMLAttributes<HTMLElement>,
+    ConsumerPolymorphicProps<T> {
   skin?: "default" | "primary" | "secondary" | "disabled";
   icon?: NonNullable<React.ReactNode>;
 }
 
-export const MenuItem = ({
+export const MenuItem = <T extends HTMLTag>({
+  as,
   skin = "default",
   icon,
   className,
   children,
   ...otherProps
-}: Readonly<MenuItemProps>): React.ReactElement => {
+}: Readonly<MenuItemProps<T>>): React.ReactElement => {
   const menuContext = useContext(MenuContext);
 
   return (
-    <li
-      className={classNames(
-        styles.root,
-        skin !== "default" && styles[skin],
-        styles[menuContext.variation],
-        className,
-      )}
-      {...otherProps}>
+    <PolymorphicComponent
+      as={as}
+      fallback={["li", otherProps]}
+      commonProps={{
+        className: classNames(
+          styles.root,
+          skin !== "default" && styles[skin],
+          styles[menuContext.variation],
+          className,
+        ),
+      }}>
       {icon}
       {children}
-    </li>
+    </PolymorphicComponent>
   );
 };

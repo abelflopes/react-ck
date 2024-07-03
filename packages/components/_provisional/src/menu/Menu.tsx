@@ -4,18 +4,26 @@ import React, { useMemo } from "react";
 import { MenuItem } from "./MenuItem";
 import { MenuDivider } from "./MenuDivider";
 import { MenuContext, menuContextDefaults, type MenuContextProps } from "./context";
+import {
+  PolymorphicComponent,
+  type ConsumerPolymorphicProps,
+  type HTMLTag,
+} from "@react-ck/react-utils";
 
-type MenuProps = React.HTMLAttributes<HTMLElement> & MenuContextProps;
+type MenuProps<T extends HTMLTag = "ul"> = React.HTMLAttributes<HTMLElement> &
+  ConsumerPolymorphicProps<T> &
+  MenuContextProps;
 
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-dock-dialog-with-a-portal
 // TODO: keyboard nav / focus
 
-const Menu = ({
+const Menu = <T extends HTMLTag>({
+  as,
   variation = menuContextDefaults.variation,
   children,
   className,
   ...otherProps
-}: Readonly<MenuProps>): React.ReactNode => {
+}: Readonly<MenuProps<T>>): React.ReactNode => {
   const menuContextValue = useMemo<MenuContextProps>(
     () => ({
       variation,
@@ -25,9 +33,14 @@ const Menu = ({
 
   return (
     <MenuContext.Provider value={menuContextValue}>
-      <ul className={classNames(styles.root, styles[variation], className)} {...otherProps}>
+      <PolymorphicComponent
+        as={as}
+        fallback={["ul", otherProps]}
+        commonProps={{
+          className: classNames(styles.root, styles[variation], className),
+        }}>
         {children}
-      </ul>
+      </PolymorphicComponent>
     </MenuContext.Provider>
   );
 };
