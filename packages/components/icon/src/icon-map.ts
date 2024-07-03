@@ -1,12 +1,12 @@
 export type IconMap = Array<{
   import: string;
-  module: string;
-  export: string;
+  module: `react-icons/${string}`;
+  export: `Icon${string}`;
 }>;
 
 // https://react-icons.github.io/react-icons/
 
-export const iconMap = [
+export const iconMap: IconMap = [
   {
     import: "BsBell",
     module: "react-icons/bs",
@@ -156,5 +156,15 @@ export const iconMap = [
     import: "FaCloudUploadAlt",
     module: "react-icons/fa",
     export: "IconUpload",
+  },
+  {
+    import: "MdOutlineCloudDownload",
+    module: "react-icons/md",
+    export: "IconDownloadOutline",
+  },
+  {
+    import: "MdOutlineCloudUpload",
+    module: "react-icons/md",
+    export: "IconUploadOutline",
   },
 ];
