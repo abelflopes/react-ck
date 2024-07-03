@@ -5,8 +5,7 @@ import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
 import { Textarea } from "@react-ck/textarea/src";
-import { Normal as FormFieldNormal, Validation as FormFieldValidation } from "./form-field.stories";
-import { objectExclude } from "../utils/object-exclude";
+import { FormField } from "@react-ck/form-field/src";
 
 type Story = StoryObj<typeof Textarea>;
 
@@ -27,7 +26,6 @@ export default meta;
 
 export const Normal: Story = {
   args: {
-    ...objectExclude(FormFieldNormal.args ?? {}, ["children"]),
     rows: 5,
     required: true,
     placeholder: sentenceCase(faker.lorem.words({ min: 10, max: 20 })),
@@ -36,7 +34,26 @@ export const Normal: Story = {
 
 export const Validation: Story = {
   args: {
-    ...objectExclude(FormFieldValidation.args ?? {}, ["children"]),
+    skin: "negative",
+    rows: 5,
+    required: true,
+    placeholder: sentenceCase(faker.lorem.words({ min: 10, max: 20 })),
+  },
+};
+
+export const WithFormField: Story = {
+  decorators: [
+    (Story: () => React.ReactElement): React.ReactElement => (
+      <FormField
+        skin="negative"
+        label="Your address"
+        description="Insert your primary address"
+        validationMessage="Required field">
+        <Story />
+      </FormField>
+    ),
+  ],
+  args: {
     rows: 5,
     required: true,
     placeholder: sentenceCase(faker.lorem.words({ min: 10, max: 20 })),
