@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Text } from "@react-ck/text";
-import { FormFieldContext, FormFieldContextProps } from "./context";
+import { FormFieldContext, type FormFieldContextProps } from "./context";
 
 export interface FormFieldProps
   extends Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "className"> {
