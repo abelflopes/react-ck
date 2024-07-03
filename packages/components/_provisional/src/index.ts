@@ -27,3 +27,5 @@ export * from "./popover";
 export * from "./chat";
 
 export * from "./file-uploader";
+
+export * from "./attachment";
