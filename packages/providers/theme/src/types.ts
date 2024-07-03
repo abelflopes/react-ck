@@ -7,6 +7,7 @@ export interface Theme {
     "highlight-alt": string;
     "highlight-alt-dark": string;
     "neutral-light-1": string;
+    "neutral-light-1-5": string;
     "neutral-light-2": string;
     "neutral-light-3": string;
     "neutral-light-4": string;
