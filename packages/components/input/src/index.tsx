@@ -5,6 +5,8 @@ import classNames from "classnames";
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "children"> {
   skin?: FormFieldProps["skin"];
+  /** Ref for the root element */
+  rootRef?: React.ForwardedRef<HTMLInputElement>;
 }
 
 /**
@@ -15,6 +17,7 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
 
 export const Input = ({
   skin,
+  rootRef,
   id,
   className,
   ...props
@@ -41,6 +44,7 @@ export const Input = ({
   return (
     <input
       {...props}
+      ref={rootRef}
       id={computedId}
       className={classNames(
         styles.root,
