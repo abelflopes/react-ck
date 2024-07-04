@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.2.12...@react-ck/react-utils@1.3.0) (2024-07-04)
+
+
+### Features
+
+* add click outside util ([738a2aa](https://github.com/abelflopes/react-ck/commit/738a2aab13db43fbe4a64f41030ec40fd6fa7074))
+* add next render util ([30ca88a](https://github.com/abelflopes/react-ck/commit/30ca88a03ec1c760097331a4f48857b0d7b017d2))
+* update react utils ([75c4350](https://github.com/abelflopes/react-ck/commit/75c43505ddba5382cc71e619588764abf179d84f))
+
+
+
 ## [1.2.12](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.2.11...@react-ck/react-utils@1.2.12) (2024-06-26)
 
 **Note:** Version bump only for package @react-ck/react-utils

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.4.0...react-ck@2.5.0) (2024-07-04)
+
+
+### Features
+
+* **react-ck:** global library package ([cba7ce3](https://github.com/abelflopes/react-ck/commit/cba7ce3f2c0a7a9f81ac5d77894a7b2fa00e8631))
+
+
+### Reverts
+
+* remove form components ([0cb8f33](https://github.com/abelflopes/react-ck/commit/0cb8f33a7233bb8a54f581deeefabba42b51e93d))
+
+
+
 ## [2.4.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.3.0...react-ck@2.4.0) (2024-06-26)
 
 

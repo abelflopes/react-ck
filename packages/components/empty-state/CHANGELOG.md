@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.18](https://github.com/abelflopes/react-ck/compare/@react-ck/empty-state@1.1.17...@react-ck/empty-state@1.1.18) (2024-07-04)
+
+
+### Bug Fixes
+
+* display items vertically in empty sate ([8bb861d](https://github.com/abelflopes/react-ck/commit/8bb861dba20ae01cdb72b09bcc42713298ad85d9))
+
+
+
 ## [1.1.17](https://github.com/abelflopes/react-ck/compare/@react-ck/empty-state@1.1.16...@react-ck/empty-state@1.1.17) (2024-06-26)
 
 

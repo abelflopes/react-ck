@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.2.0...@react-ck/provisional@3.3.0) (2024-07-04)
+
+
+### Features
+
+* add file uploader component ([a2e5fde](https://github.com/abelflopes/react-ck/commit/a2e5fdec9a5560d681d087c7b43caa0aac3b5a47))
+* add horizontal menu variation ([3fa7807](https://github.com/abelflopes/react-ck/commit/3fa7807adabebcf75f8226eabd35bf95450ee917))
+* add polimorphy to menu component ([4a6d008](https://github.com/abelflopes/react-ck/commit/4a6d008a21840e4fd7715de52bb6feea1e356400))
+* allow custom dropdown spacing ([d0ab2a4](https://github.com/abelflopes/react-ck/commit/d0ab2a409b3a0735a6c9fb5a2b3db20005532a59))
+
+
+### Bug Fixes
+
+* add missing elevation to overlay spinner ([f352d83](https://github.com/abelflopes/react-ck/commit/f352d83c8353c4bec5fbd37074ebca803d3c9007))
+* disable position engine when floating elements are not open ([8410a6b](https://github.com/abelflopes/react-ck/commit/8410a6bff608e0d89e3cf03cc71516de33e9862c))
+* remove default margin from native list elements ([1d9d86c](https://github.com/abelflopes/react-ck/commit/1d9d86c3b0aa1b7e9391f914baf061a8499dabdf))
+
+
+### Performance Improvements
+
+* run only position engine when active / needed ([bf3861c](https://github.com/abelflopes/react-ck/commit/bf3861c0e7947732433268f9d9d30bcd4c697a40))
+
+
+
 ## [3.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.1.0...@react-ck/provisional@3.2.0) (2024-06-26)
 
 

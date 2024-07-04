@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.5.0...@react-ck/card@1.6.0) (2024-07-04)
+
+
+### Features
+
+* add plimorphy to card component ([3b7fb74](https://github.com/abelflopes/react-ck/commit/3b7fb74b3988cb84d383a4526ceb2f33c533b89f))
+
+
+### Bug Fixes
+
+* card polimorphy tag alias ([38c5635](https://github.com/abelflopes/react-ck/commit/38c5635fb582301ae5ce4f93f4c8860a93f2b182))
+* default / bordered card skin styles ([374a3dc](https://github.com/abelflopes/react-ck/commit/374a3dc22fd0d36066d2ee6c11dc2976d12f9126))
+
+
+
 ## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.4.3...@react-ck/card@1.5.0) (2024-06-26)
 
 

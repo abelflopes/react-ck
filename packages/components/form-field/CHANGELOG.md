@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.2.1...@react-ck/form-field@1.3.0) (2024-07-04)
+
+
+### Features
+
+* add focus styles in inputs ([9d94454](https://github.com/abelflopes/react-ck/commit/9d944543fdba3492dba037b7f5dfe3b487336102))
+
+
+
 ## [1.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.2.0...@react-ck/form-field@1.2.1) (2024-06-26)
 
 

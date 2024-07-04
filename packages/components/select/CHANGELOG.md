@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.3.0...@react-ck/select@1.4.0) (2024-07-04)
+
+
+### Features
+
+* add role attribute to select root element ([2df3bd2](https://github.com/abelflopes/react-ck/commit/2df3bd2c676ff9b6d5c23ce89123919b1bca85e0))
+* add select search ([bdfc124](https://github.com/abelflopes/react-ck/commit/bdfc124cedf8b34d65189c1acd9bf629a3be7a63))
+* add selected values list to select change event handler ([963ac5f](https://github.com/abelflopes/react-ck/commit/963ac5f722866acde10f2af95f8d8c83ef5b12be))
+* allow multiple selection ([a5642a8](https://github.com/abelflopes/react-ck/commit/a5642a8756bafe20556a282393c477a6c0f595c6))
+
+
+### Bug Fixes
+
+* hide native select ([1ace583](https://github.com/abelflopes/react-ck/commit/1ace5834576f27e82a4bf242d254f9647de54c3a))
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.2.14...@react-ck/select@1.3.0) (2024-06-26)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.7.5...@react-ck/theme@1.8.0) (2024-07-04)
+
+
+### Features
+
+* add theme color ([3e0719c](https://github.com/abelflopes/react-ck/commit/3e0719cf989b41e9c0608cbe45ac04926178c4e8))
+
+
+
 ## [1.7.5](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.7.4...@react-ck/theme@1.7.5) (2024-06-26)
 
 

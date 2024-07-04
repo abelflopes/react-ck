@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.3.15...@react-ck/input@1.4.0) (2024-07-04)
+
+
+### Features
+
+* add ref forwarding to input ([301f372](https://github.com/abelflopes/react-ck/commit/301f372d6e5ffa4e20044227fc517bffdecf0733))
+
+
+
 ## [1.3.15](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.3.14...@react-ck/input@1.3.15) (2024-06-26)
 
 

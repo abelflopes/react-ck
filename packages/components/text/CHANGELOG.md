@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.5.1...@react-ck/text@1.5.2) (2024-07-04)
+
+
+### Bug Fixes
+
+* text variation line height ([fa48abd](https://github.com/abelflopes/react-ck/commit/fa48abd6317171443bb4c26ee2985832c58a1004))
+
+
+
 ## [1.5.1](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.5.0...@react-ck/text@1.5.1) (2024-06-26)
 
 
