@@ -34,6 +34,9 @@ const config = {
   ],
   plugins: ["stylelint-no-unsupported-browser-features"],
   defaultSeverity: "warning",
+  reportDescriptionlessDisables: true,
+  reportNeedlessDisables: true,
+  reportInvalidScopeDisables: true,
   rules: {
     "at-rule-disallowed-list": [
       "import",
@@ -97,6 +100,13 @@ const config = {
       },
     ],
   },
+  // https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint
+  overrides: [
+    {
+      files: ["**/*.scss"],
+      customSyntax: "postcss-scss",
+    },
+  ],
 };
 
 module.exports = config;

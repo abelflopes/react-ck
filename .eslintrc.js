@@ -15,6 +15,7 @@ const config = {
     "max-lines": [1, 300],
     "max-lines-per-function": [1, 200],
   },
+  reportUnusedDisableDirectives: true,
   settings: {
     lintAllEsApis: true,
   },
