@@ -13,5 +13,13 @@ $padding-v: #{get-spacing(0.5)};
   max-width: var(--pe-max-width);
   max-height: calc(var(--pe-max-height) - #{$padding-v} * 2);
   box-sizing: border-box;
-  padding: get-spacing(2);
+  padding: get-css-var(dropdown, spacing);
+}
+
+.spacing_m {
+  @include define-css-var(dropdown, spacing, get-spacing(2));
+}
+
+.spacing_none {
+  @include define-css-var(dropdown, spacing, 0);
 }

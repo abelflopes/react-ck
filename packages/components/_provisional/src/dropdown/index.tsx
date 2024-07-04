@@ -4,30 +4,42 @@ import { PositionEngine, type PositionEngineProps } from "../position-engine";
 import { ScrollableContainer } from "../scrollable-container";
 import { Card } from "@react-ck/card";
 import styles from "./index.module.scss";
+import classNames from "classnames";
+
+const defaultExclude: PositionEngineProps["exclude"] = ["left", "right", "end", "full"];
 
 export interface DropdownProps {
-  anchor: PositionEngineProps["anchorRef"];
+  anchorRef: PositionEngineProps["anchorRef"];
   position?: PositionEngineProps["position"];
+  excludeAutoPosition?: PositionEngineProps["exclude"];
   children?: React.ReactNode;
   open?: boolean;
+  spacing?: "m" | "none";
+  /** Ref for the root element */
+  rootRef?: React.RefObject<HTMLDivElement>;
 }
 
 export const Dropdown = ({
-  anchor,
+  anchorRef,
+  excludeAutoPosition = defaultExclude,
   position = "auto",
   open,
+  spacing = "m",
+  rootRef,
   children,
 }: Readonly<DropdownProps>): React.ReactNode =>
   open && (
     <PositionEngine
-      exclude={["left", "right", "end"]}
+      exclude={excludeAutoPosition}
       position={position}
-      anchorRef={anchor}
+      anchorRef={anchorRef}
       render={({ style }) => (
         <Layer elevation="popup">
-          <div style={style} className={styles.container}>
-            <Card skin="shadowed" spacing="none" className={styles.card}>
-              <ScrollableContainer horizontal={false} className={styles.content}>
+          <div ref={rootRef} style={style} className={styles.container}>
+            <Card skin="shadowed" spacing="none">
+              <ScrollableContainer
+                horizontal={false}
+                className={classNames(styles.content, styles[`spacing_${spacing}`])}>
                 {children}
               </ScrollableContainer>
             </Card>
