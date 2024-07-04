@@ -1,6 +1,6 @@
 import React from "react";
 import { Select } from "../src/index";
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { mockResizeObserver } from "./mocks";
 import { Manager } from "@react-ck/manager";
