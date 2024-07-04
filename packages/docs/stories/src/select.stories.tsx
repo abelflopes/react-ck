@@ -75,7 +75,6 @@ export const Validation: Story = {
   args: {
     ...args,
     skin: "negative",
-    required: true,
   },
 };
 
@@ -91,8 +90,5 @@ export const WithFormField: Story = {
       </FormField>
     ),
   ],
-  args: {
-    ...args,
-    required: true,
-  },
+  args,
 };

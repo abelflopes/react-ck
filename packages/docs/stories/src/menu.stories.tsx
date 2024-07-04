@@ -31,15 +31,7 @@ const meta: Meta<typeof Menu> = {
 const children = (
   <>
     <Menu.Item
-      icon={
-        <Icon>
-          <IconUserCircle />
-        </Icon>
-      }
-      skin="primary">
-      {faker.person.firstName()}
-    </Menu.Item>
-    <Menu.Item
+      skin="primary"
       icon={
         <Icon>
           <IconUserCircle />
@@ -52,8 +44,16 @@ const children = (
         <Icon>
           <IconUserCircle />
         </Icon>
-      }
-      skin="secondary">
+      }>
+      {faker.person.firstName()}
+    </Menu.Item>
+    <Menu.Item
+      skin="secondary"
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }>
       {faker.person.firstName()}
     </Menu.Item>
     <Menu.Item
@@ -66,7 +66,7 @@ const children = (
     </Menu.Item>
     <Menu.Divider />
     <Menu.Item>{faker.animal.type()}</Menu.Item>
-    <Menu.Item skin="disabled">{faker.animal.type()}</Menu.Item>
+    <Menu.Item disabled>{faker.animal.type()}</Menu.Item>
     <Menu.Item>{faker.animal.type()}</Menu.Item>
     <Menu.Divider>Companies</Menu.Divider>
     <Menu.Item>{faker.company.name()}</Menu.Item>
