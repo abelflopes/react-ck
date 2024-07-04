@@ -1,4 +1,3 @@
-/* eslint-disable max-lines -- ddd */
 import { type StandardLonghandProperties } from "csstype";
 
 type PositionEngineBasePosition = "top" | "bottom" | "left" | "right";
@@ -50,8 +49,7 @@ export class PositionEngine {
   }
 
   public init = (): void => {
-    this.render();
-
+    this.throttledRender();
     this.resizeObserver.observe(this.options.element);
     window.addEventListener("resize", this.throttledRender);
     window.addEventListener("scroll", this.throttledRender, { capture: true });
@@ -60,7 +58,7 @@ export class PositionEngine {
   public destroy = (): void => {
     this.resizeObserver.disconnect();
     window.removeEventListener("resize", this.throttledRender);
-    window.removeEventListener("scroll", this.throttledRender);
+    window.removeEventListener("scroll", this.throttledRender, { capture: true });
 
     if (this.animationFrame !== undefined) cancelAnimationFrame(this.animationFrame);
   };
@@ -296,4 +294,3 @@ export class PositionEngine {
     });
   };
 }
-/* eslint-enable max-lines */

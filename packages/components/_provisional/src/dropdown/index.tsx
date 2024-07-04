@@ -30,6 +30,7 @@ export const Dropdown = ({
 }: Readonly<DropdownProps>): React.ReactNode =>
   open && (
     <PositionEngine
+      active={open}
       exclude={excludeAutoPosition}
       position={position}
       anchorRef={anchorRef}
