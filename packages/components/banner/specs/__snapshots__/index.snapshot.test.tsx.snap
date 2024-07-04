@@ -5,7 +5,7 @@ exports[`snapshot Banner renders correctly 1`] = `
   className="root"
 >
   <div
-    className="root horizontal vertical big container"
+    className="root size_l spacing_x_m spacing_y_l container"
   >
     Banner
   </div>

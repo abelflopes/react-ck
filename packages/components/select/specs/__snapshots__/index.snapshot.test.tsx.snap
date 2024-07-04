@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot Select renders correctly 1`] = `
-<div
-  className="root default"
->
+[
+  <select
+    onChange={[Function]}
+  />,
   <div
-    className="content"
-  >
-    <select
-      className="root"
-    />
-  </div>
-</div>
+    className="root skin_default"
+    onFocus={[Function]}
+    role="button"
+    tabIndex={0}
+  />,
+]
 `;

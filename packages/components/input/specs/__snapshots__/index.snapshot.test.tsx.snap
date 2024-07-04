@@ -1,15 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot Input renders correctly 1`] = `
-<div
-  className="root default"
->
-  <div
-    className="content"
-  >
-    <input
-      className="root"
-    />
-  </div>
-</div>
+<input
+  className="root standalone skin_default"
+/>
 `;

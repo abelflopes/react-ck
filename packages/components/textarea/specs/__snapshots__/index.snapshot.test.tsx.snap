@@ -1,15 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot Textarea renders correctly 1`] = `
-<div
-  className="root default"
->
-  <div
-    className="content"
-  >
-    <textarea
-      className="root"
-    />
-  </div>
-</div>
+<textarea
+  className="root standalone skin_default"
+/>
 `;

@@ -2,7 +2,7 @@
 
 exports[`snapshot Container renders correctly 1`] = `
 <div
-  className="root horizontal"
+  className="root size_l spacing_x_m spacing_y_none"
 >
   Container
 </div>
