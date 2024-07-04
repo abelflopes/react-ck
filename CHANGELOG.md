@@ -1,3 +1,62 @@
+## [3.5.0](https://github.com/abelflopes/react-ck/compare/v3.4.0...v3.5.0) (2024-07-04)
+
+
+### Features
+
+* add autocomplete component ([4b38750](https://github.com/abelflopes/react-ck/commit/4b387502070eab46d024dc7a183a9ecd1a33f3b2))
+* add click outside util ([738a2aa](https://github.com/abelflopes/react-ck/commit/738a2aab13db43fbe4a64f41030ec40fd6fa7074))
+* add file uploader component ([a2e5fde](https://github.com/abelflopes/react-ck/commit/a2e5fdec9a5560d681d087c7b43caa0aac3b5a47))
+* add focus styles in inputs ([9d94454](https://github.com/abelflopes/react-ck/commit/9d944543fdba3492dba037b7f5dfe3b487336102))
+* add horizontal menu variation ([3fa7807](https://github.com/abelflopes/react-ck/commit/3fa7807adabebcf75f8226eabd35bf95450ee917))
+* add icons ([8b57b08](https://github.com/abelflopes/react-ck/commit/8b57b0884535ef1885d108d1e70e06f656bfd5e4))
+* add icons ([2e93a65](https://github.com/abelflopes/react-ck/commit/2e93a65b430f000b18380b5fe8f92e223ee6d6e9))
+* add next render util ([30ca88a](https://github.com/abelflopes/react-ck/commit/30ca88a03ec1c760097331a4f48857b0d7b017d2))
+* add plimorphy to card component ([3b7fb74](https://github.com/abelflopes/react-ck/commit/3b7fb74b3988cb84d383a4526ceb2f33c533b89f))
+* add polimorphy to menu component ([4a6d008](https://github.com/abelflopes/react-ck/commit/4a6d008a21840e4fd7715de52bb6feea1e356400))
+* add ref forwarding to input ([301f372](https://github.com/abelflopes/react-ck/commit/301f372d6e5ffa4e20044227fc517bffdecf0733))
+* add role attribute to select root element ([2df3bd2](https://github.com/abelflopes/react-ck/commit/2df3bd2c676ff9b6d5c23ce89123919b1bca85e0))
+* add select search ([bdfc124](https://github.com/abelflopes/react-ck/commit/bdfc124cedf8b34d65189c1acd9bf629a3be7a63))
+* add selected values list to select change event handler ([963ac5f](https://github.com/abelflopes/react-ck/commit/963ac5f722866acde10f2af95f8d8c83ef5b12be))
+* add theme color ([3e0719c](https://github.com/abelflopes/react-ck/commit/3e0719cf989b41e9c0608cbe45ac04926178c4e8))
+* allow custom dropdown spacing ([d0ab2a4](https://github.com/abelflopes/react-ck/commit/d0ab2a409b3a0735a6c9fb5a2b3db20005532a59))
+* allow multiple selection ([a5642a8](https://github.com/abelflopes/react-ck/commit/a5642a8756bafe20556a282393c477a6c0f595c6))
+* **react-ck:** global library package ([58a510c](https://github.com/abelflopes/react-ck/commit/58a510c51a752e9591cf5fd95a4fe4a8cfda50fd))
+* update react utils ([75c4350](https://github.com/abelflopes/react-ck/commit/75c43505ddba5382cc71e619588764abf179d84f))
+
+
+### Bug Fixes
+
+* add missing elevation to overlay spinner ([f352d83](https://github.com/abelflopes/react-ck/commit/f352d83c8353c4bec5fbd37074ebca803d3c9007))
+* card polimorphy tag alias ([38c5635](https://github.com/abelflopes/react-ck/commit/38c5635fb582301ae5ce4f93f4c8860a93f2b182))
+* default / bordered card skin styles ([374a3dc](https://github.com/abelflopes/react-ck/commit/374a3dc22fd0d36066d2ee6c11dc2976d12f9126))
+* disable position engine when floating elements are not open ([8410a6b](https://github.com/abelflopes/react-ck/commit/8410a6bff608e0d89e3cf03cc71516de33e9862c))
+* display items vertically in empty sate ([8bb861d](https://github.com/abelflopes/react-ck/commit/8bb861dba20ae01cdb72b09bcc42713298ad85d9))
+* hide native select ([1ace583](https://github.com/abelflopes/react-ck/commit/1ace5834576f27e82a4bf242d254f9647de54c3a))
+* remove default margin from native list elements ([1d9d86c](https://github.com/abelflopes/react-ck/commit/1d9d86c3b0aa1b7e9391f914baf061a8499dabdf))
+* text variation line height ([fa48abd](https://github.com/abelflopes/react-ck/commit/fa48abd6317171443bb4c26ee2985832c58a1004))
+
+
+### Performance
+
+* run only position engine when active / needed ([bf3861c](https://github.com/abelflopes/react-ck/commit/bf3861c0e7947732433268f9d9d30bcd4c697a40))
+
+
+### Code Refactoring
+
+* base implementation for non native select ([1da6fb4](https://github.com/abelflopes/react-ck/commit/1da6fb40fa729ec0de8166596a2e003dfb2f4ec2))
+* container size & spacing props ([2ed4cb5](https://github.com/abelflopes/react-ck/commit/2ed4cb5ff5c47ca9164e580e33e936262e491845))
+* define input variation styles through form field mixin ([c055ae0](https://github.com/abelflopes/react-ck/commit/c055ae0466e4b1a47b3e8e47e890ca07c06df31f))
+* remove form field wrapping select ([b66a5b5](https://github.com/abelflopes/react-ck/commit/b66a5b522c6b2c2e46d3074df80ef527bde64719))
+* remove form field wrapping textarea ([07ce4e0](https://github.com/abelflopes/react-ck/commit/07ce4e03a2b52cec73ccd68338c5e05108ee25b9))
+* remove input wrapping with form field ([5eb7e48](https://github.com/abelflopes/react-ck/commit/5eb7e48c8abdc2b2b5a5c62315ae2c47c7cffac7))
+* split menu item disabled state from skin ([3ecf8eb](https://github.com/abelflopes/react-ck/commit/3ecf8ebce1f0ad47e655a4e71a4b977e2f79dce0))
+
+
+### Changes Reverted
+
+* remove autocomplete component ([ef96c56](https://github.com/abelflopes/react-ck/commit/ef96c56366fbbb511ab28650d8d55487b1a34d23))
+* remove form components ([0cb8f33](https://github.com/abelflopes/react-ck/commit/0cb8f33a7233bb8a54f581deeefabba42b51e93d))
+
 ## [3.4.0](https://github.com/abelflopes/react-ck/compare/v3.3.0...v3.4.0) (2024-06-26)
 
 
