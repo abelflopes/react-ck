@@ -1,8 +1,8 @@
 import styles from "./styles/menu.module.scss";
 import classNames from "classnames";
 import React, { useMemo } from "react";
-import { MenuItem } from "./MenuItem";
-import { MenuDivider } from "./MenuDivider";
+import { MenuItem, type MenuItemProps } from "./MenuItem";
+import { MenuDivider, type MenuDividerProps } from "./MenuDivider";
 import { MenuContext, menuContextDefaults, type MenuContextProps } from "./context";
 import {
   PolymorphicComponent,
@@ -49,4 +49,4 @@ Menu.Item = MenuItem;
 
 Menu.Divider = MenuDivider;
 
-export { Menu, type MenuProps };
+export { Menu, type MenuProps, type MenuItemProps, type MenuDividerProps };

@@ -12,6 +12,7 @@
   transition: all 0.2s;
   box-sizing: border-box;
 
+  &:focus:not(.disabled),
   &:hover:not(.disabled),
   &.secondary {
     background-color: get-color(neutral-light-2);

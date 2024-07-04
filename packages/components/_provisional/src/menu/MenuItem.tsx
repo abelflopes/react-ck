@@ -11,7 +11,8 @@ import {
 export interface MenuItemProps<T extends HTMLTag = "li">
   extends React.HTMLAttributes<HTMLElement>,
     ConsumerPolymorphicProps<T> {
-  skin?: "default" | "primary" | "secondary" | "disabled";
+  skin?: "default" | "primary" | "secondary";
+  disabled?: boolean;
   icon?: NonNullable<React.ReactNode>;
 }
 
@@ -19,6 +20,7 @@ export const MenuItem = <T extends HTMLTag>({
   as,
   skin = "default",
   icon,
+  disabled,
   className,
   children,
   ...otherProps
@@ -33,6 +35,7 @@ export const MenuItem = <T extends HTMLTag>({
         className: classNames(
           styles.root,
           skin !== "default" && styles[skin],
+          disabled && styles.disabled,
           styles[menuContext.variation],
           className,
         ),
