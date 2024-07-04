@@ -38,9 +38,6 @@ const args: SelectProps = {
       </Select.Option>
     </>
   ),
-  onChange: (e) => {
-    console.log("change", e.target.value, e.target.selectedOptions);
-  },
 };
 
 export default meta;
