@@ -16,7 +16,7 @@ export interface SelectProps
     placeholder: string;
     emptyStateMessage: (value: string) => React.ReactNode;
   };
-  onChange?: React.SelectHTMLAttributes<HTMLSelectElement>["onChange"];
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>, selectedValues: SelectedValues) => void;
   value?: UserValue;
   defaultValue?: UserValue;
   name?: React.SelectHTMLAttributes<HTMLSelectElement>["name"];

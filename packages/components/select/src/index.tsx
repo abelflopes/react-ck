@@ -155,7 +155,9 @@ const Select = ({
         multiple={selectMultiple}
         defaultValue={defaultValue}
         value={internalValue}
-        onChange={selectOnChange}>
+        onChange={(e) => {
+          selectOnChange?.(e, selectedValuesList);
+        }}>
         {selectedValuesList.map((i) => (
           <option key={i} value={i}>
             {i}
