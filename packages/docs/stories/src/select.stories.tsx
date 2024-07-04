@@ -58,6 +58,13 @@ export const WithSearch: Story = {
   },
 };
 
+export const Multiple: Story = {
+  args: {
+    ...args,
+    multiple: true,
+  },
+};
+
 export const Validation: Story = {
   args: {
     ...args,

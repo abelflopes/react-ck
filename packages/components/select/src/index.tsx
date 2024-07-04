@@ -18,8 +18,13 @@ interface SelectProps extends Omit<React.HTMLAttributes<HTMLElement>, "onChange"
     emptyStateMessage: (value: string) => React.ReactNode;
   };
   onChange?: React.SelectHTMLAttributes<HTMLSelectElement>["onChange"];
-  value?: React.SelectHTMLAttributes<HTMLSelectElement>["value"];
+  value?: string | string[];
+  name?: React.SelectHTMLAttributes<HTMLSelectElement>["name"];
   multiple?: React.SelectHTMLAttributes<HTMLSelectElement>["multiple"];
+}
+
+function valueAsArray(value: string | string[]): string[] {
+  return value instanceof Array ? value : [value];
 }
 
 /**
@@ -29,36 +34,46 @@ interface SelectProps extends Omit<React.HTMLAttributes<HTMLElement>, "onChange"
  * @returns a React element
  */
 
+// eslint-disable-next-line max-lines-per-function
 const Select = ({
   children,
   className,
   onFocus,
   search: searchOptions,
   onChange: selectOnChange,
+  name: selectName,
   value: selectValue,
   multiple: selectMultiple,
   ...props
 }: Readonly<SelectProps>): React.ReactElement => {
+  const onNextRender = useNextRender();
   const searchRef = useRef<HTMLInputElement>(null);
   const selectRef = useRef<HTMLSelectElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [selectedValues, setSelectedValues] = useState(selectValue);
   const [open, setOpen] = useState(false);
-  const [selectedValues, setSelectedValues] = useState<string[] | undefined>(undefined);
   const [search, setSearch] = useState("");
-
-  const onNextRender = useNextRender();
 
   const filteredOptions = useMemo(
     () => options.filter((i) => i.toLowerCase().includes(search.toLowerCase())),
     [search],
   );
 
-  const handleChange = useCallback(
-    (value: string) => {
-      setSelectedValues([value]);
+  const selectedValuesList = useMemo(() => valueAsArray(selectedValues ?? []), [selectedValues]);
 
-      setOpen(false);
+  const handleChange = useCallback(
+    (value: string, mode: "select" | "deselect") => {
+      setSelectedValues((v) => {
+        if (!selectMultiple && mode === "select") return value;
+        else if (!selectMultiple && mode === "deselect") return undefined;
+        else if (mode === "deselect" && v !== undefined)
+          return valueAsArray(v).filter((i) => i !== value);
+        else if (v !== undefined) return [...valueAsArray(v), value];
+        return [value];
+      });
+
+      if (!selectMultiple) setOpen(false);
 
       onNextRender(() => {
         if (!selectRef.current)
@@ -71,7 +86,7 @@ const Select = ({
         );
       });
     },
-    [onNextRender],
+    [onNextRender, selectMultiple],
   );
 
   useOnClickOutside(open, [dropdownRef, inputRef], () => {
@@ -94,14 +109,19 @@ const Select = ({
     setSearch("");
   }, [open]);
 
+  useEffect(() => {
+    setSelectedValues(selectValue);
+  }, [selectValue]);
+
   return (
     <>
       <select
         ref={selectRef}
+        name={selectName}
         multiple={selectMultiple}
         onChange={selectOnChange}
         value={selectedValues}>
-        {selectedValues?.map((i) => (
+        {selectedValuesList.map((i) => (
           <option key={i} value={i}>
             {i}
           </option>
@@ -112,7 +132,7 @@ const Select = ({
         {...props}
         rootRef={inputRef}
         className={classNames(styles.root, className)}
-        value={selectedValues?.join(", ") || ""}
+        value={selectedValuesList.join(", ") || ""}
         readOnly
         onFocus={(e) => {
           setOpen(true);
@@ -149,9 +169,9 @@ const Select = ({
           {filteredOptions.map((i) => (
             <Menu.Item
               key={i}
-              skin={selectedValues?.includes(i) ? "primary" : "default"}
+              skin={selectedValuesList.includes(i) ? "primary" : "default"}
               onClick={() => {
-                handleChange(i);
+                handleChange(i, selectedValuesList.includes(i) ? "deselect" : "select");
               }}>
               {i}
             </Menu.Item>
