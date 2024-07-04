@@ -10,12 +10,5 @@
 // When not inside form field, has own border, etc
 .standalone {
   @include form-field.form-field-container;
-
-  @each $key, $props in form-field.$form-field-styles {
-    &.skin_#{$key} {
-      @each $propKey, $propValue in $props {
-        @include theme.define-css-var(form-field, $propKey, $propValue);
-      }
-    }
-  }
+  @include form-field.skins;
 }

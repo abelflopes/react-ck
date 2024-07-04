@@ -2,12 +2,36 @@
 @use "@react-ck/text";
 @use "variables";
 
+@mixin wrapper {
+  border: solid #{theme.get-css-var(form-field, border-color)} variables.$form-field-border-width;
+  border-radius: theme.get-spacing(1);
+}
+
+@mixin spacing {
+  padding: theme.get-spacing(0.75) theme.get-spacing(1);
+}
+
+@mixin form-field-container {
+  @include wrapper;
+  background: theme.get-color(neutral-light-1);
+}
+
+@mixin skins {
+  @each $key, $props in variables.$form-field-styles {
+    &.skin_#{$key} {
+      @each $propKey, $propValue in $props {
+        @include theme.define-css-var(form-field, $propKey, $propValue);
+      }
+    }
+  }
+}
+
 @mixin form-field-input {
+  @include spacing;
   @include text.text-base;
 
   width: 100%;
   box-sizing: border-box;
-  padding: theme.get-spacing(0.75) theme.get-spacing(1);
   border: none;
   background: transparent;
   color: theme.get-color(neutral-dark-5);
@@ -32,10 +56,4 @@
     outline: solid theme.get-css-var(spacing, border) theme.get-color(highlight-primary);
     outline-offset: theme.get-spacing(0.2);
   }
-}
-
-@mixin form-field-container {
-  border: solid #{theme.get-css-var(form-field, border-color)} variables.$form-field-border-width;
-  border-radius: theme.get-spacing(1);
-  background: theme.get-color(neutral-light-1);
 }
