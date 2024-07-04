@@ -1,9 +1,8 @@
-import { type ReactElement } from "react";
+import React from "react";
 
-export function getDisplayName(el: ReactElement): string | undefined {
-  if (typeof el.type === "string") return el.type;
-
-  if (typeof el.type !== "string" && "name" in el.type) return el.type.name;
-
+export function getDisplayName(el: React.ReactNode): string | undefined {
+  if (!React.isValidElement(el)) return undefined;
+  else if (typeof el.type === "string") return el.type;
+  else if (typeof el.type !== "string" && "name" in el.type) return el.type.name;
   return undefined;
 }

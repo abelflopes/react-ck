@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/server";
 
 /** Extract text only from component markup  */
 
-export const componentToText = (component: NonNullable<React.ReactNode>): string | undefined => {
+export const componentToText = (component: React.ReactNode): string | undefined => {
   let text = "";
   // eslint-disable-next-line react/jsx-no-useless-fragment -- needs fragment so that it is accepted as ReactElement
   const html = ReactDOM.renderToString(<>{component}</>);
