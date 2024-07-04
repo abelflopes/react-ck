@@ -20,6 +20,7 @@ export const Popover = ({
 }: Readonly<PopoverProps>): React.ReactNode =>
   open && (
     <PositionEngine
+      active={open}
       exclude={["left", "right", "end"]}
       position={position}
       anchorRef={anchor}

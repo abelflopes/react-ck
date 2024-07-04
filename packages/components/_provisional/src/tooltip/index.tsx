@@ -19,7 +19,7 @@ export interface TooltipProps {
 export const Tooltip = ({
   anchor,
   position = "auto",
-  open,
+  open = false,
   children,
 }: Readonly<TooltipProps>): React.ReactNode => {
   const [internalOpen, setInternalOpen] = useState(open);
@@ -61,6 +61,7 @@ export const Tooltip = ({
   return (
     internalOpen && (
       <PositionEngine
+        active={open}
         exclude={["full"]}
         position={position}
         anchorRef={anchor}
