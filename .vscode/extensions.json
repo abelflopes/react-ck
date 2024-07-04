@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "alefragnani.Bookmarks",
+    "ambar.bundle-size",
+    "AlexShen.classdiagram-ts",
+    "streetsidesoftware.code-spell-checker",
+    "kisstkondoros.vscode-codemetrics",
+    "clinyong.vscode-css-modules",
+    "EditorConfig.EditorConfig",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-github-actions",
+    "GitHub.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "unifiedjs.vscode-mdx",
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "YoavBls.pretty-ts-errors",
+    "mrmlnc.vscode-scss",
+    "ban.spellright",
+    "swyphcosmo.spellchecker",
+    "stylelint.vscode-stylelint",
+    "Gruntfuggly.todo-tree"
+  ]
+}

@@ -1,4 +1,16 @@
 {
+  // Formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "eslint.format.enable": true
+  "editor.codeActionsOnSave": {
+    // The setting below turns on Auto Fix for all providers including ESLint:
+    "source.fixAll": "explicit"
+  },
+  "eslint.format.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }
