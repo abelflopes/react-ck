@@ -12,7 +12,7 @@ import {
 
 type MenuProps<T extends HTMLTag = "ul"> = React.HTMLAttributes<HTMLElement> &
   ConsumerPolymorphicProps<T> &
-  MenuContextProps;
+  Partial<MenuContextProps>;
 
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-dock-dialog-with-a-portal
 // TODO: keyboard nav / focus
