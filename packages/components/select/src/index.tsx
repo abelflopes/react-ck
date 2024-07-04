@@ -168,6 +168,7 @@ const Select = ({
       <div
         {...props}
         ref={rootElRef}
+        role="button"
         tabIndex={0}
         className={classNames(styles.root, styles[`skin_${skin}`], className)}
         onFocus={(e) => {
