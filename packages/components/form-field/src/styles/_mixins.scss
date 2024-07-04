@@ -13,9 +13,11 @@
   color: theme.get-color(neutral-dark-5);
   outline: none;
 
-  &::placeholder {
-    color: theme.get-color(neutral-dark-1);
-  }
+  // TODO: focus mixin
+  outline: solid theme.get-css-var(spacing, border) transparent;
+  transition-property: outline, outline-offset;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 
   &::placeholder {
     color: theme.get-color(neutral-dark-1);
@@ -23,6 +25,12 @@
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &:focus {
+    // TODO: focus mixin
+    outline: solid theme.get-css-var(spacing, border) theme.get-color(highlight-primary);
+    outline-offset: theme.get-spacing(0.2);
   }
 }
 
