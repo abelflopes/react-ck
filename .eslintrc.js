@@ -12,6 +12,8 @@ const config = {
   plugins: ["compat"],
   rules: {
     "import/no-extraneous-dependencies": "off",
+    "max-lines": [1, 300],
+    "max-lines-per-function": [1, 200],
   },
   settings: {
     lintAllEsApis: true,
