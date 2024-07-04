@@ -40,6 +40,7 @@ const args: FileUploaderProps = {
     onChange: (e) => {
       void (async (): Promise<void> => {
         const files = e.target.files && (await readFileList(e.target.files));
+        // eslint-disable-next-line no-console -- // TODO: remove once fully implemented
         console.log("Done", files);
       })();
     },
