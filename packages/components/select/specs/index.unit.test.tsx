@@ -1,9 +1,27 @@
 import React from "react";
 import { Select } from "../src/index";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { mockResizeObserver } from "./mocks";
+import { Manager } from "@react-ck/manager";
+
+/**
+ * This test is mostly aimed to ensure that the keeps a native-like behaviour
+ */
 
 describe("unit Select", () => {
+  beforeAll(() => {
+    mockResizeObserver();
+
+    // make RAF synchronous so that position engine renders immediately
+    Object.defineProperty(window, "requestAnimationFrame", {
+      writable: true,
+      value: (cb: () => void) => {
+        cb();
+      },
+    });
+  });
+
   it("renders correctly", async () => {
     render(<Select data-testid="select" />);
     const find = await screen.findByTestId("select");
@@ -22,7 +40,7 @@ describe("unit Select", () => {
     expect(find.value).toBe(value);
   });
 
-  it("should get set", () => {
+  it("should get set value", () => {
     const value = "123";
     render(
       <Select data-testid="select" value={value}>
@@ -30,8 +48,10 @@ describe("unit Select", () => {
         <Select.Option selected>{value}</Select.Option>
       </Select>,
     );
-    const find = screen.getByDisplayValue<HTMLSelectElement>(value);
-    expect(find.value).toBe(value);
+    const find = screen.queryByDisplayValue<HTMLSelectElement>(value);
+
+    expect(find).toBeInTheDocument();
+    expect(find?.value).toBe(value);
   });
 
   it("should not fire onchange by default", () => {
@@ -55,20 +75,27 @@ describe("unit Select", () => {
     const value = "123";
     const handleChange = jest.fn();
 
-    render(
-      <Select data-testid="select" onChange={handleChange}>
-        <Select.Option>{initialValue}</Select.Option>
-        <Select.Option>{value}</Select.Option>
-      </Select>,
+    const r = render(
+      <Manager>
+        <Select data-testid="select" value={initialValue} onChange={handleChange}>
+          <Select.Option>{initialValue}</Select.Option>
+          <Select.Option>{value}</Select.Option>
+        </Select>
+      </Manager>,
     );
-    const find = screen.getByDisplayValue<HTMLSelectElement>(initialValue);
-    const option1 = find.getElementsByTagName("option").item(0);
-    const option2 = find.getElementsByTagName("option").item(1);
 
-    fireEvent.change(find, { target: { value } });
+    const root = screen.getByTestId("select");
+
+    // Open select
+    fireEvent.focus(root);
+
+    const [, option2] = r.baseElement.querySelectorAll("li");
+
+    if (option2) fireEvent.click(option2);
+
+    const nativeElement = screen.getByDisplayValue<HTMLSelectElement>(value);
 
     expect(handleChange).toHaveBeenCalledTimes(1);
-    expect(option1?.selected).toBe(false);
-    expect(option2?.selected).toBe(true);
+    expect(nativeElement.value).toBe(value);
   });
 });

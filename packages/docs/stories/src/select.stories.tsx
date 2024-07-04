@@ -1,9 +1,8 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
-import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
-import { Select, SelectProps } from "@react-ck/select/src";
+import { Select, type SelectProps } from "@react-ck/select/src";
 import { FormField } from "@react-ck/form-field/src";
 
 type Story = StoryObj<typeof Select>;
@@ -22,15 +21,21 @@ const meta: Meta<typeof Select> = {
 };
 
 const args: SelectProps = {
-  placeholder: "Select a value",
+  placeholder: "Select a fruit",
   children: (
     <>
-      <Select.Option value="" selected disabled>
-        Select Value
+      <Select.Option value="Apple" disabled />
+      <Select.Option value="bnn" disabled selected>
+        Banana
       </Select.Option>
-      <Select.Option>{faker.lorem.word()}</Select.Option>
-      <Select.Option>{faker.lorem.word()}</Select.Option>
-      <Select.Option>{faker.lorem.word()}</Select.Option>
+      <Select.Option value="orange">Orange</Select.Option>
+      <Select.Option value="lemon">Lemon</Select.Option>
+      <h1>Exotic</h1>
+      <Select.Option>
+        <span>
+          <b>Exotic</b> mango
+        </span>
+      </Select.Option>
     </>
   ),
   onChange: (e) => {
@@ -61,6 +66,7 @@ export const WithSearch: Story = {
 export const Multiple: Story = {
   args: {
     ...args,
+    value: ["dog", "zebra"],
     multiple: true,
   },
 };

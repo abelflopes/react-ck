@@ -2,30 +2,13 @@ import styles from "./styles/index.module.scss";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SelectOption } from "./SelectOption";
 import { Dropdown, Menu } from "@react-ck/provisional";
-import { Input, type InputProps } from "@react-ck/input";
+import { Input } from "@react-ck/input";
 import classNames from "classnames";
 import { useNextRender, useOnClickOutside } from "@react-ck/react-utils";
 import { EmptyState } from "@react-ck/empty-state";
-
-const options = ["dog", "cat", "lion", "zebra", "shark"];
-
-interface SelectProps extends Omit<React.HTMLAttributes<HTMLElement>, "onChange" | "value"> {
-  skin?: InputProps["skin"];
-  placeholder: InputProps["placeholder"];
-  children: React.ReactNode;
-  search?: {
-    placeholder: string;
-    emptyStateMessage: (value: string) => React.ReactNode;
-  };
-  onChange?: React.SelectHTMLAttributes<HTMLSelectElement>["onChange"];
-  value?: string | string[];
-  name?: React.SelectHTMLAttributes<HTMLSelectElement>["name"];
-  multiple?: React.SelectHTMLAttributes<HTMLSelectElement>["multiple"];
-}
-
-function valueAsArray(value: string | string[]): string[] {
-  return value instanceof Array ? value : [value];
-}
+import { getChildrenData, valueAsArray } from "./utils";
+import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
+import { SelectContext, type SelectContextProps } from "./context";
 
 /**
  * Select is a type of input that allows users to choose one or more options from a list of choices.
@@ -34,37 +17,51 @@ function valueAsArray(value: string | string[]): string[] {
  * @returns a React element
  */
 
-// eslint-disable-next-line max-lines-per-function
 const Select = ({
+  skin = "default",
+  placeholder,
   children,
   className,
   onFocus,
   search: searchOptions,
   onChange: selectOnChange,
   name: selectName,
-  value: selectValue,
+  value: userValue,
   multiple: selectMultiple,
+  defaultValue,
   ...props
 }: Readonly<SelectProps>): React.ReactElement => {
   const onNextRender = useNextRender();
   const searchRef = useRef<HTMLInputElement>(null);
   const selectRef = useRef<HTMLSelectElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const rootElRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [selectedValues, setSelectedValues] = useState(selectValue);
+  const [internalValue, setInternalValue] = useState(userValue ?? defaultValue);
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
 
+  /** Children mapped to ChildrenData object to facilitate operations */
+  const childrenData = useMemo(() => getChildrenData(children), [children]);
+
+  /** Options list children filtered by user search  */
   const filteredOptions = useMemo(
-    () => options.filter((i) => i.toLowerCase().includes(search.toLowerCase())),
-    [search],
+    () =>
+      childrenData
+        .filter(
+          (i) =>
+            !search.length ||
+            (i.searchText && i.searchText.toLowerCase().includes(search.toLowerCase())),
+        )
+        .map((i) => i.element),
+    [childrenData, search],
   );
 
-  const selectedValuesList = useMemo(() => valueAsArray(selectedValues ?? []), [selectedValues]);
+  /** Returns the internal value always as an array to facilitate operations  */
+  const selectedValuesList = useMemo(() => valueAsArray(internalValue ?? []), [internalValue]);
 
-  const handleChange = useCallback(
-    (value: string, mode: "select" | "deselect") => {
-      setSelectedValues((v) => {
+  const updateInternalValue = useCallback<ChangeHandler>(
+    (value, mode) => {
+      setInternalValue((v) => {
         if (!selectMultiple && mode === "select") return value;
         else if (!selectMultiple && mode === "deselect") return undefined;
         else if (mode === "deselect" && v !== undefined)
@@ -72,6 +69,17 @@ const Select = ({
         else if (v !== undefined) return [...valueAsArray(v), value];
         return [value];
       });
+    },
+    [selectMultiple],
+  );
+
+  /**
+   * Handle change events trigger by the user
+   * Also replicates the event on the native select
+   */
+  const handleChange = useCallback<ChangeHandler>(
+    (value, mode) => {
+      updateInternalValue(value, mode);
 
       if (!selectMultiple) setOpen(false);
 
@@ -86,32 +94,58 @@ const Select = ({
         );
       });
     },
-    [onNextRender, selectMultiple],
+    [onNextRender, selectMultiple, updateInternalValue],
   );
 
-  useOnClickOutside(open, [dropdownRef, inputRef], () => {
+  /** Context object propagated to select options  */
+  const contextValue = useMemo<SelectContextProps>(
+    () => ({
+      handleChange,
+      selectedValues: selectedValuesList,
+    }),
+    [handleChange, selectedValuesList],
+  );
+
+  // TODO: move to dropdown
+  /** Close dropdown when clicked outside  */
+  useOnClickOutside(open, [dropdownRef, rootElRef], () => {
     setOpen(false);
   });
 
-  // Actions to do when dropdown opens
+  /** Actions to do when dropdown opens  */
   useEffect(() => {
     if (!open) return;
 
-    onNextRender(() => {
-      searchRef.current?.focus();
-    });
-  }, [onNextRender, open]);
+    // Focus on search input
+    if (search) {
+      onNextRender(() => {
+        searchRef.current?.focus();
+      });
+    }
+  }, [onNextRender, open, search]);
 
-  // Actions to do when dropdown closes
+  /** Actions to do when dropdown closes  */
   useEffect(() => {
     if (!open) return;
-
+    // Clear search
     setSearch("");
   }, [open]);
 
+  /** Set internal state with user provided value  */
   useEffect(() => {
-    setSelectedValues(selectValue);
-  }, [selectValue]);
+    setInternalValue(userValue);
+  }, [userValue]);
+
+  /**Update internal values when children selected attribute changes */
+  useEffect(() => {
+    childrenData.forEach(({ selectOptionProps, computedValue, isSelectOption }) => {
+      const { selected } = selectOptionProps || {};
+      // skip if item is not a select option or the attribute is not set
+      if (!isSelectOption || selected === undefined || computedValue === undefined) return;
+
+      updateInternalValue(computedValue, selected ? "select" : "deselect");
+    });
+  }, [childrenData, updateInternalValue]);
 
   return (
     <>
@@ -119,8 +153,9 @@ const Select = ({
         ref={selectRef}
         name={selectName}
         multiple={selectMultiple}
-        onChange={selectOnChange}
-        value={selectedValues}>
+        defaultValue={defaultValue}
+        value={internalValue}
+        onChange={selectOnChange}>
         {selectedValuesList.map((i) => (
           <option key={i} value={i}>
             {i}
@@ -128,20 +163,21 @@ const Select = ({
         ))}
       </select>
 
-      <Input
+      <div
         {...props}
-        rootRef={inputRef}
-        className={classNames(styles.root, className)}
-        value={selectedValuesList.join(", ") || ""}
-        readOnly
+        ref={rootElRef}
+        tabIndex={0}
+        className={classNames(styles.root, styles[`skin_${skin}`], className)}
         onFocus={(e) => {
           setOpen(true);
           onFocus?.(e);
-        }}
-      />
+        }}>
+        {selectedValuesList.length > 0 && selectedValuesList.join(", ")}
+        {selectedValuesList.length === 0 && placeholder}
+      </div>
 
       <Dropdown
-        anchorRef={inputRef}
+        anchorRef={rootElRef}
         open={open}
         spacing="none"
         rootRef={dropdownRef}
@@ -153,7 +189,7 @@ const Select = ({
                 rootRef={searchRef}
                 value={search}
                 type="search"
-                placeholder={searchOptions?.placeholder}
+                placeholder={searchOptions.placeholder}
                 skin="ghost"
                 className={styles.search_input}
                 onChange={(e) => {
@@ -164,18 +200,7 @@ const Select = ({
             </>
           ) : null}
 
-          {children ? "" : ""}
-
-          {filteredOptions.map((i) => (
-            <Menu.Item
-              key={i}
-              skin={selectedValuesList.includes(i) ? "primary" : "default"}
-              onClick={() => {
-                handleChange(i, selectedValuesList.includes(i) ? "deselect" : "select");
-              }}>
-              {i}
-            </Menu.Item>
-          ))}
+          <SelectContext.Provider value={contextValue}>{filteredOptions}</SelectContext.Provider>
 
           {searchOptions && filteredOptions.length === 0 ? (
             <EmptyState>
@@ -191,4 +216,4 @@ const Select = ({
 
 Select.Option = SelectOption;
 
-export { Select, type SelectProps };
+export { Select, type SelectProps, type SelectOptionProps };

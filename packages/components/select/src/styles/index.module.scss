@@ -1,6 +1,11 @@
 @use "@react-ck/theme";
+@use "@react-ck/form-field";
 
 .root {
+  @include form-field.form-field-input;
+  @include form-field.wrapper;
+  @include form-field.skins;
+
   cursor: pointer;
 }
 
