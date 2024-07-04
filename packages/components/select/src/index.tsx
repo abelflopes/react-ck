@@ -155,6 +155,7 @@ const Select = ({
         multiple={selectMultiple}
         defaultValue={defaultValue}
         value={internalValue}
+        hidden
         onChange={(e) => {
           selectOnChange?.(e, selectedValuesList);
         }}>

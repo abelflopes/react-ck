@@ -3,6 +3,7 @@
 exports[`snapshot Select renders correctly 1`] = `
 [
   <select
+    hidden={true}
     onChange={[Function]}
   />,
   <div
