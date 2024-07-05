@@ -10,12 +10,26 @@ type Story = StoryObj<typeof LayersProvider>;
 const meta: Meta<typeof LayersProvider> = {
   title: "Providers/layers",
   ...configureStory(LayersProvider, {
+    parameters: {
+      layout: "fullscreen",
+      docs: {
+        story: {
+          height: 520,
+          inline: false,
+        },
+      },
+    },
     decorators: [
       (Story): React.ReactElement => (
         <ThemeProvider>
-          <div style={{ height: 150, display: "flex", alignItems: "center" }}>
-            <Story />
-          </div>
+          <style>
+            {`
+            body {
+              padding: 40px !important;
+            }
+            `}
+          </style>
+          <Story />
         </ThemeProvider>
       ),
     ],
@@ -23,7 +37,7 @@ const meta: Meta<typeof LayersProvider> = {
 };
 
 const style: React.CSSProperties = {
-  marginLeft: -25,
+  marginTop: -25,
 };
 
 export default meta;
@@ -41,7 +55,7 @@ export const Component: Story = {
         </Layer>
 
         <Layer elevation="root">
-          <Card style={style}>Root</Card>
+          <Card>Root</Card>
         </Layer>
 
         <Layer elevation="sticky">
