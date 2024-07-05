@@ -2,8 +2,9 @@ import styles from "./styles/index.module.scss";
 import React from "react";
 import { useThemeContext } from "@react-ck/theme";
 import classNames from "classnames";
+import { DISPLAY_NAME_ATTRIBUTE, DISPLAY_NAMES } from "@react-ck/react-utils";
 
-export interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
+interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: "text" | "m" | "l";
   skin?: "default" | "inverted";
   children: NonNullable<React.ReactNode>;
@@ -15,7 +16,7 @@ export interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
  * @returns a React element
  */
 
-export const Icon = ({
+const Icon = ({
   size = "text",
   skin = "default",
   className,
@@ -40,3 +41,7 @@ export const Icon = ({
     </span>
   );
 };
+
+Icon[DISPLAY_NAME_ATTRIBUTE] = DISPLAY_NAMES.ICON;
+
+export { Icon, type IconProps };

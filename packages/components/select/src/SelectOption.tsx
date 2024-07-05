@@ -1,10 +1,10 @@
 import { Menu } from "@react-ck/provisional";
 import React, { useContext, useMemo } from "react";
 import { SelectContext } from "./context";
-import { componentToText } from "@react-ck/react-utils";
+import { componentToText, DISPLAY_NAME_ATTRIBUTE } from "@react-ck/react-utils";
 import { type SelectOptionProps } from "./types";
 
-export const SelectOption = ({
+const SelectOption = ({
   value,
   disabled,
   children,
@@ -40,3 +40,7 @@ export const SelectOption = ({
     </Menu.Item>
   );
 };
+
+SelectOption[DISPLAY_NAME_ATTRIBUTE] = "SelectOption";
+
+export { SelectOption };

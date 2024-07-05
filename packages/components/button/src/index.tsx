@@ -57,6 +57,7 @@ export const Button = <T extends HTMLTag>({
     // Validate icon usage (icon should be set through specific prop)
     for (const i of React.Children.toArray(children).filter(isValidElement)) {
       const name = getDisplayName(i);
+      // use any icon display name instead of DISPLAY_NAMES const to have more coverage
       if (name && name.toLowerCase().includes("icon"))
         throw new Error("Icons inside Button should be set with 'icon' prop");
     }

@@ -2,10 +2,10 @@ import React, { isValidElement, useContext, useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { LayersContext } from "./context";
 import { type Elevation } from "@react-ck/elevation";
-import { getDisplayName } from "@react-ck/react-utils";
+import { DISPLAY_NAME_ATTRIBUTE, getDisplayName, DISPLAY_NAMES } from "@react-ck/react-utils";
 import { ThemeProvider, useThemeContext } from "@react-ck/theme";
 
-export interface LayerProps {
+interface LayerProps {
   /** The elevation level for the layer  */
   elevation: Elevation;
   /** The child components to be rendered within the layer */
@@ -21,7 +21,7 @@ export interface LayerProps {
  * @returns The rendered content of the layer
  */
 
-export const Layer = ({ elevation, children }: Readonly<LayerProps>): React.ReactNode => {
+const Layer = ({ elevation, children }: Readonly<LayerProps>): React.ReactNode => {
   const theme = useThemeContext();
   const { createLayer, usePortal } = useContext(LayersContext);
 
@@ -49,10 +49,13 @@ export const Layer = ({ elevation, children }: Readonly<LayerProps>): React.Reac
     // Validate icon usage (icon should be set through specific prop)
     for (const i of React.Children.toArray(children).filter(isValidElement)) {
       const name = getDisplayName(i);
-      if (name && name.toLowerCase().includes("layer"))
-        throw new Error("Layers should not be directly nested");
+      if (name === DISPLAY_NAMES.LAYER) throw new Error("Layers should not be directly nested");
     }
   }, [children]);
 
   return undefined;
 };
+
+Layer[DISPLAY_NAME_ATTRIBUTE] = DISPLAY_NAMES.LAYER;
+
+export { Layer, type LayerProps };
