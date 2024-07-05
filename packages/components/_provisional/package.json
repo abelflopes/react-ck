@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/provisional",
   "private": false,
-  "version": "3.3.1",
+  "version": "3.3.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -27,19 +27,19 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/button": "^1.7.3",
-    "@react-ck/card": "^1.6.1",
+    "@react-ck/button": "^1.7.4",
+    "@react-ck/card": "^1.6.2",
     "@react-ck/elevation": "^1.1.16",
-    "@react-ck/empty-state": "^1.1.19",
-    "@react-ck/icon": "^3.2.1",
-    "@react-ck/input": "^1.4.1",
-    "@react-ck/layers": "^1.2.8",
+    "@react-ck/empty-state": "^1.1.20",
+    "@react-ck/icon": "^3.2.2",
+    "@react-ck/input": "^1.4.2",
+    "@react-ck/layers": "^1.2.9",
     "@react-ck/overlay": "^1.2.6",
-    "@react-ck/react-utils": "^1.3.1",
+    "@react-ck/react-utils": "^1.3.2",
     "@react-ck/scss-utils": "^1.1.10",
     "@react-ck/skeleton": "^1.1.18",
-    "@react-ck/spinner": "^3.0.6",
-    "@react-ck/text": "^1.5.3",
+    "@react-ck/spinner": "^3.0.7",
+    "@react-ck/text": "^1.5.4",
     "classnames": "*"
   }
 }
