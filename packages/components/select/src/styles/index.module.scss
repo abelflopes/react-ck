@@ -25,3 +25,7 @@
 .search_input {
   outline: none !important;
 }
+
+.placeholder {
+  @include form-field.placeholder;
+}

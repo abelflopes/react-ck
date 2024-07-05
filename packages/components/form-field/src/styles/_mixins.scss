@@ -13,6 +13,7 @@
 
 @mixin form-field-container {
   @include wrapper;
+
   background: theme.get-color(neutral-light-1);
 }
 
@@ -24,6 +25,10 @@
       }
     }
   }
+}
+
+@mixin placeholder {
+  color: theme.get-color(neutral-dark-1);
 }
 
 @mixin form-field-input {
@@ -39,12 +44,12 @@
 
   // TODO: focus mixin
   outline: solid theme.get-css-var(spacing, border) transparent;
-  transition-property: outline, outline-offset;
   transition-duration: 0.3s;
+  transition-property: outline, outline-offset;
   transition-timing-function: ease;
 
   &::placeholder {
-    color: theme.get-color(neutral-dark-1);
+    @include placeholder;
   }
 
   &:disabled {

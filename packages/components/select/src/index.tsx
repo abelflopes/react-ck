@@ -17,6 +17,7 @@ import { SelectContext, type SelectContextProps } from "./context";
  * @returns a React element
  */
 
+// eslint-disable-next-line max-lines-per-function -- TODO: fix
 const Select = ({
   skin = "default",
   placeholder,
@@ -177,7 +178,9 @@ const Select = ({
           onFocus?.(e);
         }}>
         {selectedValuesList.length > 0 && selectedValuesList.join(", ")}
-        {selectedValuesList.length === 0 && placeholder}
+        {selectedValuesList.length === 0 && (
+          <span className={styles.placeholder}>{placeholder}</span>
+        )}
       </div>
 
       <Dropdown

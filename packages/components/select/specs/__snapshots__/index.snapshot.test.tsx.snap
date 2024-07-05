@@ -11,6 +11,10 @@ exports[`snapshot Select renders correctly 1`] = `
     onFocus={[Function]}
     role="button"
     tabIndex={0}
-  />,
+  >
+    <span
+      className="placeholder"
+    />
+  </div>,
 ]
 `;

@@ -1,7 +1,7 @@
 import { type InputProps } from "@react-ck/input";
 import { type MenuItemProps } from "@react-ck/provisional";
 
-export type UserValue = string | string[];
+export type UserValue = string | string[] | undefined;
 
 export type SelectedValues = string[];
 

@@ -12,7 +12,7 @@ import {
 } from "./types";
 
 export const valueAsArray = (value: UserValue): SelectedValues =>
-  value instanceof Array ? value : [value];
+  value ? (value instanceof Array ? value : [value]) : [];
 
 export const getChildrenData = (children: React.ReactNode): SelectChildrenData[] =>
   getChildrenListWithoutFragments(children).map<SelectChildrenData>((i) => {
