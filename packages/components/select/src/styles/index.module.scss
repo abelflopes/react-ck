@@ -6,6 +6,7 @@
   @include form-field.wrapper;
   @include form-field.skins;
 
+  min-width: 200px; // TODO: make properly
   cursor: pointer;
 }
 
