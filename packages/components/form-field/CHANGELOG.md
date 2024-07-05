@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.0...@react-ck/form-field@1.3.1) (2024-07-05)
+
+**Note:** Version bump only for package @react-ck/form-field
+
+
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.2.1...@react-ck/form-field@1.3.0) (2024-07-04)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.3.0...@react-ck/react-utils@1.3.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* component identification with display name ([b182afb](https://github.com/abelflopes/react-ck/commit/b182afb3468d0ca00d9923f05d678bc8db8492f0))
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.2.12...@react-ck/react-utils@1.3.0) (2024-07-04)
 
 

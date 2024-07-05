@@ -1,3 +1,16 @@
+## [3.6.0](https://github.com/abelflopes/react-ck/compare/v3.5.0...v3.6.0) (2024-07-05)
+
+
+### Features
+
+* **react-ck:** global library package ([028dac4](https://github.com/abelflopes/react-ck/commit/028dac45675f9da0467d98c54caa5bbb0d7f1a6b))
+
+
+### Bug Fixes
+
+* component identification with display name ([b182afb](https://github.com/abelflopes/react-ck/commit/b182afb3468d0ca00d9923f05d678bc8db8492f0))
+* select min size ([0561191](https://github.com/abelflopes/react-ck/commit/05611915da6c7f04de2ae7285b9e2b96efab9bca))
+
 ## [3.5.0](https://github.com/abelflopes/react-ck/compare/v3.4.0...v3.5.0) (2024-07-04)
 
 

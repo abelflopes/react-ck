@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.0...@react-ck/select@1.4.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* component identification with display name ([b182afb](https://github.com/abelflopes/react-ck/commit/b182afb3468d0ca00d9923f05d678bc8db8492f0))
+* select min size ([0561191](https://github.com/abelflopes/react-ck/commit/05611915da6c7f04de2ae7285b9e2b96efab9bca))
+
+
+
 ## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.3.0...@react-ck/select@1.4.0) (2024-07-04)
 
 

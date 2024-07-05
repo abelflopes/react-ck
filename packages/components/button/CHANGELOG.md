@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.3](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.7.2...@react-ck/button@1.7.3) (2024-07-05)
+
+
+### Bug Fixes
+
+* component identification with display name ([b182afb](https://github.com/abelflopes/react-ck/commit/b182afb3468d0ca00d9923f05d678bc8db8492f0))
+
+
+
 ## [1.7.2](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.7.1...@react-ck/button@1.7.2) (2024-07-04)
 
 **Note:** Version bump only for package @react-ck/button
