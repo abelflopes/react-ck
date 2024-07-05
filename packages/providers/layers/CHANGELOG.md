@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.8](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.2.7...@react-ck/layers@1.2.8) (2024-07-05)
+
+
+### Bug Fixes
+
+* component identification with display name ([b182afb](https://github.com/abelflopes/react-ck/commit/b182afb3468d0ca00d9923f05d678bc8db8492f0))
+
+
+
 ## [1.2.7](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.2.6...@react-ck/layers@1.2.7) (2024-07-04)
 
 **Note:** Version bump only for package @react-ck/layers

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@3.2.0...@react-ck/icon@3.2.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* component identification with display name ([b182afb](https://github.com/abelflopes/react-ck/commit/b182afb3468d0ca00d9923f05d678bc8db8492f0))
+
+
+
 ## [3.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@3.1.1...@react-ck/icon@3.2.0) (2024-07-04)
 
 
