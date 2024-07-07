@@ -1,3 +1,16 @@
+## [3.7.0](https://github.com/abelflopes/react-ck/compare/v3.6.0...v3.7.0) (2024-07-05)
+
+
+### Features
+
+* **react-ck:** global library package ([c7b002c](https://github.com/abelflopes/react-ck/commit/c7b002c5a1f55083d0fc10a7815bbe7627685c13))
+* **react-ck:** global library package ([555c07c](https://github.com/abelflopes/react-ck/commit/555c07cad83c4956aa6ae88f1ca71f38a715afd0))
+
+
+### Bug Fixes
+
+* select placeholder ([c98a1b5](https://github.com/abelflopes/react-ck/commit/c98a1b5be4d37f8792030dbd0df4da31734aec03))
+
 ## [3.6.0](https://github.com/abelflopes/react-ck/compare/v3.5.0...v3.6.0) (2024-07-05)
 
 

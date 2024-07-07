@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.1...@react-ck/form-field@1.3.2) (2024-07-05)
+
+
+### Bug Fixes
+
+* select placeholder ([c98a1b5](https://github.com/abelflopes/react-ck/commit/c98a1b5be4d37f8792030dbd0df4da31734aec03))
+
+
+
 ## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.0...@react-ck/form-field@1.3.1) (2024-07-05)
 
 **Note:** Version bump only for package @react-ck/form-field

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.1...@react-ck/select@1.4.2) (2024-07-05)
+
+
+### Bug Fixes
+
+* select placeholder ([c98a1b5](https://github.com/abelflopes/react-ck/commit/c98a1b5be4d37f8792030dbd0df4da31734aec03))
+
+
+
 ## [1.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.0...@react-ck/select@1.4.1) (2024-07-05)
 
 
