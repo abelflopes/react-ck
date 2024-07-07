@@ -3,6 +3,7 @@ import React, { useMemo, useRef } from "react";
 import classNames from "classnames";
 import { Text } from "@react-ck/text";
 import { Button, type ButtonProps } from "@react-ck/button";
+import { readFileList } from "./utils/read-file";
 
 // TODO: check https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 // TODO: add size limitation: https://stackoverflow.com/questions/5697605/limit-the-size-of-a-file-upload-html-input-element
@@ -13,7 +14,7 @@ import { Button, type ButtonProps } from "@react-ck/button";
 // TODO: add overlay loader
 // TODO: add uploaded files feedback
 
-export interface FileUploaderProps extends React.HTMLAttributes<HTMLElement> {
+export interface FileUploaderProps extends Omit<React.HTMLAttributes<HTMLElement>, "onChange"> {
   skin?: "default" | "negative" | "disabled";
   variation?: "default" | "square";
   icon?: React.ReactNode;
@@ -23,6 +24,10 @@ export interface FileUploaderProps extends React.HTMLAttributes<HTMLElement> {
   buttonProps?: ButtonProps;
   /** The validation message text */
   validationMessage?: React.ReactNode;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement>,
+    fileList: ReturnType<typeof readFileList>,
+  ) => void;
 }
 
 // eslint-disable-next-line complexity -- TODO: fix
@@ -37,6 +42,7 @@ export const FileUploader = ({
   children,
   inputProps,
   buttonProps,
+  onChange,
   ...otherProps
 }: Readonly<FileUploaderProps>): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -63,6 +69,10 @@ export const FileUploader = ({
         type="file"
         className={classNames(styles.file, inputProps?.className)}
         onKeyUp={onEnterPress}
+        onChange={(e) => {
+          if (!e.target.files) throw new Error("No files added");
+          onChange(e, readFileList(e.target.files));
+        }}
       />
       {!isIconOnly && icon}
       {children ? <div className={styles.content}>{children}</div> : null}
