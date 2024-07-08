@@ -5,22 +5,27 @@
   @include text-base;
 
   display: flex;
+  box-sizing: border-box;
   align-items: center;
-  padding: get-spacing();
+  padding: get-spacing(0.75) get-spacing();
+  border-radius: get-spacing();
   cursor: pointer;
   gap: get-spacing();
   transition: all 0.2s;
-  box-sizing: border-box;
 
   &:focus:not(.disabled),
-  &:hover:not(.disabled),
-  &.secondary {
+  &:hover:not(.disabled) {
     background-color: get-color(neutral-light-2);
+    color: currentcolor;
+  }
+
+  &.secondary {
+    background-color: get-color(neutral-light-1-5);
   }
 
   &.primary {
-    background-color: get-color(highlight-primary);
-    color: get-color(neutral-light-1);
+    background-color: get-color(highlight-primary-light);
+    color: get-color(highlight-primary);
   }
 
   &.disabled {

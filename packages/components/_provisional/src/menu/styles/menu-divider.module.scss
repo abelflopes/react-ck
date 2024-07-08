@@ -3,8 +3,8 @@
 
 .root {
   display: block;
-  background-color: get-color(neutral-light-2);
   box-sizing: border-box;
+  background-color: get-color(neutral-light-1-5);
 
   &.text {
     @include text-base;
@@ -16,14 +16,15 @@
 
     &.text {
       padding: #{get-spacing(0.25)} #{get-spacing()};
+      border-radius: get-spacing(0.5);
     }
   }
 
   &.horizontal {
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    height: 100%;
     min-width: get-css-var(spacing, border);
+    height: 100%;
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
 
     &.text {
       padding: #{get-spacing()} #{get-spacing(0.25)};
