@@ -14,7 +14,7 @@ export interface DropdownProps {
   excludeAutoPosition?: PositionEngineProps["exclude"];
   children?: React.ReactNode;
   open?: boolean;
-  spacing?: "m" | "none";
+  spacing?: "s" | "m" | "l" | "none";
   /** Ref for the root element */
   rootRef?: React.RefObject<HTMLDivElement>;
 }
