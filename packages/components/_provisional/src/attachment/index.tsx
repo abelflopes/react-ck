@@ -1,11 +1,13 @@
 import styles from "./styles/index.module.scss";
 import React from "react";
 import classNames from "classnames";
-import { Card, type CardProps } from "@react-ck/card";
-import { Text } from "@react-ck/text";
 import { Button } from "@react-ck/button";
+import { Image } from "../image";
+import { Icon } from "@react-ck/icon";
+import { IconClose } from "@react-ck/icon/icons/IconClose";
 
-export interface AttachmentProps extends Omit<CardProps, "skin" | "children"> {
+export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
+  image?: string;
   name: string;
   format: string;
   icon?: React.ReactNode;
@@ -14,6 +16,7 @@ export interface AttachmentProps extends Omit<CardProps, "skin" | "children"> {
 }
 
 export const Attachment = ({
+  image,
   name,
   format,
   icon,
@@ -22,13 +25,38 @@ export const Attachment = ({
   className,
   ...otherProps
 }: Readonly<AttachmentProps>): React.ReactElement => (
-  <Card {...otherProps} className={classNames(styles.root, className)}>
-    {icon}
-    <Text>{name}</Text>
-    <Text>{format}</Text>
-    <Text>{error}</Text>
-    <Button size="s" onClick={onRemove}>
-      Remove
-    </Button>
-  </Card>
+  <div
+    {...otherProps}
+    className={classNames(
+      image ? styles.root_image : styles.root,
+      onRemove && styles.removable,
+      className,
+    )}>
+    {image ? <Image alt={name} src={image} className={styles.image} /> : null}
+
+    {icon ? <span className={styles.icon}>{icon}</span> : null}
+
+    {!image && (
+      <div className={styles.content}>
+        <span>{name}</span>
+        <span>{format}</span>
+      </div>
+    )}
+
+    {error ? <span className={styles.error}>{error}</span> : null}
+
+    {onRemove ? (
+      <Button
+        className={styles.close}
+        size="xs"
+        skin="secondary"
+        icon={
+          <Icon size="m">
+            <IconClose />
+          </Icon>
+        }
+        onClick={onRemove}
+      />
+    ) : null}
+  </div>
 );
