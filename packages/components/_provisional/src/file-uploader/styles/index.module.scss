@@ -2,24 +2,25 @@
 @use "@react-ck/text";
 
 $bg: theme.get-color(neutral-light-1-5);
+$padding: theme.get-spacing(4);
 
 .root {
   position: relative;
-  background: $bg;
   display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: theme.get-spacing(2);
-  padding: theme.get-spacing(4);
-  border-radius: theme.get-spacing(1);
-  box-sizing: border-box;
+  padding: $padding;
   border: solid theme.get-css-var(spacing, border) $bg;
+  border-radius: theme.get-spacing(1);
+  background: $bg;
+  gap: theme.get-spacing(2);
 
   // TODO: focus mixin
   outline: solid theme.get-css-var(spacing, border) transparent;
-  transition-property: outline, outline-offset;
   transition-duration: 0.3s;
+  transition-property: outline, outline-offset;
   transition-timing-function: ease;
 
   &:not(.disabled):hover,
@@ -49,11 +50,11 @@ $bg: theme.get-color(neutral-light-1-5);
 // Variations
 
 .square {
-  min-height: theme.get-spacing(20);
   min-width: theme.get-spacing(20);
-  aspect-ratio: 1 / 1;
   max-width: 100%;
+  min-height: theme.get-spacing(20);
   max-height: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .content {
@@ -63,12 +64,12 @@ $bg: theme.get-color(neutral-light-1-5);
 }
 
 .file {
-  opacity: 0;
   position: absolute;
-  height: 100%;
-  width: 100%;
   z-index: 1;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+  opacity: 0;
 }
 
 .disabled .file {

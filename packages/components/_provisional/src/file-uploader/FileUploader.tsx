@@ -1,5 +1,5 @@
 import styles from "./styles/index.module.scss";
-import React, { useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import classNames from "classnames";
 import { Text } from "@react-ck/text";
 import { Button, type ButtonProps } from "@react-ck/button";
@@ -24,7 +24,7 @@ export interface FileUploaderProps extends Omit<React.HTMLAttributes<HTMLElement
   buttonProps?: ButtonProps;
   /** The validation message text */
   validationMessage?: React.ReactNode;
-  onChange: (
+  onChange?: (
     e: React.ChangeEvent<HTMLInputElement>,
     fileList: ReturnType<typeof readFileList>,
   ) => void;
@@ -46,12 +46,28 @@ export const FileUploader = ({
   ...otherProps
 }: Readonly<FileUploaderProps>): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [filesList, setFilesList] = useState<string[]>([]);
 
   const isIconOnly = useMemo(() => Boolean(icon) && !cta && !description, [cta, description, icon]);
 
-  const onEnterPress = (e: React.KeyboardEvent<HTMLElement>): void => {
+  const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
     if (e.code === "Enter") inputRef.current?.click();
-  };
+  }, []);
+
+  const handleChange = useCallback<React.ChangeEventHandler<HTMLInputElement>>(
+    (e) => {
+      if (!e.target.files) throw new Error("No files added");
+
+      const fileList = readFileList(e.target.files);
+
+      onChange?.(e, fileList);
+
+      void (async (): Promise<void> => {
+        setFilesList((await fileList).map((i) => i.name));
+      })();
+    },
+    [onChange],
+  );
 
   return (
     <div
@@ -68,11 +84,8 @@ export const FileUploader = ({
         ref={inputRef}
         type="file"
         className={classNames(styles.file, inputProps?.className)}
-        onKeyUp={onEnterPress}
-        onChange={(e) => {
-          if (!e.target.files) throw new Error("No files added");
-          onChange(e, readFileList(e.target.files));
-        }}
+        onKeyUp={handleKeyUp}
+        onChange={handleChange}
       />
       {!isIconOnly && icon}
       {children ? <div className={styles.content}>{children}</div> : null}
@@ -83,7 +96,7 @@ export const FileUploader = ({
           disabled={skin === "disabled" || buttonProps?.disabled}
           className={classNames(styles.button, buttonProps?.className)}
           onKeyUp={(e) => {
-            onEnterPress(e);
+            handleKeyUp(e);
             buttonProps?.onKeyUp?.(e);
           }}
           onClick={(e) => {
@@ -104,6 +117,17 @@ export const FileUploader = ({
           ) : null}
         </div>
       ) : null}
+
+      {!isIconOnly && filesList.length > 0 && (
+        <Text variation="small" className={styles.details}>
+          {filesList.map((i, k) => (
+            <React.Fragment key={i}>
+              {k !== 0 && <br />}
+              {i}
+            </React.Fragment>
+          ))}
+        </Text>
+      )}
     </div>
   );
 };
