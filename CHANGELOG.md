@@ -1,3 +1,16 @@
+## [3.8.0](https://github.com/abelflopes/react-ck/compare/v3.7.0...v3.8.0) (2024-07-08)
+
+
+### Features
+
+* add attachment component ([f1d1c6a](https://github.com/abelflopes/react-ck/commit/f1d1c6adfe426544badaba366a7e76fd98030593))
+* add button size and skin variations ([ae98f55](https://github.com/abelflopes/react-ck/commit/ae98f556837f261c00a2a66bc22df89dafc4c53b))
+* add grid alignment prop ([cbc2792](https://github.com/abelflopes/react-ck/commit/cbc279223b6b0f32a12506e8ae9e8a93f9886520))
+* expose card mixins and variables ([2dc5b0b](https://github.com/abelflopes/react-ck/commit/2dc5b0b857aacb4d2f32d3794e34e708a4520104))
+* include file loader progress data in change handler ([202e956](https://github.com/abelflopes/react-ck/commit/202e9566477a821b2f42938c06e286f5af15168a))
+* **react-ck:** global library package ([cea8788](https://github.com/abelflopes/react-ck/commit/cea8788f89f3c2fb0e831dad5a75bb1168434199))
+* show selected files in file uploader ([5d6d39e](https://github.com/abelflopes/react-ck/commit/5d6d39eee60e00871da557aa72d1f4b136fc9ea0))
+
 ## [3.7.0](https://github.com/abelflopes/react-ck/compare/v3.6.0...v3.7.0) (2024-07-05)
 
 
