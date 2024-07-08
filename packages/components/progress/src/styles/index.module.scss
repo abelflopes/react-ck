@@ -12,6 +12,7 @@
 
   &::-webkit-progress-value {
     background-color: get-color(highlight-primary);
+    transition: all 2s ease-in-out;
   }
 
   &::-webkit-progress-bar {
