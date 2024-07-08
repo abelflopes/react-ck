@@ -1,3 +1,22 @@
+## [3.10.0](https://github.com/abelflopes/react-ck/compare/v3.9.0...v3.10.0) (2024-07-08)
+
+
+### Features
+
+* add dropdown spacing variations ([ae39a01](https://github.com/abelflopes/react-ck/commit/ae39a0150581ce515e3d2d1830da06574ba3a32a))
+* add grid stretch alignment variation ([704d0b9](https://github.com/abelflopes/react-ck/commit/704d0b9ec6b7f8573480563bd797352df07da553))
+* add transition to progress bar ([da008dc](https://github.com/abelflopes/react-ck/commit/da008dc4c4930cd4a71060d7be45366153bb4ad3))
+* **react-ck:** global library package ([e93c666](https://github.com/abelflopes/react-ck/commit/e93c666c813518a94baa03b9ef7969403a3dceed))
+* update menu styles ([17f0c73](https://github.com/abelflopes/react-ck/commit/17f0c73965f9ed086d03a0e241d66f224922454e))
+
+
+### Bug Fixes
+
+* dock item active color ([c087f74](https://github.com/abelflopes/react-ck/commit/c087f74c888107446ca1c26a7681f1dafd0f53e6))
+* primary color palette contrast ([06589b3](https://github.com/abelflopes/react-ck/commit/06589b3aff6083a7c6113bf2494c714283a1eee7))
+* select dropdown spacing ([fb97666](https://github.com/abelflopes/react-ck/commit/fb97666dec1bd4d64fbfc2db4c11968e5063bab5))
+* snackbar rendering tree ([2812fe3](https://github.com/abelflopes/react-ck/commit/2812fe3755258a7aa8cc6e45acb9947a283f3661))
+
 ## [3.9.0](https://github.com/abelflopes/react-ck/compare/v3.8.0...v3.9.0) (2024-07-08)
 
 
