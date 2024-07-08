@@ -15,6 +15,14 @@
   @include define-css-var(grid-container, flex-wrap, wrap);
 }
 
+.align_default {
+  align-items: baseline;
+}
+
+.align_centered {
+  align-items: center;
+}
+
 .spacing_s {
   @include define-css-var(grid-container, gap, get-spacing(1));
 }

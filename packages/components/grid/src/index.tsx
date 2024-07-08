@@ -9,6 +9,8 @@ interface GridProps extends React.HTMLAttributes<HTMLHRElement> {
   spacing?: "s" | "m" | "l" | "none";
   /** Whether to allow grid items to wrap to the next line  */
   wrap?: boolean;
+  /** Defined the alignment between columns */
+  align?: "default" | "centered";
 }
 
 /**
@@ -20,6 +22,7 @@ interface GridProps extends React.HTMLAttributes<HTMLHRElement> {
 const Grid = ({
   spacing = "m",
   wrap = true,
+  align = "default",
   className,
   ...otherProps
 }: Readonly<GridProps>): React.ReactElement => {
@@ -52,6 +55,7 @@ const Grid = ({
         className={classNames(
           styles.root,
           styles[`spacing_${spacing}`],
+          styles[`align_${align}`],
           {
             [`${styles.wrap}`]: wrap,
           },
