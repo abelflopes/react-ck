@@ -1,15 +1,20 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
 
+$border-radius: theme.get-css-var(card, border-radius);
+
 @mixin base {
   @include text.text-base;
   @include theme.define-css-var(card, border-radius, theme.get-spacing(1));
 
-  border-radius: theme.get-css-var(card, border-radius);
+  box-sizing: border-box;
+  border-radius: $border-radius;
   background-color: theme.get-color(neutral-light-1);
   transition: box-shadow 0.3s ease;
+}
+
+@mixin content {
   padding: theme.get-css-var(card, spacing);
-  box-sizing: border-box;
 }
 
 // Skins
@@ -21,7 +26,7 @@
 @mixin skin-shadowed {
   @include skin-bordered;
 
-  box-shadow: 0px 1px 3px 0px #00000029;
+  box-shadow: 0 1px 3px 0 #00000029;
 }
 
 @mixin skin-ghost {
