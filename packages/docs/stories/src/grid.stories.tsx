@@ -3,8 +3,9 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config/src/index";
-import { Grid } from "@react-ck/grid";
-import { Card } from "@react-ck/card";
+import { Grid } from "@react-ck/grid/src";
+import { Card } from "@react-ck/card/src";
+import { type GridColumnProps } from "@react-ck/grid/src/Column";
 
 type Story = StoryObj<typeof Grid>;
 
@@ -13,6 +14,9 @@ const meta: Meta<typeof Grid> = {
   ...configureStory(
     Grid,
     {
+      parameters: {
+        layout: "padded",
+      },
       decorators: [
         (Story): React.ReactElement => (
           <Manager>
@@ -27,63 +31,21 @@ const meta: Meta<typeof Grid> = {
   ),
 };
 
+const sizes: Array<GridColumnProps["size"]> = [12, 6, 4, 2, 2, "auto", 3];
+
 export default meta;
 
 export const Component: Story = {
   args: {
     children: (
       <>
-        <Grid.Column size={2}>
-          <Card>{faker.lorem.sentence(2)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={2}>
-          <Card>{faker.lorem.sentence(2)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={3}>
-          <Card>{faker.lorem.sentence(5)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={5}>
-          <Card>{faker.lorem.sentence(10)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={6}>
-          <Card>{faker.lorem.sentence(10)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={4}>
-          <Card>{faker.lorem.sentence(6)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={2}>
-          <Card>{faker.lorem.sentence(2)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={2}>
-          <Card>{faker.lorem.sentence(1)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size="auto">
-          <Card>{faker.lorem.sentence(2)}</Card>
-        </Grid.Column>
-
-        <Grid.Column size={2}>
-          <Card>{faker.lorem.sentence(1)}</Card>
-        </Grid.Column>
-
-        <Grid.Column>
-          <Card>{faker.lorem.sentence(1)}</Card>
-        </Grid.Column>
-
-        <Grid.Column>
-          <Card>{faker.lorem.sentence(3)}</Card>
-        </Grid.Column>
-
-        <Grid.Column>
-          <Card>{faker.lorem.sentence(7)}</Card>
-        </Grid.Column>
+        {sizes.map((i) => (
+          <Grid.Column key={i} size={i}>
+            <Card>
+              {faker.lorem.sentence(2)} ({i})
+            </Card>
+          </Grid.Column>
+        ))}
       </>
     ),
   },
