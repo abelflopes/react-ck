@@ -28,7 +28,6 @@ const args: SelectProps = {
       <Select.Option value="bnn">Banana</Select.Option>
       <Select.Option value="orange">Orange</Select.Option>
       <Select.Option value="lemon">Lemon</Select.Option>
-      <h1>Exotic</h1>
       <Select.Option>
         <span>
           <b>Exotic</b> mango
