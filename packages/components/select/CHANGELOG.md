@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.5](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.4...@react-ck/select@1.4.5) (2024-07-08)
+
+
+### Bug Fixes
+
+* select dropdown spacing ([fb97666](https://github.com/abelflopes/react-ck/commit/fb97666dec1bd4d64fbfc2db4c11968e5063bab5))
+
+
+
 ## [1.4.4](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.3...@react-ck/select@1.4.4) (2024-07-08)
 
 **Note:** Version bump only for package @react-ck/select

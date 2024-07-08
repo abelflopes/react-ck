@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.19](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.18...@react-ck/skeleton@1.1.19) (2024-07-08)
+
+**Note:** Version bump only for package @react-ck/skeleton
+
+
+
+
+
 ## [1.1.18](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.17...@react-ck/skeleton@1.1.18) (2024-07-04)
 
 **Note:** Version bump only for package @react-ck/skeleton

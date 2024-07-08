@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.4.1...@react-ck/provisional@3.5.0) (2024-07-08)
+
+
+### Features
+
+* add dropdown spacing variations ([ae39a01](https://github.com/abelflopes/react-ck/commit/ae39a0150581ce515e3d2d1830da06574ba3a32a))
+* update menu styles ([17f0c73](https://github.com/abelflopes/react-ck/commit/17f0c73965f9ed086d03a0e241d66f224922454e))
+
+
+### Bug Fixes
+
+* dock item active color ([c087f74](https://github.com/abelflopes/react-ck/commit/c087f74c888107446ca1c26a7681f1dafd0f53e6))
+* snackbar rendering tree ([2812fe3](https://github.com/abelflopes/react-ck/commit/2812fe3755258a7aa8cc6e45acb9947a283f3661))
+
+
+
 ## [3.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.4.0...@react-ck/provisional@3.4.1) (2024-07-08)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.8.0...@react-ck/theme@1.8.1) (2024-07-08)
+
+
+### Bug Fixes
+
+* primary color palette contrast ([06589b3](https://github.com/abelflopes/react-ck/commit/06589b3aff6083a7c6113bf2494c714283a1eee7))
+
+
+
 ## [1.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.7.5...@react-ck/theme@1.8.0) (2024-07-04)
 
 

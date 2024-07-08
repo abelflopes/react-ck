@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/progress@1.2.15...@react-ck/progress@1.3.0) (2024-07-08)
+
+
+### Features
+
+* add transition to progress bar ([da008dc](https://github.com/abelflopes/react-ck/commit/da008dc4c4930cd4a71060d7be45366153bb4ad3))
+
+
+
 ## [1.2.15](https://github.com/abelflopes/react-ck/compare/@react-ck/progress@1.2.14...@react-ck/progress@1.2.15) (2024-07-04)
 
 **Note:** Version bump only for package @react-ck/progress
