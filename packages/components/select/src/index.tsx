@@ -186,7 +186,7 @@ const Select = ({
       <Dropdown
         anchorRef={rootElRef}
         open={open}
-        spacing="none"
+        spacing="s"
         rootRef={dropdownRef}
         excludeAutoPosition={["left", "right", "start", "end", "full"]}>
         <Menu className={styles.menu}>
