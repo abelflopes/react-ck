@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.4.0...@react-ck/provisional@3.4.1) (2024-07-08)
+
+
+### Bug Fixes
+
+* scrollable container overlay color ([17fb476](https://github.com/abelflopes/react-ck/commit/17fb47619a23d8de9affef91b6883bc0db5d55bb))
+
+
+
 ## [3.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.3.2...@react-ck/provisional@3.4.0) (2024-07-08)
 
 
