@@ -10,7 +10,7 @@ interface GridProps extends React.HTMLAttributes<HTMLHRElement> {
   /** Whether to allow grid items to wrap to the next line  */
   wrap?: boolean;
   /** Defined the alignment between columns */
-  align?: "default" | "centered";
+  align?: "default" | "centered" | "stretch";
 }
 
 /**

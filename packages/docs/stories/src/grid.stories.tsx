@@ -41,7 +41,8 @@ export const Component: Story = {
       <>
         {sizes.map((i) => (
           <Grid.Column key={i} size={i}>
-            <Card>
+            {/* height 100% for stretch mode */}
+            <Card style={{ height: "100%" }}>
               {faker.lorem.sentence(2)} ({i})
             </Card>
           </Grid.Column>

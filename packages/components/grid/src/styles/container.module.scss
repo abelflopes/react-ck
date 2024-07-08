@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.align_stretch {
+  align-items: stretch;
+}
+
 .spacing_s {
   @include define-css-var(grid-container, gap, get-spacing(1));
 }
