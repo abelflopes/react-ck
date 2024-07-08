@@ -1,3 +1,15 @@
+## [3.9.0](https://github.com/abelflopes/react-ck/compare/v3.8.0...v3.9.0) (2024-07-08)
+
+
+### Features
+
+* **react-ck:** global library package ([0bcf787](https://github.com/abelflopes/react-ck/commit/0bcf787198fd03d3b1861880fe7be9d864476538))
+
+
+### Bug Fixes
+
+* scrollable container overlay color ([17fb476](https://github.com/abelflopes/react-ck/commit/17fb47619a23d8de9affef91b6883bc0db5d55bb))
+
 ## [3.8.0](https://github.com/abelflopes/react-ck/compare/v3.7.0...v3.8.0) (2024-07-08)
 
 
