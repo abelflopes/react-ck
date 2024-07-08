@@ -57,14 +57,18 @@ export const Snackbar = ({
   );
 
   return (
-    <Layer elevation="popup">
-      {items.length > 0 && (
-        <div className={classNames(className, styles.root)} {...otherProps}>
-          {items.map((i) => i.element)}
-        </div>
-      )}
-
+    <>
       <SnackbarContext.Provider value={contextValue}>{children}</SnackbarContext.Provider>
-    </Layer>
+
+      {items.length > 0 && (
+        <Layer elevation="popup">
+          <div className={classNames(className, styles.root)} {...otherProps}>
+            {items.map((i) => (
+              <React.Fragment key={i.id}>{i.element}</React.Fragment>
+            ))}
+          </div>
+        </Layer>
+      )}
+    </>
   );
 };

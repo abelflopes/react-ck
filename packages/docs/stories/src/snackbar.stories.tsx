@@ -13,19 +13,32 @@ const MyComponent = (): React.ReactElement => {
   const { add, remove } = useSnackbarContext();
 
   const handleButtonClick = useCallback(
-    () => add(() => <Card skin="shadowed">{faker.lorem.sentences()}</Card>),
-    [add],
+    () =>
+      add((id) => (
+        <Card skin="shadowed">
+          {faker.lorem.sentences()}
+          &nbsp;
+          <Button
+            size="xs"
+            onClick={() => {
+              remove(id);
+            }}>
+            Remove
+          </Button>
+        </Card>
+      )),
+    [add, remove],
   );
 
   useEffect(() => {
     add((id) => (
       <Alert
-        key="alert"
         heading={faker.lorem.sentence()}
         dismissable
         onDismiss={() => {
           remove(id);
         }}>
+        {id}
         {faker.lorem.sentences()}
       </Alert>
     ));
