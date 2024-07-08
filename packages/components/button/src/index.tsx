@@ -15,9 +15,9 @@ export interface ButtonProps<T extends HTMLTag = "button">
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     ConsumerPolymorphicProps<T> {
   /** Defines the color scheme of the button */
-  skin?: "primary" | "secondary" | "ghost" | "negative" | "bordered";
+  skin?: "primary" | "primary-alt" | "secondary" | "ghost" | "negative" | "bordered";
   /** Defines the scale of the button */
-  size?: "s" | "m" | "l";
+  size?: "s" | "m" | "l" | "xs";
   /**
    * Content slot to receive an icon.
    * This can be any valid React node, allowing integration of icons or custom SVG components.
