@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.3.2...@react-ck/provisional@3.4.0) (2024-07-08)
+
+
+### Features
+
+* add attachment component ([f1d1c6a](https://github.com/abelflopes/react-ck/commit/f1d1c6adfe426544badaba366a7e76fd98030593))
+* include file loader progress data in change handler ([202e956](https://github.com/abelflopes/react-ck/commit/202e9566477a821b2f42938c06e286f5af15168a))
+* show selected files in file uploader ([5d6d39e](https://github.com/abelflopes/react-ck/commit/5d6d39eee60e00871da557aa72d1f4b136fc9ea0))
+
+
+
 ## [3.3.2](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.3.1...@react-ck/provisional@3.3.2) (2024-07-05)
 
 **Note:** Version bump only for package @react-ck/provisional

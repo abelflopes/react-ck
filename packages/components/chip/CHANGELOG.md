@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.24](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.23...@react-ck/chip@1.2.24) (2024-07-08)
+
+**Note:** Version bump only for package @react-ck/chip
+
+
+
+
+
 ## [1.2.23](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.22...@react-ck/chip@1.2.23) (2024-07-05)
 
 **Note:** Version bump only for package @react-ck/chip

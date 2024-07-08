@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.6.2...@react-ck/card@1.7.0) (2024-07-08)
+
+
+### Features
+
+* expose card mixins and variables ([2dc5b0b](https://github.com/abelflopes/react-ck/commit/2dc5b0b857aacb4d2f32d3794e34e708a4520104))
+
+
+
 ## [1.6.2](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.6.1...@react-ck/card@1.6.2) (2024-07-05)
 
 **Note:** Version bump only for package @react-ck/card

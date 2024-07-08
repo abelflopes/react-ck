@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.7.4...@react-ck/button@1.8.0) (2024-07-08)
+
+
+### Features
+
+* add button size and skin variations ([ae98f55](https://github.com/abelflopes/react-ck/commit/ae98f556837f261c00a2a66bc22df89dafc4c53b))
+
+
+
 ## [1.7.4](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.7.3...@react-ck/button@1.7.4) (2024-07-05)
 
 **Note:** Version bump only for package @react-ck/button
