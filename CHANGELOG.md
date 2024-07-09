@@ -1,3 +1,26 @@
+## [3.11.0](https://github.com/abelflopes/react-ck/compare/v3.10.0...v3.11.0) (2024-07-09)
+
+
+### Features
+
+* add action slot to menu item ([f4d8109](https://github.com/abelflopes/react-ck/commit/f4d81098721fd5b61a4bba69e6c49c4093dd5509))
+* add card full height variation ([8569c68](https://github.com/abelflopes/react-ck/commit/8569c682706e9666359a5241154e90865c92e5a9))
+* add icons ([96e346a](https://github.com/abelflopes/react-ck/commit/96e346ae5a2105599b428f63da65a01b191ae21d))
+* **react-ck:** global library package ([8517266](https://github.com/abelflopes/react-ck/commit/851726604ab086c2c56173cac971be9feb5d9588))
+* **react-ck:** global library package ([e188704](https://github.com/abelflopes/react-ck/commit/e1887041de362461789f353f11d19ca9872375f8))
+
+
+### Bug Fixes
+
+* card display when using polimorphy ([9f19b9d](https://github.com/abelflopes/react-ck/commit/9f19b9d7957ea92291a2921bf250202a79d69ad0))
+* close select on blur ([af63726](https://github.com/abelflopes/react-ck/commit/af637269c667b5d6e1b67d0f90b8c122ca1b5410))
+* make select display same content as option instead of value ([1791dff](https://github.com/abelflopes/react-ck/commit/1791dffb8312755152249f42f0a1a9a6e04392a3))
+
+
+### Code Refactoring
+
+* apply click outside handler on dropdown ([6bae06c](https://github.com/abelflopes/react-ck/commit/6bae06c149d951b3ad74fc077730ee7a7af23905))
+
 ## [3.10.0](https://github.com/abelflopes/react-ck/compare/v3.9.0...v3.10.0) (2024-07-08)
 
 
