@@ -60,6 +60,7 @@ export const IconButton: Story = {
   render: ({ anchorRef: argAnchorRef, ...props }): React.ReactElement => {
     // eslint-disable-next-line react-hooks/rules-of-hooks -- exception for storybook
     const buttonRef = useRef<HTMLButtonElement>(null);
+    // eslint-disable-next-line react-hooks/rules-of-hooks -- exception for storybook
     const [open, setOpen] = useState(false);
 
     return (
