@@ -13,7 +13,8 @@ export interface MenuItemProps<T extends HTMLTag = "li">
     ConsumerPolymorphicProps<T> {
   skin?: "default" | "primary" | "secondary";
   disabled?: boolean;
-  icon?: NonNullable<React.ReactNode>;
+  icon?: React.ReactNode;
+  action?: React.ReactNode;
 }
 
 export const MenuItem = <T extends HTMLTag>({
@@ -23,6 +24,7 @@ export const MenuItem = <T extends HTMLTag>({
   disabled,
   className,
   children,
+  action,
   ...otherProps
 }: Readonly<MenuItemProps<T>>): React.ReactElement => {
   const menuContext = useContext(MenuContext);
@@ -42,6 +44,8 @@ export const MenuItem = <T extends HTMLTag>({
       }}>
       {icon}
       {children}
+
+      {action ? <span className={styles.action}>{action}</span> : null}
     </PolymorphicComponent>
   );
 };

@@ -6,6 +6,8 @@ import { Menu } from "@react-ck/provisional/src";
 import { Icon } from "@react-ck/icon/src";
 import { faker } from "@faker-js/faker";
 import { IconUserCircle } from "@react-ck/icon/icons/IconUserCircle";
+import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
+import { Button } from "@react-ck/button/src";
 
 type Story = StoryObj<typeof Menu>;
 
@@ -65,7 +67,20 @@ const children = (
       {faker.person.firstName()}
     </Menu.Item>
     <Menu.Divider />
-    <Menu.Item>{faker.animal.type()}</Menu.Item>
+    <Menu.Item
+      action={
+        <Button
+          skin="ghost"
+          size="s"
+          icon={
+            <Icon>
+              <IconVerticalDots />
+            </Icon>
+          }
+        />
+      }>
+      {faker.animal.type()}
+    </Menu.Item>
     <Menu.Item disabled>{faker.animal.type()}</Menu.Item>
     <Menu.Item>{faker.animal.type()}</Menu.Item>
     <Menu.Divider>Companies</Menu.Divider>
