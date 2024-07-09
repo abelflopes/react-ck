@@ -29,7 +29,7 @@ return (
 
     <IconGallery>
       {filteredIcons.map((icon) => (
-        <IconItem key={icon} name={icon}>
+        <IconItem key={icon} name={icon.replace("Icon", "")}>
           <Icon>{icons[icon]()}</Icon>
         </IconItem>
       ))}
