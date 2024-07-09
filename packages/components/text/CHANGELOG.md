@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.7](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.5.6...@react-ck/text@1.5.7) (2024-07-09)
+
+**Note:** Version bump only for package @react-ck/text
+
+
+
+
+
 ## [1.5.6](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.5.5...@react-ck/text@1.5.6) (2024-07-08)
 
 **Note:** Version bump only for package @react-ck/text

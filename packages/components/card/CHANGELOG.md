@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.7.1...@react-ck/card@1.8.0) (2024-07-09)
+
+
+### Features
+
+* add card full height variation ([8569c68](https://github.com/abelflopes/react-ck/commit/8569c682706e9666359a5241154e90865c92e5a9))
+
+
+### Bug Fixes
+
+* card display when using polimorphy ([9f19b9d](https://github.com/abelflopes/react-ck/commit/9f19b9d7957ea92291a2921bf250202a79d69ad0))
+
+
+
 ## [1.7.1](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.7.0...@react-ck/card@1.7.1) (2024-07-08)
 
 **Note:** Version bump only for package @react-ck/card
