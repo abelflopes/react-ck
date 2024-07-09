@@ -23,6 +23,8 @@ interface CardProps<T extends HTMLTag = "div">
   variation?: "vertical" | "horizontal";
   /** Controls the amount of spacing between card limits */
   spacing?: "s" | "m" | "l" | "none";
+  /** Try to occupy available height, useful to match size with other cards  */
+  fullHeight?: boolean;
 }
 
 /**
@@ -38,6 +40,7 @@ const Card = <T extends HTMLTag>({
   interaction,
   variation = "vertical",
   spacing = "m",
+  fullHeight,
   children,
   className,
   ...otherProps
@@ -64,11 +67,18 @@ const Card = <T extends HTMLTag>({
           },
         ]}
         commonProps={{
-          className: classNames(styles.root, className, styles[skin], styles[variation], {
-            [`${styles[`spacing_${spacing}`]}`]: spacing !== "none",
-            [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
-            [`${styles.clickable}`]: interaction === "click",
-          }),
+          className: classNames(
+            styles.root,
+            className,
+            styles[skin],
+            styles[variation],
+            fullHeight && styles.full_height,
+            {
+              [`${styles[`spacing_${spacing}`]}`]: spacing !== "none",
+              [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
+              [`${styles.clickable}`]: interaction === "click",
+            },
+          ),
         }}>
         {contextValue.image ? (
           <img
