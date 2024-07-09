@@ -10,6 +10,8 @@ import { getChildrenData, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 
+// TODO: debounced focus / blur handling in trigger + dropdown wrapper
+
 /**
  * Select is a type of input that allows users to choose one or more options from a list of choices.
  * The options are hidden by default and revealed when a user interacts with an element. It shows the currently selected option in its default collapsed state.
@@ -24,6 +26,7 @@ const Select = ({
   children,
   className,
   onFocus,
+  onBlur,
   search: searchOptions,
   onChange: selectOnChange,
   name: selectName,
@@ -176,6 +179,14 @@ const Select = ({
         onFocus={(e) => {
           setOpen(true);
           onFocus?.(e);
+        }}
+        onBlur={(e) => {
+          if (!selectMultiple) {
+            setTimeout(() => {
+              setOpen(false);
+            }, 100);
+          }
+          onBlur?.(e);
         }}>
         {selectedValuesList.length > 0 &&
           childrenData
