@@ -10,7 +10,7 @@ export const useOnClickOutside = <T extends Array<React.RefObject<HTMLElement>>>
       const { target } = e;
 
       if (!active) return;
-      else if (!(target instanceof HTMLElement))
+      else if (!(target instanceof HTMLElement) && !(target instanceof SVGElement))
         throw new Error("click outside target is not an HTMLElement");
       else if (!refs.every((i) => Boolean(i)))
         throw new Error("some click outside ref is not available");

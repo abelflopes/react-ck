@@ -4,7 +4,7 @@ import { SelectOption } from "./SelectOption";
 import { Dropdown, Menu } from "@react-ck/provisional";
 import { Input } from "@react-ck/input";
 import classNames from "classnames";
-import { useNextRender, useOnClickOutside } from "@react-ck/react-utils";
+import { useNextRender } from "@react-ck/react-utils";
 import { EmptyState } from "@react-ck/empty-state";
 import { getChildrenData, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
@@ -110,12 +110,6 @@ const Select = ({
     [handleChange, selectedValuesList],
   );
 
-  // TODO: move to dropdown
-  /** Close dropdown when clicked outside  */
-  useOnClickOutside(open, [dropdownRef, rootElRef], () => {
-    setOpen(false);
-  });
-
   /** Actions to do when dropdown opens  */
   useEffect(() => {
     if (!open) return;
@@ -203,7 +197,10 @@ const Select = ({
         open={open}
         spacing="s"
         rootRef={dropdownRef}
-        excludeAutoPosition={["left", "right", "start", "end", "full"]}>
+        excludeAutoPosition={["left", "right", "start", "end", "full"]}
+        onClose={() => {
+          setOpen(false);
+        }}>
         <Menu className={styles.menu}>
           {searchOptions ? (
             <>
