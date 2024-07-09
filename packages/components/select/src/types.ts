@@ -33,6 +33,6 @@ export type SelectChildrenData = {
   isSelectOption: boolean;
   selectOptionProps: SelectOptionProps | undefined;
   computedValue: string | undefined;
-  searchText: string | undefined;
+  textContent: string | undefined;
   element: React.ReactNode;
 };

@@ -24,7 +24,10 @@ const SelectOption = ({
 
   const displayChildren = useMemo(() => children ?? value, [children, value]);
 
-  const isCurrentlySelected = context?.selectedValues.includes(computedValue);
+  const isCurrentlySelected = useMemo(
+    () => context?.selectedValues.includes(computedValue),
+    [computedValue, context?.selectedValues],
+  );
 
   return (
     <Menu.Item

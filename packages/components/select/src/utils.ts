@@ -28,7 +28,7 @@ export const getChildrenData = (children: React.ReactNode): SelectChildrenData[]
         isSelectOption: true,
         element: i,
         selectOptionProps: i.props,
-        searchText: textContent ?? value,
+        textContent: textContent ?? value,
         computedValue,
       };
     }
@@ -36,7 +36,7 @@ export const getChildrenData = (children: React.ReactNode): SelectChildrenData[]
     return {
       isSelectOption: false,
       element: i,
-      searchText: undefined,
+      textContent: undefined,
       computedValue: undefined,
       selectOptionProps: undefined,
     };

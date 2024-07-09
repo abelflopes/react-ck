@@ -51,7 +51,7 @@ const Select = ({
         .filter(
           (i) =>
             !search.length ||
-            (i.searchText && i.searchText.toLowerCase().includes(search.toLowerCase())),
+            (i.textContent && i.textContent.toLowerCase().includes(search.toLowerCase())),
         )
         .map((i) => i.element),
     [childrenData, search],
@@ -177,7 +177,11 @@ const Select = ({
           setOpen(true);
           onFocus?.(e);
         }}>
-        {selectedValuesList.length > 0 && selectedValuesList.join(", ")}
+        {selectedValuesList.length > 0 &&
+          childrenData
+            .filter((i) => i.computedValue && selectedValuesList.includes(i.computedValue))
+            .map((i) => i.textContent)
+            .join(", ")}
         {selectedValuesList.length === 0 && (
           <span className={styles.placeholder}>{placeholder}</span>
         )}
