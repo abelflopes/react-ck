@@ -10,12 +10,12 @@ export const iconMap: IconMap = [
   {
     import: "BsBell",
     module: "react-icons/bs",
-    export: "IconBell",
+    export: "IconNotification",
   },
   {
     import: "BsBellFill",
     module: "react-icons/bs",
-    export: "IconBellFill",
+    export: "IconNotificationFill",
   },
   {
     import: "GrClose",
@@ -123,11 +123,6 @@ export const iconMap: IconMap = [
     export: "IconChat",
   },
   {
-    import: "IoMdNotificationsOutline",
-    module: "react-icons/io",
-    export: "IconNotification",
-  },
-  {
     import: "HiPlus",
     module: "react-icons/hi",
     export: "IconPlus",
@@ -166,5 +161,25 @@ export const iconMap: IconMap = [
     import: "MdOutlineCloudUpload",
     module: "react-icons/md",
     export: "IconUploadOutline",
+  },
+  {
+    import: "HiDotsVertical",
+    module: "react-icons/hi",
+    export: "IconVerticalDots",
+  },
+  {
+    import: "RiInformation2Line",
+    module: "react-icons/ri",
+    export: "IconInfo",
+  },
+  {
+    import: "RiInformation2Fill",
+    module: "react-icons/ri",
+    export: "IconInfoFill",
+  },
+  {
+    import: "FaEdit",
+    module: "react-icons/fa",
+    export: "IconEdit",
   },
 ];
