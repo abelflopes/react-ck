@@ -1,3 +1,16 @@
+## [3.13.0](https://github.com/abelflopes/react-ck/compare/v3.12.0...v3.13.0) (2024-07-10)
+
+
+### Features
+
+* **react-ck:** global library package ([4746844](https://github.com/abelflopes/react-ck/commit/4746844ad5b098507541f23e5e22241cd1cf3fcc))
+* **react-ck:** global library package ([51bcd03](https://github.com/abelflopes/react-ck/commit/51bcd0330be8ebc867300239ac24437529c08115))
+
+
+### Bug Fixes
+
+* handling of focus / blur - select open and close ([e150c3c](https://github.com/abelflopes/react-ck/commit/e150c3cacb0d0da24f4046e2b376160737d03c54))
+
 ## [3.12.0](https://github.com/abelflopes/react-ck/compare/v3.11.0...v3.12.0) (2024-07-10)
 
 
