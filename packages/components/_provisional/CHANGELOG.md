@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.6.0...@react-ck/provisional@3.7.0) (2024-07-10)
+
+
+### Features
+
+* add file uploader progress handler ([222594f](https://github.com/abelflopes/react-ck/commit/222594f5894406834be62f5d51783904e50a592f))
+
+
+
 ## [3.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.5.0...@react-ck/provisional@3.6.0) (2024-07-09)
 
 
