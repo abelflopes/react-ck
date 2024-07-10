@@ -10,8 +10,6 @@ import { getChildrenData, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 
-// TODO: debounced focus / blur handling in trigger + dropdown wrapper
-
 /**
  * Select is a type of input that allows users to choose one or more options from a list of choices.
  * The options are hidden by default and revealed when a user interacts with an element. It shows the currently selected option in its default collapsed state.
@@ -40,6 +38,7 @@ const Select = ({
   const selectRef = useRef<HTMLSelectElement>(null);
   const rootElRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const blurTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [internalValue, setInternalValue] = useState(userValue ?? defaultValue);
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -76,6 +75,18 @@ const Select = ({
     },
     [selectMultiple],
   );
+
+  const handleFocus = useCallback(() => {
+    if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+    setOpen(true);
+  }, []);
+
+  const handleBlur = useCallback(() => {
+    if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+    blurTimeoutRef.current = setTimeout(() => {
+      setOpen(false);
+    }, 150);
+  }, []);
 
   /**
    * Handle change events trigger by the user
@@ -171,15 +182,11 @@ const Select = ({
         tabIndex={0}
         className={classNames(styles.root, styles[`skin_${skin}`], className)}
         onFocus={(e) => {
-          setOpen(true);
+          handleFocus();
           onFocus?.(e);
         }}
         onBlur={(e) => {
-          if (!selectMultiple) {
-            setTimeout(() => {
-              setOpen(false);
-            }, 100);
-          }
+          handleBlur();
           onBlur?.(e);
         }}>
         {selectedValuesList.length > 0 &&
@@ -198,6 +205,8 @@ const Select = ({
         spacing="s"
         rootRef={dropdownRef}
         excludeAutoPosition={["left", "right", "start", "end", "full"]}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         onClose={() => {
           setOpen(false);
         }}>

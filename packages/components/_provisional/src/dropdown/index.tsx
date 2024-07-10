@@ -19,6 +19,8 @@ export interface DropdownProps {
   /** Ref for the root element */
   rootRef?: React.MutableRefObject<HTMLDivElement | null>;
   onClose?: () => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
 }
 
 export const Dropdown = ({
@@ -30,6 +32,8 @@ export const Dropdown = ({
   rootRef,
   children,
   onClose,
+  onFocus,
+  onBlur,
 }: Readonly<DropdownProps>): React.ReactNode => {
   const containerRef = useRef<HTMLElement | null>(null);
   const [internalOpen, setInternalOpen] = useState(open);
@@ -59,8 +63,12 @@ export const Dropdown = ({
                 if (rootRef) rootRef.current = r;
                 containerRef.current = r;
               }}
+              tabIndex={0}
+              role="menu"
               style={style}
-              className={styles.container}>
+              className={styles.container}
+              onFocus={onFocus}
+              onBlur={onBlur}>
               <Card skin="shadowed" spacing="none">
                 <ScrollableContainer
                   horizontal={false}
