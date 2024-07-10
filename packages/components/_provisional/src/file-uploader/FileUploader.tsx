@@ -14,7 +14,8 @@ import { readFileList } from "./utils/read-file";
 // TODO: add overlay loader
 // TODO: add uploaded files feedback
 
-export interface FileUploaderProps extends Omit<React.HTMLAttributes<HTMLElement>, "onChange"> {
+export interface FileUploaderProps
+  extends Omit<React.HTMLAttributes<HTMLElement>, "onChange" | "onProgress"> {
   skin?: "default" | "negative" | "disabled";
   variation?: "default" | "square";
   icon?: React.ReactNode;
@@ -28,6 +29,7 @@ export interface FileUploaderProps extends Omit<React.HTMLAttributes<HTMLElement
     e: React.ChangeEvent<HTMLInputElement>,
     fileList: ReturnType<typeof readFileList>,
   ) => void;
+  onProgress?: Parameters<typeof readFileList>[1];
 }
 
 // eslint-disable-next-line complexity -- TODO: fix
@@ -43,6 +45,7 @@ export const FileUploader = ({
   inputProps,
   buttonProps,
   onChange,
+  onProgress,
   ...otherProps
 }: Readonly<FileUploaderProps>): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -58,15 +61,17 @@ export const FileUploader = ({
     (e) => {
       if (!e.target.files) throw new Error("No files added");
 
-      const fileList = readFileList(e.target.files);
+      const fileList = readFileList(e.target.files, onProgress);
 
       onChange?.(e, fileList);
 
       void (async (): Promise<void> => {
         setFilesList((await fileList).map((i) => i.name));
       })();
+
+      inputProps?.onChange?.(e);
     },
-    [onChange],
+    [inputProps, onChange, onProgress],
   );
 
   return (
@@ -84,8 +89,11 @@ export const FileUploader = ({
         ref={inputRef}
         type="file"
         className={classNames(styles.file, inputProps?.className)}
-        onKeyUp={handleKeyUp}
         onChange={handleChange}
+        onKeyUp={(e) => {
+          handleKeyUp(e);
+          inputProps?.onKeyUp?.(e);
+        }}
       />
       {!isIconOnly && icon}
       {children ? <div className={styles.content}>{children}</div> : null}

@@ -34,16 +34,20 @@ const args: FileUploaderProps = {
   cta: "Browse device",
   description: "Max file size: 5MB",
   children: "Drag & drop files here to upload",
+  onProgress: (...data) => {
+    // eslint-disable-next-line no-console -- // TODO: remove once fully implemented
+    console.log("Progress", data);
+  },
+
+  onChange: (_, filesList) => {
+    void (async (): Promise<void> => {
+      // eslint-disable-next-line no-console -- // TODO: remove once fully implemented
+      console.log("Change", await filesList);
+    })();
+  },
   inputProps: {
     accept: ".pdf,.jpb,.png,video/*",
     multiple: true,
-    onChange: (e) => {
-      void (async (): Promise<void> => {
-        const files = e.target.files && (await readFileList(e.target.files));
-        // eslint-disable-next-line no-console -- // TODO: remove once fully implemented
-        console.log("Done", files);
-      })();
-    },
   },
 };
 
