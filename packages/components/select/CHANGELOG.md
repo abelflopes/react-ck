@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.8](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.7...@react-ck/select@1.4.8) (2024-07-10)
+
+
+### Bug Fixes
+
+* handling of focus / blur - select open and close ([e150c3c](https://github.com/abelflopes/react-ck/commit/e150c3cacb0d0da24f4046e2b376160737d03c54))
+
+
+
 ## [1.4.7](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.6...@react-ck/select@1.4.7) (2024-07-10)
 
 **Note:** Version bump only for package @react-ck/select

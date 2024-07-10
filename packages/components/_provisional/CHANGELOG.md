@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.7.0...@react-ck/provisional@3.7.1) (2024-07-10)
+
+
+### Bug Fixes
+
+* handling of focus / blur - select open and close ([e150c3c](https://github.com/abelflopes/react-ck/commit/e150c3cacb0d0da24f4046e2b376160737d03c54))
+
+
+
 ## [3.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.6.0...@react-ck/provisional@3.7.0) (2024-07-10)
 
 
