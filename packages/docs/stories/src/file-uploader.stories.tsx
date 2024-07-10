@@ -2,7 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager/src";
 import { configureStory } from "@react-ck/story-config";
-import { FileUploader, type FileUploaderProps, readFileList } from "@react-ck/provisional/src";
+import { FileUploader, type FileUploaderProps } from "@react-ck/provisional/src";
 import { Icon } from "@react-ck/icon/src";
 import { IconUploadOutline } from "@react-ck/icon/icons/IconUploadOutline";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
