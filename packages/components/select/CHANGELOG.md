@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.7](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.6...@react-ck/select@1.4.7) (2024-07-10)
+
+**Note:** Version bump only for package @react-ck/select
+
+
+
+
+
 ## [1.4.6](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.5...@react-ck/select@1.4.6) (2024-07-09)
 
 

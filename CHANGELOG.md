@@ -1,3 +1,17 @@
+## [3.12.0](https://github.com/abelflopes/react-ck/compare/v3.11.0...v3.12.0) (2024-07-10)
+
+
+### Features
+
+* add file uploader progress handler ([222594f](https://github.com/abelflopes/react-ck/commit/222594f5894406834be62f5d51783904e50a592f))
+* **react-ck:** global library package ([06eb93e](https://github.com/abelflopes/react-ck/commit/06eb93e79d6b0c764d9547bc35fd02237aed8662))
+* **react-ck:** global library package ([0d9feb0](https://github.com/abelflopes/react-ck/commit/0d9feb0bc8fae10bdf23c4bae3a3de25cc09f2c5))
+
+
+### Bug Fixes
+
+* skeleton colors ([f984594](https://github.com/abelflopes/react-ck/commit/f984594b8de2ab140e82d91cec38acbe0d7c0889))
+
 ## [3.11.0](https://github.com/abelflopes/react-ck/compare/v3.10.0...v3.11.0) (2024-07-09)
 
 
