@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.6](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.5...@react-ck/select@1.4.6) (2024-07-09)
+
+
+### Bug Fixes
+
+* close select on blur ([af63726](https://github.com/abelflopes/react-ck/commit/af637269c667b5d6e1b67d0f90b8c122ca1b5410))
+* make select display same content as option instead of value ([1791dff](https://github.com/abelflopes/react-ck/commit/1791dffb8312755152249f42f0a1a9a6e04392a3))
+
+
+
 ## [1.4.5](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.4...@react-ck/select@1.4.5) (2024-07-08)
 
 

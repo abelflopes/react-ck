@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.5.0...@react-ck/provisional@3.6.0) (2024-07-09)
+
+
+### Features
+
+* add action slot to menu item ([f4d8109](https://github.com/abelflopes/react-ck/commit/f4d81098721fd5b61a4bba69e6c49c4093dd5509))
+
+
+
 ## [3.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.4.1...@react-ck/provisional@3.5.0) (2024-07-08)
 
 
