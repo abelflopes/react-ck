@@ -3,46 +3,68 @@ import React, { useEffect, useCallback } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Snackbar, type SnackbarProps, useSnackbarContext } from "@react-ck/provisional";
+import { Snackbar, type SnackbarProps, useSnackbar } from "@react-ck/provisional/src";
 import { Alert } from "@react-ck/alert/src";
 import { Text } from "@react-ck/text";
 import { Button } from "@react-ck/button";
 import { Card } from "@react-ck/card";
 
 const MyComponent = (): React.ReactElement => {
-  const { add, remove } = useSnackbarContext();
+  const snackbar = useSnackbar();
 
   const handleButtonClick = useCallback(
     () =>
-      add((id) => (
+      snackbar.add((id) => (
         <Card skin="shadowed">
           {faker.lorem.sentences()}
           &nbsp;
           <Button
             size="xs"
             onClick={() => {
-              remove(id);
+              snackbar.remove(id);
             }}>
             Remove
           </Button>
         </Card>
       )),
-    [add, remove],
+    [snackbar],
   );
 
   useEffect(() => {
-    add((id) => (
-      <Alert
-        heading={faker.lorem.sentence()}
-        dismissable
-        onDismiss={() => {
-          remove(id);
-        }}>
-        {id}
-        {faker.lorem.sentences()}
-      </Alert>
-    ));
-  }, [add, remove]);
+    const items: string[] = [];
+
+    items.push(
+      snackbar.add((id) => (
+        <Alert
+          heading={faker.lorem.sentence()}
+          dismissable
+          onDismiss={() => {
+            snackbar.remove(id);
+          }}>
+          {id}
+          {faker.lorem.sentences()}
+        </Alert>
+      )),
+    );
+
+    items.push(
+      snackbar.add((id) => (
+        <Alert
+          skin="average"
+          autoDismiss={5000}
+          dismissable
+          onDismiss={() => {
+            snackbar.remove(id);
+          }}>
+          Dismissable after 5s
+        </Alert>
+      )),
+    );
+
+    return () => {
+      items.forEach(snackbar.remove);
+    };
+  }, [snackbar]);
 
   return (
     <>
