@@ -5,7 +5,7 @@ import { configureStory } from "@react-ck/story-config";
 import { Dock } from "@react-ck/provisional/src";
 import { Icon } from "@react-ck/icon/src";
 import { faker } from "@faker-js/faker";
-import { IconBell } from "@react-ck/icon/icons/IconBell";
+import { IconNotification } from "@react-ck/icon/icons/IconNotification";
 import { IconCog } from "@react-ck/icon/icons/IconCog";
 import { IconFolder } from "@react-ck/icon/icons/IconFolder";
 import { IconHome } from "@react-ck/icon/icons/IconHome";
@@ -35,7 +35,7 @@ const footer = (
       active={false}
       icon={
         <Icon>
-          <IconBell />
+          <IconNotification />
         </Icon>
       }
     />

@@ -4,7 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Icon } from "@react-ck/icon/src";
 import { IconGitHub } from "@react-ck/icon/icons/IconGitHub";
-import { IconBellFill } from "@react-ck/icon/icons/IconBellFill";
+import { IconNotification } from "@react-ck/icon/icons/IconNotification";
 import { faker } from "@faker-js/faker";
 
 type Story = StoryObj<typeof Icon>;
@@ -26,7 +26,7 @@ export default meta;
 
 export const Normal: Story = {
   args: {
-    children: <IconBellFill />,
+    children: <IconNotification />,
   },
 };
 
