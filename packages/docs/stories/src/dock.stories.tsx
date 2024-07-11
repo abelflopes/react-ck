@@ -56,6 +56,7 @@ const footer = (
           <IconUserCircle />
         </Icon>
       }
+      disabled
     />
   </>
 );

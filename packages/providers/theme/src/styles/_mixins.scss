@@ -1,0 +1,5 @@
+@mixin disabled {
+  cursor: not-allowed;
+  filter: grayscale(1);
+  opacity: 0.4;
+}

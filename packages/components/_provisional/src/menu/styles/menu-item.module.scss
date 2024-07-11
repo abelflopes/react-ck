@@ -1,38 +1,35 @@
-@import "@react-ck/theme";
-@import "@react-ck/text";
+@use "@react-ck/theme";
+@use "@react-ck/text";
 
 .root {
-  @include text-base;
+  @include text.text-base;
 
   display: flex;
   box-sizing: border-box;
   align-items: center;
-  padding: get-spacing(0.75) get-spacing();
-  border-radius: get-spacing();
+  padding: theme.get-spacing(0.75) theme.get-spacing();
+  border-radius: theme.get-spacing();
   cursor: pointer;
-  gap: get-spacing();
+  gap: theme.get-spacing();
   transition: all 0.2s;
 
   &:focus:not(.disabled),
   &:hover:not(.disabled) {
-    background-color: get-color(neutral-light-2);
+    background-color: theme.get-color(neutral-light-2);
     color: currentcolor;
   }
 
   &.secondary {
-    background-color: get-color(neutral-light-1-5);
+    background-color: theme.get-color(neutral-light-1-5);
   }
 
   &.primary {
-    background-color: get-color(highlight-primary-light);
-    color: get-color(highlight-primary);
+    background-color: theme.get-color(highlight-primary-light);
+    color: theme.get-color(highlight-primary);
   }
 
   &.disabled {
-    // TODO: create shared mixin
-    cursor: not-allowed;
-    filter: grayscale(1);
-    opacity: 0.4;
+    @include theme.disabled;
   }
 
   &.horizontal {

@@ -58,3 +58,10 @@ export const Link: Story = {
     as: ["a", { href: "/" }],
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    ...Primary.args,
+    disabled: true,
+  },
+};

@@ -53,7 +53,7 @@
   }
 
   &:disabled {
-    cursor: not-allowed;
+    @include theme.disabled;
   }
 
   &:focus {

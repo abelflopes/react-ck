@@ -19,7 +19,7 @@
   transition: background-color 0.2s ease;
 
   &:disabled {
-    cursor: not-allowed;
+    @include theme.disabled;
   }
 
   &.icon-only {
