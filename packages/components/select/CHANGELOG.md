@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.8...@react-ck/select@1.5.0) (2024-07-11)
+
+
+### Features
+
+* add formatter for select display value ([5592dfb](https://github.com/abelflopes/react-ck/commit/5592dfb9ac1249a3061ae300b9ce433134b771d2))
+
+
+### Bug Fixes
+
+* make select search insensitive to special chars ([11d6c65](https://github.com/abelflopes/react-ck/commit/11d6c65117159ef6265ae9ac33f5a8651feee63e))
+
+
+
 ## [1.4.8](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.4.7...@react-ck/select@1.4.8) (2024-07-10)
 
 
