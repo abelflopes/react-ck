@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.0.12...@react-ck/alert@3.1.0) (2024-07-11)
+
+
+### Features
+
+* add alert compact skin ([a89d5e8](https://github.com/abelflopes/react-ck/commit/a89d5e8af74661de30ffce919286839a06c87a51))
+* alert auto dismiss ([286bb20](https://github.com/abelflopes/react-ck/commit/286bb208405b9115f7f7690933f846ff24728175))
+
+
+
 ## [3.0.12](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.0.11...@react-ck/alert@3.0.12) (2024-07-10)
 
 **Note:** Version bump only for package @react-ck/alert
