@@ -1,3 +1,25 @@
+## [3.14.0](https://github.com/abelflopes/react-ck/compare/v3.13.0...v3.14.0) (2024-07-11)
+
+
+### Features
+
+* add alert compact skin ([a89d5e8](https://github.com/abelflopes/react-ck/commit/a89d5e8af74661de30ffce919286839a06c87a51))
+* add formatter for select display value ([5592dfb](https://github.com/abelflopes/react-ck/commit/5592dfb9ac1249a3061ae300b9ce433134b771d2))
+* alert auto dismiss ([286bb20](https://github.com/abelflopes/react-ck/commit/286bb208405b9115f7f7690933f846ff24728175))
+* **react-ck:** global library package ([c2c2b14](https://github.com/abelflopes/react-ck/commit/c2c2b14f9b1c4eb208a8c4b592e6627ed3674af9))
+
+
+### Bug Fixes
+
+* make select search insensitive to special chars ([11d6c65](https://github.com/abelflopes/react-ck/commit/11d6c65117159ef6265ae9ac33f5a8651feee63e))
+* snackbar hook name ([1e47498](https://github.com/abelflopes/react-ck/commit/1e474984642c392f9d3f51cddc29af2e6dbc8c06))
+
+
+### Code Refactoring
+
+* alert scss imports ([7735eb2](https://github.com/abelflopes/react-ck/commit/7735eb2eb91701a021956434f302d4c21b7ea823))
+* use consistent disabled styles from theme mixin ([5644211](https://github.com/abelflopes/react-ck/commit/56442111344eab2b00e9ea4dc2277b4878a769eb))
+
 ## [3.13.0](https://github.com/abelflopes/react-ck/compare/v3.12.0...v3.13.0) (2024-07-10)
 
 
