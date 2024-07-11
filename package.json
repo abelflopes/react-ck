@@ -30,7 +30,7 @@
     "lint:code:fix": "lerna run lint:code --parallel --stream -- --fix",
     "lint:typescript": "lerna run lint:typescript",
     "format": "prettier . --check --cache --ignore-unknown",
-    "clean": "npm run clean:dist && npm run clean:cache && npm run clean:deps",
+    "clean": "npm run clean:dist && npm run clean:cache && npm run clean:deps && rm -rf .nx",
     "clean:dist": "lerna exec -- rm -rf dist specs/coverage && lerna run clean",
     "clean:cache": "lerna exec -- rm -rf .eslintcache cache",
     "clean:deps": "lerna exec -- rm -rf node_modules && rm -rf node_modules",
