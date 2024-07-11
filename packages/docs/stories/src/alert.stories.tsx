@@ -37,3 +37,11 @@ export const WithTitle: Story = {
     children: faker.lorem.sentence({ min: 4, max: 10 }),
   },
 };
+
+export const compact: Story = {
+  args: {
+    ...WithTitle.args,
+    dismissable: true,
+    variation: "compact",
+  },
+};

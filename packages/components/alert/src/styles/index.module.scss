@@ -3,8 +3,6 @@
 @use "variables";
 
 .root {
-  @include text.text-base;
-
   display: flex;
   box-sizing: border-box;
   align-items: center;
@@ -18,6 +16,28 @@
 
   .heading {
     color: inherit;
+  }
+}
+
+.content {
+  @include text.text-base;
+}
+
+.compact {
+  padding: theme.get-spacing(0.5) theme.get-spacing(1);
+  border-radius: 0;
+
+  .content,
+  .heading {
+    @include text.text-variation(small);
+
+    display: inline;
+  }
+
+  .heading {
+    @include text.text-skin(bold);
+
+    margin-right: theme.get-spacing(0.5);
   }
 }
 

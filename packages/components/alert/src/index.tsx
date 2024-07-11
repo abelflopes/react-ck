@@ -11,6 +11,8 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   heading?: string;
   /** Specifies the visual style of the alert  */
   skin?: "neutral" | "primary" | "negative" | "average" | "positive";
+  /** Structural variation of the alert */
+  variation?: "default" | "compact";
   /** Determines if the alert can be dismissed by clicking on the close button  */
   dismissable?: boolean;
   /** Defines if the alert is open */
@@ -30,6 +32,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Alert = ({
   heading,
   skin = "neutral",
+  variation = "default",
   dismissable,
   open = true,
   onDismiss,
@@ -71,8 +74,15 @@ export const Alert = ({
   }, [computedOpen, onDismiss, open]);
 
   return computedOpen ? (
-    <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
-      <div>
+    <div
+      {...otherProps}
+      className={classNames(
+        styles.root,
+        styles[skin],
+        variation !== "default" && styles[variation],
+        className,
+      )}>
+      <div className={styles.content}>
         {heading ? (
           <Text variation="h4" as="p" skin="bold" margin="none" className={styles.heading}>
             {heading}
@@ -84,7 +94,7 @@ export const Alert = ({
 
       {dismissable ? (
         <Button
-          size="s"
+          size={variation === "compact" ? "xs" : "s"}
           skin="ghost"
           icon={
             <Icon>
