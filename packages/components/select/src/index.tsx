@@ -31,6 +31,7 @@ const Select = ({
   value: userValue,
   multiple: selectMultiple,
   defaultValue,
+  displayValueFormatter,
   ...props
 }: Readonly<SelectProps>): React.ReactElement => {
   const onNextRender = useNextRender();
@@ -60,7 +61,13 @@ const Select = ({
   );
 
   /** Returns the internal value always as an array to facilitate operations  */
-  const selectedValuesList = useMemo(() => valueAsArray(internalValue ?? []), [internalValue]);
+  const selectedValuesList = useMemo(
+    () =>
+      valueAsArray(internalValue ?? []).filter((i) =>
+        childrenData.map((c) => c.computedValue).includes(i),
+      ),
+    [childrenData, internalValue],
+  );
 
   const updateInternalValue = useCallback<ChangeHandler>(
     (value, mode) => {
@@ -120,6 +127,25 @@ const Select = ({
     }),
     [handleChange, selectedValuesList],
   );
+
+  /** Compute value label to display */
+
+  const displayValue = useMemo(() => {
+    if (selectedValuesList.length === 0) return undefined;
+
+    const displayValue = childrenData
+      .filter((i) => i.computedValue && selectedValuesList.includes(i.computedValue))
+      .map((i) => i.textContent)
+      .join(", ");
+
+    return displayValueFormatter
+      ? displayValueFormatter({
+          selectedValues: selectedValuesList,
+          childrenData,
+          displayValue,
+        })
+      : displayValue;
+  }, [childrenData, displayValueFormatter, selectedValuesList]);
 
   /** Actions to do when dropdown opens  */
   useEffect(() => {
@@ -189,14 +215,7 @@ const Select = ({
           handleBlur();
           onBlur?.(e);
         }}>
-        {selectedValuesList.length > 0 &&
-          childrenData
-            .filter((i) => i.computedValue && selectedValuesList.includes(i.computedValue))
-            .map((i) => i.textContent)
-            .join(", ")}
-        {selectedValuesList.length === 0 && (
-          <span className={styles.placeholder}>{placeholder}</span>
-        )}
+        {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
       </div>
 
       <Dropdown

@@ -21,6 +21,11 @@ export interface SelectProps
   defaultValue?: UserValue;
   name?: React.SelectHTMLAttributes<HTMLSelectElement>["name"];
   multiple?: React.SelectHTMLAttributes<HTMLSelectElement>["multiple"];
+  displayValueFormatter?: (data: {
+    displayValue: string;
+    selectedValues: string[];
+    childrenData: SelectChildrenData[];
+  }) => React.ReactNode;
 }
 
 export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
