@@ -6,7 +6,7 @@ import { Input } from "@react-ck/input";
 import classNames from "classnames";
 import { useNextRender } from "@react-ck/react-utils";
 import { EmptyState } from "@react-ck/empty-state";
-import { getChildrenData, valueAsArray } from "./utils";
+import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 
@@ -54,7 +54,7 @@ const Select = ({
         .filter(
           (i) =>
             !search.length ||
-            (i.textContent && i.textContent.toLowerCase().includes(search.toLowerCase())),
+            (i.textContent && simplifyString(i.textContent).includes(simplifyString(search))),
         )
         .map((i) => i.element),
     [childrenData, search],
