@@ -4,7 +4,9 @@ exports[`snapshot Alert renders correctly 1`] = `
 <div
   className="root neutral"
 >
-  <div>
+  <div
+    className="content"
+  >
     Alert
   </div>
 </div>
