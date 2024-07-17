@@ -3,6 +3,7 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Image } from "@react-ck/provisional/src";
+import { faker } from "@faker-js/faker";
 
 type Story = StoryObj<typeof Image>;
 
@@ -26,6 +27,6 @@ export default meta;
 
 export const Component: Story = {
   args: {
-    src: "https://source.unsplash.com/random/900×700/?fruit",
+    src: faker.image.url(),
   },
 };

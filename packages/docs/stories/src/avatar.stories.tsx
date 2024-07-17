@@ -25,7 +25,7 @@ export default meta;
 export const WithImage: Story = {
   args: {
     name: faker.person.fullName(),
-    image: "https://source.unsplash.com/random/900×700/?portrait",
+    image: faker.image.avatar(),
   },
 };
 
