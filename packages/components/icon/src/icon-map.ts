@@ -182,4 +182,14 @@ export const iconMap: IconMap = [
     module: "react-icons/fa",
     export: "IconEdit",
   },
+  {
+    import: "MdOutlineLogin",
+    module: "react-icons/md",
+    export: "IconLogin",
+  },
+  {
+    import: "MdOutlineLogout",
+    module: "react-icons/md",
+    export: "IconLogout",
+  },
 ];
