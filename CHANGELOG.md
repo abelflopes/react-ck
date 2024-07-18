@@ -1,3 +1,24 @@
+## [3.15.0](https://github.com/abelflopes/react-ck/compare/v3.14.0...v3.15.0) (2024-07-18)
+
+
+### Features
+
+* add all table elements, add header styles, fix scrollable ([5e914f7](https://github.com/abelflopes/react-ck/commit/5e914f7d476a677387681ae91971aacdd80d42f5))
+* add icons ([c798162](https://github.com/abelflopes/react-ck/commit/c798162b65955d9d3f2bdf4ef072fdcd33b536d5))
+* add variations for empty state component ([a6c916b](https://github.com/abelflopes/react-ck/commit/a6c916b7e3215bbe77cdd2e95ac7ae4dc8f5a8ee))
+* **react-ck:** global library package ([de1c17a](https://github.com/abelflopes/react-ck/commit/de1c17a1e5f8d82ade328c86e868c125cf39fbd4))
+
+
+### Bug Fixes
+
+* imports ([f70c96a](https://github.com/abelflopes/react-ck/commit/f70c96ae3f7ba16810408293de8bbe06e5fba732))
+* use partial context as component interface ([c245494](https://github.com/abelflopes/react-ck/commit/c245494692523186853818fc73891c87208df64d))
+
+
+### Code Refactoring
+
+* make lib font-family agnostic ([96c6aaa](https://github.com/abelflopes/react-ck/commit/96c6aaaed01fd1c7b21bda40b0ddcab29ed3c8bb))
+
 ## [3.14.0](https://github.com/abelflopes/react-ck/compare/v3.13.0...v3.14.0) (2024-07-11)
 
 
