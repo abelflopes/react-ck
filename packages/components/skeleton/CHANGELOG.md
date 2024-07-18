@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.24](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.23...@react-ck/skeleton@1.1.24) (2024-07-18)
+
+
+### Bug Fixes
+
+* minor adjustments ([6e0d098](https://github.com/abelflopes/react-ck/commit/6e0d098b33e76096cf1d7d61b0d26f9b46e6d5b2))
+
+
+
 ## [1.1.23](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.22...@react-ck/skeleton@1.1.23) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/skeleton

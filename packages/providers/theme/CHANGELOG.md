@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.8.3...@react-ck/theme@1.8.4) (2024-07-18)
+
+
+### Bug Fixes
+
+* use colors with opacity ([327fccc](https://github.com/abelflopes/react-ck/commit/327fccc7d30d367bd733771edd756cb277331716))
+
+
+
 ## [1.8.3](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.8.2...@react-ck/theme@1.8.3) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/theme

@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/container",
   "private": false,
-  "version": "1.2.4",
+  "version": "1.2.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/shared.scss",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@react-ck/scss-utils": "^1.1.10",
-    "@react-ck/theme": "^1.8.3",
+    "@react-ck/theme": "^1.8.4",
     "classnames": "^2.3.2"
   }
 }

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.4](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.7.3...@react-ck/provisional@3.7.4) (2024-07-18)
+
+**Note:** Version bump only for package @react-ck/provisional
+
+
+
+
+
 ## [3.7.3](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.7.2...@react-ck/provisional@3.7.3) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/provisional
