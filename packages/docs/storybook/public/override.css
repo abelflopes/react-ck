@@ -1,59 +1,67 @@
+/* set font for components */
+#storybook-docs .sb-story,
+#storybook-root {
+  font-family: Inter, serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt" 0;
+}
+
 .custom-docs-wrapper {
-  background-color: #fff;
   min-height: 100%;
+  background-color: #fff;
 }
 
 .custom-docs-container,
 #storybook-docs .sbdocs-wrapper {
   max-width: 1000px;
-  padding: 70px 30px;
   box-sizing: border-box;
+  padding: 70px 30px;
   margin: 0 auto;
 }
 
 .custom-docs-container > div > h1,
 #storybook-docs .sbdocs-content > h1 {
+  margin: 0 0 1em;
   font-size: 32px;
   font-weight: bold;
   line-height: 1.1em;
-  margin: 0 0 1em;
 }
 
 .custom-docs-container > div > h2,
 #storybook-docs .sbdocs-content > h2 {
+  margin: 1.5em 0 1em;
   font-size: 24px;
   font-weight: bold;
-  margin: 1.5em 0 1em;
 }
 
 .custom-docs-container > div > h3,
 #storybook-docs .sbdocs-content > h3 {
+  margin: 1.5em 0 1em;
   font-size: 20px;
   font-weight: bold;
-  margin: 1.5em 0 1em;
 }
 
 .custom-docs-container > div > p,
 #storybook-docs .sbdocs-content > p {
+  margin: 16px 0;
   font-size: 14px;
   line-height: 24px;
-  margin: 16px 0;
 }
 
 .custom-docs-container > div > pre {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .custom-docs-container > div > blockquote,
 #storybook-docs .sbdocs-content > blockquote {
-  font-style: italic;
   padding: 8px 16px;
-  margin: 0;
-  font-size: 14px;
-  background: #fff9e9;
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
+  margin: 0;
+  background: #fff9e9;
+  font-size: 14px;
+  font-style: italic;
 }
 
 .custom-docs-container > div > blockquote p,

@@ -32,7 +32,7 @@
   @include define-css-var(text, text-decoration, none);
 
   color: get-css-var(text, color);
-  font-family: get-css-var(text, font-family);
+  font-family: inherit;
   font-size: get-css-var(text, font-size);
   font-weight: get-css-var(text, font-weight);
   line-height: get-css-var(text, line-height);
