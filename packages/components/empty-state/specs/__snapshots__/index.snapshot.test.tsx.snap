@@ -2,8 +2,10 @@
 
 exports[`snapshot EmptyState renders correctly 1`] = `
 <div
-  className="root"
+  className="root size_full skin_default"
 >
-  EmptyState
+  <div>
+    EmptyState
+  </div>
 </div>
 `;
