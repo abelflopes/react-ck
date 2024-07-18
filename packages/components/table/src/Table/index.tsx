@@ -10,7 +10,7 @@ import { TFoot } from "../TFoot";
 import { Tr } from "../Tr";
 import { TableContext, type TableContextProps } from "../context";
 
-type TableProps = React.HTMLAttributes<HTMLDivElement> & TableContextProps;
+type TableProps = React.HTMLAttributes<HTMLDivElement> & Partial<TableContextProps>;
 
 /**
  * Table is an element that visualizes a data set in rows and columns. It’s often used to embed structured data in a way that’s easy to scan.
