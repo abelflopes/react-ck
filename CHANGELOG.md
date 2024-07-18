@@ -1,3 +1,18 @@
+## [3.16.0](https://github.com/abelflopes/react-ck/compare/v3.15.0...v3.16.0) (2024-07-18)
+
+
+### Features
+
+* **react-ck:** global library package ([17964ab](https://github.com/abelflopes/react-ck/commit/17964ab29e12ad972ee204502f6ecef89e2a1186))
+* **react-ck:** global library package ([34c4377](https://github.com/abelflopes/react-ck/commit/34c4377818003e99e8a78ca5bc6eba4e44b0140a))
+
+
+### Bug Fixes
+
+* card skins ([70c2e54](https://github.com/abelflopes/react-ck/commit/70c2e5475e125539545f035927117667b10bc0f5))
+* minor adjustments ([6e0d098](https://github.com/abelflopes/react-ck/commit/6e0d098b33e76096cf1d7d61b0d26f9b46e6d5b2))
+* use colors with opacity ([327fccc](https://github.com/abelflopes/react-ck/commit/327fccc7d30d367bd733771edd756cb277331716))
+
 ## [3.15.0](https://github.com/abelflopes/react-ck/compare/v3.14.0...v3.15.0) (2024-07-18)
 
 
