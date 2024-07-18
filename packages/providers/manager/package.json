@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/manager",
   "private": false,
-  "version": "1.2.15",
+  "version": "1.2.16",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -27,7 +27,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/layers": "^1.2.15",
-    "@react-ck/theme": "^1.8.2"
+    "@react-ck/layers": "^1.2.16",
+    "@react-ck/theme": "^1.8.3"
   }
 }

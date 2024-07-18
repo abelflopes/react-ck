@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.3.28...@react-ck/table@1.4.0) (2024-07-18)
+
+
+### Features
+
+* add all table elements, add header styles, fix scrollable ([5e914f7](https://github.com/abelflopes/react-ck/commit/5e914f7d476a677387681ae91971aacdd80d42f5))
+
+
+### Bug Fixes
+
+* use partial context as component interface ([c245494](https://github.com/abelflopes/react-ck/commit/c245494692523186853818fc73891c87208df64d))
+
+
+
 ## [1.3.28](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.3.27...@react-ck/table@1.3.28) (2024-07-11)
 
 **Note:** Version bump only for package @react-ck/table

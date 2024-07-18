@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/empty-state@1.1.26...@react-ck/empty-state@1.2.0) (2024-07-18)
+
+
+### Features
+
+* add variations for empty state component ([a6c916b](https://github.com/abelflopes/react-ck/commit/a6c916b7e3215bbe77cdd2e95ac7ae4dc8f5a8ee))
+
+
+
 ## [1.1.26](https://github.com/abelflopes/react-ck/compare/@react-ck/empty-state@1.1.25...@react-ck/empty-state@1.1.26) (2024-07-11)
 
 **Note:** Version bump only for package @react-ck/empty-state
