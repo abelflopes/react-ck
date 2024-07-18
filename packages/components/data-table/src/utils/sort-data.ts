@@ -1,6 +1,7 @@
 import React from "react";
-import { type SortMode, type TableData } from "../types";
+import { type TableData } from "../types";
 import { componentToText } from "@react-ck/react-utils";
+import { type SortMode } from "@react-ck/table";
 
 export const sortData = <T extends TableData>(
   data: T,
