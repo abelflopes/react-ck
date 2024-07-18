@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/data-table@3.0.14...@react-ck/data-table@3.1.0) (2024-07-18)
+
+
+### Features
+
+* add all table elements, add header styles, fix scrollable ([5e914f7](https://github.com/abelflopes/react-ck/commit/5e914f7d476a677387681ae91971aacdd80d42f5))
+
+
+### Bug Fixes
+
+* imports ([f70c96a](https://github.com/abelflopes/react-ck/commit/f70c96ae3f7ba16810408293de8bbe06e5fba732))
+
+
+
 ## [3.0.14](https://github.com/abelflopes/react-ck/compare/@react-ck/data-table@3.0.13...@react-ck/data-table@3.0.14) (2024-07-11)
 
 **Note:** Version bump only for package @react-ck/data-table
