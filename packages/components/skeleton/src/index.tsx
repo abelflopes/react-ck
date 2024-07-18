@@ -5,6 +5,8 @@ import classNames from "classnames";
 // Styles
 import styles from "./styles/index.module.scss";
 
+// TODO: make random size / or allow choosing
+
 interface SkeletonProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
   variation?: "default" | "text";
 }
@@ -24,7 +26,7 @@ export const Skeleton = ({
   ...otherProps
 }: Readonly<SkeletonProps>): React.ReactElement => {
   const [index, setIndex] = useState<number | undefined>(undefined);
-  const N = useMemo(() => (n += 1 % 3), []);
+  const N = useMemo(() => (n += 1) % 3, []);
 
   useEffect(() => {
     setIndex((n += 1));

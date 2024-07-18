@@ -23,12 +23,11 @@
     width: 100%;
     height: 100%;
     animation: move 2s linear infinite;
-    animation-delay: calc(var(--index) * 200ms);
+    animation-delay: calc(var(--index) * 400ms);
     background-image: linear-gradient(
       90deg,
       transparent,
-      get-color(neutral-light-2),
-      get-color(neutral-light-2),
+      get-color(neutral-light-1-5),
       transparent
     );
     content: "";
