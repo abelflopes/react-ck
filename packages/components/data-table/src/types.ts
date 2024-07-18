@@ -1,6 +1,4 @@
-export const sortModes = ["asc", "desc", "none"] as const;
-
-export type SortMode = (typeof sortModes)[number];
+import { type SortMode } from "@react-ck/table";
 
 /** Type representing the data structure for the DataTable component  */
 export type TableData = Array<Record<string, React.ReactNode>>;

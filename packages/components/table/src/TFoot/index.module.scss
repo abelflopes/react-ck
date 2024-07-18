@@ -1,0 +1,6 @@
+@use "@react-ck/scss-utils";
+
+.bordered {
+  border-top: solid scss-utils.get-css-var(spacing, border)
+    scss-utils.get-css-var(table, border-color);
+}

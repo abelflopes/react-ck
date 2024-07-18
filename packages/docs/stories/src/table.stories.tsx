@@ -24,26 +24,33 @@ const meta: Meta<typeof Table> = {
   }),
 };
 
-const columns = 8;
-const rows = 5;
+const columns = 6;
+const rows = 4;
 
 const children = [
-  <thead key="head">
-    <tr>
+  <Table.Thead key="head">
+    <Table.Tr>
       {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
-        <th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</th>
+        <Table.Th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
       ))}
-    </tr>
-  </thead>,
-  <tbody key="body">
+    </Table.Tr>
+  </Table.Thead>,
+  <Table.TBody key="body">
     {Object.keys(Array.from(Array.from({ length: rows }))).map((r) => (
-      <tr key={r}>
+      <Table.Tr key={r}>
         {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
-          <td key={i}>{faker.company.catchPhraseDescriptor()}</td>
+          <Table.Td key={i}>{faker.company.catchPhraseDescriptor()}</Table.Td>
         ))}
-      </tr>
+      </Table.Tr>
     ))}
-  </tbody>,
+  </Table.TBody>,
+  <Table.TFoot key="footer">
+    <Table.Tr>
+      {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
+        <Table.Th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
+      ))}
+    </Table.Tr>
+  </Table.TFoot>,
 ];
 
 export default meta;
@@ -58,7 +65,7 @@ export const Normal: Story = {
 export const Scrollable: Story = {
   decorators: [
     (Story: () => React.ReactElement): React.ReactElement => (
-      <div style={{ height: "200px" }}>
+      <div style={{ height: "200px", width: "400px" }}>
         <Story />
       </div>
     ),

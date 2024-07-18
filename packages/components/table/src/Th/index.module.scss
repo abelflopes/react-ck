@@ -1,0 +1,24 @@
+@use "@react-ck/theme";
+
+.root {
+  text-align: start;
+}
+
+.sortable_header {
+  cursor: pointer;
+}
+
+.sort_icon {
+  display: inline-flex;
+  width: theme.get-spacing(2);
+  height: theme.get-spacing(2);
+  align-items: center;
+  justify-content: center;
+  margin-left: theme.get-spacing();
+  vertical-align: sub;
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+}

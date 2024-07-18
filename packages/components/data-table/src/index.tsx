@@ -1,10 +1,9 @@
 import React, { useCallback, useMemo, useState } from "react";
-import { Table, type TableProps } from "@react-ck/table";
+import { type SortMode, sortModes, Table, type TableProps } from "@react-ck/table";
 import * as CC from "change-case";
 import { stringFromObject } from "./utils/string-from-object";
-import { type SortCallback, type TableData, sortModes, type SortMode } from "./types";
+import { type SortCallback, type TableData } from "./types";
 import { sortData } from "./utils/sort-data";
-import { TableHead } from "./TableHead";
 
 // TODO: add pagination
 // TODO: add section table
@@ -104,10 +103,10 @@ export const DataTable = <T extends TableData>({
   return (
     <Table {...otherProps}>
       {Object.keys(computedHeaders).length > 0 && (
-        <thead>
-          <tr>
+        <Table.Thead>
+          <Table.Tr>
             {keys.map((key) => (
-              <TableHead
+              <Table.Th
                 key={key}
                 sorting={getHeadSorting(key)}
                 onClick={() => {
@@ -115,21 +114,21 @@ export const DataTable = <T extends TableData>({
                   defaultOnSort(key as keyof T[number]);
                 }}>
                 {computedHeaders[key]}
-              </TableHead>
+              </Table.Th>
             ))}
-          </tr>
-        </thead>
+          </Table.Tr>
+        </Table.Thead>
       )}
 
-      <tbody>
+      <Table.TBody>
         {sortedData.map((row) => (
-          <tr key={stringFromObject(row)}>
+          <Table.Tr key={stringFromObject(row)}>
             {keys.map((key) => (
-              <td key={key}>{row[key]}</td>
+              <Table.Td key={key}>{row[key]}</Table.Td>
             ))}
-          </tr>
+          </Table.Tr>
         ))}
-      </tbody>
+      </Table.TBody>
     </Table>
   );
 };

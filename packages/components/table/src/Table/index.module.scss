@@ -1,0 +1,108 @@
+@import "@react-ck/theme";
+@import "@react-ck/scss-utils";
+@import "@react-ck/text";
+
+@mixin sticky_headers {
+  thead td,
+  thead th {
+    @content;
+  }
+}
+
+@mixin sticky-column {
+  thead th:first-child,
+  thead td:first-child,
+  tbody td:first-child,
+  tfoot td:first-child,
+  tfoot th:first-child {
+    @content;
+  }
+}
+
+.root {
+  @include define-css-var(table, border-color, transparent);
+
+  box-sizing: border-box;
+  border: solid get-css-var(spacing, border) get-css-var(table, border-color);
+  border-radius: get-spacing(1);
+}
+
+.scrollable {
+  max-width: 100%;
+  max-height: 100%;
+
+  @include sticky-column {
+    position: sticky;
+    left: 0;
+    background-color: get-color(neutral-light-1);
+  }
+
+  @include sticky_headers {
+    position: sticky;
+    top: 0;
+    background-color: get-color(neutral-light-1-5) !important;
+    white-space: nowrap;
+
+    &:first-child {
+      z-index: 1;
+    }
+  }
+}
+
+.scrollable.bordered {
+  @include sticky_headers {
+    &::before {
+      position: absolute;
+      z-index: 1;
+      bottom: calc(#{get-css-var(spacing, border)} * -1);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: get-css-var(spacing, border);
+      background-color: get-css-var(table, border-color);
+      content: "";
+    }
+  }
+
+  @include sticky-column {
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: get-css-var(spacing, border);
+      height: 100%;
+      background-color: get-css-var(table, border-color);
+      content: "";
+    }
+  }
+}
+
+.bordered {
+  @include define-css-var(table, border-color, get-color(neutral-light-2));
+}
+
+.table {
+  @include text-base;
+
+  width: 100%;
+  border-radius: inherit;
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: get-spacing();
+
+    &:not(:last-child) {
+      border-right: solid get-css-var(spacing, border) get-css-var(table, border-color);
+    }
+  }
+
+  thead tr,
+  tr:not(:last-child) {
+    th,
+    td {
+      border-bottom: solid get-css-var(spacing, border) get-css-var(table, border-color);
+    }
+  }
+}
