@@ -1,5 +1,6 @@
 /* set font for components */
 #storybook-docs .sb-story,
+.sb-main-fullscreen,
 #storybook-root {
   font-family: Inter, serif;
   font-optical-sizing: auto;
