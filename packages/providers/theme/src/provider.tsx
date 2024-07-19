@@ -10,6 +10,7 @@ export interface ThemeProviderProps {
   target?: HTMLElement;
   theme?: Theme;
   children?: React.ReactNode | React.ReactNode[];
+  className?: string;
 }
 
 /**
@@ -23,6 +24,7 @@ export const ThemeProvider = ({
   target,
   theme = defaultTheme,
   children,
+  className,
 }: Readonly<ThemeProviderProps>): React.ReactElement => {
   const themeCssVariables = useMemo<React.CSSProperties>(
     () =>
@@ -45,18 +47,26 @@ export const ThemeProvider = ({
       target.style.setProperty(key, value);
     }
 
+    if (className) target.classList.add(className);
+
     return () => {
       // eslint-disable-next-line @typescript-eslint/unbound-method -- other approach would make code unnecessarily complex
       Object.keys(themeCssVariables).forEach(target.style.removeProperty);
+
+      if (className) target.classList.remove(className);
     };
-  }, [target, themeCssVariables]);
+  }, [className, target, themeCssVariables]);
 
   return (
     <ThemeContextProvider
       value={{
         theme,
       }}>
-      {!target && <div style={themeCssVariables}>{children}</div>}
+      {!target && (
+        <div style={themeCssVariables} className={className}>
+          {children}
+        </div>
+      )}
 
       {target ? children : null}
     </ThemeContextProvider>

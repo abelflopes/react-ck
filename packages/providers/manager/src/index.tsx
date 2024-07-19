@@ -5,10 +5,12 @@ import { LayersProvider, type LayersProviderProps } from "@react-ck/layers";
 /** Props for the Manager component  */
 export interface ManagerProps {
   /** Properties of the {@link ThemeProvider} */
-  theme?: Omit<ThemeProviderProps, "children">;
+  theme?: Omit<ThemeProviderProps, "children" | "className">;
   /** If true, renders app layers on document body instead of on same level of root element,
    * if set to false keep in mind that tit might affect positioning of floating elements */
   usePortal?: LayersProviderProps["usePortal"];
+  /** CSS class to apply in layer elements, use for for applying scoped generic styles such as font-family */
+  className?: LayersProviderProps["className"];
   /** Content slot */
   children: React.ReactNode;
 }
@@ -22,8 +24,11 @@ export const Manager = ({
   theme,
   children,
   usePortal = true,
+  className,
 }: Readonly<ManagerProps>): React.ReactElement => (
-  <ThemeProvider {...theme}>
-    <LayersProvider usePortal={usePortal}>{children}</LayersProvider>
+  <ThemeProvider {...theme} className={className}>
+    <LayersProvider usePortal={usePortal} className={className}>
+      {children}
+    </LayersProvider>
   </ThemeProvider>
 );

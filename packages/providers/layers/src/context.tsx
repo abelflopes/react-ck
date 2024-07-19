@@ -11,9 +11,11 @@ export interface LayersContextProps {
    * if set to false keep in mind that tit might affect positioning of floating elements */
   usePortal: boolean;
   createLayer: (data: LayerData) => () => void;
+  className?: string;
 }
 
 export const LayersContext = React.createContext<LayersContextProps>({
+  className: undefined,
   usePortal: true,
   createLayer: () => {
     throw new Error("Layers context not defined");
