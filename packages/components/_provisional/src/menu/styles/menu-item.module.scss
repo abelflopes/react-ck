@@ -15,7 +15,7 @@
 
   &:focus:not(.disabled),
   &:hover:not(.disabled) {
-    background-color: theme.get-color(neutral-light-2);
+    background-color: theme.get-color(neutral-light-1-5);
     color: currentcolor;
   }
 
