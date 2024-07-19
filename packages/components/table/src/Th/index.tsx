@@ -24,19 +24,23 @@ export const Th = ({
     <span className={styles.content}>
       {children}
 
-      <span className={styles.sort_icon}>
-        {sorting === "asc" && (
-          <Icon>
-            <IconChevronUp />
-          </Icon>
-        )}
+      {sorting}
 
-        {sorting === "desc" && (
-          <Icon>
-            <IconChevronDown />
-          </Icon>
-        )}
-      </span>
+      {sorting ? (
+        <span className={styles.sort_icon}>
+          {sorting === "asc" && (
+            <Icon>
+              <IconChevronUp />
+            </Icon>
+          )}
+
+          {sorting === "desc" && (
+            <Icon>
+              <IconChevronDown />
+            </Icon>
+          )}
+        </span>
+      ) : null}
     </span>
   </th>
 );
