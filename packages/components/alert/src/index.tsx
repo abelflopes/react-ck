@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import { Text } from "@react-ck/text";
@@ -13,11 +13,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   skin?: "neutral" | "primary" | "negative" | "average" | "positive";
   /** Structural variation of the alert */
   variation?: "default" | "compact";
-  /** Determines if the alert can be dismissed by clicking on the close button  */
-  dismissable?: boolean;
-  /** Defines if the alert is open */
-  open?: boolean;
-  /** Close handler */
+  /** Close handle, also renders a close icon when defined  */
   onDismiss?: () => void;
   /** Automatically dismiss after a given timeout */
   autoDismiss?: number;
@@ -33,8 +29,6 @@ export const Alert = ({
   heading,
   skin = "neutral",
   variation = "default",
-  dismissable,
-  open = true,
   onDismiss,
   autoDismiss,
   children,
@@ -42,7 +36,6 @@ export const Alert = ({
   ...otherProps
 }: Readonly<AlertProps>): React.ReactNode => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout | typeof clearTimeout>>(undefined);
-  const [computedOpen, setComputedOpen] = useState(open);
 
   useEffect(() => {
     if (autoDismiss === undefined) return;
@@ -57,23 +50,13 @@ export const Alert = ({
     removeTimeout();
 
     timeoutRef.current = setTimeout(() => {
-      setComputedOpen(false);
+      onDismiss?.();
     }, autoDismiss);
 
     return removeTimeout;
-  }, [autoDismiss]);
+  }, [autoDismiss, onDismiss]);
 
-  useEffect(() => {
-    setComputedOpen(open);
-  }, [open]);
-
-  useEffect(() => {
-    if (computedOpen === open || !onDismiss) return;
-
-    if (!computedOpen) onDismiss();
-  }, [computedOpen, onDismiss, open]);
-
-  return computedOpen ? (
+  return (
     <div
       {...otherProps}
       className={classNames(
@@ -92,7 +75,7 @@ export const Alert = ({
         {children}
       </div>
 
-      {dismissable ? (
+      {onDismiss ? (
         <Button
           size={variation === "compact" ? "xs" : "s"}
           skin="ghost"
@@ -102,10 +85,10 @@ export const Alert = ({
             </Icon>
           }
           onClick={() => {
-            setComputedOpen(false);
+            onDismiss();
           }}
         />
       ) : null}
     </div>
-  ) : null;
+  );
 };
