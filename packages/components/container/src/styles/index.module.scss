@@ -3,6 +3,7 @@
 @import "@react-ck/scss-utils";
 
 .root {
+  width: 100%; // when inside flex
   max-width: get-css-var(container, max-width);
   box-sizing: border-box;
   padding: get-css-var(container, spacing-y) get-css-var(container, spacing-x);
