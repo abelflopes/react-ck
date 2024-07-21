@@ -21,4 +21,8 @@ $alert-styles: (
     background-color: theme.get-color(status-positive-light),
     color: theme.get-color(status-positive-dark),
   ),
+  info: (
+    background-color: theme.get-color(status-info-light),
+    color: theme.get-color(status-info-dark),
+  ),
 );

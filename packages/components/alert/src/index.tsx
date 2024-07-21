@@ -10,7 +10,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Main title of the alert */
   heading?: string;
   /** Specifies the visual style of the alert  */
-  skin?: "neutral" | "primary" | "negative" | "average" | "positive";
+  skin?: "neutral" | "primary" | "negative" | "average" | "positive" | "info";
   /** Structural variation of the alert */
   variation?: "default" | "compact";
   /** Close handle, also renders a close icon when defined  */

@@ -4,7 +4,7 @@ import React from "react";
 
 export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Specifies the visual style of the chip  */
-  skin?: "neutral" | "primary" | "negative" | "average" | "positive";
+  skin?: "neutral" | "primary" | "negative" | "average" | "positive" | "info";
 }
 
 /**

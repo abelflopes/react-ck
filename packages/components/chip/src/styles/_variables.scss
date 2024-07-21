@@ -17,6 +17,10 @@ $chip-styles: (
   ),
   positive: (
     background-color: get-color(status-positive-light),
-    color: get-color(status-positive-dark),
+    color: get-color(status-positive),
+  ),
+  info: (
+    background-color: get-color(status-info-light),
+    color: get-color(status-info),
   ),
 );

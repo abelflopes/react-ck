@@ -4,16 +4,13 @@
 
 .root {
   @include text-base;
+  @include text-variation(small);
 
   display: inline-flex;
-  padding: 4px 8px;
-  border-radius: 8px;
+  padding: get-spacing(0.5) get-spacing();
+  border-radius: get-spacing(2);
   background-color: get-css-var(chip, background-color);
   color: get-css-var(chip, color);
-  // TODO: text variation
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 18px;
   white-space: nowrap;
 }
 

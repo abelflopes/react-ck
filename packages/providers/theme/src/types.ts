@@ -25,6 +25,9 @@ export interface Theme {
     "status-negative-light": string;
     "status-negative": string;
     "status-negative-dark": string;
+    "status-info-light": string;
+    "status-info": string;
+    "status-info-dark": string;
     "overlay-light": string;
     "overlay-dark": string;
   };
