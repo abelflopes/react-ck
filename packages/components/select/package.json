@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/select",
   "private": false,
-  "version": "1.5.3",
+  "version": "1.5.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -35,7 +35,7 @@
   "dependencies": {
     "@react-ck/empty-state": "^1.2.2",
     "@react-ck/input": "^1.4.11",
-    "@react-ck/provisional": "^3.8.0",
+    "@react-ck/provisional": "^3.8.1",
     "@react-ck/react-utils": "^1.3.6",
     "@react-ck/scss-utils": "^1.1.10",
     "@react-ck/text": "^1.5.13",

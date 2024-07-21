@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.8.0...@react-ck/provisional@3.8.1) (2024-07-21)
+
+
+### Bug Fixes
+
+* remove files list from file uploader ([aa9effb](https://github.com/abelflopes/react-ck/commit/aa9effb5742d698c9c6258ee975f6ca14f5f3df4))
+* wrong type exports from provisional package ([36e95c6](https://github.com/abelflopes/react-ck/commit/36e95c6a48ba3406fd653fcac54bedfe3576e690))
+
+
+
 ## [3.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.7.4...@react-ck/provisional@3.8.0) (2024-07-21)
 
 
