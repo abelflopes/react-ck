@@ -1,7 +1,6 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
 
-$bg: theme.get-color(neutral-light-1-5);
 $padding: theme.get-spacing(4);
 
 .root {
@@ -12,22 +11,16 @@ $padding: theme.get-spacing(4);
   align-items: center;
   justify-content: center;
   padding: $padding;
-  border: solid theme.get-css-var(spacing, border) $bg;
+  border: dashed theme.get-css-var(spacing, border) theme.get-color(highlight-primary);
   border-radius: theme.get-spacing(1);
-  background: $bg;
-  gap: theme.get-spacing(2);
-
-  // TODO: focus mixin
-  outline: solid theme.get-css-var(spacing, border) transparent;
   transition-duration: 0.3s;
-  transition-property: outline, outline-offset;
+  transition-property: background-color;
   transition-timing-function: ease;
 
   &:not(.disabled):hover,
   &:not(.disabled):focus-within {
-    // TODO: focus mixin
-    outline: dashed theme.get-css-var(spacing, border) theme.get-color(highlight-primary);
-    outline-offset: theme.get-spacing(0.5);
+    border-style: solid;
+    background-color: theme.get-color(highlight-primary-light);
   }
 }
 

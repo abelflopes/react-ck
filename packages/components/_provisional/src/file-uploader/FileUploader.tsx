@@ -19,7 +19,6 @@ export interface FileUploaderProps
   skin?: "default" | "negative" | "disabled";
   variation?: "default" | "square";
   icon?: React.ReactNode;
-  cta?: React.ReactNode;
   description?: React.ReactNode;
   inputProps?: Omit<React.InputHTMLAttributes<HTMLInputElement>, "type">;
   buttonProps?: ButtonProps;
@@ -37,7 +36,6 @@ export const FileUploader = ({
   skin = "default",
   variation = "default",
   icon,
-  cta,
   description,
   validationMessage,
   className,
@@ -51,7 +49,7 @@ export const FileUploader = ({
   const inputRef = useRef<HTMLInputElement>(null);
   const [filesList, setFilesList] = useState<string[]>([]);
 
-  const isIconOnly = useMemo(() => Boolean(icon) && !cta && !description, [cta, description, icon]);
+  const isIconOnly = useMemo(() => Boolean(icon) && !description, [description, icon]);
 
   const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
     if (e.code === "Enter") inputRef.current?.click();
@@ -95,12 +93,15 @@ export const FileUploader = ({
           inputProps?.onKeyUp?.(e);
         }}
       />
+
       {!isIconOnly && icon}
+
       {children ? <div className={styles.content}>{children}</div> : null}
-      {isIconOnly || cta ? (
+
+      {isIconOnly ? (
         <Button
           {...buttonProps}
-          icon={isIconOnly ? icon : null}
+          icon={icon}
           disabled={skin === "disabled" || buttonProps?.disabled}
           className={classNames(styles.button, buttonProps?.className)}
           onKeyUp={(e) => {
@@ -110,14 +111,17 @@ export const FileUploader = ({
           onClick={(e) => {
             inputRef.current?.click();
             buttonProps?.onClick?.(e);
-          }}>
-          {cta}
-        </Button>
+          }}
+        />
       ) : null}
 
       {description || validationMessage ? (
         <div className={styles.details}>
-          {description ? <Text variation="small">{description}</Text> : null}
+          {description ? (
+            <Text variation="small" skin="soft">
+              {description}
+            </Text>
+          ) : null}
           {validationMessage ? (
             <Text variation="small" className={styles.validation_message}>
               {validationMessage}
