@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ModalContext, type ModalContextProps, type ModalContextValue } from "./context";
-import { Overlay } from "@react-ck/overlay";
+import { Overlay, type OverlayProps } from "@react-ck/overlay";
 import { Icon } from "@react-ck/icon";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
 import { Button } from "@react-ck/button";
@@ -17,7 +17,7 @@ import { ModalFooter } from "./ModalFooter";
  * Extends React.HTMLAttributes<HTMLDivElement> to inherit HTMLDivElement attributes.
  */
 
-interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ModalProps extends Omit<OverlayProps, "blur" | "skin"> {
   /** Modal width */
   size?: "s" | "m" | "l" | "xl" | "full";
   /** Determines whether the modal is open or closed */
@@ -77,15 +77,24 @@ const Modal = ({
     };
   }, []);
 
+  /* eslint-disable jsx-a11y/no-static-element-interactions  -- used only to stop click propagation on modal card*/
+  /* eslint-disable jsx-a11y/click-events-have-key-events  -- used only to stop click propagation on modal card* */
+
   return (
     <Layer elevation="overlay">
-      <div {...otherProps} className={classNames(styles.root, className)}>
-        <Overlay
-          className={classNames(onDismiss && styles.clickable_overlay)}
-          onClick={onDismiss}
-        />
-
-        <div className={classNames(styles.card, `${styles[`size_${size}`]}`)}>
+      <Overlay
+        {...otherProps}
+        className={classNames(styles.root, onDismiss && styles.clickable_overlay, className)}
+        blur
+        onClick={(e) => {
+          onDismiss?.();
+          otherProps.onClick?.(e);
+        }}>
+        <div
+          className={classNames(styles.card, `${styles[`size_${size}`]}`)}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}>
           <ModalContext.Provider value={contextProps}>
             {props.header ? (
               <header
@@ -119,9 +128,11 @@ const Modal = ({
             ) : null}
           </ModalContext.Provider>
         </div>
-      </div>
+      </Overlay>
     </Layer>
   );
+  /* eslint-enable jsx-a11y/no-static-element-interactions */
+  /* eslint-enable jsx-a11y/click-events-have-key-events */
 };
 
 Modal.Header = ModalHeader;
