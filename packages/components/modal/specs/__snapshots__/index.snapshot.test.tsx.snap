@@ -2,14 +2,12 @@
 
 exports[`snapshot Modal renders correctly 1`] = `
 <div
-  className="root"
+  className="root dark blur root"
+  onClick={[Function]}
 >
   <div
-    className="root dark clickable_overlay"
+    className="card size_m"
     onClick={[Function]}
-  />
-  <div
-    className="card"
   >
     <header
       className="header"
@@ -20,38 +18,9 @@ exports[`snapshot Modal renders correctly 1`] = `
       >
         Heading
       </p>
-      <button
-        className="root ghost size-m icon-only"
-        onClick={[Function]}
-      >
-        <span
-          className="root size_text skin_default"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3,3 L21,21 M3,21 L21,3"
-              fill="none"
-              strokeWidth="2"
-            />
-          </svg>
-        </span>
-      </button>
     </header>
     <div
-      className="root"
+      className="content root"
       onScroll={[Function]}
       style={
         {

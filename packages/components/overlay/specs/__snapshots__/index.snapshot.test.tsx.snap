@@ -2,6 +2,6 @@
 
 exports[`snapshot Overlay renders correctly 1`] = `
 <div
-  className="root dark"
+  className="root dark blur"
 />
 `;
