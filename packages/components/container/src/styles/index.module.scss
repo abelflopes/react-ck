@@ -12,16 +12,10 @@
 
 // Container size
 
-.size_l {
-  @include define-css-var(container, max-width, shared.$container-width-large);
-}
-
-.size_m {
-  @include define-css-var(container, max-width, shared.$container-width-medium);
-}
-
-.size_s {
-  @include define-css-var(container, max-width, shared.$container-width-small);
+@each $key, $value in shared.$container-sizes {
+  .size_#{$key} {
+    @include define-css-var(container, max-width, $value);
+  }
 }
 
 // Container Spacing Vertical

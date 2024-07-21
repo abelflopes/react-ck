@@ -18,15 +18,17 @@ import { ModalFooter } from "./ModalFooter";
  */
 
 interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Modal width */
+  size?: "s" | "m" | "l" | "xl" | "full";
   /** Determines whether the modal is open or closed */
   open?: boolean;
-  /** Determines if the modal can be dismissed by clicking outside or close button  */
-  dismissible?: boolean;
+  /** Dismiss Callback, also determines if the modal can be dismissed by clicking outside or close button  */
   onDismiss?: () => void;
 }
 
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-modal-dialog-with-a-portal
 
+// TODO: create scroll lock utility
 let openModals = 0;
 
 /**
@@ -37,16 +39,12 @@ let openModals = 0;
  */
 
 const Modal = ({
-  open = true,
-  dismissible = true,
+  size = "m",
   children,
   className,
   onDismiss,
   ...otherProps
 }: Readonly<ModalProps>): React.ReactNode => {
-  // Internal open state, allows component to be uncontrolled
-  const [internalOpen, setInternalOpen] = useState(open);
-
   // State child compound components' props
   const [props, setProps] = useState<ModalContextValue>({
     header: undefined,
@@ -58,13 +56,6 @@ const Modal = ({
     setProps((v) => ({ ...v, ...value }));
   }, []);
 
-  // Close callback
-  const handleClose = useCallback(() => {
-    if (!dismissible) return;
-    setInternalOpen(false);
-    onDismiss?.();
-  }, [dismissible, onDismiss]);
-
   // Build context for child compound components
   const contextProps = useMemo<ModalContextProps>(
     () => ({
@@ -73,68 +64,63 @@ const Modal = ({
     [setContextValue],
   );
 
-  // Synchronize internal state with external state
-  useEffect(() => {
-    setInternalOpen(open);
-
-    if (!open) onDismiss?.();
-  }, [onDismiss, open]);
-
   // Lock scroll if there are open modals
   useEffect(() => {
-    if (internalOpen) openModals += 1;
-    else openModals -= 1;
+    openModals += 1;
 
     if (openModals > 1) document.body.classList.add(`${styles.lock_scroll}`);
-    else document.body.classList.remove(`${styles.lock_scroll}`);
-  }, [internalOpen]);
+
+    return () => {
+      openModals -= 1;
+
+      if (openModals === 0) document.body.classList.remove(`${styles.lock_scroll}`);
+    };
+  }, []);
 
   return (
-    internalOpen && (
-      <Layer elevation="overlay">
-        <div {...otherProps} className={classNames(styles.root, className)}>
-          <Overlay
-            className={classNames(dismissible && styles.clickable_overlay)}
-            onClick={handleClose}
-          />
+    <Layer elevation="overlay">
+      <div {...otherProps} className={classNames(styles.root, className)}>
+        <Overlay
+          className={classNames(onDismiss && styles.clickable_overlay)}
+          onClick={onDismiss}
+        />
 
-          <div className={styles.card}>
-            <ModalContext.Provider value={contextProps}>
-              {props.header ? (
-                <header
-                  {...props.header}
-                  className={classNames(styles.header, props.header.className)}>
-                  <Text variation="h3" as="p" margin="none">
-                    {props.header.heading}
-                  </Text>
+        <div className={classNames(styles.card, `${styles[`size_${size}`]}`)}>
+          <ModalContext.Provider value={contextProps}>
+            {props.header ? (
+              <header
+                {...props.header}
+                className={classNames(styles.header, props.header.className)}>
+                <Text variation="h3" as="p" margin="none">
+                  {props.header.heading}
+                </Text>
 
-                  {dismissible ? (
-                    <Button
-                      skin="ghost"
-                      icon={
-                        <Icon>
-                          <IconClose />
-                        </Icon>
-                      }
-                      onClick={handleClose}
-                    />
-                  ) : null}
-                </header>
-              ) : null}
+                {onDismiss ? (
+                  <Button
+                    skin="ghost"
+                    icon={
+                      <Icon>
+                        <IconClose />
+                      </Icon>
+                    }
+                    onClick={onDismiss}
+                  />
+                ) : null}
+              </header>
+            ) : null}
 
-              <ScrollableContainer>{children}</ScrollableContainer>
+            <ScrollableContainer>{children}</ScrollableContainer>
 
-              {props.footer ? (
-                <footer
-                  {...props.footer}
-                  className={classNames(styles.footer, props.footer.className)}
-                />
-              ) : null}
-            </ModalContext.Provider>
-          </div>
+            {props.footer ? (
+              <footer
+                {...props.footer}
+                className={classNames(styles.footer, props.footer.className)}
+              />
+            ) : null}
+          </ModalContext.Provider>
         </div>
-      </Layer>
-    )
+      </div>
+    </Layer>
   );
 };
 

@@ -1,5 +1,5 @@
-$container-width-large: 1300px;
-
-$container-width-medium: 800px;
-
-$container-width-small: 450px;
+$container-sizes: (
+  s: 450px,
+  m: 800px,
+  l: 1300px,
+);
