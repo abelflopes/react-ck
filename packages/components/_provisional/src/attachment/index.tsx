@@ -2,24 +2,27 @@ import styles from "./styles/index.module.scss";
 import React from "react";
 import classNames from "classnames";
 import { Button } from "@react-ck/button";
-import { Image } from "../image";
-import { Icon } from "@react-ck/icon";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
+import { Icon } from "@react-ck/icon/src";
+import { IconDocument } from "@react-ck/icon/icons/IconDocument";
+import { IconAttach } from "@react-ck/icon/icons/IconAttach";
 
 export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
-  image?: string;
+  size?: "m" | "l";
+  skin?: "default" | "pdf" | "doc";
+  fullWidth?: boolean;
   name: string;
   format: string;
-  icon?: React.ReactNode;
   onRemove?: () => void;
   error?: React.ReactNode;
 }
 
 export const Attachment = ({
-  image,
+  size = "m",
+  skin = "default",
+  fullWidth,
   name,
   format,
-  icon,
   onRemove,
   error,
   className,
@@ -28,20 +31,24 @@ export const Attachment = ({
   <div
     {...otherProps}
     className={classNames(
-      image ? styles.root_image : styles.root,
+      styles.root,
       onRemove && styles.removable,
+      fullWidth && styles.full_width,
+      styles[`size_${size}`],
       className,
     )}>
-    {image ? <Image alt={name} src={image} className={styles.image} /> : null}
+    <span className={classNames(styles.icon, styles[`icon_${skin}`])}>
+      <Icon>
+        {skin === "default" && <IconAttach />}
+        {skin === "doc" && <IconDocument />}
+        {skin === "pdf" && <IconDocument />}
+      </Icon>
+    </span>
 
-    {icon ? <span className={styles.icon}>{icon}</span> : null}
-
-    {!image && (
-      <div className={styles.content}>
-        <span>{name}</span>
-        <span>{format}</span>
-      </div>
-    )}
+    <div className={styles.content}>
+      <span>{name}</span>
+      <span className={styles.format}>{format}</span>
+    </div>
 
     {error ? <span className={styles.error}>{error}</span> : null}
 

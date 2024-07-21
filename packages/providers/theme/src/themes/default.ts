@@ -35,6 +35,9 @@ export const defaultTheme: Theme = {
     "status-info-dark": "#0950c3",
     "overlay-light": "rgba(255,255,255, .4)",
     "overlay-dark": "rgba(0,0,0,.2)",
+    "misc-1": "#F28B82",
+    "misc-2": "#FF8EA2",
+    "misc-3": "#7EC9FF",
   },
   font: {
     "family": "system-ui, sans-serif",

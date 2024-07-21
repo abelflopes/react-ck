@@ -19,17 +19,18 @@ $spacing: theme.get-spacing();
   gap: $spacing;
 }
 
-.removable {
+.full_width {
+  width: 100%;
+}
+
+.size_m {
   padding-right: theme.get-spacing(4);
 }
 
-.root_image {
-  @include card.base;
-
-  position: relative;
-  width: $size;
-  height: $size;
-  background-color: theme.get-color(neutral-dark-5);
+.size_l {
+  flex-direction: column;
+  padding: theme.get-spacing(2) theme.get-spacing(4);
+  text-align: center;
 }
 
 .content {
@@ -37,23 +38,14 @@ $spacing: theme.get-spacing();
   flex-direction: column;
 }
 
+.format {
+  color: theme.get-color(neutral-dark-1);
+}
+
 .close {
   position: absolute;
   top: calc(#{$spacing} * 0.5);
   right: calc(#{$spacing} * 0.5);
-}
-
-.image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: card.$border-radius;
-}
-
-.removable .image {
-  opacity: 0.5;
 }
 
 .error {
@@ -69,6 +61,17 @@ $spacing: theme.get-spacing();
   justify-content: center;
   padding: theme.get-spacing();
   border-radius: 50%;
-  background-color: theme.get-color(highlight-primary);
   color: theme.get-color(neutral-light-1);
+}
+
+.icon_default {
+  background-color: theme.get-color(highlight-primary);
+}
+
+.icon_doc {
+  background-color: theme.get-color(misc-3);
+}
+
+.icon_pdf {
+  background-color: theme.get-color(misc-2);
 }

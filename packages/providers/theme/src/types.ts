@@ -30,6 +30,9 @@ export interface Theme {
     "status-info-dark": string;
     "overlay-light": string;
     "overlay-dark": string;
+    "misc-1": string;
+    "misc-2": string;
+    "misc-3": string;
   };
   font: {
     "family": string;
