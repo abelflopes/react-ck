@@ -1,10 +1,5 @@
 import React from "react";
-import { type ElementCreator, type Item } from "./types";
-
-export interface SnackbarContextProps {
-  add: (elementCreator: ElementCreator) => Item["id"];
-  remove: (id: Item["id"]) => void;
-}
+import { type SnackbarContextProps } from "./types";
 
 export const SnackbarContext = React.createContext<SnackbarContextProps>({
   add: () => {
