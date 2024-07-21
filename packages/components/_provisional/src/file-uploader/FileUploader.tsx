@@ -1,5 +1,5 @@
 import styles from "./styles/index.module.scss";
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef } from "react";
 import classNames from "classnames";
 import { Text } from "@react-ck/text";
 import { Button, type ButtonProps } from "@react-ck/button";
@@ -47,8 +47,6 @@ export const FileUploader = ({
   ...otherProps
 }: Readonly<FileUploaderProps>): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [filesList, setFilesList] = useState<string[]>([]);
-
   const isIconOnly = useMemo(() => Boolean(icon) && !description, [description, icon]);
 
   const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
@@ -62,10 +60,6 @@ export const FileUploader = ({
       const fileList = readFileList(e.target.files, onProgress);
 
       onChange?.(e, fileList);
-
-      void (async (): Promise<void> => {
-        setFilesList((await fileList).map((i) => i.name));
-      })();
 
       inputProps?.onChange?.(e);
     },
@@ -129,17 +123,6 @@ export const FileUploader = ({
           ) : null}
         </div>
       ) : null}
-
-      {!isIconOnly && filesList.length > 0 && (
-        <Text variation="small" className={styles.details}>
-          {filesList.map((i, k) => (
-            <React.Fragment key={i}>
-              {k !== 0 && <br />}
-              {i}
-            </React.Fragment>
-          ))}
-        </Text>
-      )}
     </div>
   );
 };
