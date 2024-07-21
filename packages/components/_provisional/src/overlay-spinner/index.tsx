@@ -5,7 +5,7 @@ import { Overlay, type OverlayProps } from "@react-ck/overlay";
 import { Spinner } from "@react-ck/spinner";
 import { OverlaySpinnerContainer } from "./Container";
 
-interface OverlaySpinnerProps extends Omit<OverlayProps, "children"> {
+interface OverlaySpinnerProps extends OverlayProps {
   active?: boolean;
 }
 
