@@ -1,3 +1,16 @@
+## [3.18.0](https://github.com/abelflopes/react-ck/compare/v3.17.0...v3.18.0) (2024-07-21)
+
+
+### Features
+
+* **react-ck:** global library package ([5b2db98](https://github.com/abelflopes/react-ck/commit/5b2db98ba389b1807bfe1be21643ccb4d41e2b40))
+
+
+### Bug Fixes
+
+* remove files list from file uploader ([aa9effb](https://github.com/abelflopes/react-ck/commit/aa9effb5742d698c9c6258ee975f6ca14f5f3df4))
+* wrong type exports from provisional package ([36e95c6](https://github.com/abelflopes/react-ck/commit/36e95c6a48ba3406fd653fcac54bedfe3576e690))
+
 ## [3.17.0](https://github.com/abelflopes/react-ck/compare/v3.16.0...v3.17.0) (2024-07-21)
 
 
