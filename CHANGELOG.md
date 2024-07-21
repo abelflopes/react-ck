@@ -1,3 +1,33 @@
+## [3.17.0](https://github.com/abelflopes/react-ck/compare/v3.16.0...v3.17.0) (2024-07-21)
+
+
+### Features
+
+* add duration to auto dismiss snackbar item ([44c4ebc](https://github.com/abelflopes/react-ck/commit/44c4ebc478828fa4a65c949e205bde3fefae4b15))
+* allow adding a classname to layers ([4f61041](https://github.com/abelflopes/react-ck/commit/4f610412ee148ae36ea06370ce8c9189d759b7d5))
+* modal sizes ([33a7126](https://github.com/abelflopes/react-ck/commit/33a7126554ff5a6a6744ce3e47ac5e2c3df388c2))
+* **react-ck:** global library package ([09bb28c](https://github.com/abelflopes/react-ck/commit/09bb28c543123163a989d36db927ea2f53fbe8e0))
+* update attachment component ([4e12d7d](https://github.com/abelflopes/react-ck/commit/4e12d7d2812354f6235c6fdd25cb71714f5321f0))
+* update file uploader styles ([ae1c0f3](https://github.com/abelflopes/react-ck/commit/ae1c0f3c1e916833f0a9138dc3aef4ebe861185b))
+
+
+### Bug Fixes
+
+* adjust status colors ([04001d9](https://github.com/abelflopes/react-ck/commit/04001d9a6d0b7e363535d85a0c4159e1e3c2ac55))
+* allow children in overlay spinner ([481413f](https://github.com/abelflopes/react-ck/commit/481413f229fa8ad1f659425c70deec595549bc10))
+* container size inside flex elements ([69f2233](https://github.com/abelflopes/react-ck/commit/69f2233a38fd804bb195856ab665f541d066c7a5))
+* menu item hover color ([a884ff1](https://github.com/abelflopes/react-ck/commit/a884ff154577abfd0a44f62d58851cc64bb9a439))
+* modal scrollable container cutting elements ([3d33fd4](https://github.com/abelflopes/react-ck/commit/3d33fd4346d5d1ccc494a533f02a37389912c499))
+* reserve spacing for sorting icon only when using sorting ([01ccd93](https://github.com/abelflopes/react-ck/commit/01ccd93ca0afae6703b995caadecb330570f3bb4))
+* simplify alert interface and state ([6ba53a8](https://github.com/abelflopes/react-ck/commit/6ba53a8882200d614a9541136e63d544e6e35ec0))
+
+
+### Code Refactoring
+
+* apply blur from overlay ([d5142dc](https://github.com/abelflopes/react-ck/commit/d5142dc7aa76fd0d7d8c43f6e9f0c208b6dab1e5))
+* use overlay as modal root element ([7edd8f5](https://github.com/abelflopes/react-ck/commit/7edd8f56e7d45056aa039f1e6e4e149c32d5d2db))
+* use scss scoped imports ([c2356cc](https://github.com/abelflopes/react-ck/commit/c2356ccdbb731220cc26f7bfa945dd1203519be5))
+
 ## [3.16.0](https://github.com/abelflopes/react-ck/compare/v3.15.0...v3.16.0) (2024-07-18)
 
 
