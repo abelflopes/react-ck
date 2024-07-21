@@ -35,6 +35,9 @@ function asPackageJson(value: unknown): PackageJson {
   return value;
 }
 
+const errors: string[] = [];
+const warnings: string[] = [];
+
 // Get packages
 
 logger.info("Finding packages...");
@@ -53,8 +56,11 @@ const parsedPackages = find.map((packagePath) => {
     JSON.parse(fs.readFileSync(packagePath, "utf-8")),
   );
 
+  const filesList = globSync(path.resolve(folder, "**/*"));
+  const sourceFilesList = filesList.filter((i) => i.includes(path.resolve(folder, "/src")));
+
   return {
-    path: packagePath,
+    packagePath,
     folder,
     name,
     version,
@@ -62,55 +68,61 @@ const parsedPackages = find.map((packagePath) => {
     types,
     sass,
     files,
+    filesList,
+    sourceFilesList,
   };
 });
 
-logger.debug("Parsed packages", parsedPackages);
-
 // Throw error if files configuration does not match the dist fields
-parsedPackages.forEach(({ path, types, main, sass, files }) => {
-  const distFiles = [main, types, sass];
+parsedPackages.forEach(
+  ({ packagePath, types, main, sass, files, folder, name, sourceFilesList }) => {
+    const distFiles = { main, types, sass };
 
-  if (
-    distFiles.some(
-      (i) => i && !files?.some((f) => stripSpecialChars(i).includes(stripSpecialChars(f))),
+    Object.entries(distFiles)
+      .filter(([, value]) => Boolean(value))
+      .forEach(([key, value]) => {
+        const p = path.resolve(folder, String(value));
+        if (!fs.existsSync(p)) errors.push(`missing "${key}" file mentioned in ${packagePath}`);
+      });
+
+    if (
+      Object.values(distFiles).some(
+        (i) => i && !files?.some((f) => stripSpecialChars(i).includes(stripSpecialChars(f))),
+      )
     )
-  )
-    throw new Error(`Misconfigured package, missing folders in "files" property: ${path}`);
-});
+      errors.push(`Misconfigured package, missing folders in "files" property: ${packagePath}`);
 
-logger.warn(
-  "Packages without type exports: ",
-  parsedPackages
-    .filter((i) => !i.types)
-    .map((i) => i.name)
-    .join(""),
+    if (sourceFilesList.some((i) => i.includes(".ts")) && !main)
+      warnings.push(`Package "${name}" has no main exports`);
+
+    if (sourceFilesList.some((i) => i.includes(".ts")) && !types)
+      warnings.push(`Package "${name}" has no types exports`);
+
+    if (sourceFilesList.some((i) => i.includes(".scss")) && !sass)
+      warnings.push(`Package "${name}" has no sass exports`);
+  },
 );
 
-logger.warn(
-  "Packages without style exports:",
-  parsedPackages
-    .filter((i) => !i.sass)
-    .map((i) => i.name)
-    .join(" "),
-);
+if (warnings.length) logger.warn(warnings.join("\n"));
+
+if (errors.length) {
+  logger.error(errors.join("\n"));
+
+  throw new Error(errors.join("\n"));
+}
 
 // Install packages
 
 const currPackage = asPackageJson(JSON.parse(fs.readFileSync(currPackagePath, "utf-8")));
-
 const packagesToRemove = Object.keys(currPackage.dependencies ?? {});
-
 const uninstallCommand = `npm uninstall --save ${packagesToRemove.map((name) => name).join(" ")}`;
+const packagesToInstall = parsedPackages.map(({ name, version }) => `${name}@^${version}`);
+const installCommand = `npm i --save ${packagesToInstall.join(" ")}`;
 
 if (packagesToRemove.length) {
   logger.debug("Uninstalling previous packages", packagesToRemove);
   execSync(uninstallCommand, { stdio: "inherit" });
 }
-
-const packagesToInstall = parsedPackages.map(({ name, version }) => `${name}@^${version}`);
-
-const installCommand = `npm i --save ${packagesToInstall.join(" ")}`;
 
 logger.info("Installing packages", packagesToInstall);
 
