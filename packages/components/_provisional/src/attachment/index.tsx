@@ -3,7 +3,7 @@ import React from "react";
 import classNames from "classnames";
 import { Button } from "@react-ck/button";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
-import { Icon } from "@react-ck/icon/src";
+import { Icon } from "@react-ck/icon";
 import { IconDocument } from "@react-ck/icon/icons/IconDocument";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
 

@@ -40,10 +40,10 @@ export const Image = ({
     <>
       {!shouldDisplay && <Skeleton className={className} />}
       <img
+        alt={alt}
         className={classNames(className, styles.root, {
           [`${styles.fullwidth}`]: fullWidth,
         })}
-        alt={alt}
         onLoad={computedOnLoad}
         onError={computedOnError}
         {...otherProps}
