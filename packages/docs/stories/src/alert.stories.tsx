@@ -33,15 +33,21 @@ export const Basic: Story = {
 
 export const WithTitle: Story = {
   args: {
+    ...Basic.args,
     heading: faker.lorem.sentence({ min: 2, max: 5 }),
-    children: faker.lorem.sentence({ min: 4, max: 10 }),
+  },
+};
+
+export const Dismissable: Story = {
+  args: {
+    ...WithTitle.args,
+    onDismiss: () => undefined,
   },
 };
 
 export const compact: Story = {
   args: {
-    ...WithTitle.args,
-    dismissable: true,
+    ...Dismissable.args,
     variation: "compact",
   },
 };

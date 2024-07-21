@@ -48,4 +48,12 @@ These colors are carefully curated to maintain a cohesive and visually appealing
       Object.entries(defaultTheme.color).filter(([k]) => k.includes("overlay")),
     )}
   />
+
+  <ColorItem
+    title="Misc"
+    subtitle="Miscellaneous colors"
+    colors={Object.fromEntries(
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("misc")),
+    )}
+  />
 </ColorPalette>

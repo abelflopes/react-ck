@@ -14,19 +14,22 @@ const MyComponent = (): React.ReactElement => {
 
   const handleButtonClick = useCallback(
     () =>
-      snackbar.add((id) => (
-        <Card skin="shadowed">
-          {faker.lorem.sentences()}
-          &nbsp;
-          <Button
-            size="xs"
-            onClick={() => {
-              snackbar.remove(id);
-            }}>
-            Remove
-          </Button>
-        </Card>
-      )),
+      snackbar.add(
+        (id) => (
+          <Card skin="shadowed">
+            {faker.lorem.sentences()}
+            &nbsp;
+            <Button
+              size="xs"
+              onClick={() => {
+                snackbar.remove(id);
+              }}>
+              Remove
+            </Button>
+          </Card>
+        ),
+        { duration: 1000 },
+      ),
     [snackbar],
   );
 
@@ -37,7 +40,6 @@ const MyComponent = (): React.ReactElement => {
       snackbar.add((id) => (
         <Alert
           heading={faker.lorem.sentence()}
-          dismissable
           onDismiss={() => {
             snackbar.remove(id);
           }}>
@@ -52,7 +54,6 @@ const MyComponent = (): React.ReactElement => {
         <Alert
           skin="average"
           autoDismiss={5000}
-          dismissable
           onDismiss={() => {
             snackbar.remove(id);
           }}>

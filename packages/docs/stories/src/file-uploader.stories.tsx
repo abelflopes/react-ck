@@ -4,8 +4,8 @@ import { Manager } from "@react-ck/manager/src";
 import { configureStory } from "@react-ck/story-config";
 import { FileUploader, type FileUploaderProps } from "@react-ck/provisional/src";
 import { Icon } from "@react-ck/icon/src";
-import { IconUploadOutline } from "@react-ck/icon/icons/IconUploadOutline";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
+import { Text } from "@react-ck/text/src";
 
 type Story = StoryObj<typeof FileUploader>;
 
@@ -26,14 +26,15 @@ const meta: Meta<typeof FileUploader> = {
 };
 
 const args: FileUploaderProps = {
-  icon: (
-    <Icon size="l">
-      <IconUploadOutline />
-    </Icon>
+  children: (
+    <>
+      Drag & drop files{" "}
+      <Text as="span" skin="highlight-primary">
+        here
+      </Text>
+    </>
   ),
-  cta: "Browse device",
-  description: "Max file size: 5MB",
-  children: "Drag & drop files here to upload",
+  description: "Maximum upload files size: 120MB",
   onProgress: (...data) => {
     // eslint-disable-next-line no-console -- // TODO: remove once fully implemented
     console.log("Progress", data);

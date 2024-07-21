@@ -3,9 +3,6 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager/src";
 import { configureStory } from "@react-ck/story-config";
 import { Attachment } from "@react-ck/provisional/src";
-import { Icon } from "@react-ck/icon/src";
-import { IconDocument } from "@react-ck/icon/icons/IconDocument";
-import { faker } from "@faker-js/faker";
 
 type Story = StoryObj<typeof Attachment>;
 
@@ -28,11 +25,7 @@ export const Default: Story = {
   args: {
     name: "file.pdf",
     format: "pdf",
-    icon: (
-      <Icon>
-        <IconDocument />
-      </Icon>
-    ),
+    skin: "pdf",
   },
 };
 
@@ -40,19 +33,14 @@ export const WithError: Story = {
   args: {
     name: "file.pdf",
     format: "pdf",
-    icon: (
-      <Icon>
-        <IconDocument />
-      </Icon>
-    ),
     error: "Invalid file",
+    skin: "doc",
     onRemove: () => undefined,
   },
 };
 
 export const Image: Story = {
   args: {
-    image: faker.image.urlLoremFlickr(),
     name: "file.jog",
     format: "jpg",
     onRemove: () => undefined,
