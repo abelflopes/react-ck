@@ -13,6 +13,10 @@
   background-color: get-css-var(overlay, color);
 }
 
+.blur {
+  backdrop-filter: blur(5px);
+}
+
 @each $variation in (dark, light) {
   .#{$variation} {
     @include define-css-var(overlay, color, get-color("overlay-#{$variation}"));

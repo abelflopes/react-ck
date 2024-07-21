@@ -6,11 +6,10 @@
 }
 
 .overlay {
-  backdrop-filter: blur(5px);
+  z-index: map-get-strict(elevation.$elevation, "overlay");
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
-  z-index: map-get-strict(elevation.$elevation, "overlay");
 
   &__active {
     opacity: 1;
