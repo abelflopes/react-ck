@@ -1,5 +1,5 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
 
 .root {
   position: absolute;
@@ -10,7 +10,7 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  background-color: get-css-var(overlay, color);
+  background-color: scss-utils.get-css-var(overlay, color);
 }
 
 .blur {
@@ -19,6 +19,6 @@
 
 @each $variation in (dark, light) {
   .#{$variation} {
-    @include define-css-var(overlay, color, get-color("overlay-#{$variation}"));
+    @include scss-utils.define-css-var(overlay, color, theme.get-color("overlay-#{$variation}"));
   }
 }
