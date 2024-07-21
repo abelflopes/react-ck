@@ -13,6 +13,8 @@
   }
 }
 
+$padding: get-css-var(modal, spacing);
+
 .root {
   @include define-css-var(modal, spacing, get-spacing(3));
 
@@ -27,7 +29,7 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  padding: calc(get-css-var(modal, spacing) * 2);
+  padding: calc(#{$padding} * 2);
   animation: appear 0.3s ease-in forwards;
 }
 
@@ -50,7 +52,6 @@
   width: 100%;
   max-height: 100%;
   flex-direction: column;
-  padding: get-css-var(modal, spacing);
 }
 
 @each $key, $value in variables.$modal-sizes {
@@ -63,11 +64,22 @@
   max-width: 100%;
 }
 
+.content {
+  padding: calc(#{$padding} * 0.5) $padding;
+}
+
+.header,
+.footer {
+  padding-right: $padding;
+  padding-left: $padding;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: get-css-var(modal, spacing);
+  padding-top: $padding;
+  padding-bottom: calc(#{$padding} * 0.5);
   gap: get-css-var(modal, spacing);
 }
 
@@ -75,6 +87,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: get-css-var(modal, spacing);
+  padding-top: calc(#{$padding} * 0.5);
+  padding-bottom: $padding;
   gap: get-css-var(modal, spacing);
 }

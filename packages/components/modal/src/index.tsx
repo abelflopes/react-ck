@@ -109,7 +109,7 @@ const Modal = ({
               </header>
             ) : null}
 
-            <ScrollableContainer>{children}</ScrollableContainer>
+            <ScrollableContainer className={styles.content}>{children}</ScrollableContainer>
 
             {props.footer ? (
               <footer
