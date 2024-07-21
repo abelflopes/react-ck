@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.2.5...@react-ck/container@1.3.0) (2024-07-21)
+
+
+### Features
+
+* modal sizes ([33a7126](https://github.com/abelflopes/react-ck/commit/33a7126554ff5a6a6744ce3e47ac5e2c3df388c2))
+
+
+### Bug Fixes
+
+* container size inside flex elements ([69f2233](https://github.com/abelflopes/react-ck/commit/69f2233a38fd804bb195856ab665f541d066c7a5))
+
+
+
 ## [1.2.5](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.2.4...@react-ck/container@1.2.5) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/container

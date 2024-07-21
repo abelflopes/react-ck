@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.28](https://github.com/abelflopes/react-ck/compare/@react-ck/pagination@1.1.27...@react-ck/pagination@1.1.28) (2024-07-21)
+
+**Note:** Version bump only for package @react-ck/pagination
+
+
+
+
+
 ## [1.1.27](https://github.com/abelflopes/react-ck/compare/@react-ck/pagination@1.1.26...@react-ck/pagination@1.1.27) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/pagination

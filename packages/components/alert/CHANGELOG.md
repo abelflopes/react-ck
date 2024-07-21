@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.1.2...@react-ck/alert@3.1.3) (2024-07-21)
+
+
+### Bug Fixes
+
+* adjust status colors ([04001d9](https://github.com/abelflopes/react-ck/commit/04001d9a6d0b7e363535d85a0c4159e1e3c2ac55))
+* simplify alert interface and state ([6ba53a8](https://github.com/abelflopes/react-ck/commit/6ba53a8882200d614a9541136e63d544e6e35ec0))
+
+
+
 ## [3.1.2](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.1.1...@react-ck/alert@3.1.2) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/alert

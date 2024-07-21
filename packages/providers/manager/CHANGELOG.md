@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/manager@1.2.17...@react-ck/manager@1.3.0) (2024-07-21)
+
+
+### Features
+
+* allow adding a classname to layers ([4f61041](https://github.com/abelflopes/react-ck/commit/4f610412ee148ae36ea06370ce8c9189d759b7d5))
+
+
+
 ## [1.2.17](https://github.com/abelflopes/react-ck/compare/@react-ck/manager@1.2.16...@react-ck/manager@1.2.17) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/manager

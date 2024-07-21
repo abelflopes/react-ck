@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.8.4...@react-ck/theme@1.9.0) (2024-07-21)
+
+
+### Features
+
+* allow adding a classname to layers ([4f61041](https://github.com/abelflopes/react-ck/commit/4f610412ee148ae36ea06370ce8c9189d759b7d5))
+* update attachment component ([4e12d7d](https://github.com/abelflopes/react-ck/commit/4e12d7d2812354f6235c6fdd25cb71714f5321f0))
+
+
+### Bug Fixes
+
+* adjust status colors ([04001d9](https://github.com/abelflopes/react-ck/commit/04001d9a6d0b7e363535d85a0c4159e1e3c2ac55))
+
+
+
 ## [1.8.4](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.8.3...@react-ck/theme@1.8.4) (2024-07-18)
 
 

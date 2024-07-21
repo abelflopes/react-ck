@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.7.4...@react-ck/provisional@3.8.0) (2024-07-21)
+
+
+### Features
+
+* add duration to auto dismiss snackbar item ([44c4ebc](https://github.com/abelflopes/react-ck/commit/44c4ebc478828fa4a65c949e205bde3fefae4b15))
+* update attachment component ([4e12d7d](https://github.com/abelflopes/react-ck/commit/4e12d7d2812354f6235c6fdd25cb71714f5321f0))
+* update file uploader styles ([ae1c0f3](https://github.com/abelflopes/react-ck/commit/ae1c0f3c1e916833f0a9138dc3aef4ebe861185b))
+
+
+### Bug Fixes
+
+* allow children in overlay spinner ([481413f](https://github.com/abelflopes/react-ck/commit/481413f229fa8ad1f659425c70deec595549bc10))
+* menu item hover color ([a884ff1](https://github.com/abelflopes/react-ck/commit/a884ff154577abfd0a44f62d58851cc64bb9a439))
+
+
+
 ## [3.7.4](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.7.3...@react-ck/provisional@3.7.4) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/provisional

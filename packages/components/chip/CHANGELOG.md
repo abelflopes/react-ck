@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.32](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.31...@react-ck/chip@1.2.32) (2024-07-21)
+
+
+### Bug Fixes
+
+* adjust status colors ([04001d9](https://github.com/abelflopes/react-ck/commit/04001d9a6d0b7e363535d85a0c4159e1e3c2ac55))
+
+
+
 ## [1.2.31](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.30...@react-ck/chip@1.2.31) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/chip

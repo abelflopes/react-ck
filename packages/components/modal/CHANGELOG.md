@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.1.12...@react-ck/modal@3.2.0) (2024-07-21)
+
+
+### Features
+
+* modal sizes ([33a7126](https://github.com/abelflopes/react-ck/commit/33a7126554ff5a6a6744ce3e47ac5e2c3df388c2))
+
+
+### Bug Fixes
+
+* modal scrollable container cutting elements ([3d33fd4](https://github.com/abelflopes/react-ck/commit/3d33fd4346d5d1ccc494a533f02a37389912c499))
+
+
+
 ## [3.1.12](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.1.11...@react-ck/modal@3.1.12) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/modal

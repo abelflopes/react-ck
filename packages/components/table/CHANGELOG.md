@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.1...@react-ck/table@1.4.2) (2024-07-21)
+
+
+### Bug Fixes
+
+* reserve spacing for sorting icon only when using sorting ([01ccd93](https://github.com/abelflopes/react-ck/commit/01ccd93ca0afae6703b995caadecb330570f3bb4))
+
+
+
 ## [1.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.0...@react-ck/table@1.4.1) (2024-07-18)
 
 **Note:** Version bump only for package @react-ck/table
