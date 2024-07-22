@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.1...@react-ck/modal@3.2.2) (2024-07-22)
+
+
+### Bug Fixes
+
+* modal spacing ([a95a49e](https://github.com/abelflopes/react-ck/commit/a95a49ef14871fe48815c7c18b677f55915d2879))
+* remove unused prop ([149f959](https://github.com/abelflopes/react-ck/commit/149f959fa337554762af23817d4771a982c8ce16))
+
+
+
 ## [3.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.0...@react-ck/modal@3.2.1) (2024-07-21)
 
 **Note:** Version bump only for package @react-ck/modal

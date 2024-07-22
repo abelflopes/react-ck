@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.4](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.3...@react-ck/table@1.4.4) (2024-07-22)
+
+
+### Bug Fixes
+
+* remove debug from table head ([509f952](https://github.com/abelflopes/react-ck/commit/509f952c1da169c88c2204dc136ff847ade7b253))
+
+
+
 ## [1.4.3](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.2...@react-ck/table@1.4.3) (2024-07-21)
 
 **Note:** Version bump only for package @react-ck/table
