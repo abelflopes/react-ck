@@ -20,8 +20,6 @@ import { ModalFooter } from "./ModalFooter";
 interface ModalProps extends Omit<OverlayProps, "blur" | "skin"> {
   /** Modal width */
   size?: "s" | "m" | "l" | "xl" | "full";
-  /** Determines whether the modal is open or closed */
-  open?: boolean;
   /** Dismiss Callback, also determines if the modal can be dismissed by clicking outside or close button  */
   onDismiss?: () => void;
 }
