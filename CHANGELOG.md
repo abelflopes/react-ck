@@ -1,3 +1,18 @@
+## [3.19.0](https://github.com/abelflopes/react-ck/compare/v3.18.0...v3.19.0) (2024-07-22)
+
+
+### Features
+
+* **react-ck:** global library package ([9bbc5a9](https://github.com/abelflopes/react-ck/commit/9bbc5a9336e4e5de0710a9d7b5318035302147e7))
+* **react-ck:** global library package ([9b457d4](https://github.com/abelflopes/react-ck/commit/9b457d4afe61153ff8bbcadb1ad607e14282253e))
+
+
+### Bug Fixes
+
+* modal spacing ([a95a49e](https://github.com/abelflopes/react-ck/commit/a95a49ef14871fe48815c7c18b677f55915d2879))
+* remove debug from table head ([509f952](https://github.com/abelflopes/react-ck/commit/509f952c1da169c88c2204dc136ff847ade7b253))
+* remove unused prop ([149f959](https://github.com/abelflopes/react-ck/commit/149f959fa337554762af23817d4771a982c8ce16))
+
 ## [3.18.0](https://github.com/abelflopes/react-ck/compare/v3.17.0...v3.18.0) (2024-07-21)
 
 
