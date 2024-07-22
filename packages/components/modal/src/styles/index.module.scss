@@ -61,22 +61,17 @@ $padding: get-css-var(modal, spacing);
   max-width: 100%;
 }
 
-.content {
-  padding: calc(#{$padding} * 0.5) $padding;
-}
-
+.content,
 .header,
 .footer {
-  padding-right: $padding;
-  padding-left: $padding;
+  padding: $padding;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: $padding;
-  padding-bottom: calc(#{$padding} * 0.5);
+  margin-bottom: calc(#{$padding} * -1);
   gap: get-css-var(modal, spacing);
 }
 
@@ -84,7 +79,6 @@ $padding: get-css-var(modal, spacing);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-top: calc(#{$padding} * 0.5);
-  padding-bottom: $padding;
+  margin-top: calc(#{$padding} * -1);
   gap: get-css-var(modal, spacing);
 }
