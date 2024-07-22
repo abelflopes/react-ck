@@ -24,8 +24,6 @@ export const Th = ({
     <span className={styles.content}>
       {children}
 
-      {sorting}
-
       {sorting ? (
         <span className={styles.sort_icon}>
           {sorting === "asc" && (
