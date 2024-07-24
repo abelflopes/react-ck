@@ -135,6 +135,6 @@
 .icon {
   display: inline-flex;
   align-items: center;
-  margin-right: theme.get-spacing(0.5);
-  margin-left: theme.get-spacing(-0.5);
+  margin-right: theme.get-spacing(1);
+  margin-left: theme.get-spacing(-1);
 }

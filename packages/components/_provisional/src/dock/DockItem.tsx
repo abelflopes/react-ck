@@ -23,7 +23,6 @@ export const DockItem = ({
   return (
     <Button
       className={classNames(styles.root, expanded && styles.expanded, className)}
-      size={expanded ? "m" : "m"}
       skin={active ? "primary-alt" : "ghost"}
       title={expanded ? undefined : label}
       icon={<Icon size={expanded ? "m" : "l"}>{icon}</Icon>}
