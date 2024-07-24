@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.9.0...@react-ck/theme@1.9.1) (2024-07-24)
+
+
+### Bug Fixes
+
+* minor ui adjustments ([fd1d533](https://github.com/abelflopes/react-ck/commit/fd1d5332bb772f031f85aa9a8ffeac09824afda0))
+
+
+
 ## [1.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.8.4...@react-ck/theme@1.9.0) (2024-07-21)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.5](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.4...@react-ck/select@1.5.5) (2024-07-24)
+
+
+### Bug Fixes
+
+* select focus on search ([f8f187f](https://github.com/abelflopes/react-ck/commit/f8f187fd97559f8167f7b066c24595f0927ea5aa))
+
+
+
 ## [1.5.4](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.3...@react-ck/select@1.5.4) (2024-07-21)
 
 **Note:** Version bump only for package @react-ck/select

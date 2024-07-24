@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.7](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.8.6...@react-ck/card@1.8.7) (2024-07-24)
+
+
+### Bug Fixes
+
+* minor ui adjustments ([fd1d533](https://github.com/abelflopes/react-ck/commit/fd1d5332bb772f031f85aa9a8ffeac09824afda0))
+
+
+
 ## [1.8.6](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.8.5...@react-ck/card@1.8.6) (2024-07-21)
 
 **Note:** Version bump only for package @react-ck/card

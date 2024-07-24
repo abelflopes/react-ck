@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.17](https://github.com/abelflopes/react-ck/compare/@react-ck/spinner@3.0.16...@react-ck/spinner@3.0.17) (2024-07-24)
+
+
+### Bug Fixes
+
+* minor ui adjustments ([fd1d533](https://github.com/abelflopes/react-ck/commit/fd1d5332bb772f031f85aa9a8ffeac09824afda0))
+
+
+
 ## [3.0.16](https://github.com/abelflopes/react-ck/compare/@react-ck/spinner@3.0.15...@react-ck/spinner@3.0.16) (2024-07-21)
 
 **Note:** Version bump only for package @react-ck/spinner

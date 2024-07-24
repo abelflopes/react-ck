@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.9](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.8.8...@react-ck/button@1.8.9) (2024-07-24)
+
+
+### Bug Fixes
+
+* **dock:** minor adjustments ([a4b888a](https://github.com/abelflopes/react-ck/commit/a4b888a8d4b452868baee29ad1c2fbe2bb53db61))
+
+
+
 ## [1.8.8](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.8.7...@react-ck/button@1.8.8) (2024-07-21)
 
 **Note:** Version bump only for package @react-ck/button

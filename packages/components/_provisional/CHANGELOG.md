@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.8.1...@react-ck/provisional@3.9.0) (2024-07-24)
+
+
+### Features
+
+* add snippet component ([d6d8f29](https://github.com/abelflopes/react-ck/commit/d6d8f2989827dbfebf50c6bfca92e8075919c58a))
+
+
+### Bug Fixes
+
+* **dock:** minor adjustments ([a4b888a](https://github.com/abelflopes/react-ck/commit/a4b888a8d4b452868baee29ad1c2fbe2bb53db61))
+* minor ui adjustments ([fd1d533](https://github.com/abelflopes/react-ck/commit/fd1d5332bb772f031f85aa9a8ffeac09824afda0))
+
+
+
 ## [3.8.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.8.0...@react-ck/provisional@3.8.1) (2024-07-21)
 
 
