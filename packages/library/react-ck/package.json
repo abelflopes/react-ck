@@ -58,6 +58,7 @@
     "@react-ck/provisional": "^3.8.1",
     "@react-ck/react-hooks": "^1.0.8",
     "@react-ck/react-utils": "^1.3.6",
+    "@react-ck/responsive": "^1.0.0",
     "@react-ck/scss-utils": "^1.1.10",
     "@react-ck/select": "^1.5.4",
     "@react-ck/skeleton": "^1.1.25",
