@@ -1,0 +1,13 @@
+@use "@react-ck/theme";
+@use "@react-ck/text";
+
+.root {
+  @include text.text-base;
+
+  display: block;
+  padding: theme.get-spacing(3);
+  border-radius: theme.get-spacing(1);
+  background-color: theme.get-color(neutral-light-1-5);
+  font-family: monospace;
+  white-space: pre;
+}

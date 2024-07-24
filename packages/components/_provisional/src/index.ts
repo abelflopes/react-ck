@@ -29,3 +29,5 @@ export * from "./chat";
 export * from "./file-uploader";
 
 export * from "./attachment";
+
+export * from "./snippet";
