@@ -1,3 +1,20 @@
+## [3.20.0](https://github.com/abelflopes/react-ck/compare/v3.19.0...v3.20.0) (2024-07-24)
+
+
+### Features
+
+* add draft responsive components and utils ([f4f8a10](https://github.com/abelflopes/react-ck/commit/f4f8a10857d41a7508048a46fddaedc9c6654a7b))
+* add snippet component ([d6d8f29](https://github.com/abelflopes/react-ck/commit/d6d8f2989827dbfebf50c6bfca92e8075919c58a))
+* **react-ck:** global library package ([ef75720](https://github.com/abelflopes/react-ck/commit/ef75720aeec6d3ad75b2adbe071225e9f6912be6))
+* **react-ck:** global library package ([740b707](https://github.com/abelflopes/react-ck/commit/740b707d1b5637295ffc218daf2e94242e4f4ae7))
+
+
+### Bug Fixes
+
+* **dock:** minor adjustments ([a4b888a](https://github.com/abelflopes/react-ck/commit/a4b888a8d4b452868baee29ad1c2fbe2bb53db61))
+* minor ui adjustments ([fd1d533](https://github.com/abelflopes/react-ck/commit/fd1d5332bb772f031f85aa9a8ffeac09824afda0))
+* select focus on search ([f8f187f](https://github.com/abelflopes/react-ck/commit/f8f187fd97559f8167f7b066c24595f0927ea5aa))
+
 ## [3.19.0](https://github.com/abelflopes/react-ck/compare/v3.18.0...v3.19.0) (2024-07-22)
 
 
