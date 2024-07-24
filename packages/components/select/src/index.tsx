@@ -35,7 +35,6 @@ const Select = ({
   ...props
 }: Readonly<SelectProps>): React.ReactElement => {
   const onNextRender = useNextRender();
-  const searchRef = useRef<HTMLInputElement>(null);
   const selectRef = useRef<HTMLSelectElement>(null);
   const rootElRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -147,18 +146,6 @@ const Select = ({
       : displayValue;
   }, [childrenData, displayValueFormatter, selectedValuesList]);
 
-  /** Actions to do when dropdown opens  */
-  useEffect(() => {
-    if (!open) return;
-
-    // Focus on search input
-    if (search) {
-      onNextRender(() => {
-        searchRef.current?.focus();
-      });
-    }
-  }, [onNextRender, open, search]);
-
   /** Actions to do when dropdown closes  */
   useEffect(() => {
     if (!open) return;
@@ -233,12 +220,14 @@ const Select = ({
           {searchOptions ? (
             <>
               <Input
-                rootRef={searchRef}
                 value={search}
                 type="search"
                 placeholder={searchOptions.placeholder}
                 skin="ghost"
                 className={styles.search_input}
+                rootRef={(e) => {
+                  e?.focus();
+                }}
                 onChange={(e) => {
                   setSearch(e.target.value);
                 }}
