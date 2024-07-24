@@ -51,6 +51,7 @@
     "@react-ck/tabs": "^1.0.0",
     "@react-ck/theme": "^1.0.0",
     "@react-ck/progress": "^1.0.0",
-    "@react-ck/provisional": "^1.0.0"
+    "@react-ck/provisional": "^1.0.0",
+    "@react-ck/responsive": "^1.0.0"
   }
 }

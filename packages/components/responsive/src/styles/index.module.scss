@@ -1,0 +1,84 @@
+@use "@react-ck/theme";
+@use "@react-ck/text";
+@use "shared";
+
+.root {
+  @include shared.base;
+}
+
+// Interaction styles
+
+.hoverable:hover {
+  &.bordered {
+    @include shared.shadow-small;
+  }
+
+  &.shadowed {
+    @include shared.shadow-big;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+// Skins
+
+.bordered {
+  @include shared.skin-bordered;
+}
+
+.shadowed {
+  @include shared.skin-shadowed;
+}
+
+.ghost {
+  @include shared.skin-ghost;
+}
+
+// Variations
+
+.full_height {
+  height: 100%;
+}
+
+.horizontal {
+  display: flex;
+}
+
+.vertical {
+  .image {
+    width: 100%;
+  }
+}
+
+// Spacing
+
+.spacing_s {
+  @include shared.spacing-s;
+}
+
+.spacing_m {
+  @include shared.spacing-m;
+}
+
+.spacing_l {
+  @include shared.spacing-l;
+}
+
+.spacing_none {
+  @include shared.spacing-none;
+}
+
+// Content
+
+.content {
+  @include shared.content;
+}
+
+.image {
+  display: block;
+  border-top-left-radius: theme.get-css-var(card, border-radius);
+  border-top-right-radius: theme.get-css-var(card, border-radius);
+  object-fit: cover;
+}
