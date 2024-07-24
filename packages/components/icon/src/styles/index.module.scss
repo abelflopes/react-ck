@@ -26,6 +26,10 @@
 }
 
 .size_l {
+  @include define-css-var(icon, size, get-spacing(3));
+}
+
+.size_xl {
   @include define-css-var(icon, size, get-spacing(5));
 }
 

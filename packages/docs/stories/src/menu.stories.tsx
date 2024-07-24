@@ -90,6 +90,17 @@ const children = (
         <Icon>
           <IconUserCircle />
         </Icon>
+      }
+      action={
+        <Button
+          skin="ghost"
+          size="s"
+          icon={
+            <Icon>
+              <IconVerticalDots />
+            </Icon>
+          }
+        />
       }>
       {faker.company.name()}
       <br />

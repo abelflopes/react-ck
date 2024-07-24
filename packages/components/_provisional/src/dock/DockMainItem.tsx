@@ -2,16 +2,14 @@ import React, { useContext } from "react";
 import { DockContext } from "./context";
 import styles from "./styles/dock-main-item.module.scss";
 import classNames from "classnames";
-import { Avatar, type AvatarProps } from "../avatar";
 
 export interface DockMainItemProps extends React.HTMLAttributes<HTMLSpanElement> {
-  image: AvatarProps["image"];
-  label: AvatarProps["name"];
+  image: React.ReactNode;
 }
 
 export const DockMainItem = ({
   image,
-  label,
+  children,
   className,
   ...otherProps
 }: Readonly<DockMainItemProps>): React.ReactElement => {
@@ -20,11 +18,10 @@ export const DockMainItem = ({
   return (
     <span
       className={classNames(styles.root, expanded && styles.expanded, className)}
-      title={expanded ? undefined : label}
       {...otherProps}>
-      <Avatar name={label} image={image} skin="square" />
+      <span className={styles.image}>{image}</span>
 
-      {expanded ? label : null}
+      {expanded ? children : null}
     </span>
   );
 };

@@ -1,3 +1,4 @@
+@use "@react-ck/card";
 @import "@react-ck/theme";
 
 .root {
@@ -39,7 +40,13 @@
 }
 
 .skin_shadowed {
-  border-radius: get-spacing(1);
-  box-shadow: 0px 1px 3px 0px #00000029;
   height: auto;
+  border-radius: get-spacing(1);
+
+  @include card.shadow_transition;
+  @include card.shadow_small;
+
+  &:hover {
+    @include card.shadow_big;
+  }
 }

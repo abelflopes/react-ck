@@ -10,11 +10,11 @@
 
 .hoverable:hover {
   &.bordered {
-    box-shadow: 0 1px 3px 0 #00000029;
+    @include shared.shadow-small;
   }
 
   &.shadowed {
-    box-shadow: 0 1px 6px 0 #00000035;
+    @include shared.shadow-big;
   }
 }
 
@@ -64,6 +64,10 @@
 
 .spacing_l {
   @include shared.spacing-l;
+}
+
+.spacing_none {
+  @include shared.spacing-none;
 }
 
 // Content

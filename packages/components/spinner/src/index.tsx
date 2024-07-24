@@ -17,7 +17,7 @@ export interface SpinnerProps extends Omit<React.HTMLAttributes<HTMLSpanElement>
  */
 
 export const Spinner = ({
-  size = "l",
+  size = "xl",
   skin = "primary",
   className,
   ...otherProps

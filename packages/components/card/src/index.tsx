@@ -73,8 +73,8 @@ const Card = <T extends HTMLTag>({
             styles[skin],
             styles[variation],
             fullHeight && styles.full_height,
+            styles[`spacing_${spacing}`],
             {
-              [`${styles[`spacing_${spacing}`]}`]: spacing !== "none",
               [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
               [`${styles.clickable}`]: interaction === "click",
             },

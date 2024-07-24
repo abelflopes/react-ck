@@ -2,8 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Dock } from "@react-ck/provisional/src";
-import { Icon } from "@react-ck/icon/src";
+import { Avatar, Dock } from "@react-ck/provisional/src";
 import { faker } from "@faker-js/faker";
 import { IconNotification } from "@react-ck/icon/icons/IconNotification";
 import { IconCog } from "@react-ck/icon/icons/IconCog";
@@ -26,61 +25,25 @@ const meta: Meta<typeof Dock> = {
   }),
 };
 
-const header = <Dock.MainItem label={faker.company.name()} image={faker.image.avatar()} />;
+const name = faker.person.fullName();
+const header = (
+  <Dock.MainItem image={<Avatar name={name} image={faker.image.avatar()} skin="square" />}>
+    {name}
+  </Dock.MainItem>
+);
 
 const footer = (
   <>
-    <Dock.Item
-      label="Notifications"
-      active={false}
-      icon={
-        <Icon>
-          <IconNotification />
-        </Icon>
-      }
-    />
-    <Dock.Item
-      label="Settings"
-      active={false}
-      icon={
-        <Icon>
-          <IconCog />
-        </Icon>
-      }
-    />
-    <Dock.Item
-      label="Profile"
-      active={false}
-      icon={
-        <Icon>
-          <IconUserCircle />
-        </Icon>
-      }
-      disabled
-    />
+    <Dock.Item label="Notifications" active={false} icon={<IconNotification />} />
+    <Dock.Item label="Settings" active={false} icon={<IconCog />} />
+    <Dock.Item label="Profile" active={false} icon={<IconUserCircle />} disabled />
   </>
 );
 
 const children = (
   <>
-    <Dock.Item
-      label="Home"
-      icon={
-        <Icon>
-          <IconHome />
-        </Icon>
-      }
-      active
-    />
-    <Dock.Item
-      label="Projects"
-      active={false}
-      icon={
-        <Icon>
-          <IconFolder />
-        </Icon>
-      }
-    />
+    <Dock.Item label="Home" icon={<IconHome />} active />
+    <Dock.Item label="Projects" active={false} icon={<IconFolder />} />
   </>
 );
 

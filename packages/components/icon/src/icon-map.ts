@@ -58,8 +58,8 @@ export const iconMap: IconMap = [
     export: "IconGitHub",
   },
   {
-    import: "CgSpinnerTwoAlt",
-    module: "react-icons/cg",
+    import: "AiOutlineLoading",
+    module: "react-icons/ai",
     export: "IconSpinner",
   },
   {

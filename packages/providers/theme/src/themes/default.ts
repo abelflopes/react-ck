@@ -33,7 +33,7 @@ export const defaultTheme: Theme = {
     "status-info-light": "#BFDBFE",
     "status-info": "#3B82F6",
     "status-info-dark": "#0950c3",
-    "overlay-light": "rgba(255,255,255, .4)",
+    "overlay-light": "rgba(255,255,255, .6)",
     "overlay-dark": "rgba(0,0,0,.2)",
     "misc-1": "#F28B82",
     "misc-2": "#FF8EA2",
@@ -44,7 +44,7 @@ export const defaultTheme: Theme = {
     "base-size": "14px",
   },
   spacing: {
-    base: "10px",
+    base: "8px",
     border: "1px",
   },
 };

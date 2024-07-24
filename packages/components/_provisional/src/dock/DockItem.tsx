@@ -3,9 +3,10 @@ import { DockContext } from "./context";
 import { Button, type ButtonProps } from "@react-ck/button";
 import styles from "./styles/dock-item.module.scss";
 import classNames from "classnames";
+import { Icon, type IconProps } from "@react-ck/icon";
 
 export interface DockItemProps extends Omit<ButtonProps, "children" | "skin" | "icon"> {
-  icon: NonNullable<React.ReactNode>;
+  icon: IconProps["children"];
   label: string;
   active: boolean;
 }
@@ -22,10 +23,10 @@ export const DockItem = ({
   return (
     <Button
       className={classNames(styles.root, expanded && styles.expanded, className)}
-      size={expanded ? "m" : "l"}
+      size={expanded ? "m" : "m"}
       skin={active ? "primary-alt" : "ghost"}
       title={expanded ? undefined : label}
-      icon={icon}
+      icon={<Icon size={expanded ? "m" : "l"}>{icon}</Icon>}
       {...otherProps}>
       {expanded ? label : null}
     </Button>
