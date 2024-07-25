@@ -97,6 +97,16 @@ export const useBreakpoints = (
     };
   }, [active, target]);
 
+  useEffect(() => {
+    // eslint-disable-next-line no-console -- temp debug / TODO: remove
+    console.log("useBreakpoints: breakpointsData", breakpointsData);
+  }, [breakpointsData]);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-console -- temp debug / TODO: remove
+    console.log("useBreakpoints: activeBreakpoint", activeBreakpoint);
+  }, [activeBreakpoint]);
+
   return useMemo(
     () => ({
       breakpointsData,
