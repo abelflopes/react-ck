@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/divider",
   "private": false,
-  "version": "1.2.24",
+  "version": "1.2.25",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -32,8 +32,8 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/scss-utils": "^1.1.11",
-    "@react-ck/theme": "^1.9.2",
+    "@react-ck/scss-utils": "^1.1.12",
+    "@react-ck/theme": "^1.9.3",
     "classnames": "^2.3.2"
   }
 }

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.4.3...@react-ck/container@1.5.0) (2024-07-25)
+
+
+### Features
+
+* **container:** add `xl` size ([b43f8af](https://github.com/abelflopes/react-ck/commit/b43f8afb482cef692c81f98038140c16c759dcb3))
+
+
+### Bug Fixes
+
+* **container:** use consistent X and Y spacings ([89c992f](https://github.com/abelflopes/react-ck/commit/89c992f888656a27357add57751d5bd2035aa126))
+
+
+
 ## [1.4.3](https://github.com/abelflopes/react-ck/compare/@react-ck/container@1.4.2...@react-ck/container@1.4.3) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/container
