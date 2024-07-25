@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.22.0...react-ck@2.23.0) (2024-07-25)
+
+
+### Features
+
+* **react-ck:** global library package ([5767bc3](https://github.com/abelflopes/react-ck/commit/5767bc346b0226ed1d65392539a79ddc2122deb3))
+
+
+### Bug Fixes
+
+* **library:** use forward for scss instead import ([012af8b](https://github.com/abelflopes/react-ck/commit/012af8bd7ef7762dd9acfa4aa36f0cf42c87310b))
+
+
+
 ## [2.22.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.21.0...react-ck@2.22.0) (2024-07-25)
 
 
