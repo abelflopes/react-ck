@@ -13,7 +13,7 @@ export const useResponsiveProps = <T extends BaseProps>({
 }: UseResponsiveProps<T>): T => {
   const { target, ...responsiveProps } = responsive ?? {};
   const active = useMemo(() => Boolean(responsive), [responsive]);
-  const { breakpointsData } = useBreakpoints(active, target);
+  const { breakpointsData } = useBreakpoints({ active, target });
 
   return useMemo<T>(() => {
     // use default props when not active

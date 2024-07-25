@@ -24,7 +24,10 @@ export const ResponsiveFragment = ({
     };
   }, [enabledBreakpoints]);
 
-  const { activeBreakpoint } = useBreakpoints(hasSettings, target);
+  const { activeBreakpoint } = useBreakpoints({
+    active: hasSettings,
+    target,
+  });
 
   const shouldShow = useMemo<boolean>(() => {
     // init visible if the consumer provided no breakpoint settings

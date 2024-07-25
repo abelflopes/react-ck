@@ -12,24 +12,31 @@ const baseBreakpointsData: EnabledBreakpointsMapping = {
   xxl: false,
 };
 
+export interface UseBreakpoints {
+  active?: boolean; // TODO: enable activating for specific breakpoints
+  target?: ResponsiveTarget;
+}
+
 /**
  * Returns a map that informs which breakpoints are active
  * @param target - which reference to use, defaults to viewport but can also use an element
  * @returns @see {@link UseResponsiveData}
  */
 export const useBreakpoints = (
-  active: boolean, // TODO: enable activating for specific breakpoints
-  target: ResponsiveTarget = "viewport",
+  data?: Readonly<UseBreakpoints>,
 ): {
   breakpointsData: EnabledBreakpointsMapping | undefined;
   activeBreakpoint: Breakpoint | undefined;
 } => {
+  const computedActive = useMemo(() => data?.active ?? true, [data?.active]);
+  const computedTarget = useMemo(() => data?.target ?? "viewport", [data?.target]);
+
   const [breakpointsData, setBreakpointsData] = useState<EnabledBreakpointsMapping | undefined>(
     undefined,
   );
 
   const activeBreakpoint = useMemo<Breakpoint | undefined>(() => {
-    if (!active || !breakpointsData) return;
+    if (!computedActive || !breakpointsData) return;
 
     let tmpActiveBreakpoint: Breakpoint = "xs";
 
@@ -38,13 +45,13 @@ export const useBreakpoints = (
     });
 
     return tmpActiveBreakpoint;
-  }, [breakpointsData, active]);
+  }, [breakpointsData, computedActive]);
 
   // Handle HTMLElement detection
   useEffect(() => {
-    if (!active || target === "viewport") return;
+    if (!computedActive || computedTarget === "viewport") return;
 
-    const el = target.current;
+    const el = computedTarget.current;
     if (!el) return;
 
     const check = (): void => {
@@ -67,11 +74,11 @@ export const useBreakpoints = (
     return () => {
       resizeObserver.unobserve(el);
     };
-  }, [target, active]);
+  }, [computedTarget, computedActive]);
 
   // Handle viewport detection
   useEffect(() => {
-    if (!active || target !== "viewport") return;
+    if (!computedActive || computedTarget !== "viewport") return;
 
     const removeListeners = breakpointKeys.map((bpKey) => {
       const data = window.matchMedia(`(min-width: ${breakpoints[bpKey]}px)`);
@@ -102,7 +109,7 @@ export const useBreakpoints = (
         removeListener();
       });
     };
-  }, [active, target]);
+  }, [computedActive, computedTarget]);
 
   return useMemo(
     () => ({
