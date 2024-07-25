@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "@react-ck/button": "^1.8.9",
-    "@react-ck/scss-utils": "^1.1.10",
     "@react-ck/text": "^1.5.14",
     "@react-ck/theme": "^1.9.1",
     "classnames": "^2.3.2"
