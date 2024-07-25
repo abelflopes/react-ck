@@ -192,4 +192,9 @@ export const iconMap: IconMap = [
     module: "react-icons/md",
     export: "IconLogout",
   },
+  {
+    import: "RxCopy",
+    module: "react-icons/rx",
+    export: "IconCopy",
+  },
 ];
