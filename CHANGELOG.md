@@ -1,3 +1,17 @@
+## [3.21.0](https://github.com/abelflopes/react-ck/compare/v3.20.0...v3.21.0) (2024-07-25)
+
+
+### Features
+
+* add responsive to grid and container ([cc38417](https://github.com/abelflopes/react-ck/commit/cc38417a7f035659c6d91ea74b6e04c931c9d7f6))
+* **react-ck:** global library package ([57aaa73](https://github.com/abelflopes/react-ck/commit/57aaa73089277eabc87320847ae54eaf2a61481c))
+* **react-ck:** global library package ([1978eac](https://github.com/abelflopes/react-ck/commit/1978eac5d97f10b56d29548e1c05016464f2d52f))
+
+
+### Bug Fixes
+
+* snippet spacing and text size ([cbb99a4](https://github.com/abelflopes/react-ck/commit/cbb99a4a456c34964ead1a49e450f468e2c855d0))
+
 ## [3.20.0](https://github.com/abelflopes/react-ck/compare/v3.19.0...v3.20.0) (2024-07-24)
 
 

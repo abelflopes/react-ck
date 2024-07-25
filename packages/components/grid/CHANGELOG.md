@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/grid@1.5.5...@react-ck/grid@1.6.0) (2024-07-25)
+
+
+### Features
+
+* add responsive to grid and container ([cc38417](https://github.com/abelflopes/react-ck/commit/cc38417a7f035659c6d91ea74b6e04c931c9d7f6))
+
+
+
 ## [1.5.5](https://github.com/abelflopes/react-ck/compare/@react-ck/grid@1.5.4...@react-ck/grid@1.5.5) (2024-07-24)
 
 **Note:** Version bump only for package @react-ck/grid
