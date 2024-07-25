@@ -1,5 +1,5 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
 
 .content {
-  margin-top: get-spacing(1);
+  margin-top: theme.get-spacing(1);
 }

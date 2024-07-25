@@ -1,7 +1,8 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
+@use "@react-ck/scss-utils";
 
-$border-radius: theme.get-css-var(card, border-radius);
+$border-radius: scss-utils.get-css-var(card, border-radius);
 
 @mixin shadow-small {
   // TODO: theme shadows
@@ -19,7 +20,7 @@ $border-radius: theme.get-css-var(card, border-radius);
 
 @mixin base {
   @include text.text-base;
-  @include theme.define-css-var(card, border-radius, theme.get-spacing(1));
+  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(1));
   @include shadow_transition;
 
   display: block; // force display in case of polimorphy
@@ -29,13 +30,13 @@ $border-radius: theme.get-css-var(card, border-radius);
 }
 
 @mixin content {
-  padding: theme.get-css-var(card, spacing);
+  padding: scss-utils.get-css-var(card, spacing);
 }
 
 // Skins
 
 @mixin skin-bordered {
-  border: solid theme.get-css-var(spacing, border) theme.get-color(neutral-light-2);
+  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(neutral-light-2);
 }
 
 @mixin skin-shadowed {
@@ -43,23 +44,23 @@ $border-radius: theme.get-css-var(card, border-radius);
 }
 
 @mixin skin-ghost {
-  @include theme.define-css-var(card, border-radius, 0);
+  @include scss-utils.define-css-var(card, border-radius, 0);
 }
 
 // Spacing
 
 @mixin spacing-s {
-  @include theme.define-css-var(card, spacing, theme.get-spacing(1));
+  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(1));
 }
 
 @mixin spacing-m {
-  @include theme.define-css-var(card, spacing, theme.get-spacing(2));
+  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(2));
 }
 
 @mixin spacing-l {
-  @include theme.define-css-var(card, spacing, theme.get-spacing(3));
+  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(3));
 }
 
 @mixin spacing-none {
-  @include theme.define-css-var(card, spacing, 0);
+  @include scss-utils.define-css-var(card, spacing, 0);
 }

@@ -1,13 +1,14 @@
-@import "@react-ck/theme";
-@import "@react-ck/text";
+@use "@react-ck/theme";
+@use "@react-ck/text";
+@use "@react-ck/scss-utils";
 
 .root {
   display: flex;
   align-items: center;
-  padding: get-spacing(1);
-  border-radius: get-spacing(1);
-  gap: get-spacing(1);
-  border: solid get-css-var(spacing, border) get-color(highlight-primary-light);
+  padding: theme.get-spacing(1);
+  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary-light);
+  border-radius: theme.get-spacing(1);
+  gap: theme.get-spacing(1);
 }
 
 .field {
@@ -16,13 +17,13 @@
 }
 
 .description {
-  @include text-base;
-  @include text-variation(extra-small);
+  @include text.text-base;
+  @include text.text-variation(extra-small);
 
-  color: get-color(neutral-dark-1);
-  margin: 0 0 get-spacing(0.3);
+  margin: 0 0 theme.get-spacing(0.3);
+  color: theme.get-color(neutral-dark-1);
 
   &.error {
-    color: get-color(status-negative);
+    color: theme.get-color(status-negative);
   }
 }

@@ -1,4 +1,5 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
 
 .root {
   @keyframes spin {
@@ -15,13 +16,13 @@
   align-items: center;
   justify-content: center;
   animation: spin 1.5s infinite linear;
-  color: get-css-var(spinner, color);
+  color: scss-utils.get-css-var(spinner, color);
 }
 
 .text {
-  @include define-css-var(spinner, color, currentColor);
+  @include scss-utils.define-css-var(spinner, color, currentColor);
 }
 
 .primary {
-  @include define-css-var(spinner, color, get-color(highlight-primary));
+  @include scss-utils.define-css-var(spinner, color, theme.get-color(highlight-primary));
 }

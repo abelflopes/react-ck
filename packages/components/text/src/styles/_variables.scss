@@ -1,24 +1,24 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
 
 // TODO: add values to theme
 
 $text-skins: (
   base: (
     default: (
-      color: get-color(neutral-dark-5),
+      color: theme.get-color(neutral-dark-5),
     ),
     hover: (),
   ),
   soft: (
     default: (
-      color: get-color(neutral-dark-1),
+      color: theme.get-color(neutral-dark-1),
     ),
     hover: (),
   ),
   highlight-primary: (
     default: (
-      color: get-color(highlight-primary),
+      color: theme.get-color(highlight-primary),
     ),
     hover: (),
   ),
@@ -30,10 +30,10 @@ $text-skins: (
   ),
   link: (
     default: (
-      color: get-color(highlight-alt),
+      color: theme.get-color(highlight-alt),
     ),
     hover: (
-      color: get-color(highlight-alt-dark),
+      color: theme.get-color(highlight-alt-dark),
     ),
   ),
   link_hidden: (
@@ -41,13 +41,13 @@ $text-skins: (
       text-decoration: none,
     ),
     hover: (
-      color: get-color(highlight-alt-dark),
+      color: theme.get-color(highlight-alt-dark),
       text-decoration: underline,
     ),
   ),
   inverted: (
     default: (
-      color: get-color(neutral-light-1),
+      color: theme.get-color(neutral-light-1),
     ),
     hover: (),
   ),
@@ -55,7 +55,7 @@ $text-skins: (
 $text-variations: (
   banner: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 4.3),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 4.3),
       font-weight: 700,
       line-height: 60px,
     ),
@@ -63,7 +63,7 @@ $text-variations: (
   ),
   h1: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 2.1),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 2.1),
       font-weight: 600,
       line-height: 36px,
     ),
@@ -71,16 +71,16 @@ $text-variations: (
   ),
   h2: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 1.7),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.7),
       font-weight: 600,
       line-height: 36px,
-      color: get-color(neutral-dark-4),
+      color: theme.get-color(neutral-dark-4),
     ),
     hover: (),
   ),
   h3: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 1.5),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.5),
       font-weight: 600,
       line-height: 24px,
     ),
@@ -88,7 +88,7 @@ $text-variations: (
   ),
   h4: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 1.2),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.2),
       font-weight: 600,
       line-height: 22px,
     ),
@@ -96,7 +96,7 @@ $text-variations: (
   ),
   h5: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 1.1),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.1),
       font-weight: 600,
       line-height: 20px,
     ),
@@ -104,7 +104,7 @@ $text-variations: (
   ),
   h6: (
     default: (
-      font-size: get-css-var(font, base-size),
+      font-size: scss-utils.get-css-var(font, base-size),
       font-weight: 600,
       line-height: 18px,
     ),
@@ -112,7 +112,7 @@ $text-variations: (
   ),
   p: (
     default: (
-      font-size: get-css-var(font, base-size),
+      font-size: scss-utils.get-css-var(font, base-size),
       line-height: 24px,
       font-weight: 400,
     ),
@@ -120,7 +120,7 @@ $text-variations: (
   ),
   small: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 0.8),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 0.8),
       font-weight: 400,
       line-height: 18px,
     ),
@@ -128,7 +128,7 @@ $text-variations: (
   ),
   extra-small: (
     default: (
-      font-size: calc(#{get-css-var(font, base-size)} * 0.7),
+      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 0.7),
       font-weight: 400,
       line-height: 16px,
     ),

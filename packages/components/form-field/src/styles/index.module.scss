@@ -1,26 +1,26 @@
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
 @use "shared";
-@import "@react-ck/theme";
-@import "@react-ck/text";
-@import "variables";
+@use "variables";
 
 .root {
   display: flex;
   flex-direction: column;
-  gap: get-spacing(0.1);
+  gap: theme.get-spacing(0.1);
 
   .content {
     @include shared.form-field-container;
   }
 
   .validation_message {
-    color: get-css-var(form-field, color) !important;
+    color: scss-utils.get-css-var(form-field, color) !important;
   }
 }
 
-@each $key, $props in $form-field-styles {
+@each $key, $props in variables.$form-field-styles {
   .#{$key} {
     @each $propKey, $propValue in $props {
-      @include define-css-var(form-field, $propKey, $propValue);
+      @include scss-utils.define-css-var(form-field, $propKey, $propValue);
     }
   }
 }

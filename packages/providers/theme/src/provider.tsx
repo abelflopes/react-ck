@@ -32,7 +32,7 @@ export const ThemeProvider = ({
         // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- required to simplify code
         Object.entries(theme as unknown as MappedTheme).flatMap(([context, data]) =>
           // Sync prefixing with /packages/utils/scss/src/_functions.scss
-          // get-css-var
+          // scss-utils.get-css-var
           Object.entries(data).map(([key, value]) => [`--react-ck-${context}-${key}`, value]),
         ),
       ),

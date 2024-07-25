@@ -1,5 +1,6 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
+@use "@react-ck/scss-utils";
 
 $padding: theme.get-spacing(4);
 
@@ -11,7 +12,7 @@ $padding: theme.get-spacing(4);
   align-items: center;
   justify-content: center;
   padding: $padding;
-  border: dashed theme.get-css-var(spacing, border) theme.get-color(highlight-primary);
+  border: dashed scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary);
   border-radius: theme.get-spacing(1);
   transition-duration: 0.3s;
   transition-property: background-color;
@@ -31,7 +32,7 @@ $padding: theme.get-spacing(4);
 // Skins
 
 .negative {
-  border: solid theme.get-css-var(spacing, border) theme.get-color(status-negative);
+  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(status-negative);
 }
 
 .disabled {

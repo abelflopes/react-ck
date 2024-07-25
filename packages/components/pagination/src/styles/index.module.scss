@@ -1,6 +1,6 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
 
 .root {
   display: inline-flex;
-  gap: get-spacing(0.5);
+  gap: theme.get-spacing(0.5);
 }

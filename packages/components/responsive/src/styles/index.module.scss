@@ -1,5 +1,6 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
+@use "@react-ck/scss-utils";
 @use "shared";
 
 .root {
@@ -78,7 +79,7 @@
 
 .image {
   display: block;
-  border-top-left-radius: theme.get-css-var(card, border-radius);
-  border-top-right-radius: theme.get-css-var(card, border-radius);
+  border-top-left-radius: scss-utils.get-css-var(card, border-radius);
+  border-top-right-radius: scss-utils.get-css-var(card, border-radius);
   object-fit: cover;
 }

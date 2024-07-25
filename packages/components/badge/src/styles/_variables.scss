@@ -1,22 +1,24 @@
+@use "@react-ck/theme";
+
 $badge-styles: (
   neutral: (
-    background-color: get-color(neutral-dark-1),
-    color: get-color(neutral-light-2),
+    background-color: theme.get-color(neutral-dark-1),
+    color: theme.get-color(neutral-light-2),
   ),
   primary: (
-    background-color: get-color(highlight-primary-dark),
-    color: get-color(highlight-primary-light),
+    background-color: theme.get-color(highlight-primary-dark),
+    color: theme.get-color(highlight-primary-light),
   ),
   negative: (
-    background-color: get-color(status-negative),
-    color: get-color(status-negative-light),
+    background-color: theme.get-color(status-negative),
+    color: theme.get-color(status-negative-light),
   ),
   average: (
-    background-color: get-color(status-average),
-    color: get-color(status-average-dark),
+    background-color: theme.get-color(status-average),
+    color: theme.get-color(status-average-dark),
   ),
   positive: (
-    background-color: get-color(status-positive),
-    color: get-color(status-positive-light),
+    background-color: theme.get-color(status-positive),
+    color: theme.get-color(status-positive-light),
   ),
 );

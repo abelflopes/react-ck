@@ -1,15 +1,15 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
-@import "mixins";
-@import "variables";
+@use "@react-ck/scss-utils";
+@use "mixins";
+@use "variables";
+@use "sass:map";
 
 .root {
-  @include text-base;
-  @include define-css-var(text, margin-top, 0);
-  @include define-css-var(text, margin-bottom, 0);
+  @include mixins.text-base;
+  @include scss-utils.define-css-var(text, margin-top, 0);
+  @include scss-utils.define-css-var(text, margin-bottom, 0);
 
-  margin-top: get-css-var(text, margin-top);
-  margin-bottom: get-css-var(text, margin-bottom);
+  margin-top: scss-utils.get-css-var(text, margin-top);
+  margin-bottom: scss-utils.get-css-var(text, margin-bottom);
 }
 
 // Variation
@@ -24,17 +24,17 @@
   display: block;
 }
 
-@each $variation in map-keys($text-variations) {
+@each $variation in map.keys(variables.$text-variations) {
   .variation_#{$variation} {
-    @include text-variation($variation);
+    @include mixins.text-variation($variation);
   }
 }
 
 // Skins
 
-@each $skin in map-keys($text-skins) {
+@each $skin in map.keys(variables.$text-skins) {
   .skin_#{$skin} {
-    @include text-skin($skin);
+    @include mixins.text-skin($skin);
   }
 }
 
@@ -46,28 +46,32 @@
 .variation_h4,
 .variation_h5,
 .variation_h6 {
-  @include define-css-var(text, margin-top, get-css-var(text, font-size));
-  @include define-css-var(text, margin-bottom, calc(#{get-css-var(text, font-size)} * 0.75));
+  @include scss-utils.define-css-var(text, margin-top, scss-utils.get-css-var(text, font-size));
+  @include scss-utils.define-css-var(
+    text,
+    margin-bottom,
+    calc(#{scss-utils.get-css-var(text, font-size)} * 0.75)
+  );
 }
 
 .margin_both,
 .margin_top,
 p.variation_p {
-  @include define-css-var(text, margin-top, get-css-var(text, font-size));
+  @include scss-utils.define-css-var(text, margin-top, scss-utils.get-css-var(text, font-size));
 }
 
 .margin_both,
 .margin_bottom,
 p.variation_p {
-  @include define-css-var(text, margin-bottom, get-css-var(text, font-size));
+  @include scss-utils.define-css-var(text, margin-bottom, scss-utils.get-css-var(text, font-size));
 }
 
 .margin_none,
 .margin_top {
-  @include define-css-var(text, margin-bottom, 0, true);
+  @include scss-utils.define-css-var(text, margin-bottom, 0, true);
 }
 
 .margin_none,
 .margin_bottom {
-  @include define-css-var(text, margin-top, 0, true);
+  @include scss-utils.define-css-var(text, margin-top, 0, true);
 }

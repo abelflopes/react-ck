@@ -1,23 +1,23 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
 
 .root {
-  width: get-css-var(divider, width);
-  height: get-css-var(divider, height);
+  width: scss-utils.get-css-var(divider, width);
+  height: scss-utils.get-css-var(divider, height);
   border: none;
-  background-color: get-color(neutral-light-2);
+  background-color: theme.get-color(neutral-light-2);
 }
 
 .horizontal {
-  @include define-css-var(divider, width, 100%);
-  @include define-css-var(divider, height, get-css-var(spacing, border));
+  @include scss-utils.define-css-var(divider, width, 100%);
+  @include scss-utils.define-css-var(divider, height, scss-utils.get-css-var(spacing, border));
 
-  min-width: get-spacing(2);
+  min-width: theme.get-spacing(2);
 }
 
 .vertical {
-  @include define-css-var(divider, width, get-css-var(spacing, border));
-  @include define-css-var(divider, height, 100%);
+  @include scss-utils.define-css-var(divider, width, scss-utils.get-css-var(spacing, border));
+  @include scss-utils.define-css-var(divider, height, 100%);
 
-  min-height: get-spacing(2);
+  min-height: theme.get-spacing(2);
 }

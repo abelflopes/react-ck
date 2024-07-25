@@ -1,5 +1,5 @@
 // and /packages/utils/scss/src/_functions.scss
-// get-css-var
+// scss-utils.get-css-var
 @mixin define-css-var($scope, $name, $value, $important: false) {
   @if $important {
     --react-ck-#{$scope}-#{$name}: #{$value} !important;

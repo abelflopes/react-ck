@@ -1,7 +1,7 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
 
 .root {
   display: flex;
   align-items: center;
-  gap: get-spacing(0.5);
+  gap: theme.get-spacing(0.5);
 }

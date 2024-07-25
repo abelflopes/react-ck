@@ -1,25 +1,27 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
 
 .root {
-  @include define-css-var(divider, border-color, transparent);
+  @include scss-utils.define-css-var(divider, border-color, transparent);
 
   overflow: hidden;
   padding: 0;
-  border: solid get-css-var(spacing, border) get-css-var(divider, border-color);
-  border-radius: get-spacing(2);
+  border: solid scss-utils.get-css-var(spacing, border)
+    scss-utils.get-css-var(divider, border-color);
+  border-radius: theme.get-spacing(2);
   margin: 0;
   list-style: none;
 }
 
 .item {
-  padding: get-spacing(2);
+  padding: theme.get-spacing(2);
 
   &:not(:first-child) {
-    border-top: solid get-css-var(spacing, border) get-css-var(divider, border-color);
+    border-top: solid scss-utils.get-css-var(spacing, border)
+      scss-utils.get-css-var(divider, border-color);
   }
 }
 
 .bordered {
-  @include define-css-var(divider, border-color, get-color(neutral-light-2));
+  @include scss-utils.define-css-var(divider, border-color, theme.get-color(neutral-light-2));
 }

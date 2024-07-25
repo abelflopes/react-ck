@@ -1,4 +1,4 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
 
 .root {
   position: relative;
@@ -6,7 +6,7 @@
   width: 100%;
   min-height: 300px;
   align-items: center;
-  background-color: get-color("neutral-light-2");
+  background-color: theme.get-color("neutral-light-2");
 
   .container {
     position: relative;
@@ -25,10 +25,10 @@
 
   .actions {
     display: flex;
-    gap: get-spacing(1);
+    gap: theme.get-spacing(1);
 
     &:not(:only-child) {
-      margin-top: get-spacing(2);
+      margin-top: theme.get-spacing(2);
     }
   }
 }

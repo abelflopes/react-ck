@@ -1,4 +1,5 @@
 @use "@react-ck/theme";
+@use "@react-ck/scss-utils";
 
 .root {
   position: relative;
@@ -9,7 +10,7 @@
   .shadow_x::after,
   &::before,
   &::after {
-    @include theme.define-css-var(scrollable-container, transition-duration, 2s);
+    @include scss-utils.define-css-var(scrollable-container, transition-duration, 2s);
 
     position: absolute;
     display: block;

@@ -1,10 +1,11 @@
-@import "@react-ck/theme";
-@import "@react-ck/elevation";
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+@use "@react-ck/elevation";
 
-$padding-v: #{get-spacing(0.5)};
+$padding-v: #{theme.get-spacing(0.5)};
 
 .container {
-  z-index: map-get-strict($elevation, popup);
+  z-index: scss-utils.map-get-strict(elevation.$elevation, popup);
   box-sizing: border-box;
   padding: #{$padding-v} 0;
 }
@@ -13,21 +14,21 @@ $padding-v: #{get-spacing(0.5)};
   max-width: var(--pe-max-width);
   max-height: calc(var(--pe-max-height) - #{$padding-v} * 2);
   box-sizing: border-box;
-  padding: get-css-var(dropdown, spacing);
+  padding: scss-utils.get-css-var(dropdown, spacing);
 }
 
 .spacing_s {
-  @include define-css-var(dropdown, spacing, get-spacing(0.66));
+  @include scss-utils.define-css-var(dropdown, spacing, theme.get-spacing(0.66));
 }
 
 .spacing_m {
-  @include define-css-var(dropdown, spacing, get-spacing());
+  @include scss-utils.define-css-var(dropdown, spacing, theme.get-spacing());
 }
 
 .spacing_l {
-  @include define-css-var(dropdown, spacing, get-spacing(2));
+  @include scss-utils.define-css-var(dropdown, spacing, theme.get-spacing(2));
 }
 
 .spacing_none {
-  @include define-css-var(dropdown, spacing, 0);
+  @include scss-utils.define-css-var(dropdown, spacing, 0);
 }

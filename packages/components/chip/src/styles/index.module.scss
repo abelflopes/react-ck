@@ -1,23 +1,24 @@
-@import "@react-ck/theme";
-@import "@react-ck/text";
-@import "variables";
+@use "@react-ck/theme";
+@use "@react-ck/text";
+@use "@react-ck/scss-utils";
+@use "variables";
 
 .root {
-  @include text-base;
-  @include text-variation(small);
+  @include text.text-base;
+  @include text.text-variation(small);
 
   display: inline-flex;
-  padding: get-spacing(0.5) get-spacing();
-  border-radius: get-spacing(2);
-  background-color: get-css-var(chip, background-color);
-  color: get-css-var(chip, color);
+  padding: theme.get-spacing(0.5) theme.get-spacing();
+  border-radius: theme.get-spacing(2);
+  background-color: scss-utils.get-css-var(chip, background-color);
+  color: scss-utils.get-css-var(chip, color);
   white-space: nowrap;
 }
 
-@each $key, $props in $chip-styles {
+@each $key, $props in variables.$chip-styles {
   .#{$key} {
     @each $propKey, $propValue in $props {
-      @include define-css-var(chip, $propKey, $propValue);
+      @include scss-utils.define-css-var(chip, $propKey, $propValue);
     }
   }
 }

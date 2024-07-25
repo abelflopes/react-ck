@@ -1,10 +1,10 @@
-@import "@react-ck/theme";
+@use "@react-ck/theme";
 
 .root {
   display: flex;
   padding: 0;
   margin: 0;
-  gap: get-spacing(0.2);
+  gap: theme.get-spacing(0.2);
   list-style: none;
 }
 
@@ -13,6 +13,6 @@
 }
 
 .horizontal {
-  height: get-spacing(10);
+  height: theme.get-spacing(10);
   flex-direction: row;
 }

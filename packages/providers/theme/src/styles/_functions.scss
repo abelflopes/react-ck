@@ -1,14 +1,14 @@
-@import "theme-type";
-@import "@react-ck/scss-utils";
+@use "theme-type";
+@use "@react-ck/scss-utils";
 
 @function get-color($name) {
-  $colors: map-get-strict($theme-type, "color");
+  $colors: scss-utils.map-get-strict(theme-type.$theme-type, "color");
 
-  @if validate-map-key($colors, $name) {
-    @return get-css-var(color, $name);
+  @if scss-utils.validate-map-key($colors, $name) {
+    @return scss-utils.get-css-var(color, $name);
   }
 }
 
 @function get-spacing($multi: 1) {
-  @return calc(#{get-css-var(spacing, base)} * $multi);
+  @return calc(#{scss-utils.get-css-var(spacing, base)} * $multi);
 }

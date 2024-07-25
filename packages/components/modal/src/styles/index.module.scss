@@ -1,7 +1,8 @@
 @use "@react-ck/card";
 @use "variables";
-@import "@react-ck/theme";
-@import "@react-ck/elevation";
+@use "@react-ck/theme";
+@use "@react-ck/elevation";
+@use "@react-ck/scss-utils";
 
 @keyframes appear {
   0% {
@@ -13,13 +14,13 @@
   }
 }
 
-$padding: get-css-var(modal, spacing);
+$padding: scss-utils.get-css-var(modal, spacing);
 
 .root {
-  @include define-css-var(modal, spacing, get-spacing(3));
+  @include scss-utils.define-css-var(modal, spacing, theme.get-spacing(3));
 
   position: fixed !important;
-  z-index: map-get-strict($elevation, overlay);
+  z-index: scss-utils.map-get-strict(elevation.$elevation, overlay);
   display: flex;
   overflow: hidden;
   box-sizing: border-box;
@@ -72,7 +73,7 @@ $padding: get-css-var(modal, spacing);
   align-items: center;
   justify-content: space-between;
   margin-bottom: calc(#{$padding} * -1);
-  gap: get-css-var(modal, spacing);
+  gap: scss-utils.get-css-var(modal, spacing);
 }
 
 .footer {
@@ -80,5 +81,5 @@ $padding: get-css-var(modal, spacing);
   align-items: center;
   justify-content: flex-end;
   margin-top: calc(#{$padding} * -1);
-  gap: get-css-var(modal, spacing);
+  gap: scss-utils.get-css-var(modal, spacing);
 }

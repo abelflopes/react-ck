@@ -1,5 +1,6 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
+@use "@react-ck/scss-utils";
 @use "variables";
 
 .root {
@@ -10,8 +11,8 @@
   padding: theme.get-spacing(1) theme.get-spacing(2);
   border: none;
   border-radius: theme.get-spacing(1);
-  background-color: theme.get-css-var(alert, background-color);
-  color: theme.get-css-var(alert, color);
+  background-color: scss-utils.get-css-var(alert, background-color);
+  color: scss-utils.get-css-var(alert, color);
   gap: theme.get-spacing(1);
 
   .heading {
@@ -44,7 +45,7 @@
 @each $key, $props in variables.$alert-styles {
   .#{$key} {
     @each $propKey, $propValue in $props {
-      @include theme.define-css-var(alert, $propKey, $propValue);
+      @include scss-utils.define-css-var(alert, $propKey, $propValue);
     }
   }
 }

@@ -1,9 +1,10 @@
-@import "@react-ck/theme";
-@import "@react-ck/elevation";
+@use "@react-ck/theme";
+@use "@react-ck/elevation";
+@use "@react-ck/scss-utils";
 
 .root {
   position: fixed;
-  z-index: map-get-strict($elevation, popup);
+  z-index: scss-utils.map-get-strict(elevation.$elevation, popup);
   top: 0;
   right: 0;
   display: flex;
@@ -13,8 +14,8 @@
   max-height: 100%;
   box-sizing: border-box;
   flex-direction: column;
-  padding: get-spacing(2) get-spacing(1);
+  padding: theme.get-spacing(2) theme.get-spacing(1);
   filter: drop-shadow(0 1px 5px rgb(0 0 0 / 10%));
-  gap: get-spacing(1);
+  gap: theme.get-spacing(1);
   pointer-events: none;
 }

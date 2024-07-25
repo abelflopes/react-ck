@@ -1,9 +1,8 @@
-@import "@react-ck/theme";
-@import "@react-ck/scss-utils";
+@use "@react-ck/scss-utils";
 
 .root {
   box-sizing: border-box;
-  padding: calc(#{get-css-var(grid-container, gap)} * 0.5);
+  padding: calc(#{scss-utils.get-css-var(grid-container, gap)} * 0.5);
 }
 
 .size_defined {

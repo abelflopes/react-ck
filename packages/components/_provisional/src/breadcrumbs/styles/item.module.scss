@@ -1,10 +1,13 @@
-@import "@react-ck/theme";
-@import "@react-ck/text";
+@use "@react-ck/text";
 
 .root {
-  @include text-base;
+  @include text.text-base;
 
   &.active {
-    @include text-skin(bold);
+    @include text.text-skin(bold);
+  }
+
+  &:hover:not(.active) {
+    @include text.text-skin(highlight-primary);
   }
 }

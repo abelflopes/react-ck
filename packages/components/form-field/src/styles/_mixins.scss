@@ -1,9 +1,10 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
+@use "@react-ck/scss-utils";
 @use "variables";
 
 @mixin wrapper {
-  border: solid #{theme.get-css-var(form-field, border-color)} variables.$form-field-border-width;
+  border: solid #{scss-utils.get-css-var(form-field, border-color)} variables.$form-field-border-width;
   border-radius: theme.get-spacing(1);
 }
 
@@ -21,7 +22,7 @@
   @each $key, $props in variables.$form-field-styles {
     &.skin_#{$key} {
       @each $propKey, $propValue in $props {
-        @include theme.define-css-var(form-field, $propKey, $propValue);
+        @include scss-utils.define-css-var(form-field, $propKey, $propValue);
       }
     }
   }
@@ -43,7 +44,7 @@
   outline: none;
 
   // TODO: focus mixin
-  outline: solid theme.get-css-var(spacing, border) transparent;
+  outline: solid scss-utils.get-css-var(spacing, border) transparent;
   transition-duration: 0.3s;
   transition-property: outline, outline-offset;
   transition-timing-function: ease;
@@ -58,7 +59,7 @@
 
   &:focus {
     // TODO: focus mixin
-    outline: solid theme.get-css-var(spacing, border) theme.get-color(highlight-primary);
+    outline: solid scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary);
     outline-offset: theme.get-spacing(0.2);
   }
 }

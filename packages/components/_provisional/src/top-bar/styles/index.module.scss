@@ -1,9 +1,9 @@
 @use "@react-ck/theme";
-@import "@react-ck/text";
+@use "@react-ck/text";
 
 .root {
-  @include text-base;
-  @include text-variation(h3);
+  @include text.text-base;
+  @include text.text-variation(h3);
 
   display: flex;
   align-items: center;

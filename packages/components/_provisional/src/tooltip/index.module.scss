@@ -1,11 +1,12 @@
-@import "@react-ck/theme";
-@import "@react-ck/elevation";
-@import "@react-ck/text";
+@use "@react-ck/theme";
+@use "@react-ck/text";
+@use "@react-ck/scss-utils";
+@use "@react-ck/elevation";
 
-$outer-spacing: get-spacing(1);
-$inner-spacing-y: get-spacing(1);
-$inner-spacing-x: get-spacing(2);
-$caret-spacing: get-spacing(1.66);
+$outer-spacing: theme.get-spacing(1);
+$inner-spacing-y: theme.get-spacing(1);
+$inner-spacing-x: theme.get-spacing(2);
+$caret-spacing: theme.get-spacing(1.66);
 
 @mixin animation-initial {
   opacity: 0;
@@ -22,14 +23,17 @@ $caret-spacing: get-spacing(1.66);
 }
 
 .container {
-  @include define-css-var(tooltip, max-height, var(--pe-max-height));
-  @include define-css-var(tooltip, max-width, var(--pe-max-width));
-  @include define-css-var(tooltip, container-padding-x, 0);
-  @include define-css-var(tooltip, container-padding-y, 0);
+  @include scss-utils.define-css-var(tooltip, max-height, var(--pe-max-height));
+  @include scss-utils.define-css-var(tooltip, max-width, var(--pe-max-width));
+  @include scss-utils.define-css-var(tooltip, container-padding-x, 0);
+  @include scss-utils.define-css-var(tooltip, container-padding-y, 0);
 
-  z-index: map-get-strict($elevation, popup);
+  z-index: scss-utils.map-get-strict(elevation.$elevation, popup);
   box-sizing: border-box;
-  padding: #{get-css-var(tooltip, container-padding-y)} #{get-css-var(tooltip, container-padding-x)};
+  padding: #{scss-utils.get-css-var(tooltip, container-padding-y)} #{scss-utils.get-css-var(
+      tooltip,
+      container-padding-x
+    )};
   animation: appear 0.2s ease forwards;
   will-change: opacity;
 
@@ -38,8 +42,8 @@ $caret-spacing: get-spacing(1.66);
   // Apply vertical spacing
   &[class*="top"],
   &[class*="bottom"] {
-    @include define-css-var(tooltip, container-padding-y, $outer-spacing);
-    @include define-css-var(
+    @include scss-utils.define-css-var(tooltip, container-padding-y, $outer-spacing);
+    @include scss-utils.define-css-var(
       tooltip,
       max-height,
       calc(var(--pe-max-height) - #{$outer-spacing} * 2)
@@ -61,8 +65,12 @@ $caret-spacing: get-spacing(1.66);
 
   &[class*="left"],
   &[class*="right"] {
-    @include define-css-var(tooltip, container-padding-x, $outer-spacing);
-    @include define-css-var(tooltip, max-width, calc(var(--pe-max-width) - #{$outer-spacing} * 2));
+    @include scss-utils.define-css-var(tooltip, container-padding-x, $outer-spacing);
+    @include scss-utils.define-css-var(
+      tooltip,
+      max-width,
+      calc(var(--pe-max-width) - #{$outer-spacing} * 2)
+    );
 
     &[class*="start"] .content::before {
       top: $caret-spacing;
@@ -81,43 +89,43 @@ $caret-spacing: get-spacing(1.66);
   &[class*="top"] {
     .content::before {
       top: 100%;
-      border-color: get-color(neutral-light-1) transparent transparent;
-      filter: drop-shadow(0 3px 2px get-color(neutral-light-2));
+      border-color: theme.get-color(neutral-light-1) transparent transparent;
+      filter: drop-shadow(0 3px 2px theme.get-color(neutral-light-2));
     }
   }
 
   &[class*="bottom"] {
     .content::before {
       bottom: 100%;
-      border-color: transparent transparent get-color(neutral-light-1);
-      filter: drop-shadow(0 -3px 2px get-color(neutral-light-2));
+      border-color: transparent transparent theme.get-color(neutral-light-1);
+      filter: drop-shadow(0 -3px 2px theme.get-color(neutral-light-2));
     }
   }
 
   &[class*="left"] {
     .content::before {
       left: 100%;
-      border-color: transparent transparent transparent get-color(neutral-light-1);
-      filter: drop-shadow(3px 0 2px get-color(neutral-light-2));
+      border-color: transparent transparent transparent theme.get-color(neutral-light-1);
+      filter: drop-shadow(3px 0 2px theme.get-color(neutral-light-2));
     }
   }
 
   &[class*="right"] {
     .content::before {
       right: 100%;
-      border-color: transparent get-color(neutral-light-1) transparent transparent;
-      filter: drop-shadow(-3px 0 2px get-color(neutral-light-2));
+      border-color: transparent theme.get-color(neutral-light-1) transparent transparent;
+      filter: drop-shadow(-3px 0 2px theme.get-color(neutral-light-2));
     }
   }
 }
 
 .content {
-  @include text-base;
-  @include text-variation(extra-small);
+  @include text.text-base;
+  @include text.text-variation(extra-small);
 
   position: relative;
-  max-width: get-css-var(tooltip, max-width);
-  max-height: get-css-var(tooltip, max-height);
+  max-width: scss-utils.get-css-var(tooltip, max-width);
+  max-height: scss-utils.get-css-var(tooltip, max-height);
   box-sizing: border-box;
   padding: #{$inner-spacing-y} #{$inner-spacing-x};
 
@@ -126,7 +134,7 @@ $caret-spacing: get-spacing(1.66);
     display: block;
     width: 0;
     height: 0;
-    border-width: get-spacing(0.66);
+    border-width: theme.get-spacing(0.66);
     border-style: solid;
     content: "";
   }

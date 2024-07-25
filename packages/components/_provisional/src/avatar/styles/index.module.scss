@@ -1,32 +1,33 @@
-@import "@react-ck/theme";
-@import "@react-ck/text";
-@import "variables";
+@use "@react-ck/theme";
+@use "@react-ck/text";
+@use "@react-ck/scss-utils";
+@use "variables";
 
 .root {
-  @include text-base;
-  @include text-skin(soft);
+  @include text.text-base;
+  @include text.text-skin(soft);
 
   position: relative;
   display: flex;
   overflow: hidden;
-  width: get-css-var(avatar, size);
-  height: get-css-var(avatar, size);
+  width: scss-utils.get-css-var(avatar, size);
+  height: scss-utils.get-css-var(avatar, size);
   align-items: center;
   justify-content: center;
   margin: 0;
-  background-color: get-color(neutral-light-2);
+  background-color: theme.get-color(neutral-light-2);
 
   &.skin_square {
-    border-radius: get-spacing(1);
+    border-radius: theme.get-spacing(1);
   }
 
   &.skin_rounded {
     border-radius: 50%;
   }
 
-  @each $key, $value in $avatar-sizes {
+  @each $key, $value in variables.$avatar-sizes {
     &.size_#{$key} {
-      @include define-css-var(avatar, size, $value);
+      @include scss-utils.define-css-var(avatar, size, $value);
     }
   }
 

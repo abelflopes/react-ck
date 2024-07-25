@@ -1,12 +1,12 @@
 @use "@react-ck/elevation";
-@import "@react-ck/theme";
+@use "@react-ck/scss-utils";
 
 .container {
   position: relative;
 }
 
 .overlay {
-  z-index: map-get-strict(elevation.$elevation, "overlay");
+  z-index: scss-utils.map-get-strict(elevation.$elevation, "overlay");
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
