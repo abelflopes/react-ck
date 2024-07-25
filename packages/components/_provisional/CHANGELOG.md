@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.0...@react-ck/provisional@3.9.1) (2024-07-25)
+
+
+### Bug Fixes
+
+* snippet spacing and text size ([cbb99a4](https://github.com/abelflopes/react-ck/commit/cbb99a4a456c34964ead1a49e450f468e2c855d0))
+
+
+
 ## [3.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.8.1...@react-ck/provisional@3.9.0) (2024-07-24)
 
 
