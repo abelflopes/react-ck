@@ -1,6 +1,15 @@
+@use "@react-ck/theme";
+
 $container-sizes: (
   s: 450px,
   m: 800px,
   l: 1300px,
   xl: 1500px,
+);
+$container-spacings: (
+  none: 0,
+  s: theme.get-spacing(2),
+  m: theme.get-spacing(3),
+  l: theme.get-spacing(5),
+  xl: theme.get-spacing(8),
 );

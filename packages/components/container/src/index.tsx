@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { useResponsiveProps, type ResponsiveProps } from "@react-ck/responsive";
 
 /** Represents the possible variations for the Container component  */
-type ContainerSpacing = "s" | "m" | "l" | "none";
+type ContainerSpacing = "none" | "s" | "m" | "l" | "xl";
 
 interface BaseProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Container maximum width */

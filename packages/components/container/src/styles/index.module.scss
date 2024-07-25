@@ -18,38 +18,16 @@
   }
 }
 
-// Container Spacing Vertical
+@each $key, $value in shared.$container-spacings {
+  // Container Spacing Vertical
 
-.spacing_y_none {
-  @include scss-utils.define-css-var(container, spacing-y, 0);
-}
+  .spacing_y_#{$key} {
+    @include scss-utils.define-css-var(container, spacing-y, $value);
+  }
 
-.spacing_y_s {
-  @include scss-utils.define-css-var(container, spacing-y, theme.get-spacing(2));
-}
+  // Container Spacing Horizontal
 
-.spacing_y_m {
-  @include scss-utils.define-css-var(container, spacing-y, theme.get-spacing(3));
-}
-
-.spacing_y_l {
-  @include scss-utils.define-css-var(container, spacing-y, theme.get-spacing(6));
-}
-
-// Container Spacing Horizontal
-
-.spacing_x_none {
-  @include scss-utils.define-css-var(container, spacing-x, 0);
-}
-
-.spacing_x_s {
-  @include scss-utils.define-css-var(container, spacing-x, theme.get-spacing(2));
-}
-
-.spacing_x_m {
-  @include scss-utils.define-css-var(container, spacing-x, theme.get-spacing(5));
-}
-
-.spacing_x_l {
-  @include scss-utils.define-css-var(container, spacing-x, theme.get-spacing(8));
+  .spacing_x_#{$key} {
+    @include scss-utils.define-css-var(container, spacing-x, $value);
+  }
 }
