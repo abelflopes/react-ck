@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.9.3...@react-ck/theme@1.10.0) (2024-07-25)
+
+
+### Features
+
+* **theme:** add opaque colors ([3ccf7f8](https://github.com/abelflopes/react-ck/commit/3ccf7f84ef326c95cab5c552ca6a2cb8951e95fd))
+
+
+
 ## [1.9.3](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.9.2...@react-ck/theme@1.9.3) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/theme
