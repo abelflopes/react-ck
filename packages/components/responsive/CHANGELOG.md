@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/responsive@1.2.0...@react-ck/responsive@1.3.0) (2024-07-25)
+
+
+### Features
+
+* **responsive:** export breakpoint mixin ([d6a8c16](https://github.com/abelflopes/react-ck/commit/d6a8c165725a9754c77d121ce2891ae5e987b634))
+
+
+
 ## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/responsive@1.1.0...@react-ck/responsive@1.2.0) (2024-07-25)
 
 
