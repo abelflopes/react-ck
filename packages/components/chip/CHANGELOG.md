@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.34](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.33...@react-ck/chip@1.2.34) (2024-07-25)
+
+
+### Bug Fixes
+
+* remove unused dependencies / add missing dependencies ([2fdb7a4](https://github.com/abelflopes/react-ck/commit/2fdb7a4eed218581949f6d0d8d902b3b677b3bf1))
+
+
+
 ## [1.2.33](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.32...@react-ck/chip@1.2.33) (2024-07-24)
 
 **Note:** Version bump only for package @react-ck/chip

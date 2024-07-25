@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.8](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.8.7...@react-ck/card@1.8.8) (2024-07-25)
+
+
+### Bug Fixes
+
+* remove unused dependencies / add missing dependencies ([2fdb7a4](https://github.com/abelflopes/react-ck/commit/2fdb7a4eed218581949f6d0d8d902b3b677b3bf1))
+
+
+
 ## [1.8.7](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.8.6...@react-ck/card@1.8.7) (2024-07-24)
 
 

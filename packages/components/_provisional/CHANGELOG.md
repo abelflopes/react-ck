@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.4](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.3...@react-ck/provisional@3.9.4) (2024-07-25)
+
+
+### Bug Fixes
+
+* remove unused dependencies / add missing dependencies ([2fdb7a4](https://github.com/abelflopes/react-ck/commit/2fdb7a4eed218581949f6d0d8d902b3b677b3bf1))
+
+
+
 ## [3.9.3](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.2...@react-ck/provisional@3.9.3) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/provisional
