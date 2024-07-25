@@ -1,3 +1,21 @@
+## [3.24.0](https://github.com/abelflopes/react-ck/compare/v3.23.0...v3.24.0) (2024-07-25)
+
+
+### Features
+
+* **react-ck:** global library package ([101d554](https://github.com/abelflopes/react-ck/commit/101d55437094a0c38d949b8bae3c721a2c874761))
+* **react-ck:** global library package ([7b4a721](https://github.com/abelflopes/react-ck/commit/7b4a721e6b50e662d446fa04b7191a0f922ef695))
+
+
+### Bug Fixes
+
+* remove unused dependencies / add missing dependencies ([2fdb7a4](https://github.com/abelflopes/react-ck/commit/2fdb7a4eed218581949f6d0d8d902b3b677b3bf1))
+
+
+### Code Refactoring
+
+* isolate scss imports with `[@use](https://github.com/use)` ([a2fa9bf](https://github.com/abelflopes/react-ck/commit/a2fa9bf54739a1957686b4a22b629ccc4ed8390d))
+
 ## [3.23.0](https://github.com/abelflopes/react-ck/compare/v3.22.0...v3.23.0) (2024-07-25)
 
 
