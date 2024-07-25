@@ -3,6 +3,15 @@ import { type ResponsiveTarget, type EnabledBreakpointsMapping, type Breakpoint 
 import { breakpointKeys, breakpoints } from "../constants";
 import { eachBreakpoint } from "../utils";
 
+const baseBreakpointsData: EnabledBreakpointsMapping = {
+  xs: false,
+  s: false,
+  m: false,
+  l: false,
+  xl: false,
+  xxl: false,
+};
+
 /**
  * Returns a map that informs which breakpoints are active
  * @param target - which reference to use, defaults to viewport but can also use an element
@@ -12,20 +21,15 @@ export const useBreakpoints = (
   active: boolean, // TODO: enable activating for specific breakpoints
   target: ResponsiveTarget = "viewport",
 ): {
-  breakpointsData: EnabledBreakpointsMapping;
+  breakpointsData: EnabledBreakpointsMapping | undefined;
   activeBreakpoint: Breakpoint | undefined;
 } => {
-  const [breakpointsData, setBreakpointsData] = useState<EnabledBreakpointsMapping>({
-    xs: false,
-    s: false,
-    m: false,
-    l: false,
-    xl: false,
-    xxl: false,
-  });
+  const [breakpointsData, setBreakpointsData] = useState<EnabledBreakpointsMapping | undefined>(
+    undefined,
+  );
 
   const activeBreakpoint = useMemo<Breakpoint | undefined>(() => {
-    if (!active) return;
+    if (!active || !breakpointsData) return;
 
     let tmpActiveBreakpoint: Breakpoint = "xs";
 
@@ -48,6 +52,7 @@ export const useBreakpoints = (
         const width = el.clientWidth;
 
         setBreakpointsData((v) => ({
+          ...baseBreakpointsData,
           ...v,
           [bpKey]: width >= breakpoints[bpKey],
         }));
@@ -72,12 +77,14 @@ export const useBreakpoints = (
       const data = window.matchMedia(`(min-width: ${breakpoints[bpKey]}px)`);
 
       setBreakpointsData((v) => ({
+        ...baseBreakpointsData,
         ...v,
         [bpKey]: data.matches,
       }));
 
       const listener = (e: MediaQueryListEventMap["change"]): void => {
         setBreakpointsData((v) => ({
+          ...baseBreakpointsData,
           ...v,
           [bpKey]: e.matches,
         }));

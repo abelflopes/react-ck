@@ -23,7 +23,7 @@ export const useResponsiveProps = <T extends BaseProps>({
 
     eachBreakpoint((bpKey) => {
       // exit if curr breakpoint is not active
-      if (!breakpointsData[bpKey]) return;
+      if (!breakpointsData?.[bpKey]) return;
 
       const currBreakpointProps = responsiveProps[bpKey];
 
