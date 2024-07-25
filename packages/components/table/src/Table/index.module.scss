@@ -40,7 +40,7 @@
   @include sticky_headers {
     position: sticky;
     top: 0;
-    background-color: theme.get-color(neutral-light-1-5) !important;
+    background-color: theme.get-color(neutral-light-1-5-solid) !important;
     white-space: nowrap;
 
     &:first-child {
@@ -79,7 +79,7 @@
 }
 
 .bordered {
-  @include scss-utils.define-css-var(table, border-color, theme.get-color(neutral-light-2));
+  @include scss-utils.define-css-var(table, border-color, theme.get-color(neutral-light-2-solid));
 }
 
 .table {

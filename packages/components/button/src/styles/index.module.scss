@@ -113,10 +113,18 @@
 }
 
 .secondary {
-  @include scss-utils.define-css-var(button, background-color, theme.get-color(neutral-light-1-5));
+  @include scss-utils.define-css-var(
+    button,
+    background-color,
+    theme.get-color(neutral-light-1-5-solid)
+  );
 
   &:hover {
-    @include scss-utils.define-css-var(button, background-color, theme.get-color(neutral-light-2));
+    @include scss-utils.define-css-var(
+      button,
+      background-color,
+      theme.get-color(neutral-light-2-solid)
+    );
   }
 }
 
