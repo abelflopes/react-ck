@@ -8,7 +8,7 @@ export const HomePage = (): React.ReactElement => {
 
   return (
     <>
-      <Container spacingY>
+      <Container spacingY="l">
         <Text variation="h1">{title} - Home</Text>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate a assumenda nulla
@@ -23,18 +23,14 @@ export const HomePage = (): React.ReactElement => {
         </Text>
         <Button
           onClick={() => {
-            console.log("click");
             setModalOpen(true);
           }}>
-          Open {String(modalOpen)}
+          Open
         </Button>
 
         <Text variation="h2">Multiples</Text>
 
         <DataTable
-          autoHeaders
-          sortable
-          scrollable
           skin="bordered"
           data={Object.keys(Array.from(Array(10))).map((key) => ({
             "": (
@@ -49,31 +45,29 @@ export const HomePage = (): React.ReactElement => {
               }),
             ),
           }))}
+          autoHeaders
+          sortable
+          scrollable
         />
       </Container>
-      <Button
-        onClick={() => {
-          setModalOpen(false);
-        }}>
-        Close
-      </Button>
 
-      <Modal
-        open={modalOpen}
-        onDismiss={() => {
-          setModalOpen(false);
-        }}>
-        <Modal.Header heading="Header" />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate!
-        <Modal.Footer>
-          <Button
-            onClick={() => {
-              setModalOpen(false);
-            }}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      {modalOpen ? (
+        <Modal
+          onDismiss={() => {
+            setModalOpen(false);
+          }}>
+          <Modal.Header heading="Header" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate!
+          <Modal.Footer>
+            <Button
+              onClick={() => {
+                setModalOpen(false);
+              }}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      ) : null}
     </>
   );
 };
