@@ -8,7 +8,7 @@ type ContainerSpacing = "s" | "m" | "l" | "none";
 
 interface BaseProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Container maximum width */
-  size?: "s" | "m" | "l";
+  size?: "s" | "m" | "l" | "xl";
   /** Adds horizontal spacing to the container  */
   spacingX?: ContainerSpacing;
   /** Adds vertical spacing to the container  */
