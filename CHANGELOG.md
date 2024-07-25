@@ -1,3 +1,12 @@
+## [3.22.0](https://github.com/abelflopes/react-ck/compare/v3.21.0...v3.22.0) (2024-07-25)
+
+
+### Features
+
+* **react-ck:** global library package ([5767bc3](https://github.com/abelflopes/react-ck/commit/5767bc346b0226ed1d65392539a79ddc2122deb3))
+* **react-ck:** global library package ([ce55715](https://github.com/abelflopes/react-ck/commit/ce5571504ca57a7f834602b2e96669f49473efee))
+* **responsive:** export breakpoint mixin ([d6a8c16](https://github.com/abelflopes/react-ck/commit/d6a8c165725a9754c77d121ce2891ae5e987b634))
+
 ## [3.21.0](https://github.com/abelflopes/react-ck/compare/v3.20.0...v3.21.0) (2024-07-25)
 
 
