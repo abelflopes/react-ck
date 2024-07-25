@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/responsive@1.3.0...@react-ck/responsive@1.3.1) (2024-07-25)
+
+
+### Bug Fixes
+
+* **responsive:** fix computed props not being updated correctly ([7e37539](https://github.com/abelflopes/react-ck/commit/7e375393c694d23fa7d45b43044fbb74c87ae4a4))
+* **responsive:** infinite loop when computing props ([fc0b6d6](https://github.com/abelflopes/react-ck/commit/fc0b6d64bda71d202faec495ff9c5215f14aead9))
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/responsive@1.2.0...@react-ck/responsive@1.3.0) (2024-07-25)
 
 

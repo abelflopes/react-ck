@@ -1,3 +1,18 @@
+## [3.23.0](https://github.com/abelflopes/react-ck/compare/v3.22.0...v3.23.0) (2024-07-25)
+
+
+### Features
+
+* **react-ck:** global library package ([7a17c95](https://github.com/abelflopes/react-ck/commit/7a17c957b8a3a0a066bc119ccfa055d3e88f92ac))
+* **react-ck:** global library package ([18b08a5](https://github.com/abelflopes/react-ck/commit/18b08a547d2e50140b3be4cfecb1dc9845b60a1c))
+
+
+### Bug Fixes
+
+* **library:** use forward for scss instead import ([012af8b](https://github.com/abelflopes/react-ck/commit/012af8bd7ef7762dd9acfa4aa36f0cf42c87310b))
+* **responsive:** fix computed props not being updated correctly ([7e37539](https://github.com/abelflopes/react-ck/commit/7e375393c694d23fa7d45b43044fbb74c87ae4a4))
+* **responsive:** infinite loop when computing props ([fc0b6d6](https://github.com/abelflopes/react-ck/commit/fc0b6d64bda71d202faec495ff9c5215f14aead9))
+
 ## [3.22.0](https://github.com/abelflopes/react-ck/compare/v3.21.0...v3.22.0) (2024-07-25)
 
 
