@@ -37,17 +37,7 @@ export const useResponsiveProps = <T extends BaseProps>({
     });
 
     setComputedProps(tmpProps);
-  }, [breakpointsData]);
-
-  useEffect(() => {
-    // eslint-disable-next-line no-console -- temp debug / TODO: remove
-    console.log("useResponsiveProps: computedProps", computedProps);
-  }, [computedProps]);
-
-  useEffect(() => {
-    // eslint-disable-next-line no-console -- temp debug / TODO: remove
-    console.log("useResponsiveProps: active", active);
-  }, [active]);
+  }, [breakpointsData, baseProps, active, responsiveProps]);
 
   return computedProps;
 };
