@@ -1,6 +1,6 @@
 import { type breakpointKeys } from "./constants";
 
-export type BaseProps = Record<string, unknown>;
+export type BaseProps = object;
 
 export type ResponsiveTarget = "viewport" | React.RefObject<HTMLElement>;
 
@@ -10,7 +10,7 @@ export interface ResponsiveProps<T extends BaseProps> {
   responsive?: {
     target?: ResponsiveTarget;
   } & {
-    [key in Breakpoint]: Partial<T>;
+    [key in Breakpoint]?: Partial<T>;
   };
 }
 

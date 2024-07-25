@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@react-ck/scss-utils": "^1.1.10",
+    "@react-ck/responsive": "^1.0.0",
     "@react-ck/theme": "^1.9.1",
     "classnames": "^2.3.2"
   }

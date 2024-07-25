@@ -1,5 +1,7 @@
 export * from "./components/ResponsiveFragment";
 
-export * from "./hooks/responsive";
+export * from "./hooks/breakpoints";
 
 export * from "./hooks/responsive-props";
+
+export * from "./types";

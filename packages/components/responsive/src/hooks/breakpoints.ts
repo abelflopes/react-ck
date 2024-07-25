@@ -1,14 +1,21 @@
-import { useEffect, useState } from "react";
-import { type ResponsiveTarget, type EnabledBreakpointsMapping } from "../types";
+import { useEffect, useMemo, useState } from "react";
+import { type ResponsiveTarget, type EnabledBreakpointsMapping, type Breakpoint } from "../types";
 import { breakpointKeys, breakpoints } from "../constants";
+import { eachBreakpoint } from "../utils";
 
 /**
  * Returns a map that informs which breakpoints are active
  * @param target - which reference to use, defaults to viewport but can also use an element
  * @returns @see {@link UseResponsiveData}
  */
-export const useResponsive = (target: ResponsiveTarget = "viewport"): EnabledBreakpointsMapping => {
-  const [activeBreakpoints, setActiveBreakpoints] = useState<EnabledBreakpointsMapping>({
+export const useBreakpoints = (
+  active: boolean,
+  target: ResponsiveTarget = "viewport",
+): {
+  breakpointsData: EnabledBreakpointsMapping;
+  activeBreakpoint: Breakpoint | undefined;
+} => {
+  const [breakpointsData, setBreakpointsData] = useState<EnabledBreakpointsMapping>({
     xs: false,
     s: false,
     m: false,
@@ -17,18 +24,30 @@ export const useResponsive = (target: ResponsiveTarget = "viewport"): EnabledBre
     xxl: false,
   });
 
+  const activeBreakpoint = useMemo<Breakpoint | undefined>(() => {
+    if (!active) return;
+
+    let tmpActiveBreakpoint: Breakpoint = "xs";
+
+    eachBreakpoint((bpKey) => {
+      if (breakpointsData[bpKey]) tmpActiveBreakpoint = bpKey;
+    });
+
+    return tmpActiveBreakpoint;
+  }, [breakpointsData, active]);
+
   // Handle HTMLElement detection
   useEffect(() => {
-    if (target === "viewport") return;
+    if (!active || target === "viewport") return;
 
     const el = target.current;
     if (!el) return;
 
     const check = (): void => {
-      breakpointKeys.forEach((bpKey) => {
+      eachBreakpoint((bpKey) => {
         const width = el.clientWidth;
 
-        setActiveBreakpoints((v) => ({
+        setBreakpointsData((v) => ({
           ...v,
           [bpKey]: width >= breakpoints[bpKey],
         }));
@@ -37,28 +56,28 @@ export const useResponsive = (target: ResponsiveTarget = "viewport"): EnabledBre
 
     const resizeObserver = new ResizeObserver(check);
 
-    check();
+    // check(); // Check is fired initially
     resizeObserver.observe(el);
 
     return () => {
       resizeObserver.unobserve(el);
     };
-  }, [target]);
+  }, [target, active]);
 
   // Handle viewport detection
   useEffect(() => {
-    if (target !== "viewport") return;
+    if (!active || target !== "viewport") return;
 
     const removeListeners = breakpointKeys.map((bpKey) => {
       const data = window.matchMedia(`(min-width: ${breakpoints[bpKey]}px)`);
 
-      setActiveBreakpoints((v) => ({
+      setBreakpointsData((v) => ({
         ...v,
         [bpKey]: data.matches,
       }));
 
       const listener = (e: MediaQueryListEventMap["change"]): void => {
-        setActiveBreakpoints((v) => ({
+        setBreakpointsData((v) => ({
           ...v,
           [bpKey]: e.matches,
         }));
@@ -66,11 +85,9 @@ export const useResponsive = (target: ResponsiveTarget = "viewport"): EnabledBre
 
       data.addEventListener("change", listener);
 
-      const removeListener = (): void => {
+      return (): void => {
         data.removeEventListener("change", listener);
       };
-
-      return removeListener;
     });
 
     return () => {
@@ -78,7 +95,13 @@ export const useResponsive = (target: ResponsiveTarget = "viewport"): EnabledBre
         removeListener();
       });
     };
-  }, [target]);
+  }, [active, target]);
 
-  return activeBreakpoints;
+  return useMemo(
+    () => ({
+      breakpointsData,
+      activeBreakpoint,
+    }),
+    [activeBreakpoint, breakpointsData],
+  );
 };

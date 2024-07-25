@@ -2,9 +2,10 @@ import React, { useCallback, useMemo, useRef, useState } from "react";
 import styles from "./styles/container.module.scss";
 import classNames from "classnames";
 import { GridContext, type GridContextProps } from "./context";
-import { GridColumn } from "./Column";
+import { GridColumn, type GridColumnProps } from "./Column";
+import { useResponsiveProps, type ResponsiveProps } from "@react-ck/responsive";
 
-interface GridProps extends React.HTMLAttributes<HTMLHRElement> {
+interface BaseProps extends React.HTMLAttributes<HTMLHRElement> {
   /** The spacing between columns in the grid  */
   spacing?: "s" | "m" | "l" | "none";
   /** Whether to allow grid items to wrap to the next line  */
@@ -13,19 +14,25 @@ interface GridProps extends React.HTMLAttributes<HTMLHRElement> {
   align?: "default" | "centered" | "stretch";
 }
 
+type GridProps = BaseProps & ResponsiveProps<BaseProps>;
+
 /**
  * A container used to build layouts that align to a user-defined system of columns and rows.
  * @param props - {@link DividerProps}
  * @returns a React element
  */
 
-const Grid = ({
-  spacing = "m",
-  wrap = true,
-  align = "default",
-  className,
-  ...otherProps
-}: Readonly<GridProps>): React.ReactElement => {
+const Grid = ({ responsive, ...baseProps }: Readonly<GridProps>): React.ReactElement => {
+  const { spacing, wrap, align, className, ...otherProps } = useResponsiveProps<BaseProps>({
+    baseProps: {
+      ...baseProps,
+      spacing: baseProps.spacing ?? "m",
+      wrap: baseProps.wrap ?? true,
+      align: baseProps.align ?? "default",
+    },
+    responsive,
+  });
+
   const index = useRef(0);
   const [columnsCount, setColumnsCount] = useState(0);
 
@@ -69,4 +76,4 @@ const Grid = ({
 
 Grid.Column = GridColumn;
 
-export { Grid, type GridProps };
+export { Grid, type GridProps, type GridColumnProps };

@@ -6,6 +6,8 @@ import { configureStory } from "@react-ck/story-config/src/index";
 import { Grid } from "@react-ck/grid/src";
 import { Card } from "@react-ck/card/src";
 import { type GridColumnProps } from "@react-ck/grid/src/Column";
+import { Text } from "@react-ck/text/src";
+import { sentenceCase } from "change-case";
 
 type Story = StoryObj<typeof Grid>;
 
@@ -31,19 +33,65 @@ const meta: Meta<typeof Grid> = {
   ),
 };
 
-const sizes: Array<GridColumnProps["size"]> = [12, 6, 4, 2, 2, "auto", 3];
+const cols: GridColumnProps[] = [
+  { size: 12 },
+  {
+    size: 12,
+    responsive: {
+      xl: { size: 6 },
+    },
+  },
+  {
+    size: 12,
+    responsive: {
+      xl: { size: 6 },
+      xxl: { size: 4 },
+    },
+  },
+  {
+    size: 12,
+    responsive: {
+      xl: { size: 6 },
+      xxl: { size: 2 },
+    },
+  },
+  {
+    size: 12,
+    responsive: {
+      xl: { size: 6 },
+      xxl: { size: 2 },
+    },
+  },
+  { size: "auto" },
+  {
+    size: 12,
+    responsive: {
+      l: { size: 3 },
+    },
+  },
+  {
+    size: 12,
+    responsive: {
+      l: { size: 5 },
+    },
+  },
+];
 
 export default meta;
 
 export const Component: Story = {
   args: {
+    align: "stretch",
     children: (
       <>
-        {sizes.map((i) => (
-          <Grid.Column key={i} size={i}>
+        {cols.map((i, k) => (
+          <Grid.Column key={JSON.stringify({ ...i, k })} {...i}>
             {/* height 100% for stretch mode */}
             <Card style={{ height: "100%" }}>
-              {faker.lorem.sentence(2)} ({i})
+              <Text margin="none">
+                {faker.lorem.sentence(2)}
+                <br />({sentenceCase(JSON.stringify(i))})
+              </Text>
             </Card>
           </Grid.Column>
         ))}

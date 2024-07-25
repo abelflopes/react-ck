@@ -1,10 +1,13 @@
+let baseSize = 320;
+const increment = 220;
+
 export const breakpoints = {
-  xs: 0,
-  s: 540,
-  m: 700,
-  l: 1024,
-  xl: 1200,
-  xxl: 1600,
+  xs: baseSize,
+  s: (baseSize += increment),
+  m: (baseSize += increment),
+  l: (baseSize += increment),
+  xl: (baseSize += increment),
+  xxl: (baseSize += increment),
 };
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- in this case we are sure the type matches
