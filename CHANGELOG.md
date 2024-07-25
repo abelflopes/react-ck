@@ -1,3 +1,24 @@
+## [3.25.0](https://github.com/abelflopes/react-ck/compare/v3.24.0...v3.25.0) (2024-07-25)
+
+
+### Features
+
+* **container:** add `xl` size ([b43f8af](https://github.com/abelflopes/react-ck/commit/b43f8afb482cef692c81f98038140c16c759dcb3))
+* **react-ck:** global library package ([ef4adef](https://github.com/abelflopes/react-ck/commit/ef4adefe654e9be2c277b39f740ec756a18c5697))
+* **react-ck:** global library package ([da34a91](https://github.com/abelflopes/react-ck/commit/da34a910f6f54108ce0959e60ca53efd1e9aa5dc))
+
+
+### Bug Fixes
+
+* **container:** use consistent X and Y spacings ([89c992f](https://github.com/abelflopes/react-ck/commit/89c992f888656a27357add57751d5bd2035aa126))
+* **demo apps:** fix demo apps build ([a3c92c4](https://github.com/abelflopes/react-ck/commit/a3c92c4bb9e066921849453afdc57cd3d0fe1271))
+* **responsive:** return undefined for breakpoints hook when inactive ([3f5b6dd](https://github.com/abelflopes/react-ck/commit/3f5b6ddcbde5b00052193eb65306a2ddc9c36385))
+
+
+### Code Refactoring
+
+* **responsive:** use better util api and use default values ([fc7b311](https://github.com/abelflopes/react-ck/commit/fc7b31101b424e95c1675090741543085559d995))
+
 ## [3.24.0](https://github.com/abelflopes/react-ck/compare/v3.23.0...v3.24.0) (2024-07-25)
 
 
