@@ -18,10 +18,18 @@ These colors are carefully curated to maintain a cohesive and visually appealing
   />
 
   <ColorItem
-    title="Neutral Light"
+    title="Neutral Light (Translucent)"
     subtitle="Multi purpose neutral light colors"
     colors={Object.fromEntries(
-      Object.entries(defaultTheme.color).filter(([k]) => k.includes("neutral-light")),
+      Object.entries(defaultTheme.color).filter(([k]) => !k.includes("solid") && k.includes("neutral-light")),
+    )}
+  />
+
+  <ColorItem
+    title="Neutral Light (Solid)"
+    subtitle="Multi purpose neutral light colors"
+    colors={Object.fromEntries(
+      Object.entries(defaultTheme.color).filter(([k]) => k.includes("solid") && k.includes("neutral-light")),
     )}
   />
 
