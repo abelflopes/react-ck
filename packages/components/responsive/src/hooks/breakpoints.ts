@@ -9,7 +9,7 @@ import { eachBreakpoint } from "../utils";
  * @returns @see {@link UseResponsiveData}
  */
 export const useBreakpoints = (
-  active: boolean,
+  active: boolean, // TODO: enable activating for specific breakpoints
   target: ResponsiveTarget = "viewport",
 ): {
   breakpointsData: EnabledBreakpointsMapping;
@@ -96,16 +96,6 @@ export const useBreakpoints = (
       });
     };
   }, [active, target]);
-
-  useEffect(() => {
-    // eslint-disable-next-line no-console -- temp debug / TODO: remove
-    console.log("useBreakpoints: breakpointsData", breakpointsData);
-  }, [breakpointsData]);
-
-  useEffect(() => {
-    // eslint-disable-next-line no-console -- temp debug / TODO: remove
-    console.log("useBreakpoints: activeBreakpoint", activeBreakpoint);
-  }, [activeBreakpoint]);
 
   return useMemo(
     () => ({
