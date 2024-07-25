@@ -91,7 +91,10 @@ export const useResponsiveHook: Story = {
     const ref = useRef<HTMLDivElement>(null);
 
     // eslint-disable-next-line react-hooks/rules-of-hooks -- exception for storybook
-    const breakpoints = useBreakpoints(true, ref);
+    const breakpoints = useBreakpoints({
+      active: true,
+      target: ref,
+    });
 
     return (
       <div ref={ref} style={{ width: "66vw", maxWidth: "100%" }}>
