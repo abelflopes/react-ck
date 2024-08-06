@@ -1,3 +1,18 @@
+## [3.26.0](https://github.com/abelflopes/react-ck/compare/v3.25.0...v3.26.0) (2024-07-25)
+
+
+### Features
+
+* **icons:** add copy icon ([bc17f9a](https://github.com/abelflopes/react-ck/commit/bc17f9a4feded104d960b74e0a609805f08007b1))
+* **react-ck:** global library package ([98aca68](https://github.com/abelflopes/react-ck/commit/98aca68a3ca24472a2fb3c9db267fa364576d9d6))
+* **react-ck:** global library package ([00f313c](https://github.com/abelflopes/react-ck/commit/00f313c7c90ce1b946d863c8320725346eb79b6f))
+* **theme:** add opaque colors ([3ccf7f8](https://github.com/abelflopes/react-ck/commit/3ccf7f84ef326c95cab5c552ca6a2cb8951e95fd))
+
+
+### Code Refactoring
+
+* use opaque colors on floating elements ([be96e15](https://github.com/abelflopes/react-ck/commit/be96e1537cad13adf3f330a851f483e123129ce9))
+
 ## [3.25.0](https://github.com/abelflopes/react-ck/compare/v3.24.0...v3.25.0) (2024-07-25)
 
 

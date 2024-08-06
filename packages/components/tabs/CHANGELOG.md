@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.32](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.1.31...@react-ck/tabs@1.1.32) (2024-07-25)
+
+**Note:** Version bump only for package @react-ck/tabs
+
+
+
+
+
 ## [1.1.31](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.1.30...@react-ck/tabs@1.1.31) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/tabs

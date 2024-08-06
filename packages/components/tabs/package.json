@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/tabs",
   "private": false,
-  "version": "1.1.31",
+  "version": "1.1.32",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "@react-ck/scss-utils": "^1.1.12",
-    "@react-ck/text": "^1.5.16",
-    "@react-ck/theme": "^1.9.3",
+    "@react-ck/text": "^1.5.17",
+    "@react-ck/theme": "^1.10.0",
     "classnames": "^2.3.2"
   },
   "peerDependencies": {
