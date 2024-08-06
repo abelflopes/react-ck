@@ -29,8 +29,11 @@ export const Progress = ({
   ...otherProps
 }: Readonly<ProgressProps>): React.ReactElement => {
   const percent = useMemo(() => {
-    const diff = Math.abs(min - max);
-    const pos = value - min;
+    const computedMin = Math.min(min, value, max);
+    const computedMax = Math.max(min, value, max);
+
+    const diff = Math.abs(computedMin - computedMax);
+    const pos = value - computedMin;
     return (pos * 100) / diff;
   }, [max, min, value]);
 
