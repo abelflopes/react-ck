@@ -5,7 +5,7 @@ import classNames from "classnames";
 // Styles
 import styles from "./styles/index.module.scss";
 
-interface ProgressProps
+export interface ProgressProps
   extends Omit<React.ProgressHTMLAttributes<HTMLProgressElement>, "children"> {
   /** Minimum value - corresponds to 0% progress */
   min?: number;
