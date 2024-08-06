@@ -2,6 +2,7 @@
 
 .root {
   position: relative;
+  display: block;
   overflow: hidden;
   width: 100%;
   height: theme.get-spacing(20);

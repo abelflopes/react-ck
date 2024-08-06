@@ -1,5 +1,5 @@
 // React
-import React, { useEffect, useMemo, useState } from "react";
+import React, { type ComponentProps, useEffect, useMemo, useState } from "react";
 // Utils
 import classNames from "classnames";
 // Styles
@@ -7,7 +7,7 @@ import styles from "./styles/index.module.scss";
 
 // TODO: make random size / or allow choosing
 
-interface SkeletonProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
+interface SkeletonProps extends Omit<ComponentProps<"span">, "children"> {
   variation?: "default" | "text";
 }
 
@@ -39,7 +39,7 @@ export const Skeleton = ({
   }, [variation]);
 
   return (
-    <div
+    <span
       className={classNames(styles.root, styles[variation], className)}
       style={{
         ...style,
