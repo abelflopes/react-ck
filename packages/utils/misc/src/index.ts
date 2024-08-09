@@ -18,22 +18,19 @@ const generateCombinations = <T extends object>(propsMap: PropsMap<T>): T[] => {
     const key = keys[index] as unknown as keyof T;
     const values = propsMap[key];
 
-    console.log("values", values);
-
-    for (const value of values) {
-      console.log("value", value);
-      combine(index + 1, { ...currentCombination, [key]: value });
-    }
+    for (const value of values) combine(index + 1, { ...currentCombination, [key]: value });
   };
 
   combine(0, {});
   return combinations;
 };
 
+// eslint-disable-next-line complexity -- no alternative
 const describeCombination = (data: unknown): string => {
   if (data === null) return "null";
 
   switch (typeof data) {
+    case "boolean":
     case "string":
     case "number":
     case "undefined":
@@ -44,13 +41,22 @@ const describeCombination = (data: unknown): string => {
       if (data instanceof Array) return JSON.stringify(data.map(describeCombination), null, 2);
       return JSON.stringify(
         Object.fromEntries(
-          Object.entries(data).map(([key, value]) => [key, describeCombination(value)]),
+          Object.entries(data).map(([key, value]) => {
+            if (typeof value === "object" && value !== null && "$$typeof" in value)
+              return [key, "ReactElement"];
+
+            return [key, describeCombination(value)];
+          }),
         ),
         null,
         2,
       );
+    case "symbol":
+      return "data.toString()";
     default:
-      throw new Error(`Unsupported describe type - ${typeof data} / ${String(data)}`);
+      // eslint-disable-next-line no-console -- help debug
+      console.warn("unsupported item:", data);
+      throw new Error(`describeCombination - unsupported type: ${typeof data} / ${String(data)}`);
   }
 };
 

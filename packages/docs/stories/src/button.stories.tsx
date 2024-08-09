@@ -4,9 +4,10 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import { Button } from "@react-ck/button/src";
+import { Button, type ButtonProps } from "@react-ck/button/src";
 import { Icon } from "@react-ck/icon/src";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
+import { generateAllVariations } from "./utils/generate-all-variations";
 
 type Story = StoryObj<typeof Button>;
 
@@ -64,4 +65,15 @@ export const Disabled: Story = {
     ...Primary.args,
     disabled: true,
   },
+};
+
+export const AllButtonVariations: Story = {
+  decorators: [
+    (): React.ReactElement =>
+      generateAllVariations<ButtonProps>(Button, {
+        skin: ["primary", "primary-alt", "secondary", "bordered", "ghost", "negative"],
+        size: ["l", "m", "s", "xs"],
+        children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
+      }),
+  ],
 };

@@ -4,7 +4,9 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
 import { configureStory } from "@react-ck/story-config";
-import { Card } from "@react-ck/card";
+import { Card, type CardProps } from "@react-ck/card";
+import { generateAllVariations } from "./utils/generate-all-variations";
+import { sentenceCase } from "change-case";
 
 type Story = StoryObj<typeof Card>;
 
@@ -73,4 +75,23 @@ export const AsLink: Story = {
       </>
     ),
   },
+};
+
+export const AllCardVariations: Story = {
+  decorators: [
+    (): React.ReactElement =>
+      generateAllVariations<CardProps>(
+        Card,
+        {
+          skin: ["bordered", "shadowed", "ghost"],
+          spacing: ["l", "m", "s", "none"],
+          interaction: [undefined, "hover", "click"],
+          variation: ["vertical", "horizontal"],
+          children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
+        },
+        {
+          align: "start",
+        },
+      ),
+  ],
 };

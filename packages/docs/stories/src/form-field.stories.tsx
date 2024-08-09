@@ -5,6 +5,8 @@ import { faker } from "@faker-js/faker";
 import { capitalCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
 import { FormField } from "@react-ck/form-field/src";
+import { Input } from "@react-ck/input/src";
+import { generateAllVariations } from "./utils/generate-all-variations";
 
 type Story = StoryObj<typeof FormField>;
 
@@ -26,7 +28,7 @@ export default meta;
 export const Normal: Story = {
   args: {
     label: capitalCase(faker.lorem.word()),
-    children: "Content",
+    children: <Input />,
     description: faker.lorem.sentence(),
   },
 };
@@ -39,4 +41,17 @@ export const Validation: Story = {
     description: faker.lorem.sentence(),
     validationMessage: faker.lorem.sentence(),
   },
+};
+
+export const AllVariations: Story = {
+  decorators: [
+    (): React.ReactElement =>
+      generateAllVariations(FormField, {
+        label: [capitalCase(faker.lorem.word()), undefined],
+        skin: ["default", "negative", "average", "positive"],
+        description: [undefined, faker.lorem.sentence()],
+        validationMessage: [undefined, faker.lorem.sentence()],
+        children: [<Input />],
+      }),
+  ],
 };
