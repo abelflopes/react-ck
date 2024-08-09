@@ -4,8 +4,9 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import { Input } from "@react-ck/input/src";
+import { Input, type InputProps } from "@react-ck/input/src";
 import { FormField } from "@react-ck/form-field";
+import { generateAllVariations } from "./utils/generate-all-variations";
 
 type Story = StoryObj<typeof Input>;
 
@@ -59,4 +60,26 @@ export const WithFormField: Story = {
     required: true,
     placeholder: faker.internet.email(),
   },
+};
+
+export const AllInputVariations: Story = {
+  decorators: [
+    (): React.ReactElement =>
+      generateAllVariations(Input, {
+        type: [
+          "text",
+          "date",
+          "email",
+          "search",
+          "file",
+          "number",
+          "password",
+          "range",
+          "radio",
+          "checkbox",
+          "color",
+        ],
+        placeholder: ["Some Input"],
+      }),
+  ],
 };
