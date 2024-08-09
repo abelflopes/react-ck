@@ -9,7 +9,22 @@
 }
 
 @mixin spacing {
-  padding: theme.get-spacing(0.75) theme.get-spacing(1);
+  padding: calc(theme.get-spacing(0.75) - scss-utils.get-css-var(spacing, border))
+    theme.get-spacing(1);
+}
+
+@mixin focus-base {
+  // TODO: focus mixin
+  outline: solid scss-utils.get-css-var(spacing, border) transparent;
+  transition-duration: 0.3s;
+  transition-property: outline, outline-offset;
+  transition-timing-function: ease;
+}
+
+@mixin focus-active {
+  // TODO: focus mixin
+  outline: solid scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary);
+  outline-offset: theme.get-spacing(0.2);
 }
 
 @mixin form-field-container {
@@ -32,6 +47,13 @@
   color: theme.get-color(neutral-dark-1);
 }
 
+// input not inside form field
+@mixin standalone-input {
+  @include form-field-container;
+  @include skins;
+}
+
+// input inside form field
 @mixin form-field-input {
   @include spacing;
   @include text.text-base;
@@ -39,15 +61,10 @@
   width: 100%;
   box-sizing: border-box;
   border: none;
+  border-radius: theme.get-spacing(1);
   background: transparent;
   color: theme.get-color(neutral-dark-5);
   outline: none;
-
-  // TODO: focus mixin
-  outline: solid scss-utils.get-css-var(spacing, border) transparent;
-  transition-duration: 0.3s;
-  transition-property: outline, outline-offset;
-  transition-timing-function: ease;
 
   &::placeholder {
     @include placeholder;
@@ -55,11 +72,5 @@
 
   &:disabled {
     @include theme.disabled;
-  }
-
-  &:focus {
-    // TODO: focus mixin
-    outline: solid scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary);
-    outline-offset: theme.get-spacing(0.2);
   }
 }

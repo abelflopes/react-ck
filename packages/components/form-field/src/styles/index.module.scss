@@ -10,6 +10,11 @@
 
   .content {
     @include shared.form-field-container;
+    @include shared.focus-base;
+
+    &:focus-within {
+      @include shared.focus-active;
+    }
   }
 
   .validation_message {
