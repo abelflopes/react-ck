@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo } from "react";
 import styles from "./styles/index.module.scss";
-import { useFormFieldContext, type FormFieldProps } from "@react-ck/form-field";
+import { useFormFieldContext, type FormFieldContextProps } from "@react-ck/form-field";
 import classNames from "classnames";
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "children"> {
-  skin?: FormFieldProps["skin"];
+  skin?: FormFieldContextProps["skin"];
   /** Ref for the root element */
   rootRef?: React.ForwardedRef<HTMLInputElement>;
 }
