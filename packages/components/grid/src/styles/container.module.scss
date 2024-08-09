@@ -27,6 +27,14 @@
   align-items: stretch;
 }
 
+.align_start {
+  align-items: flex-start;
+}
+
+.align_end {
+  align-items: flex-end;
+}
+
 .spacing_s {
   @include scss-utils.define-css-var(grid-container, gap, theme.get-spacing(1));
 }

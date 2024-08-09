@@ -11,7 +11,7 @@ interface BaseProps extends React.HTMLAttributes<HTMLHRElement> {
   /** Whether to allow grid items to wrap to the next line  */
   wrap?: boolean;
   /** Defined the alignment between columns */
-  align?: "default" | "centered" | "stretch";
+  align?: "default" | "centered" | "stretch" | "start" | "end";
 }
 
 type GridProps = BaseProps & ResponsiveProps<BaseProps>;
