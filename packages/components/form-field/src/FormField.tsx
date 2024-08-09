@@ -7,7 +7,7 @@ import { FormFieldContext, type FormFieldContextProps } from "./context";
 export interface FormFieldProps
   extends Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "className"> {
   /** Specifies the visual style of the form-field  */
-  skin?: FormFieldContextProps["skin"];
+  skin?: Exclude<FormFieldContextProps["skin"], "ghost">;
   /** The main label for the form field */
   label?: React.ReactNode;
   /** The description text for the form field */
