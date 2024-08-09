@@ -38,6 +38,7 @@
   }
 
   &.horizontal {
+    max-width: theme.get-spacing(20);
     height: 100%;
     flex-grow: 1;
     flex-shrink: 1;
