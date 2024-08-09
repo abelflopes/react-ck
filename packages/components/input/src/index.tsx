@@ -1,10 +1,10 @@
-import styles from "./styles/index.module.scss";
 import React, {
   type ComponentPropsWithRef,
   type HTMLInputTypeAttribute,
   useEffect,
   useMemo,
 } from "react";
+import defaultStyles from "./styles/default.module.scss";
 import { useFormFieldContext, type FormFieldContextProps } from "@react-ck/form-field";
 import classNames from "classnames";
 
@@ -33,6 +33,12 @@ export const Input = ({
 
   const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
 
+  // Determines if input should render the default styles or not
+  const isDefaultStyle = useMemo(() => {
+    const specialTypes: HTMLInputTypeAttribute[] = ["checkbox", "radio", "range", "color"];
+    return !props.type || !specialTypes.includes(props.type);
+  }, [props.type]);
+
   // Validate usage inside form field
   useEffect(() => {
     // Is not inside form field, skip
@@ -48,10 +54,12 @@ export const Input = ({
       {...props}
       id={computedId}
       className={classNames(
-        styles.root,
-        formFieldContext === undefined && styles.standalone,
+        isDefaultStyle && [
+          defaultStyles.root,
+          formFieldContext === undefined && defaultStyles.standalone,
+          defaultStyles[`skin_${computedSkin}`],
+        ],
         className,
-        styles[`skin_${computedSkin}`],
       )}
     />
   );
