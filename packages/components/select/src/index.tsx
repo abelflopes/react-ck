@@ -225,7 +225,7 @@ const Select = ({
                 placeholder={searchOptions.placeholder}
                 skin="ghost"
                 className={styles.search_input}
-                rootRef={(e) => {
+                ref={(e) => {
                   e?.focus();
                 }}
                 onChange={(e) => {

@@ -1,12 +1,15 @@
-import React, { useEffect, useMemo } from "react";
 import styles from "./styles/index.module.scss";
+import React, {
+  type ComponentPropsWithRef,
+  type HTMLInputTypeAttribute,
+  useEffect,
+  useMemo,
+} from "react";
 import { useFormFieldContext, type FormFieldContextProps } from "@react-ck/form-field";
 import classNames from "classnames";
 
-export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "children"> {
+export interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
   skin?: FormFieldContextProps["skin"];
-  /** Ref for the root element */
-  rootRef?: React.ForwardedRef<HTMLInputElement>;
 }
 
 /**
@@ -17,7 +20,6 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
 
 export const Input = ({
   skin,
-  rootRef,
   id,
   className,
   ...props
@@ -44,7 +46,6 @@ export const Input = ({
   return (
     <input
       {...props}
-      ref={rootRef}
       id={computedId}
       className={classNames(
         styles.root,
