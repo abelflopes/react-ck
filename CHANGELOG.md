@@ -1,3 +1,16 @@
+## [3.29.0](https://github.com/abelflopes/react-ck/compare/v3.28.0...v3.29.0) (2024-08-14)
+
+
+### Features
+
+* **react-ck:** global library package ([c0d1e21](https://github.com/abelflopes/react-ck/commit/c0d1e215b32b4856db781ff14d4846e2d04f017b))
+* **react-ck:** global library package ([3a5d70d](https://github.com/abelflopes/react-ck/commit/3a5d70d00613ec8000a44c262256d5e565e92c12))
+
+
+### Bug Fixes
+
+* **skeleton:** ensure skeleton text variation acquires text height ([436b4de](https://github.com/abelflopes/react-ck/commit/436b4de6637376ad468a52ba8f1bb95392e7a03a))
+
 ## [3.28.0](https://github.com/abelflopes/react-ck/compare/v3.27.0...v3.28.0) (2024-08-14)
 
 
