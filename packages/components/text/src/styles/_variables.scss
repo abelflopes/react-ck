@@ -1,6 +1,19 @@
 @use "@react-ck/theme";
 @use "@react-ck/scss-utils";
 
+$font-sizes: (
+  banner: calc(#{scss-utils.get-css-var(font, base-size)} * 4.3),
+  h1: calc(#{scss-utils.get-css-var(font, base-size)} * 2.1),
+  h2: calc(#{scss-utils.get-css-var(font, base-size)} * 1.7),
+  h3: calc(#{scss-utils.get-css-var(font, base-size)} * 1.5),
+  h4: calc(#{scss-utils.get-css-var(font, base-size)} * 1.2),
+  h5: calc(#{scss-utils.get-css-var(font, base-size)} * 1.1),
+  h6: scss-utils.get-css-var(font, base-size),
+  p: scss-utils.get-css-var(font, base-size),
+  small: calc(#{scss-utils.get-css-var(font, base-size)} * 0.8),
+  extra-small: calc(#{scss-utils.get-css-var(font, base-size)} * 0.7),
+);
+
 // TODO: add values to theme
 
 $text-skins: (
@@ -55,82 +68,82 @@ $text-skins: (
 $text-variations: (
   banner: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 4.3),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, banner)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, banner)} * 1.4),
       font-weight: 700,
-      line-height: 60px,
     ),
     hover: (),
   ),
   h1: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 2.1),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, h1)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, h1)} * 1.6),
       font-weight: 600,
-      line-height: 36px,
     ),
     hover: (),
   ),
   h2: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.7),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, h2)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, h2)} * 1.6),
       font-weight: 600,
-      line-height: 36px,
       color: theme.get-color(neutral-dark-4),
     ),
     hover: (),
   ),
   h3: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.5),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, h3)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, h3)} * 1.6),
       font-weight: 600,
-      line-height: 24px,
     ),
     hover: (),
   ),
   h4: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.2),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, h4)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, h4)} * 1.55),
       font-weight: 600,
-      line-height: 22px,
     ),
     hover: (),
   ),
   h5: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 1.1),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, h5)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, h5)} * 1.5),
       font-weight: 600,
-      line-height: 20px,
     ),
     hover: (),
   ),
   h6: (
     default: (
-      font-size: scss-utils.get-css-var(font, base-size),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, h6)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, h6)} * 1.5),
       font-weight: 600,
-      line-height: 18px,
     ),
     hover: (),
   ),
   p: (
     default: (
-      font-size: scss-utils.get-css-var(font, base-size),
-      line-height: 24px,
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, p)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, p)} * 1.5),
       font-weight: 400,
     ),
     hover: (),
   ),
   small: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 0.8),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, small)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, small)} * 1.5),
       font-weight: 400,
-      line-height: 18px,
     ),
     hover: (),
   ),
   extra-small: (
     default: (
-      font-size: calc(#{scss-utils.get-css-var(font, base-size)} * 0.7),
+      font-size: calc(#{scss-utils.map-get-strict($font-sizes, extra-small)}),
+      line-height: calc(#{scss-utils.map-get-strict($font-sizes, extra-small)} * 1.5),
       font-weight: 400,
-      line-height: 16px,
     ),
     hover: (),
   ),

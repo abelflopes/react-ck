@@ -42,7 +42,12 @@
 }
 
 .text {
-  width: calc(100% - (25% * var(--index)));
+  position: relative;
+  top: 50%;
+  display: inline-block;
+  width: calc(50% - (25% * var(--index)));
   min-width: theme.get-spacing(4);
-  height: 1.2em;
+  height: 0.86em;
+  transform: translateY(0.35em);
+  vertical-align: top;
 }

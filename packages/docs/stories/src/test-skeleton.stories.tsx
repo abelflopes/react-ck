@@ -6,6 +6,7 @@ import { Grid } from "@react-ck/grid/src";
 import { Skeleton } from "@react-ck/skeleton/src";
 import { Text, type TextProps } from "@react-ck/text/src";
 import { capitalCase } from "change-case";
+import { faker } from "@faker-js/faker";
 
 type Story = StoryObj<unknown>;
 
@@ -49,6 +50,7 @@ export const demo: Story = {
               <Text {...i.combination}>
                 {capitalCase(i.combination.variation ?? "-")}
                 <Skeleton variation="text" />
+                {faker.lorem.sentence()}
               </Text>
             </div>
           </Grid.Column>
