@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.31](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.30...@react-ck/skeleton@1.1.31) (2024-08-14)
+
+
+### Bug Fixes
+
+* **skeleton:** ensure skeleton text variation acquires text height ([436b4de](https://github.com/abelflopes/react-ck/commit/436b4de6637376ad468a52ba8f1bb95392e7a03a))
+
+
+
 ## [1.1.30](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.29...@react-ck/skeleton@1.1.30) (2024-08-14)
 
 

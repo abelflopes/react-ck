@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.8](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.7...@react-ck/provisional@3.9.8) (2024-08-14)
+
+
+### Bug Fixes
+
+* **skeleton:** ensure skeleton text variation acquires text height ([436b4de](https://github.com/abelflopes/react-ck/commit/436b4de6637376ad468a52ba8f1bb95392e7a03a))
+
+
+
 ## [3.9.7](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.6...@react-ck/provisional@3.9.7) (2024-08-14)
 
 
