@@ -1,3 +1,16 @@
+## [3.28.0](https://github.com/abelflopes/react-ck/compare/v3.27.0...v3.28.0) (2024-08-14)
+
+
+### Features
+
+* **react-ck:** global library package ([5475c02](https://github.com/abelflopes/react-ck/commit/5475c02be869ead3445c312b328967863a74dcc2))
+* **react-ck:** global library package ([1b4cb6b](https://github.com/abelflopes/react-ck/commit/1b4cb6bc95720dfea7be9a20689f6bf77719e11e))
+
+
+### Bug Fixes
+
+* release missing package ([933c8a6](https://github.com/abelflopes/react-ck/commit/933c8a63dc7d8b24c1e57a699526a238e4872531))
+
 ## [3.27.0](https://github.com/abelflopes/react-ck/compare/v3.26.0...v3.27.0) (2024-08-14)
 
 
