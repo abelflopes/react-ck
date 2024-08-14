@@ -7,6 +7,7 @@ import { Skeleton } from "@react-ck/skeleton/src";
 import { Text, type TextProps } from "@react-ck/text/src";
 import { capitalCase } from "change-case";
 import { faker } from "@faker-js/faker";
+import { Menu } from "@react-ck/provisional/src";
 
 type Story = StoryObj<unknown>;
 
@@ -23,7 +24,7 @@ const meta: Meta = {
 
 export default meta;
 
-export const demo: Story = {
+export const TextSkeleton: Story = {
   parameters: {
     layout: "padded",
   },
@@ -56,6 +57,45 @@ export const demo: Story = {
           </Grid.Column>
         </React.Fragment>
       ))}
+    </Grid>
+  ),
+};
+
+export const ListSkeleton: Story = {
+  parameters: {
+    layout: "padded",
+  },
+  render: (): React.ReactElement => (
+    <Grid align="centered">
+      <Grid.Column size={4}>
+        <Menu>
+          {Object.keys(Array.from(Array(5))).map((i) => (
+            <Menu.Item key={i} style={{ outline: "solid 1px green" }}>
+              {faker.lorem.word()}
+            </Menu.Item>
+          ))}
+        </Menu>
+      </Grid.Column>
+      <Grid.Column size={4}>
+        <Menu>
+          {Object.keys(Array.from(Array(5))).map((i) => (
+            <Menu.Item key={i} style={{ outline: "solid 1px red" }}>
+              <Skeleton variation="text" />
+            </Menu.Item>
+          ))}
+        </Menu>
+      </Grid.Column>
+      <Grid.Column size={4}>
+        <Menu>
+          {Object.keys(Array.from(Array(5))).map((i) => (
+            <Menu.Item key={i} style={{ outline: "solid 1px blue" }}>
+              {faker.lorem.word()}
+              &nbsp;
+              <Skeleton variation="text" />
+            </Menu.Item>
+          ))}
+        </Menu>
+      </Grid.Column>
     </Grid>
   ),
 };

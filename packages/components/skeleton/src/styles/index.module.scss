@@ -1,53 +1,61 @@
 @use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+
+@mixin animation {
+  @keyframes move {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: move 2s linear infinite;
+  animation-delay: calc(var(--index) * 400ms);
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    theme.get-color(neutral-light-1-5),
+    transparent
+  );
+  opacity: 0.75;
+  transform: translateX(-100%);
+}
 
 .root {
   position: relative;
-  display: block;
   overflow: hidden;
-  width: 100%;
-  height: theme.get-spacing(20);
   border-radius: theme.get-spacing(0.5);
   background-color: theme.get-color(neutral-light-1-5);
 
   &::before {
-    @keyframes move {
-      0% {
-        transform: translateX(-100%);
-      }
+    @include animation;
 
-      100% {
-        transform: translateX(100%);
-      }
-    }
-
-    display: block;
-    width: 100%;
-    height: 100%;
-    animation: move 2s linear infinite;
-    animation-delay: calc(var(--index) * 400ms);
-    background-image: linear-gradient(
-      90deg,
-      transparent,
-      theme.get-color(neutral-light-1-5),
-      transparent
-    );
     content: "";
-    opacity: 0.75;
-    transform: translateX(-100%);
   }
 }
 
-.large {
-  aspect-ratio: 100/49;
+.default {
+  display: block;
+  width: 100%;
+  height: theme.get-spacing(20);
 }
 
 .text {
   position: relative;
-  top: 50%;
   display: inline-block;
   width: calc(50% - (25% * var(--index)));
   min-width: theme.get-spacing(4);
-  height: 0.86em;
-  transform: translateY(0.35em);
-  vertical-align: top;
+  height: scss-utils.get-css-var(text, line-height);
+  transform: scaleY(0.6);
+  vertical-align: bottom;
+}
+
+.large {
+  aspect-ratio: 100/49;
 }

@@ -3,6 +3,7 @@
 
 .root {
   @include text.text-base;
+  @include text.text-variation(p);
 
   display: flex;
   box-sizing: border-box;
