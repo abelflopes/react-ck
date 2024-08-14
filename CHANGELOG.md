@@ -1,3 +1,28 @@
+## [3.27.0](https://github.com/abelflopes/react-ck/compare/v3.26.0...v3.27.0) (2024-08-14)
+
+
+### Features
+
+* **grid:** add alignment variations ([8a31812](https://github.com/abelflopes/react-ck/commit/8a318129cb2016d460ef678c2911252111c18e0c))
+* **react-ck:** global library package ([42d88f0](https://github.com/abelflopes/react-ck/commit/42d88f065171577abc21853cada6bf9c3bbef6a4))
+* **react-ck:** global library package ([2d1928d](https://github.com/abelflopes/react-ck/commit/2d1928d18c1ad2f63d8a8f33f7fd64125e83a264))
+
+
+### Bug Fixes
+
+* align skeleton with text ([93b4377](https://github.com/abelflopes/react-ck/commit/93b4377dbcb32ccfefa25076e595e6fa2d783b75))
+* alignment between form elements ([0e649af](https://github.com/abelflopes/react-ck/commit/0e649af8125e80b902f5a6e63ff59b88ca82e1e2))
+* **attachment:** keep center alignment if element has bigger height ([ceb5a85](https://github.com/abelflopes/react-ck/commit/ceb5a859f88682b35ab3c85202d69d66c20d13fc))
+* **form field:** exclude ghost skin ([08830ba](https://github.com/abelflopes/react-ck/commit/08830ba7d077cb08a89428fce7fa96dc4f623e1c))
+* **input:** render default styles conditionally based on input type ([37d2326](https://github.com/abelflopes/react-ck/commit/37d2326a2b040d794a95e794843134da78665faf))
+* **input:** use native ref instead of custom ref ([23550f5](https://github.com/abelflopes/react-ck/commit/23550f52b0bee9d5cf1873502f3609704ced284c))
+* **input:** use skins from form field context ([ecc50da](https://github.com/abelflopes/react-ck/commit/ecc50da8a282ad990c5fae5188170f4135811515))
+* **menu:** limit width of items when in horizontal variation ([a966f97](https://github.com/abelflopes/react-ck/commit/a966f975eb2f44a905654eb866ff0670aa872a20))
+* **progress:** add missing interface export ([2844a9e](https://github.com/abelflopes/react-ck/commit/2844a9e2b43cdac7f4c50672977a3bd4b8d6b0f3))
+* **progress:** use fail save percent computation ([a3aa51b](https://github.com/abelflopes/react-ck/commit/a3aa51b95ebeed6bfc6b1ba90bb24205daf4cbf7))
+* **skeleton:** use inline tag to comply with proper DOM structure ([6e84928](https://github.com/abelflopes/react-ck/commit/6e8492816fe4b5859b65175b776cfba9f1e0ddf2))
+* **snippet:** add line break when content overflows ([5e382b5](https://github.com/abelflopes/react-ck/commit/5e382b508c0dd749e218d87fac97d524a854c26c))
+
 ## [3.26.0](https://github.com/abelflopes/react-ck/compare/v3.25.0...v3.26.0) (2024-07-25)
 
 
