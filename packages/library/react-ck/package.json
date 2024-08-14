@@ -51,6 +51,7 @@
     "@react-ck/layers": "^1.3.4",
     "@react-ck/list": "^1.2.26",
     "@react-ck/manager": "^1.3.4",
+    "@react-ck/misc-utils": "^1.0.0",
     "@react-ck/modal": "^3.2.9",
     "@react-ck/overlay": "^1.2.15",
     "@react-ck/pagination": "^1.1.32",
