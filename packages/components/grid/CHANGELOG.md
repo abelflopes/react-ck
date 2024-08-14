@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/grid@1.6.5...@react-ck/grid@1.7.0) (2024-08-14)
+
+
+### Features
+
+* **grid:** add alignment variations ([8a31812](https://github.com/abelflopes/react-ck/commit/8a318129cb2016d460ef678c2911252111c18e0c))
+
+
+
 ## [1.6.5](https://github.com/abelflopes/react-ck/compare/@react-ck/grid@1.6.4...@react-ck/grid@1.6.5) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/grid

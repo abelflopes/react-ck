@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/abelflopes/react-ck/compare/@react-ck/progress@1.3.8...@react-ck/progress@1.3.9) (2024-08-14)
+
+
+### Bug Fixes
+
+* **progress:** add missing interface export ([2844a9e](https://github.com/abelflopes/react-ck/commit/2844a9e2b43cdac7f4c50672977a3bd4b8d6b0f3))
+* **progress:** use fail save percent computation ([a3aa51b](https://github.com/abelflopes/react-ck/commit/a3aa51b95ebeed6bfc6b1ba90bb24205daf4cbf7))
+
+
+
 ## [1.3.8](https://github.com/abelflopes/react-ck/compare/@react-ck/progress@1.3.7...@react-ck/progress@1.3.8) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/progress

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.30](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.29...@react-ck/skeleton@1.1.30) (2024-08-14)
+
+
+### Bug Fixes
+
+* align skeleton with text ([93b4377](https://github.com/abelflopes/react-ck/commit/93b4377dbcb32ccfefa25076e595e6fa2d783b75))
+* **skeleton:** use inline tag to comply with proper DOM structure ([6e84928](https://github.com/abelflopes/react-ck/commit/6e8492816fe4b5859b65175b776cfba9f1e0ddf2))
+
+
+
 ## [1.1.29](https://github.com/abelflopes/react-ck/compare/@react-ck/skeleton@1.1.28...@react-ck/skeleton@1.1.29) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/skeleton

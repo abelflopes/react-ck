@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.16](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.4.15...@react-ck/input@1.4.16) (2024-08-14)
+
+
+### Bug Fixes
+
+* alignment between form elements ([0e649af](https://github.com/abelflopes/react-ck/commit/0e649af8125e80b902f5a6e63ff59b88ca82e1e2))
+* **input:** render default styles conditionally based on input type ([37d2326](https://github.com/abelflopes/react-ck/commit/37d2326a2b040d794a95e794843134da78665faf))
+* **input:** use native ref instead of custom ref ([23550f5](https://github.com/abelflopes/react-ck/commit/23550f52b0bee9d5cf1873502f3609704ced284c))
+* **input:** use skins from form field context ([ecc50da](https://github.com/abelflopes/react-ck/commit/ecc50da8a282ad990c5fae5188170f4135811515))
+
+
+
 ## [1.4.15](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.4.14...@react-ck/input@1.4.15) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/input

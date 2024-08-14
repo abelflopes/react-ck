@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/alert",
   "private": false,
-  "version": "3.1.7",
+  "version": "3.1.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -32,11 +32,11 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-    "@react-ck/button": "^1.8.12",
-    "@react-ck/icon": "^3.5.0",
+    "@react-ck/button": "^1.8.13",
+    "@react-ck/icon": "^3.5.1",
     "@react-ck/scss-utils": "^1.1.12",
-    "@react-ck/text": "^1.5.17",
-    "@react-ck/theme": "^1.10.0",
+    "@react-ck/text": "^1.5.18",
+    "@react-ck/theme": "^1.10.1",
     "classnames": "^2.3.2"
   }
 }

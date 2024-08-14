@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.16](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.15...@react-ck/form-field@1.3.16) (2024-08-14)
+
+
+### Bug Fixes
+
+* alignment between form elements ([0e649af](https://github.com/abelflopes/react-ck/commit/0e649af8125e80b902f5a6e63ff59b88ca82e1e2))
+* **form field:** exclude ghost skin ([08830ba](https://github.com/abelflopes/react-ck/commit/08830ba7d077cb08a89428fce7fa96dc4f623e1c))
+
+
+
 ## [1.3.15](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.14...@react-ck/form-field@1.3.15) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/form-field

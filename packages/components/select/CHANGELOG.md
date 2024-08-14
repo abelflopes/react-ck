@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.12](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.11...@react-ck/select@1.5.12) (2024-08-14)
+
+
+### Bug Fixes
+
+* **input:** use native ref instead of custom ref ([23550f5](https://github.com/abelflopes/react-ck/commit/23550f52b0bee9d5cf1873502f3609704ced284c))
+
+
+
 ## [1.5.11](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.10...@react-ck/select@1.5.11) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/select

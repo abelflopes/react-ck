@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.10](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.9...@react-ck/modal@3.2.10) (2024-08-14)
+
+**Note:** Version bump only for package @react-ck/modal
+
+
+
+
+
 ## [3.2.9](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.8...@react-ck/modal@3.2.9) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/modal

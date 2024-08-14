@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.7](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.6...@react-ck/provisional@3.9.7) (2024-08-14)
+
+
+### Bug Fixes
+
+* **attachment:** keep center alignment if element has bigger height ([ceb5a85](https://github.com/abelflopes/react-ck/commit/ceb5a859f88682b35ab3c85202d69d66c20d13fc))
+* **menu:** limit width of items when in horizontal variation ([a966f97](https://github.com/abelflopes/react-ck/commit/a966f975eb2f44a905654eb866ff0670aa872a20))
+* **snippet:** add line break when content overflows ([5e382b5](https://github.com/abelflopes/react-ck/commit/5e382b508c0dd749e218d87fac97d524a854c26c))
+
+
+
 ## [3.9.6](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.5...@react-ck/provisional@3.9.6) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/provisional

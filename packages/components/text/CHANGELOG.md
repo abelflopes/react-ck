@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.18](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.5.17...@react-ck/text@1.5.18) (2024-08-14)
+
+
+### Bug Fixes
+
+* align skeleton with text ([93b4377](https://github.com/abelflopes/react-ck/commit/93b4377dbcb32ccfefa25076e595e6fa2d783b75))
+
+
+
 ## [1.5.17](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.5.16...@react-ck/text@1.5.17) (2024-07-25)
 
 **Note:** Version bump only for package @react-ck/text

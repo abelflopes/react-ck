@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/chip",
   "private": false,
-  "version": "1.2.36",
+  "version": "1.2.37",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -33,8 +33,8 @@
   },
   "dependencies": {
     "@react-ck/scss-utils": "^1.1.12",
-    "@react-ck/text": "^1.5.17",
-    "@react-ck/theme": "^1.10.0",
+    "@react-ck/text": "^1.5.18",
+    "@react-ck/theme": "^1.10.1",
     "classnames": "^2.3.2"
   }
 }
