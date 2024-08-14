@@ -34,6 +34,7 @@ const preview: Preview = {
           "*",
           "Layout",
           "Utility",
+          "Test",
         ],
       },
     },
