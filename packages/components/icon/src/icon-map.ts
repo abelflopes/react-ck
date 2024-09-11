@@ -197,4 +197,19 @@ export const iconMap: IconMap = [
     module: "react-icons/rx",
     export: "IconCopy",
   },
+  {
+    import: "FaCheck",
+    module: "react-icons/fa6",
+    export: "IconCheck",
+  },
+  {
+    import: "PiThumbsUp",
+    module: "react-icons/pi",
+    export: "IconThumbsUp",
+  },
+  {
+    import: "PiThumbsDown",
+    module: "react-icons/pi",
+    export: "IconThumbsDown",
+  },
 ];
