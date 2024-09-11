@@ -1,3 +1,12 @@
+## [3.30.0](https://github.com/abelflopes/react-ck/compare/v3.29.0...v3.30.0) (2024-09-11)
+
+
+### Features
+
+* add icons ([9093d64](https://github.com/abelflopes/react-ck/commit/9093d64574314fcf53164f7efcc8da5f930c838a))
+* **react-ck:** global library package ([dc411ed](https://github.com/abelflopes/react-ck/commit/dc411ed65edfe965350a6d8e00b19d37d46c06a6))
+* **react-ck:** global library package ([b3fb9c7](https://github.com/abelflopes/react-ck/commit/b3fb9c7b890f6795e1a0fd3b9ab946d911a7427c))
+
 ## [3.29.0](https://github.com/abelflopes/react-ck/compare/v3.28.0...v3.29.0) (2024-08-14)
 
 
