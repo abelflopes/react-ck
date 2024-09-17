@@ -55,7 +55,7 @@ export const ShadowDom = ({
       root.unmount();
       p.remove();
     };
-  }, []);
+  }, [cssQuerySelector]);
 
   return <div {...otherProps} ref={shadowDomContainer} />;
 };

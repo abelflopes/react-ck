@@ -1,11 +1,23 @@
 import React, { useState } from "react";
-import { Text, type TextVariation } from "@react-ck/text";
+import { Text, type TextVariation, type TextSkin } from "@react-ck/text";
 import { faker } from "@faker-js/faker";
 import { Typeset } from "@storybook/blocks";
 import { Manager } from "@react-ck/manager";
 import { ShadowDom } from "./ShadowDom";
 
-const variations: TextVariation[] = [
+const sampleText = faker.lorem.sentence(3);
+
+export const skins: TextSkin[] = [
+  "default",
+  "bold",
+  "link",
+  "link_hidden",
+  "inverted",
+  "soft",
+  "highlight-primary",
+];
+
+export const variations: TextVariation[] = [
   "banner",
   "h1",
   "h2",
@@ -17,8 +29,6 @@ const variations: TextVariation[] = [
   "small",
   "extra-small",
 ];
-
-const sampleText = faker.lorem.sentence(3);
 
 /**
  * Uses shadow dom to fetch styles form rendered nodes without interference
@@ -60,6 +70,7 @@ export const TextDemo = (): React.ReactNode => {
             overflow: "hidden",
           }}>
           <Manager>
+            aaaaa
             {variations.map((variation) => (
               <Text
                 key={variation}
@@ -70,6 +81,8 @@ export const TextDemo = (): React.ReactNode => {
                       if (!r) return;
 
                       const { fontFamily, fontWeight, fontSize } = window.getComputedStyle(r);
+
+                      console.log("fontFamily", fontFamily);
 
                       setComputedStyles((v) => ({
                         ...v,
