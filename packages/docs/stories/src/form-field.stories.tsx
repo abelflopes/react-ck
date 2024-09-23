@@ -52,15 +52,34 @@ export const Inline: Story = {
   },
 };
 
+export const InlineReverse: Story = {
+  args: {
+    ...Inline.args,
+    variation: "inline-reverse",
+  },
+};
+
 export const AllVariations: Story = {
   decorators: [
-    (): React.ReactElement =>
-      generateAllVariations(FormField, {
-        label: [capitalCase(faker.lorem.word()), undefined],
-        skin: ["default", "negative", "average", "positive"],
-        description: [undefined, faker.lorem.sentence()],
-        validationMessage: [undefined, faker.lorem.sentence()],
-        children: [<Input placeholder="Input" />],
-      }),
+    (): React.ReactElement => (
+      <>
+        {generateAllVariations(FormField, {
+          label: [capitalCase(faker.lorem.word()), undefined],
+          skin: ["default", "negative", "average", "positive"],
+          description: [undefined, faker.lorem.sentence()],
+          validationMessage: [undefined, faker.lorem.sentence()],
+          children: [<Input placeholder="Input" />],
+        })}
+
+        {generateAllVariations(FormField, {
+          label: [capitalCase(faker.lorem.word()), undefined],
+          skin: ["default", "negative", "average", "positive"],
+          description: [undefined, faker.lorem.sentence()],
+          validationMessage: [undefined, faker.lorem.sentence()],
+          variation: ["inline", "inline-reverse"],
+          children: [<Checkbox />],
+        })}
+      </>
+    ),
   ],
 };

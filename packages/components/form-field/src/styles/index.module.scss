@@ -8,16 +8,7 @@
 .root {
   display: flex;
   gap: theme.get-spacing(0.5);
-
-  &.variation_default {
-    flex-direction: column;
-  }
-
-  &.variation_inline {
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  flex-direction: column;
 }
 
 // Skin
@@ -36,6 +27,13 @@
   cursor: pointer;
 }
 
+.variation_inline,
+.variation_inline-reverse {
+  .label {
+    flex-grow: 1;
+  }
+}
+
 // Content
 
 .main_content {
@@ -52,18 +50,30 @@
   }
 }
 
-.variation_inline .main_content {
-  flex-direction: row;
-  gap: theme.get-spacing();
-  width: 100%;
-  align-items: center;
+.variation_inline,
+.variation_inline-reverse {
+  .main_content {
+    flex-direction: row;
+    gap: theme.get-spacing();
+    width: 100%;
+    align-items: center;
+  }
 }
 
-.variation_inline .input_wrapper {
-  order: -1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.variation_inline-reverse {
+  .main_content {
+    flex-direction: row-reverse;
+  }
+}
+
+.variation_inline,
+.variation_inline-reverse {
+  .input_wrapper {
+    order: -1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 // Validation Message
@@ -72,7 +82,10 @@
   color: scss-utils.get-css-var(form-field, color) !important;
 }
 
-.variation_inline .description,
-.variation_inline .validation_message {
-  width: 100%;
+.variation_inline,
+.variation_inline-reverse {
+  .description,
+  .validation_message {
+    width: 100%;
+  }
 }
