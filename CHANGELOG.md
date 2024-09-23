@@ -1,3 +1,16 @@
+## [3.33.0](https://github.com/abelflopes/react-ck/compare/v3.32.0...v3.33.0) (2024-09-23)
+
+
+### Features
+
+* **react-ck:** global library package ([d806284](https://github.com/abelflopes/react-ck/commit/d80628434aaffee2233a319278b06a58095ac084))
+
+
+### Bug Fixes
+
+* boolean input default icon components ([17f1593](https://github.com/abelflopes/react-ck/commit/17f1593e7a1a56fe0c36a8d800e8e8cb401f3f21))
+* **boolean inputs:** rely on dom state to present checked inputs ([a8c0196](https://github.com/abelflopes/react-ck/commit/a8c0196e0f9553edc83e835811562d8b0b1f72f0))
+
 ## [3.32.0](https://github.com/abelflopes/react-ck/compare/v3.31.0...v3.32.0) (2024-09-23)
 
 
