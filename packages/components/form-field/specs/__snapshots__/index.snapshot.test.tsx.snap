@@ -2,12 +2,16 @@
 
 exports[`snapshot FormField renders correctly 1`] = `
 <div
-  className="root default"
+  className="root skin_default variation_default"
 >
   <div
-    className="content"
+    className="main_content"
   >
-    FormField
+    <div
+      className="input_wrapper"
+    >
+      FormField
+    </div>
   </div>
 </div>
 `;
