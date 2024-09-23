@@ -8,6 +8,8 @@ export interface FormFieldProps
   extends Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "className"> {
   /** Specifies the visual style of the form-field  */
   skin?: Exclude<FormFieldContextProps["skin"], "ghost">;
+  /** Defines the structure of the form-field  */
+  variation?: "default" | "inline";
   /** The main label for the form field */
   label?: React.ReactNode;
   /** The description text for the form field */
@@ -26,6 +28,7 @@ export interface FormFieldProps
 
 export const FormField = ({
   skin = "default",
+  variation = "default",
   label,
   description,
   validationMessage,
@@ -45,23 +48,41 @@ export const FormField = ({
 
   return (
     <FormFieldContext.Provider value={context}>
-      <div {...otherProps} className={classNames(styles.root, styles[skin], className)}>
-        {label ? (
-          <Text variation="small" margin="none" as={<label htmlFor={id}>{label}</label>} />
-        ) : null}
+      <div
+        {...otherProps}
+        className={classNames(
+          styles.root,
+          styles[`skin_${skin}`],
+          styles[`variation_${variation}`],
+          className,
+        )}>
+        <div className={styles.main_content}>
+          {label ? (
+            <Text
+              className={styles.label}
+              variation={variation === "default" ? "small" : "p"}
+              margin="none"
+              as={<label htmlFor={id}>{label}</label>}
+            />
+          ) : null}
 
-        <div className={styles.content}>{children}</div>
+          <div className={styles.input_wrapper}>{children}</div>
+        </div>
 
-        {description ? (
-          <Text variation="small" margin="none">
-            {description}
-          </Text>
-        ) : null}
+        {description || validationMessage ? (
+          <div>
+            {description ? (
+              <Text variation="small" margin="none" className={styles.description}>
+                {description}
+              </Text>
+            ) : null}
 
-        {validationMessage ? (
-          <Text className={styles.validation_message} variation="small" margin="none">
-            {validationMessage}
-          </Text>
+            {validationMessage ? (
+              <Text className={styles.validation_message} variation="small" margin="none">
+                {validationMessage}
+              </Text>
+            ) : null}
+          </div>
         ) : null}
       </div>
     </FormFieldContext.Provider>

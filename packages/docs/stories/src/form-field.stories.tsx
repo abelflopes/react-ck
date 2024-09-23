@@ -7,11 +7,12 @@ import { configureStory } from "@react-ck/story-config";
 import { FormField } from "@react-ck/form-field/src";
 import { Input } from "@react-ck/input/src";
 import { generateAllVariations } from "./utils/generate-all-variations";
+import { Checkbox } from "@react-ck/provisional/src";
 
 type Story = StoryObj<typeof FormField>;
 
 const meta: Meta<typeof FormField> = {
-  title: "Utility/FormField",
+  title: "Form/Form Field",
   ...configureStory(FormField, {
     decorators: [
       (Story): React.ReactElement => (
@@ -28,7 +29,7 @@ export default meta;
 export const Normal: Story = {
   args: {
     label: capitalCase(faker.lorem.word()),
-    children: <Input />,
+    children: <Input placeholder="Input" />,
     description: faker.lorem.sentence(),
   },
 };
@@ -37,9 +38,17 @@ export const Validation: Story = {
   args: {
     skin: "negative",
     label: capitalCase(faker.lorem.word()),
-    children: "Content",
+    children: <Input placeholder="Input" />,
     description: faker.lorem.sentence(),
     validationMessage: faker.lorem.sentence(),
+  },
+};
+
+export const Inline: Story = {
+  args: {
+    ...Validation.args,
+    children: <Checkbox />,
+    variation: "inline",
   },
 };
 
@@ -51,7 +60,7 @@ export const AllVariations: Story = {
         skin: ["default", "negative", "average", "positive"],
         description: [undefined, faker.lorem.sentence()],
         validationMessage: [undefined, faker.lorem.sentence()],
-        children: [<Input />],
+        children: [<Input placeholder="Input" />],
       }),
   ],
 };

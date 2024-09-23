@@ -3,29 +3,76 @@
 @use "shared";
 @use "variables";
 
+// Root
+
 .root {
   display: flex;
-  flex-direction: column;
-  gap: theme.get-spacing(0.1);
+  gap: theme.get-spacing(0.5);
 
-  .content {
-    @include shared.form-field-container;
-    @include shared.focus-base;
-
-    &:focus-within {
-      @include shared.focus-active;
-    }
+  &.variation_default {
+    flex-direction: column;
   }
 
-  .validation_message {
-    color: scss-utils.get-css-var(form-field, color) !important;
+  &.variation_inline {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
+// Skin
+
 @each $key, $props in variables.$form-field-styles {
-  .#{$key} {
+  .skin_#{$key} {
     @each $propKey, $propValue in $props {
       @include scss-utils.define-css-var(form-field, $propKey, $propValue);
     }
   }
+}
+
+// Label
+
+.label {
+  cursor: pointer;
+}
+
+// Content
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.variation_default .input_wrapper {
+  @include shared.form-field-container;
+  @include shared.focus-base;
+
+  &:focus-within {
+    @include shared.focus-active;
+  }
+}
+
+.variation_inline .main_content {
+  flex-direction: row;
+  gap: theme.get-spacing();
+  width: 100%;
+}
+
+.variation_inline .input_wrapper {
+  order: -1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Validation Message
+
+.validation_message {
+  color: scss-utils.get-css-var(form-field, color) !important;
+}
+
+.variation_inline .description,
+.variation_inline .validation_message {
+  width: 100%;
 }

@@ -1,0 +1,23 @@
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+
+.root {
+  display: inline-block;
+  background-color: theme.get-color(neutral-light-1);
+  border: theme.get-color(neutral-light-2) solid scss-utils.get-css-var(spacing, border);
+
+  padding: theme.get-spacing(0.25);
+  border-radius: theme.get-spacing(0.5);
+  line-height: 0;
+
+  &.checked .icon {
+    transform: scale(1);
+  }
+}
+
+.icon {
+  transition: all 0.15s ease;
+  will-change: transform;
+
+  transform: scale(0);
+}
