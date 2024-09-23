@@ -9,10 +9,10 @@
   padding: theme.get-spacing(0.25);
   border-radius: theme.get-spacing(0.5);
   line-height: 0;
+}
 
-  &.checked .icon {
-    transform: scale(1);
-  }
+:checked ~ .root .icon {
+  transform: scale(1);
 }
 
 .icon {

@@ -8,10 +8,10 @@
   border: theme.get-color(neutral-light-2) solid scss-utils.get-css-var(spacing, border);
   padding: theme.get-spacing(0.5);
   border-radius: 50%;
+}
 
-  &.checked .icon {
-    transform: scale(1);
-  }
+:checked ~ .root .icon {
+  transform: scale(1);
 }
 
 .icon {

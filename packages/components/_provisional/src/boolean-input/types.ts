@@ -1,7 +1,7 @@
 import { type FormFieldContextProps } from "@react-ck/form-field";
 import { type ComponentProps } from "react";
 
-interface BaseProps extends Required<Pick<ComponentProps<"input">, "checked" | "name" | "value">> {
+interface BaseProps extends Required<Pick<ComponentProps<"input">, "name" | "value">> {
   skin: FormFieldContextProps["skin"];
 }
 

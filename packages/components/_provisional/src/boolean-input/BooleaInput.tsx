@@ -1,5 +1,5 @@
 import styles from "./styles/index.module.scss";
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import classNames from "classnames";
 import { type FormFieldContextProps, useFormFieldContext } from "@react-ck/form-field";
 import { type BooleanInputIconComponent } from "./types";
@@ -17,14 +17,11 @@ export const BooleaInput = ({
   checked,
   value,
   name,
-  onChange,
   ...otherProps
 }: Readonly<BooleaInputProps>): React.ReactElement => {
   const formFieldContext = useFormFieldContext();
 
   const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
-
-  const [localChecked, setLocalChecked] = useState(Boolean(checked));
 
   return (
     <span className={classNames(styles.root, className)}>
@@ -35,18 +32,9 @@ export const BooleaInput = ({
         checked={checked}
         value={value}
         className={styles.input}
-        onChange={(e) => {
-          onChange?.(e);
-          setLocalChecked(e.target.checked);
-        }}
       />
 
-      <Icon
-        name={name}
-        checked={localChecked}
-        value={value}
-        skin={skin ?? formFieldContext?.skin}
-      />
+      <Icon name={name} value={value} skin={skin ?? formFieldContext?.skin} />
     </span>
   );
 };
