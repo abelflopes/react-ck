@@ -1,3 +1,17 @@
+## [3.31.0](https://github.com/abelflopes/react-ck/compare/v3.30.0...v3.31.0) (2024-09-23)
+
+
+### Features
+
+* add checkbox and radio components ([1d0a3af](https://github.com/abelflopes/react-ck/commit/1d0a3af4145095df600d1a979559ebebdd85228f))
+* **react-ck:** global library package ([e1f5a37](https://github.com/abelflopes/react-ck/commit/e1f5a37551fbaa76d1f03d29bec917def59ed706))
+* **react-ck:** global library package ([9538ea6](https://github.com/abelflopes/react-ck/commit/9538ea65e401e91e3f0595339643d87ec1e56c0b))
+
+
+### Bug Fixes
+
+* remove mandatory prop ([fa39045](https://github.com/abelflopes/react-ck/commit/fa3904512ef43d1c3d0e1e741c2eb444d498d610))
+
 ## [3.30.0](https://github.com/abelflopes/react-ck/compare/v3.29.0...v3.30.0) (2024-09-11)
 
 
