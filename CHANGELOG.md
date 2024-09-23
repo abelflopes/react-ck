@@ -1,3 +1,12 @@
+## [3.34.0](https://github.com/abelflopes/react-ck/compare/v3.33.0...v3.34.0) (2024-09-23)
+
+
+### Features
+
+* **form field:** add inline reverse variation ([e208e11](https://github.com/abelflopes/react-ck/commit/e208e11e0a77c9e84e35a30a5fee59d7ca621b75))
+* **react-ck:** global library package ([971aeeb](https://github.com/abelflopes/react-ck/commit/971aeeba9ca8b964bc9cbb106407f9cb6eb408ef))
+* **react-ck:** global library package ([b44e75a](https://github.com/abelflopes/react-ck/commit/b44e75af601730d80c70ba06851e236b161544d0))
+
 ## [3.33.0](https://github.com/abelflopes/react-ck/compare/v3.32.0...v3.33.0) (2024-09-23)
 
 
