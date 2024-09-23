@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.10](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.9...@react-ck/provisional@3.9.10) (2024-09-23)
+
+
+### Bug Fixes
+
+* remove mandatory prop ([fa39045](https://github.com/abelflopes/react-ck/commit/fa3904512ef43d1c3d0e1e741c2eb444d498d610))
+
+
+
 ## [3.9.9](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.8...@react-ck/provisional@3.9.9) (2024-09-11)
 
 **Note:** Version bump only for package @react-ck/provisional

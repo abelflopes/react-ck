@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.17](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.16...@react-ck/form-field@1.3.17) (2024-09-23)
+
+
+### Bug Fixes
+
+* remove mandatory prop ([fa39045](https://github.com/abelflopes/react-ck/commit/fa3904512ef43d1c3d0e1e741c2eb444d498d610))
+
+
+
 ## [1.3.16](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.15...@react-ck/form-field@1.3.16) (2024-08-14)
 
 
