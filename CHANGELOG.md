@@ -1,3 +1,16 @@
+## [3.32.0](https://github.com/abelflopes/react-ck/compare/v3.31.0...v3.32.0) (2024-09-23)
+
+
+### Features
+
+* **react-ck:** global library package ([6f2da3a](https://github.com/abelflopes/react-ck/commit/6f2da3ad19b5763e03e9fc76d64dc4452b214553))
+* **react-ck:** global library package ([e7b77f4](https://github.com/abelflopes/react-ck/commit/e7b77f4f835f4bb93942b761d6e45e8e8ab9ae50))
+
+
+### Bug Fixes
+
+* **form field:** main content alignment ([3932710](https://github.com/abelflopes/react-ck/commit/393271008099c98b6b2ea80fcb454ebd317dd4ad))
+
 ## [3.31.0](https://github.com/abelflopes/react-ck/compare/v3.30.0...v3.31.0) (2024-09-23)
 
 
