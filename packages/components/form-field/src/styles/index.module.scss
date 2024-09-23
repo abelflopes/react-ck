@@ -41,7 +41,6 @@
 .main_content {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .variation_default .input_wrapper {
@@ -57,6 +56,7 @@
   flex-direction: row;
   gap: theme.get-spacing();
   width: 100%;
+  align-items: center;
 }
 
 .variation_inline .input_wrapper {
