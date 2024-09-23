@@ -1,0 +1,19 @@
+@use "@react-ck/theme";
+
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  appearance: none;
+  cursor: pointer;
+  z-index: 1;
+}
