@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.18...@react-ck/form-field@1.4.0) (2024-09-23)
+
+
+### Features
+
+* **form field:** add inline reverse variation ([e208e11](https://github.com/abelflopes/react-ck/commit/e208e11e0a77c9e84e35a30a5fee59d7ca621b75))
+
+
+
 ## [1.3.18](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.17...@react-ck/form-field@1.3.18) (2024-09-23)
 
 
