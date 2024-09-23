@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.18](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.17...@react-ck/form-field@1.3.18) (2024-09-23)
+
+
+### Bug Fixes
+
+* **form field:** main content alignment ([3932710](https://github.com/abelflopes/react-ck/commit/393271008099c98b6b2ea80fcb454ebd317dd4ad))
+
+
+
 ## [1.3.17](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.3.16...@react-ck/form-field@1.3.17) (2024-09-23)
 
 
