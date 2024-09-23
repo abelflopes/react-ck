@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.12](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.11...@react-ck/provisional@3.9.12) (2024-09-23)
+
+
+### Bug Fixes
+
+* boolean input default icon components ([17f1593](https://github.com/abelflopes/react-ck/commit/17f1593e7a1a56fe0c36a8d800e8e8cb401f3f21))
+* **boolean inputs:** rely on dom state to present checked inputs ([a8c0196](https://github.com/abelflopes/react-ck/commit/a8c0196e0f9553edc83e835811562d8b0b1f72f0))
+
+
+
 ## [3.9.11](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.10...@react-ck/provisional@3.9.11) (2024-09-23)
 
 **Note:** Version bump only for package @react-ck/provisional
