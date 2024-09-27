@@ -36,7 +36,8 @@
     "clean:deps": "lerna exec -- rm -rf node_modules && rm -rf node_modules",
     "audit": "sh ./scripts/audit.sh && lerna exec --concurrency 1 -- sh ../../../scripts/audit.sh",
     "todo": "npx leasot '{.,*}**' -i '**/node_modules/**' -S -x",
-    "reset": "npm run clean && npm i && npm run build:infra && npm run prebuild"
+    "reset": "npm run clean:dist && npm i && npm run build:infra && npm run prebuild",
+    "check-all": "npm run lint:typescript && npm run lint:code && npm run format && npm run test:unit && npm run test:snapshot"
   },
   "devDependencies": {
     "@abelflopes/eslint-config-tsr-pro": "^2.0.1",
