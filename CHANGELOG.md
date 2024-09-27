@@ -1,3 +1,12 @@
+## [3.35.0](https://github.com/abelflopes/react-ck/compare/v3.34.0...v3.35.0) (2024-09-27)
+
+
+### Features
+
+* **react-ck:** global library package ([bfd0420](https://github.com/abelflopes/react-ck/commit/bfd04203c22e02fdb18e1c17999257836697f40c))
+* **react-ck:** global library package ([5ddc97a](https://github.com/abelflopes/react-ck/commit/5ddc97a044c87b63e093c485b9e2c18810125a5a))
+* **tabs:** add active selection, change handler, ability to persist in dom ([89cbe5f](https://github.com/abelflopes/react-ck/commit/89cbe5f8aac7034e7baba43abc7082ef5932683b))
+
 ## [3.34.0](https://github.com/abelflopes/react-ck/compare/v3.33.0...v3.34.0) (2024-09-23)
 
 
