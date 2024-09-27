@@ -20,6 +20,14 @@ exports[`snapshot Tabs renders correctly 1`] = `
       item 2
     </button>
   </div>
-  content 1
+  <div
+    className="content_wrapper"
+  >
+    <div
+      className="content content_active"
+    >
+      content 1
+    </div>
+  </div>
 </div>
 `;

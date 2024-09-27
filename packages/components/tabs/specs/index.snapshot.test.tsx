@@ -8,8 +8,8 @@ describe("snapshot Tabs", () => {
       .create(
         <Tabs
           items={[
-            { heading: "item 1", content: "content 1" },
-            { heading: "item 2", content: "content 2" },
+            { id: "1", heading: "item 1", content: "content 1" },
+            { id: "2", heading: "item 2", content: "content 2" },
           ]}
         />,
       )

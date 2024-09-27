@@ -30,3 +30,22 @@
 .tab_active {
   @include scss-utils.define-css-var(tabs, border-color, theme.get-color(highlight-primary));
 }
+
+.content_wrapper {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s;
+  will-change: opacity;
+
+  &.content_active {
+    position: relative;
+    opacity: 1;
+  }
+}

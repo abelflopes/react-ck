@@ -30,10 +30,12 @@ export const Component: Story = {
   args: {
     items: [
       {
+        id: "1",
         heading: faker.lorem.word(),
         content: <Text>{faker.lorem.sentence(50)}</Text>,
       },
       {
+        id: "2",
         heading: faker.lorem.word(),
         content: <Text>{faker.lorem.sentence(100)}</Text>,
       },
