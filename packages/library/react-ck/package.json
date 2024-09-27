@@ -1,7 +1,7 @@
 {
   "name": "react-ck",
   "private": false,
-  "version": "2.34.0",
+  "version": "2.35.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/index.scss",
@@ -65,7 +65,7 @@
     "@react-ck/skeleton": "^1.1.31",
     "@react-ck/spinner": "^3.0.23",
     "@react-ck/table": "^1.4.18",
-    "@react-ck/tabs": "^1.1.33",
+    "@react-ck/tabs": "^1.2.0",
     "@react-ck/text": "^1.5.18",
     "@react-ck/textarea": "^1.2.35",
     "@react-ck/theme": "^1.10.1"

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.1.33...@react-ck/tabs@1.2.0) (2024-09-27)
+
+
+### Features
+
+* **tabs:** add active selection, change handler, ability to persist in dom ([89cbe5f](https://github.com/abelflopes/react-ck/commit/89cbe5f8aac7034e7baba43abc7082ef5932683b))
+
+
+
 ## [1.1.33](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.1.32...@react-ck/tabs@1.1.33) (2024-08-14)
 
 **Note:** Version bump only for package @react-ck/tabs

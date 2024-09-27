@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.34.0...react-ck@2.35.0) (2024-09-27)
+
+
+### Features
+
+* **react-ck:** global library package ([971aeeb](https://github.com/abelflopes/react-ck/commit/971aeeba9ca8b964bc9cbb106407f9cb6eb408ef))
+
+
+
 ## [2.34.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.33.0...react-ck@2.34.0) (2024-09-23)
 
 
