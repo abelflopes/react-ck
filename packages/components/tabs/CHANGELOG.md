@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.2.0...@react-ck/tabs@1.2.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* tab context interaction & allow only headers ([347608f](https://github.com/abelflopes/react-ck/commit/347608f32e8bfeb9e490a38781889741cb00ce77))
+
+
+
 ## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.1.33...@react-ck/tabs@1.2.0) (2024-09-27)
 
 
