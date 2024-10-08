@@ -5,7 +5,7 @@ import styles from "./styles/index.module.scss";
 export interface TabsItem {
   id: string;
   heading: NonNullable<React.ReactNode>;
-  content: NonNullable<React.ReactNode>;
+  content?: NonNullable<React.ReactNode>;
 }
 
 export interface TabsProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
@@ -57,6 +57,7 @@ export const Tabs = ({
 
       <div className={styles.content_wrapper}>
         {items
+          .filter((i) => i.content)
           .filter((i) => keepInDom || i.id === computedActive)
           .map((i) => (
             <div
