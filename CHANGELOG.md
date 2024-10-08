@@ -1,3 +1,16 @@
+## [3.36.0](https://github.com/abelflopes/react-ck/compare/v3.35.0...v3.36.0) (2024-10-08)
+
+
+### Features
+
+* **react-ck:** global library package ([4457348](https://github.com/abelflopes/react-ck/commit/44573481e3cecdb88b9bc72ed09f282738b5e62e))
+* **react-ck:** global library package ([33d755a](https://github.com/abelflopes/react-ck/commit/33d755aaf47ae507d4765bfe117394b25e77e46c))
+
+
+### Bug Fixes
+
+* tab context interaction & allow only headers ([347608f](https://github.com/abelflopes/react-ck/commit/347608f32e8bfeb9e490a38781889741cb00ce77))
+
 ## [3.35.0](https://github.com/abelflopes/react-ck/compare/v3.34.0...v3.35.0) (2024-09-27)
 
 
