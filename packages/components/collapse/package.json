@@ -26,9 +26,9 @@
     "@react-ck/jest-config": "^1.0.0",
     "@react-ck/typescript-config": "^1.0.0",
     "@react-ck/webpack-config": "^1.0.0",
-    "@types/react": "^18.2.33"
+    "@types/react": "^18.3.11"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.3.1"
   }
 }
