@@ -20,7 +20,7 @@ interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
  */
 
 const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
-  ({ skin, id, className, ...props }, ref): React.ReactElement => {
+  ({ skin, id, className, ...props }, ref) => {
     const formFieldContext = useFormFieldContext();
 
     const computedSkin = useMemo(

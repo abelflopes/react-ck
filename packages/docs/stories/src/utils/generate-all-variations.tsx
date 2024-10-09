@@ -4,7 +4,7 @@ import { Grid, type GridColumnProps, type GridProps } from "@react-ck/grid/src";
 import { Snippet } from "@react-ck/provisional/src";
 
 export const generateAllVariations = <T extends object>(
-  render: (props: T) => React.ReactElement,
+  render: (props: T) => React.ReactNode,
   data: PropsMap<T>,
   options?: {
     align?: GridProps["align"];
