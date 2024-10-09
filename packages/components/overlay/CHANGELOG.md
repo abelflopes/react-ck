@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.17](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.2.16...@react-ck/overlay@1.2.17) (2024-10-09)
+
+
+### Bug Fixes
+
+* update react version ([59e4e9a](https://github.com/abelflopes/react-ck/commit/59e4e9afa979d29efdc793f3441ed528971844ca))
+
+
+
 ## [1.2.16](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.2.15...@react-ck/overlay@1.2.16) (2024-08-14)
 
 **Note:** Version bump only for package @react-ck/overlay

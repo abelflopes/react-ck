@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.19](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.18...@react-ck/select@1.5.19) (2024-10-09)
+
+
+### Bug Fixes
+
+* update react version ([59e4e9a](https://github.com/abelflopes/react-ck/commit/59e4e9afa979d29efdc793f3441ed528971844ca))
+
+
+
 ## [1.5.18](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.17...@react-ck/select@1.5.18) (2024-09-23)
 
 **Note:** Version bump only for package @react-ck/select

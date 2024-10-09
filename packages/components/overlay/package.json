@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/overlay",
   "private": false,
-  "version": "1.2.16",
+  "version": "1.2.17",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@react-ck/scss-utils": "^1.1.12",
-    "@react-ck/theme": "^1.10.1",
+    "@react-ck/theme": "^1.10.2",
     "classnames": "^2.3.2"
   }
 }

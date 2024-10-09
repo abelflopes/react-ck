@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.17](https://github.com/abelflopes/react-ck/compare/@react-ck/elevation@1.1.16...@react-ck/elevation@1.1.17) (2024-10-09)
+
+
+### Bug Fixes
+
+* update react version ([59e4e9a](https://github.com/abelflopes/react-ck/commit/59e4e9afa979d29efdc793f3441ed528971844ca))
+
+
+
 ## [1.1.16](https://github.com/abelflopes/react-ck/compare/@react-ck/elevation@1.1.15...@react-ck/elevation@1.1.16) (2024-06-26)
 
 **Note:** Version bump only for package @react-ck/elevation
