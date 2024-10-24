@@ -47,7 +47,7 @@ export const Collapse = ({
           <IconChevronDown className={classNames(styles.icon, internalOpen && styles.icon_open)} />
         </Icon>
 
-        <div>{header}</div>
+        <div className={styles.header_content}>{header}</div>
       </summary>
 
       {children}
