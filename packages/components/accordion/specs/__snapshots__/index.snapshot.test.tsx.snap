@@ -7,11 +7,40 @@ exports[`snapshot accordion renders correctly 1`] = `
   <li
     className="item"
   >
-    <details>
+    <details
+      className=""
+      onToggle={[Function]}
+    >
       <summary
         className="header"
       >
-        item 1
+        <span
+          className="root size_text skin_default"
+        >
+          <svg
+            className="icon"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <div>
+          item 1
+        </div>
       </summary>
       <div
         className="content"
@@ -23,11 +52,40 @@ exports[`snapshot accordion renders correctly 1`] = `
   <li
     className="item"
   >
-    <details>
+    <details
+      className=""
+      onToggle={[Function]}
+    >
       <summary
         className="header"
       >
-        item 2
+        <span
+          className="root size_text skin_default"
+        >
+          <svg
+            className="icon"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <div>
+          item 2
+        </div>
       </summary>
       <div
         className="content"

@@ -1,21 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot Select renders correctly 1`] = `
-[
+<div
+  className="root skin_default"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="placeholder"
+  />
   <select
-    hidden={true}
+    className="native_element"
     onChange={[Function]}
-  />,
-  <div
-    className="root skin_default"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    role="button"
-    tabIndex={0}
-  >
-    <span
-      className="placeholder"
-    />
-  </div>,
-]
+  />
+</div>
 `;
