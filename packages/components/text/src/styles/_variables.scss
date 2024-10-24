@@ -64,6 +64,12 @@ $text-skins: (
     ),
     hover: (),
   ),
+  negative: (
+    default: (
+      color: theme.get-color(status-negative),
+    ),
+    hover: (),
+  ),
 );
 $text-variations: (
   banner: (

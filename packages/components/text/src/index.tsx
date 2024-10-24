@@ -18,7 +18,8 @@ export type TextSkin =
   | "link_hidden"
   | "inverted"
   | "soft"
-  | "highlight-primary";
+  | "highlight-primary"
+  | "negative";
 
 export type TextVariation =
   | "banner"

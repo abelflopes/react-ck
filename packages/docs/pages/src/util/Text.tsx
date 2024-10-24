@@ -15,6 +15,7 @@ export const skins: TextSkin[] = [
   "inverted",
   "soft",
   "highlight-primary",
+  "negative",
 ];
 
 export const variations: TextVariation[] = [
