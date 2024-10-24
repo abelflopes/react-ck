@@ -14,9 +14,6 @@ export const BooleaInput = ({
   skin,
   className,
   id,
-  checked,
-  value,
-  name,
   ...otherProps
 }: Readonly<BooleaInputProps>): React.ReactElement => {
   const formFieldContext = useFormFieldContext();
@@ -25,16 +22,9 @@ export const BooleaInput = ({
 
   return (
     <span className={classNames(styles.root, className)}>
-      <input
-        {...otherProps}
-        id={computedId}
-        name={name}
-        checked={checked}
-        value={value}
-        className={styles.input}
-      />
+      <input {...otherProps} id={computedId} className={styles.input} />
 
-      <Icon name={name} value={value} skin={skin ?? formFieldContext?.skin} />
+      <Icon {...otherProps} skin={skin ?? formFieldContext?.skin} />
     </span>
   );
 };
