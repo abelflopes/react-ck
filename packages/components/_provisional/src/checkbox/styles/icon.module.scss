@@ -20,4 +20,5 @@
   will-change: transform;
 
   transform: scale(0);
+  color: theme.get-color(highlight-primary);
 }
