@@ -32,6 +32,8 @@ const Select = ({
   multiple: selectMultiple,
   defaultValue,
   displayValueFormatter,
+  allowDeselect = true,
+  required,
   ...props
 }: Readonly<SelectProps>): React.ReactElement => {
   const onNextRender = useNextRender();
@@ -72,14 +74,14 @@ const Select = ({
     (value, mode) => {
       setInternalValue((v) => {
         if (!selectMultiple && mode === "select") return value;
-        else if (!selectMultiple && mode === "deselect") return undefined;
-        else if (mode === "deselect" && v !== undefined)
+        else if (!selectMultiple && mode === "deselect" && allowDeselect) return undefined;
+        else if (mode === "deselect" && (allowDeselect || selectMultiple) && v !== undefined)
           return valueAsArray(v).filter((i) => i !== value);
         else if (v !== undefined) return [...valueAsArray(v), value];
         return [value];
       });
     },
-    [selectMultiple],
+    [allowDeselect, selectMultiple],
   );
 
   const handleFocus = useCallback(() => {
@@ -221,14 +223,14 @@ const Select = ({
           {searchOptions ? (
             <>
               <Input
+                ref={(e) => {
+                  e?.focus();
+                }}
                 value={search}
                 type="search"
                 placeholder={searchOptions.placeholder}
                 skin="ghost"
                 className={styles.search_input}
-                ref={(e) => {
-                  e?.focus();
-                }}
                 onChange={(e) => {
                   setSearch(e.target.value);
                 }}

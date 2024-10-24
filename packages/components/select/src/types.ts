@@ -26,6 +26,9 @@ export interface SelectProps
     selectedValues: string[];
     childrenData: SelectChildrenData[];
   }) => React.ReactNode;
+  /** Toggles ability to deselect an option */
+  allowDeselect?: boolean;
+  required?: boolean;
 }
 
 export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
