@@ -1,3 +1,22 @@
+## [3.38.0](https://github.com/abelflopes/react-ck/compare/v3.37.0...v3.38.0) (2024-10-24)
+
+
+### Features
+
+* **collapse:** add icon, change handler and spacing prop ([b0d6ddb](https://github.com/abelflopes/react-ck/commit/b0d6ddbabbf25c503e0c8da8332100252514dd30))
+* **react-ck:** global library package ([e8a88de](https://github.com/abelflopes/react-ck/commit/e8a88de3a95917dd00789ba1f15b6ca5238d171e))
+* **react-ck:** global library package ([9a4780b](https://github.com/abelflopes/react-ck/commit/9a4780bf55dffa33a2c2c4f836e8a7c4c32d8fc4))
+* **select:** allow toggling deselection & forward required prop ([5b3414f](https://github.com/abelflopes/react-ck/commit/5b3414f171690f59fd7f99f2230e57daeea06995))
+* **text:** add negative skin ([c8b34b2](https://github.com/abelflopes/react-ck/commit/c8b34b297800b1fb78d89ba640a08fcaec8c459e))
+
+
+### Bug Fixes
+
+* **checkbox:** add icon color ([82584b0](https://github.com/abelflopes/react-ck/commit/82584b06b2abeb6f1c42343f60fb3f61b330c2b3))
+* **radio:** pass all input props to custom icon render prop ([6596c01](https://github.com/abelflopes/react-ck/commit/6596c01ccd5f6191b4ed2a72ad80806ca6c6ad45))
+* **select:** make native validation visible in DOM ([91b0398](https://github.com/abelflopes/react-ck/commit/91b03989d0a0d90c037b022d30ec367de3d8a3f0))
+* **select:** make native validation visible in DOM ([a547597](https://github.com/abelflopes/react-ck/commit/a5475972cb3e80eab85078443a2cd9f007da2e61))
+
 ## [3.37.0](https://github.com/abelflopes/react-ck/compare/v3.36.0...v3.37.0) (2024-10-09)
 
 
