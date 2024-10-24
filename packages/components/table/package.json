@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/table",
   "private": false,
-  "version": "1.4.19",
+  "version": "1.4.20",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -33,9 +33,9 @@
   },
   "dependencies": {
     "@react-ck/icon": "^3.6.2",
-    "@react-ck/provisional": "^3.9.14",
+    "@react-ck/provisional": "^3.9.15",
     "@react-ck/scss-utils": "^1.1.12",
-    "@react-ck/text": "^1.5.19",
+    "@react-ck/text": "^1.6.0",
     "@react-ck/theme": "^1.10.2",
     "classnames": "^2.3.2"
   }

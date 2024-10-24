@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.19...@react-ck/select@1.6.0) (2024-10-24)
+
+
+### Features
+
+* **select:** allow toggling deselection & forward required prop ([5b3414f](https://github.com/abelflopes/react-ck/commit/5b3414f171690f59fd7f99f2230e57daeea06995))
+
+
+### Bug Fixes
+
+* **select:** make native validation visible in DOM ([91b0398](https://github.com/abelflopes/react-ck/commit/91b03989d0a0d90c037b022d30ec367de3d8a3f0))
+* **select:** make native validation visible in DOM ([a547597](https://github.com/abelflopes/react-ck/commit/a5475972cb3e80eab85078443a2cd9f007da2e61))
+
+
+
 ## [1.5.19](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.5.18...@react-ck/select@1.5.19) (2024-10-09)
 
 

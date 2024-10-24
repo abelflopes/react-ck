@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.15](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.14...@react-ck/provisional@3.9.15) (2024-10-24)
+
+
+### Bug Fixes
+
+* **checkbox:** add icon color ([82584b0](https://github.com/abelflopes/react-ck/commit/82584b06b2abeb6f1c42343f60fb3f61b330c2b3))
+* **radio:** pass all input props to custom icon render prop ([6596c01](https://github.com/abelflopes/react-ck/commit/6596c01ccd5f6191b4ed2a72ad80806ca6c6ad45))
+
+
+
 ## [3.9.14](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.13...@react-ck/provisional@3.9.14) (2024-10-09)
 
 

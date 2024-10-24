@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/collapse",
   "private": false,
-  "version": "1.1.21",
+  "version": "1.2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/shared.scss",
@@ -25,8 +25,8 @@
   },
   "dependencies": {
     "@react-ck/icon": "^3.6.2",
-    "@react-ck/theme": "^1.10.2",
     "@react-ck/scss-utils": "^1.1.12",
+    "@react-ck/theme": "^1.10.2",
     "classnames": "^2.5.1"
   },
   "devDependencies": {

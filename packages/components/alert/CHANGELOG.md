@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.12](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.1.11...@react-ck/alert@3.1.12) (2024-10-24)
+
+**Note:** Version bump only for package @react-ck/alert
+
+
+
+
+
 ## [3.1.11](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.1.10...@react-ck/alert@3.1.11) (2024-10-09)
 
 
