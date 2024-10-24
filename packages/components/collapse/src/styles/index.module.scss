@@ -1,4 +1,27 @@
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+@use "shared";
+
 .header {
+  display: flex;
+  align-items: center;
+  gap: theme.get-spacing(0.5);
   appearance: auto;
   cursor: pointer;
+
+  margin-bottom: scss-utils.get-css-var(collapse, spacing);
+}
+
+.icon {
+  transition: all 0.2s;
+
+  &_open {
+    transform: rotateX(180deg);
+  }
+}
+
+@each $key, $value in shared.$collapse-spacings {
+  .spacing_#{$key} {
+    @include scss-utils.define-css-var(collapse, spacing, $value);
+  }
 }

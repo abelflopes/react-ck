@@ -1,0 +1,9 @@
+@use "@react-ck/theme";
+
+$collapse-spacings: (
+  none: 0,
+  xs: theme.get-spacing(1),
+  s: theme.get-spacing(2),
+  m: theme.get-spacing(3),
+  l: theme.get-spacing(4),
+);
