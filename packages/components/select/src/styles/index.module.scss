@@ -8,6 +8,7 @@
 
   min-width: 200px; // TODO: make properly
   cursor: pointer;
+  position: relative;
 }
 
 .menu {
@@ -28,4 +29,15 @@
 
 .placeholder {
   @include form-field.placeholder;
+}
+
+.native_element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
 }
