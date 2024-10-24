@@ -15,7 +15,7 @@ exports[`snapshot accordion renders correctly 1`] = `
         className="header"
       >
         <span
-          className="root size_text skin_default"
+          className="VsR_m2r2hGIr7NfX85BU YEVFelv_bfcF2Ee4WG8g sf93RNkSSnS5VkGCtSLh"
         >
           <svg
             className="icon"
@@ -38,7 +38,9 @@ exports[`snapshot accordion renders correctly 1`] = `
             />
           </svg>
         </span>
-        <div>
+        <div
+          className="header_content"
+        >
           item 1
         </div>
       </summary>
@@ -60,7 +62,7 @@ exports[`snapshot accordion renders correctly 1`] = `
         className="header"
       >
         <span
-          className="root size_text skin_default"
+          className="VsR_m2r2hGIr7NfX85BU YEVFelv_bfcF2Ee4WG8g sf93RNkSSnS5VkGCtSLh"
         >
           <svg
             className="icon"
@@ -83,7 +85,9 @@ exports[`snapshot accordion renders correctly 1`] = `
             />
           </svg>
         </span>
-        <div>
+        <div
+          className="header_content"
+        >
           item 2
         </div>
       </summary>
