@@ -171,23 +171,6 @@ const Select = ({
 
   return (
     <>
-      <select
-        ref={selectRef}
-        name={selectName}
-        multiple={selectMultiple}
-        defaultValue={defaultValue}
-        value={internalValue}
-        hidden
-        onChange={(e) => {
-          selectOnChange?.(e, selectedValuesList);
-        }}>
-        {selectedValuesList.map((i) => (
-          <option key={i} value={i}>
-            {i}
-          </option>
-        ))}
-      </select>
-
       <div
         {...props}
         ref={rootElRef}
@@ -203,6 +186,24 @@ const Select = ({
           onBlur?.(e);
         }}>
         {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+
+        <select
+          ref={selectRef}
+          name={selectName}
+          multiple={selectMultiple}
+          defaultValue={defaultValue}
+          required={required}
+          value={internalValue}
+          className={styles.native_element}
+          onChange={(e) => {
+            selectOnChange?.(e, selectedValuesList);
+          }}>
+          {selectedValuesList.map((i) => (
+            <option key={i} value={i}>
+              {i}
+            </option>
+          ))}
+        </select>
       </div>
 
       <Dropdown
