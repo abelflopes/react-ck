@@ -50,8 +50,9 @@ export const ThemeProvider = ({
     if (className) target.classList.add(className);
 
     return () => {
-      // eslint-disable-next-line @typescript-eslint/unbound-method -- other approach would make code unnecessarily complex
-      Object.keys(themeCssVariables).forEach(target.style.removeProperty);
+      Object.keys(themeCssVariables).forEach((i) => {
+        target.style.removeProperty(i);
+      });
 
       if (className) target.classList.remove(className);
     };
