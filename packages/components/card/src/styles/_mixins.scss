@@ -55,10 +55,12 @@ $border-radius: scss-utils.get-css-var(card, border-radius);
 
 @mixin spacing-m {
   @include scss-utils.define-css-var(card, spacing, theme.get-spacing(2));
+  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(2));
 }
 
 @mixin spacing-l {
   @include scss-utils.define-css-var(card, spacing, theme.get-spacing(3));
+  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(3));
 }
 
 @mixin spacing-none {
