@@ -8,14 +8,6 @@
   flex-direction: column;
 }
 
-.header {
-  border-bottom: solid scss-utils.get-css-var(spacing, border) theme.get-color(neutral-light-2);
-}
-
-.footer {
-  border-top: solid scss-utils.get-css-var(spacing, border) theme.get-color(neutral-light-2);
-}
-
 .header,
 .footer,
 .content {
@@ -42,7 +34,7 @@
 
 .skin_shadowed {
   height: auto;
-  border-radius: theme.get-spacing(1);
+  border-radius: theme.get-spacing(2);
 
   @include card.shadow_transition;
   @include card.shadow_small;
