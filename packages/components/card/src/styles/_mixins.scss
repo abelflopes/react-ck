@@ -36,7 +36,7 @@ $border-radius: scss-utils.get-css-var(card, border-radius);
 // Skins
 
 @mixin skin-bordered {
-  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(neutral-light-2);
+  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(neutral-light-1-5);
 }
 
 @mixin skin-shadowed {
