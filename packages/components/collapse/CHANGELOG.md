@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.2.0...@react-ck/collapse@1.2.1) (2024-10-24)
+
+
+### Bug Fixes
+
+* **collapse:** header width ([53c0519](https://github.com/abelflopes/react-ck/commit/53c0519abe9a04a20a418a0f121054f88ac8a581))
+
+
+
 ## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.1.21...@react-ck/collapse@1.2.0) (2024-10-24)
 
 

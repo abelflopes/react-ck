@@ -1,7 +1,7 @@
 {
   "name": "react-ck",
   "private": false,
-  "version": "2.38.0",
+  "version": "2.39.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/index.scss",
@@ -29,16 +29,16 @@
     "glob": "^10.3.10",
     "ts-node-dev": "^2.0.0"
   },
-  "gitHead": "8d90fdca1885815c5beff3e554565891902a18c9",
+  "gitHead": "f173f06e000522f0319a6cef9f9f99c90c746bad",
   "dependencies": {
-    "@react-ck/accordion": "^1.1.32",
+    "@react-ck/accordion": "^1.1.33",
     "@react-ck/alert": "^3.1.12",
     "@react-ck/badge": "^1.2.20",
     "@react-ck/banner": "^1.1.38",
     "@react-ck/button": "^1.8.15",
     "@react-ck/card": "^1.8.13",
     "@react-ck/chip": "^1.2.39",
-    "@react-ck/collapse": "^1.2.0",
+    "@react-ck/collapse": "^1.2.1",
     "@react-ck/container": "^1.5.3",
     "@react-ck/data-table": "^3.1.20",
     "@react-ck/divider": "^1.2.28",

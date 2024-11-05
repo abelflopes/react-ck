@@ -1,3 +1,16 @@
+## [3.39.0](https://github.com/abelflopes/react-ck/compare/v3.38.0...v3.39.0) (2024-10-24)
+
+
+### Features
+
+* **react-ck:** global library package ([9f3ec7c](https://github.com/abelflopes/react-ck/commit/9f3ec7c1d27e26d198888e634eb24524016f07a2))
+* **react-ck:** global library package ([8f76d00](https://github.com/abelflopes/react-ck/commit/8f76d00dd14c23ae255624fd6b0a1c2d9def83cf))
+
+
+### Bug Fixes
+
+* **collapse:** header width ([53c0519](https://github.com/abelflopes/react-ck/commit/53c0519abe9a04a20a418a0f121054f88ac8a581))
+
 ## [3.38.0](https://github.com/abelflopes/react-ck/compare/v3.37.0...v3.38.0) (2024-10-24)
 
 
