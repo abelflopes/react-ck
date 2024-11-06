@@ -1,3 +1,19 @@
+## [3.41.0](https://github.com/abelflopes/react-ck/compare/v3.40.0...v3.41.0) (2024-11-06)
+
+
+### Features
+
+* adjust theme colors ([bceb3b5](https://github.com/abelflopes/react-ck/commit/bceb3b5f5a81e71035eb3cb724b8e74bede34974))
+* **card:** use dynamic border radius according to card size ([c407aec](https://github.com/abelflopes/react-ck/commit/c407aecc48dc4ab637b1a3e8d41ab8171bedd52f))
+* **dock:** remove borders ([3466177](https://github.com/abelflopes/react-ck/commit/3466177ddc5a43137191ec436e9ba55dde258f62))
+* **react-ck:** global library package ([5af0ebd](https://github.com/abelflopes/react-ck/commit/5af0ebd3458fbf24383f6b2af635a98edfe27107))
+* **react-ck:** global library package ([4b3b04d](https://github.com/abelflopes/react-ck/commit/4b3b04de9b908a4815d2f3c784d35599712cf3c5))
+
+
+### Bug Fixes
+
+* **card:** fix border color ([7f6eade](https://github.com/abelflopes/react-ck/commit/7f6eade78a83c86ace7407c869ab8b43bd9bbea1))
+
 ## [3.40.0](https://github.com/abelflopes/react-ck/compare/v3.39.0...v3.40.0) (2024-11-06)
 
 
