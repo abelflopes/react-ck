@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.38](https://github.com/abelflopes/react-ck/compare/@react-ck/textarea@1.2.37...@react-ck/textarea@1.2.38) (2024-11-06)
+
+**Note:** Version bump only for package @react-ck/textarea
+
+
+
+
+
 ## [1.2.37](https://github.com/abelflopes/react-ck/compare/@react-ck/textarea@1.2.36...@react-ck/textarea@1.2.37) (2024-10-24)
 
 **Note:** Version bump only for package @react-ck/textarea

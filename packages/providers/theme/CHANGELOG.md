@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.10.2...@react-ck/theme@1.11.0) (2024-11-06)
+
+
+### Features
+
+* adjust theme colors ([bceb3b5](https://github.com/abelflopes/react-ck/commit/bceb3b5f5a81e71035eb3cb724b8e74bede34974))
+
+
+
 ## [1.10.2](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.10.1...@react-ck/theme@1.10.2) (2024-10-09)
 
 

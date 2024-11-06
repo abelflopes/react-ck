@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.15...@react-ck/provisional@3.10.0) (2024-11-06)
+
+
+### Features
+
+* **dock:** remove borders ([3466177](https://github.com/abelflopes/react-ck/commit/3466177ddc5a43137191ec436e9ba55dde258f62))
+
+
+
 ## [3.9.15](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.14...@react-ck/provisional@3.9.15) (2024-10-24)
 
 

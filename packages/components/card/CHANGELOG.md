@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.8.13...@react-ck/card@1.9.0) (2024-11-06)
+
+
+### Features
+
+* **card:** use dynamic border radius according to card size ([c407aec](https://github.com/abelflopes/react-ck/commit/c407aecc48dc4ab637b1a3e8d41ab8171bedd52f))
+
+
+### Bug Fixes
+
+* **card:** fix border color ([7f6eade](https://github.com/abelflopes/react-ck/commit/7f6eade78a83c86ace7407c869ab8b43bd9bbea1))
+
+
+
 ## [1.8.13](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.8.12...@react-ck/card@1.8.13) (2024-10-24)
 
 **Note:** Version bump only for package @react-ck/card
