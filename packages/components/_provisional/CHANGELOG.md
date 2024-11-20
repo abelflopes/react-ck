@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.10.0...@react-ck/provisional@3.11.0) (2024-11-20)
+
+
+### Features
+
+* **snackbar:** add remove callback ([853691b](https://github.com/abelflopes/react-ck/commit/853691b846f9421dd33452fd7a5e998078e39834))
+
+
+
 ## [3.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.9.15...@react-ck/provisional@3.10.0) (2024-11-06)
 
 
