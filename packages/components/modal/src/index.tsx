@@ -66,7 +66,7 @@ const Modal = ({
   useEffect(() => {
     openModals += 1;
 
-    if (openModals > 1) document.body.classList.add(`${styles.lock_scroll}`);
+    if (openModals >= 1) document.body.classList.add(`${styles.lock_scroll}`);
 
     return () => {
       openModals -= 1;
