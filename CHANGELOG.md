@@ -1,3 +1,12 @@
+## [3.42.0](https://github.com/abelflopes/react-ck/compare/v3.41.0...v3.42.0) (2024-11-20)
+
+
+### Features
+
+* **react-ck:** global library package ([1131f85](https://github.com/abelflopes/react-ck/commit/1131f85cc476c688a7df432dcb884cb724c4de2b))
+* **react-ck:** global library package ([555f691](https://github.com/abelflopes/react-ck/commit/555f691b0454aa7c0afccf2b27eaa34f1339085f))
+* **snackbar:** add remove callback ([853691b](https://github.com/abelflopes/react-ck/commit/853691b846f9421dd33452fd7a5e998078e39834))
+
 ## [3.41.0](https://github.com/abelflopes/react-ck/compare/v3.40.0...v3.41.0) (2024-11-06)
 
 
