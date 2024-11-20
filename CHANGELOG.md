@@ -1,3 +1,16 @@
+## [3.43.0](https://github.com/abelflopes/react-ck/compare/v3.42.0...v3.43.0) (2024-11-20)
+
+
+### Features
+
+* **react-ck:** global library package ([4a182f7](https://github.com/abelflopes/react-ck/commit/4a182f7c8163ee5d578b20f38e3b4f4a05ed3391))
+* **react-ck:** global library package ([0270fe4](https://github.com/abelflopes/react-ck/commit/0270fe4d2494756f7f060f529dcfede8b51aedfc))
+
+
+### Bug Fixes
+
+* **modal:** lock scroll when active ([1cf2c03](https://github.com/abelflopes/react-ck/commit/1cf2c037ae229f6a0638bf87e736a35ea08d551c))
+
 ## [3.42.0](https://github.com/abelflopes/react-ck/compare/v3.41.0...v3.42.0) (2024-11-20)
 
 
