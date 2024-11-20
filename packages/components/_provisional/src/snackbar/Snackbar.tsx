@@ -34,7 +34,13 @@ export const Snackbar = ({
   const remove = useCallback<SnackbarContextProps["remove"]>((id) => {
     clearTimeout(timeoutMap.current[id]);
 
-    setItems((v) => v.filter((i) => i.id !== id));
+    setItems((v) => {
+      const targetItem = v.find((i) => i.id === id);
+
+      targetItem?.onRemove?.();
+
+      return v.filter((i) => i.id !== targetItem?.id);
+    });
   }, []);
 
   const add = useCallback<SnackbarContextProps["add"]>(
@@ -46,6 +52,7 @@ export const Snackbar = ({
         ...v,
         {
           id,
+          onRemove: options?.onRemove,
           element: <SnackbarItem>{element}</SnackbarItem>,
         },
       ]);
