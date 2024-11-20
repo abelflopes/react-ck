@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.21](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.20...@react-ck/modal@3.2.21) (2024-11-20)
+
+
+### Bug Fixes
+
+* **modal:** lock scroll when active ([1cf2c03](https://github.com/abelflopes/react-ck/commit/1cf2c037ae229f6a0638bf87e736a35ea08d551c))
+
+
+
 ## [3.2.20](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.19...@react-ck/modal@3.2.20) (2024-11-20)
 
 **Note:** Version bump only for package @react-ck/modal
