@@ -70,7 +70,8 @@ const children = (
     <Menu.Item
       action={
         <Button
-          skin="ghost"
+          skin="secondary"
+          skinVariation="ghost"
           size="s"
           icon={
             <Icon>
@@ -93,7 +94,8 @@ const children = (
       }
       action={
         <Button
-          skin="ghost"
+          skin="secondary"
+          skinVariation="ghost"
           size="s"
           icon={
             <Icon>

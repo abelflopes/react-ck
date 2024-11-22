@@ -5,43 +5,43 @@ exports[`snapshot Pagination renders correctly 1`] = `
   className="root"
 >
   <button
-    className="root skin_ghost skin_variation_default size-s"
+    className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
   >
     1
   </button>
   <button
-    className="root skin_ghost skin_variation_default size-s"
+    className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
   >
     ...
   </button>
   <button
-    className="root skin_ghost skin_variation_default size-s"
+    className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
   >
     9
   </button>
   <button
-    className="root skin_secondary skin_variation_default size-s"
+    className="root skin_secondary skin_variation_muted size-s"
     onClick={[Function]}
   >
     10
   </button>
   <button
-    className="root skin_ghost skin_variation_default size-s"
+    className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
   >
     11
   </button>
   <button
-    className="root skin_ghost skin_variation_default size-s"
+    className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
   >
     ...
   </button>
   <button
-    className="root skin_ghost skin_variation_default size-s"
+    className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
   >
     20

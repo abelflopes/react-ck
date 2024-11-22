@@ -62,7 +62,8 @@ export const ChatPrompt = ({
         <div>
           <Button
             size="s"
-            skin="ghost"
+            skin="secondary"
+            skinVariation="ghost"
             icon={
               <Icon>
                 <IconDocument />
@@ -71,7 +72,8 @@ export const ChatPrompt = ({
           />
           <Button
             size="s"
-            skin="ghost"
+            skin="secondary"
+            skinVariation="ghost"
             icon={
               <Icon>
                 <IconAttach />
@@ -80,7 +82,8 @@ export const ChatPrompt = ({
           />
           <Button
             size="s"
-            skin="ghost"
+            skin="secondary"
+            skinVariation="ghost"
             icon={
               <Icon>
                 <IconArrowRightCircle />

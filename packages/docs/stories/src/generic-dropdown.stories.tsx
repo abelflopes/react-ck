@@ -67,7 +67,8 @@ export const IconButton: Story = {
       <>
         <Button
           rootRef={buttonRef}
-          skin="ghost"
+          skin="secondary"
+          skinVariation="ghost"
           icon={
             <Icon>
               <IconVerticalDots />

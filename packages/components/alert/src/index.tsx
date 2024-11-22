@@ -78,7 +78,8 @@ export const Alert = ({
       {onDismiss ? (
         <Button
           size={variation === "compact" ? "xs" : "s"}
-          skin="ghost"
+          skin="secondary"
+          skinVariation="ghost"
           icon={
             <Icon>
               <IconClose />

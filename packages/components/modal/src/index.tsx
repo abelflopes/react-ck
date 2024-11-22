@@ -104,7 +104,8 @@ const Modal = ({
 
                 {onDismiss ? (
                   <Button
-                    skin="ghost"
+                    skin="secondary"
+                    skinVariation="ghost"
                     icon={
                       <Icon>
                         <IconClose />

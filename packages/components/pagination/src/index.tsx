@@ -96,7 +96,8 @@ export const Pagination = ({
           {isGotoFirst(i) && (
             <Button
               size="s"
-              skin={computedCurrent === 1 ? "secondary" : "ghost"}
+              skin="secondary"
+              skinVariation={computedCurrent === 1 ? "muted" : "ghost"}
               onClick={() => {
                 handleClick(1);
               }}>
@@ -107,7 +108,8 @@ export const Pagination = ({
           {isMovePrev(i) && (
             <Button
               size="s"
-              skin="ghost"
+              skin="secondary"
+              skinVariation="ghost"
               onClick={() => {
                 handleClick("move-prev");
               }}>
@@ -118,7 +120,8 @@ export const Pagination = ({
           {isDynamic(i) && (
             <Button
               size="s"
-              skin={i + min === computedCurrent ? "secondary" : "ghost"}
+              skin="secondary"
+              skinVariation={i + min === computedCurrent ? "muted" : "ghost"}
               onClick={() => {
                 handleClick(i + min);
               }}>
@@ -129,7 +132,8 @@ export const Pagination = ({
           {isMoveNext(i) && (
             <Button
               size="s"
-              skin="ghost"
+              skin="secondary"
+              skinVariation="ghost"
               onClick={() => {
                 handleClick("move-next");
               }}>
@@ -140,7 +144,8 @@ export const Pagination = ({
           {isGoToLast(i) && (
             <Button
               size="s"
-              skin={total === computedCurrent ? "secondary" : "ghost"}
+              skin="secondary"
+              skinVariation={total === computedCurrent ? "muted" : "ghost"}
               onClick={() => {
                 handleClick(total);
               }}>
