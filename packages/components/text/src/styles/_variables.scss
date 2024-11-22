@@ -47,6 +47,7 @@ $text-skins: (
     ),
     hover: (
       color: theme.get-color(highlight-alt-dark),
+      text-decoration: underline,
     ),
   ),
   link_hidden: (

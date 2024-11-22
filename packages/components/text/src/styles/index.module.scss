@@ -12,6 +12,13 @@
   margin-bottom: scss-utils.get-css-var(text, margin-bottom);
 }
 
+button.root {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 // Variation
 
 .variation_h1,
