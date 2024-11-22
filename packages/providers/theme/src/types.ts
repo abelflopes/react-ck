@@ -11,6 +11,7 @@ export interface Theme {
     "neutral-light-2": string;
     "neutral-light-3": string;
     "neutral-light-4": string;
+    "neutral-light-1-25-solid": string;
     "neutral-light-1-5-solid": string;
     "neutral-light-2-solid": string;
     "neutral-light-3-solid": string;

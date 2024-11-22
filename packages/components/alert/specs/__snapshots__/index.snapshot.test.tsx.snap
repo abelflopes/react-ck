@@ -2,7 +2,7 @@
 
 exports[`snapshot Alert renders correctly 1`] = `
 <div
-  className="root neutral"
+  className="root neutral size_m"
 >
   <div
     className="content"

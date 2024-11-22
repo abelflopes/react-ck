@@ -8,12 +8,12 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
-  padding: theme.get-spacing(1) theme.get-spacing(2);
-  border: none;
-  border-radius: theme.get-spacing(1);
+  padding: #{scss-utils.get-css-var(alert, padding-x)} #{scss-utils.get-css-var(alert, padding-y)};
+  border: solid 1px theme.get-color(neutral-light-1-5);
+  border-radius: scss-utils.get-css-var(alert, padding-y);
   background-color: scss-utils.get-css-var(alert, background-color);
   color: scss-utils.get-css-var(alert, color);
-  gap: theme.get-spacing(1);
+  gap: scss-utils.get-css-var(alert, padding-x);
 
   .heading {
     color: inherit;
@@ -25,7 +25,6 @@
 }
 
 .compact {
-  padding: theme.get-spacing(0.5) theme.get-spacing(1);
   border-radius: 0;
 
   .content,
@@ -47,5 +46,20 @@
     @each $propKey, $propValue in $props {
       @include scss-utils.define-css-var(alert, $propKey, $propValue);
     }
+  }
+}
+
+@each $key, $props in variables.$alert-sizes {
+  .size_#{$key} {
+    @include scss-utils.define-css-var(
+      alert,
+      padding-x,
+      scss-utils.map-get-strict($props, padding-x)
+    );
+    @include scss-utils.define-css-var(
+      alert,
+      padding-y,
+      scss-utils.map-get-strict($props, padding-y)
+    );
   }
 }

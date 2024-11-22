@@ -6,17 +6,46 @@ import { Button } from "@react-ck/button";
 import { Icon } from "@react-ck/icon";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
 
-export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
+type AlertDismissActionRenderer = (
+  props: BaseAlertProps & Required<Pick<BaseAlertProps, "onDismiss">>,
+) => React.ReactNode;
+
+const defaultDismissActionRenderer: AlertDismissActionRenderer = ({ size, onDismiss }) => (
+  <Button
+    size={size === "s" ? "xs" : "s"}
+    skin="secondary"
+    skinVariation="ghost"
+    icon={
+      <Icon>
+        <IconClose />
+      </Icon>
+    }
+    onClick={() => {
+      onDismiss();
+    }}
+  />
+);
+
+export interface BaseAlertProps {
   /** Main title of the alert */
   heading?: string;
   /** Specifies the visual style of the alert  */
   skin?: "neutral" | "primary" | "negative" | "average" | "positive" | "info";
   /** Structural variation of the alert */
   variation?: "default" | "compact";
+  /** Alert size */
+  size?: "s" | "m" | "l";
   /** Close handle, also renders a close icon when defined  */
   onDismiss?: () => void;
   /** Automatically dismiss after a given timeout */
   autoDismiss?: number;
+}
+
+export type { AlertDismissActionRenderer };
+
+export interface AlertProps extends React.HTMLAttributes<HTMLDivElement>, BaseAlertProps {
+  /** Renderer for dismiss action */
+  renderDismissAcion?: AlertDismissActionRenderer;
 }
 
 /**
@@ -29,10 +58,12 @@ export const Alert = ({
   heading,
   skin = "neutral",
   variation = "default",
+  size = "m",
   onDismiss,
   autoDismiss,
   children,
   className,
+  renderDismissAcion = defaultDismissActionRenderer,
   ...otherProps
 }: Readonly<AlertProps>): React.ReactNode => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout | typeof clearTimeout>>(undefined);
@@ -62,12 +93,13 @@ export const Alert = ({
       className={classNames(
         styles.root,
         styles[skin],
+        styles[`size_${size}`],
         variation !== "default" && styles[variation],
         className,
       )}>
       <div className={styles.content}>
         {heading ? (
-          <Text variation="h4" as="p" skin="bold" margin="none" className={styles.heading}>
+          <Text variation="p" skin="bold" margin="none" className={styles.heading}>
             {heading}
           </Text>
         ) : null}
@@ -75,21 +107,9 @@ export const Alert = ({
         {children}
       </div>
 
-      {onDismiss ? (
-        <Button
-          size={variation === "compact" ? "xs" : "s"}
-          skin="secondary"
-          skinVariation="ghost"
-          icon={
-            <Icon>
-              <IconClose />
-            </Icon>
-          }
-          onClick={() => {
-            onDismiss();
-          }}
-        />
-      ) : null}
+      {onDismiss
+        ? renderDismissAcion({ heading, skin, variation, size, onDismiss, autoDismiss })
+        : null}
     </div>
   );
 };

@@ -3,7 +3,10 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
-import { Alert } from "@react-ck/alert/src";
+import { Alert, type AlertProps } from "@react-ck/alert/src";
+import { generateAllVariations } from "./utils/generate-all-variations";
+import { sentenceCase } from "change-case";
+import { Text } from "@react-ck/text";
 
 type Story = StoryObj<typeof Alert>;
 
@@ -49,5 +52,28 @@ export const compact: Story = {
   args: {
     ...Dismissable.args,
     variation: "compact",
+    size: "s",
   },
+};
+
+export const AllAlertVariations: Story = {
+  decorators: [
+    (): React.ReactElement =>
+      generateAllVariations<AlertProps>(Alert, {
+        skin: ["neutral", "primary", "negative", "average", "positive", "info"],
+        variation: ["default", "compact"],
+        size: ["l", "m", "s"],
+        children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
+        heading: [sentenceCase(faker.lorem.words({ min: 1, max: 2 })), undefined],
+        onDismiss: [undefined, (): void => undefined],
+        renderDismissAcion: [
+          undefined,
+          ({ onDismiss }): React.ReactNode => (
+            <Text as="button" skin="highlight-primary" onClick={onDismiss}>
+              Close
+            </Text>
+          ),
+        ],
+      }),
+  ],
 };

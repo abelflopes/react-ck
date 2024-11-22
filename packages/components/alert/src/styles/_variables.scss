@@ -2,7 +2,7 @@
 
 $alert-styles: (
   neutral: (
-    background-color: theme.get-color(neutral-light-1-5-solid),
+    background-color: theme.get-color(neutral-light-1-25-solid),
     color: theme.get-color(neutral-dark-4),
   ),
   primary: (
@@ -24,5 +24,20 @@ $alert-styles: (
   info: (
     background-color: theme.get-color(status-info-light),
     color: theme.get-color(status-info-dark),
+  ),
+);
+
+$alert-sizes: (
+  l: (
+    padding-y: theme.get-spacing(3),
+    padding-x: theme.get-spacing(2),
+  ),
+  m: (
+    padding-y: theme.get-spacing(2),
+    padding-x: theme.get-spacing(1),
+  ),
+  s: (
+    padding-y: theme.get-spacing(1),
+    padding-x: theme.get-spacing(0.5),
   ),
 );
