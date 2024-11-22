@@ -89,8 +89,8 @@ export const Button = <T extends HTMLTag>({
           className,
         ),
       }}>
-      {icon && !isIconOnly ? <span className={styles.icon}>{icon}</span> : null}
       {children}
+      {icon && !isIconOnly ? <span className={styles.icon}>{icon}</span> : null}
       {isIconOnly ? icon : null}
     </PolymorphicComponent>
   );
