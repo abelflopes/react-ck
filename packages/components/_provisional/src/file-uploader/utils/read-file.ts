@@ -24,23 +24,31 @@ export const readFile = async (
       reject(new Error(error ? `${error.name} - ${error.message}` : "Unknown Error"));
     }
 
-    reader.addEventListener("loadstart", trackProgress);
-    reader.addEventListener("progress", trackProgress);
+    const abortController = new AbortController();
 
-    reader.addEventListener("abort", handleError);
-    reader.addEventListener("error", handleError);
+    reader.addEventListener("loadstart", trackProgress, { signal: abortController.signal });
+    reader.addEventListener("progress", trackProgress, { signal: abortController.signal });
 
-    reader.addEventListener("load", (e) => {
-      if (!e.target) throw new Error("Missing file reader target");
+    reader.addEventListener("abort", handleError, { signal: abortController.signal });
+    reader.addEventListener("error", handleError, { signal: abortController.signal });
 
-      resolve({
-        name: file.name,
-        lastModified: file.lastModified,
-        size: file.size,
-        type: file.type,
-        content: e.target.result,
-      });
-    });
+    reader.addEventListener(
+      "load",
+      (e) => {
+        if (!e.target) throw new Error("Missing file reader target");
+
+        abortController.abort();
+
+        resolve({
+          name: file.name,
+          lastModified: file.lastModified,
+          size: file.size,
+          type: file.type,
+          content: e.target.result,
+        });
+      },
+      { signal: abortController.signal },
+    );
 
     reader.readAsDataURL(file);
   });
