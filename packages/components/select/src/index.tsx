@@ -9,6 +9,7 @@ import { EmptyState } from "@react-ck/empty-state";
 import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
+import { useFormFieldContext } from "@react-ck/form-field";
 
 /**
  * Select is a type of input that allows users to choose one or more options from a list of choices.
@@ -44,6 +45,12 @@ const Select = ({
   const [internalValue, setInternalValue] = useState(userValue ?? defaultValue);
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const formFieldContext = useFormFieldContext();
+
+  const computedSkin = useMemo(
+    () => formFieldContext?.skin ?? skin ?? "default",
+    [formFieldContext?.skin, skin],
+  );
 
   /** Children mapped to ChildrenData object to facilitate operations */
   const childrenData = useMemo(() => getChildrenData(children), [children]);
@@ -178,7 +185,12 @@ const Select = ({
         ref={rootElRef}
         role="button"
         tabIndex={0}
-        className={classNames(styles.root, styles[`skin_${skin}`], className)}
+        className={classNames(
+          styles.root,
+          styles[`skin_${computedSkin}`],
+          formFieldContext === undefined && styles.standalone,
+          className,
+        )}
         onFocus={(e) => {
           handleFocus();
           onFocus?.(e);

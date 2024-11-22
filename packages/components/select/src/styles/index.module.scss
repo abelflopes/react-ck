@@ -5,10 +5,24 @@
   @include form-field.form-field-input;
   @include form-field.wrapper;
   @include form-field.skins;
+}
+
+.root {
+  @include form-field.form-field-input;
 
   min-width: 200px; // TODO: make properly
   cursor: pointer;
   position: relative;
+}
+
+// When not inside form field, has own border, etc
+.standalone {
+  @include form-field.standalone-input;
+  @include form-field.focus-base;
+
+  &:focus {
+    @include form-field.focus-active;
+  }
 }
 
 .menu {
