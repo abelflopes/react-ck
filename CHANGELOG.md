@@ -1,3 +1,35 @@
+## [3.44.0](https://github.com/abelflopes/react-ck/compare/v3.43.0...v3.44.0) (2024-11-22)
+
+
+### Features
+
+* **alert:** update skins ([97ae604](https://github.com/abelflopes/react-ck/commit/97ae6041775022a6abdd88952dba57948e7f3dfb))
+* **button:** update button colors ([99cb9bb](https://github.com/abelflopes/react-ck/commit/99cb9bb98d0e2f5809c73ece6dc90f5d579ef608))
+* **form-field:** add muted skin ([b00c2f9](https://github.com/abelflopes/react-ck/commit/b00c2f93759e1a4775f99dae618bfe5e782ee1c1))
+* **react-ck:** global library package ([78bee06](https://github.com/abelflopes/react-ck/commit/78bee06fe44f81f36e086d56df2505690ade0e23))
+* **react-ck:** global library package ([c5f3e38](https://github.com/abelflopes/react-ck/commit/c5f3e388bc2163277e6101bfef63e10635f8ee52))
+* **text:** support button tag as text element ([3aa0bab](https://github.com/abelflopes/react-ck/commit/3aa0bab273776000b03cda70539d26a2bd4ee76c))
+
+
+### Bug Fixes
+
+* **attachment:** fix close button color ([8b1a807](https://github.com/abelflopes/react-ck/commit/8b1a807d8c62df15544c369630657b5f255953f1))
+* **button:** xs size having wrong padding ([20f1d75](https://github.com/abelflopes/react-ck/commit/20f1d75fd7eb190893926fd3b552b08e8587300c))
+* **file uploader:** clean file uploader listeners ([633e56c](https://github.com/abelflopes/react-ck/commit/633e56cc901be8e2ee77c19a34da5514f7fcf59a))
+* **file-uploader:** disable state exposing native input ([e016030](https://github.com/abelflopes/react-ck/commit/e01603053ecd60c3932a78d5cebbd975fc4ef06f))
+* **modal:** allow disabling blur ([7debae9](https://github.com/abelflopes/react-ck/commit/7debae9cf1b191c1e9d2e472ed204cc62330048a))
+
+
+### Performance
+
+* **overlay:** reduce blur to improve performance on weaker devices ([63cfefa](https://github.com/abelflopes/react-ck/commit/63cfefa910c2031a3fa9e675bb993b71edbdd4ec))
+* **responsive:** reduce number of window breakpoint listeners ([c5ce48a](https://github.com/abelflopes/react-ck/commit/c5ce48a5ae4cb59c7d0698cf4009b532dae94420))
+
+
+### Code Refactoring
+
+* adapt components to button prop changes ([517ba72](https://github.com/abelflopes/react-ck/commit/517ba725a8f66e172660ab44afcdf9830523d076))
+
 ## [3.43.0](https://github.com/abelflopes/react-ck/compare/v3.42.0...v3.43.0) (2024-11-20)
 
 
