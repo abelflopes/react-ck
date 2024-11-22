@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.9.0...@react-ck/button@1.9.1) (2024-11-22)
+
+
+### Bug Fixes
+
+* **button:** place icon at right of text ([a22b7cc](https://github.com/abelflopes/react-ck/commit/a22b7cc5170d2ce4a90d475147976a343eea875d))
+
+
+
 ## [1.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.8.16...@react-ck/button@1.9.0) (2024-11-22)
 
 

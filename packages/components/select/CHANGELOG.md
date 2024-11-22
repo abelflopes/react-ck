@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.5](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.6.4...@react-ck/select@1.6.5) (2024-11-22)
+
+
+### Bug Fixes
+
+* **select:** add missing dependency ([84e17a0](https://github.com/abelflopes/react-ck/commit/84e17a05eb9ebebea0b95714d727c5036c185ea0))
+* **select:** select skin inside form field ([a8b2608](https://github.com/abelflopes/react-ck/commit/a8b2608b9909b019b9c6cb433312f82bdc0b3395))
+
+
+
 ## [1.6.4](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.6.3...@react-ck/select@1.6.4) (2024-11-22)
 
 **Note:** Version bump only for package @react-ck/select
