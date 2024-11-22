@@ -1,3 +1,16 @@
+## [3.46.0](https://github.com/abelflopes/react-ck/compare/v3.45.0...v3.46.0) (2024-11-22)
+
+
+### Features
+
+* **react-ck:** global library package ([8a2d49a](https://github.com/abelflopes/react-ck/commit/8a2d49ab866920e54489eb368129fa8d5f1be9c8))
+* **react-ck:** global library package ([19add76](https://github.com/abelflopes/react-ck/commit/19add764e4dc09d00515baf65dc8fbf7e38f0946))
+
+
+### Bug Fixes
+
+* **button:** margin overlapping content ([4a753e2](https://github.com/abelflopes/react-ck/commit/4a753e291e2a89b76f039ef486189220fd06a9e5))
+
 ## [3.45.0](https://github.com/abelflopes/react-ck/compare/v3.44.0...v3.45.0) (2024-11-22)
 
 
