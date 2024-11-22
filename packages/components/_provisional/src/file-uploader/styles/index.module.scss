@@ -65,7 +65,7 @@ $padding: theme.get-spacing(4);
 }
 
 .disabled .file {
-  @include theme.disabled;
+  cursor: not-allowed;
 }
 
 .button {
