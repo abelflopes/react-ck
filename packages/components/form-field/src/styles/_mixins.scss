@@ -4,6 +4,7 @@
 @use "variables";
 
 @mixin wrapper {
+  background: scss-utils.get-css-var(form-field, background-color);
   border: solid #{scss-utils.get-css-var(form-field, border-color)} variables.$form-field-border-width;
   border-radius: theme.get-spacing(1);
 }
@@ -27,12 +28,6 @@
   outline-offset: theme.get-spacing(0.2);
 }
 
-@mixin form-field-container {
-  @include wrapper;
-
-  background: theme.get-color(neutral-light-1);
-}
-
 @mixin skins {
   @each $key, $props in variables.$form-field-styles {
     &.skin_#{$key} {
@@ -49,7 +44,7 @@
 
 // input not inside form field
 @mixin standalone-input {
-  @include form-field-container;
+  @include wrapper;
   @include skins;
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface FormFieldContextProps {
-  skin: "default" | "negative" | "average" | "positive" | "ghost";
+  skin: "default" | "negative" | "average" | "positive" | "ghost" | "muted";
   id: string;
 }
 

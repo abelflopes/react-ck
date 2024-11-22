@@ -42,7 +42,7 @@
 }
 
 .variation_default .input_wrapper {
-  @include shared.form-field-container;
+  @include shared.wrapper;
   @include shared.focus-base;
 
   &:focus-within {

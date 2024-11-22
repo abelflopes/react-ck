@@ -31,7 +31,7 @@ export const generateAllVariations = <T extends object>(
 
       <Grid align={options?.align ?? "end"}>
         {generateDescribedCombinations<T>(data).map(({ combination, description }) => (
-          <Grid.Column key={description} size={options?.colSize ?? 3}>
+          <Grid.Column key={description} size={options?.colSize ?? 3} title={description}>
             {render(combination)}
 
             {showInfo ? (

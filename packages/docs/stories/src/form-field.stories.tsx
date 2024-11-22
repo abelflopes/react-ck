@@ -65,7 +65,7 @@ export const AllVariations: Story = {
       <>
         {generateAllVariations(FormField, {
           label: [capitalCase(faker.lorem.word()), undefined],
-          skin: ["default", "negative", "average", "positive"],
+          skin: ["default", "negative", "average", "positive", "muted"],
           description: [undefined, faker.lorem.sentence()],
           validationMessage: [undefined, faker.lorem.sentence()],
           children: [<Input placeholder="Input" />],
@@ -73,7 +73,7 @@ export const AllVariations: Story = {
 
         {generateAllVariations(FormField, {
           label: [capitalCase(faker.lorem.word()), undefined],
-          skin: ["default", "negative", "average", "positive"],
+          skin: ["default", "negative", "average", "positive", "muted"],
           description: [undefined, faker.lorem.sentence()],
           validationMessage: [undefined, faker.lorem.sentence()],
           variation: ["inline", "inline-reverse"],

@@ -4,7 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import { Input } from "@react-ck/input/src";
+import { Input, type InputProps } from "@react-ck/input/src";
 import { FormField } from "@react-ck/form-field";
 import { generateAllVariations } from "./utils/generate-all-variations";
 
@@ -65,8 +65,8 @@ export const WithFormField: Story = {
 export const AllInputVariations: Story = {
   decorators: [
     (): React.ReactElement =>
-      generateAllVariations(Input, {
-        skin: ["default", "negative", "average", "positive", "ghost"],
+      generateAllVariations<InputProps>((props) => <Input {...props} />, {
+        skin: ["default", "negative", "average", "positive", "muted", "ghost"],
         type: [
           "text",
           "date",
