@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.2](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.9.1...@react-ck/button@1.9.2) (2024-11-22)
+
+
+### Bug Fixes
+
+* **button:** margin overlapping content ([4a753e2](https://github.com/abelflopes/react-ck/commit/4a753e291e2a89b76f039ef486189220fd06a9e5))
+
+
+
 ## [1.9.1](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.9.0...@react-ck/button@1.9.1) (2024-11-22)
 
 
