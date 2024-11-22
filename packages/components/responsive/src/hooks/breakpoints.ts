@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { type ResponsiveTarget, type EnabledBreakpointsMapping, type Breakpoint } from "../types";
-import { breakpointKeys, breakpoints } from "../constants";
+import { breakpoints } from "../constants";
 import { eachBreakpoint } from "../utils";
+import { breakpointEvents } from "../utils/breakpoint-events";
 
 const baseBreakpointsData: EnabledBreakpointsMapping = {
   xs: false,
@@ -80,35 +81,15 @@ export const useBreakpoints = (
   useEffect(() => {
     if (!computedActive || computedTarget !== "viewport") return;
 
-    const removeListeners = breakpointKeys.map((bpKey) => {
-      const data = window.matchMedia(`(min-width: ${breakpoints[bpKey]}px)`);
-
+    const unsubscribe = breakpointEvents.subscribe(({ breakpoint, matches }) => {
       setBreakpointsData((v) => ({
         ...baseBreakpointsData,
         ...v,
-        [bpKey]: data.matches,
+        [breakpoint]: matches,
       }));
-
-      const listener = (e: MediaQueryListEventMap["change"]): void => {
-        setBreakpointsData((v) => ({
-          ...baseBreakpointsData,
-          ...v,
-          [bpKey]: e.matches,
-        }));
-      };
-
-      data.addEventListener("change", listener);
-
-      return (): void => {
-        data.removeEventListener("change", listener);
-      };
     });
 
-    return () => {
-      removeListeners.forEach((removeListener) => {
-        removeListener();
-      });
-    };
+    return unsubscribe;
   }, [computedActive, computedTarget]);
 
   return useMemo(
