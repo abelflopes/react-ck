@@ -15,7 +15,9 @@ export interface ButtonProps<T extends HTMLTag = "button">
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     ConsumerPolymorphicProps<T> {
   /** Defines the color scheme of the button */
-  skin?: "primary" | "primary-alt" | "secondary" | "ghost" | "negative" | "bordered";
+  skin?: "primary" | "secondary" | "negative";
+  /** Defines how the skin is applied */
+  skinVariation?: "default" | "muted" | "bordered" | "ghost";
   /** Defines the scale of the button */
   size?: "s" | "m" | "l" | "xs";
   /**
@@ -40,6 +42,7 @@ export interface ButtonProps<T extends HTMLTag = "button">
 export const Button = <T extends HTMLTag>({
   as,
   skin = "primary",
+  skinVariation = "default",
   size = "m",
   icon,
   children,
@@ -76,7 +79,8 @@ export const Button = <T extends HTMLTag>({
       commonProps={{
         className: classNames(
           styles.root,
-          styles[skin],
+          styles[`skin_${skin}`],
+          styles[`skin_variation_${skinVariation}`],
           styles[`size-${size}`],
           {
             [`${styles["icon-only"]}`]: isIconOnly,

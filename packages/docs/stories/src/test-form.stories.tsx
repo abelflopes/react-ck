@@ -144,7 +144,7 @@ export const demo: Story = {
         </Grid.Column>
         <Grid.Column size={12} />
         <Grid.Column>
-          <Button as="a" skin="ghost">
+          <Button as="a" skin="secondary" skinVariation="ghost">
             Contact support
           </Button>
         </Grid.Column>

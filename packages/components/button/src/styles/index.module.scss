@@ -1,23 +1,28 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
 @use "@react-ck/scss-utils";
+@use "variables";
 
 .root {
   @include text.text-base;
   @include scss-utils.define-css-var(button, border-radius, theme.get-spacing(1));
-  @include scss-utils.define-css-var(button, color, theme.get-color(neutral-dark-4));
+  @include scss-utils.define-css-var(button, text-color, theme.get-color(neutral-dark-4));
+  @include scss-utils.define-css-var(button, background-color, transparent);
+  @include scss-utils.define-css-var(button, border-color, transparent);
 
   display: inline-flex;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  padding: scss-utils.get-css-var(button, padding-y) scss-utils.get-css-var(button, padding-x);
-  border: none;
-  border-radius: scss-utils.get-css-var(button, border-radius);
   background-color: scss-utils.get-css-var(button, background-color);
-  color: scss-utils.get-css-var(button, color);
+  color: scss-utils.get-css-var(button, text-color);
+  padding: scss-utils.get-css-var(button, padding-y) scss-utils.get-css-var(button, padding-x);
+  border-style: solid;
+  border-width: 1px;
+  border-color: scss-utils.get-css-var(button, border-color);
+  border-radius: scss-utils.get-css-var(button, border-radius);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 
   &:disabled {
     @include theme.disabled;
@@ -34,45 +39,47 @@
   width: 100%;
 }
 
-.size-l {
-  @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(2));
-  @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(3));
+// Elements
 
-  &.icon-only {
-    @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(1.5));
-    @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(1.5));
-  }
+.icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: theme.get-spacing(1);
+  margin-left: theme.get-spacing(-1);
 }
 
-.size-m {
-  @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(0.75));
-  @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(2));
+// Sizes
 
-  &.icon-only {
-    @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(1));
-    @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(1));
-  }
-}
+@each $key, $props in variables.$button-sizes {
+  .size-#{$key} {
+    @include scss-utils.define-css-var(
+      button,
+      padding-x,
+      scss-utils.map-get-strict($props, padding-x)
+    );
+    @include scss-utils.define-css-var(
+      button,
+      padding-y,
+      scss-utils.map-get-strict($props, padding-y)
+    );
 
-.size-s {
-  @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(0.25));
-  @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(1.25));
-
-  &.icon-only {
-    @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(0.66));
-    @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(0.66));
-    @include text.text-variation(extra-small);
+    &.icon-only {
+      @include scss-utils.define-css-var(
+        button,
+        padding-x,
+        scss-utils.map-get-strict($props, padding-icon)
+      );
+      @include scss-utils.define-css-var(
+        button,
+        padding-y,
+        scss-utils.map-get-strict($props, padding-icon)
+      );
+    }
   }
 }
 
 .size-xs {
-  @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(0.15));
-  @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(1));
-
   &.icon-only {
-    @include scss-utils.define-css-var(button, padding-y, theme.get-spacing(0.5));
-    @include scss-utils.define-css-var(button, padding-x, theme.get-spacing(0.5));
-
     // icon size
     > * {
       width: theme.get-spacing(1.2);
@@ -81,81 +88,48 @@
   }
 }
 
-.primary {
-  @include scss-utils.define-css-var(button, background-color, theme.get-color(highlight-primary));
-  @include scss-utils.define-css-var(button, color, theme.get-color(neutral-light-1));
+// Skins
 
-  &:hover {
-    @include scss-utils.define-css-var(
-      button,
-      background-color,
-      theme.get-color(highlight-primary-dark)
-    );
+@each $skin, $skin_variations in variables.$button-skins {
+  .skin_#{$skin} {
+    @each $skin_v, $props in $skin_variations {
+      &.skin_variation_#{$skin_v} {
+        // Default state colors
+        $bg: scss-utils.map-get-strict($props, background);
+        $bc: scss-utils.map-get-strict($props, border);
+        $tc: scss-utils.map-get-strict($props, text);
+
+        // Hover colors
+        $bgh: scss-utils.map-get-strict($props, background-hover);
+        $bch: scss-utils.map-get-strict($props, border-hover);
+        $tch: scss-utils.map-get-strict($props, text-hover);
+
+        @if $bg {
+          @include scss-utils.define-css-var(button, background-color, $bg);
+        }
+
+        @if $bc {
+          @include scss-utils.define-css-var(button, border-color, $bc);
+        }
+
+        @if ($tc) {
+          @include scss-utils.define-css-var(button, text-color, $tc);
+        }
+
+        &:hover {
+          @if $bgh {
+            @include scss-utils.define-css-var(button, background-color, $bgh);
+          }
+
+          @if $bch {
+            @include scss-utils.define-css-var(button, border-color, $bch);
+          }
+
+          @if $tch {
+            @include scss-utils.define-css-var(button, text-color, $tch);
+          }
+        }
+      }
+    }
   }
-}
-
-.primary-alt {
-  @include scss-utils.define-css-var(
-    button,
-    background-color,
-    theme.get-color(highlight-primary-light)
-  );
-  @include scss-utils.define-css-var(button, color, theme.get-color(highlight-primary));
-
-  &:hover {
-    @include scss-utils.define-css-var(
-      button,
-      background-color,
-      theme.get-color(highlight-primary)
-    );
-    @include scss-utils.define-css-var(button, color, theme.get-color(neutral-light-1));
-  }
-}
-
-.secondary {
-  @include scss-utils.define-css-var(
-    button,
-    background-color,
-    theme.get-color(neutral-light-1-5-solid)
-  );
-
-  &:hover {
-    @include scss-utils.define-css-var(
-      button,
-      background-color,
-      theme.get-color(neutral-light-2-solid)
-    );
-  }
-}
-
-.ghost {
-  @include scss-utils.define-css-var(button, background-color, transparent);
-
-  &:hover {
-    @include scss-utils.define-css-var(button, background-color, theme.get-color(neutral-light-2));
-  }
-}
-
-.negative {
-  @include scss-utils.define-css-var(button, background-color, theme.get-color(status-negative));
-  @include scss-utils.define-css-var(button, color, theme.get-color(neutral-light-1));
-
-  &:hover {
-    @include scss-utils.define-css-var(
-      button,
-      background-color,
-      theme.get-color(status-negative-dark)
-    );
-  }
-}
-
-.bordered {
-  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(neutral-light-2);
-}
-
-.icon {
-  display: inline-flex;
-  align-items: center;
-  margin-right: theme.get-spacing(1);
-  margin-left: theme.get-spacing(-1);
 }

@@ -26,9 +26,8 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    skin: "primary",
     children: sentenceCase(faker.lorem.words({ min: 1, max: 3 })),
   },
 };
@@ -43,7 +42,7 @@ export const Secondary: Story = {
 export const IconButton: Story = {
   args: {
     size: "s",
-    skin: "ghost",
+    skinVariation: "ghost",
     icon: (
       <Icon>
         <IconClose />
@@ -62,7 +61,7 @@ export const Link: Story = {
 
 export const Disabled: Story = {
   args: {
-    ...Primary.args,
+    ...Default.args,
     disabled: true,
   },
 };
@@ -71,7 +70,8 @@ export const AllButtonVariations: Story = {
   decorators: [
     (): React.ReactElement =>
       generateAllVariations<ButtonProps>(Button, {
-        skin: ["primary", "primary-alt", "secondary", "bordered", "ghost", "negative"],
+        skin: ["primary", "secondary", "negative"],
+        skinVariation: ["default", "bordered", "muted", "ghost"],
         size: ["l", "m", "s", "xs"],
         children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
       }),
