@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.8.16...@react-ck/button@1.9.0) (2024-11-22)
+
+
+### Features
+
+* **button:** update button colors ([99cb9bb](https://github.com/abelflopes/react-ck/commit/99cb9bb98d0e2f5809c73ece6dc90f5d579ef608))
+
+
+### Bug Fixes
+
+* **button:** xs size having wrong padding ([20f1d75](https://github.com/abelflopes/react-ck/commit/20f1d75fd7eb190893926fd3b552b08e8587300c))
+
+
+
 ## [1.8.16](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.8.15...@react-ck/button@1.8.16) (2024-11-06)
 
 **Note:** Version bump only for package @react-ck/button

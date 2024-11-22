@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.6.1...@react-ck/text@1.7.0) (2024-11-22)
+
+
+### Features
+
+* **text:** support button tag as text element ([3aa0bab](https://github.com/abelflopes/react-ck/commit/3aa0bab273776000b03cda70539d26a2bd4ee76c))
+
+
+
 ## [1.6.1](https://github.com/abelflopes/react-ck/compare/@react-ck/text@1.6.0...@react-ck/text@1.6.1) (2024-11-06)
 
 **Note:** Version bump only for package @react-ck/text

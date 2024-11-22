@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.22](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.21...@react-ck/modal@3.2.22) (2024-11-22)
+
+
+### Bug Fixes
+
+* **modal:** allow disabling blur ([7debae9](https://github.com/abelflopes/react-ck/commit/7debae9cf1b191c1e9d2e472ed204cc62330048a))
+
+
+
 ## [3.2.21](https://github.com/abelflopes/react-ck/compare/@react-ck/modal@3.2.20...@react-ck/modal@3.2.21) (2024-11-20)
 
 

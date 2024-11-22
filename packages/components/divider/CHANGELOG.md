@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.30](https://github.com/abelflopes/react-ck/compare/@react-ck/divider@1.2.29...@react-ck/divider@1.2.30) (2024-11-22)
+
+**Note:** Version bump only for package @react-ck/divider
+
+
+
+
+
 ## [1.2.29](https://github.com/abelflopes/react-ck/compare/@react-ck/divider@1.2.28...@react-ck/divider@1.2.29) (2024-11-06)
 
 **Note:** Version bump only for package @react-ck/divider

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.5](https://github.com/abelflopes/react-ck/compare/@react-ck/responsive@1.3.4...@react-ck/responsive@1.3.5) (2024-11-22)
+
+
+### Performance Improvements
+
+* **responsive:** reduce number of window breakpoint listeners ([c5ce48a](https://github.com/abelflopes/react-ck/commit/c5ce48a5ae4cb59c7d0698cf4009b532dae94420))
+
+
+
 ## [1.3.4](https://github.com/abelflopes/react-ck/compare/@react-ck/responsive@1.3.3...@react-ck/responsive@1.3.4) (2024-10-09)
 
 

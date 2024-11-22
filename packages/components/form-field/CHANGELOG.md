@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.4.3...@react-ck/form-field@1.5.0) (2024-11-22)
+
+
+### Features
+
+* **form-field:** add muted skin ([b00c2f9](https://github.com/abelflopes/react-ck/commit/b00c2f93759e1a4775f99dae618bfe5e782ee1c1))
+
+
+
 ## [1.4.3](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.4.2...@react-ck/form-field@1.4.3) (2024-11-06)
 
 **Note:** Version bump only for package @react-ck/form-field

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.11.0...@react-ck/theme@1.12.0) (2024-11-22)
+
+
+### Features
+
+* **alert:** update skins ([97ae604](https://github.com/abelflopes/react-ck/commit/97ae6041775022a6abdd88952dba57948e7f3dfb))
+
+
+
 ## [1.11.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.10.2...@react-ck/theme@1.11.0) (2024-11-06)
 
 

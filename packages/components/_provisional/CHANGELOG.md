@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.2](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.11.1...@react-ck/provisional@3.11.2) (2024-11-22)
+
+
+### Bug Fixes
+
+* **attachment:** fix close button color ([8b1a807](https://github.com/abelflopes/react-ck/commit/8b1a807d8c62df15544c369630657b5f255953f1))
+* **file uploader:** clean file uploader listeners ([633e56c](https://github.com/abelflopes/react-ck/commit/633e56cc901be8e2ee77c19a34da5514f7fcf59a))
+* **file-uploader:** disable state exposing native input ([e016030](https://github.com/abelflopes/react-ck/commit/e01603053ecd60c3932a78d5cebbd975fc4ef06f))
+
+
+
 ## [3.11.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.11.0...@react-ck/provisional@3.11.1) (2024-11-20)
 
 **Note:** Version bump only for package @react-ck/provisional

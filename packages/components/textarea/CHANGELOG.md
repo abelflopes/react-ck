@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/textarea@1.2.38...@react-ck/textarea@1.3.0) (2024-11-22)
+
+
+### Features
+
+* **form-field:** add muted skin ([b00c2f9](https://github.com/abelflopes/react-ck/commit/b00c2f93759e1a4775f99dae618bfe5e782ee1c1))
+
+
+
 ## [1.2.38](https://github.com/abelflopes/react-ck/compare/@react-ck/textarea@1.2.37...@react-ck/textarea@1.2.38) (2024-11-06)
 
 **Note:** Version bump only for package @react-ck/textarea

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.1.13...@react-ck/alert@3.2.0) (2024-11-22)
+
+
+### Features
+
+* **alert:** update skins ([97ae604](https://github.com/abelflopes/react-ck/commit/97ae6041775022a6abdd88952dba57948e7f3dfb))
+
+
+
 ## [3.1.13](https://github.com/abelflopes/react-ck/compare/@react-ck/alert@3.1.12...@react-ck/alert@3.1.13) (2024-11-06)
 
 **Note:** Version bump only for package @react-ck/alert

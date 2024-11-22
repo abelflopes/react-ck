@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.24](https://github.com/abelflopes/react-ck/compare/@react-ck/data-table@3.1.23...@react-ck/data-table@3.1.24) (2024-11-22)
+
+**Note:** Version bump only for package @react-ck/data-table
+
+
+
+
+
 ## [3.1.23](https://github.com/abelflopes/react-ck/compare/@react-ck/data-table@3.1.22...@react-ck/data-table@3.1.23) (2024-11-20)
 
 **Note:** Version bump only for package @react-ck/data-table

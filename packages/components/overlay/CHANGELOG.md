@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.19](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.2.18...@react-ck/overlay@1.2.19) (2024-11-22)
+
+
+### Performance Improvements
+
+* **overlay:** reduce blur to improve performance on weaker devices ([63cfefa](https://github.com/abelflopes/react-ck/commit/63cfefa910c2031a3fa9e675bb993b71edbdd4ec))
+
+
+
 ## [1.2.18](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.2.17...@react-ck/overlay@1.2.18) (2024-11-06)
 
 **Note:** Version bump only for package @react-ck/overlay
