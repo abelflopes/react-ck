@@ -17,7 +17,7 @@ import { ModalFooter } from "./ModalFooter";
  * Extends React.HTMLAttributes<HTMLDivElement> to inherit HTMLDivElement attributes.
  */
 
-interface ModalProps extends Omit<OverlayProps, "blur" | "skin"> {
+interface ModalProps extends Omit<OverlayProps, "skin"> {
   /** Modal width */
   size?: "s" | "m" | "l" | "xl" | "full";
   /** Dismiss Callback, also determines if the modal can be dismissed by clicking outside or close button  */
