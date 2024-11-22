@@ -1,3 +1,18 @@
+## [3.45.0](https://github.com/abelflopes/react-ck/compare/v3.44.0...v3.45.0) (2024-11-22)
+
+
+### Features
+
+* **react-ck:** global library package ([6c3b5e7](https://github.com/abelflopes/react-ck/commit/6c3b5e7c49d8f91e3fc64cb25d242ba4479cc18a))
+* **react-ck:** global library package ([4217977](https://github.com/abelflopes/react-ck/commit/42179778d392a1fc58c9e8034aae042c379c3487))
+
+
+### Bug Fixes
+
+* **button:** place icon at right of text ([a22b7cc](https://github.com/abelflopes/react-ck/commit/a22b7cc5170d2ce4a90d475147976a343eea875d))
+* **select:** add missing dependency ([84e17a0](https://github.com/abelflopes/react-ck/commit/84e17a05eb9ebebea0b95714d727c5036c185ea0))
+* **select:** select skin inside form field ([a8b2608](https://github.com/abelflopes/react-ck/commit/a8b2608b9909b019b9c6cb433312f82bdc0b3395))
+
 ## [3.44.0](https://github.com/abelflopes/react-ck/compare/v3.43.0...v3.44.0) (2024-11-22)
 
 
