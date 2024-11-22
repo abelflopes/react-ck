@@ -33,6 +33,7 @@
     "react": "^18.3.1"
   },
   "dependencies": {
+    "@react-ck/form-field": "^1.5.0",
     "@react-ck/empty-state": "^1.2.11",
     "@react-ck/input": "^1.4.23",
     "@react-ck/provisional": "^3.11.2",
