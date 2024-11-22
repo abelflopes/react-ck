@@ -57,6 +57,7 @@ export const Attachment = ({
         className={styles.close}
         size="xs"
         skin="secondary"
+        skinVariation="ghost"
         icon={
           <Icon size="m">
             <IconClose />
