@@ -1,3 +1,12 @@
+## [3.47.0](https://github.com/abelflopes/react-ck/compare/v3.46.0...v3.47.0) (2024-11-26)
+
+
+### Features
+
+* **form field:** support inline content ([8c13d07](https://github.com/abelflopes/react-ck/commit/8c13d07839b545bbb1763d9eba9fe1d0176c71ef))
+* **react-ck:** global library package ([352b0d7](https://github.com/abelflopes/react-ck/commit/352b0d73fa17d703fe7872bcfa37f9d8de976e5e))
+* **react-ck:** global library package ([72cb11c](https://github.com/abelflopes/react-ck/commit/72cb11cf2deafcc39a449b2361cbbfae0e512ba9))
+
 ## [3.46.0](https://github.com/abelflopes/react-ck/compare/v3.45.0...v3.46.0) (2024-11-22)
 
 
