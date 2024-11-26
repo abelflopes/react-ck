@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.6.0...@react-ck/form-field@1.6.1) (2024-11-26)
+
+
+### Bug Fixes
+
+* **form field:** label size & input alignment ([e405d20](https://github.com/abelflopes/react-ck/commit/e405d2091425e1ffa42e430878c3544a0490314e))
+
+
+
 ## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.5.0...@react-ck/form-field@1.6.0) (2024-11-26)
 
 
