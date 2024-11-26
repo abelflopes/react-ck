@@ -60,7 +60,7 @@ export const FormField = ({
           {label ? (
             <Text
               className={styles.label}
-              variation={variation === "default" ? "small" : "p"}
+              variation={variation === "inline" || variation === "inline-reverse" ? "p" : "small"}
               margin="none"
               as={<label htmlFor={id}>{label}</label>}
             />

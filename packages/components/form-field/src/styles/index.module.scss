@@ -11,8 +11,6 @@
   flex-direction: column;
 }
 
-// Skin
-
 @each $key, $props in variables.$form-field-styles {
   .skin_#{$key} {
     @each $propKey, $propValue in $props {
@@ -34,24 +32,11 @@
   }
 }
 
-// Content
+// Main Content
 
 .main_content {
   display: flex;
   flex-direction: column;
-}
-
-.variation_inline-content,
-.variation_inline-content-reverse,
-.variation_default {
-  .input_wrapper {
-    @include shared.wrapper;
-    @include shared.focus-base;
-
-    &:focus-within {
-      @include shared.focus-active;
-    }
-  }
 }
 
 .variation_inline,
@@ -70,6 +55,21 @@
   }
 }
 
+// Input Wrapper
+
+.variation_inline-content,
+.variation_inline-content-reverse,
+.variation_default {
+  .input_wrapper {
+    @include shared.wrapper;
+    @include shared.focus-base;
+
+    &:focus-within {
+      @include shared.focus-active;
+    }
+  }
+}
+
 .variation_inline,
 .variation_inline-reverse {
   .input_wrapper {
@@ -80,16 +80,22 @@
   }
 }
 
-.variation_inline-content {
+.variation_inline-content,
+.variation_inline-content-reverse {
   .input_wrapper {
     display: flex;
+    align-items: center;
+  }
+}
+
+.variation_inline-content {
+  .input_wrapper {
     flex-direction: row;
   }
 }
 
 .variation_inline-content-reverse {
   .input_wrapper {
-    display: flex;
     flex-direction: row-reverse;
   }
 }
