@@ -1,3 +1,16 @@
+## [3.48.0](https://github.com/abelflopes/react-ck/compare/v3.47.0...v3.48.0) (2024-11-26)
+
+
+### Features
+
+* **react-ck:** global library package ([878ad70](https://github.com/abelflopes/react-ck/commit/878ad70ebff583f1717b283b60d2398f6bbc75be))
+* **react-ck:** global library package ([973cb0f](https://github.com/abelflopes/react-ck/commit/973cb0ffb7ddbdb4e77590e3efdb90f32c1c13e3))
+
+
+### Bug Fixes
+
+* **form field:** label size & input alignment ([e405d20](https://github.com/abelflopes/react-ck/commit/e405d2091425e1ffa42e430878c3544a0490314e))
+
 ## [3.47.0](https://github.com/abelflopes/react-ck/compare/v3.46.0...v3.47.0) (2024-11-26)
 
 
