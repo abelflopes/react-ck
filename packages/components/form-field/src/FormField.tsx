@@ -9,7 +9,7 @@ export interface FormFieldProps
   /** Specifies the visual style of the form-field  */
   skin?: Exclude<FormFieldContextProps["skin"], "ghost">;
   /** Defines the structure of the form-field  */
-  variation?: "default" | "inline" | "inline-reverse";
+  variation?: "default" | "inline" | "inline-reverse" | "inline-content" | "inline-content-reverse";
   /** The main label for the form field */
   label?: React.ReactNode;
   /** The description text for the form field */

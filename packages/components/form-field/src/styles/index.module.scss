@@ -41,12 +41,16 @@
   flex-direction: column;
 }
 
-.variation_default .input_wrapper {
-  @include shared.wrapper;
-  @include shared.focus-base;
+.variation_inline-content,
+.variation_inline-content-reverse,
+.variation_default {
+  .input_wrapper {
+    @include shared.wrapper;
+    @include shared.focus-base;
 
-  &:focus-within {
-    @include shared.focus-active;
+    &:focus-within {
+      @include shared.focus-active;
+    }
   }
 }
 
@@ -73,6 +77,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.variation_inline-content {
+  .input_wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.variation_inline-content-reverse {
+  .input_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 

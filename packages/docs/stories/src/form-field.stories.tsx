@@ -8,6 +8,7 @@ import { FormField } from "@react-ck/form-field/src";
 import { Input } from "@react-ck/input/src";
 import { generateAllVariations } from "./utils/generate-all-variations";
 import { Checkbox } from "@react-ck/provisional/src";
+import { Select } from "@react-ck/select/src";
 
 type Story = StoryObj<typeof FormField>;
 
@@ -26,7 +27,27 @@ const meta: Meta<typeof FormField> = {
 
 export default meta;
 
-export const Normal: Story = {
+export const Demo: Story = {
+  args: {
+    label: capitalCase(faker.lorem.word()),
+    variation: "inline-content",
+    skin: "positive",
+    children: (
+      <>
+        <Input placeholder={faker.lorem.word()} />
+        <Select placeholder={faker.company.buzzVerb()}>
+          <Select.Option>{faker.company.buzzAdjective()}</Select.Option>
+          <Select.Option>{faker.company.buzzNoun()}</Select.Option>
+          <Select.Option>{faker.company.buzzVerb()}</Select.Option>
+        </Select>
+      </>
+    ),
+    description: faker.lorem.sentence(),
+    validationMessage: faker.lorem.sentence(),
+  },
+};
+
+export const Basic: Story = {
   args: {
     label: capitalCase(faker.lorem.word()),
     children: <Input placeholder="Input" />,
