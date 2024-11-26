@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.5.0...@react-ck/form-field@1.6.0) (2024-11-26)
+
+
+### Features
+
+* **form field:** support inline content ([8c13d07](https://github.com/abelflopes/react-ck/commit/8c13d07839b545bbb1763d9eba9fe1d0176c71ef))
+
+
+
 ## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.4.3...@react-ck/form-field@1.5.0) (2024-11-22)
 
 
