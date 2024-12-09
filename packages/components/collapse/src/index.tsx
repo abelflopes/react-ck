@@ -13,6 +13,7 @@ export interface CollapseProps extends React.DetailsHTMLAttributes<HTMLDetailsEl
   onOpenChange?(open: boolean): void;
   /** Adds vertical spacing to the Collapse  */
   spacing?: CollapseSpacing;
+  keepInDom?: boolean;
 }
 
 /**
@@ -29,6 +30,7 @@ export const Collapse = ({
   onOpenChange,
   spacing = "s",
   className,
+  keepInDom,
   ...otherProps
 }: Readonly<CollapseProps>): React.ReactElement => {
   const [internalOpen, setInternalOpen] = useState(otherProps.open);
@@ -50,7 +52,7 @@ export const Collapse = ({
         <div className={styles.header_content}>{header}</div>
       </summary>
 
-      {children}
+      {keepInDom || internalOpen ? children : null}
     </details>
   );
 };

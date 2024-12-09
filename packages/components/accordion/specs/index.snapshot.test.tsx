@@ -11,6 +11,7 @@ describe("snapshot accordion", () => {
             { header: "item 1", children: "content 1" },
             { header: "item 2", children: "content 2" },
           ]}
+          keepInDom
         />,
       )
       .toJSON();

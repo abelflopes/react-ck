@@ -10,7 +10,7 @@ describe("unit accordion", () => {
       { header: "item 2", children: "content 2" },
     ];
 
-    render(<Accordion items={items} />);
+    render(<Accordion items={items} keepInDom />);
 
     await Promise.all(
       items.map(async (item) => {

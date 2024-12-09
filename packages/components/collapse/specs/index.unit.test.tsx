@@ -6,7 +6,11 @@ import "@testing-library/jest-dom";
 describe("unit Collapse", () => {
   it("renders correctly", async () => {
     const content = "Collapse";
-    render(<Collapse header="Header">{content}</Collapse>);
+    render(
+      <Collapse header="Header" keepInDom>
+        {content}
+      </Collapse>,
+    );
     const find = await screen.findByText(content);
     expect(find).toBeInTheDocument();
   });

@@ -1,6 +1,6 @@
 import React from "react";
 import { List, type ListProps } from "@react-ck/list";
-import { Collapse } from "@react-ck/collapse";
+import { Collapse, type CollapseProps } from "@react-ck/collapse";
 import styles from "./styles/index.module.scss";
 
 export interface AccordionItem {
@@ -10,6 +10,7 @@ export interface AccordionItem {
 
 export interface AccordionProps extends Omit<ListProps, "items"> {
   items: AccordionItem[];
+  keepInDom?: CollapseProps["keepInDom"];
 }
 
 /**
@@ -20,12 +21,13 @@ export interface AccordionProps extends Omit<ListProps, "items"> {
 
 export const Accordion = ({
   items,
+  keepInDom,
   ...otherProps
 }: Readonly<AccordionProps>): React.ReactElement => (
   <List
     {...otherProps}
     items={items.map(({ header, children }) => (
-      <Collapse key={String(JSON.stringify(header))} header={header}>
+      <Collapse key={String(JSON.stringify(header))} header={header} keepInDom={keepInDom}>
         <div className={styles.content}>{children}</div>
       </Collapse>
     ))}
