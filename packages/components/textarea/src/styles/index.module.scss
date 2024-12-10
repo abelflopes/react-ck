@@ -5,6 +5,9 @@
 
 .root {
   @include form-field.form-field-input;
+
+  // Remove default input height
+  height: unset;
 }
 
 // When not inside form field, has own border, etc

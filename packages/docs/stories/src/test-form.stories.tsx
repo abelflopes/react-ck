@@ -7,6 +7,7 @@ import { Input } from "@react-ck/input/src";
 import { Button } from "@react-ck/button/src";
 import { Select } from "@react-ck/select/src";
 import { Checkbox, Radio } from "@react-ck/provisional/src";
+import { Textarea } from "@react-ck/textarea/src";
 
 type Story = StoryObj<unknown>;
 
@@ -30,44 +31,79 @@ export const demo: Story = {
   render: (): React.ReactElement => (
     <form>
       <Grid align="centered" spacing="l">
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
+          <FormField label="Text" description="Text" skin="muted">
+            <Input type="text" required />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={3}>
+          <FormField label="Date" description="Date" skin="muted">
+            <Input type="date" required />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={3}>
+          <FormField label="Select" description="Select" skin="muted">
+            <Select required>
+              <Select.Option>A</Select.Option>
+              <Select.Option>B</Select.Option>
+              <Select.Option>C</Select.Option>
+            </Select>
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={3}>
+          <FormField label="Select" description="Select" skin="muted">
+            <Select placeholder="Select" required>
+              <Select.Option>A</Select.Option>
+              <Select.Option>B</Select.Option>
+              <Select.Option>C</Select.Option>
+            </Select>
+          </FormField>
+        </Grid.Column>
+      </Grid>
+      <Grid align="centered" spacing="l">
+        <Grid.Column size={3}>
+          <FormField>
+            <Textarea placeholder="Address" />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={3}>
           <FormField>
             <Input type="text" placeholder="Username" />
           </FormField>
         </Grid.Column>
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
           <Input type="password" placeholder="Password" />
         </Grid.Column>
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
           <Select placeholder="Allow deselect" required>
             <Select.Option>A</Select.Option>
             <Select.Option>B</Select.Option>
             <Select.Option>C</Select.Option>
           </Select>
         </Grid.Column>
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
           <Select placeholder="Disallow deselect" allowDeselect={false}>
             <Select.Option>X</Select.Option>
             <Select.Option>Y</Select.Option>
             <Select.Option>Z</Select.Option>
           </Select>
         </Grid.Column>
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
           <FormField label="Name" description="Insert your full name">
             <Input type="text" placeholder="Full legal name" />
           </FormField>
         </Grid.Column>
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
           <FormField label="Email" description="Insert your company email">
             <Input type="email" placeholder="Search" />
           </FormField>
         </Grid.Column>
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
           <FormField label="Retired" description="Are you +65 and retired?" variation="inline">
             <Checkbox />
           </FormField>
         </Grid.Column>
-        <Grid.Column size={4}>
+        <Grid.Column size={3}>
           <FormField label="Would you like to make a donation?" variation="inline-reverse">
             <Checkbox />
           </FormField>

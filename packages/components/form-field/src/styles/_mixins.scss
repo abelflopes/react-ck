@@ -60,6 +60,7 @@
   background: transparent;
   color: theme.get-color(neutral-dark-5);
   outline: none;
+  height: theme.get-spacing(4);
 
   &::placeholder {
     @include placeholder;
