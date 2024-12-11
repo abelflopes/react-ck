@@ -1,3 +1,16 @@
+## [3.53.0](https://github.com/abelflopes/react-ck/compare/v3.52.0...v3.53.0) (2024-12-11)
+
+
+### Features
+
+* **react-ck:** global library package ([17c837e](https://github.com/abelflopes/react-ck/commit/17c837e61b4fc6a399e7212d4e884334c366d0f7))
+* **react-ck:** global library package ([6c73fc7](https://github.com/abelflopes/react-ck/commit/6c73fc7d67a556a885375d190c03a9cbacd12dac))
+
+
+### Bug Fixes
+
+* **dialog:** prevent showing pointer cursor ([76d28d2](https://github.com/abelflopes/react-ck/commit/76d28d22c60495694829c178750b02dc4bf4afc4))
+
 ## [3.52.0](https://github.com/abelflopes/react-ck/compare/v3.51.0...v3.52.0) (2024-12-11)
 
 
