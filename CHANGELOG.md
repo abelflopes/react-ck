@@ -1,3 +1,17 @@
+## [3.50.0](https://github.com/abelflopes/react-ck/compare/v3.49.0...v3.50.0) (2024-12-11)
+
+
+### Features
+
+* **button:** add prop to choose icon position ([e735899](https://github.com/abelflopes/react-ck/commit/e73589905183362e49f33656244d0835d8e370e6))
+* **react-ck:** global library package ([9060e95](https://github.com/abelflopes/react-ck/commit/9060e9506bb58aba6fec3cf382e1912e50744689))
+* **react-ck:** global library package ([3e841a9](https://github.com/abelflopes/react-ck/commit/3e841a9e50d4f0a5a71bab54c9c1ee1a83cf3baa))
+
+
+### Bug Fixes
+
+* **collapse:** apply margin only when open ([c5a7123](https://github.com/abelflopes/react-ck/commit/c5a7123ae4b06f62a78cabb75ff5f87c44bf9077))
+
 ## [3.49.0](https://github.com/abelflopes/react-ck/compare/v3.48.0...v3.49.0) (2024-12-11)
 
 
