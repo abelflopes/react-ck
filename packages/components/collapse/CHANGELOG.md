@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.2.3...@react-ck/collapse@1.3.0) (2024-12-11)
+
+
+### Features
+
+* **collapse:** allow removing dom content when closed ([e146c36](https://github.com/abelflopes/react-ck/commit/e146c368989badf8a53bd5111a28d9a896c4d203))
+
+
+
 ## [1.2.3](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.2.2...@react-ck/collapse@1.2.3) (2024-11-22)
 
 **Note:** Version bump only for package @react-ck/collapse

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.6.1...@react-ck/form-field@1.6.2) (2024-12-11)
+
+
+### Bug Fixes
+
+* align input heights ([859dc74](https://github.com/abelflopes/react-ck/commit/859dc747e29357ed24bfdb826b3bdcdb09e433b0))
+
+
+
 ## [1.6.1](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.6.0...@react-ck/form-field@1.6.1) (2024-11-26)
 
 

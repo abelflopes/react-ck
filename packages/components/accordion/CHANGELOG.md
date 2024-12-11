@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/accordion@1.1.35...@react-ck/accordion@1.2.0) (2024-12-11)
+
+
+### Features
+
+* **collapse:** allow removing dom content when closed ([e146c36](https://github.com/abelflopes/react-ck/commit/e146c368989badf8a53bd5111a28d9a896c4d203))
+
+
+
 ## [1.1.35](https://github.com/abelflopes/react-ck/compare/@react-ck/accordion@1.1.34...@react-ck/accordion@1.1.35) (2024-11-22)
 
 **Note:** Version bump only for package @react-ck/accordion
