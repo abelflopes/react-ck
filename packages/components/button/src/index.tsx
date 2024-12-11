@@ -93,13 +93,13 @@ export const Button = <T extends HTMLTag>({
         ),
       }}>
       {icon && iconPosition === "before" && !isIconOnly ? (
-        <span className={styles.icon}>{icon}</span>
+        <span className={classNames(styles.icon, styles[`icon_${iconPosition}`])}>{icon}</span>
       ) : null}
 
       {children}
 
       {icon && iconPosition === "after" && !isIconOnly ? (
-        <span className={styles.icon}>{icon}</span>
+        <span className={classNames(styles.icon, styles[`icon_${iconPosition}`])}>{icon}</span>
       ) : null}
 
       {isIconOnly ? icon : null}

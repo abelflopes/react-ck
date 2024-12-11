@@ -44,8 +44,16 @@
 .icon {
   display: inline-flex;
   align-items: center;
-  margin-left: theme.get-spacing(1);
-  margin-right: theme.get-spacing(-1);
+
+  &_before {
+    margin-left: theme.get-spacing(-1);
+    margin-right: theme.get-spacing(1);
+  }
+
+  &_after {
+    margin-left: theme.get-spacing(1);
+    margin-right: theme.get-spacing(-1);
+  }
 }
 
 // Sizes

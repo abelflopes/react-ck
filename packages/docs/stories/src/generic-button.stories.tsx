@@ -39,7 +39,26 @@ export const Secondary: Story = {
   },
 };
 
-export const IconButton: Story = {
+export const WithIconBefore: Story = {
+  args: {
+    ...Default.args,
+    iconPosition: "before",
+    icon: (
+      <Icon>
+        <IconClose />
+      </Icon>
+    ),
+  },
+};
+
+export const WithIconAfter: Story = {
+  args: {
+    ...WithIconBefore.args,
+    iconPosition: "after",
+  },
+};
+
+export const IconOnly: Story = {
   args: {
     size: "s",
     skinVariation: "ghost",
