@@ -19,7 +19,15 @@ const meta: Meta<typeof Dialog> = {
       (Story): React.ReactElement => (
         <Manager usePortal={false}>
           <Story />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente, quia vero eveniet perspiciatis dolor optio voluptas vel iste iusto possimus, quaerat quo esse ducimus, suscipit veritatis voluptate culpa doloremque quidem tempore. Veniam culpa ipsa, qui repudiandae dolore dignissimos ipsum magnam, commodi doloribus ipsam corrupti quaerat. Suscipit aliquid tempora, quas numquam eaque cumque non eligendi, laudantium minus quae nulla ea natus neque totam? Quae nam, accusantium ad consequatur sequi voluptas. Porro aliquid omnis dolore odit eum sequi eveniet ea totam placeat! Quas quia aliquam eligendi! Labore repellat rerum, voluptate natus est accusantium facilis accusamus eaque vel, iusto, impedit quidem provident!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente, quia vero eveniet
+          perspiciatis dolor optio voluptas vel iste iusto possimus, quaerat quo esse ducimus,
+          suscipit veritatis voluptate culpa doloremque quidem tempore. Veniam culpa ipsa, qui
+          repudiandae dolore dignissimos ipsum magnam, commodi doloribus ipsam corrupti quaerat.
+          Suscipit aliquid tempora, quas numquam eaque cumque non eligendi, laudantium minus quae
+          nulla ea natus neque totam? Quae nam, accusantium ad consequatur sequi voluptas. Porro
+          aliquid omnis dolore odit eum sequi eveniet ea totam placeat! Quas quia aliquam eligendi!
+          Labore repellat rerum, voluptate natus est accusantium facilis accusamus eaque vel, iusto,
+          impedit quidem provident!
         </Manager>
       ),
     ],
