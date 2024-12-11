@@ -8,7 +8,7 @@ import { IconClose } from "@react-ck/icon/icons/IconClose";
 import { Button } from "@react-ck/button";
 import { Text } from "@react-ck/text";
 import { Layer } from "@react-ck/layers";
-import { ScrollableContainer } from "@react-ck/provisional";
+import { ScrollableContainer } from "../scrollable-container";
 import { ModalHeader } from "./ModalHeader";
 import { ModalFooter } from "./ModalFooter";
 
@@ -22,6 +22,12 @@ interface ModalProps extends Omit<OverlayProps, "skin"> {
   size?: "s" | "m" | "l" | "xl" | "full";
   /** Dismiss Callback, also determines if the modal can be dismissed by clicking outside or close button  */
   onDismiss?: () => void;
+  /** Trigger dismiss when clicking outside of the modal wrapper */
+  dismissOnClickOutside?: boolean;
+  /** Changes visibility of close button */
+  closeButton?: boolean;
+  /** Changes visibility of overlay */
+  overlay?: boolean;
 }
 
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-modal-dialog-with-a-portal
@@ -41,6 +47,9 @@ const Modal = ({
   children,
   className,
   onDismiss,
+  dismissOnClickOutside = true,
+  closeButton = true,
+  overlay = true,
   ...otherProps
 }: Readonly<ModalProps>): React.ReactNode => {
   // State child compound components' props
@@ -83,9 +92,11 @@ const Modal = ({
       <Overlay
         {...otherProps}
         className={classNames(styles.root, onDismiss && styles.clickable_overlay, className)}
-        blur
+        blur={overlay}
+        skin={overlay ? "dark" : "transparent"}
         onClick={(e) => {
-          onDismiss?.();
+          if (dismissOnClickOutside) onDismiss?.();
+
           otherProps.onClick?.(e);
         }}>
         <div
@@ -102,7 +113,7 @@ const Modal = ({
                   {props.header.heading}
                 </Text>
 
-                {onDismiss ? (
+                {closeButton && onDismiss ? (
                   <Button
                     skin="secondary"
                     skinVariation="ghost"

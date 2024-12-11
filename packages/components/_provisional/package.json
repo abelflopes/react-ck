@@ -15,10 +15,15 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "lint:typescript": "tsc --noEmit",
-    "lint:code": "eslint . --ext ts,tsx --cache"
+    "lint:code": "eslint . --ext ts,tsx --cache",
+    "test": "npx -y npm-run-all -s test:*",
+    "test:unit": "jest --testPathPattern=\".unit.*\"",
+    "test:snapshot": "jest --testPathPattern=\".snapshot.*\"",
+    "test:snapshot:update": "jest --testPathPattern=\".snapshot.*\" -u"
   },
   "devDependencies": {
     "@react-ck/babel-config": "*",
+    "@react-ck/jest-config": "*",
     "@react-ck/typescript-config": "*",
     "@react-ck/webpack-config": "*",
     "@types/react": "^18.3.11"
@@ -35,6 +40,7 @@
     "@react-ck/icon": "^3.6.4",
     "@react-ck/input": "^1.4.26",
     "@react-ck/layers": "^1.3.8",
+    "@react-ck/modal": "^3.2.29",
     "@react-ck/overlay": "^1.2.19",
     "@react-ck/react-utils": "^1.3.7",
     "@react-ck/scss-utils": "^1.1.12",
@@ -42,6 +48,7 @@
     "@react-ck/spinner": "^3.0.26",
     "@react-ck/text": "^1.7.0",
     "@react-ck/theme": "^1.12.0",
-    "classnames": "*"
+    "@react-ck/container": "^1.5.5",
+    "classnames": "^2.3.2"
   }
 }

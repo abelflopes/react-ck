@@ -4,8 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { Text } from "@react-ck/text/src";
 import { configureStory } from "@react-ck/story-config";
-import { Modal, type ModalProps } from "@react-ck/modal/src";
-import { Image } from "@react-ck/provisional/src";
+import { Image, Modal, type ModalProps } from "@react-ck/provisional/src";
 import { Button } from "@react-ck/button/src";
 import { Container } from "@react-ck/container/src";
 
@@ -19,7 +18,7 @@ const meta: Meta<typeof Modal> = {
     },
     decorators: [
       (Story): React.ReactElement => (
-        <Manager>
+        <Manager usePortal={false}>
           <Story />
         </Manager>
       ),

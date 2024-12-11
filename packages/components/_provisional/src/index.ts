@@ -35,3 +35,7 @@ export * from "./snippet";
 export * from "./checkbox";
 
 export * from "./radio";
+
+export * from "./modal";
+
+export * from "./dialog";

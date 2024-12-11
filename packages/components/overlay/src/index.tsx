@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 export interface OverlayProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Specifies the visual style of the overlay  */
-  skin?: "light" | "dark";
+  skin?: "light" | "dark" | "transparent";
   /** If set to true, will blur background */
   blur?: boolean;
 }
