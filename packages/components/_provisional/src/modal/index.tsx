@@ -91,12 +91,15 @@ const Modal = ({
     <Layer elevation="overlay">
       <Overlay
         {...otherProps}
-        className={classNames(styles.root, onDismiss && styles.clickable_overlay, className)}
         blur={overlay}
         skin={overlay ? "dark" : "transparent"}
+        className={classNames(
+          styles.root,
+          dismissOnClickOutside && onDismiss && styles.clickable_overlay,
+          className,
+        )}
         onClick={(e) => {
           if (dismissOnClickOutside) onDismiss?.();
-
           otherProps.onClick?.(e);
         }}>
         <div
