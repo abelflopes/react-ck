@@ -1,3 +1,11 @@
+## [3.52.0](https://github.com/abelflopes/react-ck/compare/v3.51.0...v3.52.0) (2024-12-11)
+
+
+### Features
+
+* **dialog:** add dialog component ([5223ccb](https://github.com/abelflopes/react-ck/commit/5223ccb918031dfa249a8b041c4a1dde5a366cc2))
+* **react-ck:** global library package ([0c5a865](https://github.com/abelflopes/react-ck/commit/0c5a86581cfd710aba3556f74f496de8aa089c8b))
+
 ## [3.51.0](https://github.com/abelflopes/react-ck/compare/v3.50.0...v3.51.0) (2024-12-11)
 
 
