@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.11.9...@react-ck/provisional@3.12.0) (2024-12-11)
+
+
+### Features
+
+* **dialog:** add dialog component ([5223ccb](https://github.com/abelflopes/react-ck/commit/5223ccb918031dfa249a8b041c4a1dde5a366cc2))
+
+
+
 ## [3.11.9](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.11.8...@react-ck/provisional@3.11.9) (2024-12-11)
 
 **Note:** Version bump only for package @react-ck/provisional

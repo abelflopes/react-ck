@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.2.19...@react-ck/overlay@1.3.0) (2024-12-11)
+
+
+### Features
+
+* **dialog:** add dialog component ([5223ccb](https://github.com/abelflopes/react-ck/commit/5223ccb918031dfa249a8b041c4a1dde5a366cc2))
+
+
+
 ## [1.2.19](https://github.com/abelflopes/react-ck/compare/@react-ck/overlay@1.2.18...@react-ck/overlay@1.2.19) (2024-11-22)
 
 
