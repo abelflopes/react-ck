@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/button",
   "private": false,
-  "version": "1.10.0",
+  "version": "1.10.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

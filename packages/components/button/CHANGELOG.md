@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.10.0...@react-ck/button@1.10.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* **button:** icon position when using placement before text ([03ec03d](https://github.com/abelflopes/react-ck/commit/03ec03daae68ac06007671e681ad1e5490e8800f))
+
+
+
 ## [1.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.9.2...@react-ck/button@1.10.0) (2024-12-11)
 
 
