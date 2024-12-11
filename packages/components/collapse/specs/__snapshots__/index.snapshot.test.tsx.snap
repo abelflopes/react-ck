@@ -2,7 +2,7 @@
 
 exports[`snapshot Collapse renders correctly 1`] = `
 <details
-  className=""
+  className="spacing_s"
   onToggle={[Function]}
 >
   <summary

@@ -8,7 +8,7 @@ exports[`snapshot accordion renders correctly 1`] = `
     className="item"
   >
     <details
-      className=""
+      className="spacing_s"
       onToggle={[Function]}
     >
       <summary
@@ -55,7 +55,7 @@ exports[`snapshot accordion renders correctly 1`] = `
     className="item"
   >
     <details
-      className=""
+      className="spacing_s"
       onToggle={[Function]}
     >
       <summary
