@@ -1,3 +1,16 @@
+## [3.51.0](https://github.com/abelflopes/react-ck/compare/v3.50.0...v3.51.0) (2024-12-11)
+
+
+### Features
+
+* **react-ck:** global library package ([a7d421c](https://github.com/abelflopes/react-ck/commit/a7d421ce7c4ce998b4538f53f3a91ac148d66d33))
+* **react-ck:** global library package ([1ab14d3](https://github.com/abelflopes/react-ck/commit/1ab14d3ca9ec9755bfd77b4a953519deb9d6c259))
+
+
+### Bug Fixes
+
+* **button:** icon position when using placement before text ([03ec03d](https://github.com/abelflopes/react-ck/commit/03ec03daae68ac06007671e681ad1e5490e8800f))
+
 ## [3.50.0](https://github.com/abelflopes/react-ck/compare/v3.49.0...v3.50.0) (2024-12-11)
 
 
