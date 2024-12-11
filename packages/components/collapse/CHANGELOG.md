@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.3.0...@react-ck/collapse@1.3.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* **collapse:** apply margin only when open ([c5a7123](https://github.com/abelflopes/react-ck/commit/c5a7123ae4b06f62a78cabb75ff5f87c44bf9077))
+
+
+
 ## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/collapse@1.2.3...@react-ck/collapse@1.3.0) (2024-12-11)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.9.2...@react-ck/button@1.10.0) (2024-12-11)
+
+
+### Features
+
+* **button:** add prop to choose icon position ([e735899](https://github.com/abelflopes/react-ck/commit/e73589905183362e49f33656244d0835d8e370e6))
+
+
+
 ## [1.9.2](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.9.1...@react-ck/button@1.9.2) (2024-11-22)
 
 
