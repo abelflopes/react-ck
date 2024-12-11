@@ -17,7 +17,7 @@ const meta: Meta<typeof Popover> = {
     },
     decorators: [
       (Story): React.ReactElement => (
-        <Manager>
+        <Manager usePortal={false}>
           <Story />
         </Manager>
       ),

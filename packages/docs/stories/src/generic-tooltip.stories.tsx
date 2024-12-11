@@ -18,7 +18,7 @@ const meta: Meta<typeof Tooltip> = {
     },
     decorators: [
       (Story): React.ReactElement => (
-        <Manager>
+        <Manager usePortal={false}>
           <Story />
         </Manager>
       ),

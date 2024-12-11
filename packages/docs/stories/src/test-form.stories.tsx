@@ -15,7 +15,7 @@ const meta: Meta = {
   title: "Test/Form",
   decorators: [
     (Story): React.ReactElement => (
-      <Manager>
+      <Manager usePortal={false}>
         <Story />
       </Manager>
     ),

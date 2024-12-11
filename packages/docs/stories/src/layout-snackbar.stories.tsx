@@ -83,7 +83,7 @@ const initialItems: SnackbarProps["initialItems"] = [
 ];
 
 const App = (): React.ReactElement => (
-  <Manager>
+  <Manager usePortal={false}>
     <Snackbar initialItems={initialItems}>
       <MyComponent />
     </Snackbar>

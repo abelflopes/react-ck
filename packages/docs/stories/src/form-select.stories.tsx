@@ -12,7 +12,7 @@ const meta: Meta<typeof Select> = {
   ...configureStory(Select, {
     decorators: [
       (Story): React.ReactElement => (
-        <Manager>
+        <Manager usePortal={false}>
           <Story />
         </Manager>
       ),
