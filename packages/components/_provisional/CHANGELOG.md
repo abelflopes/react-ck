@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.12.0...@react-ck/provisional@3.12.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* **dialog:** prevent showing pointer cursor ([76d28d2](https://github.com/abelflopes/react-ck/commit/76d28d22c60495694829c178750b02dc4bf4afc4))
+
+
+
 ## [3.12.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.11.9...@react-ck/provisional@3.12.0) (2024-12-11)
 
 
