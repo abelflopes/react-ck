@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal } from "../src/index";
+import { Modal } from "..";
 import { LayersProvider } from "@react-ck/layers";
 import { getActRender } from "@react-ck/jest-config";
 
