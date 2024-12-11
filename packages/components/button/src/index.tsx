@@ -25,6 +25,8 @@ export interface ButtonProps<T extends HTMLTag = "button">
    * This can be any valid React node, allowing integration of icons or custom SVG components.
    */
   icon?: React.ReactNode;
+  /** Defines where icon should be placed */
+  iconPosition?: "before" | "after";
   /** Ref for the root element */
   rootRef?: React.ForwardedRef<HTMLButtonElement>;
   /** Make button occupy whole available horizontal space */
@@ -45,6 +47,7 @@ export const Button = <T extends HTMLTag>({
   skinVariation = "default",
   size = "m",
   icon,
+  iconPosition = "after",
   children,
   className,
   rootRef,
@@ -89,8 +92,16 @@ export const Button = <T extends HTMLTag>({
           className,
         ),
       }}>
+      {icon && iconPosition === "before" && !isIconOnly ? (
+        <span className={styles.icon}>{icon}</span>
+      ) : null}
+
       {children}
-      {icon && !isIconOnly ? <span className={styles.icon}>{icon}</span> : null}
+
+      {icon && iconPosition === "after" && !isIconOnly ? (
+        <span className={styles.icon}>{icon}</span>
+      ) : null}
+
       {isIconOnly ? icon : null}
     </PolymorphicComponent>
   );
