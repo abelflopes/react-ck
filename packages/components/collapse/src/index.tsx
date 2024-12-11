@@ -38,13 +38,13 @@ export const Collapse = ({
   return (
     <details
       {...otherProps}
-      className={classNames(className, internalOpen && styles[`spacing_${spacing}`])}
+      className={classNames(className, styles[`spacing_${spacing}`])}
       onToggle={(e) => {
         setInternalOpen(e.currentTarget.open);
         onOpenChange?.(e.currentTarget.open);
         onToggle?.(e);
       }}>
-      <summary className={styles.header}>
+      <summary className={classNames(styles.header, internalOpen && styles.header_open)}>
         <Icon>
           <IconChevronDown className={classNames(styles.icon, internalOpen && styles.icon_open)} />
         </Icon>

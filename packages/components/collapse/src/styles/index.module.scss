@@ -9,11 +9,13 @@
   appearance: auto;
   cursor: pointer;
 
-  margin-bottom: scss-utils.get-css-var(collapse, spacing);
-
   &_content {
     flex-grow: 1;
     flex-shrink: 1;
+  }
+
+  &_open {
+    margin-bottom: scss-utils.get-css-var(collapse, spacing);
   }
 }
 
