@@ -1,3 +1,17 @@
+## [3.49.0](https://github.com/abelflopes/react-ck/compare/v3.48.0...v3.49.0) (2024-12-11)
+
+
+### Features
+
+* **collapse:** allow removing dom content when closed ([e146c36](https://github.com/abelflopes/react-ck/commit/e146c368989badf8a53bd5111a28d9a896c4d203))
+* **react-ck:** global library package ([86eceea](https://github.com/abelflopes/react-ck/commit/86eceead3e7136df7091cc8fa35391a40a721ae0))
+* **react-ck:** global library package ([4117d27](https://github.com/abelflopes/react-ck/commit/4117d27e278d01679d4e6768566d91d6ed260a50))
+
+
+### Bug Fixes
+
+* align input heights ([859dc74](https://github.com/abelflopes/react-ck/commit/859dc747e29357ed24bfdb826b3bdcdb09e433b0))
+
 ## [3.48.0](https://github.com/abelflopes/react-ck/compare/v3.47.0...v3.48.0) (2024-11-26)
 
 
