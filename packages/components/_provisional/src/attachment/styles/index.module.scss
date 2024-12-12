@@ -3,7 +3,7 @@
 @use "@react-ck/text";
 
 $size: theme.get-spacing(6);
-$spacing: theme.get-spacing();
+$spacing: theme.get-spacing(1.5);
 
 .root {
   @include card.base;
@@ -15,7 +15,7 @@ $spacing: theme.get-spacing();
   display: flex;
   min-height: $size;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: $spacing;
   gap: $spacing;
 }
@@ -37,6 +37,14 @@ $spacing: theme.get-spacing();
 .content {
   display: flex;
   flex-direction: column;
+  max-width: calc(100% - #{$spacing});
+}
+
+.name {
+  max-height: theme.get-spacing(2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .format {

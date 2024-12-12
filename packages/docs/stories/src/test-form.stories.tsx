@@ -6,7 +6,7 @@ import { Grid } from "@react-ck/grid/src";
 import { Input } from "@react-ck/input/src";
 import { Button } from "@react-ck/button/src";
 import { Select } from "@react-ck/select/src";
-import { Checkbox, Radio } from "@react-ck/provisional/src";
+import { Attachment, Checkbox, Radio } from "@react-ck/provisional/src";
 import { Textarea } from "@react-ck/textarea/src";
 
 type Story = StoryObj<unknown>;
@@ -30,6 +30,29 @@ export const demo: Story = {
   },
   render: (): React.ReactElement => (
     <form>
+      <Grid align="centered" spacing="l">
+        <Grid.Column size={6}>
+          <Attachment format="pdf" name="file.pdf" skin="pdf" />
+        </Grid.Column>
+        <Grid.Column size={6}>
+          <Attachment
+            format="pdf"
+            name="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem provident libero qui fuga fugit aliquam, ex vero error dolorum assumenda..pdf"
+            skin="pdf"
+          />
+        </Grid.Column>
+        <Grid.Column size={6}>
+          <Attachment size="l" format="pdf" name="file.pdf" skin="pdf" />
+        </Grid.Column>
+        <Grid.Column size={6}>
+          <Attachment
+            size="l"
+            format="pdf"
+            name="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem provident libero qui fuga fugit aliquam, ex vero error dolorum assumenda..pdf"
+            skin="pdf"
+          />
+        </Grid.Column>
+      </Grid>
       <Grid align="centered" spacing="l">
         <Grid.Column size={3}>
           <FormField label="Text" description="Text" skin="muted">

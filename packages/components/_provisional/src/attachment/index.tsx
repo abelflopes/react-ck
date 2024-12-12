@@ -46,7 +46,9 @@ export const Attachment = ({
     </span>
 
     <div className={styles.content}>
-      <span>{name}</span>
+      <span className={styles.name} title={name}>
+        {name}
+      </span>
       <span className={styles.format}>{format}</span>
     </div>
 
