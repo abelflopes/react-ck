@@ -1,3 +1,16 @@
+## [3.54.0](https://github.com/abelflopes/react-ck/compare/v3.53.0...v3.54.0) (2024-12-12)
+
+
+### Features
+
+* **react-ck:** global library package ([26b69b8](https://github.com/abelflopes/react-ck/commit/26b69b8b6b1b3a0fd463b6a21c2ae9bc318e62eb))
+* **react-ck:** global library package ([8af2aa6](https://github.com/abelflopes/react-ck/commit/8af2aa6a0862b527159da06fbd91175996191bec))
+
+
+### Bug Fixes
+
+* **attachment:** apply text truncation to ensure consistent height ([63aa2b5](https://github.com/abelflopes/react-ck/commit/63aa2b51fe76a2af3a455cac0aabadda6754f7fb))
+
 ## [3.53.0](https://github.com/abelflopes/react-ck/compare/v3.52.0...v3.53.0) (2024-12-11)
 
 
