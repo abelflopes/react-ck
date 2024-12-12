@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.2](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.12.1...@react-ck/provisional@3.12.2) (2024-12-12)
+
+
+### Bug Fixes
+
+* **attachment:** apply text truncation to ensure consistent height ([63aa2b5](https://github.com/abelflopes/react-ck/commit/63aa2b51fe76a2af3a455cac0aabadda6754f7fb))
+
+
+
 ## [3.12.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.12.0...@react-ck/provisional@3.12.1) (2024-12-11)
 
 

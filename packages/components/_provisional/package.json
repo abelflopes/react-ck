@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/provisional",
   "private": false,
-  "version": "3.12.1",
+  "version": "3.12.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
