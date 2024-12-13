@@ -20,7 +20,6 @@ $border-radius: scss-utils.get-css-var(card, border-radius);
 
 @mixin base {
   @include text.text-base;
-  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(1));
   @include shadow_transition;
 
   display: block; // force display in case of polimorphy
@@ -51,16 +50,17 @@ $border-radius: scss-utils.get-css-var(card, border-radius);
 
 @mixin spacing-s {
   @include scss-utils.define-css-var(card, spacing, theme.get-spacing(1));
+  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(1));
 }
 
 @mixin spacing-m {
-  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(2));
-  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(2));
+  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(1.5));
+  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(1.5));
 }
 
 @mixin spacing-l {
-  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(3));
-  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(3));
+  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(2));
+  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(2));
 }
 
 @mixin spacing-none {
