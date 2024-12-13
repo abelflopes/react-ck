@@ -1,3 +1,17 @@
+## [3.55.0](https://github.com/abelflopes/react-ck/compare/v3.54.0...v3.55.0) (2024-12-13)
+
+
+### Features
+
+* include icons in main library package ([53c7e8b](https://github.com/abelflopes/react-ck/commit/53c7e8b0ebea6587e53ce87b237bb111850d3626))
+* **react-ck:** global library package ([5b03b7d](https://github.com/abelflopes/react-ck/commit/5b03b7d5e37eefd26a83d4a976890747a66828aa))
+* **react-ck:** global library package ([befe448](https://github.com/abelflopes/react-ck/commit/befe4480934212092efd4ee8fd98d70905a16140))
+
+
+### Bug Fixes
+
+* **card:** spacing and border radius ([15622a3](https://github.com/abelflopes/react-ck/commit/15622a3053b5a233c51a5818dbbf30a24cc72368))
+
 ## [3.54.0](https://github.com/abelflopes/react-ck/compare/v3.53.0...v3.54.0) (2024-12-12)
 
 
