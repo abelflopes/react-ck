@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.55.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.54.0...react-ck@2.55.0) (2024-12-13)
+
+
+### Features
+
+* include icons in main library package ([53c7e8b](https://github.com/abelflopes/react-ck/commit/53c7e8b0ebea6587e53ce87b237bb111850d3626))
+* **react-ck:** global library package ([26b69b8](https://github.com/abelflopes/react-ck/commit/26b69b8b6b1b3a0fd463b6a21c2ae9bc318e62eb))
+
+
+
 ## [2.54.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.53.0...react-ck@2.54.0) (2024-12-12)
 
 
