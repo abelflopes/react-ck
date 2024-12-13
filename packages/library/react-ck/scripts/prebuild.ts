@@ -4,11 +4,13 @@ import { globSync } from "glob";
 import { execSync } from "child_process";
 import {
   currPackagePath,
+  destIconsFolder,
   destScssFile,
   destTsFile,
   logger,
   packagesRoot,
   projectRoot,
+  sourceIconsFolder,
 } from "./common";
 
 // Util
@@ -163,6 +165,12 @@ fs.mkdirSync(path.dirname(destScssFile), { recursive: true });
 fs.writeFileSync(destScssFile, scssFileContents, {
   encoding: "utf-8",
 });
+
+// Copy Icons
+
+logger.info("Copying icons...");
+
+fs.cpSync(sourceIconsFolder, destIconsFolder, { recursive: true });
 
 // Finished
 

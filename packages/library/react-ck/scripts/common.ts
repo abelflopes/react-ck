@@ -8,13 +8,19 @@ export const projectRoot = path.resolve(__dirname, "../../../../");
 
 export const rootPackageLock = path.resolve(projectRoot, "./package-lock.json");
 
+export const packagesRoot = path.resolve(projectRoot, "packages");
+
 export const currPackagePath = path.resolve(__dirname, "../package.json");
 
-export const packagesRoot = path.resolve(__dirname, "../../../");
+export const currPackageFolder = path.dirname(currPackagePath);
 
-export const destTsFile = path.resolve(__dirname, "../src/index.ts");
+export const destTsFile = path.resolve(currPackageFolder, "src/index.ts");
 
-export const destScssFile = path.resolve(__dirname, "../src/styles/index.scss");
+export const destScssFile = path.resolve(currPackageFolder, "src/styles/index.scss");
+
+export const sourceIconsFolder = path.resolve(packagesRoot, "components/icon/icons");
+
+export const destIconsFolder = path.resolve(currPackageFolder, "icons");
 
 // Util
 

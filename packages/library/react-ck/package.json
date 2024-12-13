@@ -7,6 +7,7 @@
   "sass": "src/styles/index.scss",
   "files": [
     "/dist",
+    "/icons",
     "/src/styles"
   ],
   "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/library/react-ck#readme",
