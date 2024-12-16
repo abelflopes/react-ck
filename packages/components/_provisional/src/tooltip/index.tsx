@@ -68,7 +68,7 @@ export const Tooltip = ({
         render={({ style, position }) => (
           <Layer elevation="popup">
             <div style={style} className={classNames(styles.container, position)}>
-              <Card skin="shadowed" spacing="none" className={styles.card}>
+              <Card skin="shadowed" spacing="none" className={styles.card} borderRadius="m">
                 <div className={styles.content}>{children}</div>
               </Card>
             </div>

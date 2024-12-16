@@ -69,7 +69,7 @@ export const Dropdown = ({
               className={styles.container}
               onFocus={onFocus}
               onBlur={onBlur}>
-              <Card skin="shadowed" spacing="none">
+              <Card skin="shadowed" spacing="none" borderRadius="m">
                 <ScrollableContainer
                   horizontal={false}
                   className={classNames(styles.content, styles[`spacing_${spacing}`])}>

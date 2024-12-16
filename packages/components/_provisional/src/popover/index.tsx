@@ -27,7 +27,7 @@ export const Popover = ({
       render={({ style }) => (
         <Layer elevation="popup">
           <div style={style} className={styles.container}>
-            <Card skin="shadowed" spacing="none" className={styles.card}>
+            <Card skin="shadowed" spacing="none" className={styles.card} borderRadius="m">
               <ScrollableContainer horizontal={false} className={styles.content}>
                 {children}
               </ScrollableContainer>
