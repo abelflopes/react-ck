@@ -43,6 +43,7 @@ export interface ButtonProps<T extends HTMLTag = "button">
 
 export const Button = <T extends HTMLTag>({
   as,
+  type = "button",
   skin = "primary",
   skinVariation = "default",
   size = "m",
@@ -75,6 +76,7 @@ export const Button = <T extends HTMLTag>({
       fallback={[
         "button",
         {
+          type,
           ref: rootRef,
           ...otherProps,
         },
