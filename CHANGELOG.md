@@ -1,3 +1,25 @@
+## [3.56.0](https://github.com/abelflopes/react-ck/compare/v3.55.0...v3.56.0) (2024-12-16)
+
+
+### Features
+
+* **modal:** add ability to render full height ([f472ef2](https://github.com/abelflopes/react-ck/commit/f472ef2d87f8678c20fec2ed114ae4d59517d191))
+* **react-ck:** global library package ([e6798eb](https://github.com/abelflopes/react-ck/commit/e6798ebfc92f6c4a967dd661e0ac3fb5c5c60786))
+* **scrollable container:** add ability to disable functionality and styles ([b1bf8a6](https://github.com/abelflopes/react-ck/commit/b1bf8a6ca1638a25671b8ad12d2d7acf41491bb5))
+
+
+### Bug Fixes
+
+* **modal:** apply missing border radius ([c2c176d](https://github.com/abelflopes/react-ck/commit/c2c176d2ab1f66650d1ccdbb6fed989d06d27ac6))
+* **modal:** fix modal layout ([1965ada](https://github.com/abelflopes/react-ck/commit/1965ada8eee1070f416f002d912bece153bc5687))
+* props compatibility with table root element ([7685659](https://github.com/abelflopes/react-ck/commit/76856599beac4bd746af7b80b886bf918bce1591))
+* **scrollable container:** use black shadow ([d38d42c](https://github.com/abelflopes/react-ck/commit/d38d42c53590d33fe87551f422ed329d33ba250a))
+
+
+### Code Refactoring
+
+* adapt code to scss deprecations ([dc973f0](https://github.com/abelflopes/react-ck/commit/dc973f03311180e63f0a1f0bf995332c02540018))
+
 ## [3.55.0](https://github.com/abelflopes/react-ck/compare/v3.54.0...v3.55.0) (2024-12-13)
 
 
