@@ -1,11 +1,9 @@
-import styles from "./styles/index.module.scss";
 import React, { isValidElement, useContext, useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { LayersContext } from "./context";
 import { type Elevation } from "@react-ck/elevation";
 import { DISPLAY_NAME_ATTRIBUTE, getDisplayName, DISPLAY_NAMES } from "@react-ck/react-utils";
 import { ThemeProvider, useThemeContext } from "@react-ck/theme";
-import classNames from "classnames";
 
 interface LayerProps {
   /** The elevation level for the layer  */
@@ -32,7 +30,7 @@ const Layer = ({ elevation, children }: Readonly<LayerProps>): React.ReactNode =
     () =>
       usePortal
         ? createPortal(
-            <ThemeProvider theme={theme.theme} className={classNames(className, styles.root)}>
+            <ThemeProvider theme={theme.theme} className={className}>
               {children}
             </ThemeProvider>,
             document.body,
