@@ -63,9 +63,12 @@ $padding: scss-utils.get-css-var(modal, spacing);
   max-width: 100%;
 }
 
-.content,
 .size_var_full-height {
   height: 100%;
+}
+
+.content {
+  padding: 0 $padding;
 }
 
 .header,
@@ -77,7 +80,6 @@ $padding: scss-utils.get-css-var(modal, spacing);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: calc(#{$padding} * -1);
   gap: scss-utils.get-css-var(modal, spacing);
 }
 
@@ -85,6 +87,6 @@ $padding: scss-utils.get-css-var(modal, spacing);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: calc(#{$padding} * -1);
+  margin-top: auto;
   gap: scss-utils.get-css-var(modal, spacing);
 }
