@@ -2,8 +2,19 @@ import classNames from "classnames";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 
-export interface ScrollableContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ScrollableContainerScrollData {
+  left: boolean;
+  right: boolean;
+  top: boolean;
+  bottom: boolean;
+}
+
+export interface ScrollableContainerProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> {
   horizontal?: boolean;
+  onChange?: (data: ScrollableContainerScrollData) => void;
+  enabled?: boolean;
+  applyStyles?: boolean;
 }
 
 export const ScrollableContainer = ({
@@ -12,10 +23,13 @@ export const ScrollableContainer = ({
   onScroll,
   children,
   style,
+  onChange,
+  enabled = true,
+  applyStyles = true,
   ...otherProps
 }: Readonly<ScrollableContainerProps>): React.ReactElement => {
   const rootRef = useRef<HTMLDivElement>(null);
-  const [hasScroll, setHasScroll] = useState({
+  const [scrollData, setScrollData] = useState<ScrollableContainerScrollData>({
     left: false,
     right: false,
     top: false,
@@ -27,11 +41,11 @@ export const ScrollableContainer = ({
     y: "0px",
   });
 
-  const [show, setShow] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(true);
   const showTimeout = useRef<ReturnType<typeof setTimeout>>();
 
   const update = useCallback(() => {
-    if (!rootRef.current) return;
+    if (!rootRef.current || !enabled) return;
 
     const TOLERANCE = 14;
 
@@ -52,29 +66,31 @@ export const ScrollableContainer = ({
       y: `${scrollTop}px`,
     });
 
-    setHasScroll({ left, right, top, bottom });
-  }, []);
+    setScrollData({ left, right, top, bottom });
+  }, [enabled]);
 
   const handleScroll = useCallback<React.UIEventHandler<HTMLDivElement>>(
     (e) => {
-      update();
+      if (enabled) {
+        update();
 
-      clearTimeout(showTimeout.current);
-      setShow(false);
+        clearTimeout(showTimeout.current);
+        setIsProcessing(true);
 
-      showTimeout.current = setTimeout(() => {
-        setShow(true);
-      }, 200);
+        showTimeout.current = setTimeout(() => {
+          setIsProcessing(false);
+        }, 200);
+      }
 
       onScroll?.(e);
     },
-    [onScroll, update],
+    [enabled, onScroll, update],
   );
 
   useEffect(update, [update]);
 
   useEffect(() => {
-    if (!rootRef.current) return;
+    if (!rootRef.current || !enabled) return;
 
     const ro = new ResizeObserver(update);
 
@@ -84,7 +100,11 @@ export const ScrollableContainer = ({
       ro.disconnect();
       clearTimeout(showTimeout.current);
     };
-  }, [update]);
+  }, [enabled, update]);
+
+  useEffect(() => {
+    onChange?.(scrollData);
+  }, [onChange, scrollData]);
 
   return (
     <div
@@ -93,12 +113,14 @@ export const ScrollableContainer = ({
       className={classNames(
         className,
         styles.root,
-        show && {
-          [`${styles["has-scroll-top"]}`]: hasScroll.top,
-          [`${styles["has-scroll-right"]}`]: hasScroll.right,
-          [`${styles["has-scroll-bottom"]}`]: hasScroll.bottom,
-          [`${styles["has-scroll-left"]}`]: hasScroll.left,
-        },
+        enabled &&
+          applyStyles &&
+          !isProcessing && {
+            [`${styles["has-scroll-top"]}`]: scrollData.top,
+            [`${styles["has-scroll-right"]}`]: scrollData.right,
+            [`${styles["has-scroll-bottom"]}`]: scrollData.bottom,
+            [`${styles["has-scroll-left"]}`]: scrollData.left,
+          },
       )}
       style={{
         ...style,
