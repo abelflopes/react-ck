@@ -20,6 +20,8 @@ import { ModalFooter } from "./ModalFooter";
 interface ModalProps extends Omit<OverlayProps, "skin"> {
   /** Modal width */
   size?: "s" | "m" | "l" | "xl" | "full";
+  /** Modal height */
+  sizeVariation?: "normal" | "full-height";
   /** Dismiss Callback, also determines if the modal can be dismissed by clicking outside or close button  */
   onDismiss?: () => void;
   /** Trigger dismiss when clicking outside of the modal wrapper */
@@ -44,6 +46,7 @@ let openModals = 0;
 
 const Modal = ({
   size = "m",
+  sizeVariation = "normal",
   children,
   className,
   onDismiss,
@@ -103,7 +106,11 @@ const Modal = ({
           otherProps.onClick?.(e);
         }}>
         <div
-          className={classNames(styles.card, `${styles[`size_${size}`]}`)}
+          className={classNames(
+            styles.card,
+            `${styles[`size_${size}`]}`,
+            `${styles[`size_var_${sizeVariation}`]}`,
+          )}
           onClick={(e) => {
             e.stopPropagation();
           }}>

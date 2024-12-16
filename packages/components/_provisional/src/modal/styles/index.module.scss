@@ -64,6 +64,10 @@ $padding: scss-utils.get-css-var(modal, spacing);
 }
 
 .content,
+.size_var_full-height {
+  height: 100%;
+}
+
 .header,
 .footer {
   padding: $padding;
