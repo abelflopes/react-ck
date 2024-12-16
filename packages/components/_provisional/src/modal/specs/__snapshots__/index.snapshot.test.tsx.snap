@@ -6,7 +6,7 @@ exports[`snapshot Modal renders correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="card size_m"
+    className="card size_m size_var_normal"
     onClick={[Function]}
   >
     <header

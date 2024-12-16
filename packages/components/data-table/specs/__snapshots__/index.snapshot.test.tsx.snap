@@ -3,10 +3,10 @@
 exports[`snapshot DataTable renders correctly 1`] = `
 <div
   className="root"
-  data-testid="table"
 >
   <table
     className="table"
+    data-testid="table"
   >
     <tbody>
       <tr>
