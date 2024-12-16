@@ -23,6 +23,8 @@ interface CardProps<T extends HTMLTag = "div">
   variation?: "vertical" | "horizontal";
   /** Controls the amount of spacing between card limits */
   spacing?: "s" | "m" | "l" | "none";
+  /** Controls the amount of border radius applied */
+  borderRadius?: "s" | "m" | "l" | "none";
   /** Try to occupy available height, useful to match size with other cards  */
   fullHeight?: boolean;
 }
@@ -43,6 +45,7 @@ const Card = <T extends HTMLTag>({
   fullHeight,
   children,
   className,
+  borderRadius = spacing,
   ...otherProps
 }: Readonly<CardProps<T>>): React.ReactElement => {
   const [contextValue, setContextValue] = useState<CardContextValue>({
@@ -74,6 +77,7 @@ const Card = <T extends HTMLTag>({
             styles[variation],
             fullHeight && styles.full_height,
             styles[`spacing_${spacing}`],
+            styles[`border_radius_${borderRadius}`],
             {
               [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
               [`${styles.clickable}`]: interaction === "click",

@@ -1,8 +1,7 @@
 @use "@react-ck/theme";
 @use "@react-ck/text";
 @use "@react-ck/scss-utils";
-
-$border-radius: scss-utils.get-css-var(card, border-radius);
+@use "variables";
 
 @mixin shadow-small {
   // TODO: theme shadows
@@ -16,20 +15,6 @@ $border-radius: scss-utils.get-css-var(card, border-radius);
 
 @mixin shadow_transition {
   transition: box-shadow 0.3s ease;
-}
-
-@mixin base {
-  @include text.text-base;
-  @include shadow_transition;
-
-  display: block; // force display in case of polimorphy
-  box-sizing: border-box;
-  border-radius: $border-radius;
-  background-color: theme.get-color(neutral-light-1);
-}
-
-@mixin content {
-  padding: scss-utils.get-css-var(card, spacing);
 }
 
 // Skins
@@ -48,21 +33,45 @@ $border-radius: scss-utils.get-css-var(card, border-radius);
 
 // Spacing
 
-@mixin spacing-s {
-  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(1));
-  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(1));
+@mixin spacing($key) {
+  @include scss-utils.define-css-var(
+    card,
+    spacing,
+    scss-utils.map-get-strict(variables.$card-spacings, $key)
+  );
 }
 
-@mixin spacing-m {
-  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(1.5));
-  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(1.5));
+// Border Radius
+
+@mixin spacing($key) {
+  @include scss-utils.define-css-var(
+    card,
+    spacing,
+    scss-utils.map-get-strict(variables.$card-spacings, $key)
+  );
 }
 
-@mixin spacing-l {
-  @include scss-utils.define-css-var(card, spacing, theme.get-spacing(2));
-  @include scss-utils.define-css-var(card, border-radius, theme.get-spacing(2));
+@mixin border-radius($key) {
+  @include scss-utils.define-css-var(
+    card,
+    border-radius,
+    scss-utils.map-get-strict(variables.$card-border-radius, $key)
+  );
 }
 
-@mixin spacing-none {
-  @include scss-utils.define-css-var(card, spacing, 0);
+// Card
+
+@mixin base {
+  @include text.text-base;
+  @include shadow_transition;
+  @include border-radius(m);
+
+  display: block; // force display in case of polimorphy
+  box-sizing: border-box;
+  border-radius: scss-utils.get-css-var(card, border-radius);
+  background-color: theme.get-color(neutral-light-1);
+}
+
+@mixin content {
+  padding: scss-utils.get-css-var(card, spacing);
 }

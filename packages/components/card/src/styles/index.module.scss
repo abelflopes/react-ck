@@ -2,6 +2,8 @@
 @use "@react-ck/scss-utils";
 @use "@react-ck/text";
 @use "shared";
+@use "variables";
+@use "sass:map";
 
 .root {
   @include shared.base;
@@ -55,20 +57,18 @@
 
 // Spacing
 
-.spacing_s {
-  @include shared.spacing-s;
+@each $key in map.keys(variables.$card-spacings) {
+  .spacing_#{$key} {
+    @include shared.spacing($key);
+  }
 }
 
-.spacing_m {
-  @include shared.spacing-m;
-}
+// Border radius
 
-.spacing_l {
-  @include shared.spacing-l;
-}
-
-.spacing_none {
-  @include shared.spacing-none;
+@each $key in map.keys(variables.$card-spacings) {
+  .border_radius_#{$key} {
+    @include shared.border-radius($key);
+  }
 }
 
 // Content
