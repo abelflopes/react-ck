@@ -30,6 +30,8 @@ interface ModalProps extends Omit<OverlayProps, "skin"> {
   closeButton?: boolean;
   /** Changes visibility of overlay */
   overlay?: boolean;
+  /** Toggle visibility of the modal */
+  open?: boolean;
 }
 
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-modal-dialog-with-a-portal
@@ -53,6 +55,7 @@ const Modal = ({
   dismissOnClickOutside = true,
   closeButton = true,
   overlay = true,
+  open = true,
   ...otherProps
 }: Readonly<ModalProps>): React.ReactNode => {
   // State child compound components' props
@@ -92,65 +95,68 @@ const Modal = ({
 
   return (
     <Layer elevation="overlay">
-      <Overlay
-        {...otherProps}
-        blur={overlay}
-        skin={overlay ? "dark" : "transparent"}
-        className={classNames(
-          styles.root,
-          dismissOnClickOutside && onDismiss && styles.clickable_overlay,
-          className,
-        )}
-        onClick={(e) => {
-          if (dismissOnClickOutside) onDismiss?.();
-          otherProps.onClick?.(e);
-        }}>
-        <div
+      {open ? (
+        <Overlay
+          {...otherProps}
+          blur={overlay}
+          skin={overlay ? "dark" : "transparent"}
           className={classNames(
-            styles.card,
-            `${styles[`size_${size}`]}`,
-            `${styles[`size_var_${sizeVariation}`]}`,
+            styles.root,
+            dismissOnClickOutside && onDismiss && styles.clickable_overlay,
+            className,
           )}
           onClick={(e) => {
-            e.stopPropagation();
+            if (dismissOnClickOutside) onDismiss?.();
+            otherProps.onClick?.(e);
           }}>
-          <ModalContext.Provider value={contextProps}>
-            {props.header ? (
-              <header
-                {...props.header}
-                className={classNames(styles.header, props.header.className)}>
-                <Text variation="h3" as="p" margin="none">
-                  {props.header.heading}
-                </Text>
+          <div
+            className={classNames(
+              styles.card,
+              `${styles[`size_${size}`]}`,
+              `${styles[`size_var_${sizeVariation}`]}`,
+            )}
+            onClick={(e) => {
+              e.stopPropagation();
+            }}>
+            <ModalContext.Provider value={contextProps}>
+              {props.header ? (
+                <header
+                  {...props.header}
+                  className={classNames(styles.header, props.header.className)}>
+                  <Text variation="h3" as="p" margin="none">
+                    {props.header.heading}
+                  </Text>
 
-                {closeButton && onDismiss ? (
-                  <Button
-                    skin="secondary"
-                    skinVariation="ghost"
-                    icon={
-                      <Icon>
-                        <IconClose />
-                      </Icon>
-                    }
-                    onClick={onDismiss}
-                  />
-                ) : null}
-              </header>
-            ) : null}
+                  {closeButton && onDismiss ? (
+                    <Button
+                      skin="secondary"
+                      skinVariation="ghost"
+                      icon={
+                        <Icon>
+                          <IconClose />
+                        </Icon>
+                      }
+                      onClick={onDismiss}
+                    />
+                  ) : null}
+                </header>
+              ) : null}
 
-            <ScrollableContainer className={styles.content}>{children}</ScrollableContainer>
+              <ScrollableContainer className={styles.content}>{children}</ScrollableContainer>
 
-            {props.footer ? (
-              <footer
-                {...props.footer}
-                className={classNames(styles.footer, props.footer.className)}
-              />
-            ) : null}
-          </ModalContext.Provider>
-        </div>
-      </Overlay>
+              {props.footer ? (
+                <footer
+                  {...props.footer}
+                  className={classNames(styles.footer, props.footer.className)}
+                />
+              ) : null}
+            </ModalContext.Provider>
+          </div>
+        </Overlay>
+      ) : null}
     </Layer>
   );
+
   /* eslint-enable jsx-a11y/no-static-element-interactions */
   /* eslint-enable jsx-a11y/click-events-have-key-events */
 };
