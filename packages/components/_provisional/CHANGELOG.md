@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.2](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.13.1...@react-ck/provisional@3.13.2) (2024-12-16)
+
+
+### Bug Fixes
+
+* scss export conflict ([adb556c](https://github.com/abelflopes/react-ck/commit/adb556c15327b79e8bf7b3f7e867273b36859b2a))
+
+
+
 ## [3.13.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.13.0...@react-ck/provisional@3.13.1) (2024-12-16)
 
 

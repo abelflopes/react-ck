@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.10.0...@react-ck/card@1.10.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* scss export conflict ([adb556c](https://github.com/abelflopes/react-ck/commit/adb556c15327b79e8bf7b3f7e867273b36859b2a))
+
+
+
 ## [1.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.9.3...@react-ck/card@1.10.0) (2024-12-16)
 
 
