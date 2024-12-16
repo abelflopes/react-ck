@@ -79,6 +79,8 @@ const Modal = ({
 
   // Lock scroll if there are open modals
   useEffect(() => {
+    if (!open) return;
+
     openModals += 1;
 
     if (openModals >= 1) document.body.classList.add(`${styles.lock_scroll}`);
@@ -88,7 +90,7 @@ const Modal = ({
 
       if (openModals === 0) document.body.classList.remove(`${styles.lock_scroll}`);
     };
-  }, []);
+  }, [open]);
 
   /* eslint-disable jsx-a11y/no-static-element-interactions  -- used only to stop click propagation on modal card*/
   /* eslint-disable jsx-a11y/click-events-have-key-events  -- used only to stop click propagation on modal card* */
