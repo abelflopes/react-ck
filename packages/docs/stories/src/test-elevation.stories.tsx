@@ -1,13 +1,12 @@
 /* eslint-disable react/no-multi-comp -- exception for storybook */
 
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { Dialog, Dropdown, Menu, Modal, Tooltip } from "@react-ck/provisional/src";
 import { Button } from "@react-ck/button/src";
 import { Text } from "@react-ck/text/src";
 import { faker } from "@faker-js/faker";
-import { Divider } from "@react-ck/divider/src";
 import { Card } from "@react-ck/card";
 import { Grid } from "@react-ck/grid/src";
 import { Select } from "@react-ck/select/src";
