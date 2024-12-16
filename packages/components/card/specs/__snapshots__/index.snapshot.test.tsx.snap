@@ -2,7 +2,7 @@
 
 exports[`snapshot Card renders correctly 1`] = `
 <div
-  className="root bordered vertical spacing_m"
+  className="root bordered vertical spacing_m border_radius_m"
 >
   <div
     className="content"

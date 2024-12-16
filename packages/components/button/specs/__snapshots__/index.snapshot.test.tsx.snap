@@ -3,6 +3,7 @@
 exports[`snapshot Button renders correctly 1`] = `
 <button
   className="root skin_primary skin_variation_default size-m"
+  type="button"
 >
   Button
 </button>

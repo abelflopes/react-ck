@@ -7,42 +7,49 @@ exports[`snapshot Pagination renders correctly 1`] = `
   <button
     className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
+    type="button"
   >
     1
   </button>
   <button
     className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
+    type="button"
   >
     ...
   </button>
   <button
     className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
+    type="button"
   >
     9
   </button>
   <button
     className="root skin_secondary skin_variation_muted size-s"
     onClick={[Function]}
+    type="button"
   >
     10
   </button>
   <button
     className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
+    type="button"
   >
     11
   </button>
   <button
     className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
+    type="button"
   >
     ...
   </button>
   <button
     className="root skin_secondary skin_variation_ghost size-s"
     onClick={[Function]}
+    type="button"
   >
     20
   </button>
