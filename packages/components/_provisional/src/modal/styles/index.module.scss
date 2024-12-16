@@ -43,6 +43,7 @@ $padding: scss-utils.get-css-var(modal, spacing);
 .card {
   @include card.base;
   @include card.skin-shadowed;
+  @include card.spacing-l;
 
   position: relative; // Bring to front (z-index)
   display: flex;
