@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.0](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.10.2...@react-ck/button@1.11.0) (2024-12-16)
+
+
+### Features
+
+* **button:** use button type as default ([0c831af](https://github.com/abelflopes/react-ck/commit/0c831af41e23e90fb1f1f5f24ecc13fcbb9165f7))
+
+
+
 ## [1.10.2](https://github.com/abelflopes/react-ck/compare/@react-ck/button@1.10.1...@react-ck/button@1.10.2) (2024-12-16)
 
 **Note:** Version bump only for package @react-ck/button

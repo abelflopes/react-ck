@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.9.3...@react-ck/card@1.10.0) (2024-12-16)
+
+
+### Features
+
+* **card:** detach border radius from spacing, add dedicated prop ([2f585b6](https://github.com/abelflopes/react-ck/commit/2f585b634af69bd67da9cd4408f4cf81b52671d8))
+
+
+
 ## [1.9.3](https://github.com/abelflopes/react-ck/compare/@react-ck/card@1.9.2...@react-ck/card@1.9.3) (2024-12-16)
 
 **Note:** Version bump only for package @react-ck/card

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.1](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.13.0...@react-ck/provisional@3.13.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* elevation levels ([5b33ce0](https://github.com/abelflopes/react-ck/commit/5b33ce06e50e70eb51397d3a4df4dc39b3211ec0))
+* **modal:** add open prop to prevent unwanted re-rendering issues ([a316f19](https://github.com/abelflopes/react-ck/commit/a316f194e99444ab38fe4acc456fc02c27c205fd))
+* **modal:** body locked when not open ([198405c](https://github.com/abelflopes/react-ck/commit/198405c6a16fed992cfbc31e3cf32bd29572d9e1))
+* **tooltip:** not applying listeners by default ([2bc6fbb](https://github.com/abelflopes/react-ck/commit/2bc6fbb043762a2884943056dec9c0c3ec1026d6))
+
+
+
 ## [3.13.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.12.3...@react-ck/provisional@3.13.0) (2024-12-16)
 
 
