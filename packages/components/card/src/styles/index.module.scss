@@ -59,7 +59,7 @@
 
 @each $key in map.keys(variables.$card-spacings) {
   .spacing_#{$key} {
-    @include shared.spacing($key);
+    @include shared.card-spacing($key);
   }
 }
 
@@ -67,7 +67,7 @@
 
 @each $key in map.keys(variables.$card-spacings) {
   .border_radius_#{$key} {
-    @include shared.border-radius($key);
+    @include shared.card-border-radius($key);
   }
 }
 

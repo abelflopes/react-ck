@@ -33,7 +33,7 @@
 
 // Spacing
 
-@mixin spacing($key) {
+@mixin card-spacing($key) {
   @include scss-utils.define-css-var(
     card,
     spacing,
@@ -43,15 +43,7 @@
 
 // Border Radius
 
-@mixin spacing($key) {
-  @include scss-utils.define-css-var(
-    card,
-    spacing,
-    scss-utils.map-get-strict(variables.$card-spacings, $key)
-  );
-}
-
-@mixin border-radius($key) {
+@mixin card-border-radius($key) {
   @include scss-utils.define-css-var(
     card,
     border-radius,
@@ -64,7 +56,7 @@
 @mixin base {
   @include text.text-base;
   @include shadow_transition;
-  @include border-radius(m);
+  @include card-border-radius(m);
 
   display: block; // force display in case of polimorphy
   box-sizing: border-box;
