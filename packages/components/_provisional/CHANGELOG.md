@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.12.3...@react-ck/provisional@3.13.0) (2024-12-16)
+
+
+### Features
+
+* **modal:** add ability to render full height ([f472ef2](https://github.com/abelflopes/react-ck/commit/f472ef2d87f8678c20fec2ed114ae4d59517d191))
+* **scrollable container:** add ability to disable functionality and styles ([b1bf8a6](https://github.com/abelflopes/react-ck/commit/b1bf8a6ca1638a25671b8ad12d2d7acf41491bb5))
+
+
+### Bug Fixes
+
+* **modal:** apply missing border radius ([c2c176d](https://github.com/abelflopes/react-ck/commit/c2c176d2ab1f66650d1ccdbb6fed989d06d27ac6))
+* **modal:** fix modal layout ([1965ada](https://github.com/abelflopes/react-ck/commit/1965ada8eee1070f416f002d912bece153bc5687))
+* **scrollable container:** use black shadow ([d38d42c](https://github.com/abelflopes/react-ck/commit/d38d42c53590d33fe87551f422ed329d33ba250a))
+
+
+
 ## [3.12.3](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.12.2...@react-ck/provisional@3.12.3) (2024-12-13)
 
 **Note:** Version bump only for package @react-ck/provisional

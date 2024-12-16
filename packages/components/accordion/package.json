@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/accordion",
   "private": false,
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -29,9 +29,9 @@
     "@types/react": "^18.3.11"
   },
   "dependencies": {
-    "@react-ck/collapse": "^1.3.1",
-    "@react-ck/list": "^1.2.30",
-    "@react-ck/theme": "^1.12.0"
+    "@react-ck/collapse": "^1.3.2",
+    "@react-ck/list": "^1.2.31",
+    "@react-ck/theme": "^1.12.1"
   },
   "peerDependencies": {
     "react": "^18.3.1"

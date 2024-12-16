@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.3.8...@react-ck/layers@1.3.9) (2024-12-16)
+
+**Note:** Version bump only for package @react-ck/layers
+
+
+
+
+
 ## [1.3.8](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.3.7...@react-ck/layers@1.3.8) (2024-11-22)
 
 **Note:** Version bump only for package @react-ck/layers

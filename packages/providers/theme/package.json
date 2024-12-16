@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/theme",
   "private": false,
-  "version": "1.12.0",
+  "version": "1.12.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/shared.scss",
@@ -29,6 +29,6 @@
     "react": "^18.3.1"
   },
   "dependencies": {
-    "@react-ck/scss-utils": "^1.1.12"
+    "@react-ck/scss-utils": "^1.1.13"
   }
 }

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.36](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.35...@react-ck/table@1.4.36) (2024-12-16)
+
+
+### Bug Fixes
+
+* props compatibility with table root element ([7685659](https://github.com/abelflopes/react-ck/commit/76856599beac4bd746af7b80b886bf918bce1591))
+
+
+
 ## [1.4.35](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.34...@react-ck/table@1.4.35) (2024-12-13)
 
 **Note:** Version bump only for package @react-ck/table

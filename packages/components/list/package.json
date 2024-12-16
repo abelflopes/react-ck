@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/list",
   "private": false,
-  "version": "1.2.30",
+  "version": "1.2.31",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -32,8 +32,8 @@
     "react": "^18.3.1"
   },
   "dependencies": {
-    "@react-ck/scss-utils": "^1.1.12",
-    "@react-ck/theme": "^1.12.0",
+    "@react-ck/scss-utils": "^1.1.13",
+    "@react-ck/theme": "^1.12.1",
     "classnames": "^2.3.2"
   }
 }

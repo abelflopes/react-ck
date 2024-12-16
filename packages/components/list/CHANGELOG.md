@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.31](https://github.com/abelflopes/react-ck/compare/@react-ck/list@1.2.30...@react-ck/list@1.2.31) (2024-12-16)
+
+**Note:** Version bump only for package @react-ck/list
+
+
+
+
+
 ## [1.2.30](https://github.com/abelflopes/react-ck/compare/@react-ck/list@1.2.29...@react-ck/list@1.2.30) (2024-11-22)
 
 **Note:** Version bump only for package @react-ck/list
