@@ -10,7 +10,7 @@ import { TFoot } from "../TFoot";
 import { Tr } from "../Tr";
 import { TableContext, type TableContextProps } from "../context";
 
-type TableProps = React.HTMLAttributes<HTMLDivElement> & Partial<TableContextProps>;
+type TableProps = React.HTMLAttributes<HTMLElement> & Partial<TableContextProps>;
 
 /**
  * Table is an element that visualizes a data set in rows and columns. It’s often used to embed structured data in a way that’s easy to scan.
@@ -37,7 +37,6 @@ const Table = ({
     <TableContext.Provider value={contextValue}>
       {scrollable ? (
         <ScrollableContainer
-          {...otherProps}
           className={classNames(
             styles.root,
             {
@@ -46,13 +45,14 @@ const Table = ({
             },
             className,
           )}>
-          <table className={styles.table}>{children}</table>
+          <table className={styles.table} {...otherProps}>
+            {children}
+          </table>
         </ScrollableContainer>
       ) : null}
 
       {!scrollable && (
         <div
-          {...otherProps}
           className={classNames(
             styles.root,
             {
@@ -60,7 +60,9 @@ const Table = ({
             },
             className,
           )}>
-          <table className={styles.table}>{children}</table>
+          <table className={styles.table} {...otherProps}>
+            {children}
+          </table>
         </div>
       )}
     </TableContext.Provider>
