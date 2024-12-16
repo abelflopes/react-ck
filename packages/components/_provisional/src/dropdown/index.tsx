@@ -57,7 +57,7 @@ export const Dropdown = ({
         position={position}
         anchorRef={anchorRef}
         render={({ style }) => (
-          <Layer elevation="popup">
+          <Layer elevation="overlay">
             <div
               ref={(r) => {
                 if (rootRef) rootRef.current = r;

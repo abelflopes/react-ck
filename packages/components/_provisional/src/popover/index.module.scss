@@ -5,7 +5,7 @@
 $padding-v: #{theme.get-spacing(0.5)};
 
 .container {
-  z-index: scss-utils.map-get-strict(elevation.$elevation, popup);
+  z-index: scss-utils.map-get-strict(elevation.$elevation, overlay);
   box-sizing: border-box;
   padding: #{$padding-v} 0;
 }
