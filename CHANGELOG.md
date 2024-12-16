@@ -1,3 +1,16 @@
+## [3.58.0](https://github.com/abelflopes/react-ck/compare/v3.57.0...v3.58.0) (2024-12-16)
+
+
+### Features
+
+* **react-ck:** global library package ([2689e88](https://github.com/abelflopes/react-ck/commit/2689e88bc03458e3037a9bde817369de9dc6de12))
+* **react-ck:** global library package ([0fd9473](https://github.com/abelflopes/react-ck/commit/0fd9473d075a8648cc80143819d7015cbd657c94))
+
+
+### Bug Fixes
+
+* scss export conflict ([adb556c](https://github.com/abelflopes/react-ck/commit/adb556c15327b79e8bf7b3f7e867273b36859b2a))
+
 ## [3.57.0](https://github.com/abelflopes/react-ck/compare/v3.56.0...v3.57.0) (2024-12-16)
 
 
