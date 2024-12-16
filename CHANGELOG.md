@@ -1,3 +1,27 @@
+## [3.57.0](https://github.com/abelflopes/react-ck/compare/v3.56.0...v3.57.0) (2024-12-16)
+
+
+### Features
+
+* **button:** use button type as default ([0c831af](https://github.com/abelflopes/react-ck/commit/0c831af41e23e90fb1f1f5f24ecc13fcbb9165f7))
+* **card:** detach border radius from spacing, add dedicated prop ([2f585b6](https://github.com/abelflopes/react-ck/commit/2f585b634af69bd67da9cd4408f4cf81b52671d8))
+* **react-ck:** global library package ([7f0bd75](https://github.com/abelflopes/react-ck/commit/7f0bd756c72b4efb6a2dd76323168a0de6f0b854))
+* **react-ck:** global library package ([0a03b76](https://github.com/abelflopes/react-ck/commit/0a03b76e32ad5aeca6852b529ee2b7c4cfd7b5ed))
+
+
+### Bug Fixes
+
+* elevation levels ([5b33ce0](https://github.com/abelflopes/react-ck/commit/5b33ce06e50e70eb51397d3a4df4dc39b3211ec0))
+* **modal:** add open prop to prevent unwanted re-rendering issues ([a316f19](https://github.com/abelflopes/react-ck/commit/a316f194e99444ab38fe4acc456fc02c27c205fd))
+* **modal:** body locked when not open ([198405c](https://github.com/abelflopes/react-ck/commit/198405c6a16fed992cfbc31e3cf32bd29572d9e1))
+* remove unused styles ([8fcbcad](https://github.com/abelflopes/react-ck/commit/8fcbcadb6baa267a89c4506d59610407790d0b06))
+* **tooltip:** not applying listeners by default ([2bc6fbb](https://github.com/abelflopes/react-ck/commit/2bc6fbb043762a2884943056dec9c0c3ec1026d6))
+
+
+### Code Refactoring
+
+* usage of border radius from card ([4de2910](https://github.com/abelflopes/react-ck/commit/4de2910d1fc02df6ae64fcccb9556d0c246fa91c))
+
 ## [3.56.0](https://github.com/abelflopes/react-ck/compare/v3.55.0...v3.56.0) (2024-12-16)
 
 
