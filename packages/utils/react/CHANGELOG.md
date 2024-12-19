@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.3.7...@react-ck/react-utils@1.4.0) (2024-12-19)
+
+
+### Features
+
+* **react utils:** add ref merge util ([42683b3](https://github.com/abelflopes/react-ck/commit/42683b3cf99617076eb29588fd6b6d94bf842b2f))
+
+
+
 ## [1.3.7](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.3.6...@react-ck/react-utils@1.3.7) (2024-10-09)
 
 

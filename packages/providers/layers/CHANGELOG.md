@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.10](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.3.9...@react-ck/layers@1.3.10) (2024-12-19)
+
+
+### Bug Fixes
+
+* elevation levels ([5b33ce0](https://github.com/abelflopes/react-ck/commit/5b33ce06e50e70eb51397d3a4df4dc39b3211ec0))
+* remove unused styles ([8fcbcad](https://github.com/abelflopes/react-ck/commit/8fcbcadb6baa267a89c4506d59610407790d0b06))
+
+
+
 ## [1.3.9](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.3.8...@react-ck/layers@1.3.9) (2024-12-16)
 
 **Note:** Version bump only for package @react-ck/layers

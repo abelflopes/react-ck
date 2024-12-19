@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/collapse",
   "private": false,
-  "version": "1.3.2",
+  "version": "1.3.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/shared.scss",
@@ -24,7 +24,7 @@
     "test:snapshot:update": "jest --testPathPattern=\".snapshot.*\" -u"
   },
   "dependencies": {
-    "@react-ck/icon": "^3.6.5",
+    "@react-ck/icon": "^3.6.6",
     "@react-ck/scss-utils": "^1.1.13",
     "@react-ck/theme": "^1.12.1",
     "classnames": "^2.5.1"

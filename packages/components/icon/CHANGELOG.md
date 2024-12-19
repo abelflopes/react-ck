@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.6](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@3.6.5...@react-ck/icon@3.6.6) (2024-12-19)
+
+**Note:** Version bump only for package @react-ck/icon
+
+
+
+
+
 ## [3.6.5](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@3.6.4...@react-ck/icon@3.6.5) (2024-12-16)
 
 **Note:** Version bump only for package @react-ck/icon
