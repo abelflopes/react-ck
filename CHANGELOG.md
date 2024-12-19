@@ -1,3 +1,13 @@
+## [3.59.0](https://github.com/abelflopes/react-ck/compare/v3.58.0...v3.59.0) (2024-12-19)
+
+
+### Features
+
+* **react utils:** add ref merge util ([42683b3](https://github.com/abelflopes/react-ck/commit/42683b3cf99617076eb29588fd6b6d94bf842b2f))
+* **react-ck:** global library package ([ce6ade9](https://github.com/abelflopes/react-ck/commit/ce6ade9b795bfba3cd17444fe5a07f2b9df88976))
+* **react-ck:** global library package ([d29138c](https://github.com/abelflopes/react-ck/commit/d29138c429d77d54e099c6ddcc3564d9ff6e02de))
+* **select:** add ref ([f17a707](https://github.com/abelflopes/react-ck/commit/f17a7074251b6fb93cb8c8f03741d1a3c98a91ad))
+
 ## [3.58.0](https://github.com/abelflopes/react-ck/compare/v3.57.0...v3.58.0) (2024-12-16)
 
 
