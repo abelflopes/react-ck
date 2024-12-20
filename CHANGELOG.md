@@ -1,3 +1,16 @@
+## [3.60.0](https://github.com/abelflopes/react-ck/compare/v3.59.0...v3.60.0) (2024-12-20)
+
+
+### Features
+
+* **react-ck:** global library package ([9c984a9](https://github.com/abelflopes/react-ck/commit/9c984a9f62b73f5ddc1cacf34aab668863325741))
+* **react-ck:** global library package ([620f108](https://github.com/abelflopes/react-ck/commit/620f10867666dc06361ba608775e9d70d4f1680c))
+
+
+### Bug Fixes
+
+* **form field:** allow custom id ([0a22e65](https://github.com/abelflopes/react-ck/commit/0a22e651bb9c64e63ecced8aabe1c4e9e3ea24e4))
+
 ## [3.59.0](https://github.com/abelflopes/react-ck/compare/v3.58.0...v3.59.0) (2024-12-19)
 
 
