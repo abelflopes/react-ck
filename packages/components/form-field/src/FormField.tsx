@@ -5,7 +5,7 @@ import { Text } from "@react-ck/text";
 import { FormFieldContext, type FormFieldContextProps } from "./context";
 
 export interface FormFieldProps
-  extends Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "className"> {
+  extends Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "className" | "id"> {
   /** Specifies the visual style of the form-field  */
   skin?: Exclude<FormFieldContextProps["skin"], "ghost">;
   /** Defines the structure of the form-field  */
@@ -34,16 +34,19 @@ export const FormField = ({
   validationMessage,
   children,
   className,
+  id,
   ...otherProps
 }: Readonly<FormFieldProps>): React.ReactElement => {
-  const id = React.useId();
+  const generatedId = React.useId();
+
+  const computedId = useMemo(() => id ?? generatedId, [id, generatedId]);
 
   const context = useMemo<FormFieldContextProps>(
     () => ({
       skin,
-      id,
+      id: computedId,
     }),
-    [id, skin],
+    [computedId, skin],
   );
 
   return (
@@ -62,7 +65,7 @@ export const FormField = ({
               className={styles.label}
               variation={variation === "inline" || variation === "inline-reverse" ? "p" : "small"}
               margin="none"
-              as={<label htmlFor={id}>{label}</label>}
+              as={<label htmlFor={computedId}>{label}</label>}
             />
           ) : null}
 
