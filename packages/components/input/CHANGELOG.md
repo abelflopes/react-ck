@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.29](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.4.28...@react-ck/input@1.4.29) (2024-12-20)
+
+**Note:** Version bump only for package @react-ck/input
+
+
+
+
+
 ## [1.4.28](https://github.com/abelflopes/react-ck/compare/@react-ck/input@1.4.27...@react-ck/input@1.4.28) (2024-12-19)
 
 **Note:** Version bump only for package @react-ck/input

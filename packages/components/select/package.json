@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/select",
   "private": false,
-  "version": "1.7.0",
+  "version": "1.7.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -34,9 +34,9 @@
   },
   "dependencies": {
     "@react-ck/empty-state": "^1.2.13",
-    "@react-ck/form-field": "^1.6.4",
-    "@react-ck/input": "^1.4.28",
-    "@react-ck/provisional": "^3.13.3",
+    "@react-ck/form-field": "^1.6.5",
+    "@react-ck/input": "^1.4.29",
+    "@react-ck/provisional": "^3.13.4",
     "@react-ck/react-utils": "^1.4.0",
     "@react-ck/theme": "^1.12.1",
     "classnames": "^2.3.2"
