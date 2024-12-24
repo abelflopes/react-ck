@@ -7,7 +7,12 @@ import classNames from "classnames";
 import { megeRefs, useNextRender } from "@react-ck/react-utils";
 import { EmptyState } from "@react-ck/empty-state";
 import { getChildrenData, simplifyString, valueAsArray } from "./utils";
-import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
+import {
+  type SelectProps,
+  type ChangeHandler,
+  type SelectOptionProps,
+  type SelectedValues,
+} from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "@react-ck/form-field";
 
@@ -84,6 +89,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
 
     const updateInternalValue = useCallback<ChangeHandler>(
       (value, mode) => {
+        // eslint-disable-next-line complexity
         setInternalValue((v) => {
           if (!selectMultiple && mode === "select") return value;
           else if (!selectMultiple && mode === "deselect" && allowDeselect) return undefined;
@@ -217,9 +223,10 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             onChange={(e) => {
               selectOnChange?.(e, selectedValuesList);
             }}>
-            {selectedValuesList.map((i) => (
-              <option key={i} value={i}>
-                {i}
+            <option />
+            {childrenData.map((i) => (
+              <option key={i.textContent} value={i.computedValue}>
+                {i.textContent}
               </option>
             ))}
           </select>
