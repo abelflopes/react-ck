@@ -1,3 +1,17 @@
+## [3.61.0](https://github.com/abelflopes/react-ck/compare/v3.60.0...v3.61.0) (2024-12-25)
+
+
+### Features
+
+* **layers:** allow custom classname ([2b45c09](https://github.com/abelflopes/react-ck/commit/2b45c09680bad703b72c9f1f27cbae6e7f28a53b))
+* **react-ck:** global library package ([a398f1e](https://github.com/abelflopes/react-ck/commit/a398f1ef41f5764e92b7414d5940562fa759f0cb))
+* **react-ck:** global library package ([8b69a8d](https://github.com/abelflopes/react-ck/commit/8b69a8df622c0dcff5fccd255c3a7443bccf0752))
+
+
+### Bug Fixes
+
+* **select:** show all options in DOM ([908c338](https://github.com/abelflopes/react-ck/commit/908c3388ef9885c932f714f3e1fa6e2b7b23bd1d))
+
 ## [3.60.0](https://github.com/abelflopes/react-ck/compare/v3.59.0...v3.60.0) (2024-12-20)
 
 
