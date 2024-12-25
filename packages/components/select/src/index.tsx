@@ -11,7 +11,6 @@ import {
   type SelectProps,
   type ChangeHandler,
   type SelectOptionProps,
-  type SelectedValues,
 } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "@react-ck/form-field";
