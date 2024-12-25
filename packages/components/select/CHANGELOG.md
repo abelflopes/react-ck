@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.2](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.7.1...@react-ck/select@1.7.2) (2024-12-25)
+
+
+### Bug Fixes
+
+* **select:** show all options in DOM ([908c338](https://github.com/abelflopes/react-ck/commit/908c3388ef9885c932f714f3e1fa6e2b7b23bd1d))
+
+
+
 ## [1.7.1](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.7.0...@react-ck/select@1.7.1) (2024-12-20)
 
 **Note:** Version bump only for package @react-ck/select

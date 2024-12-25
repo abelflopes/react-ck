@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.3.10...@react-ck/layers@1.4.0) (2024-12-25)
+
+
+### Features
+
+* **layers:** allow custom classname ([2b45c09](https://github.com/abelflopes/react-ck/commit/2b45c09680bad703b72c9f1f27cbae6e7f28a53b))
+
+
+
 ## [1.3.10](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.3.9...@react-ck/layers@1.3.10) (2024-12-19)
 
 
