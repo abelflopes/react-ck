@@ -14,6 +14,8 @@ exports[`snapshot Select renders correctly 1`] = `
   <select
     className="native_element"
     onChange={[Function]}
-  />
+  >
+    <option />
+  </select>
 </div>
 `;
