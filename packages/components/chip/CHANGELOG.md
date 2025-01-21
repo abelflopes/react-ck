@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.43...@react-ck/chip@1.3.0) (2025-01-21)
+
+
+### Features
+
+* **chip:** support bordered variation and icon ([babc40c](https://github.com/abelflopes/react-ck/commit/babc40ca3fa966f820fe28ad371683e1e832b8a4))
+
+
+
 ## [1.2.43](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.2.42...@react-ck/chip@1.2.43) (2024-12-19)
 
 **Note:** Version bump only for package @react-ck/chip

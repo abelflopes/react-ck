@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.41...@react-ck/table@1.5.0) (2025-01-21)
+
+
+### Features
+
+* **table:** add compact spacing variation ([8c09865](https://github.com/abelflopes/react-ck/commit/8c09865849a78a764d59e423aba081c8944ccdc3))
+
+
+
 ## [1.4.41](https://github.com/abelflopes/react-ck/compare/@react-ck/table@1.4.40...@react-ck/table@1.4.41) (2024-12-25)
 
 **Note:** Version bump only for package @react-ck/table

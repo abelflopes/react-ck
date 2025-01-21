@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.13.5...@react-ck/provisional@4.0.0) (2025-01-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **snackbar:** use duration map instead of open value
+
+### Features
+
+* create flex component ([45225bd](https://github.com/abelflopes/react-ck/commit/45225bdae2c96b57fb5ef3441dfcd89d85132aaa))
+* **menu:** add bordered variation & negative skin ([c6baf7e](https://github.com/abelflopes/react-ck/commit/c6baf7ee536d223b3e7dca39d9526326ddbe27e4))
+
+
+### Bug Fixes
+
+* **breadcrumbs:** align icon ([3cbade4](https://github.com/abelflopes/react-ck/commit/3cbade4a2709da8e8aefe4a738d931eb66e7d609))
+
+
+### Code Refactoring
+
+* **snackbar:** use duration map instead of open value ([82ebe37](https://github.com/abelflopes/react-ck/commit/82ebe37f8f7241ab9d6e909a93eaee5241a13e7e))
+
+
+
 ## [3.13.5](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.13.4...@react-ck/provisional@3.13.5) (2024-12-25)
 
 **Note:** Version bump only for package @react-ck/provisional

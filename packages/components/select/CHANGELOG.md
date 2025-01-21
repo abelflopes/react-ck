@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.7.2...@react-ck/select@1.8.0) (2025-01-21)
+
+
+### Features
+
+* **select:** support disabled ([38db001](https://github.com/abelflopes/react-ck/commit/38db001b82b4c8036779d28735120669e26b4930))
+
+
+
 ## [1.7.2](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.7.1...@react-ck/select@1.7.2) (2024-12-25)
 
 
