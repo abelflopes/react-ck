@@ -19,6 +19,8 @@
   }
 }
 
+// Root
+
 .root {
   @include scss-utils.define-css-var(table, border-color, transparent);
 
@@ -26,6 +28,8 @@
   border: solid scss-utils.get-css-var(spacing, border) scss-utils.get-css-var(table, border-color);
   border-radius: theme.get-spacing(1);
 }
+
+// Scrollable
 
 .scrollable {
   max-width: 100%;
@@ -49,7 +53,9 @@
   }
 }
 
-.scrollable.bordered {
+// Skins
+
+.scrollable.skin_bordered {
   @include sticky_headers {
     &::before {
       position: absolute;
@@ -78,9 +84,21 @@
   }
 }
 
-.bordered {
+.skin_bordered {
   @include scss-utils.define-css-var(table, border-color, theme.get-color(neutral-light-2-solid));
 }
+
+// Spacing
+
+.spacing_default {
+  @include scss-utils.define-css-var(table, spacing, theme.get-spacing());
+}
+
+.spacing_compact {
+  @include scss-utils.define-css-var(table, spacing, theme.get-spacing(0.5));
+}
+
+// Table
 
 .table {
   @include text.text-base;
@@ -91,7 +109,7 @@
 
   td,
   th {
-    padding: theme.get-spacing();
+    padding: scss-utils.get-css-var(table, spacing);
 
     &:not(:last-child) {
       border-right: solid scss-utils.get-css-var(spacing, border)

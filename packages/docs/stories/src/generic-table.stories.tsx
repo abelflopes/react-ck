@@ -58,6 +58,7 @@ export default meta;
 export const Normal: Story = {
   args: {
     skin: "bordered",
+    spacing: "default",
     children,
   },
 };

@@ -21,6 +21,7 @@ type TableProps = React.HTMLAttributes<HTMLElement> & Partial<TableContextProps>
 const Table = ({
   skin = "default",
   scrollable = false,
+  spacing = "default",
   className,
   children,
   ...otherProps
@@ -29,8 +30,9 @@ const Table = ({
     () => ({
       skin,
       scrollable,
+      spacing,
     }),
-    [skin, scrollable],
+    [skin, scrollable, spacing],
   );
 
   return (
@@ -41,8 +43,9 @@ const Table = ({
             styles.root,
             {
               [`${styles.scrollable}`]: scrollable,
-              [`${styles[skin]}`]: skin !== "default",
+              [`${styles[`skin_${skin}`]}`]: skin !== "default",
             },
+            `${styles[`spacing_${spacing}`]}`,
             className,
           )}>
           <table className={styles.table} {...otherProps}>
@@ -56,8 +59,9 @@ const Table = ({
           className={classNames(
             styles.root,
             {
-              [`${styles[skin]}`]: skin !== "default",
+              [`${styles[`skin_${skin}`]}`]: skin !== "default",
             },
+            `${styles[`spacing_${spacing}`]}`,
             className,
           )}>
           <table className={styles.table} {...otherProps}>
