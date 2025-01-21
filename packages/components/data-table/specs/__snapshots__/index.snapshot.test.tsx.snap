@@ -2,7 +2,7 @@
 
 exports[`snapshot DataTable renders correctly 1`] = `
 <div
-  className="root"
+  className="root spacing_default"
 >
   <table
     className="table"
