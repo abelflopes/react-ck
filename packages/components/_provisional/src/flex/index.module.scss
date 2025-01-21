@@ -1,0 +1,26 @@
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+
+.root {
+  display: flex;
+  flex-flow: var(--direction) var(--wrap);
+  align-items: var(--align);
+  justify-content: var(--justify);
+  gap: scss-utils.get-css-var(flex, gap);
+}
+
+.spacing_s {
+  @include scss-utils.define-css-var(flex, gap, theme.get-spacing(1));
+}
+
+.spacing_m {
+  @include scss-utils.define-css-var(flex, gap, theme.get-spacing(2));
+}
+
+.spacing_l {
+  @include scss-utils.define-css-var(flex, gap, theme.get-spacing(4));
+}
+
+.spacing_none {
+  @include scss-utils.define-css-var(flex, gap, 0);
+}
