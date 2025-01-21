@@ -83,6 +83,31 @@ const children = (
       {faker.animal.type()}
     </Menu.Item>
     <Menu.Item disabled>{faker.animal.type()}</Menu.Item>
+    <Menu.Item description={faker.animal.type()}>{faker.animal.type()}</Menu.Item>
+    <Menu.Item variation="bordered" description={faker.animal.type()}>
+      {faker.animal.type()}
+    </Menu.Item>
+    <Menu.Item
+      skin="negative"
+      icon={
+        <Icon>
+          <IconUserCircle />
+        </Icon>
+      }
+      action={
+        <Button
+          skin="secondary"
+          skinVariation="ghost"
+          size="s"
+          icon={
+            <Icon>
+              <IconVerticalDots />
+            </Icon>
+          }
+        />
+      }>
+      {faker.animal.type()}
+    </Menu.Item>
     <Menu.Item>{faker.animal.type()}</Menu.Item>
     <Menu.Divider>Companies</Menu.Divider>
     <Menu.Item>{faker.company.name()}</Menu.Item>

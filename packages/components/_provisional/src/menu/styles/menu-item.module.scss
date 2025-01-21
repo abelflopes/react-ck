@@ -25,13 +25,17 @@
     color: currentcolor;
   }
 
-  &.secondary {
+  &.skin_secondary {
     background-color: theme.get-color(neutral-light-1-5);
   }
 
-  &.primary {
+  &.skin_primary {
     background-color: theme.get-color(highlight-primary-light);
     color: theme.get-color(highlight-primary);
+  }
+
+  &.skin_negative {
+    color: theme.get-color(status-negative);
   }
 
   &.disabled {
@@ -49,4 +53,12 @@
 
 .action {
   margin-left: auto;
+}
+
+.content {
+  display: block;
+}
+
+.variation_bordered {
+  border: 1px solid theme.get-color(neutral-light-1-5);
 }
