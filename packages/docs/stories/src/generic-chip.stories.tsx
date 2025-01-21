@@ -4,6 +4,8 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
 import { Chip } from "@react-ck/chip/src";
+import { Icon } from "@react-ck/icon/src";
+import { IconClose } from "@react-ck/icon/icons/IconClose";
 
 type Story = StoryObj<typeof Chip>;
 
@@ -25,5 +27,16 @@ export default meta;
 export const Component: Story = {
   args: {
     children: faker.lorem.words({ min: 1, max: 2 }),
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    ...Component.args,
+    icon: (
+      <Icon size="text">
+        <IconClose />
+      </Icon>
+    ),
   },
 };

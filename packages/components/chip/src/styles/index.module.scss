@@ -8,17 +8,28 @@
   @include text.text-variation(small);
 
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: theme.get-spacing(0.5) theme.get-spacing();
   border-radius: theme.get-spacing(2);
-  background-color: scss-utils.get-css-var(chip, background-color);
-  color: scss-utils.get-css-var(chip, color);
+  gap: theme.get-spacing();
   white-space: nowrap;
 }
 
 @each $key, $props in variables.$chip-styles {
-  .#{$key} {
+  .skin_#{$key} {
     @each $propKey, $propValue in $props {
       @include scss-utils.define-css-var(chip, $propKey, $propValue);
     }
   }
+}
+
+.variation_filled {
+  background-color: scss-utils.get-css-var(chip, background-color);
+  color: scss-utils.get-css-var(chip, color);
+}
+
+.variation_bordered {
+  border: solid 1px scss-utils.get-css-var(chip, border-color);
+  color: scss-utils.get-css-var(chip, color);
 }

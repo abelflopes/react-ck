@@ -3,26 +3,32 @@
 $chip-styles: (
   neutral: (
     background-color: theme.get-color(neutral-light-2),
+    border-color: theme.get-color(neutral-light-2),
     color: theme.get-color(neutral-dark-4),
   ),
   primary: (
     background-color: theme.get-color(highlight-primary-light),
+    border-color: theme.get-color(highlight-primary-dark),
     color: theme.get-color(highlight-primary-dark),
   ),
   negative: (
     background-color: theme.get-color(status-negative-light),
+    border-color: theme.get-color(status-negative-dark),
     color: theme.get-color(status-negative-dark),
   ),
   average: (
     background-color: theme.get-color(status-average-light),
+    border-color: theme.get-color(status-average-dark),
     color: theme.get-color(status-average-dark),
   ),
   positive: (
     background-color: theme.get-color(status-positive-light),
+    border-color: theme.get-color(status-positive),
     color: theme.get-color(status-positive),
   ),
   info: (
     background-color: theme.get-color(status-info-light),
+    border-color: theme.get-color(status-info),
     color: theme.get-color(status-info),
   ),
 );

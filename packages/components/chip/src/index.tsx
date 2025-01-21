@@ -5,6 +5,12 @@ import React from "react";
 export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Specifies the visual style of the chip  */
   skin?: "neutral" | "primary" | "negative" | "average" | "positive" | "info";
+  variation?: "filled" | "bordered";
+  /**
+   * Content slot to receive an icon.
+   * This can be any valid React node, allowing integration of icons or custom SVG components.
+   */
+  icon?: React.ReactNode;
 }
 
 /**
@@ -16,11 +22,22 @@ export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 export const Chip = ({
   skin = "neutral",
+  variation = "filled",
+  icon,
   children,
   className,
   ...otherProps
 }: Readonly<ChipProps>): React.ReactElement => (
-  <span {...otherProps} className={classNames(styles.root, styles[skin], className)}>
+  <span
+    {...otherProps}
+    className={classNames(
+      styles.root,
+      styles[`skin_${skin}`],
+      styles[`variation_${variation}`],
+      className,
+    )}>
+    {icon}
+
     {children}
   </span>
 );
