@@ -88,3 +88,10 @@ export const WithFormField: Story = {
   ],
   args,
 };
+
+export const Disabled: Story = {
+  args: {
+    ...args,
+    disabled: true,
+  },
+};

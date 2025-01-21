@@ -7,11 +7,7 @@ import classNames from "classnames";
 import { megeRefs, useNextRender } from "@react-ck/react-utils";
 import { EmptyState } from "@react-ck/empty-state";
 import { getChildrenData, simplifyString, valueAsArray } from "./utils";
-import {
-  type SelectProps,
-  type ChangeHandler,
-  type SelectOptionProps,
-} from "./types";
+import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "@react-ck/form-field";
 
@@ -42,6 +38,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       displayValueFormatter,
       allowDeselect = true,
       required,
+      disabled,
       ...props
     },
     ref,
@@ -194,11 +191,12 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
           {...props}
           ref={rootElRef}
           role="button"
-          tabIndex={0}
+          tabIndex={disabled ? undefined : 0}
           className={classNames(
             styles.root,
             styles[`skin_${computedSkin}`],
             formFieldContext === undefined && styles.standalone,
+            disabled && styles.disabled,
             className,
           )}
           onFocus={(e) => {
@@ -217,6 +215,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             multiple={selectMultiple}
             defaultValue={defaultValue}
             required={required}
+            disabled={disabled}
             value={internalValue}
             className={styles.native_element}
             onChange={(e) => {

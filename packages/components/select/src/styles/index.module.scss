@@ -55,3 +55,7 @@
   pointer-events: none;
   z-index: 1;
 }
+
+.disabled {
+  @include theme.disabled;
+}

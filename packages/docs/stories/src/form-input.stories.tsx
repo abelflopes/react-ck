@@ -30,7 +30,6 @@ export default meta;
 
 export const Normal: Story = {
   args: {
-    skin: "negative",
     required: true,
     placeholder: sentenceCase(faker.lorem.words({ min: 1, max: 2 })),
   },
@@ -83,4 +82,11 @@ export const AllInputVariations: Story = {
         placeholder: ["Some Input"],
       }),
   ],
+};
+
+export const Disabled: Story = {
+  args: {
+    ...Normal.args,
+    disabled: true,
+  },
 };

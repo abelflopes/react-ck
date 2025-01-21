@@ -29,6 +29,7 @@ export interface SelectProps
   /** Toggles ability to deselect an option */
   allowDeselect?: boolean;
   required?: boolean;
+  disabled?: boolean;
 }
 
 export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
