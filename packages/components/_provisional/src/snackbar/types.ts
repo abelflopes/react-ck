@@ -10,7 +10,7 @@ export type ElementCreator = (id: Item["id"]) => Item["element"];
 
 export interface AddOptions extends Pick<Item, "onRemove"> {
   /** Duration time for the item to be displayed */
-  duration?: number;
+  duration?: "short" | "medium" | "long";
 }
 
 export interface SnackbarContextProps {

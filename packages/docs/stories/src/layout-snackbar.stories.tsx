@@ -28,7 +28,7 @@ const MyComponent = (): React.ReactElement => {
             </Button>
           </Card>
         ),
-        { duration: 1000 },
+        { duration: "short" },
       ),
     [snackbar],
   );

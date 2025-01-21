@@ -2,10 +2,21 @@ import React, { useCallback, useMemo, useRef, useState } from "react";
 import { SnackbarContext } from "./context";
 import { generateId } from "./utils";
 import { Layer } from "@react-ck/layers";
-import { type SnackbarContextProps, type ElementCreator, type Item } from "./types";
+import {
+  type SnackbarContextProps,
+  type ElementCreator,
+  type Item,
+  type AddOptions,
+} from "./types";
 import { SnackbarItem } from "./SnackbarItem";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
+
+const durationMap = new Map<NonNullable<AddOptions["duration"]>, number>([
+  ["short", 3000],
+  ["medium", 6000],
+  ["long", 12000],
+]);
 
 export interface SnackbarProps extends React.HTMLAttributes<HTMLDivElement> {
   initialItems?: ElementCreator[];
@@ -60,7 +71,7 @@ export const Snackbar = ({
       if (options?.duration) {
         timeoutMap.current[id] = setTimeout(() => {
           remove(id);
-        }, options.duration);
+        }, durationMap.get(options.duration));
       }
 
       return id;
