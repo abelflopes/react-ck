@@ -1,3 +1,30 @@
+## [3.62.0](https://github.com/abelflopes/react-ck/compare/v3.61.0...v3.62.0) (2025-01-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **snackbar:** use duration map instead of open value
+
+### Features
+
+* **chip:** support bordered variation and icon ([babc40c](https://github.com/abelflopes/react-ck/commit/babc40ca3fa966f820fe28ad371683e1e832b8a4))
+* create flex component ([45225bd](https://github.com/abelflopes/react-ck/commit/45225bdae2c96b57fb5ef3441dfcd89d85132aaa))
+* **menu:** add bordered variation & negative skin ([c6baf7e](https://github.com/abelflopes/react-ck/commit/c6baf7ee536d223b3e7dca39d9526326ddbe27e4))
+* **react-ck:** global library package ([cc49e9e](https://github.com/abelflopes/react-ck/commit/cc49e9ede84a61ff4e5a75b2550b6036d35e7bb2))
+* **react-ck:** global library package ([c4a40b5](https://github.com/abelflopes/react-ck/commit/c4a40b52dca5012a251ddd6a2c94bf9f698a43e0))
+* **select:** support disabled ([38db001](https://github.com/abelflopes/react-ck/commit/38db001b82b4c8036779d28735120669e26b4930))
+* **table:** add compact spacing variation ([8c09865](https://github.com/abelflopes/react-ck/commit/8c09865849a78a764d59e423aba081c8944ccdc3))
+
+
+### Bug Fixes
+
+* **breadcrumbs:** align icon ([3cbade4](https://github.com/abelflopes/react-ck/commit/3cbade4a2709da8e8aefe4a738d931eb66e7d609))
+
+
+### Code Refactoring
+
+* **snackbar:** use duration map instead of open value ([82ebe37](https://github.com/abelflopes/react-ck/commit/82ebe37f8f7241ab9d6e909a93eaee5241a13e7e))
+
 ## [3.61.0](https://github.com/abelflopes/react-ck/compare/v3.60.0...v3.61.0) (2024-12-25)
 
 
