@@ -1,3 +1,5 @@
+@import "../../../library/react-ck/src/styles/index.css";
+
 body {
   font-family: sans-serif;
 }
