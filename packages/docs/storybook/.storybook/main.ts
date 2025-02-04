@@ -50,6 +50,7 @@ const config: StorybookConfig = {
   async webpackFinal(config) {
     const packagesConfig = getWebpackConfig({
       cssHashSalt: "storybook-styles",
+      extractCss: false,
     });
 
     // Add same styling rules as used on package compilation

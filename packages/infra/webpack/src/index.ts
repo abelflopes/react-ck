@@ -2,6 +2,7 @@ import { type Configuration } from "webpack";
 import nodeExternals from "webpack-node-externals";
 import path from "node:path";
 import fs from "node:fs";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 // SCSS - https://webpack.js.org/loaders/sass-loader/
 // CSS MODULES - https://webpack.js.org/loaders/css-loader/#modules
@@ -10,6 +11,7 @@ import fs from "node:fs";
 export interface WebpackConfigOptions {
   mode?: Configuration["mode"];
   cssHashSalt?: string;
+  extractCss?: boolean;
 }
 
 export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration => {
@@ -26,6 +28,8 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
   const mainNodeModulesFolder = path.resolve(process.cwd(), "../../../node_modules");
 
   if (!fs.existsSync(mainNodeModulesFolder)) throw new Error("main node js folder does not exist");
+
+  const extractCss = options?.extractCss ?? mode === "production";
 
   return {
     mode,
@@ -48,14 +52,16 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
         {
           test: /\.s[ac]ss$/iu,
           use: [
-            {
-              loader: "style-loader",
-              options: {
-                attributes: {
-                  "data-module": options?.cssHashSalt,
+            extractCss
+              ? { loader: MiniCssExtractPlugin.loader }
+              : {
+                  loader: "style-loader",
+                  options: {
+                    attributes: {
+                      "data-module": options?.cssHashSalt,
+                    },
+                  },
                 },
-              },
-            },
             {
               loader: "css-loader",
               options: {
@@ -102,5 +108,6 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
       web: true,
     },
     stats: mode === "development" ? "summary" : "normal",
+    plugins: [new MiniCssExtractPlugin()],
   };
 };
