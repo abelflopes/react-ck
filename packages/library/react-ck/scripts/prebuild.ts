@@ -1,5 +1,3 @@
-/* eslint-disable complexity */
-
 import path from "path";
 import fs from "fs";
 import { globSync } from "glob";
@@ -84,6 +82,7 @@ const parsedPackages = find.map((packagePath) => {
 
 // Throw error if files configuration does not match the dist fields
 parsedPackages.forEach(
+  // eslint-disable-next-line complexity
   ({
     packagePath,
     types,
