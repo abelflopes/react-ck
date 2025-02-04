@@ -63,7 +63,8 @@ $padding: scss-utils.get-css-var(modal, spacing);
   max-width: 100%;
 }
 
-.size_var_full-height {
+.size_var_full-height,
+.size_var_full-height .content {
   height: 100%;
 }
 

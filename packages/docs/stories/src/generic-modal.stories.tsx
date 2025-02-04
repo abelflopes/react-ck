@@ -94,3 +94,24 @@ export const BigContent: Story = {
   },
   render,
 };
+
+export const FullHeight: Story = {
+  args: {
+    size: "full",
+    sizeVariation: "full-height",
+    children: (
+      <>
+        <Modal.Header heading={faker.lorem.sentence(4)} />
+
+        <div style={{ height: "100%", backgroundColor: "pink" }}>
+          <Text margin="bottom">{faker.lorem.paragraphs(19)}</Text>
+        </div>
+
+        <Modal.Footer>
+          <Button>{faker.lorem.word()}</Button>
+        </Modal.Footer>
+      </>
+    ),
+  },
+  render,
+};
