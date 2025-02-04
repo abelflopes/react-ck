@@ -18,6 +18,8 @@ export const destTsFile = path.resolve(currPackageFolder, "src/index.ts");
 
 export const destScssFile = path.resolve(currPackageFolder, "src/styles/index.scss");
 
+export const destCssFile = path.resolve(currPackageFolder, "src/styles/index.css");
+
 export const sourceIconsFolder = path.resolve(packagesRoot, "components/icon/icons");
 
 export const destIconsFolder = path.resolve(currPackageFolder, "icons");

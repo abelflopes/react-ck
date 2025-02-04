@@ -4,6 +4,7 @@
   "version": "1.4.29",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "style": "dist/index.css",
   "files": [
     "/dist"
   ],

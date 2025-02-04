@@ -108,6 +108,6 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
       web: true,
     },
     stats: mode === "development" ? "summary" : "normal",
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [new MiniCssExtractPlugin({ filename: "index.css" })],
   };
 };
