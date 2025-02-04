@@ -1,3 +1,25 @@
+## [3.63.0](https://github.com/abelflopes/react-ck/compare/v3.62.0...v3.63.0) (2025-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* use extracted css
+
+### Features
+
+* **react-ck:** global library package ([77dbbb4](https://github.com/abelflopes/react-ck/commit/77dbbb494d74584dd670cbf37d6c019ec17058c9))
+* **react-ck:** global library package ([2287d84](https://github.com/abelflopes/react-ck/commit/2287d84c5ef0e21a5b13e9cf8fc8d6806cda3e75))
+
+
+### Bug Fixes
+
+* **modal:** full height content not stretching ([c99b380](https://github.com/abelflopes/react-ck/commit/c99b3800f798383e798c61a6601a789ac1264a0e))
+
+
+### Code Refactoring
+
+* use extracted css ([7bdd481](https://github.com/abelflopes/react-ck/commit/7bdd4815db22cf6c848eb38ec4c0115cb1b7a710))
+
 ## [3.62.0](https://github.com/abelflopes/react-ck/compare/v3.61.0...v3.62.0) (2025-01-21)
 
 
