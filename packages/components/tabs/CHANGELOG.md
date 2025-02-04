@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.2.7...@react-ck/tabs@2.0.0) (2025-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* use extracted css
+
+### Code Refactoring
+
+* use extracted css ([7bdd481](https://github.com/abelflopes/react-ck/commit/7bdd4815db22cf6c848eb38ec4c0115cb1b7a710))
+
+
+
 ## [1.2.7](https://github.com/abelflopes/react-ck/compare/@react-ck/tabs@1.2.6...@react-ck/tabs@1.2.7) (2024-12-19)
 
 **Note:** Version bump only for package @react-ck/tabs

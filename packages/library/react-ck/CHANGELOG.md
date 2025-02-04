@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.62.0...react-ck@3.0.0) (2025-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* use extracted css
+
+### Features
+
+* **react-ck:** global library package ([cc49e9e](https://github.com/abelflopes/react-ck/commit/cc49e9ede84a61ff4e5a75b2550b6036d35e7bb2))
+
+
+### Code Refactoring
+
+* use extracted css ([7bdd481](https://github.com/abelflopes/react-ck/commit/7bdd4815db22cf6c848eb38ec4c0115cb1b7a710))
+
+
+
 ## [2.62.0](https://github.com/abelflopes/react-ck/compare/react-ck@2.61.0...react-ck@2.62.0) (2025-01-21)
 
 

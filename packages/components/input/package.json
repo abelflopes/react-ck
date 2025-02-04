@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/input",
   "private": false,
-  "version": "1.4.29",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
@@ -33,9 +33,9 @@
     "react": "^18.3.1"
   },
   "dependencies": {
-    "@react-ck/form-field": "^1.6.5",
-    "@react-ck/text": "^1.7.2",
-    "@react-ck/theme": "^1.12.1",
+    "@react-ck/form-field": "^2.0.0",
+    "@react-ck/text": "^2.0.0",
+    "@react-ck/theme": "^2.0.0",
     "classnames": "^2.3.2"
   }
 }

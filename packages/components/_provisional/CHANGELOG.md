@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@4.0.0...@react-ck/provisional@5.0.0) (2025-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* use extracted css
+
+### Bug Fixes
+
+* **modal:** full height content not stretching ([c99b380](https://github.com/abelflopes/react-ck/commit/c99b3800f798383e798c61a6601a789ac1264a0e))
+
+
+### Code Refactoring
+
+* use extracted css ([7bdd481](https://github.com/abelflopes/react-ck/commit/7bdd4815db22cf6c848eb38ec4c0115cb1b7a710))
+
+
+
 ## [4.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@3.13.5...@react-ck/provisional@4.0.0) (2025-01-21)
 
 

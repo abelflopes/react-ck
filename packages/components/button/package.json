@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/button",
   "private": false,
-  "version": "1.11.1",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
@@ -35,8 +35,8 @@
   "dependencies": {
     "@react-ck/react-utils": "^1.4.0",
     "@react-ck/scss-utils": "^1.1.13",
-    "@react-ck/text": "^1.7.2",
-    "@react-ck/theme": "^1.12.1",
+    "@react-ck/text": "^2.0.0",
+    "@react-ck/theme": "^2.0.0",
     "classnames": "^2.3.2"
   }
 }

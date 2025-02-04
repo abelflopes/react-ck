@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/layers",
   "private": false,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -27,9 +27,9 @@
     "react": "^18.3.1"
   },
   "dependencies": {
-    "@react-ck/elevation": "^1.1.18",
+    "@react-ck/elevation": "^1.1.19",
     "@react-ck/react-utils": "^1.4.0",
-    "@react-ck/theme": "^1.12.1",
+    "@react-ck/theme": "^2.0.0",
     "classnames": "^2.5.1"
   }
 }
