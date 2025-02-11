@@ -223,7 +223,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             }}>
             <option />
             {childrenData.map((i) => (
-              <option key={i.textContent} value={i.computedValue}>
+              <option key={`${i.computedValue}-${i.textContent}`} value={i.computedValue}>
                 {i.textContent}
               </option>
             ))}
