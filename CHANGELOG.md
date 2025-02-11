@@ -1,3 +1,18 @@
+## [3.64.0](https://github.com/abelflopes/react-ck/compare/v3.63.0...v3.64.0) (2025-02-11)
+
+
+### Features
+
+* **react-ck:** global library package ([b97ce41](https://github.com/abelflopes/react-ck/commit/b97ce419675aa0470e292ec311792edb3746fbf6))
+
+
+### Bug Fixes
+
+* **form field:** prevent duplicated ids in form fields with multiple inputs ([3eb1d41](https://github.com/abelflopes/react-ck/commit/3eb1d4198d5b9b14ea37c68a6598e342f490f1ec))
+* **form field:** use valid generated id ([bec812d](https://github.com/abelflopes/react-ck/commit/bec812df8465f62b530f6a209cc7104e9408c7d6))
+* **select:** enable focusing from form field label click ([a1f197f](https://github.com/abelflopes/react-ck/commit/a1f197feaea9b45445857118d00c76c10fee8c7d))
+* **select:** fix duplicated children key ([89b7863](https://github.com/abelflopes/react-ck/commit/89b78633f3640129a1ff79cb59c97d667e92e4a1))
+
 ## [3.63.0](https://github.com/abelflopes/react-ck/compare/v3.62.0...v3.63.0) (2025-02-04)
 
 
