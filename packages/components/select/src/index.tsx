@@ -23,6 +23,7 @@ import { useFormFieldContext } from "@react-ck/form-field";
 const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
   (
     {
+      id,
       skin = "default",
       placeholder,
       children,
@@ -57,6 +58,8 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       () => formFieldContext?.skin ?? skin ?? "default",
       [formFieldContext?.skin, skin],
     );
+
+    const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
 
     /** Children mapped to ChildrenData object to facilitate operations */
     const childrenData = useMemo(() => getChildrenData(children), [children]);
@@ -211,6 +214,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
 
           <select
             ref={megeRefs([ref, selectRef])}
+            id={computedId}
             name={selectName}
             multiple={selectMultiple}
             defaultValue={defaultValue}
