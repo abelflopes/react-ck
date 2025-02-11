@@ -67,7 +67,8 @@ export const demo: Story = {
         <Grid.Column size={3}>
           <FormField label="Select" description="Select" skin="muted">
             <Select required>
-              <Select.Option>A</Select.Option>
+              <Select.Option value="a1">A</Select.Option>
+              <Select.Option value="a2">A</Select.Option>
               <Select.Option>B</Select.Option>
               <Select.Option>C</Select.Option>
             </Select>
@@ -154,9 +155,9 @@ export const demo: Story = {
         <Grid.Column size={12} />
         <Grid.Column size={4}>
           <FormField label="Product">
-            <Input type="text" value="BTC" />
+            <Input type="text" defaultValue="BTC" />
             -
-            <Input type="text" value="USD" />
+            <Input type="text" defaultValue="USD" />
           </FormField>
         </Grid.Column>
         <Grid.Column size={4}>
@@ -170,7 +171,7 @@ export const demo: Story = {
         <Grid.Column size={12} />
         <Grid.Column size={4}>
           <FormField label="Duration">
-            <Input type="number" value="1" />-
+            <Input type="number" defaultValue="1" />-
             <Select placeholder="Period" allowDeselect={false}>
               <Select.Option>days</Select.Option>
               <Select.Option>weeks</Select.Option>
@@ -181,7 +182,7 @@ export const demo: Story = {
         </Grid.Column>
         <Grid.Column size={4}>
           <FormField label="Duration" variation="inline">
-            <Input type="number" value="1" />-
+            <Input type="number" defaultValue="1" />-
             <Select placeholder="Period" allowDeselect={false}>
               <Select.Option>days</Select.Option>
               <Select.Option>weeks</Select.Option>
@@ -192,7 +193,7 @@ export const demo: Story = {
         </Grid.Column>
         <Grid.Column size={4}>
           <FormField label="Duration" variation="inline-reverse">
-            <Input type="number" value="1" />-
+            <Input type="number" defaultValue="1" />-
             <Select placeholder="Period" allowDeselect={false}>
               <Select.Option>days</Select.Option>
               <Select.Option>weeks</Select.Option>
