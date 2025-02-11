@@ -49,45 +49,62 @@ export const FormField = ({
     [computedId, skin],
   );
 
+  const mappedChildren = useMemo(
+    () =>
+      React.Children.map(children, (child, index) => {
+        // eslint-disable-next-line react/jsx-no-constructed-context-values -- not needed
+        const fallbackContext: FormFieldContextProps = {
+          ...context,
+          id: `${context.id}-${index}`,
+        };
+
+        return (
+          <FormFieldContext.Provider
+            value={React.isValidElement(child) && index === 0 ? context : fallbackContext}>
+            {child}
+          </FormFieldContext.Provider>
+        );
+      }),
+    [children, context],
+  );
+
   return (
-    <FormFieldContext.Provider value={context}>
-      <div
-        {...otherProps}
-        className={classNames(
-          styles.root,
-          styles[`skin_${skin}`],
-          styles[`variation_${variation}`],
-          className,
-        )}>
-        <div className={styles.main_content}>
-          {label ? (
-            <Text
-              className={styles.label}
-              variation={variation === "inline" || variation === "inline-reverse" ? "p" : "small"}
-              margin="none"
-              as={<label htmlFor={computedId}>{label}</label>}
-            />
+    <div
+      {...otherProps}
+      className={classNames(
+        styles.root,
+        styles[`skin_${skin}`],
+        styles[`variation_${variation}`],
+        className,
+      )}>
+      <div className={styles.main_content}>
+        {label ? (
+          <Text
+            className={styles.label}
+            variation={variation === "inline" || variation === "inline-reverse" ? "p" : "small"}
+            margin="none"
+            as={<label htmlFor={computedId}>{label}</label>}
+          />
+        ) : null}
+
+        <div className={styles.input_wrapper}>{mappedChildren}</div>
+      </div>
+
+      {description || validationMessage ? (
+        <div>
+          {description ? (
+            <Text variation="small" margin="none" className={styles.description}>
+              {description}
+            </Text>
           ) : null}
 
-          <div className={styles.input_wrapper}>{children}</div>
+          {validationMessage ? (
+            <Text className={styles.validation_message} variation="small" margin="none">
+              {validationMessage}
+            </Text>
+          ) : null}
         </div>
-
-        {description || validationMessage ? (
-          <div>
-            {description ? (
-              <Text variation="small" margin="none" className={styles.description}>
-                {description}
-              </Text>
-            ) : null}
-
-            {validationMessage ? (
-              <Text className={styles.validation_message} variation="small" margin="none">
-                {validationMessage}
-              </Text>
-            ) : null}
-          </div>
-        ) : null}
-      </div>
-    </FormFieldContext.Provider>
+      ) : null}
+    </div>
   );
 };
