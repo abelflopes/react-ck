@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/select@2.0.0...@react-ck/select@2.0.1) (2025-02-11)
+
+
+### Bug Fixes
+
+* **select:** enable focusing from form field label click ([a1f197f](https://github.com/abelflopes/react-ck/commit/a1f197feaea9b45445857118d00c76c10fee8c7d))
+* **select:** fix duplicated children key ([89b7863](https://github.com/abelflopes/react-ck/commit/89b78633f3640129a1ff79cb59c97d667e92e4a1))
+
+
+
 ## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@1.8.0...@react-ck/select@2.0.0) (2025-02-04)
 
 
