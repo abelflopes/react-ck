@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@2.0.0...@react-ck/form-field@2.0.1) (2025-02-11)
+
+
+### Bug Fixes
+
+* **form field:** prevent duplicated ids in form fields with multiple inputs ([3eb1d41](https://github.com/abelflopes/react-ck/commit/3eb1d4198d5b9b14ea37c68a6598e342f490f1ec))
+* **form field:** use valid generated id ([bec812d](https://github.com/abelflopes/react-ck/commit/bec812df8465f62b530f6a209cc7104e9408c7d6))
+
+
+
 ## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@1.6.5...@react-ck/form-field@2.0.0) (2025-02-04)
 
 
