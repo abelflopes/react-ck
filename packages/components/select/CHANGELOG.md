@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/select@2.0.1...@react-ck/select@2.0.2) (2025-03-24)
+
+
+### Bug Fixes
+
+* **select:** fix crash on using components inside options children ([4be8461](https://github.com/abelflopes/react-ck/commit/4be8461e6ceb3dd51472ecd133d5ef1a604b71a5))
+
+
+
 ## [2.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/select@2.0.0...@react-ck/select@2.0.1) (2025-02-11)
 
 

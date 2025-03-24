@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/data-table",
   "private": false,
-  "version": "3.1.44",
+  "version": "3.1.45",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -34,7 +34,7 @@
   "dependencies": {
     "@react-ck/icon": "^4.0.0",
     "@react-ck/react-utils": "^1.4.0",
-    "@react-ck/table": "^2.0.1",
+    "@react-ck/table": "^2.0.2",
     "change-case": "^5.4.2",
     "classnames": "^2.3.2"
   }
