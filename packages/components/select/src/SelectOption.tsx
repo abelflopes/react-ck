@@ -1,7 +1,7 @@
 import { Menu } from "@react-ck/provisional";
 import React, { useContext, useMemo } from "react";
 import { SelectContext } from "./context";
-import { componentToText, DISPLAY_NAME_ATTRIBUTE } from "@react-ck/react-utils";
+import { DISPLAY_NAME_ATTRIBUTE } from "@react-ck/react-utils";
 import { type SelectOptionProps } from "./types";
 
 const SelectOption = ({
@@ -12,17 +12,16 @@ const SelectOption = ({
 }: Readonly<SelectOptionProps>): React.ReactElement => {
   const context = useContext(SelectContext);
 
-  const childrenText = useMemo(() => componentToText(children), [children]);
+  const displayChildren = useMemo(() => children ?? value, [children, value]);
 
   const computedValue = useMemo(() => {
-    const v = value ?? childrenText;
+    if (value) return value;
 
-    if (!v || v.length === 0) throw new Error("Select option has no value");
+    if (typeof displayChildren === "string" || typeof displayChildren === "number")
+      return displayChildren.toString();
 
-    return v;
-  }, [childrenText, value]);
-
-  const displayChildren = useMemo(() => children ?? value, [children, value]);
+    throw new Error("Impossible to compute the value, please pass the value prop to option");
+  }, [value, displayChildren]);
 
   const isCurrentlySelected = useMemo(
     () => context?.selectedValues.includes(computedValue),

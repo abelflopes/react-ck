@@ -30,7 +30,7 @@ const args: SelectProps = {
       <Select.Option value="bnn">Banana</Select.Option>
       <Select.Option value="orange">Orange</Select.Option>
       <Select.Option value="lemon">Lemon 🍋</Select.Option>
-      <Select.Option>
+      <Select.Option value="mango">
         <span>
           <b>Exotic</b> mango
         </span>
