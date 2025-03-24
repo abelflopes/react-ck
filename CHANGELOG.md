@@ -1,3 +1,16 @@
+## [3.65.0](https://github.com/abelflopes/react-ck/compare/v3.64.0...v3.65.0) (2025-03-24)
+
+
+### Features
+
+* **react-ck:** global library package ([5b23e42](https://github.com/abelflopes/react-ck/commit/5b23e4244e3b966e2f155b92ee7f5f6a7f7b0553))
+* **react-ck:** global library package ([b90fab1](https://github.com/abelflopes/react-ck/commit/b90fab16608a86eb3e592f603a55954c5749540f))
+
+
+### Bug Fixes
+
+* **select:** fix crash on using components inside options children ([4be8461](https://github.com/abelflopes/react-ck/commit/4be8461e6ceb3dd51472ecd133d5ef1a604b71a5))
+
 ## [3.64.0](https://github.com/abelflopes/react-ck/compare/v3.63.0...v3.64.0) (2025-02-11)
 
 
