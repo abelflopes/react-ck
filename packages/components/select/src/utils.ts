@@ -20,7 +20,7 @@ export const getChildrenData = (children: React.ReactNode): SelectChildrenData[]
       if (!("children" in i.props || "value" in i.props))
         throw new Error("SelectOption has no computable value");
 
-      const { value } = i.props;
+      const { value, displayValue } = i.props;
       const textContent = componentToText(i);
       const computedValue = value ?? textContent;
 
@@ -30,6 +30,7 @@ export const getChildrenData = (children: React.ReactNode): SelectChildrenData[]
         selectOptionProps: i.props,
         textContent: textContent ?? value,
         computedValue,
+        displayValue,
       };
     }
 
@@ -39,6 +40,7 @@ export const getChildrenData = (children: React.ReactNode): SelectChildrenData[]
       textContent: undefined,
       computedValue: undefined,
       selectOptionProps: undefined,
+      displayValue: undefined,
     };
   });
 

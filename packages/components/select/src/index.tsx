@@ -21,6 +21,7 @@ import { useFormFieldContext } from "@react-ck/form-field";
  */
 
 const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
+  // eslint-disable-next-line complexity
   (
     {
       id,
@@ -36,7 +37,6 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       value: userValue,
       multiple: selectMultiple,
       defaultValue,
-      displayValueFormatter,
       allowDeselect = true,
       required,
       disabled,
@@ -151,19 +151,23 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
     const displayValue = useMemo(() => {
       if (selectedValuesList.length === 0) return undefined;
 
-      const displayValue = childrenData
-        .filter((i) => i.computedValue && selectedValuesList.includes(i.computedValue))
-        .map((i) => i.textContent)
-        .join(", ");
+      const displayValue = childrenData.filter(
+        (i) => i.computedValue && selectedValuesList.includes(i.computedValue),
+      );
 
-      return displayValueFormatter
-        ? displayValueFormatter({
-            selectedValues: selectedValuesList,
-            childrenData,
-            displayValue,
-          })
-        : displayValue;
-    }, [childrenData, displayValueFormatter, selectedValuesList]);
+      const node = (
+        <>
+          {displayValue.map((i, k) => (
+            <React.Fragment key={i.textContent}>
+              {i.displayValue ?? i.textContent}{" "}
+              {displayValue.length > 1 && k < displayValue.length - 1 && ", "}
+            </React.Fragment>
+          ))}
+        </>
+      );
+
+      return node;
+    }, [childrenData, selectedValuesList]);
 
     /** Actions to do when dropdown closes  */
     useEffect(() => {

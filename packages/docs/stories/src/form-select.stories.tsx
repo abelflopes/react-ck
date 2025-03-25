@@ -23,14 +23,19 @@ const meta: Meta<typeof Select> = {
 
 const args: SelectProps = {
   placeholder: "Select a fruit",
-  displayValueFormatter: ({ displayValue }) => displayValue.replace(" 🍋", ""),
   children: (
     <>
       <Select.Option value="Apple" disabled />
       <Select.Option>Guaraná</Select.Option>
       <Select.Option value="bnn">Banana</Select.Option>
       <Select.Option value="orange">Orange</Select.Option>
-      <Select.Option value="lemon">
+      <Select.Option
+        value="lemon"
+        displayValue={
+          <>
+            LEMON! <Chip>Favorite</Chip>
+          </>
+        }>
         Lemon 🍋 <Chip skin="primary">Popular</Chip> <Chip>Favorite</Chip>
       </Select.Option>
       <Select.Option value="mango">
