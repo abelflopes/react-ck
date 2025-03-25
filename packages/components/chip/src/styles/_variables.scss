@@ -8,8 +8,8 @@ $chip-styles: (
   ),
   primary: (
     background-color: theme.get-color(highlight-primary-light),
-    border-color: theme.get-color(highlight-primary-dark),
-    color: theme.get-color(highlight-primary-dark),
+    border-color: theme.get-color(highlight-primary),
+    color: theme.get-color(highlight-primary),
   ),
   negative: (
     background-color: theme.get-color(status-negative-light),

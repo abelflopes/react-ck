@@ -33,3 +33,13 @@
   border: solid 1px scss-utils.get-css-var(chip, border-color);
   color: scss-utils.get-css-var(chip, color);
 }
+
+.interaction_click {
+  box-shadow: 0 0 0 0 transparent;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 scss-utils.get-css-var(chip, border-color);
+  }
+}

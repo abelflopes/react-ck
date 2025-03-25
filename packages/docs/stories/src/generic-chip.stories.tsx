@@ -40,3 +40,10 @@ export const WithIcon: Story = {
     ),
   },
 };
+
+export const Clickable: Story = {
+  args: {
+    ...WithIcon.args,
+    interaction: "click",
+  },
+};
