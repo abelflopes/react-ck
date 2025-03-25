@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/select@2.0.2...@react-ck/select@2.1.0) (2025-03-25)
+
+
+### Features
+
+* **select:** allow custom display values ([634fee3](https://github.com/abelflopes/react-ck/commit/634fee327c13c3a89126810206fc5a20a77005b3))
+
+
+### Bug Fixes
+
+* **select:** use flexible height in multiple selection mode ([eb21603](https://github.com/abelflopes/react-ck/commit/eb2160361139d3d82b8a85a8e1ac4acea3dad856))
+
+
+
 ## [2.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/select@2.0.1...@react-ck/select@2.0.2) (2025-03-24)
 
 

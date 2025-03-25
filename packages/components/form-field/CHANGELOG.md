@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@2.0.2...@react-ck/form-field@2.0.3) (2025-03-25)
+
+
+### Bug Fixes
+
+* **select:** use flexible height in multiple selection mode ([eb21603](https://github.com/abelflopes/react-ck/commit/eb2160361139d3d82b8a85a8e1ac4acea3dad856))
+
+
+
 ## [2.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/form-field@2.0.1...@react-ck/form-field@2.0.2) (2025-03-24)
 
 **Note:** Version bump only for package @react-ck/form-field

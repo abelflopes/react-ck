@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@2.0.0...@react-ck/chip@2.1.0) (2025-03-25)
+
+
+### Features
+
+* **chip:** add click interaction ui ([a9cd78f](https://github.com/abelflopes/react-ck/commit/a9cd78fd66f873b0843896fa4a6b5288e8a5177d))
+
+
+
 ## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/chip@1.3.0...@react-ck/chip@2.0.0) (2025-02-04)
 
 

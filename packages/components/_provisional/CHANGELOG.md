@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.3](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@5.0.2...@react-ck/provisional@5.0.3) (2025-03-25)
+
+**Note:** Version bump only for package @react-ck/provisional
+
+
+
+
+
 ## [5.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/provisional@5.0.1...@react-ck/provisional@5.0.2) (2025-03-24)
 
 **Note:** Version bump only for package @react-ck/provisional
