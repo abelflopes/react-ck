@@ -4,6 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
 import { Select, type SelectProps } from "@react-ck/select/src";
 import { FormField } from "@react-ck/form-field/src";
+import { Chip } from "@react-ck/chip/src";
 
 type Story = StoryObj<typeof Select>;
 
@@ -29,7 +30,9 @@ const args: SelectProps = {
       <Select.Option>Guaraná</Select.Option>
       <Select.Option value="bnn">Banana</Select.Option>
       <Select.Option value="orange">Orange</Select.Option>
-      <Select.Option value="lemon">Lemon 🍋</Select.Option>
+      <Select.Option value="lemon">
+        Lemon 🍋 <Chip skin="primary">Popular</Chip> <Chip>Favorite</Chip>
+      </Select.Option>
       <Select.Option value="mango">
         <span>
           <b>Exotic</b> mango
@@ -61,7 +64,7 @@ export const WithSearch: Story = {
 
 export const Multiple: Story = {
   args: {
-    ...args,
+    ...WithSearch.args,
     value: ["dog", "zebra"],
     multiple: true,
   },

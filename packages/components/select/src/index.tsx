@@ -200,6 +200,8 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             styles[`skin_${computedSkin}`],
             formFieldContext === undefined && styles.standalone,
             disabled && styles.disabled,
+            selectMultiple && styles.multiple,
+            !selectMultiple && styles.single,
             className,
           )}
           onFocus={(e) => {

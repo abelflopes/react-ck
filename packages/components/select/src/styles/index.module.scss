@@ -10,9 +10,9 @@
 .root {
   @include form-field.form-field-input;
 
+  position: relative;
   min-width: 200px; // TODO: make properly
   cursor: pointer;
-  position: relative;
 }
 
 // When not inside form field, has own border, etc
@@ -23,6 +23,16 @@
   &:focus {
     @include form-field.focus-active;
   }
+}
+
+.single {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multiple {
+  @include form-field.form-field-input-flexible;
 }
 
 .menu {
@@ -47,13 +57,13 @@
 
 .native_element {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
   opacity: 0;
   pointer-events: none;
-  z-index: 1;
 }
 
 .disabled {

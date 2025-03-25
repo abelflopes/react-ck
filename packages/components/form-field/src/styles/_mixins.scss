@@ -4,9 +4,9 @@
 @use "variables";
 
 @mixin wrapper {
-  background: scss-utils.get-css-var(form-field, background-color);
   border: solid #{scss-utils.get-css-var(form-field, border-color)} variables.$form-field-border-width;
   border-radius: theme.get-spacing(1);
+  background: scss-utils.get-css-var(form-field, background-color);
 }
 
 @mixin spacing {
@@ -54,13 +54,13 @@
   @include text.text-base;
 
   width: 100%;
+  height: theme.get-spacing(4);
   box-sizing: border-box;
   border: none;
   border-radius: theme.get-spacing(1);
   background: transparent;
   color: theme.get-color(neutral-dark-5);
   outline: none;
-  height: theme.get-spacing(4);
 
   &::placeholder {
     @include placeholder;
@@ -69,4 +69,9 @@
   &:disabled {
     @include theme.disabled;
   }
+}
+
+@mixin form-field-input-flexible {
+  height: auto;
+  min-height: theme.get-spacing(4);
 }
