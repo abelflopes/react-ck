@@ -1,3 +1,18 @@
+## [3.66.0](https://github.com/abelflopes/react-ck/compare/v3.65.0...v3.66.0) (2025-03-25)
+
+
+### Features
+
+* **chip:** add click interaction ui ([a9cd78f](https://github.com/abelflopes/react-ck/commit/a9cd78fd66f873b0843896fa4a6b5288e8a5177d))
+* **react-ck:** global library package ([e5242d9](https://github.com/abelflopes/react-ck/commit/e5242d9f5d4fcba0792a3df39e89cf1f84537c97))
+* **react-ck:** global library package ([770159b](https://github.com/abelflopes/react-ck/commit/770159b7cb4ccd9e58869e8e45b9ebfa8542ef66))
+* **select:** allow custom display values ([634fee3](https://github.com/abelflopes/react-ck/commit/634fee327c13c3a89126810206fc5a20a77005b3))
+
+
+### Bug Fixes
+
+* **select:** use flexible height in multiple selection mode ([eb21603](https://github.com/abelflopes/react-ck/commit/eb2160361139d3d82b8a85a8e1ac4acea3dad856))
+
 ## [3.65.0](https://github.com/abelflopes/react-ck/compare/v3.64.0...v3.65.0) (2025-03-24)
 
 
