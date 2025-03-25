@@ -2,7 +2,7 @@
 
 exports[`snapshot Chip renders correctly 1`] = `
 <span
-  className="root skin_neutral variation_filled"
+  className="root skin_neutral variation_filled interaction_undefined"
 >
   Chip
 </span>

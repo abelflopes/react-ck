@@ -2,7 +2,7 @@
 
 exports[`snapshot Select renders correctly 1`] = `
 <div
-  className="root skin_default standalone"
+  className="root skin_default standalone single"
   onBlur={[Function]}
   onFocus={[Function]}
   role="button"
