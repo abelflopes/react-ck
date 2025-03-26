@@ -11,6 +11,7 @@ import {
   type BaseHTMLProps,
 } from "@react-ck/react-utils";
 
+/** Visual style variants for text elements */
 export type TextSkin =
   | "default"
   | "bold"
@@ -21,26 +22,44 @@ export type TextSkin =
   | "highlight-primary"
   | "negative";
 
+/** Typography variations defining the semantic level and visual hierarchy */
 export type TextVariation =
   | "banner"
   | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">
   | "small"
   | "extra-small";
 
+/**
+ * Props interface for the Text component.
+ * Provides typography styling and layout control.
+ */
 export interface TextProps<T extends HTMLTag> extends BaseHTMLProps, ConsumerPolymorphicProps<T> {
-  /** Adds margin to the text element  */
+  /** Controls vertical spacing around the text element.
+   * @default "default"
+   */
   margin?: "default" | "top" | "bottom" | "both" | "none";
-  /** Specifies the type/visual skin of text element to be rendered  */
+  /** Determines the semantic level and visual hierarchy of the text.
+   * @default "p"
+   */
   variation?: TextVariation;
-  /* Specifies the visual style variations for the text */
+  /** Applies visual styling to the text. Can be a single style or an array of styles.
+   * @default "default"
+   */
   skin?: TextSkin | TextSkin[];
 }
 
 /**
- * Text is a style component that renders a string of characters, words,
- * or paragraphs in a consistent font size and weight.
- * @param props - {@link TextProps}
- * @returns a React element
+ * Typography component for rendering text with consistent styling and semantic structure.
+ * Supports polymorphic behavior to render as different HTML elements.
+ *
+ * @example
+ * ```tsx
+ * <Text variation="h1" skin="bold">Heading</Text>
+ * <Text skin={["link", "bold"]}>Bold Link</Text>
+ * ```
+ *
+ * @param props - Component props {@link TextProps}
+ * @returns React element
  */
 
 export const Text = <T extends HTMLTag>({

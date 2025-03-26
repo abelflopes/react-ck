@@ -4,23 +4,46 @@ import { Icon } from "@react-ck/icon";
 import { IconChevronDown } from "@react-ck/icon/icons/IconChevronDown";
 import classNames from "classnames";
 
-/** Represents the possible variations for the Collapse component  */
+/** Available spacing options for vertical padding */
 type CollapseSpacing = "none" | "xs" | "s" | "m" | "l";
 
+/**
+ * Props interface for the Collapse component.
+ * Extends HTML details element props with collapsible functionality.
+ */
 export interface CollapseProps extends React.DetailsHTMLAttributes<HTMLDetailsElement> {
-  /** The content to be displayed as the header of the collapse component  */
+  /** Content displayed in the always-visible header section */
   header: NonNullable<React.ReactNode>;
+  /** Called when the collapse state changes
+   * @param open - Whether the section is expanded
+   */
   onOpenChange?(open: boolean): void;
-  /** Adds vertical spacing to the Collapse  */
+  /** Vertical padding between sections.
+   * @default "s"
+   */
   spacing?: CollapseSpacing;
+  /** Whether to keep collapsed content in DOM.
+   * @default false
+   */
   keepInDom?: boolean;
 }
 
 /**
- * Collapse is a vertically stacked list of interactive items. Each item can be "collapsed"
- * with only a summary visible or “expanded” to show the full content for that item.
- * @param props - {@link CollapseProps}
- * @returns a React element
+ * Expandable/collapsible section with header and content areas.
+ * Based on the HTML details element with enhanced styling and behavior.
+ *
+ * @example
+ * ```tsx
+ * <Collapse
+ *   header="Section Title"
+ *   onOpenChange={(open) => console.log(open)}
+ * >
+ *   <Content />
+ * </Collapse>
+ * ```
+ *
+ * @param props - Component props {@link CollapseProps}
+ * @returns React element
  */
 
 export const Collapse = ({

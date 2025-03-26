@@ -3,12 +3,20 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Skeleton } from "../skeleton";
 
+/**
+ * Props for configuring the Image component
+ */
 export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   /** Required img alt description */
   alt: string;
+  /** Whether the image should expand to fill container width. Defaults to false */
   fullWidth?: boolean;
 }
 
+/**
+ * Enhanced image component with loading state handling
+ * Shows skeleton placeholder while loading and handles errors
+ */
 export const Image = ({
   alt,
   className,

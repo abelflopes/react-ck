@@ -2,23 +2,41 @@ import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 import React from "react";
 
+/**
+ * Props interface for the Chip component.
+ * Defines visual and interactive options for compact labels.
+ */
 export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
-  /** Specifies the visual style of the chip  */
+  /** Visual theme affecting the chip's appearance.
+   * @default "neutral"
+   */
   skin?: "neutral" | "primary" | "negative" | "average" | "positive" | "info";
+  /** Style variation of the chip.
+   * @default "filled"
+   */
   variation?: "filled" | "bordered";
+  /** Interactive behavior of the chip.
+   * - click: Enables click interactions and hover states
+   */
   interaction?: "click";
-  /**
-   * Content slot to receive an icon.
-   * This can be any valid React node, allowing integration of icons or custom SVG components.
+  /** Icon element displayed before the content.
+   * Can be any valid React node (SVG, icon component, etc).
    */
   icon?: React.ReactNode;
 }
 
 /**
- * Chip is a compact label that appears beside a primary interface area which is used to
- * represent status or metadata for that area.
- * @param props - {@link ChipProps}
- * @returns a React element
+ * Compact label component for displaying metadata, filters, or selections.
+ * Supports icons and interactive states.
+ *
+ * @example
+ * ```tsx
+ * <Chip skin="primary" icon={<Icon />}>Label</Chip>
+ * <Chip skin="positive" variation="bordered">Active</Chip>
+ * ```
+ *
+ * @param props - Component props {@link ChipProps}
+ * @returns React element
  */
 
 export const Chip = ({

@@ -4,26 +4,52 @@ import classNames from "classnames";
 import { Text } from "../text";
 import { FormFieldContext, type FormFieldContextProps } from "./context";
 
+/**
+ * Props interface for the FormField component.
+ * Provides a structured container for form inputs with labels, descriptions, and validation messages.
+ */
 export interface FormFieldProps
   extends Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "className" | "id"> {
-  /** Specifies the visual style of the form-field  */
+  /** Visual theme of the form field. Affects the appearance and validation state display.
+   * @default "default"
+   */
   skin?: Exclude<FormFieldContextProps["skin"], "ghost">;
-  /** Defines the structure of the form-field  */
+  /** Layout structure of the form field. Controls the positioning of labels and inputs.
+   * - default: Label above input
+   * - inline: Label and input on same line
+   * - inline-reverse: Input before label on same line
+   * - inline-content: Custom content layout
+   * - inline-content-reverse: Reversed custom content layout
+   * @default "default"
+   */
   variation?: "default" | "inline" | "inline-reverse" | "inline-content" | "inline-content-reverse";
-  /** The main label for the form field */
+  /** Label text or element displayed for the form field.
+   * Associates with the input through generated or provided id.
+   */
   label?: React.ReactNode;
-  /** The description text for the form field */
+  /** Helper text displayed below the input to provide additional context or instructions. */
   description?: React.ReactNode;
-  /** The validation message text */
+  /** Validation feedback message displayed below the description when input needs attention. */
   validationMessage?: React.ReactNode;
 }
 
 /**
- * FormField is a component that provides a consistent layout and input peripherals.
+ * A compound component that provides a consistent layout and styling for form inputs.
+ * Handles label association, descriptions, and validation messages while providing context to child components.
  *
- * **WARNING**: This component is used as an internal utility - if you want to render an element such as an input, use its component directly
- * @param props - {@link FormFieldProps}
- * @returns a React element
+ * @example
+ * ```tsx
+ * <FormField
+ *   label="Email"
+ *   description="Enter your work email"
+ *   validationMessage={error && "Please enter a valid email"}
+ * >
+ *   <Input type="email" />
+ * </FormField>
+ * ```
+ *
+ * @param props - Component props {@link FormFieldProps}
+ * @returns React element
  */
 
 export const FormField = ({

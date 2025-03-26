@@ -3,13 +3,24 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Image } from "../image";
 
+/**
+ * Props for configuring the Avatar component
+ */
 export interface AvatarProps extends React.HTMLAttributes<HTMLElement> {
+  /** Display name used to generate initials when no image is provided */
   name: string;
+  /** Optional URL of the avatar image */
   image?: string;
+  /** Size of the avatar. Defaults to "m" */
   size?: "s" | "m" | "l";
+  /** Visual style of the avatar's shape. Defaults to "rounded" */
   skin?: "square" | "rounded";
 }
 
+/**
+ * Displays a user avatar with either an image or initials
+ * Generates initials from the first and last word of the name when no image is provided
+ */
 export const Avatar = ({
   name,
   image,

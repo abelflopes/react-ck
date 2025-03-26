@@ -2,18 +2,32 @@ import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
+/**
+ * Props interface for the Overlay component.
+ * Defines visual options for the overlay layer.
+ */
 export interface OverlayProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Specifies the visual style of the overlay  */
+  /** Visual style affecting opacity and color.
+   * @default "dark"
+   */
   skin?: "light" | "dark" | "transparent";
-  /** If set to true, will blur background */
+  /** Whether to apply background blur effect.
+   * @default true
+   */
   blur?: boolean;
 }
 
 /**
- * Overlay is a floating layer used to redirect the focus of the user to
- * somewhere else other than the content it covers.
- * @param props - {@link OverlayProps}
- * @returns a React element
+ * Semi-transparent layer component for creating focus areas.
+ * Used to overlay content and create modal-like experiences.
+ *
+ * @example
+ * ```tsx
+ * <Overlay skin="dark" blur={true} />
+ * ```
+ *
+ * @param props - Component props {@link OverlayProps}
+ * @returns React element
  */
 
 export const Overlay = ({

@@ -5,20 +5,40 @@ import { Container } from "../container";
 import { ThemeContextProvider } from "@react-ck/theme";
 import { Overlay } from "../overlay";
 
+/**
+ * Props interface for the Banner component.
+ * Defines the structure of a full-width banner with background image and actions.
+ */
 export interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** The source URL of the banner image */
+  /** URL of the background image */
   src: string;
-  /** The alternative text for the banner image */
+  /** Accessibility text for the background image */
   alt?: string;
-  /** An array of React nodes representing actions or buttons displayed on the banner */
+  /** Array of action elements (e.g., buttons) displayed at the bottom */
   actions?: React.ReactNode[];
 }
 
 /**
- * Large that appears as one of the first items on a page.
- * It’s a primary visual element that is used to focus user attention on key content or promotions
- * @param props - {@link BannerProps}
- * @returns a React element
+ * Full-width hero component for highlighting key content or promotions.
+ * Features a background image with overlay and optional action buttons.
+ *
+ * @example
+ * ```tsx
+ * <Banner
+ *   src="/hero-image.jpg"
+ *   alt="Hero background"
+ *   actions={[
+ *     <Button>Learn More</Button>,
+ *     <Button>Get Started</Button>
+ *   ]}
+ * >
+ *   <Text variation="h1">Welcome</Text>
+ *   <Text>Discover our platform</Text>
+ * </Banner>
+ * ```
+ *
+ * @param props - Component props {@link BannerProps}
+ * @returns React element
  */
 
 export const Banner = ({

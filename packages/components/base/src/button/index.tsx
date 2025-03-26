@@ -9,36 +9,54 @@ import {
 } from "@react-ck/react-utils";
 
 /**
- * Props for the Button component
+ * Props interface for the Button component
+ * @template T - HTML tag type that the button can be rendered as
  */
 export interface ButtonProps<T extends HTMLTag = "button">
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     ConsumerPolymorphicProps<T> {
-  /** Defines the color scheme of the button */
+  /** The visual theme of the button. Affects color scheme and overall appearance.
+   * @default "primary"
+   */
   skin?: "primary" | "secondary" | "negative";
-  /** Defines how the skin is applied */
+  /** Determines the visual style variation within the chosen skin.
+   * @default "default"
+   */
   skinVariation?: "default" | "muted" | "bordered" | "ghost";
-  /** Defines the scale of the button */
+  /** Controls the button's size, affecting padding and overall dimensions.
+   * @default "m"
+   */
   size?: "s" | "m" | "l" | "xs";
-  /**
-   * Content slot to receive an icon.
-   * This can be any valid React node, allowing integration of icons or custom SVG components.
+  /** Icon element to be displayed within the button.
+   * Can be any valid React node (SVG, icon component, etc).
    */
   icon?: React.ReactNode;
-  /** Defines where icon should be placed */
+  /** Determines the icon's placement relative to the button text.
+   * @default "after"
+   */
   iconPosition?: "before" | "after";
-  /** Ref for the root element */
+  /** Reference to the root button element.
+   * Useful for imperative actions or DOM measurements.
+   */
   rootRef?: React.ForwardedRef<HTMLButtonElement>;
-  /** Make button occupy whole available horizontal space */
+  /** When true, the button will expand to fill its container's width.
+   * @default false
+   */
   fullWidth?: boolean;
 }
 
 /**
- * Button is a clickable interactive element that triggers a response.
- * You can place text and icons inside of a button.
- * Buttons are often used for form submissions and to toggle elements into view.
- * @param props - {@link ButtonProps}
- * @returns a React element
+ * A versatile button component that supports multiple visual styles, sizes, and icon placements.
+ * Can be rendered as different HTML elements through polymorphic behavior.
+ *
+ * @example
+ * ```tsx
+ * <Button skin="primary" size="m">Click me</Button>
+ * <Button skin="secondary" icon={<Icon />} iconPosition="before">With Icon</Button>
+ * ```
+ *
+ * @param props - Component props {@link ButtonProps}
+ * @returns React element
  */
 
 export const Button = <T extends HTMLTag>({

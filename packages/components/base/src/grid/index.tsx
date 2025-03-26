@@ -5,21 +5,42 @@ import { GridContext, type GridContextProps } from "./context";
 import { GridColumn, type GridColumnProps } from "./Column";
 import { useResponsiveProps, type ResponsiveProps } from "../responsive";
 
+/**
+ * Base props interface for the Grid component.
+ * Defines layout options for the grid container.
+ */
 interface BaseProps extends React.HTMLAttributes<HTMLHRElement> {
-  /** The spacing between columns in the grid  */
+  /** Gap between grid columns.
+   * @default "m"
+   */
   spacing?: "s" | "m" | "l" | "none";
-  /** Whether to allow grid items to wrap to the next line  */
+  /** Whether columns can wrap to new lines.
+   * @default true
+   */
   wrap?: boolean;
-  /** Defined the alignment between columns */
+  /** Vertical alignment of columns.
+   * @default "default"
+   */
   align?: "default" | "centered" | "stretch" | "start" | "end";
 }
 
+/** Props interface combining base props with responsive behavior */
 type GridProps = BaseProps & ResponsiveProps<BaseProps>;
 
 /**
- * A container used to build layouts that align to a user-defined system of columns and rows.
- * @param props - {@link DividerProps}
- * @returns a React element
+ * Layout component for creating responsive grid systems.
+ * Supports column-based layouts with customizable spacing and alignment.
+ *
+ * @example
+ * ```tsx
+ * <Grid spacing="m" align="stretch">
+ *   <Grid.Column size={6}>Half width</Grid.Column>
+ *   <Grid.Column size={6}>Half width</Grid.Column>
+ * </Grid>
+ * ```
+ *
+ * @param props - Component props {@link GridProps}
+ * @returns React element
  */
 
 const Grid = ({ responsive, ...baseProps }: Readonly<GridProps>): React.ReactElement => {

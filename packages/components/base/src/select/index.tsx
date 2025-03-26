@@ -15,10 +15,40 @@ import { useFormFieldContext } from "../form-field";
 /* eslint-disable max-lines-per-function */
 
 /**
- * Select is a type of input that allows users to choose one or more options from a list of choices.
- * The options are hidden by default and revealed when a user interacts with an element. It shows the currently selected option in its default collapsed state.
- * @param props - {@link SelectProps}
- * @returns a React element
+ * A customizable select component that supports single and multiple selection modes.
+ * Provides searchable options, custom styling, and keyboard navigation support.
+ *
+ * Features:
+ * - Single and multiple selection modes
+ * - Optional search functionality
+ * - Customizable appearance through skins
+ * - Keyboard navigation
+ * - Form field integration
+ * - Custom option rendering
+ *
+ * @example
+ * ```tsx
+ * // Basic usage
+ * <Select placeholder="Choose an option">
+ *   <Select.Option value="1">Option 1</Select.Option>
+ *   <Select.Option value="2">Option 2</Select.Option>
+ * </Select>
+ *
+ * // With search and multiple selection
+ * <Select
+ *   multiple
+ *   search={{
+ *     placeholder: "Search options...",
+ *     emptyStateMessage: (term) => `No results for "${term}"`
+ *   }}
+ * >
+ *   <Select.Option value="1">Option 1</Select.Option>
+ *   <Select.Option value="2">Option 2</Select.Option>
+ * </Select>
+ * ```
+ *
+ * @param props - Component props {@link SelectProps}
+ * @returns React element
  */
 
 const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(

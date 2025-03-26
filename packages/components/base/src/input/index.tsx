@@ -9,14 +9,34 @@ import defaultStyles from "./styles/default.module.scss";
 import { useFormFieldContext, type FormFieldContextProps } from "../form-field";
 import classNames from "classnames";
 
+/**
+ * Props interface for the Input component.
+ * Extends native input props while providing additional styling capabilities.
+ */
 interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
+  /** Visual theme of the input field. If used within a FormField, this should be set on the FormField instead.
+   * @default "default"
+   */
   skin?: FormFieldContextProps["skin"];
 }
 
 /**
- * Input is a form element that accepts a single line of text.
- * @param props - {@link InputProps}
- * @returns a React element
+ * A form input component that supports single-line text entry with customizable styling.
+ * Can be used standalone or within a FormField component for additional functionality.
+ *
+ * @example
+ * ```tsx
+ * // Standalone usage
+ * <Input type="text" placeholder="Enter text..." />
+ *
+ * // Within FormField
+ * <FormField>
+ *   <Input type="email" />
+ * </FormField>
+ * ```
+ *
+ * @param props - Component props {@link InputProps}
+ * @returns React element
  */
 
 const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(

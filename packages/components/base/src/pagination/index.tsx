@@ -4,28 +4,23 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Button } from "../button";
 
 /**
- * PaginationComponentProps interface represents the properties specific to the Pagination
- * component and React.HTMLAttributes<HTMLDivElement>
+ * Props for configuring the Pagination component
  */
-
 interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** The number of maximum slots / pages to be displayed */
+  /** Maximum number of page buttons to display. Defaults to 7 */
   slots?: number;
-  /** The current active page */
+  /** Currently active page number. Defaults to 1 */
   current?: number;
-  /** The total number of pages */
+  /** Total number of pages */
   total: number;
-  /** Callback function triggered when the active page changes
-   * @param currentPage - The new active page */
+  /** Callback fired when active page changes */
   onPageChange?: (currentPage: number) => void;
 }
 
 /**
- * Pagination is an end user’s controls for navigating in between data that’s been broken up into multiple pages like a list or a document.
- * @param props - {@link PaginationProps}
- * @returns a React element
+ * Navigation component for paginated content
+ * Displays page buttons with first/last page shortcuts and ellipsis for large ranges
  */
-
 export const Pagination = ({
   slots = 7,
   current = 1,

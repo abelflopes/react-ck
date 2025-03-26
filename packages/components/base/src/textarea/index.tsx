@@ -3,14 +3,34 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { useFormFieldContext, type FormFieldProps } from "../form-field";
 
+/**
+ * Props interface for the Textarea component.
+ * Extends native textarea attributes with form field integration.
+ */
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  /** Visual theme of the textarea. When used within FormField, define on FormField instead.
+   * @default "default"
+   */
   skin?: FormFieldProps["skin"];
 }
 
 /**
- * Textarea is a form element that accepts multiple lines of text.
- * @param props - {@link TextareaProps}
- * @returns a React element
+ * Multi-line text input component with form field integration.
+ * Supports standalone use or within FormField context.
+ *
+ * @example
+ * ```tsx
+ * // Standalone
+ * <Textarea placeholder="Enter text..." rows={4} />
+ *
+ * // Within FormField
+ * <FormField label="Description">
+ *   <Textarea />
+ * </FormField>
+ * ```
+ *
+ * @param props - Component props {@link TextareaProps}
+ * @returns React element
  */
 
 export const Textarea = ({

@@ -9,28 +9,26 @@ import { sortData } from "./utils/sort-data";
 // TODO: add section table
 
 /**
- * DataTableProps interface represents the props for the DataTable component.
- * @typeParam T - The type of data provided for the DataTable.
+ * Props for configuring the DataTable component
+ * @typeParam T - Type of data to be displayed in the table
  */
 export interface DataTableProps<T extends TableData> extends Omit<TableProps, "children"> {
-  /** Headers mapping to define column names and their corresponding header content */
+  /** Column headers mapping. Keys correspond to data fields, values are header content */
   headers?: Partial<Record<keyof T[number], React.ReactNode>>;
-  /** Data to be displayed in the table. Should be an array of objects with keys matching the headers' keys (non-mandatory) */
+  /** Array of objects to display in the table */
   data: T;
-  /** Automatically create table headers based on the row keys */
+  /** Whether to generate headers automatically from data keys. Defaults to false */
   autoHeaders?: boolean;
-  /** Allow user to sort tale content by clicking on table headers */
+  /** Enable sorting on all or specific columns. True for all, array for specific columns */
   sortable?: boolean | Array<keyof T[number]>;
-  /** Sort callback to allow handling sorting externally instead of automatic string / number sorting */
+  /** Custom sort handler for external sorting implementation */
   onSort?: SortCallback<T>;
 }
 
 /**
- * Data table is a component that transforms a JSON structure into a table
- * @param props - {@link DataTableProps}
- * @returns a React element
+ * Renders tabular data with automatic column generation and optional sorting
+ * Supports custom headers, automatic header generation, and column-specific sorting
  */
-
 export const DataTable = <T extends TableData>({
   headers,
   data,

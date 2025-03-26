@@ -6,10 +6,12 @@ import { Button } from "../button";
 import { Icon } from "@react-ck/icon";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
 
+/** Function type for rendering custom dismiss action buttons */
 type AlertDismissActionRenderer = (
   props: BaseAlertProps & Required<Pick<BaseAlertProps, "onDismiss">>,
 ) => React.ReactNode;
 
+/** Default renderer for the dismiss action button */
 const defaultDismissActionRenderer: AlertDismissActionRenderer = ({ size, onDismiss }) => (
   <Button
     size={size === "s" ? "xs" : "s"}
@@ -26,32 +28,63 @@ const defaultDismissActionRenderer: AlertDismissActionRenderer = ({ size, onDism
   />
 );
 
+/**
+ * Base props interface for Alert components.
+ * Defines core functionality and appearance options.
+ */
 export interface BaseAlertProps {
-  /** Main title of the alert */
+  /** Title text displayed at the top of the alert */
   heading?: string;
-  /** Specifies the visual style of the alert  */
+  /** Visual theme affecting colors and emphasis.
+   * @default "neutral"
+   */
   skin?: "neutral" | "primary" | "negative" | "average" | "positive" | "info";
-  /** Structural variation of the alert */
+  /** Layout structure of the alert.
+   * @default "default"
+   */
   variation?: "default" | "compact";
-  /** Alert size */
+  /** Controls the alert's overall size.
+   * @default "m"
+   */
   size?: "s" | "m" | "l";
-  /** Close handle, also renders a close icon when defined  */
+  /** Callback for dismissing the alert. When provided, shows a close button. */
   onDismiss?: () => void;
-  /** Automatically dismiss after a given timeout */
+  /** Time in milliseconds after which the alert will auto-dismiss.
+   * Only works when onDismiss is provided.
+   */
   autoDismiss?: number;
 }
 
 export type { AlertDismissActionRenderer };
 
+/**
+ * Props interface for the Alert component.
+ * Extends base props with HTML div attributes and custom dismiss action.
+ */
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement>, BaseAlertProps {
-  /** Renderer for dismiss action */
+  /** Custom renderer for the dismiss action button.
+   * @default defaultDismissActionRenderer
+   */
   renderDismissAcion?: AlertDismissActionRenderer;
 }
 
 /**
- * Alert is a short message that provides contextual feedback in a prominent way.
- * @param props - {@link AlertProps}
- * @returns a React element
+ * Feedback component for displaying important messages or notifications.
+ * Supports multiple visual styles, auto-dismissal, and custom dismiss actions.
+ *
+ * @example
+ * ```tsx
+ * <Alert
+ *   heading="Success"
+ *   skin="positive"
+ *   onDismiss={() => setVisible(false)}
+ * >
+ *   Operation completed successfully
+ * </Alert>
+ * ```
+ *
+ * @param props - Component props {@link AlertProps}
+ * @returns React element
  */
 
 export const Alert = ({

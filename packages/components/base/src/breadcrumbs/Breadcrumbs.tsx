@@ -5,10 +5,18 @@ import { Icon } from "@react-ck/icon";
 import { IconChevronRight } from "@react-ck/icon/icons/IconChevronRight";
 import { BreadcrumbItem } from "./BreadcrumbItem";
 
+/**
+ * Props for configuring the Breadcrumbs component
+ */
 interface BreadcrumbsProps extends Omit<React.HTMLAttributes<HTMLElement>, "children"> {
+  /** Array of React nodes to be displayed as breadcrumb items, separated by chevron icons */
   items: React.ReactNode[];
 }
 
+/**
+ * Navigation component that shows the current location within a hierarchy
+ * Automatically adds chevron icons between items
+ */
 const Breadcrumbs = ({
   items,
   className,

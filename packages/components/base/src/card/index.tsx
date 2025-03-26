@@ -10,30 +10,54 @@ import {
 } from "@react-ck/react-utils";
 
 /**
- * Props for the Card component
+ * Props interface for the Card component.
+ * Defines visual and behavioral options for the card container.
  */
 interface CardProps<T extends HTMLTag = "div">
   extends React.ButtonHTMLAttributes<HTMLDivElement>,
     ConsumerPolymorphicProps<T> {
-  /** Defines card style */
+  /** Visual style of the card's container.
+   * @default "bordered"
+   */
   skin?: "bordered" | "shadowed" | "ghost";
-  /** Applies interactivity styles  */
+  /** Interactive behavior on user interaction.
+   * - hover: Visual feedback on hover
+   * - click: Visual feedback on hover and click
+   */
   interaction?: "hover" | "click";
-  /** Defines card orientation */
+  /** Layout direction of the card's content.
+   * @default "vertical"
+   */
   variation?: "vertical" | "horizontal";
-  /** Controls the amount of spacing between card limits */
+  /** Internal padding of the card's content.
+   * @default "m"
+   */
   spacing?: "s" | "m" | "l" | "none";
-  /** Controls the amount of border radius applied */
+  /** Corner radius of the card.
+   * @default same as spacing
+   */
   borderRadius?: "s" | "m" | "l" | "none";
-  /** Try to occupy available height, useful to match size with other cards  */
+  /** Makes the card fill its container's height.
+   * Useful for consistent heights in grid layouts.
+   * @default false
+   */
   fullHeight?: boolean;
 }
 
 /**
- * Card is a content container that represents a single object and related actions.
- * For example, an article or task.
- * @param props - {@link React.HTMLAttributes}
- * @returns a React element
+ * Container component for grouping related content and actions.
+ * Supports images, interactive states, and flexible layouts.
+ *
+ * @example
+ * ```tsx
+ * <Card skin="shadowed" interaction="hover">
+ *   <Card.Image src="image.jpg" alt="Card image" />
+ *   <Text>Card content</Text>
+ * </Card>
+ * ```
+ *
+ * @param props - Component props {@link CardProps}
+ * @returns React element
  */
 
 const Card = <T extends HTMLTag>({

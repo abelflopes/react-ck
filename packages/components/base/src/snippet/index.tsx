@@ -5,15 +5,22 @@ import { Flex } from "../flex";
 import { Button } from "../button";
 import { IconCopy } from "@react-ck/icon/icons/All";
 
+/**
+ * Props for configuring the Snippet component
+ */
 export interface SnippetProps extends React.HTMLAttributes<HTMLElement> {
-  /** Actions to be displayed in the top right corner */
+  /** Custom actions displayed in the top right corner */
   actions?: React.ReactNode;
   /** Whether to show the copy button. Defaults to true */
   showCopyButton?: boolean;
-  /** Callback fired when the copy button is clicked */
+  /** Callback fired after text is copied to clipboard */
   onCopy?: () => void;
 }
 
+/**
+ * Displays code snippets with copy functionality
+ * Supports custom actions and automatic clipboard copying
+ */
 export const Snippet = ({
   className,
   children,

@@ -3,26 +3,23 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
 /**
- * Props for the EmptyState component
+ * Props for configuring the EmptyState component
  */
 export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Sets how the component occupies the vertical space, "full" will make it full height */
+  /** Vertical space configuration. Defaults to "full" */
   size?: "full" | "m" | "square";
-  /** Sets color styles */
+  /** Visual theme. Defaults to "default" */
   skin?: "default" | "alt";
-  /** Content to place spaced before children */
+  /** Content rendered above the main content */
   before?: React.ReactNode;
-  /** Content to place spaced after children */
+  /** Content rendered below the main content */
   after?: React.ReactNode;
 }
 
 /**
- * The Empty State component serves as a crucial element in React applications,
- * providing a clean and user-friendly experience when no content is available.
- * @param props - {@link EmptyStateProps}
- * @returns a React element
+ * Placeholder for empty or zero-state content areas
+ * Supports flexible layouts with optional content above and below
  */
-
 export const EmptyState = ({
   size = "full",
   skin = "default",

@@ -5,10 +5,18 @@ import { Overlay, type OverlayProps } from "../overlay";
 import { Spinner } from "../spinner";
 import { OverlaySpinnerContainer } from "./Container";
 
+/**
+ * Props for configuring the OverlaySpinner component
+ */
 interface OverlaySpinnerProps extends OverlayProps {
+  /** Whether the spinner is visible. Defaults to true */
   active?: boolean;
 }
 
+/**
+ * Loading indicator that covers its container with a light overlay
+ * Provides Container subcomponent for relative positioning context
+ */
 const OverlaySpinner = ({
   active = true,
   className,

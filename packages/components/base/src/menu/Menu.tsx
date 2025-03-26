@@ -10,6 +10,10 @@ import {
   type HTMLTag,
 } from "@react-ck/react-utils";
 
+/**
+ * Props interface for the Menu component.
+ * Combines HTML attributes, polymorphic behavior, and menu context options.
+ */
 type MenuProps<T extends HTMLTag = "ul"> = React.HTMLAttributes<HTMLElement> &
   ConsumerPolymorphicProps<T> &
   Partial<MenuContextProps>;
@@ -17,6 +21,22 @@ type MenuProps<T extends HTMLTag = "ul"> = React.HTMLAttributes<HTMLElement> &
 // TODO: add a11y https://react.dev/reference/react-dom/createPortal#rendering-a-dock-dialog-with-a-portal
 // TODO: keyboard nav / focus
 
+/**
+ * Container component for organizing menu items in a vertical or horizontal layout.
+ * Supports polymorphic rendering and provides context for menu items.
+ *
+ * @example
+ * ```tsx
+ * <Menu>
+ *   <Menu.Item>Option 1</Menu.Item>
+ *   <Menu.Divider />
+ *   <Menu.Item>Option 2</Menu.Item>
+ * </Menu>
+ * ```
+ *
+ * @param props - Component props {@link MenuProps}
+ * @returns React element
+ */
 const Menu = <T extends HTMLTag>({
   as,
   variation = menuContextDefaults.variation,

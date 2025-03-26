@@ -14,24 +14,38 @@ import { readFileList } from "./utils/read-file";
 // TODO: add overlay loader
 // TODO: add uploaded files feedback
 
+/**
+ * Props for configuring the FileUploader component
+ */
 export interface FileUploaderProps
   extends Omit<React.HTMLAttributes<HTMLElement>, "onChange" | "onProgress"> {
+  /** Visual style of the uploader. Defaults to "default" */
   skin?: "default" | "negative" | "disabled";
+  /** Layout variation of the uploader. Defaults to "default" */
   variation?: "default" | "square";
+  /** Optional icon to display */
   icon?: React.ReactNode;
+  /** Optional description text */
   description?: React.ReactNode;
+  /** Props passed to the file input element */
   inputProps?: Omit<React.InputHTMLAttributes<HTMLInputElement>, "type">;
+  /** Props passed to the button element when in icon-only mode */
   buttonProps?: ButtonProps;
-  /** The validation message text */
+  /** Validation message displayed below the uploader */
   validationMessage?: React.ReactNode;
+  /** Callback fired when files are selected */
   onChange?: (
     e: React.ChangeEvent<HTMLInputElement>,
     fileList: ReturnType<typeof readFileList>,
   ) => void;
+  /** Callback fired during file reading progress */
   onProgress?: Parameters<typeof readFileList>[1];
 }
 
-// eslint-disable-next-line complexity -- TODO: fix
+/**
+ * File input component with drag and drop support
+ * Supports icon-only and descriptive layouts with validation
+ */
 export const FileUploader = ({
   skin = "default",
   variation = "default",

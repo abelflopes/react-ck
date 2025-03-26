@@ -5,17 +5,28 @@ import { PositionEngine, type PositionEngineProps } from "../position-engine";
 import { Card } from "../card";
 import classNames from "classnames";
 
+/**
+ * Props for configuring the Tooltip component
+ */
 export interface TooltipProps {
+  /** Reference to the element that triggers the tooltip */
   anchor: PositionEngineProps["anchorRef"];
+  /** Preferred position of the tooltip relative to the anchor. Defaults to "auto" */
   position?: PositionEngineProps["position"];
+  /** Content to display inside the tooltip */
   children?: React.ReactNode;
   /**
-   * The tooltip will open/close on hover by default,
-   * if you pass true/false, this behavior will be overridden and should be managed by the consumer
+   * Controls tooltip visibility
+   * @default undefined - tooltip opens/closes on hover
+   * When true/false, hover behavior is disabled and visibility must be managed externally
    */
   open?: boolean;
 }
 
+/**
+ * Displays floating content when hovering over or focusing an element
+ * Uses PositionEngine for automatic positioning and Layer for proper stacking
+ */
 export const Tooltip = ({
   anchor,
   position = "auto",

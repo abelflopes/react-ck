@@ -2,21 +2,39 @@ import classNames from "classnames";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 
+/**
+ * Data about the container's scroll state in all directions
+ */
 interface ScrollableContainerScrollData {
+  /** Whether content is scrolled from the left edge */
   left: boolean;
+  /** Whether content can be scrolled to the right */
   right: boolean;
+  /** Whether content is scrolled from the top edge */
   top: boolean;
+  /** Whether content can be scrolled to the bottom */
   bottom: boolean;
 }
 
+/**
+ * Props for configuring the ScrollableContainer component
+ */
 export interface ScrollableContainerProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> {
+  /** Whether to show horizontal scroll indicators. Defaults to true */
   horizontal?: boolean;
+  /** Callback fired when scroll position changes */
   onChange?: (data: ScrollableContainerScrollData) => void;
+  /** Whether scroll detection is active. Defaults to true */
   enabled?: boolean;
+  /** Whether to apply scroll indicator styles. Defaults to true */
   applyStyles?: boolean;
 }
 
+/**
+ * Container that adds scroll indicators when content overflows
+ * Tracks scroll position and provides visual feedback through shadows
+ */
 export const ScrollableContainer = ({
   horizontal = true,
   className,

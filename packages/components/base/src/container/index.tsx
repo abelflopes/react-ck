@@ -3,25 +3,55 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { useResponsiveProps, type ResponsiveProps } from "../responsive";
 
-/** Represents the possible variations for the Container component  */
+/** Available spacing options for container padding */
 type ContainerSpacing = "none" | "s" | "m" | "l" | "xl";
 
+/**
+ * Base props interface for Container component.
+ * Defines sizing and spacing options.
+ */
 interface BaseProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Container maximum width */
+  /** Maximum width constraint of the container.
+   * @default "l"
+   */
   size?: "s" | "m" | "l" | "xl";
-  /** Adds horizontal spacing to the container  */
+  /** Horizontal padding on both sides.
+   * @default "m"
+   */
   spacingX?: ContainerSpacing;
-  /** Adds vertical spacing to the container  */
+  /** Vertical padding on top and bottom.
+   * @default "none"
+   */
   spacingY?: ContainerSpacing;
 }
 
+/** Props interface combining base props with responsive behavior */
 export type ContainerProps = BaseProps & ResponsiveProps<BaseProps>;
 
 /**
- * A wrapper used to build limit the with of given content, provide spacing and
- * alignment with the rest of the layout.
- * @param props - {@link ContainerProps}
- * @returns a React element
+ * Layout component that provides consistent width constraints and spacing.
+ * Supports responsive adjustments to size and padding.
+ *
+ * @example
+ * ```tsx
+ * <Container size="m" spacingY="l">
+ *   <Content />
+ * </Container>
+ *
+ * // With responsive props
+ * <Container
+ *   size="m"
+ *   responsive={{
+ *     s: { size: "s", spacingX: "s" },
+ *     l: { size: "l", spacingX: "l" }
+ *   }}
+ * >
+ *   <Content />
+ * </Container>
+ * ```
+ *
+ * @param props - Component props {@link ContainerProps}
+ * @returns React element
  */
 
 export const Container = ({

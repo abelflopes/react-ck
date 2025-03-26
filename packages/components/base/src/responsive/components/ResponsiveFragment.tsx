@@ -3,11 +3,20 @@ import { type ResponsiveTarget, type EnabledBreakpointsMapping } from "../types"
 import { useBreakpoints } from "../hooks/breakpoints";
 import { eachBreakpoint } from "../utils";
 
+/**
+ * Props for configuring the ResponsiveFragment component
+ */
 export interface ResponsiveFragmentProps extends Partial<EnabledBreakpointsMapping> {
+  /** Element to measure for breakpoints. Defaults to "viewport" */
   target?: ResponsiveTarget;
+  /** Content to show/hide based on breakpoints */
   children?: React.ReactNode;
 }
 
+/**
+ * Conditionally renders content based on breakpoints
+ * Supports viewport or element-based breakpoint detection
+ */
 export const ResponsiveFragment = ({
   target = "viewport",
   children,

@@ -4,18 +4,20 @@ import React from "react";
 import { Icon, type IconProps } from "@react-ck/icon";
 import { IconSpinner } from "@react-ck/icon/icons/IconSpinner";
 
+/**
+ * Props for configuring the Spinner component
+ */
 export interface SpinnerProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, "children"> {
+  /** Size of the spinner icon. Defaults to "xl" */
   size?: IconProps["size"];
+  /** Visual theme of the spinner. Defaults to "primary" */
   skin?: "text" | "primary";
 }
 
 /**
- * Spinner is a visual indicator that shows the status of an ongoing process happening in the background.
- * It’s often used to communicate that the user has to wait before the interface is ready for interaction.
- * @param props - {@link SpinnerProps}
- * @returns a React element
+ * Animated loading indicator for async operations
+ * Supports different sizes and themes for various contexts
  */
-
 export const Spinner = ({
   size = "xl",
   skin = "primary",

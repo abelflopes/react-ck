@@ -2,25 +2,36 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import styles from "./styles/index.module.scss";
 
+/**
+ * Configuration for a single tab item
+ */
 export interface TabsItem {
+  /** Unique identifier for the tab */
   id: string;
+  /** Content displayed in the tab button */
   heading: NonNullable<React.ReactNode>;
+  /** Optional content displayed when tab is active */
   content?: NonNullable<React.ReactNode>;
 }
 
+/**
+ * Props for configuring the Tabs component
+ */
 export interface TabsProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
+  /** Array of tab items to display */
   items: TabsItem[];
+  /** ID of the currently active tab */
   activeTab?: string;
+  /** Callback when active tab changes */
   onActiveTabChange?: (id: string) => void;
+  /** Whether to keep inactive tab content in DOM. Defaults to false */
   keepInDom?: boolean;
 }
 
 /**
- * Tabs is a way to navigate between multiple views of information. It’s used to fit more information in a smaller area.
- * @param props - {@link TabsProps}
- * @returns a React element
+ * Navigation component for switching between related content sections
+ * Manages tab selection and content visibility
  */
-
 export const Tabs = ({
   items,
   activeTab,

@@ -7,16 +7,50 @@ import { Icon } from "@react-ck/icon";
 import { IconDocument } from "@react-ck/icon/icons/IconDocument";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
 
+/**
+ * Props interface for the Attachment component.
+ * Defines options for displaying file attachments.
+ */
 export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
+  /** Size of the attachment container.
+   * @default "m"
+   */
   size?: "m" | "l";
+  /** Visual style based on file type.
+   * @default "default"
+   */
   skin?: "default" | "pdf" | "doc";
+  /** Whether to expand to container width.
+   * @default false
+   */
   fullWidth?: boolean;
+  /** Display name of the attachment */
   name: string;
+  /** File format or extension */
   format: string;
+  /** Callback for removing the attachment */
   onRemove?: () => void;
+  /** Error message to display below the attachment */
   error?: React.ReactNode;
 }
 
+/**
+ * Component for displaying file attachments with type-specific icons.
+ * Supports removal, error states, and different file types.
+ *
+ * @example
+ * ```tsx
+ * <Attachment
+ *   name="document.pdf"
+ *   format="PDF"
+ *   skin="pdf"
+ *   onRemove={() => handleRemove()}
+ * />
+ * ```
+ *
+ * @param props - Component props {@link AttachmentProps}
+ * @returns React element
+ */
 export const Attachment = ({
   size = "m",
   skin = "default",

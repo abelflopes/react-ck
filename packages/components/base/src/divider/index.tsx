@@ -2,17 +2,18 @@ import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
+/**
+ * Props for configuring the Divider component
+ */
 export interface DividerProps extends Omit<React.HTMLAttributes<HTMLHRElement>, "children"> {
-  /** Specifies the orientation of the divider */
+  /** Orientation of the divider line. Defaults to "horizontal" */
   type?: "vertical" | "horizontal";
 }
 
 /**
- * Divider is a separator between sections of content or groups of items.
- * @param props - {@link DividerProps}
- * @returns a React element
+ * Visual separator for content sections
+ * Renders as an HR element with configurable orientation
  */
-
 export const Divider = ({
   type = "horizontal",
   className,

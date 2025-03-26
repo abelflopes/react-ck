@@ -18,10 +18,18 @@ const durationMap = new Map<NonNullable<AddOptions["duration"]>, number>([
   ["long", 12000],
 ]);
 
+/**
+ * Props for configuring the Snackbar component
+ */
 export interface SnackbarProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Initial notifications to display. Each creator function receives an ID and returns the notification content */
   initialItems?: ElementCreator[];
 }
 
+/**
+ * Displays temporary notifications at the bottom of the screen
+ * Supports timed auto-dismissal and custom remove callbacks
+ */
 export const Snackbar = ({
   initialItems,
   className,

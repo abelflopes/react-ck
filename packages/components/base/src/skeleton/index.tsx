@@ -5,20 +5,20 @@ import classNames from "classnames";
 // Styles
 import styles from "./styles/index.module.scss";
 
-// TODO: make random size / or allow choosing
-
+/**
+ * Props for configuring the Skeleton component
+ */
 interface SkeletonProps extends Omit<ComponentProps<"span">, "children"> {
+  /** Visual style of the loading placeholder. Defaults to "default" */
   variation?: "default" | "text";
 }
 
 let n = 1;
 
 /**
- * A component that renders a skeleton placeholder for loading content.
- * @param props - {@link SkeletonProps}
- * @returns
+ * Loading placeholder with animated shimmer effect
+ * Supports text and default variations for different content types
  */
-
 export const Skeleton = ({
   variation = "default",
   className,

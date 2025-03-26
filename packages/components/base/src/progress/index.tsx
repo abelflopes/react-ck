@@ -5,22 +5,23 @@ import classNames from "classnames";
 // Styles
 import styles from "./styles/index.module.scss";
 
+/**
+ * Props for configuring the Progress component
+ */
 export interface ProgressProps
   extends Omit<React.ProgressHTMLAttributes<HTMLProgressElement>, "children"> {
-  /** Minimum value - corresponds to 0% progress */
+  /** Minimum value - corresponds to 0% progress. Defaults to 0 */
   min?: number;
-  /** Maximum value - corresponds to 100% progress */
+  /** Maximum value - corresponds to 100% progress. Defaults to 100 */
   max?: number;
-  /** Current value */
+  /** Current progress value between min and max */
   value: number;
 }
 
 /**
- * Progress is a visual indicator that shows the users progress through a series of steps. It’s often used to keep the user focussed toward completing a task.
- * @param props - {@link ProgressProps}
- * @returns
+ * Visual indicator for task or operation progress
+ * Automatically calculates percentage based on min/max range
  */
-
 export const Progress = ({
   min = 0,
   max = 100,

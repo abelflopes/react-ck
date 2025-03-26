@@ -5,13 +5,24 @@ import { ScrollableContainer } from "../scrollable-container";
 import { Card } from "../card";
 import styles from "./index.module.scss";
 
+/**
+ * Props for configuring the Popover component
+ */
 export interface PopoverProps {
+  /** Reference to the element that triggers the popover */
   anchor: PositionEngineProps["anchorRef"];
+  /** Preferred position relative to anchor. Defaults to "auto" */
   position?: PositionEngineProps["position"];
+  /** Content to display inside the popover */
   children?: React.ReactNode;
+  /** Whether the popover is visible */
   open?: boolean;
 }
 
+/**
+ * Floating card that displays content relative to an anchor element
+ * Supports automatic positioning and scrollable content
+ */
 export const Popover = ({
   anchor,
   position = "auto",

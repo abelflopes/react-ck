@@ -6,10 +6,18 @@ import { IconChevronUp } from "@react-ck/icon/icons/IconChevronUp";
 import { IconChevronDown } from "@react-ck/icon/icons/IconChevronDown";
 import styles from "./index.module.scss";
 
+/**
+ * Props for configuring a table header cell
+ */
 export interface ThProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
+  /** Optional sort mode to display sort indicator. When null, header is sortable but not sorted */
   sorting?: SortMode | null;
 }
 
+/**
+ * Table header cell component with optional sorting functionality
+ * Displays sort direction indicators when sorting is enabled
+ */
 export const Th = ({
   sorting,
   className,
