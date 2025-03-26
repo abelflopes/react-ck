@@ -8,7 +8,7 @@
   "sass": "src/shared.scss",
   "files": [
     "/dist",
-    "/src/shared.scss"
+    "/src"
   ],
   "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/base#readme",
   "repository": {
