@@ -1,0 +1,9 @@
+---
+description: 
+globs: **/*.ts,**/*.tsx
+alwaysApply: false
+---
+- add tsdoc/typedoc commments to relevant entities
+- update existing commands and ensure they are in sync with code
+- only add examples if strictly needed
+- keep descriptions not too long when possible, clear and objective to its purpose
