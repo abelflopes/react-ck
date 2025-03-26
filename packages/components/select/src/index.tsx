@@ -21,7 +21,6 @@ import { useFormFieldContext } from "@react-ck/form-field";
  */
 
 const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
-  // eslint-disable-next-line complexity
   (
     {
       id,
@@ -204,7 +203,6 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             styles[`skin_${computedSkin}`],
             formFieldContext === undefined && styles.standalone,
             disabled && styles.disabled,
-            selectMultiple && styles.multiple,
             !selectMultiple && styles.single,
             className,
           )}

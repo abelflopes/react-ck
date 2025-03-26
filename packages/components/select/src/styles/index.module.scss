@@ -31,10 +31,6 @@
   white-space: nowrap;
 }
 
-.multiple {
-  @include form-field.form-field-input-flexible;
-}
-
 .menu {
   > :first-child {
     border-top-left-radius: theme.get-spacing(1);

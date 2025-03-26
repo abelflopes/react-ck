@@ -28,6 +28,7 @@ export const demo: Story = {
   parameters: {
     layout: "padded",
   },
+
   render: (): React.ReactElement => (
     <form>
       <Grid align="centered" spacing="l">

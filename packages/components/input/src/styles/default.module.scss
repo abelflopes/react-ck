@@ -5,6 +5,11 @@
 
 .root {
   @include form-field.form-field-input;
+
+  &[type="date"] {
+    // fix height difference between other input types
+    line-height: normal;
+  }
 }
 
 // When not inside form field, has own border, etc

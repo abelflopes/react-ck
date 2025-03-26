@@ -10,7 +10,7 @@
 }
 
 @mixin spacing {
-  padding: calc(theme.get-spacing(0.75) - scss-utils.get-css-var(spacing, border))
+  padding: calc(theme.get-spacing(0.688) - scss-utils.get-css-var(spacing, border))
     theme.get-spacing(1);
 }
 
@@ -46,6 +46,8 @@
 @mixin standalone-input {
   @include wrapper;
   @include skins;
+
+  min-height: variables.$form-field-input-height;
 }
 
 // input inside form field
@@ -54,7 +56,9 @@
   @include text.text-base;
 
   width: 100%;
-  height: theme.get-spacing(4);
+  min-height: calc(
+    #{variables.$form-field-input-height} - #{variables.$form-field-border-width} * 2
+  );
   box-sizing: border-box;
   border: none;
   border-radius: theme.get-spacing(1);
@@ -69,9 +73,4 @@
   &:disabled {
     @include theme.disabled;
   }
-}
-
-@mixin form-field-input-flexible {
-  height: auto;
-  min-height: theme.get-spacing(4);
 }
