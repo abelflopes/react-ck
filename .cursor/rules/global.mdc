@@ -1,0 +1,11 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Use the same code styling as already existent in the code base
+Follow local contribution guides
+Follow same code and folder structure
+Use clean code principles
+Use SOLID coding principles
+Use separation of concerns principle

@@ -1,0 +1,8 @@
+---
+description: When building or updating existing components
+globs: 
+alwaysApply: false
+---
+- avoid importing or relying in external libs
+- reuse existing components in this codebase inside `packages/components/**`
+- use foundations from `packages/providers/**` and `packages/utils/**`
