@@ -1,3 +1,21 @@
+## [3.67.0](https://github.com/abelflopes/react-ck/compare/v3.66.0...v3.67.0) (2025-03-26)
+
+
+### Features
+
+* **react-ck:** global library package ([28f77bd](https://github.com/abelflopes/react-ck/commit/28f77bd66dfa873b697bf7478df54185691422d4))
+* **snippet:** add copy button and actions slot ([4490909](https://github.com/abelflopes/react-ck/commit/44909090cdedf2a3ae4abce1983861a2b9ea6ddf))
+
+
+### Bug Fixes
+
+* align button & form elements height ([0646cd0](https://github.com/abelflopes/react-ck/commit/0646cd0b38b517f3096ee797efdedd2b82d13d8e))
+
+
+### Code Refactoring
+
+* move all main components to base-components package ([9d5f055](https://github.com/abelflopes/react-ck/commit/9d5f055bc4cff6224da91a5da6ff372a2a362dd3))
+
 ## [3.66.0](https://github.com/abelflopes/react-ck/compare/v3.65.0...v3.66.0) (2025-03-25)
 
 
