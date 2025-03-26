@@ -1,6 +1,17 @@
 @use "@react-ck/theme";
 @use "../../text/styles/shared" as text;
 
+.container {
+  position: relative;
+}
+
+.actions {
+  position: absolute;
+  z-index: 1;
+  top: theme.get-spacing(1);
+  right: theme.get-spacing(1);
+}
+
 .root {
   @include text.text-base;
   @include text.text-variation(small);
