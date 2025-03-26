@@ -2,12 +2,9 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { generateDescribedCombinations } from "@react-ck/misc-utils";
 import { Manager } from "@react-ck/manager";
-import { Grid } from "@react-ck/grid/src";
-import { Skeleton } from "@react-ck/skeleton/src";
-import { Text, type TextProps } from "@react-ck/text/src";
+import { Grid, Skeleton, Menu, Text, type TextProps } from "@react-ck/base-components/src";
 import { capitalCase } from "change-case";
 import { faker } from "@faker-js/faker";
-import { Menu } from "@react-ck/provisional/src";
 
 type Story = StoryObj<unknown>;
 

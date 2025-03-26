@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
-import { Chip } from "@react-ck/chip/src";
+import { Chip } from "@react-ck/base-components/src";
 import { Icon } from "@react-ck/icon/src";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
 

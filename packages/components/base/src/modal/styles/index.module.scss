@@ -1,0 +1,93 @@
+@use "../../card/styles/shared" as card;
+@use "variables";
+@use "@react-ck/theme";
+@use "@react-ck/elevation";
+@use "@react-ck/scss-utils";
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+$padding: scss-utils.get-css-var(modal, spacing);
+
+.root {
+  @include scss-utils.define-css-var(modal, spacing, theme.get-spacing(3));
+
+  position: fixed !important;
+  z-index: scss-utils.map-get-strict(elevation.$elevation, overlay);
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: calc(#{$padding} * 2);
+  animation: appear 0.3s ease-in forwards;
+}
+
+// Add to document body to prevent back scrolling
+.lock_scroll {
+  overflow: hidden;
+}
+
+// Extend overlay component styles
+.clickable_overlay {
+  cursor: pointer;
+}
+
+.card {
+  @include card.base;
+  @include card.skin-shadowed;
+  @include card.card-border-radius(l);
+
+  position: relative; // Bring to front (z-index)
+  display: flex;
+  width: 100%;
+  max-height: 100%;
+  flex-direction: column;
+  cursor: default;
+}
+
+@each $key, $value in variables.$modal-sizes {
+  .size_#{$key} {
+    max-width: $value;
+  }
+}
+
+.size_full {
+  max-width: 100%;
+}
+
+.size_var_full-height,
+.size_var_full-height .content {
+  height: 100%;
+}
+
+.content {
+  padding: 0 $padding;
+}
+
+.header,
+.footer {
+  padding: $padding;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: scss-utils.get-css-var(modal, spacing);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+  gap: scss-utils.get-css-var(modal, spacing);
+}

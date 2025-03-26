@@ -2,12 +2,11 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Menu } from "@react-ck/provisional/src";
+import { Menu, Button } from "@react-ck/base-components/src";
 import { Icon } from "@react-ck/icon/src";
 import { faker } from "@faker-js/faker";
 import { IconUserCircle } from "@react-ck/icon/icons/IconUserCircle";
 import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
-import { Button } from "@react-ck/button/src";
 
 type Story = StoryObj<typeof Menu>;
 

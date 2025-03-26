@@ -4,8 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import { Textarea } from "@react-ck/textarea/src";
-import { FormField } from "@react-ck/form-field/src";
+import { Textarea, FormField } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof Textarea>;
 

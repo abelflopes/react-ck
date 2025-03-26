@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Popover } from "@react-ck/provisional/src";
-import { Button } from "@react-ck/button";
+import { Popover, Button } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof Popover>;
 

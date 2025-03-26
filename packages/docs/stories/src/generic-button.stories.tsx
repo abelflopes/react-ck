@@ -4,7 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import { Button, type ButtonProps } from "@react-ck/button/src";
+import { Button, type ButtonProps } from "@react-ck/base-components/src";
 import { Icon } from "@react-ck/icon/src";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
 import { generateAllVariations } from "./utils/generate-all-variations";

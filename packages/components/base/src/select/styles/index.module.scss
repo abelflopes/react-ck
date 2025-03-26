@@ -1,0 +1,67 @@
+@use "@react-ck/theme";
+@use "../../form-field/styles/shared" as form-field;
+
+.root {
+  @include form-field.form-field-input;
+  @include form-field.wrapper;
+  @include form-field.skins;
+}
+
+.root {
+  @include form-field.form-field-input;
+
+  position: relative;
+  min-width: 200px; // TODO: make properly
+  cursor: pointer;
+}
+
+// When not inside form field, has own border, etc
+.standalone {
+  @include form-field.standalone-input;
+  @include form-field.focus-base;
+
+  &:focus {
+    @include form-field.focus-active;
+  }
+}
+
+.single {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu {
+  > :first-child {
+    border-top-left-radius: theme.get-spacing(1);
+    border-top-right-radius: theme.get-spacing(1);
+  }
+
+  > :last-child {
+    border-bottom-left-radius: theme.get-spacing(1);
+    border-bottom-right-radius: theme.get-spacing(1);
+  }
+}
+
+.search_input {
+  outline: none !important;
+}
+
+.placeholder {
+  @include form-field.placeholder;
+}
+
+.native_element {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.disabled {
+  @include theme.disabled;
+}

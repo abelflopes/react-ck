@@ -2,11 +2,8 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { configureStory } from "@react-ck/story-config/src/index";
-import { Grid } from "@react-ck/grid/src";
-import { Card } from "@react-ck/card/src";
-import { type GridColumnProps } from "@react-ck/grid/src/Column";
-import { Text } from "@react-ck/text/src";
+import { Grid, Card, Text, type GridColumnProps } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/story-config";
 import { sentenceCase } from "change-case";
 
 type Story = StoryObj<typeof Grid>;

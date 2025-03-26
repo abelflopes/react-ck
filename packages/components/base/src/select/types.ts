@@ -1,0 +1,44 @@
+import { type InputProps } from "../input";
+import { type MenuItemProps } from "../menu";
+
+export type UserValue = string | string[] | undefined;
+
+export type SelectedValues = string[];
+
+export type ChangeHandler = (value: string, mode: "select" | "deselect") => void;
+
+export interface SelectProps
+  extends Omit<React.HTMLAttributes<HTMLElement>, "onChange" | "value" | "defaultValue"> {
+  skin?: InputProps["skin"];
+  placeholder?: InputProps["placeholder"];
+  children?: React.ReactNode;
+  search?: {
+    placeholder: string;
+    emptyStateMessage: (value: string) => React.ReactNode;
+  };
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>, selectedValues: SelectedValues) => void;
+  value?: UserValue;
+  defaultValue?: UserValue;
+  name?: React.SelectHTMLAttributes<HTMLSelectElement>["name"];
+  multiple?: React.SelectHTMLAttributes<HTMLSelectElement>["multiple"];
+  /** Toggles ability to deselect an option */
+  allowDeselect?: boolean;
+  required?: boolean;
+  disabled?: boolean;
+}
+
+export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
+  value?: string;
+  disabled?: boolean;
+  selected?: boolean;
+  displayValue?: React.ReactNode;
+}
+
+export type SelectChildrenData = {
+  isSelectOption: boolean;
+  selectOptionProps: SelectOptionProps | undefined;
+  computedValue: string | undefined;
+  textContent: string | undefined;
+  element: React.ReactNode;
+  displayValue: SelectOptionProps["displayValue"];
+};

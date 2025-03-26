@@ -1,0 +1,45 @@
+@use "@react-ck/theme";
+@use "../../text/styles/shared" as text;
+@use "@react-ck/scss-utils";
+@use "variables";
+
+.root {
+  @include text.text-base;
+  @include text.text-variation(small);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: theme.get-spacing(0.5) theme.get-spacing();
+  border-radius: theme.get-spacing(2);
+  gap: theme.get-spacing();
+  white-space: nowrap;
+}
+
+@each $key, $props in variables.$chip-styles {
+  .skin_#{$key} {
+    @each $propKey, $propValue in $props {
+      @include scss-utils.define-css-var(chip, $propKey, $propValue);
+    }
+  }
+}
+
+.variation_filled {
+  background-color: scss-utils.get-css-var(chip, background-color);
+  color: scss-utils.get-css-var(chip, color);
+}
+
+.variation_bordered {
+  border: solid 1px scss-utils.get-css-var(chip, border-color);
+  color: scss-utils.get-css-var(chip, color);
+}
+
+.interaction_click {
+  box-shadow: 0 0 0 0 transparent;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 scss-utils.get-css-var(chip, border-color);
+  }
+}

@@ -1,0 +1,86 @@
+@use "@react-ck/theme";
+@use "../../card/styles/shared" as card;
+@use "../../text/styles/shared" as text;
+
+$size: theme.get-spacing(6);
+$spacing: theme.get-spacing(1.5);
+
+.root {
+  @include card.base;
+  @include card.skin-bordered;
+  @include text.text-base;
+  @include text.text-variation(small);
+
+  position: relative;
+  display: flex;
+  min-height: $size;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $spacing;
+  gap: $spacing;
+}
+
+.full_width {
+  width: 100%;
+}
+
+.size_m {
+  padding-right: theme.get-spacing(4);
+}
+
+.size_l {
+  flex-direction: column;
+  padding: theme.get-spacing(2) theme.get-spacing(4);
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  max-width: calc(100% - #{$spacing});
+  flex-direction: column;
+}
+
+.name {
+  overflow: hidden;
+  max-height: theme.get-spacing(2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.format {
+  color: theme.get-color(neutral-dark-1);
+}
+
+.close {
+  position: absolute;
+  top: calc(#{$spacing} * 0.5);
+  right: calc(#{$spacing} * 0.5);
+}
+
+.error {
+  color: theme.get-color(status-negative);
+}
+
+.icon {
+  display: flex;
+  width: theme.get-spacing(3);
+  height: theme.get-spacing(3);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: theme.get-spacing();
+  border-radius: 50%;
+  color: theme.get-color(neutral-light-1);
+}
+
+.icon_default {
+  background-color: theme.get-color(highlight-primary);
+}
+
+.icon_doc {
+  background-color: theme.get-color(misc-3);
+}
+
+.icon_pdf {
+  background-color: theme.get-color(misc-2);
+}

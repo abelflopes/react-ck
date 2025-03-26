@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Text, type TextVariation, type TextSkin } from "@react-ck/text";
+import { Text, type TextVariation, type TextSkin } from "@react-ck/base-components/src";
 import { faker } from "@faker-js/faker";
 import { Typeset } from "@storybook/blocks";
-import { Manager } from "@react-ck/manager";
+import { Manager } from "@react-ck/manager/src";
 import { ShadowDom } from "./ShadowDom";
 
 const sampleText = faker.lorem.sentence(3);

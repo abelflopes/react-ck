@@ -1,11 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager/src";
+import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { FileUploader, type FileUploaderProps } from "@react-ck/provisional/src";
+import { FileUploader, type FileUploaderProps, Text } from "@react-ck/base-components/src";
 import { Icon } from "@react-ck/icon/src";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
-import { Text } from "@react-ck/text/src";
 
 type Story = StoryObj<typeof FileUploader>;
 

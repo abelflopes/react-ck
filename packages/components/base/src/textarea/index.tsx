@@ -1,0 +1,55 @@
+import React, { useEffect, useMemo } from "react";
+import styles from "./styles/index.module.scss";
+import classNames from "classnames";
+import { useFormFieldContext, type FormFieldProps } from "../form-field";
+
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  skin?: FormFieldProps["skin"];
+}
+
+/**
+ * Textarea is a form element that accepts multiple lines of text.
+ * @param props - {@link TextareaProps}
+ * @returns a React element
+ */
+
+export const Textarea = ({
+  skin,
+  id,
+  className,
+  ...props
+}: Readonly<TextareaProps>): React.ReactElement => {
+  const formFieldContext = useFormFieldContext();
+
+  const computedSkin = useMemo(
+    () => formFieldContext?.skin ?? skin ?? "default",
+    [formFieldContext?.skin, skin],
+  );
+
+  const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
+
+  // Validate usage inside form field
+  useEffect(() => {
+    // Is not inside form field, skip
+    if (formFieldContext === undefined) return;
+
+    // Is inside form field
+    if (skin)
+      throw new Error("When using textarea inside form field, define skin on the form field");
+    else if (id)
+      throw new Error("When using textarea inside form field, define id on the form field");
+  }, [formFieldContext, id, skin]);
+
+  return (
+    <textarea
+      {...props}
+      id={computedId}
+      className={classNames(
+        styles.root,
+        formFieldContext === undefined && styles.standalone,
+        className,
+        styles[`skin_${computedSkin}`],
+      )}
+    />
+  );
+};

@@ -2,9 +2,8 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text } from "@react-ck/text/src";
+import { Text, Collapse } from "@react-ck/base-components/src";
 import { configureStory } from "@react-ck/story-config";
-import { Collapse } from "@react-ck/collapse/src";
 
 type Story = StoryObj<typeof Collapse>;
 

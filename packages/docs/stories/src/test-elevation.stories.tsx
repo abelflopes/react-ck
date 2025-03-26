@@ -3,13 +3,19 @@
 import React, { useRef, useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
-import { Dialog, Dropdown, Menu, Modal, Tooltip } from "@react-ck/provisional/src";
-import { Button } from "@react-ck/button/src";
-import { Text } from "@react-ck/text/src";
+import {
+  Dialog,
+  Dropdown,
+  Menu,
+  Modal,
+  Tooltip,
+  Button,
+  Text,
+  Grid,
+  Select,
+  Card,
+} from "@react-ck/base-components/src";
 import { faker } from "@faker-js/faker";
-import { Card } from "@react-ck/card";
-import { Grid } from "@react-ck/grid/src";
-import { Select } from "@react-ck/select/src";
 
 type Story = StoryObj<unknown>;
 

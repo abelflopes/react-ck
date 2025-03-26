@@ -3,11 +3,15 @@ import React, { useEffect, useCallback } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Snackbar, type SnackbarProps, useSnackbar } from "@react-ck/provisional/src";
-import { Alert } from "@react-ck/alert/src";
-import { Text } from "@react-ck/text";
-import { Button } from "@react-ck/button";
-import { Card } from "@react-ck/card";
+import {
+  Snackbar,
+  type SnackbarProps,
+  useSnackbar,
+  Alert,
+  Text,
+  Button,
+  Card,
+} from "@react-ck/base-components/src";
 
 const MyComponent = (): React.ReactElement => {
   const snackbar = useSnackbar();

@@ -1,0 +1,29 @@
+@use "@react-ck/theme";
+@use "../../text/styles/shared" as text;
+@use "@react-ck/scss-utils";
+
+.root {
+  display: flex;
+  align-items: center;
+  padding: theme.get-spacing(1);
+  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary-light);
+  border-radius: theme.get-spacing(1);
+  gap: theme.get-spacing(1);
+}
+
+.field {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.description {
+  @include text.text-base;
+  @include text.text-variation(extra-small);
+
+  margin: 0 0 theme.get-spacing(0.3);
+  color: theme.get-color(neutral-dark-1);
+
+  &.error {
+    color: theme.get-color(status-negative);
+  }
+}

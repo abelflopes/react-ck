@@ -2,7 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Overlay } from "@react-ck/overlay/src";
+import { Overlay } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof Overlay>;
 

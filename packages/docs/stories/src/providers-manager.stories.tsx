@@ -4,7 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import { Button } from "@react-ck/button/src";
+import { Button } from "@react-ck/base-components/src";
 import { defaultTheme } from "@react-ck/theme/src";
 
 type Story = StoryObj<typeof Manager>;

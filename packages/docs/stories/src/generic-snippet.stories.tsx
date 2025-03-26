@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
-import { Snippet } from "@react-ck/provisional/src";
+import { Snippet } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof Snippet>;
 

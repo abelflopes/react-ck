@@ -1,0 +1,9 @@
+@use "../../container/styles/shared" as container;
+@use "@react-ck/scss-utils";
+
+$modal-sizes: (
+  s: scss-utils.map-get-strict(container.$container-sizes, s),
+  m: scss-utils.map-get-strict(container.$container-sizes, m) * 0.7,
+  l: scss-utils.map-get-strict(container.$container-sizes, m),
+  xl: scss-utils.map-get-strict(container.$container-sizes, l),
+);

@@ -2,7 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Avatar } from "@react-ck/provisional/src";
+import { Avatar } from "@react-ck/base-components/src";
 import { faker } from "@faker-js/faker";
 
 type Story = StoryObj<typeof Avatar>;

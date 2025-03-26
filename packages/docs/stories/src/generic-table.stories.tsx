@@ -2,7 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Table } from "@react-ck/table/src";
+import { Table } from "@react-ck/base-components/src";
 import { faker } from "@faker-js/faker";
 import * as CC from "change-case";
 

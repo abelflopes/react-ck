@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Tooltip } from "@react-ck/provisional/src";
-import { Button } from "@react-ck/button";
+import { Tooltip, Button } from "@react-ck/base-components/src";
 import { faker } from "@faker-js/faker";
 
 type Story = StoryObj<typeof Tooltip>;

@@ -3,10 +3,8 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { capitalCase } from "change-case";
-import { Text } from "@react-ck/text/src";
-import { Button } from "@react-ck/button/src";
+import { Text, Button, Banner } from "@react-ck/base-components/src";
 import { configureStory } from "@react-ck/story-config";
-import { Banner } from "@react-ck/banner/src";
 import { Icon } from "@react-ck/icon/src";
 import { IconLinkedin } from "@react-ck/icon/icons/IconLinkedin";
 

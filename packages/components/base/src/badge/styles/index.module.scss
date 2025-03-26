@@ -1,0 +1,30 @@
+@use "@react-ck/theme";
+@use "../../text/styles/shared" as text;
+@use "@react-ck/scss-utils";
+@use "variables";
+
+.root {
+  $size: theme.get-spacing(2);
+
+  @include text.text-base;
+  @include text.text-variation(extra-small);
+
+  display: inline-block;
+  overflow: hidden;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: scss-utils.get-css-var(badge, background-color);
+  color: scss-utils.get-css-var(badge, color);
+  line-height: $size;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+@each $key, $props in variables.$badge-styles {
+  .#{$key} {
+    @each $propKey, $propValue in $props {
+      @include scss-utils.define-css-var(badge, $propKey, $propValue);
+    }
+  }
+}

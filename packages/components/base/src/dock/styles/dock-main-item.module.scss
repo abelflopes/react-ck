@@ -1,0 +1,27 @@
+@use "@react-ck/theme";
+@use "../../text/styles/shared" as text;
+
+.root {
+  @include text.text-base;
+  @include text.text-variation(h3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: theme.get-spacing(1);
+
+  &.expanded {
+    justify-content: flex-start;
+    padding-right: theme.get-spacing(1);
+  }
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+
+  > * {
+    width: 100%;
+    height: 100%;
+  }
+}

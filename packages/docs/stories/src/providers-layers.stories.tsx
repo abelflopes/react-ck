@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { configureStory } from "@react-ck/story-config";
 import { ThemeProvider } from "@react-ck/theme";
 import { Layer, LayersProvider } from "@react-ck/layers";
-import { Card } from "@react-ck/card";
+import { Card } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof LayersProvider>;
 

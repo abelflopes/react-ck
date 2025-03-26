@@ -2,7 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Progress } from "@react-ck/progress/src";
+import { Progress } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof Progress>;
 

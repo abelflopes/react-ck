@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Chip } from "@react-ck/chip/src";
+import { Chip, DataTable, Input, Text, Alert } from "@react-ck/base-components/src";
 import { configureStory } from "@react-ck/story-config";
-import { DataTable } from "@react-ck/data-table/src";
-import { Input } from "@react-ck/input/src";
-import { Text } from "@react-ck/text/src";
-import { Alert } from "@react-ck/alert/src";
 
 type Story = StoryObj<typeof DataTable>;
 
@@ -100,7 +96,6 @@ export const WithStatefulChildren: Story = {
 
         <DataTable
           skin="bordered"
-          autoHeaders
           data={[
             {
               airline: faker.airline.airline().name,
@@ -115,6 +110,7 @@ export const WithStatefulChildren: Story = {
               ),
             },
           ]}
+          autoHeaders
         />
       </>
     );

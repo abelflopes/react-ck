@@ -2,7 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager/src";
 import { configureStory } from "@react-ck/story-config";
-import { Attachment } from "@react-ck/provisional/src";
+import { Attachment } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof Attachment>;
 

@@ -2,10 +2,8 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text } from "@react-ck/text/src";
+import { Text, Dialog, Button } from "@react-ck/base-components/src";
 import { configureStory } from "@react-ck/story-config";
-import { Dialog } from "@react-ck/provisional/src/dialog";
-import { Button } from "@react-ck/button/src";
 
 type Story = StoryObj<typeof Dialog>;
 

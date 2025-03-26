@@ -2,9 +2,7 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Select, type SelectProps } from "@react-ck/select/src";
-import { FormField } from "@react-ck/form-field/src";
-import { Chip } from "@react-ck/chip/src";
+import { Select, type SelectProps, FormField, Chip } from "@react-ck/base-components/src";
 
 type Story = StoryObj<typeof Select>;
 

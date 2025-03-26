@@ -4,8 +4,7 @@ import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
 import { configureStory } from "@react-ck/story-config";
-import { Input, type InputProps } from "@react-ck/input/src";
-import { FormField } from "@react-ck/form-field";
+import { Input, type InputProps, FormField } from "@react-ck/base-components/src";
 import { generateAllVariations } from "./utils/generate-all-variations";
 
 type Story = StoryObj<typeof Input>;

@@ -2,8 +2,8 @@ import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { configureStory } from "@react-ck/story-config/src/index";
-import { Flex } from "@react-ck/provisional/src";
+import { Flex } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/story-config";
 
 type Story = StoryObj<typeof Flex>;
 

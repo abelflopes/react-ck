@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text } from "@react-ck/text/src";
+import {
+  Text,
+  Button,
+  Container,
+  Image,
+  Modal,
+  type ModalProps,
+} from "@react-ck/base-components/src";
 import { configureStory } from "@react-ck/story-config";
-import { Image, Modal, type ModalProps } from "@react-ck/provisional/src";
-import { Button } from "@react-ck/button/src";
-import { Container } from "@react-ck/container/src";
 
 type Story = StoryObj<typeof Modal>;
 

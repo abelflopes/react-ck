@@ -1,0 +1,14 @@
+@use "@react-ck/theme";
+@use "../../text/styles/shared" as text;
+
+.root {
+  @include text.text-base;
+  @include text.text-variation(small);
+
+  display: block;
+  padding: theme.get-spacing(1.5);
+  border-radius: theme.get-spacing(1);
+  background-color: theme.get-color(neutral-light-1-5);
+  font-family: monospace;
+  white-space: pre-wrap;
+}

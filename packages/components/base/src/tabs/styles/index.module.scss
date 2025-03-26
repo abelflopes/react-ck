@@ -1,0 +1,52 @@
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+@use "../../text/styles/shared" as text;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: theme.get-spacing(1);
+}
+
+.track {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab {
+  @include scss-utils.define-css-var(tabs, border-color, theme.get-color(neutral-light-2));
+  @include text.text-base;
+
+  padding: theme.get-spacing(1) theme.get-spacing(2);
+  border: none;
+  border-bottom: solid #{scss-utils.get-css-var(spacing, border)} #{scss-utils.get-css-var(
+      tabs,
+      border-color
+    )};
+  background: transparent;
+  cursor: pointer;
+}
+
+.tab_active {
+  @include scss-utils.define-css-var(tabs, border-color, theme.get-color(highlight-primary));
+}
+
+.content_wrapper {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s;
+  will-change: opacity;
+
+  &.content_active {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+  }
+}

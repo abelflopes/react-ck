@@ -1,12 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager/src";
-import { FormField } from "@react-ck/form-field/src";
-import { Grid } from "@react-ck/grid/src";
-import { Input } from "@react-ck/input/src";
-import { Button } from "@react-ck/button/src";
-import { Select } from "@react-ck/select/src";
-import { Chip } from "@react-ck/chip/src";
+import { FormField, Grid, Input, Button, Select, Chip } from "@react-ck/base-components/src";
 
 type Story = StoryObj<unknown>;
 

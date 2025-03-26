@@ -3,10 +3,9 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
-import { Alert, type AlertProps } from "@react-ck/alert/src";
+import { Alert, type AlertProps, Text } from "@react-ck/base-components/src";
 import { generateAllVariations } from "./utils/generate-all-variations";
 import { sentenceCase } from "change-case";
-import { Text } from "@react-ck/text";
 
 type Story = StoryObj<typeof Alert>;
 

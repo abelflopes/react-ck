@@ -1,0 +1,64 @@
+@use "@react-ck/theme";
+@use "../../text/styles/shared" as text;
+
+.root {
+  @include text.text-base;
+  @include text.text-variation(p);
+
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: theme.get-spacing(0.75) theme.get-spacing();
+  border-radius: theme.get-spacing();
+  cursor: pointer;
+  gap: theme.get-spacing(1.5);
+  transition: all 0.2s;
+
+  &:focus {
+    // TODO: global focus reset mixin
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:hover:not(.disabled) {
+    background-color: theme.get-color(neutral-light-1-5);
+    color: currentcolor;
+  }
+
+  &.skin_secondary {
+    background-color: theme.get-color(neutral-light-1-5);
+  }
+
+  &.skin_primary {
+    background-color: theme.get-color(highlight-primary-light);
+    color: theme.get-color(highlight-primary);
+  }
+
+  &.skin_negative {
+    color: theme.get-color(status-negative);
+  }
+
+  &.disabled {
+    @include theme.disabled;
+  }
+
+  &.horizontal {
+    max-width: theme.get-spacing(20);
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: center;
+  }
+}
+
+.action {
+  margin-left: auto;
+}
+
+.content {
+  display: block;
+}
+
+.variation_bordered {
+  border: 1px solid theme.get-color(neutral-light-1-5);
+}

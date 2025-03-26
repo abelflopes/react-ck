@@ -1,0 +1,19 @@
+@use "../../text/styles/shared" as text;
+@use "@react-ck/theme";
+
+.root {
+  @include text.text-base;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: theme.get-spacing(0.5);
+
+  &.active {
+    @include text.text-skin(bold);
+  }
+
+  &:hover:not(.active) {
+    @include text.text-skin(highlight-primary);
+  }
+}

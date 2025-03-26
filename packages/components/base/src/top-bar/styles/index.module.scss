@@ -1,0 +1,29 @@
+@use "@react-ck/theme";
+@use "../../text/styles/shared" as text;
+
+.root {
+  @include text.text-base;
+  @include text.text-variation(h3);
+
+  display: flex;
+  align-items: center;
+  padding: theme.get-spacing(1);
+  background-color: theme.get-color(neutral-light-2);
+  gap: theme.get-spacing(4);
+
+  .section {
+    display: flex;
+    flex-basis: 33%;
+    align-items: center;
+    justify-content: center;
+    gap: theme.get-spacing(2);
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+}

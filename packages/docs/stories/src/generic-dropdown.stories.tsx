@@ -2,8 +2,7 @@ import React, { useRef, useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { Dropdown } from "@react-ck/provisional/src";
-import { Button } from "@react-ck/button/src";
+import { Dropdown, Button } from "@react-ck/base-components/src";
 import { Icon } from "@react-ck/icon/src";
 import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
 

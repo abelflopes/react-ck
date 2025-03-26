@@ -2,12 +2,16 @@ import React, { useRef } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { configureStory } from "@react-ck/story-config";
-import { ResponsiveFragment, useBreakpoints, useResponsiveProps } from "@react-ck/responsive/src";
-import { breakpoints } from "@react-ck/responsive/src/constants";
+import {
+  ResponsiveFragment,
+  useBreakpoints,
+  useResponsiveProps,
+  breakpoints,
+  Snippet,
+  Text,
+  Grid,
+} from "@react-ck/base-components/src";
 import { faker } from "@faker-js/faker";
-import { Snippet } from "@react-ck/provisional/src";
-import { Text } from "@react-ck/text/src";
-import { Grid } from "@react-ck/grid/src";
 
 type Story = StoryObj<typeof ResponsiveFragment>;
 
