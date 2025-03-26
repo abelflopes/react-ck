@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.0 (2025-03-26)
+
+
+### Features
+
+* **snippet:** add copy button and actions slot ([4490909](https://github.com/abelflopes/react-ck/commit/44909090cdedf2a3ae4abce1983861a2b9ea6ddf))
+
+
+
 ## [5.0.3](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.0.2...@react-ck/base-components@5.0.3) (2025-03-25)
 
 **Note:** Version bump only for package @react-ck/base-components
