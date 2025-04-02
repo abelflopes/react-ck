@@ -1,3 +1,18 @@
+## [3.69.0](https://github.com/abelflopes/react-ck/compare/v3.68.0...v3.69.0) (2025-04-02)
+
+
+### Features
+
+* **react-ck:** global library package ([eca6789](https://github.com/abelflopes/react-ck/commit/eca6789c3dc0a087901391cf1d34ad23cc31ae3f))
+* **react-ck:** global library package ([0ccca1a](https://github.com/abelflopes/react-ck/commit/0ccca1a5677b1905a7357cd02a2b5cfbb3aaad00))
+
+
+### Bug Fixes
+
+* show only one modal at once ([27d04bd](https://github.com/abelflopes/react-ck/commit/27d04bd1782e5631ab20a6e93f844bfa64833813))
+* snackbar context not forwarded when using nested layers ([ccf5f8a](https://github.com/abelflopes/react-ck/commit/ccf5f8ac3f917d60fc6d8252ba737b874adbe8b6))
+* tooltip not preserving open state when hovering content ([e8cbb54](https://github.com/abelflopes/react-ck/commit/e8cbb545ee008f9792c818189d288cb5af92516a))
+
 ## [3.68.0](https://github.com/abelflopes/react-ck/compare/v3.67.0...v3.68.0) (2025-03-26)
 
 
