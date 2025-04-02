@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { type LayerData, LayersContext, type LayersContextProps } from "./context";
 import { elevationMap } from "@react-ck/elevation";
 
@@ -24,20 +24,19 @@ export const LayersProvider = ({
   usePortal = true,
   className,
 }: Readonly<LayersProviderProps>): React.ReactElement => {
-  const currlayer = useRef<number>(0);
+  const currLayer = useRef<number>(0);
   const [layers, setLayers] = useState<LayerList>([]);
 
-  const createLayer = useCallback<LayersContextProps["createLayer"]>(({ elevationKey, node }) => {
-    currlayer.current += 1;
+  const createLayer = useCallback<LayersContextProps["createLayer"]>((LayerData) => {
+    currLayer.current += 1;
 
-    const id = `layer-${currlayer.current}`;
+    const id = `layer-${currLayer.current}`;
 
     setLayers((v) => [
       ...v,
       {
+        ...LayerData,
         id,
-        elevationKey,
-        node,
       },
     ]);
 
@@ -52,23 +51,42 @@ export const LayersProvider = ({
   );
 
   // Sort layers by elevation
-  const computedLayers = useMemo(
+  const sortedLayers = useMemo(
     () =>
-      [...layers]
-        .sort((a, b) => {
-          if (elevationMap[a.elevationKey] > elevationMap[b.elevationKey]) return 1;
-          else if (elevationMap[a.elevationKey] < elevationMap[b.elevationKey]) return -1;
-          return 0;
-        })
-        .map((i) => i.node),
+      [...layers].sort((a, b) => {
+        if (elevationMap[a.elevationKey] > elevationMap[b.elevationKey]) return 1;
+        else if (elevationMap[a.elevationKey] < elevationMap[b.elevationKey]) return -1;
+        return 0;
+      }),
     [layers],
   );
+
+  const layerElements = useMemo(() => [...sortedLayers].map((i) => i.node), [sortedLayers]);
+
+  useEffect(() => {
+    sortedLayers.forEach((layer, layerIndex) => {
+      const layersInElevation = sortedLayers.filter((i) => i.elevationKey === layer.elevationKey);
+
+      const layersInGroup = sortedLayers.filter((i) => i.group === layer.group);
+
+      layer.onLayerInfo?.({
+        group: layer.group,
+        elevation: layer.elevationKey,
+        maxLayerIndex: sortedLayers.length - 1,
+        layerIndex,
+        layerIndexInElevation: layersInElevation.indexOf(layer),
+        maxLayerIndexInElevation: layersInElevation.length - 1,
+        layerIndexInGroup: layersInGroup.indexOf(layer),
+        maxLayerIndexInGroup: layersInGroup.length - 1,
+      });
+    });
+  }, [sortedLayers]);
 
   return (
     <LayersContext.Provider value={contextValue}>
       {children}
 
-      {computedLayers}
+      {layerElements}
     </LayersContext.Provider>
   );
 };

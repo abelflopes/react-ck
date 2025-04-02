@@ -30,6 +30,10 @@ $padding: scss-utils.get-css-var(modal, spacing);
   animation: appear 0.3s ease-in forwards;
 }
 
+.hidden {
+  display: none;
+}
+
 // Add to document body to prevent back scrolling
 .lock_scroll {
   overflow: hidden;

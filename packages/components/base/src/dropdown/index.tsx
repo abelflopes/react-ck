@@ -102,7 +102,7 @@ export const Dropdown = ({
         position={position}
         anchorRef={anchorRef}
         render={({ style }) => (
-          <Layer elevation="overlay">
+          <Layer elevation="overlay" group="dropdown">
             <div
               ref={(r) => {
                 if (rootRef) rootRef.current = r;

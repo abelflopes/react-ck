@@ -1,6 +1,6 @@
 import React, { isValidElement, useContext, useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
-import { LayersContext } from "./context";
+import { type LayerData, LayersContext } from "./context";
 import { type Elevation } from "@react-ck/elevation";
 import { DISPLAY_NAME_ATTRIBUTE, getDisplayName, DISPLAY_NAMES } from "@react-ck/react-utils";
 import { ThemeProvider, useThemeContext } from "@react-ck/theme";
@@ -8,12 +8,16 @@ import classNames from "classnames";
 import { SnackbarContext, useSnackbar } from "@react-ck/snackbar-provider";
 
 interface LayerProps {
+  /** The group name for the layer */
+  group: LayerData["group"];
   /** The elevation level for the layer  */
   elevation: Elevation;
   /** The child components to be rendered within the layer */
   children?: React.ReactNode;
   /** Classname to apply on layer root element */
   className?: string;
+  /** Callback function to receive layer information */
+  onLayerInfo?: LayerData["onLayerInfo"];
 }
 
 /**
@@ -25,7 +29,13 @@ interface LayerProps {
  * @returns The rendered content of the layer
  */
 
-const Layer = ({ elevation, children, className }: Readonly<LayerProps>): React.ReactNode => {
+const Layer = ({
+  elevation,
+  children,
+  className,
+  onLayerInfo,
+  group,
+}: Readonly<LayerProps>): React.ReactNode => {
   const theme = useThemeContext();
   const { createLayer, usePortal, className: contextClassName } = useContext(LayersContext);
   const snackbarContext = useSnackbar();
@@ -51,10 +61,12 @@ const Layer = ({ elevation, children, className }: Readonly<LayerProps>): React.
     const removeLayer = createLayer({
       elevationKey: elevation,
       node: layerElement,
+      onLayerInfo,
+      group,
     });
 
     return removeLayer;
-  }, [elevation, children, createLayer, theme, layerElement]);
+  }, [elevation, children, createLayer, theme, layerElement, onLayerInfo, group]);
 
   /** Validate children */
   useEffect(() => {

@@ -100,7 +100,7 @@ export const Snackbar = ({
       <SnackbarContext.Provider value={contextValue}>{children}</SnackbarContext.Provider>
 
       {items.length > 0 && (
-        <Layer elevation="popup">
+        <Layer elevation="popup" group="snackbar">
           <div className={classNames(className, styles.root)} {...otherProps}>
             {items.map((i) => (
               <React.Fragment key={i.id}>{i.element}</React.Fragment>

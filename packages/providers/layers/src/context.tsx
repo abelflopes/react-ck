@@ -3,7 +3,28 @@ import { type Elevation } from "@react-ck/elevation";
 
 export interface LayerData {
   elevationKey: Elevation;
+  group: string;
   node: React.ReactNode;
+  onLayerInfo: ((info: LayerInfoContextProps) => void) | undefined;
+}
+
+export interface LayerInfoContextProps {
+  /** The group of the layer */
+  group: LayerData["group"];
+  /** The elevation of the layer */
+  elevation: LayerData["elevationKey"];
+  /** The index of the current layer */
+  layerIndex: number;
+  /** The total number of layers currently rendered */
+  maxLayerIndex: number;
+  /** The index of the current layer in the elevation group */
+  layerIndexInElevation: number;
+  /** The total number of layers currently rendered in the elevation group */
+  maxLayerIndexInElevation: number;
+  /** The index of the current layer in the group */
+  layerIndexInGroup: number;
+  /** The total number of layers currently rendered in the group */
+  maxLayerIndexInGroup: number;
 }
 
 export interface LayersContextProps {

@@ -23,7 +23,13 @@ export const Dialog = ({
   actions,
   ...otherProps
 }: Readonly<DialogProps>): React.ReactElement => (
-  <Modal size="s" overlay={false} closeButton={false} dismissOnClickOutside={false} {...otherProps}>
+  <Modal
+    size="s"
+    overlay={false}
+    closeButton={false}
+    dismissOnClickOutside={false}
+    layerGroup="dialog"
+    {...otherProps}>
     {heading ? <Modal.Header heading={heading} /> : null}
 
     {children}
