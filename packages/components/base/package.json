@@ -39,6 +39,7 @@
     "@react-ck/icon": "^4.0.0",
     "@react-ck/layers": "^1.4.1",
     "@react-ck/react-utils": "^1.4.0",
+    "@react-ck/snackbar-provider": "^1.0.0",
     "@react-ck/scss-utils": "^1.1.13",
     "@react-ck/theme": "^2.0.0",
     "change-case": "^5.4.2",

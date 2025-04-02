@@ -1,13 +1,13 @@
 {
-  "name": "@react-ck/layers",
+  "name": "@react-ck/snackbar-provider",
   "private": false,
-  "version": "1.4.1",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/components/layers#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/providers/snackbar#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/react-ck.git"
@@ -25,12 +25,5 @@
   },
   "peerDependencies": {
     "react": "^18.3.1"
-  },
-  "dependencies": {
-    "@react-ck/elevation": "^1.1.19",
-    "@react-ck/react-utils": "^1.4.0",
-    "@react-ck/theme": "^2.0.0",
-    "@react-ck/snackbar-provider": "^1.0.0",
-    "classnames": "^2.5.1"
   }
 }

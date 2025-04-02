@@ -1,16 +1,16 @@
 import React, { useCallback, useMemo, useRef, useState } from "react";
-import { SnackbarContext } from "./context";
 import { generateId } from "./utils";
 import { Layer } from "@react-ck/layers";
+import { SnackbarItem } from "./SnackbarItem";
+import styles from "./styles/index.module.scss";
+import classNames from "classnames";
 import {
+  SnackbarContext,
   type SnackbarContextProps,
   type ElementCreator,
   type Item,
   type AddOptions,
-} from "./types";
-import { SnackbarItem } from "./SnackbarItem";
-import styles from "./styles/index.module.scss";
-import classNames from "classnames";
+} from "@react-ck/snackbar-provider";
 
 const durationMap = new Map<NonNullable<AddOptions["duration"]>, number>([
   ["short", 3000],

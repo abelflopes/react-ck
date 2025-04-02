@@ -5,6 +5,7 @@ import { type Elevation } from "@react-ck/elevation";
 import { DISPLAY_NAME_ATTRIBUTE, getDisplayName, DISPLAY_NAMES } from "@react-ck/react-utils";
 import { ThemeProvider, useThemeContext } from "@react-ck/theme";
 import classNames from "classnames";
+import { SnackbarContext, useSnackbar } from "@react-ck/snackbar-provider";
 
 interface LayerProps {
   /** The elevation level for the layer  */
@@ -27,6 +28,7 @@ interface LayerProps {
 const Layer = ({ elevation, children, className }: Readonly<LayerProps>): React.ReactNode => {
   const theme = useThemeContext();
   const { createLayer, usePortal, className: contextClassName } = useContext(LayersContext);
+  const snackbarContext = useSnackbar();
 
   /** Generates the portal element wrapped by theme */
   const layerElement = useMemo(
@@ -34,12 +36,14 @@ const Layer = ({ elevation, children, className }: Readonly<LayerProps>): React.
       usePortal
         ? createPortal(
             <ThemeProvider theme={theme.theme} className={classNames(contextClassName, className)}>
-              {children}
+              <SnackbarContext.Provider value={snackbarContext}>
+                {children}
+              </SnackbarContext.Provider>
             </ThemeProvider>,
             document.body,
           )
         : children,
-    [children, contextClassName, className, theme.theme, usePortal],
+    [children, contextClassName, className, theme.theme, usePortal, snackbarContext],
   );
 
   /** Renders the layer */

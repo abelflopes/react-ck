@@ -6,12 +6,12 @@ import { faker } from "@faker-js/faker";
 import {
   Snackbar,
   type SnackbarProps,
-  useSnackbar,
   Alert,
   Text,
   Button,
   Card,
 } from "@react-ck/base-components/src";
+import { useSnackbar } from "@react-ck/snackbar-provider";
 
 const MyComponent = (): React.ReactElement => {
   const snackbar = useSnackbar();

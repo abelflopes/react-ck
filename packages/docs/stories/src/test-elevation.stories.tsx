@@ -1,6 +1,8 @@
+/* eslint-disable max-lines -- exception for storybook */
+/* eslint-disable react/no-unstable-nested-components -- exception for storybook*/
 /* eslint-disable react/no-multi-comp -- exception for storybook */
 
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import {
@@ -14,8 +16,14 @@ import {
   Grid,
   Select,
   Card,
+  Alert,
+  Snackbar,
 } from "@react-ck/base-components/src";
 import { faker } from "@faker-js/faker";
+import { Icon } from "@react-ck/icon";
+import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
+import { IconTrash } from "@react-ck/icon/icons/All";
+import { useSnackbar } from "@react-ck/snackbar-provider";
 
 type Story = StoryObj<unknown>;
 
@@ -27,26 +35,130 @@ const meta: Meta = {
 
       return (
         <Manager usePortal={portalEnabled}>
-          <Text>
-            DOM Portal: {portalEnabled ? "on" : "off"} &nbsp;
-            <Button
-              skin="secondary"
-              skinVariation="muted"
-              size="s"
-              onClick={() => {
-                setPortalEnabled((v) => !v);
-              }}>
-              Toggle
-            </Button>
-          </Text>
+          <Snackbar>
+            <Text>
+              DOM Portal: {portalEnabled ? "on" : "off"} &nbsp;
+              <Button
+                skin="secondary"
+                skinVariation="muted"
+                size="s"
+                onClick={() => {
+                  setPortalEnabled((v) => !v);
+                }}>
+                Toggle
+              </Button>
+            </Text>
 
-          <Text>{faker.lorem.paragraph(100)}</Text>
+            <Text>{faker.lorem.paragraph(100)}</Text>
 
-          <Story />
+            <Story />
+          </Snackbar>
         </Manager>
       );
     },
   ],
+};
+
+const ActionDelete = ({
+  onClose,
+  onSuccess,
+}: Readonly<{ onClose: () => void; onSuccess: () => void }>): React.ReactElement => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  return (
+    <>
+      <Menu.Item
+        skin="negative"
+        onClick={() => {
+          setDialogOpen(true);
+        }}>
+        Delete
+      </Menu.Item>
+
+      <Dialog
+        heading="Confirm Deletion"
+        open={dialogOpen}
+        actions={
+          <>
+            <Button skin="secondary" skinVariation="ghost" onClick={onClose}>
+              Cancel
+            </Button>
+            <Button
+              skin="negative"
+              icon={
+                <Icon>
+                  <IconTrash />
+                </Icon>
+              }
+              onClick={() => {
+                onSuccess();
+              }}>
+              Delete
+            </Button>
+          </>
+        }
+        onDismiss={onClose}>
+        <Text margin="none">
+          Are you sure you want to delete this job? This action cannot be undone.
+        </Text>
+      </Dialog>
+    </>
+  );
+};
+
+const Actions = (): React.ReactElement => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const snackbar = useSnackbar();
+
+  const onClose = useCallback(() => {
+    setDropdownOpen(false);
+  }, []);
+
+  return (
+    <>
+      <Button
+        size="xs"
+        skin="secondary"
+        skinVariation="ghost"
+        type="button"
+        rootRef={buttonRef}
+        icon={
+          <Icon>
+            <IconVerticalDots />
+          </Icon>
+        }
+        onClick={(e) => {
+          e.preventDefault();
+          setDropdownOpen((v) => !v);
+        }}
+      />
+
+      <Dropdown anchorRef={buttonRef} open={dropdownOpen} onClose={onClose}>
+        <Menu>
+          <Menu.Item
+            onClick={() => {
+              snackbar.add(() => <Alert skin="positive">Run Again</Alert>, {
+                duration: "short",
+              });
+              onClose();
+            }}>
+            Run Again
+          </Menu.Item>
+
+          <ActionDelete
+            onClose={onClose}
+            onSuccess={() => {
+              snackbar.add(() => <Alert skin="positive">Deleted</Alert>, {
+                duration: "short",
+              });
+              onClose();
+            }}
+          />
+        </Menu>
+      </Dropdown>
+    </>
+  );
 };
 
 const WithModal = ({ children }: { readonly children: React.ReactNode }): React.ReactElement => {
@@ -201,28 +313,45 @@ const SelectField = (): React.ReactElement => (
   </Select>
 );
 
-const AllItems = ({ children }: { readonly children: React.ReactNode }): React.ReactElement => (
-  <Card>
-    <Text variation="h2">All Items</Text>
+const AllItems = ({ children }: { readonly children: React.ReactNode }): React.ReactElement => {
+  const snackbar = useSnackbar();
 
-    <Grid>
-      <Grid.Column>
-        <WithDropdown>{children}</WithDropdown>
-      </Grid.Column>
-      <Grid.Column>
-        <WithModal>{children}</WithModal>
-      </Grid.Column>
-      <Grid.Column>
-        <WithDialog>{children}</WithDialog>
-      </Grid.Column>
-      <Grid.Column>
-        <WithTooltip>{children}</WithTooltip>
-      </Grid.Column>
-    </Grid>
+  return (
+    <Card>
+      <Text variation="h2">All Items</Text>
 
-    <div>{children}</div>
-  </Card>
-);
+      <Grid>
+        <Grid.Column>
+          <WithDropdown>{children}</WithDropdown>
+        </Grid.Column>
+        <Grid.Column>
+          <WithModal>{children}</WithModal>
+        </Grid.Column>
+        <Grid.Column>
+          <WithDialog>{children}</WithDialog>
+        </Grid.Column>
+        <Grid.Column>
+          <WithTooltip>{children}</WithTooltip>
+        </Grid.Column>
+        <Grid.Column>
+          <WithTooltip>{children}</WithTooltip>
+        </Grid.Column>
+        <Grid.Column>
+          <Button
+            onClick={() => {
+              snackbar.add(() => <Alert skin="positive">Alert</Alert>, {
+                duration: "short",
+              });
+            }}>
+            Alert
+          </Button>
+        </Grid.Column>
+      </Grid>
+
+      <div>{children}</div>
+    </Card>
+  );
+};
 
 const App = (): React.ReactElement => (
   <AllItems>
@@ -238,6 +367,8 @@ const App = (): React.ReactElement => (
       <Counter />
 
       <SelectField />
+
+      <Actions />
     </AllItems>
   </AllItems>
 );
@@ -252,3 +383,5 @@ export const demo: Story = {
 };
 
 /* eslint-enable react/no-multi-comp */
+/* eslint-enable react/no-unstable-nested-components */
+/* eslint-enable max-lines */
