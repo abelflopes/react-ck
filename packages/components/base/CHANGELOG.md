@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.1.1...@react-ck/base-components@5.1.2) (2025-04-02)
+
+
+### Bug Fixes
+
+* show only one modal at once ([27d04bd](https://github.com/abelflopes/react-ck/commit/27d04bd1782e5631ab20a6e93f844bfa64833813))
+* snackbar context not forwarded when using nested layers ([ccf5f8a](https://github.com/abelflopes/react-ck/commit/ccf5f8ac3f917d60fc6d8252ba737b874adbe8b6))
+* tooltip not preserving open state when hovering content ([e8cbb54](https://github.com/abelflopes/react-ck/commit/e8cbb545ee008f9792c818189d288cb5af92516a))
+
+
+
 ## [5.1.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.1.0...@react-ck/base-components@5.1.1) (2025-03-26)
 
 
