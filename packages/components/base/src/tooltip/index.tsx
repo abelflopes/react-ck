@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Layer } from "@react-ck/layers";
 import { PositionEngine, type PositionEngineProps } from "../position-engine";
 import { Card } from "../card";
@@ -35,39 +35,57 @@ export const Tooltip = ({
 }: Readonly<TooltipProps>): React.ReactNode => {
   const [internalOpen, setInternalOpen] = useState(open);
 
+  const openTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  const clearTimeouts = useCallback(() => {
+    clearTimeout(closeTimeoutRef.current);
+    clearTimeout(openTimeoutRef.current);
+  }, []);
+
+  const handleOpen = useCallback(() => {
+    // Workaround to make sure the open is handled after the mouseleave of anchor element is fired
+    requestAnimationFrame(() => {
+      clearTimeouts();
+
+      openTimeoutRef.current = setTimeout(() => {
+        setInternalOpen(true);
+      }, 300);
+    });
+  }, [clearTimeouts]);
+
+  const handleClose = useCallback(() => {
+    clearTimeouts();
+
+    closeTimeoutRef.current = setTimeout(() => {
+      setInternalOpen(false);
+    }, 100);
+  }, [clearTimeouts]);
+
+  useEffect(() => {
+    if (open !== undefined) setInternalOpen(open);
+  }, [open]);
+
   useEffect(() => {
     const ref = anchor.current;
 
-    if (open !== undefined) {
-      setInternalOpen(open);
-      return;
-    }
-
     if (!ref) throw new Error("Tooltip anchor ref is required");
 
-    let to: ReturnType<typeof setTimeout> | undefined = undefined;
-
-    function handleMouseEnter(): void {
-      clearTimeout(to);
-      to = setTimeout(() => {
-        setInternalOpen(true);
-      }, 300);
-    }
-
-    function handleMouseLeave(): void {
-      clearTimeout(to);
-      setInternalOpen(false);
-    }
-
-    ref.addEventListener("mouseenter", handleMouseEnter);
-    ref.addEventListener("mouseleave", handleMouseLeave);
+    ref.addEventListener("mouseenter", handleOpen);
+    ref.addEventListener("mouseleave", handleClose);
 
     return () => {
-      clearTimeout(to);
-      ref.removeEventListener("mouseenter", handleMouseEnter);
-      ref.removeEventListener("mouseleave", handleMouseLeave);
+      ref.removeEventListener("mouseenter", handleOpen);
+      ref.removeEventListener("mouseleave", handleClose);
     };
-  }, [anchor, open]);
+  }, [anchor, handleClose, handleOpen]);
+
+  useEffect(
+    () => () => {
+      clearTimeouts();
+    },
+    [clearTimeouts],
+  );
 
   return (
     internalOpen && (
@@ -78,7 +96,11 @@ export const Tooltip = ({
         anchorRef={anchor}
         render={({ style, position }) => (
           <Layer elevation="popup" group="tooltip">
-            <div style={style} className={classNames(styles.container, position)}>
+            <div
+              style={style}
+              className={classNames(styles.container, position)}
+              onMouseLeave={handleClose}
+              onMouseEnter={handleOpen}>
               <Card skin="shadowed" spacing="none" className={styles.card} borderRadius="m">
                 <div className={styles.content}>{children}</div>
               </Card>
