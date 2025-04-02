@@ -46,23 +46,23 @@ export const Component: Story = {
   args: {
     children: (
       <>
-        <Layer elevation="floating">
+        <Layer elevation="floating" group="floating">
           <Card style={style}>Floating</Card>
         </Layer>
 
-        <Layer elevation="popup">
+        <Layer elevation="popup" group="popup">
           <Card style={style}>Popup</Card>
         </Layer>
 
-        <Layer elevation="root">
+        <Layer elevation="root" group="root">
           <Card>Root</Card>
         </Layer>
 
-        <Layer elevation="sticky">
+        <Layer elevation="sticky" group="sticky">
           <Card style={style}>Sticky</Card>
         </Layer>
 
-        <Layer elevation="overlay">
+        <Layer elevation="overlay" group="overlay">
           <Card style={style}>Overlay</Card>
         </Layer>
       </>
