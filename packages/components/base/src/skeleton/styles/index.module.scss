@@ -12,11 +12,14 @@
 }
 
 @mixin animation {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
   animation: move 2s linear infinite;
-  animation-delay: calc(var(--index) * 400ms);
+  animation-delay: calc(var(--size-multi) * 400ms);
   background-image: linear-gradient(
     90deg,
     transparent,
@@ -49,13 +52,13 @@
 .text {
   position: relative;
   display: inline-block;
-  width: calc(50% - (25% * var(--index)));
+  width: calc(33% + (66% * var(--size-multi)));
   min-width: theme.get-spacing(4);
   height: scss-utils.get-css-var(text, line-height);
   transform: scaleY(0.6);
   vertical-align: bottom;
 }
 
-.large {
-  aspect-ratio: 100/49;
+.content {
+  display: block;
 }

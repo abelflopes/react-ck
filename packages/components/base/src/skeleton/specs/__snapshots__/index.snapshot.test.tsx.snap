@@ -3,6 +3,10 @@
 exports[`snapshot Skeleton renders correctly 1`] = `
 <span
   className="root default"
-  style={{}}
+  style={
+    {
+      "--size-multi": 0.5,
+    }
+  }
 />
 `;
