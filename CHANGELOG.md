@@ -1,3 +1,18 @@
+## [3.72.0](https://github.com/abelflopes/react-ck/compare/v3.71.0...v3.72.0) (2025-04-04)
+
+
+### Features
+
+* **react-ck:** global library package ([69b4451](https://github.com/abelflopes/react-ck/commit/69b4451dd5c3316ea720e0c4da3659d06ebbefe3))
+* **react-ck:** global library package ([9304450](https://github.com/abelflopes/react-ck/commit/930445033e6905fae1fbc83ba3c7be511f1169db))
+
+
+### Bug Fixes
+
+* **select:** fix spacing between multi line values display & allow custom separator ([a6d3a0b](https://github.com/abelflopes/react-ck/commit/a6d3a0b89cab542056d5b33d034dd51c87b14b55))
+* use lighter ui for skeleton table ([5c04caa](https://github.com/abelflopes/react-ck/commit/5c04caaa5f6619b33fcdbd21001abbfd198f8ac0))
+* use lighter UI for skeleton table ([80fa29a](https://github.com/abelflopes/react-ck/commit/80fa29a0036c5858c3b4feeabd9df2e2fa9d6535))
+
 ## [3.71.0](https://github.com/abelflopes/react-ck/compare/v3.70.0...v3.71.0) (2025-04-04)
 
 
