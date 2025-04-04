@@ -46,7 +46,6 @@ export const Skeleton = <T extends HTMLTag>({
             "--size-multi": sizeMulti,
           },
         },
-        ...otherProps,
       }}>
       {children}
     </PolymorphicComponent>
