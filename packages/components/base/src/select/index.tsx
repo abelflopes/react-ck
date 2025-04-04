@@ -70,6 +70,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       allowDeselect = true,
       required,
       disabled,
+      displayValueDivider = ",",
       ...props
     },
     ref,
@@ -188,16 +189,16 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       const node = (
         <>
           {displayValue.map((i, k) => (
-            <React.Fragment key={i.textContent}>
-              {i.displayValue ?? i.textContent}{" "}
-              {displayValue.length > 1 && k < displayValue.length - 1 && ", "}
-            </React.Fragment>
+            <span key={i.textContent}>
+              {i.displayValue ?? i.textContent}
+              {displayValue.length > 1 && k < displayValue.length - 1 && displayValueDivider}
+            </span>
           ))}
         </>
       );
 
       return node;
-    }, [childrenData, selectedValuesList]);
+    }, [childrenData, selectedValuesList, displayValueDivider]);
 
     /** Actions to do when dropdown closes  */
     useEffect(() => {

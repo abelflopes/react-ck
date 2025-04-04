@@ -5,6 +5,12 @@
   @include form-field.form-field-input;
   @include form-field.wrapper;
   @include form-field.skins;
+
+  display: flex;
+  align-items: center;
+  justify-self: unset;
+  flex-wrap: wrap;
+  gap: theme.get-spacing(0.5);
 }
 
 .root {

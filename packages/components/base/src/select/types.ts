@@ -63,6 +63,8 @@ export interface SelectProps
    * @default false
    */
   disabled?: boolean;
+  /** Display value divider */
+  displayValueDivider?: React.ReactNode;
 }
 
 /**
