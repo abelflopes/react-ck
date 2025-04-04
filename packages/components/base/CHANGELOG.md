@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.1.2...@react-ck/base-components@5.2.0) (2025-04-03)
+
+
+### Features
+
+* add skeleton table component ([8ea9e9b](https://github.com/abelflopes/react-ck/commit/8ea9e9be3fdbd63629696acf3d95441164607b05))
+
+
+
 ## [5.1.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.1.1...@react-ck/base-components@5.1.2) (2025-04-02)
 
 

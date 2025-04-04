@@ -1,3 +1,20 @@
+## [3.71.0](https://github.com/abelflopes/react-ck/compare/v3.70.0...v3.71.0) (2025-04-04)
+
+
+### Features
+
+* **react-ck:** global library package ([7a2c891](https://github.com/abelflopes/react-ck/commit/7a2c891883922c3b98468db824e858c8956c93c6))
+* **react-ck:** global library package ([79d653d](https://github.com/abelflopes/react-ck/commit/79d653dec86b4730325d42e0f597f17b1d7fa2df))
+
+## [3.70.0](https://github.com/abelflopes/react-ck/compare/v3.69.0...v3.70.0) (2025-04-03)
+
+
+### Features
+
+* add skeleton table component ([8ea9e9b](https://github.com/abelflopes/react-ck/commit/8ea9e9be3fdbd63629696acf3d95441164607b05))
+* **react-ck:** global library package ([3cf5074](https://github.com/abelflopes/react-ck/commit/3cf50742c81c184ee36ae9e9b5e4121ec1d021dd))
+* **react-ck:** global library package ([c00b210](https://github.com/abelflopes/react-ck/commit/c00b210b1fbc61552624a5114949826d6a4f8bdd))
+
 ## [3.69.0](https://github.com/abelflopes/react-ck/compare/v3.68.0...v3.69.0) (2025-04-02)
 
 
