@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.2.0...@react-ck/base-components@5.2.1) (2025-04-04)
+
+
+### Bug Fixes
+
+* **select:** fix spacing between multi line values display & allow custom separator ([a6d3a0b](https://github.com/abelflopes/react-ck/commit/a6d3a0b89cab542056d5b33d034dd51c87b14b55))
+* use lighter ui for skeleton table ([5c04caa](https://github.com/abelflopes/react-ck/commit/5c04caaa5f6619b33fcdbd21001abbfd198f8ac0))
+* use lighter UI for skeleton table ([80fa29a](https://github.com/abelflopes/react-ck/commit/80fa29a0036c5858c3b4feeabd9df2e2fa9d6535))
+
+
+
 ## [5.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.1.2...@react-ck/base-components@5.2.0) (2025-04-03)
 
 
