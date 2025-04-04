@@ -30,14 +30,14 @@ export const Component: Story = {
 
 export const Small: Story = {
   args: {
-    rowCount: 2,
-    columnCount: 3,
+    rows: 2,
+    columns: 3,
   },
 };
 
 export const Large: Story = {
   args: {
-    rowCount: 5,
-    columnCount: 6,
+    rows: 5,
+    columns: 6,
   },
 };
