@@ -30,6 +30,13 @@ export const Component: Story = {
   },
 };
 
+export const Small: Story = {
+  args: {
+    ...Component.args,
+    size: "s",
+  },
+};
+
 export const WithIcon: Story = {
   args: {
     ...Component.args,
@@ -38,6 +45,13 @@ export const WithIcon: Story = {
         <IconClose />
       </Icon>
     ),
+  },
+};
+
+export const SmallWithIcon: Story = {
+  args: {
+    ...WithIcon.args,
+    size: "s",
   },
 };
 

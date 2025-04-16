@@ -23,6 +23,10 @@ export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
    * Can be any valid React node (SVG, icon component, etc).
    */
   icon?: React.ReactNode;
+  /** Size of the chip.
+   * @default "m"
+   */
+  size?: "s" | "m";
 }
 
 /**
@@ -32,7 +36,7 @@ export interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
  * @example
  * ```tsx
  * <Chip skin="primary" icon={<Icon />}>Label</Chip>
- * <Chip skin="positive" variation="bordered">Active</Chip>
+ * <Chip skin="positive" variation="bordered" size="s">Active</Chip>
  * ```
  *
  * @param props - Component props {@link ChipProps}
@@ -44,6 +48,7 @@ export const Chip = ({
   variation = "filled",
   interaction,
   icon,
+  size = "m",
   children,
   className,
   ...otherProps
@@ -54,11 +59,11 @@ export const Chip = ({
       styles.root,
       styles[`skin_${skin}`],
       styles[`variation_${variation}`],
+      styles[`size_${size}`],
       styles[`interaction_${interaction}`],
       className,
     )}>
     {icon}
-
     {children}
   </span>
 );

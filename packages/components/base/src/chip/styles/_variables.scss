@@ -32,3 +32,16 @@ $chip-styles: (
     color: theme.get-color(status-info),
   ),
 );
+
+$chip-sizes: (
+  m: (
+    padding-y: theme.get-spacing(0.5),
+    padding-x: theme.get-spacing(),
+    text-variation: small,
+  ),
+  s: (
+    padding-y: theme.get-spacing(0.25),
+    padding-x: theme.get-spacing(0.75),
+    text-variation: extra-small,
+  ),
+);
