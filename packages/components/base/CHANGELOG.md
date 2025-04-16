@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.2.1...@react-ck/base-components@5.3.0) (2025-04-16)
+
+
+### Features
+
+* **chip:** add size variation ([50a47d0](https://github.com/abelflopes/react-ck/commit/50a47d0489d0fc6b47eef7a347b510ab1669f92b))
+* **text:** add variations ([ddd97c6](https://github.com/abelflopes/react-ck/commit/ddd97c6a77c43f05a1ffe074d3bdef6eae0349c5))
+
+
+
 ## [5.2.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.2.0...@react-ck/base-components@5.2.1) (2025-04-04)
 
 
