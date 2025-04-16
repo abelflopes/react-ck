@@ -45,6 +45,14 @@ button.root {
   }
 }
 
+.skin_link_hidden,
+.skin_link,
+.skin_link_underline {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 // Margin
 
 .variation_h1,

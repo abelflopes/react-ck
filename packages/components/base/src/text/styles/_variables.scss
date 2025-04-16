@@ -50,6 +50,16 @@ $text-skins: (
       text-decoration: underline,
     ),
   ),
+  link_underline: (
+    default: (
+      color: theme.get-color(highlight-alt),
+      text-decoration: underline,
+    ),
+    hover: (
+      color: theme.get-color(highlight-alt-dark),
+      text-decoration: underline,
+    ),
+  ),
   link_hidden: (
     default: (
       text-decoration: none,
@@ -68,6 +78,24 @@ $text-skins: (
   negative: (
     default: (
       color: theme.get-color(status-negative),
+    ),
+    hover: (),
+  ),
+  average: (
+    default: (
+      color: theme.get-color(status-average),
+    ),
+    hover: (),
+  ),
+  positive: (
+    default: (
+      color: theme.get-color(status-positive),
+    ),
+    hover: (),
+  ),
+  info: (
+    default: (
+      color: theme.get-color(status-info),
     ),
     hover: (),
   ),

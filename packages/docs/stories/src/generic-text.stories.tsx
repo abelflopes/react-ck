@@ -3,7 +3,9 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { configureStory } from "@react-ck/story-config";
-import { Text } from "@react-ck/base-components/src";
+import { Card, Text, type TextProps } from "@react-ck/base-components/src";
+import { generateAllVariations } from "./utils/generate-all-variations";
+import { sentenceCase } from "change-case";
 
 type Story = StoryObj<typeof Text>;
 
@@ -45,4 +47,48 @@ export const Link: Story = {
     skin: "link",
     as: <a href="#some-link">{faker.lorem.sentence()}</a>,
   },
+};
+
+export const AllTextVariations: Story = {
+  decorators: [
+    (): React.ReactElement => (
+      <>
+        <Text variation="h2">Skins</Text>
+
+        <Card>
+          {generateAllVariations<TextProps<"span">>(Text, {
+            as: ["span"],
+            skin: [
+              "default",
+              "bold",
+              "link",
+              "link_hidden",
+              "link_underline",
+              "inverted",
+              "soft",
+              "highlight-primary",
+              "negative",
+              "average",
+              "positive",
+              "info",
+            ],
+            variation: ["p"],
+            children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
+          })}
+        </Card>
+
+        <Text variation="h2">Variations</Text>
+
+        <Card>
+          {generateAllVariations<TextProps<"span">>(Text, {
+            as: ["span"],
+            skin: ["default"],
+            variation: ["banner", "h1", "h2", "h3", "h4", "h5", "h6", "p", "small", "extra-small"],
+            margin: ["none"],
+            children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
+          })}
+        </Card>
+      </>
+    ),
+  ],
 };

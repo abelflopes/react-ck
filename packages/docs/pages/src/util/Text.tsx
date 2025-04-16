@@ -12,10 +12,14 @@ export const skins: TextSkin[] = [
   "bold",
   "link",
   "link_hidden",
+  "link_underline",
   "inverted",
   "soft",
   "highlight-primary",
   "negative",
+  "average",
+  "positive",
+  "info",
 ];
 
 export const variations: TextVariation[] = [
@@ -71,7 +75,6 @@ export const TextDemo = (): React.ReactNode => {
             overflow: "hidden",
           }}>
           <Manager>
-            aaaaa
             {variations.map((variation) => (
               <Text
                 key={variation}

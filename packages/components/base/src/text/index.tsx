@@ -16,11 +16,15 @@ export type TextSkin =
   | "default"
   | "bold"
   | "link"
+  | "link_underline"
   | "link_hidden"
   | "inverted"
   | "soft"
   | "highlight-primary"
-  | "negative";
+  | "negative"
+  | "average"
+  | "positive"
+  | "info";
 
 /** Typography variations defining the semantic level and visual hierarchy */
 export type TextVariation =
