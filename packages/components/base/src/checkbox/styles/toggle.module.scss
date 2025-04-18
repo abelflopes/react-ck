@@ -1,0 +1,45 @@
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+
+$height: theme.get-spacing(2.5);
+$width: calc(#{$height} * 1.75);
+$thumb-scale: 0.8;
+$thumb-size: calc(#{$height} * $thumb-scale);
+$padding: calc((#{$height} - #{$thumb-size}) / 2);
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.track {
+  position: relative;
+  width: $width;
+  height: $height;
+  background-color: theme.get-color(neutral-light-2);
+  border-radius: 34px;
+  transition: background-color 0.2s;
+}
+
+.thumb {
+  position: absolute;
+  left: $padding;
+  top: $padding;
+  width: $thumb-size;
+  height: $thumb-size;
+  background-color: theme.get-color(neutral-light-1);
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+:checked ~ .root {
+  .track {
+    background-color: theme.get-color(highlight-primary);
+  }
+
+  .thumb {
+    transform: translateX(calc(#{$width} - #{$thumb-size} - #{$padding} * 2));
+  }
+}

@@ -32,3 +32,9 @@ export default meta;
 export const Component: Story = {
   args: {},
 };
+
+export const Toggle: Story = {
+  args: {
+    isToggle: true,
+  },
+};
