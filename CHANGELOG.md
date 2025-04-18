@@ -1,3 +1,12 @@
+## [3.74.0](https://github.com/abelflopes/react-ck/compare/v3.73.0...v3.74.0) (2025-04-18)
+
+
+### Features
+
+* **checkbox:** add toggle variation ([9d78910](https://github.com/abelflopes/react-ck/commit/9d78910f5c6922b226f6eecab53504d0c904dbb4))
+* **react-ck:** global library package ([2c28fa1](https://github.com/abelflopes/react-ck/commit/2c28fa12cb190ca0f269575cf20c718b496381bf))
+* **react-ck:** global library package ([d29d7e5](https://github.com/abelflopes/react-ck/commit/d29d7e577303870d80ee53c2711bf7370a3b0afc))
+
 ## [3.73.0](https://github.com/abelflopes/react-ck/compare/v3.72.0...v3.73.0) (2025-04-16)
 
 
