@@ -1,7 +1,7 @@
 {
   "name": "react-ck",
   "private": false,
-  "version": "3.10.0",
+  "version": "3.11.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/index.scss",
@@ -33,7 +33,7 @@
   },
   "gitHead": "e1287b92e99dabd1a4e0b8f30da1cddeaad64529",
   "dependencies": {
-    "@react-ck/base-components": "^5.3.0",
+    "@react-ck/base-components": "^5.4.0",
     "@react-ck/elevation": "^1.1.19",
     "@react-ck/icon": "^4.0.0",
     "@react-ck/layers": "^1.4.2",

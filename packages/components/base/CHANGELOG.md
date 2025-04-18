@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.3.0...@react-ck/base-components@5.4.0) (2025-04-18)
+
+
+### Features
+
+* **checkbox:** add toggle variation ([9d78910](https://github.com/abelflopes/react-ck/commit/9d78910f5c6922b226f6eecab53504d0c904dbb4))
+
+
+
 ## [5.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.2.1...@react-ck/base-components@5.3.0) (2025-04-16)
 
 
