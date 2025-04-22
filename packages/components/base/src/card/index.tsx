@@ -19,7 +19,7 @@ interface CardProps<T extends HTMLTag = "div">
   /** Visual style of the card's container.
    * @default "bordered"
    */
-  skin?: "bordered" | "shadowed" | "ghost";
+  skin?: "bordered" | "shadowed" | "ghost" | "light";
   /** Interactive behavior on user interaction.
    * - hover: Visual feedback on hover
    * - click: Visual feedback on hover and click

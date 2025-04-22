@@ -12,6 +12,7 @@ export const defaultTheme: Theme = {
     "highlight-alt": "#0052cc",
     "highlight-alt-dark": "#003e99",
     "neutral-light-1": "#fff",
+    "neutral-light-1-25": "hsl(230deg 40% 76% / 10%)",
     "neutral-light-1-5": "hsl(230deg 40% 76% / 20%)",
     "neutral-light-2": "hsl(230deg 30% 46% / 20%)",
     "neutral-light-3": "hsl(230deg 10% 2% / 25%)",

@@ -31,6 +31,10 @@
   @include scss-utils.define-css-var(card, border-radius, 0);
 }
 
+@mixin skin-light {
+  background-color: theme.get-color(neutral-light-1-25);
+}
+
 // Spacing
 
 @mixin card-spacing($key) {

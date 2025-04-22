@@ -82,7 +82,7 @@ export const AllCardVariations: Story = {
       generateAllVariations<CardProps>(
         Card,
         {
-          skin: ["bordered", "shadowed", "ghost"],
+          skin: ["bordered", "shadowed", "ghost", "light"],
           spacing: ["l", "m", "s", "none"],
           interaction: [undefined, "hover", "click"],
           variation: ["vertical", "horizontal"],

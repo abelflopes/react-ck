@@ -39,6 +39,10 @@
   @include shared.skin-ghost;
 }
 
+.light {
+  @include shared.skin-light;
+}
+
 // Variations
 
 .full_height {
