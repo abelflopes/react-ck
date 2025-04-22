@@ -39,7 +39,7 @@
 }
 
 @mixin placeholder {
-  color: theme.get-color(neutral-dark-1);
+  color: theme.get-color(neutral-dark-100);
 }
 
 // input not inside form field
@@ -63,7 +63,7 @@
   border: none;
   border-radius: theme.get-spacing(1);
   background: transparent;
-  color: theme.get-color(neutral-dark-5);
+  color: theme.get-color(neutral-dark-500);
   outline: none;
 
   &::placeholder {

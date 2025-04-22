@@ -5,7 +5,7 @@
   width: scss-utils.get-css-var(divider, width);
   height: scss-utils.get-css-var(divider, height);
   border: none;
-  background-color: theme.get-color(neutral-light-2);
+  background-color: theme.get-color(neutral-light-400);
 }
 
 .horizontal {

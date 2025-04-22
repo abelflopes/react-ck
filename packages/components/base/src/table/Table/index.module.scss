@@ -38,13 +38,13 @@
   @include sticky-column {
     position: sticky;
     left: 0;
-    background-color: theme.get-color(neutral-light-1);
+    background-color: theme.get-color(neutral-light-100);
   }
 
   @include sticky_headers {
     position: sticky;
     top: 0;
-    background-color: theme.get-color(neutral-light-1-5-solid) !important;
+    background-color: theme.get-color(neutral-light-300-solid) !important;
     white-space: nowrap;
 
     &:first-child {
@@ -85,7 +85,7 @@
 }
 
 .skin_bordered {
-  @include scss-utils.define-css-var(table, border-color, theme.get-color(neutral-light-2-solid));
+  @include scss-utils.define-css-var(table, border-color, theme.get-color(neutral-light-400-solid));
 }
 
 // Spacing

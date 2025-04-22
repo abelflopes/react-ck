@@ -20,4 +20,4 @@ Branding created with https://www.namecheap.com/logo-maker/
 - primary: #783192
 - secondary: #59BCC8
 - text: #1E2232
-- neutral-dark-4: #323646
+- neutral-dark-400: #323646

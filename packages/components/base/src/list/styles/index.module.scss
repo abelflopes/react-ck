@@ -23,5 +23,5 @@
 }
 
 .bordered {
-  @include scss-utils.define-css-var(divider, border-color, theme.get-color(neutral-light-2));
+  @include scss-utils.define-css-var(divider, border-color, theme.get-color(neutral-light-400));
 }

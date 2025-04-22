@@ -5,7 +5,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: theme.get-color(neutral-light-2) solid scss-utils.get-css-var(spacing, border);
+  border: theme.get-color(neutral-light-400) solid scss-utils.get-css-var(spacing, border);
   padding: theme.get-spacing(0.5);
   border-radius: 50%;
 }

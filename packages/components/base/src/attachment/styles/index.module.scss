@@ -48,7 +48,7 @@ $spacing: theme.get-spacing(1.5);
 }
 
 .format {
-  color: theme.get-color(neutral-dark-1);
+  color: theme.get-color(neutral-dark-100);
 }
 
 .close {
@@ -70,7 +70,7 @@ $spacing: theme.get-spacing(1.5);
   justify-content: center;
   padding: theme.get-spacing();
   border-radius: 50%;
-  color: theme.get-color(neutral-light-1);
+  color: theme.get-color(neutral-light-100);
 }
 
 .icon_default {

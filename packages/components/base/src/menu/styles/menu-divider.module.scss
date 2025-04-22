@@ -5,7 +5,7 @@
 .root {
   display: block;
   box-sizing: border-box;
-  background-color: theme.get-color(neutral-light-1-5);
+  background-color: theme.get-color(neutral-light-300);
 
   &.text {
     @include text.text-base;

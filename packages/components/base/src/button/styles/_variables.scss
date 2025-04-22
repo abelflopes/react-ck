@@ -4,7 +4,7 @@ $button-skins: (
   primary: (
     default: (
       background: theme.get-color(highlight-primary),
-      text: theme.get-color(neutral-light-1),
+      text: theme.get-color(neutral-light-100),
       border: theme.get-color(highlight-primary),
       background-hover: theme.get-color(highlight-primary-dark),
       text-hover: null,
@@ -15,7 +15,7 @@ $button-skins: (
       text: theme.get-color(highlight-primary),
       border: theme.get-color(highlight-primary-light),
       background-hover: theme.get-color(highlight-primary),
-      text-hover: theme.get-color(neutral-light-1),
+      text-hover: theme.get-color(neutral-light-100),
       border-hover: theme.get-color(highlight-primary),
     ),
     bordered: (
@@ -37,34 +37,34 @@ $button-skins: (
   ),
   secondary: (
     default: (
-      background: theme.get-color(neutral-dark-1),
-      text: theme.get-color(neutral-light-1),
-      border: theme.get-color(neutral-dark-1),
-      background-hover: theme.get-color(neutral-dark-3),
+      background: theme.get-color(neutral-dark-100),
+      text: theme.get-color(neutral-light-100),
+      border: theme.get-color(neutral-dark-100),
+      background-hover: theme.get-color(neutral-dark-300),
       text-hover: null,
-      border-hover: theme.get-color(neutral-dark-3),
+      border-hover: theme.get-color(neutral-dark-300),
     ),
     muted: (
-      background: theme.get-color(neutral-light-1-5),
+      background: theme.get-color(neutral-light-300),
       text: null,
       border: null,
-      background-hover: theme.get-color(neutral-light-2),
+      background-hover: theme.get-color(neutral-light-400),
       text-hover: null,
       border-hover: null,
     ),
     bordered: (
       background: null,
       text: null,
-      border: theme.get-color(neutral-light-2),
-      background-hover: theme.get-color(neutral-light-1-5),
+      border: theme.get-color(neutral-light-400),
+      background-hover: theme.get-color(neutral-light-300),
       text-hover: null,
       border-hover: null,
     ),
     ghost: (
       background: null,
-      text: theme.get-color(neutral-dark-3),
+      text: theme.get-color(neutral-dark-300),
       border: null,
-      background-hover: theme.get-color(neutral-light-1-5),
+      background-hover: theme.get-color(neutral-light-300),
       text-hover: null,
       border-hover: null,
     ),
@@ -72,7 +72,7 @@ $button-skins: (
   negative: (
     default: (
       background: theme.get-color(status-negative),
-      text: theme.get-color(neutral-light-1),
+      text: theme.get-color(neutral-light-100),
       border: theme.get-color(status-negative),
       background-hover: theme.get-color(status-negative-dark),
       text-hover: null,
@@ -83,7 +83,7 @@ $button-skins: (
       text: theme.get-color(status-negative-dark),
       border: theme.get-color(status-negative-light),
       background-hover: theme.get-color(status-negative),
-      text-hover: theme.get-color(neutral-light-1),
+      text-hover: theme.get-color(neutral-light-100),
       border-hover: theme.get-color(status-negative),
     ),
     bordered: (

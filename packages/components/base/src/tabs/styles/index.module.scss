@@ -14,7 +14,7 @@
 }
 
 .tab {
-  @include scss-utils.define-css-var(tabs, border-color, theme.get-color(neutral-light-2));
+  @include scss-utils.define-css-var(tabs, border-color, theme.get-color(neutral-light-400));
   @include text.text-base;
 
   padding: theme.get-spacing(1) theme.get-spacing(2);

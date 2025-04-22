@@ -16,9 +16,9 @@ $spacing-y: theme.get-spacing(0.5);
     @include scss-utils.define-css-var(
       chat-message,
       background-color,
-      theme.get-color(neutral-light-2)
+      theme.get-color(neutral-light-400)
     );
-    @include scss-utils.define-css-var(chat-message, color, theme.get-color(neutral-dark-4));
+    @include scss-utils.define-css-var(chat-message, color, theme.get-color(neutral-dark-400));
     @include scss-utils.define-css-var(chat-message, margin-right, auto);
   }
 
@@ -28,7 +28,7 @@ $spacing-y: theme.get-spacing(0.5);
       background-color,
       theme.get-color(highlight-primary)
     );
-    @include scss-utils.define-css-var(chat-message, color, theme.get-color(neutral-light-1));
+    @include scss-utils.define-css-var(chat-message, color, theme.get-color(neutral-light-100));
     @include scss-utils.define-css-var(chat-message, margin-left, auto);
 
     .sender {
@@ -69,5 +69,5 @@ $spacing-y: theme.get-spacing(0.5);
   @include text.text-variation(extra-small);
 
   padding: 0 theme.get-spacing(-5);
-  color: theme.get-color(neutral-dark-1);
+  color: theme.get-color(neutral-dark-100);
 }

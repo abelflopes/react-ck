@@ -43,15 +43,15 @@ const preview: Preview = {
       values: [
         {
           name: "light",
-          value: defaultTheme.color["neutral-light-1"],
+          value: defaultTheme.color["neutral-light-100"],
         },
         {
           name: "medium",
-          value: defaultTheme.color["neutral-dark-1"],
+          value: defaultTheme.color["neutral-dark-100"],
         },
         {
           name: "dark",
-          value: defaultTheme.color["neutral-dark-5"],
+          value: defaultTheme.color["neutral-dark-500"],
         },
       ],
     },

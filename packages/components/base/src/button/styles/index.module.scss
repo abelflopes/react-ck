@@ -6,7 +6,7 @@
 .root {
   @include text.text-base;
   @include scss-utils.define-css-var(button, border-radius, theme.get-spacing(1));
-  @include scss-utils.define-css-var(button, text-color, theme.get-color(neutral-dark-4));
+  @include scss-utils.define-css-var(button, text-color, theme.get-color(neutral-dark-400));
   @include scss-utils.define-css-var(button, background-color, transparent);
   @include scss-utils.define-css-var(button, border-color, transparent);
 

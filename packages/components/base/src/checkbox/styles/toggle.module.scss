@@ -17,7 +17,7 @@ $padding: calc((#{$height} - #{$thumb-size}) / 2);
   position: relative;
   width: $width;
   height: $height;
-  background-color: theme.get-color(neutral-light-2);
+  background-color: theme.get-color(neutral-light-400);
   border-radius: 34px;
   transition: background-color 0.2s;
 }
@@ -28,7 +28,7 @@ $padding: calc((#{$height} - #{$thumb-size}) / 2);
   top: $padding;
   width: $thumb-size;
   height: $thumb-size;
-  background-color: theme.get-color(neutral-light-1);
+  background-color: theme.get-color(neutral-light-100);
   border-radius: 50%;
   transition: transform 0.2s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);

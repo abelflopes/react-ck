@@ -23,7 +23,7 @@
   background-image: linear-gradient(
     90deg,
     transparent,
-    theme.get-color(neutral-light-1-5),
+    theme.get-color(neutral-light-300),
     transparent
   );
   opacity: 0.75;
@@ -34,7 +34,7 @@
   position: relative;
   overflow: hidden;
   border-radius: theme.get-spacing(0.5);
-  background-color: theme.get-color(neutral-light-1-5);
+  background-color: theme.get-color(neutral-light-300);
 
   &::before {
     @include animation;

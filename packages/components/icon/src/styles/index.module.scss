@@ -39,5 +39,5 @@
 }
 
 .skin_inverted {
-  @include scss-utils.define-css-var(icon, color, theme.get-color(neutral-light-1));
+  @include scss-utils.define-css-var(icon, color, theme.get-color(neutral-light-100));
 }

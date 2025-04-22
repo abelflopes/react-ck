@@ -89,32 +89,32 @@ $caret-spacing: theme.get-spacing(1.66);
   &[class*="top"] {
     .content::before {
       top: 100%;
-      border-color: theme.get-color(neutral-light-1) transparent transparent;
-      filter: drop-shadow(0 3px 2px theme.get-color(neutral-light-2));
+      border-color: theme.get-color(neutral-light-100) transparent transparent;
+      filter: drop-shadow(0 3px 2px theme.get-color(neutral-light-400));
     }
   }
 
   &[class*="bottom"] {
     .content::before {
       bottom: 100%;
-      border-color: transparent transparent theme.get-color(neutral-light-1);
-      filter: drop-shadow(0 -3px 2px theme.get-color(neutral-light-2));
+      border-color: transparent transparent theme.get-color(neutral-light-100);
+      filter: drop-shadow(0 -3px 2px theme.get-color(neutral-light-400));
     }
   }
 
   &[class*="left"] {
     .content::before {
       left: 100%;
-      border-color: transparent transparent transparent theme.get-color(neutral-light-1);
-      filter: drop-shadow(3px 0 2px theme.get-color(neutral-light-2));
+      border-color: transparent transparent transparent theme.get-color(neutral-light-100);
+      filter: drop-shadow(3px 0 2px theme.get-color(neutral-light-400));
     }
   }
 
   &[class*="right"] {
     .content::before {
       right: 100%;
-      border-color: transparent theme.get-color(neutral-light-1) transparent transparent;
-      filter: drop-shadow(-3px 0 2px theme.get-color(neutral-light-2));
+      border-color: transparent theme.get-color(neutral-light-100) transparent transparent;
+      filter: drop-shadow(-3px 0 2px theme.get-color(neutral-light-400));
     }
   }
 }

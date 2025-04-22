@@ -21,12 +21,12 @@
   }
 
   &:hover:not(.disabled) {
-    background-color: theme.get-color(neutral-light-1-5);
+    background-color: theme.get-color(neutral-light-300);
     color: currentcolor;
   }
 
   &.skin_secondary {
-    background-color: theme.get-color(neutral-light-1-5);
+    background-color: theme.get-color(neutral-light-300);
   }
 
   &.skin_primary {
@@ -60,5 +60,5 @@
 }
 
 .variation_bordered {
-  border: 1px solid theme.get-color(neutral-light-1-5);
+  border: 1px solid theme.get-color(neutral-light-300);
 }

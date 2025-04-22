@@ -19,13 +19,13 @@ $font-sizes: (
 $text-skins: (
   base: (
     default: (
-      color: theme.get-color(neutral-dark-5),
+      color: theme.get-color(neutral-dark-500),
     ),
     hover: (),
   ),
   soft: (
     default: (
-      color: theme.get-color(neutral-dark-1),
+      color: theme.get-color(neutral-dark-100),
     ),
     hover: (),
   ),
@@ -71,7 +71,7 @@ $text-skins: (
   ),
   inverted: (
     default: (
-      color: theme.get-color(neutral-light-1),
+      color: theme.get-color(neutral-light-100),
     ),
     hover: (),
   ),
@@ -122,7 +122,7 @@ $text-variations: (
       font-size: calc(#{scss-utils.map-get-strict($font-sizes, h2)}),
       line-height: calc(#{scss-utils.map-get-strict($font-sizes, h2)} * 1.6),
       font-weight: 600,
-      color: theme.get-color(neutral-dark-4),
+      color: theme.get-color(neutral-dark-400),
     ),
     hover: (),
   ),

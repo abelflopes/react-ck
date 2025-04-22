@@ -21,7 +21,7 @@
   @include text.text-variation(extra-small);
 
   margin: 0 0 theme.get-spacing(0.3);
-  color: theme.get-color(neutral-dark-1);
+  color: theme.get-color(neutral-dark-100);
 
   &.error {
     color: theme.get-color(status-negative);
