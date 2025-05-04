@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.5.0...@react-ck/base-components@5.5.1) (2025-05-04)
+
+
+### Bug Fixes
+
+* allow ghost skin in form field ([2e3e23e](https://github.com/abelflopes/react-ck/commit/2e3e23e2e4f41e14225a8e23c4c4a9de9aab441e))
+* expose form field full width variation and fix initial sizing ([600a128](https://github.com/abelflopes/react-ck/commit/600a128bf797378bba9292031367b7f97723c9f9))
+
+
+
 ## [5.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.4.0...@react-ck/base-components@5.5.0) (2025-04-22)
 
 

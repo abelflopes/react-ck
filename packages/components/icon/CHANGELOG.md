@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.0.1...@react-ck/icon@4.0.2) (2025-05-04)
+
+**Note:** Version bump only for package @react-ck/icon
+
+
+
+
+
 ## [4.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.0.0...@react-ck/icon@4.0.1) (2025-04-22)
 
 **Note:** Version bump only for package @react-ck/icon
