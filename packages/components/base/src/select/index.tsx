@@ -1,3 +1,6 @@
+/* eslint-disable max-lines */
+/* eslint-disable jsx-a11y/prefer-tag-over-role */
+/* eslint-disable complexity */
 import styles from "./styles/index.module.scss";
 import React, { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SelectOption } from "./SelectOption";
@@ -11,6 +14,7 @@ import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "../form-field";
+import { Flex } from "../flex";
 
 /* eslint-disable max-lines-per-function */
 
@@ -71,6 +75,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       required,
       disabled,
       displayValueDivider = ",",
+      fullWidth,
       ...props
     },
     ref,
@@ -119,7 +124,6 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
 
     const updateInternalValue = useCallback<ChangeHandler>(
       (value, mode) => {
-        // eslint-disable-next-line complexity
         setInternalValue((v) => {
           if (!selectMultiple && mode === "select") return value;
           else if (!selectMultiple && mode === "deselect" && allowDeselect) return undefined;
@@ -236,6 +240,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             formFieldContext === undefined && styles.standalone,
             disabled && styles.disabled,
             !selectMultiple && styles.single,
+            fullWidth && styles.full_width,
             className,
           )}
           onFocus={(e) => {
@@ -246,7 +251,9 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             handleBlur();
             onBlur?.(e);
           }}>
-          {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+          <div className={styles.value_slot}>
+            {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+          </div>
 
           <select
             ref={megeRefs([ref, selectRef])}
@@ -268,6 +275,12 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
               </option>
             ))}
           </select>
+          <div className={styles.size_setter}>
+            <span className={styles.placeholder}>{placeholder}</span>
+            {childrenData.map((i) => (
+              <span key={i.computedValue}>{i.element}</span>
+            ))}
+          </div>
         </div>
 
         <Dropdown

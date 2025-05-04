@@ -101,3 +101,10 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const FullWidth: Story = {
+  args: {
+    ...args,
+    fullWidth: true,
+  },
+};

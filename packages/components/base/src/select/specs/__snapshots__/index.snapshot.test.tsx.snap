@@ -8,14 +8,25 @@ exports[`snapshot Select renders correctly 1`] = `
   role="button"
   tabIndex={0}
 >
-  <span
-    className="placeholder"
-  />
+  <div
+    className="value_slot"
+  >
+    <span
+      className="placeholder"
+    />
+  </div>
   <select
     className="native_element"
     onChange={[Function]}
   >
     <option />
   </select>
+  <div
+    className="size_setter"
+  >
+    <span
+      className="placeholder"
+    />
+  </div>
 </div>
 `;

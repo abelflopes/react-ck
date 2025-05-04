@@ -65,6 +65,8 @@ export interface SelectProps
   disabled?: boolean;
   /** Display value divider */
   displayValueDivider?: React.ReactNode;
+  /** Whether the select should take the full width of the parent container */
+  fullWidth?: boolean;
 }
 
 /**

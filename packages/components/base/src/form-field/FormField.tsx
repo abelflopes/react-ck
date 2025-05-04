@@ -13,7 +13,7 @@ export interface FormFieldProps
   /** Visual theme of the form field. Affects the appearance and validation state display.
    * @default "default"
    */
-  skin?: Exclude<FormFieldContextProps["skin"], "ghost">;
+  skin?: FormFieldContextProps["skin"];
   /** Layout structure of the form field. Controls the positioning of labels and inputs.
    * - default: Label above input
    * - inline: Label and input on same line

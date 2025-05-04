@@ -5,6 +5,7 @@
 
 .root {
   @include form-field.form-field-input;
+  @include form-field.form-field-input-full-width;
 
   // Remove default input height
   height: unset;

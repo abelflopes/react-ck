@@ -55,7 +55,6 @@
   @include spacing;
   @include text.text-base;
 
-  width: 100%;
   min-height: calc(
     #{variables.$form-field-input-height} - #{variables.$form-field-border-width} * 2
   );
@@ -73,4 +72,8 @@
   &:disabled {
     @include theme.disabled;
   }
+}
+
+@mixin form-field-input-full-width {
+  width: 100%;
 }

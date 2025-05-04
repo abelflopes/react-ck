@@ -18,6 +18,8 @@ interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
    * @default "default"
    */
   skin?: FormFieldContextProps["skin"];
+  /** Whether the input should take the full width of the parent container. */
+  fullWidth?: boolean;
 }
 
 /**
@@ -40,7 +42,7 @@ interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
  */
 
 const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
-  ({ skin, id, className, ...props }, ref) => {
+  ({ skin, fullWidth, id, className, ...props }, ref) => {
     const formFieldContext = useFormFieldContext();
 
     const computedSkin = useMemo(
@@ -78,6 +80,7 @@ const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
             defaultStyles.root,
             formFieldContext === undefined && defaultStyles.standalone,
             defaultStyles[`skin_${computedSkin}`],
+            fullWidth && defaultStyles.full_width,
           ],
           className,
         )}

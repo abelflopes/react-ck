@@ -6,19 +6,26 @@
   @include form-field.wrapper;
   @include form-field.skins;
 
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: unset;
+  cursor: pointer;
+
+  &.full_width {
+    @include form-field.form-field-input-full-width;
+
+    display: flex;
+  }
+}
+
+.value_slot {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-self: unset;
   flex-wrap: wrap;
   gap: theme.get-spacing(0.5);
-}
-
-.root {
-  @include form-field.form-field-input;
-
-  position: relative;
-  min-width: 200px; // TODO: make properly
-  cursor: pointer;
 }
 
 // When not inside form field, has own border, etc
@@ -70,4 +77,11 @@
 
 .disabled {
   @include theme.disabled;
+}
+
+.size_setter {
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  height: 0;
 }
