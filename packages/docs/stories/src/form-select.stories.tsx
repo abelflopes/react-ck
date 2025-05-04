@@ -83,11 +83,7 @@ export const Validation: Story = {
 export const WithFormField: Story = {
   decorators: [
     (Story: () => React.ReactElement): React.ReactElement => (
-      <FormField
-        skin="negative"
-        label="Your preference"
-        description="Insert your preferred value"
-        validationMessage="Required field">
+      <FormField label="Your preference" description="Insert your preferred value">
         <Story />
       </FormField>
     ),

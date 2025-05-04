@@ -3,8 +3,6 @@
 
 .root {
   @include form-field.form-field-input;
-  @include form-field.wrapper;
-  @include form-field.skins;
 
   position: relative;
   display: inline-flex;
@@ -84,4 +82,5 @@
   flex-direction: column;
   pointer-events: none;
   height: 0;
+  overflow: hidden;
 }
