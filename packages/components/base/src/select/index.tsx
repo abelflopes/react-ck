@@ -14,7 +14,6 @@ import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "../form-field";
-import { Flex } from "../flex";
 
 /* eslint-disable max-lines-per-function */
 
