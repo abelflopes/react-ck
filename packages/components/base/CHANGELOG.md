@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.5.1...@react-ck/base-components@5.5.2) (2025-05-04)
+
+
+### Bug Fixes
+
+* select issues ([0ef7e00](https://github.com/abelflopes/react-ck/commit/0ef7e00aa092638ace1fb59a16225ac3ff59643f))
+
+
+
 ## [5.5.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.5.0...@react-ck/base-components@5.5.1) (2025-05-04)
 
 
