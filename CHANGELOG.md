@@ -1,3 +1,17 @@
+## [3.75.0](https://github.com/abelflopes/react-ck/compare/v3.74.0...v3.75.0) (2025-04-22)
+
+
+### Features
+
+* **card:** add back background variation ([4555bec](https://github.com/abelflopes/react-ck/commit/4555bec35c783da3dcd6a392540ed248c031297f))
+* **react-ck:** global library package ([8c86998](https://github.com/abelflopes/react-ck/commit/8c86998adf32afde51a76b95a48d87f31467fcbb))
+* **react-ck:** global library package ([2ead522](https://github.com/abelflopes/react-ck/commit/2ead5227a630066c58a7f7c613f19b81a79e081b))
+
+
+### Code Refactoring
+
+* update theme color names ([66d0245](https://github.com/abelflopes/react-ck/commit/66d0245150890d96648d8d1a47e9014831c37fd9))
+
 ## [3.74.0](https://github.com/abelflopes/react-ck/compare/v3.73.0...v3.74.0) (2025-04-18)
 
 

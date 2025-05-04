@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@2.0.0...@react-ck/theme@2.1.0) (2025-04-22)
+
+
+### Features
+
+* **card:** add back background variation ([4555bec](https://github.com/abelflopes/react-ck/commit/4555bec35c783da3dcd6a392540ed248c031297f))
+
+
+
 ## [2.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@1.12.1...@react-ck/theme@2.0.0) (2025-02-04)
 
 
