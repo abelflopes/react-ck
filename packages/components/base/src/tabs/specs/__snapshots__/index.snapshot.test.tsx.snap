@@ -10,12 +10,14 @@ exports[`snapshot Tabs renders correctly 1`] = `
     <button
       className="tab tab_active"
       onClick={[Function]}
+      type="button"
     >
       item 1
     </button>
     <button
       className="tab"
       onClick={[Function]}
+      type="button"
     >
       item 2
     </button>
