@@ -1,3 +1,17 @@
+## [3.78.0](https://github.com/abelflopes/react-ck/compare/v3.77.0...v3.78.0) (2025-05-06)
+
+
+### Features
+
+* **react-ck:** global library package ([6d037b1](https://github.com/abelflopes/react-ck/commit/6d037b1b3ed8092e10876d2160b7845b6ad91363))
+* **react-ck:** global library package ([f487a28](https://github.com/abelflopes/react-ck/commit/f487a28d72c35484fdaccc761c311566d9c7af41))
+
+
+### Bug Fixes
+
+* use lighter color on skeleton background ([568e2ac](https://github.com/abelflopes/react-ck/commit/568e2acd3d7703a1f05c00c44a34d681e907c5fd))
+* use type button on tabs ([09b1531](https://github.com/abelflopes/react-ck/commit/09b15316028791f8b02bb2ddf7c46c1e1bc28813))
+
 ## [3.77.0](https://github.com/abelflopes/react-ck/compare/v3.76.0...v3.77.0) (2025-05-04)
 
 
