@@ -54,6 +54,7 @@ export const Tabs = ({
         {items.map(({ id, heading }) => (
           <button
             key={id}
+            type="button"
             className={classNames(styles.tab, {
               [`${styles.tab_active}`]: id === computedActive,
             })}
