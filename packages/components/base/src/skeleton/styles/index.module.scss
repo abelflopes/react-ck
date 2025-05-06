@@ -34,7 +34,7 @@
   position: relative;
   overflow: hidden;
   border-radius: theme.get-spacing(0.5);
-  background-color: theme.get-color(neutral-light-300);
+  background-color: theme.get-color(neutral-light-200);
 
   &::before {
     @include animation;
