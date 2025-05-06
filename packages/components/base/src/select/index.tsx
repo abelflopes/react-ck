@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 /* eslint-disable max-lines */
 /* eslint-disable jsx-a11y/prefer-tag-over-role */
 /* eslint-disable complexity */
@@ -14,8 +15,6 @@ import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "../form-field";
-
-/* eslint-disable max-lines-per-function */
 
 /**
  * A customizable select component that supports single and multiple selection modes.
@@ -327,7 +326,6 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
     );
   },
 );
-/* eslint-enable max-lines-per-function */
 
 Select.displayName = "Select";
 
@@ -343,3 +341,7 @@ const CompoundSelect: SelectWithOption = Select as SelectWithOption;
 CompoundSelect.Option = SelectOption;
 
 export { CompoundSelect as Select, type SelectProps, type SelectOptionProps };
+/* eslint-enable max-lines */
+/* eslint-enable jsx-a11y/prefer-tag-over-role */
+/* eslint-enable complexity */
+/* eslint-enable max-lines-per-function */
