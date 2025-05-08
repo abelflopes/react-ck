@@ -2,6 +2,6 @@
 
 exports[`snapshot Divider renders correctly 1`] = `
 <hr
-  className="root horizontal"
+  className="root horizontal spacing_m"
 />
 `;

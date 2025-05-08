@@ -1,11 +1,14 @@
 @use "@react-ck/theme";
 @use "@react-ck/scss-utils";
+@use "variables";
+@use "sass:map";
 
 .root {
   width: scss-utils.get-css-var(divider, width);
   height: scss-utils.get-css-var(divider, height);
   border: none;
   background-color: theme.get-color(neutral-light-400);
+  margin: #{scss-utils.get-css-var(divider, spacing)} 0;
 }
 
 .horizontal {
@@ -20,4 +23,14 @@
   @include scss-utils.define-css-var(divider, height, 100%);
 
   min-height: theme.get-spacing(2);
+}
+
+@each $key in map.keys(variables.$divider-spacings) {
+  .spacing_#{$key} {
+    @include scss-utils.define-css-var(
+      divider,
+      spacing,
+      scss-utils.map-get-strict(variables.$divider-spacings, $key)
+    );
+  }
 }
