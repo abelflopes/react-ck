@@ -1,3 +1,13 @@
+## [3.79.0](https://github.com/abelflopes/react-ck/compare/v3.78.0...v3.79.0) (2025-05-08)
+
+
+### Features
+
+* **divider:** add spacing prop ([1eeae86](https://github.com/abelflopes/react-ck/commit/1eeae86627bd31b47c9911daa1de62c64129a5d4))
+* **react-ck:** global library package ([9fb103f](https://github.com/abelflopes/react-ck/commit/9fb103fe7296333f9c2c80ff7bae3ddc8649a35c))
+* **react-ck:** global library package ([b4409a0](https://github.com/abelflopes/react-ck/commit/b4409a0cfa7ff6aa6f93b6fedcd3b9da096867e2))
+* **tabs:** add tabs chip skin and spacing props ([7a9bcf5](https://github.com/abelflopes/react-ck/commit/7a9bcf58c5df69dbb124c76d027055b26a3a0223))
+
 ## [3.78.0](https://github.com/abelflopes/react-ck/compare/v3.77.0...v3.78.0) (2025-05-06)
 
 
