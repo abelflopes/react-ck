@@ -37,6 +37,8 @@ const SelectOption = ({
         if (disabled) return;
 
         context?.handleChange(computedValue, isCurrentlySelected ? "deselect" : "select");
+
+        props.onClick?.(e);
       }}>
       {displayChildren}
     </Menu.Item>
