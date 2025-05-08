@@ -8,6 +8,8 @@ const SelectOption = ({
   value,
   disabled,
   children,
+  onSelect,
+  onDeselect,
   ...props
 }: Readonly<SelectOptionProps>): React.ReactElement => {
   const context = useContext(SelectContext);
@@ -33,10 +35,13 @@ const SelectOption = ({
       {...props}
       disabled={disabled}
       skin={isCurrentlySelected ? "primary" : "default"}
-      onClick={() => {
+      onClick={(e) => {
         if (disabled) return;
 
         context?.handleChange(computedValue, isCurrentlySelected ? "deselect" : "select");
+
+        if (isCurrentlySelected) onDeselect?.(computedValue);
+        else onSelect?.(computedValue);
 
         props.onClick?.(e);
       }}>

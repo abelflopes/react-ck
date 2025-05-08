@@ -86,6 +86,10 @@ export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
   selected?: boolean;
   /** Custom display value for the option when selected */
   displayValue?: React.ReactNode;
+  /** Handler called when the option is selected */
+  onSelect?: (value: string) => void;
+  /** Handler called when the option is deselected */
+  onDeselect?: (value: string) => void;
 }
 
 /**
