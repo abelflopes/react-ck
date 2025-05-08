@@ -31,13 +31,21 @@ export const Component: Story = {
       {
         id: "1",
         heading: faker.lorem.word(),
-        content: <Text>{faker.lorem.sentence(50)}</Text>,
+        content: <Text margin="none">{faker.lorem.sentence(50)}</Text>,
       },
       {
         id: "2",
         heading: faker.lorem.word(),
-        content: <Text>{faker.lorem.sentence(100)}</Text>,
+        content: <Text margin="none">{faker.lorem.sentence(100)}</Text>,
       },
     ],
+  },
+};
+
+export const Chip: Story = {
+  ...Component,
+  args: {
+    ...Component.args,
+    skin: "chip",
   },
 };

@@ -2,20 +2,20 @@
 
 exports[`snapshot Tabs renders correctly 1`] = `
 <div
-  className="root"
+  className="root skin_default spacing_m"
 >
   <div
     className="track"
   >
     <button
-      className="tab tab_active"
+      className="tab_button tab_button_active"
       onClick={[Function]}
       type="button"
     >
       item 1
     </button>
     <button
-      className="tab"
+      className="tab_button"
       onClick={[Function]}
       type="button"
     >

@@ -18,6 +18,10 @@ export interface TabsItem {
  * Props for configuring the Tabs component
  */
 export interface TabsProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
+  /** Skin of the tabs. Defaults to "default" */
+  skin?: "default" | "chip";
+  /** Spacing between tabs. Defaults to "m" */
+  spacing?: "none" | "s" | "m" | "l" | "xl";
   /** Array of tab items to display */
   items: TabsItem[];
   /** ID of the currently active tab */
@@ -33,6 +37,8 @@ export interface TabsProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "c
  * Manages tab selection and content visibility
  */
 export const Tabs = ({
+  skin = "default",
+  spacing = "m",
   items,
   activeTab,
   onActiveTabChange,
@@ -49,14 +55,21 @@ export const Tabs = ({
   }, [activeTab]);
 
   return (
-    <div className={classNames(className, styles.root)} {...otherProps}>
+    <div
+      className={classNames(
+        className,
+        styles.root,
+        styles[`skin_${skin}`],
+        styles[`spacing_${spacing}`],
+      )}
+      {...otherProps}>
       <div className={styles.track}>
         {items.map(({ id, heading }) => (
           <button
             key={id}
             type="button"
-            className={classNames(styles.tab, {
-              [`${styles.tab_active}`]: id === computedActive,
+            className={classNames(styles.tab_button, {
+              [`${styles.tab_button_active}`]: id === computedActive,
             })}
             onClick={() => {
               setComputedActive(id);
