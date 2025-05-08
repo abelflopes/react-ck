@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.6.0...@react-ck/base-components@5.7.0) (2025-05-08)
+
+
+### Features
+
+* **select:** add selection and deselection callbacks to option ([0731daa](https://github.com/abelflopes/react-ck/commit/0731daafb18af76e42db5dd994e61dd6485c6e32))
+
+
+### Bug Fixes
+
+* **select:** fix option not calling onclick handler ([6779abf](https://github.com/abelflopes/react-ck/commit/6779abf2ebba885958913f894dc2160cf33d0376))
+* **select:** prevent width overflow ([b632519](https://github.com/abelflopes/react-ck/commit/b632519c002c5f3e86ba4da7345bbcb83983bdb1))
+* **select:** solve prop name conflict with native element ([3f92184](https://github.com/abelflopes/react-ck/commit/3f921847e668fbe974d9028d1af250d8250d3e99))
+
+
+
 ## [5.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.5.3...@react-ck/base-components@5.6.0) (2025-05-08)
 
 
