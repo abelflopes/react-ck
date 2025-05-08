@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.5.3...@react-ck/base-components@5.6.0) (2025-05-08)
+
+
+### Features
+
+* **divider:** add spacing prop ([1eeae86](https://github.com/abelflopes/react-ck/commit/1eeae86627bd31b47c9911daa1de62c64129a5d4))
+* **tabs:** add tabs chip skin and spacing props ([7a9bcf5](https://github.com/abelflopes/react-ck/commit/7a9bcf58c5df69dbb124c76d027055b26a3a0223))
+
+
+
 ## [5.5.3](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.5.2...@react-ck/base-components@5.5.3) (2025-05-06)
 
 
