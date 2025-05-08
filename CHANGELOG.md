@@ -1,3 +1,19 @@
+## [3.80.0](https://github.com/abelflopes/react-ck/compare/v3.79.0...v3.80.0) (2025-05-08)
+
+
+### Features
+
+* **react-ck:** global library package ([24929a7](https://github.com/abelflopes/react-ck/commit/24929a7b8ce17dfb023a578c1601adbcfa6e8c3a))
+* **react-ck:** global library package ([bbbb29e](https://github.com/abelflopes/react-ck/commit/bbbb29ea1e584edc7aba0ccf2f15bc701166b94d))
+* **select:** add selection and deselection callbacks to option ([0731daa](https://github.com/abelflopes/react-ck/commit/0731daafb18af76e42db5dd994e61dd6485c6e32))
+
+
+### Bug Fixes
+
+* **select:** fix option not calling onclick handler ([6779abf](https://github.com/abelflopes/react-ck/commit/6779abf2ebba885958913f894dc2160cf33d0376))
+* **select:** prevent width overflow ([b632519](https://github.com/abelflopes/react-ck/commit/b632519c002c5f3e86ba4da7345bbcb83983bdb1))
+* **select:** solve prop name conflict with native element ([3f92184](https://github.com/abelflopes/react-ck/commit/3f921847e668fbe974d9028d1af250d8250d3e99))
+
 ## [3.79.0](https://github.com/abelflopes/react-ck/compare/v3.78.0...v3.79.0) (2025-05-08)
 
 
