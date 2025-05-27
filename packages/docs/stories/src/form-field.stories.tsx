@@ -77,6 +77,13 @@ export const InlineReverse: Story = {
   },
 };
 
+export const Disabled: Story = {
+  args: {
+    ...Demo.args,
+    disabled: true,
+  },
+};
+
 export const AllVariations: Story = {
   decorators: [
     (): React.ReactElement => (

@@ -236,7 +236,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             styles.root,
             styles[`skin_${computedSkin}`],
             formFieldContext === undefined && styles.standalone,
-            disabled && styles.disabled,
+            (disabled || formFieldContext?.disabled) && styles.disabled,
             !selectMultiple && styles.single,
             fullWidth && styles.full_width,
             className,
@@ -260,7 +260,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             multiple={selectMultiple}
             defaultValue={defaultValue}
             required={required}
-            disabled={disabled}
+            disabled={disabled || formFieldContext?.disabled}
             value={internalValue}
             className={styles.native_element}
             onChange={(e) => {

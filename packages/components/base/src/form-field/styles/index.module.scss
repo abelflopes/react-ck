@@ -11,6 +11,10 @@
   flex-direction: column;
 }
 
+.disabled {
+  @include theme.disabled;
+}
+
 @each $key, $props in variables.$form-field-styles {
   .skin_#{$key} {
     @each $propKey, $propValue in $props {

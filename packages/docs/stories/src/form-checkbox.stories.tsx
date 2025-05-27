@@ -35,6 +35,14 @@ export const Component: Story = {
 
 export const Toggle: Story = {
   args: {
+    ...Component.args,
     isToggle: true,
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    ...Component.args,
+    disabled: true,
   },
 };

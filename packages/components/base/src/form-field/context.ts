@@ -13,6 +13,8 @@ export interface FormFieldContextProps {
    * Generated automatically if not provided.
    */
   id: string;
+  /** Whether the form field is disabled. */
+  disabled: boolean | undefined;
 }
 
 /** Context for sharing form field state with child components */

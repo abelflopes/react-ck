@@ -37,6 +37,7 @@ export const Textarea = ({
   skin,
   id,
   className,
+  disabled,
   ...props
 }: Readonly<TextareaProps>): React.ReactElement => {
   const formFieldContext = useFormFieldContext();
@@ -64,6 +65,7 @@ export const Textarea = ({
     <textarea
       {...props}
       id={computedId}
+      disabled={disabled || formFieldContext?.disabled}
       className={classNames(
         styles.root,
         formFieldContext === undefined && styles.standalone,

@@ -29,6 +29,7 @@ export const BooleaInput = ({
   skin,
   className,
   id,
+  disabled,
   ...otherProps
 }: Readonly<BooleaInputProps>): React.ReactElement => {
   const formFieldContext = useFormFieldContext();
@@ -36,8 +37,13 @@ export const BooleaInput = ({
   const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
 
   return (
-    <span className={classNames(styles.root, className)}>
-      <input {...otherProps} id={computedId} className={styles.input} />
+    <span
+      className={classNames(
+        styles.root,
+        className,
+        (disabled || formFieldContext?.disabled) && styles.disabled,
+      )}>
+      <input {...otherProps} id={computedId} className={styles.input} disabled={disabled} />
 
       <Icon {...otherProps} skin={skin ?? formFieldContext?.skin} />
     </span>

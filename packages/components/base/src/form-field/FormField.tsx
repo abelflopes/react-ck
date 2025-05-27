@@ -31,6 +31,8 @@ export interface FormFieldProps
   description?: React.ReactNode;
   /** Validation feedback message displayed below the description when input needs attention. */
   validationMessage?: React.ReactNode;
+  /** Whether the form field is disabled. */
+  disabled?: boolean;
 }
 
 /**
@@ -61,6 +63,7 @@ export const FormField = ({
   children,
   className,
   id,
+  disabled,
   ...otherProps
 }: Readonly<FormFieldProps>): React.ReactElement => {
   const generatedId = useMemo(() => `ff-${Math.random()}-${Number(new Date())}`, []);
@@ -71,8 +74,9 @@ export const FormField = ({
     () => ({
       skin,
       id: computedId,
+      disabled,
     }),
-    [computedId, skin],
+    [computedId, skin, disabled],
   );
 
   const mappedChildren = useMemo(
@@ -101,6 +105,7 @@ export const FormField = ({
         styles.root,
         styles[`skin_${skin}`],
         styles[`variation_${variation}`],
+        disabled && styles.disabled,
         className,
       )}>
       <div className={styles.main_content}>

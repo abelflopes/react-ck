@@ -42,7 +42,7 @@ interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
  */
 
 const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
-  ({ skin, fullWidth, id, className, ...props }, ref) => {
+  ({ skin, fullWidth, id, className, disabled, ...props }, ref) => {
     const formFieldContext = useFormFieldContext();
 
     const computedSkin = useMemo(
@@ -75,6 +75,7 @@ const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
         ref={ref}
         {...props}
         id={computedId}
+        disabled={disabled || formFieldContext?.disabled}
         className={classNames(
           isDefaultStyle && [
             defaultStyles.root,
