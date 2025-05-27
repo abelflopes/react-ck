@@ -6,9 +6,13 @@
 // Root
 
 .root {
-  display: flex;
+  display: inline-flex;
   gap: theme.get-spacing(0.5);
   flex-direction: column;
+
+  &.full_width {
+    display: flex;
+  }
 }
 
 .disabled {

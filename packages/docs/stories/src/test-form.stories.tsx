@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-max-depth -- demo */
+/* eslint-disable max-lines-per-function -- demo */
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager/src";
@@ -11,6 +13,7 @@ import {
   Checkbox,
   Radio,
   Textarea,
+  Chip,
 } from "@react-ck/base-components/src";
 
 type Story = StoryObj<unknown>;
@@ -69,7 +72,7 @@ export const demo: Story = {
             <Input type="date" required />
           </FormField>
         </Grid.Column>
-        <Grid.Column size={3}>
+        <Grid.Column size={2}>
           <FormField label="Select" description="Select" skin="muted">
             <Select required>
               <Select.Option value="a1">A</Select.Option>
@@ -79,7 +82,7 @@ export const demo: Story = {
             </Select>
           </FormField>
         </Grid.Column>
-        <Grid.Column size={3}>
+        <Grid.Column size={2}>
           <FormField label="Select" description="Select" skin="muted">
             <Select placeholder="Select" required>
               <Select.Option>A</Select.Option>
@@ -87,6 +90,75 @@ export const demo: Story = {
               <Select.Option>C</Select.Option>
             </Select>
           </FormField>
+        </Grid.Column>
+        <Grid.Column size={2}>
+          <FormField label="Select" description="Select" skin="muted">
+            <Select placeholder="Select" multiple>
+              <Select.Option value="Apple" disabled />
+              <Select.Option>Guaraná</Select.Option>
+              <Select.Option value="bnn">Banana</Select.Option>
+              <Select.Option value="orange">Orange</Select.Option>
+              <Select.Option
+                value="lemon"
+                displayValue={
+                  <>
+                    LEMON! <Chip>Favorite</Chip>
+                  </>
+                }>
+                Lemon 🍋 <Chip skin="primary">Popular</Chip> <Chip>Favorite</Chip>
+              </Select.Option>
+              <Select.Option value="mango">
+                <span>
+                  <b>Exotic</b> mango
+                </span>
+              </Select.Option>
+            </Select>
+          </FormField>
+        </Grid.Column>
+      </Grid>
+      <Grid align="centered" spacing="l">
+        <Grid.Column size={3}>
+          <Input type="text" required />
+        </Grid.Column>
+        <Grid.Column size={3}>
+          <Input type="date" required />
+        </Grid.Column>
+        <Grid.Column size={2}>
+          <Select required>
+            <Select.Option value="a1">A</Select.Option>
+            <Select.Option value="a2">A</Select.Option>
+            <Select.Option>B</Select.Option>
+            <Select.Option>C</Select.Option>
+          </Select>
+        </Grid.Column>
+        <Grid.Column size={2}>
+          <Select placeholder="Select" required>
+            <Select.Option>A</Select.Option>
+            <Select.Option>B</Select.Option>
+            <Select.Option>C</Select.Option>
+          </Select>
+        </Grid.Column>
+        <Grid.Column size={2}>
+          <Select placeholder="Select" multiple>
+            <Select.Option value="Apple" disabled />
+            <Select.Option>Guaraná</Select.Option>
+            <Select.Option value="bnn">Banana</Select.Option>
+            <Select.Option value="orange">Orange</Select.Option>
+            <Select.Option
+              value="lemon"
+              displayValue={
+                <>
+                  LEMON! <Chip>Favorite</Chip>
+                </>
+              }>
+              Lemon 🍋 <Chip skin="primary">Popular</Chip> <Chip>Favorite</Chip>
+            </Select.Option>
+            <Select.Option value="mango">
+              <span>
+                <b>Exotic</b> mango
+              </span>
+            </Select.Option>
+          </Select>
         </Grid.Column>
       </Grid>
       <Grid align="centered" spacing="l">
@@ -225,3 +297,6 @@ export const demo: Story = {
     </form>
   ),
 };
+
+/* eslint-enable react/jsx-max-depth */
+/* eslint-enable max-lines-per-function */

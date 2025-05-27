@@ -87,6 +87,8 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
     const [open, setOpen] = useState(false);
     const [search, setSearch] = useState("");
     const formFieldContext = useFormFieldContext();
+    const sizeSetterRef = useRef<HTMLDivElement>(null);
+    const valueSlotRef = useRef<HTMLDivElement>(null);
 
     const computedSkin = useMemo(
       () => formFieldContext?.skin ?? skin ?? "default",
@@ -191,7 +193,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       const node = (
         <>
           {displayValue.map((i, k) => (
-            <span key={i.textContent}>
+            <span key={i.textContent} className={styles.display_value_item}>
               {i.displayValue ?? i.textContent}
               {displayValue.length > 1 && k < displayValue.length - 1 && displayValueDivider}
             </span>
@@ -225,6 +227,19 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       });
     }, [childrenData, updateInternalValue]);
 
+    /**
+     * Synchronize the width of the value slot with the native select element.
+     */
+    useEffect(() => {
+      if (!sizeSetterRef.current) return;
+      const resizeObserver = new ResizeObserver(() => {
+        if (!valueSlotRef.current || !sizeSetterRef.current) return;
+
+        valueSlotRef.current.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
+      });
+      resizeObserver.observe(sizeSetterRef.current);
+    }, []);
+
     return (
       <>
         <div
@@ -237,7 +252,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             styles[`skin_${computedSkin}`],
             formFieldContext === undefined && styles.standalone,
             (disabled || formFieldContext?.disabled) && styles.disabled,
-            !selectMultiple && styles.single,
+
             fullWidth && styles.full_width,
             className,
           )}
@@ -249,8 +264,9 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             handleBlur();
             onBlur?.(e);
           }}>
-          <div className={styles.value_slot}>
+          <div ref={valueSlotRef} className={styles.value_slot}>
             {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+            &nbsp;
           </div>
 
           <select
@@ -273,7 +289,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
               </option>
             ))}
           </select>
-          <div className={styles.size_setter}>
+          <div ref={sizeSetterRef} className={styles.size_setter}>
             <span className={styles.placeholder}>{placeholder}</span>
             {childrenData.map((i) => (
               <span key={i.computedValue}>{i.element}</span>

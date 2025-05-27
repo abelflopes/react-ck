@@ -5,12 +5,11 @@
   @include form-field.form-field-input;
 
   position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-self: unset;
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
   max-width: 100%;
+  min-width: theme.get-spacing(10);
 
   &.full_width {
     @include form-field.form-field-input-full-width;
@@ -25,6 +24,16 @@
   justify-self: unset;
   flex-wrap: wrap;
   gap: theme.get-spacing(0.5);
+  max-width: 100%;
+}
+
+.display_value_item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 // When not inside form field, has own border, etc
@@ -35,12 +44,6 @@
   &:focus {
     @include form-field.focus-active;
   }
-}
-
-.single {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .menu {
@@ -78,11 +81,14 @@
   @include theme.disabled;
 }
 
+/*
+  This is a hidden element that is used to set the width of the value slot.
+  It is used to ensure that the value slot is the same width as the native select element.
+*/
 .size_setter {
-  display: flex;
+  position: absolute;
+  display: block;
   flex-direction: column;
   pointer-events: none;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
+  opacity: 0;
 }

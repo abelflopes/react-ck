@@ -33,6 +33,8 @@ export interface FormFieldProps
   validationMessage?: React.ReactNode;
   /** Whether the form field is disabled. */
   disabled?: boolean;
+  /** Whether the form field should take the full width of the parent container. */
+  fullWidth?: boolean;
 }
 
 /**
@@ -64,6 +66,7 @@ export const FormField = ({
   className,
   id,
   disabled,
+  fullWidth,
   ...otherProps
 }: Readonly<FormFieldProps>): React.ReactElement => {
   const generatedId = useMemo(() => `ff-${Math.random()}-${Number(new Date())}`, []);
@@ -106,6 +109,7 @@ export const FormField = ({
         styles[`skin_${skin}`],
         styles[`variation_${variation}`],
         disabled && styles.disabled,
+        fullWidth && styles.full_width,
         className,
       )}>
       <div className={styles.main_content}>
