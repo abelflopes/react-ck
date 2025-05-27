@@ -6,6 +6,7 @@ import { IconClose } from "@react-ck/icon/icons/IconClose";
 import { Icon } from "@react-ck/icon";
 import { IconDocument } from "@react-ck/icon/icons/IconDocument";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
+import { Spinner } from "../spinner";
 
 /**
  * Props interface for the Attachment component.
@@ -32,6 +33,8 @@ export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElemen
   onRemove?: () => void;
   /** Error message to display below the attachment */
   error?: React.ReactNode;
+  /** Whether to show the loading spinner */
+  loading?: boolean;
 }
 
 /**
@@ -45,6 +48,7 @@ export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElemen
  *   format="PDF"
  *   skin="pdf"
  *   onRemove={() => handleRemove()}
+ *   loading={true}
  * />
  * ```
  *
@@ -60,6 +64,7 @@ export const Attachment = ({
   onRemove,
   error,
   className,
+  loading,
   ...otherProps
 }: Readonly<AttachmentProps>): React.ReactElement => (
   <div
@@ -77,6 +82,11 @@ export const Attachment = ({
         {skin === "doc" && <IconDocument />}
         {skin === "pdf" && <IconDocument />}
       </Icon>
+      {loading ? (
+        <span className={styles.spinner}>
+          <Spinner size="l" />
+        </span>
+      ) : null}
     </span>
 
     <div className={styles.content}>
