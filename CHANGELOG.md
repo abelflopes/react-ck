@@ -1,3 +1,17 @@
+## [3.82.0](https://github.com/abelflopes/react-ck/compare/v3.81.0...v3.82.0) (2025-05-27)
+
+
+### Features
+
+* **attachment:** add loading state ([4d369d7](https://github.com/abelflopes/react-ck/commit/4d369d71bb64ba48566a4255fbd6a0347eb64266))
+* **react-ck:** global library package ([d43c57f](https://github.com/abelflopes/react-ck/commit/d43c57f13e350e255c3fd9a8d00e0bcb882feb94))
+* **react-ck:** global library package ([ca0e6ea](https://github.com/abelflopes/react-ck/commit/ca0e6ea660d5e8e2411f41316a6d0bca542f0baa))
+
+
+### Code Refactoring
+
+* forward ref file uploader ([1a31623](https://github.com/abelflopes/react-ck/commit/1a316233ebfbb4adf40fdcc56af257f0ef2f7013))
+
 ## [3.81.0](https://github.com/abelflopes/react-ck/compare/v3.80.0...v3.81.0) (2025-05-27)
 
 
