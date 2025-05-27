@@ -1,9 +1,11 @@
+/* eslint-disable complexity -- TODO: refactor */
 import styles from "./styles/index.module.scss";
-import React, { useCallback, useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef, forwardRef } from "react";
 import classNames from "classnames";
 import { Text } from "../text";
 import { Button, type ButtonProps } from "../button";
 import { readFileList } from "./utils/read-file";
+import { megeRefs } from "@react-ck/react-utils";
 
 // TODO: check https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 // TODO: add size limitation: https://stackoverflow.com/questions/5697605/limit-the-size-of-a-file-upload-html-input-element
@@ -17,7 +19,7 @@ import { readFileList } from "./utils/read-file";
 /**
  * Props for configuring the FileUploader component
  */
-export interface FileUploaderProps
+interface FileUploaderProps
   extends Omit<React.HTMLAttributes<HTMLElement>, "onChange" | "onProgress"> {
   /** Visual style of the uploader. Defaults to "default" */
   skin?: "default" | "negative" | "disabled";
@@ -46,97 +48,108 @@ export interface FileUploaderProps
  * File input component with drag and drop support
  * Supports icon-only and descriptive layouts with validation
  */
-export const FileUploader = ({
-  skin = "default",
-  variation = "default",
-  icon,
-  description,
-  validationMessage,
-  className,
-  children,
-  inputProps,
-  buttonProps,
-  onChange,
-  onProgress,
-  ...otherProps
-}: Readonly<FileUploaderProps>): React.ReactElement => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const isIconOnly = useMemo(() => Boolean(icon) && !description, [description, icon]);
-
-  const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
-    if (e.code === "Enter") inputRef.current?.click();
-  }, []);
-
-  const handleChange = useCallback<React.ChangeEventHandler<HTMLInputElement>>(
-    (e) => {
-      if (!e.target.files) throw new Error("No files added");
-
-      const fileList = readFileList(e.target.files, onProgress);
-
-      onChange?.(e, fileList);
-
-      inputProps?.onChange?.(e);
+const FileUploader = forwardRef<HTMLInputElement, Readonly<FileUploaderProps>>(
+  (
+    {
+      skin = "default",
+      variation = "default",
+      icon,
+      description,
+      validationMessage,
+      className,
+      children,
+      inputProps,
+      buttonProps,
+      onChange,
+      onProgress,
+      ...otherProps
     },
-    [inputProps, onChange, onProgress],
-  );
+    ref,
+  ): React.ReactElement => {
+    const inputRef = useRef<HTMLInputElement>(null);
+    const isIconOnly = useMemo(() => Boolean(icon) && !description, [description, icon]);
 
-  return (
-    <div
-      {...otherProps}
-      className={classNames(
-        variation !== "default" && styles[variation],
-        skin !== "default" && styles[skin],
-        !isIconOnly && styles.root,
-        isIconOnly && styles.root_icon_only,
-        className,
-      )}>
-      <input
-        {...inputProps}
-        ref={inputRef}
-        type="file"
-        className={classNames(styles.file, inputProps?.className)}
-        onChange={handleChange}
-        onKeyUp={(e) => {
-          handleKeyUp(e);
-          inputProps?.onKeyUp?.(e);
-        }}
-      />
+    const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
+      if (e.code === "Enter") inputRef.current?.click();
+    }, []);
 
-      {!isIconOnly && icon}
+    const handleChange = useCallback<React.ChangeEventHandler<HTMLInputElement>>(
+      (e) => {
+        if (!e.target.files) throw new Error("No files added");
 
-      {children ? <div className={styles.content}>{children}</div> : null}
+        const fileList = readFileList(e.target.files, onProgress);
 
-      {isIconOnly ? (
-        <Button
-          {...buttonProps}
-          icon={icon}
-          disabled={skin === "disabled" || buttonProps?.disabled}
-          className={classNames(styles.button, buttonProps?.className)}
+        onChange?.(e, fileList);
+
+        inputProps?.onChange?.(e);
+      },
+      [inputProps, onChange, onProgress],
+    );
+
+    return (
+      <div
+        {...otherProps}
+        className={classNames(
+          variation !== "default" && styles[variation],
+          skin !== "default" && styles[skin],
+          !isIconOnly && styles.root,
+          isIconOnly && styles.root_icon_only,
+          className,
+        )}>
+        <input
+          {...inputProps}
+          ref={megeRefs([ref, inputRef])}
+          type="file"
+          className={classNames(styles.file, inputProps?.className)}
+          onChange={handleChange}
           onKeyUp={(e) => {
             handleKeyUp(e);
-            buttonProps?.onKeyUp?.(e);
-          }}
-          onClick={(e) => {
-            inputRef.current?.click();
-            buttonProps?.onClick?.(e);
+            inputProps?.onKeyUp?.(e);
           }}
         />
-      ) : null}
 
-      {description || validationMessage ? (
-        <div className={styles.details}>
-          {description ? (
-            <Text variation="small" skin="soft">
-              {description}
-            </Text>
-          ) : null}
-          {validationMessage ? (
-            <Text variation="small" className={styles.validation_message}>
-              {validationMessage}
-            </Text>
-          ) : null}
-        </div>
-      ) : null}
-    </div>
-  );
-};
+        {!isIconOnly && icon}
+
+        {children ? <div className={styles.content}>{children}</div> : null}
+
+        {isIconOnly ? (
+          <Button
+            {...buttonProps}
+            icon={icon}
+            disabled={skin === "disabled" || buttonProps?.disabled}
+            className={classNames(styles.button, buttonProps?.className)}
+            onKeyUp={(e) => {
+              handleKeyUp(e);
+              buttonProps?.onKeyUp?.(e);
+            }}
+            onClick={(e) => {
+              inputRef.current?.click();
+              buttonProps?.onClick?.(e);
+            }}
+          />
+        ) : null}
+
+        {description || validationMessage ? (
+          <div className={styles.details}>
+            {description ? (
+              <Text variation="small" skin="soft">
+                {description}
+              </Text>
+            ) : null}
+            {validationMessage ? (
+              <Text variation="small" className={styles.validation_message}>
+                {validationMessage}
+              </Text>
+            ) : null}
+          </div>
+        ) : null}
+      </div>
+    );
+  },
+);
+
+FileUploader.displayName = "FileUploader";
+
+export { FileUploader, type FileUploaderProps };
+
+/* eslint-enable complexity */
