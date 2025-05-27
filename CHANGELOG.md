@@ -1,3 +1,17 @@
+## [3.81.0](https://github.com/abelflopes/react-ck/compare/v3.80.0...v3.81.0) (2025-05-27)
+
+
+### Features
+
+* **react-ck:** global library package ([f2e8961](https://github.com/abelflopes/react-ck/commit/f2e8961bf78c97d4b3b9499df6e8564d05465d00))
+* **react-ck:** global library package ([5f390de](https://github.com/abelflopes/react-ck/commit/5f390de4026bb7d64b0a9bbc21425e2362e2ab90))
+* support disabled skin in form field & checkbox ([d43ca98](https://github.com/abelflopes/react-ck/commit/d43ca982a03d1364b068b7bfe96f13b8d87c0fda))
+
+
+### Bug Fixes
+
+* select not matching height of other form field elements ([90e0a1c](https://github.com/abelflopes/react-ck/commit/90e0a1cae838300b9a9b9d2473db3d43119e08b8))
+
 ## [3.80.0](https://github.com/abelflopes/react-ck/compare/v3.79.0...v3.80.0) (2025-05-08)
 
 
