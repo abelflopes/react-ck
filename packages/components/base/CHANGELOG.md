@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.7.0...@react-ck/base-components@5.8.0) (2025-05-27)
+
+
+### Features
+
+* support disabled skin in form field & checkbox ([d43ca98](https://github.com/abelflopes/react-ck/commit/d43ca982a03d1364b068b7bfe96f13b8d87c0fda))
+
+
+### Bug Fixes
+
+* select not matching height of other form field elements ([90e0a1c](https://github.com/abelflopes/react-ck/commit/90e0a1cae838300b9a9b9d2473db3d43119e08b8))
+
+
+
 ## [5.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.6.0...@react-ck/base-components@5.7.0) (2025-05-08)
 
 
