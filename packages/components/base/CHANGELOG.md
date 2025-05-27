@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.8.0...@react-ck/base-components@5.9.0) (2025-05-27)
+
+
+### Features
+
+* **attachment:** add loading state ([4d369d7](https://github.com/abelflopes/react-ck/commit/4d369d71bb64ba48566a4255fbd6a0347eb64266))
+
+
+
 ## [5.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.7.0...@react-ck/base-components@5.8.0) (2025-05-27)
 
 
