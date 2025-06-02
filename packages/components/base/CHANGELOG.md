@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.9.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.9.0...@react-ck/base-components@5.9.1) (2025-06-02)
+
+
+### Bug Fixes
+
+* add handling of default value in select value state ([61dcf44](https://github.com/abelflopes/react-ck/commit/61dcf44f0d50fac434fdff7ff85cb1d68c3a3de0))
+
+
+
 ## [5.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.8.0...@react-ck/base-components@5.9.0) (2025-05-27)
 
 
