@@ -213,8 +213,17 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
 
     /** Set internal state with user provided value  */
     useEffect(() => {
+      if (userValue === undefined) return;
+
       setInternalValue(userValue);
     }, [userValue]);
+
+    /** Set internal state with user provided default value  */
+    useEffect(() => {
+      if (internalValue || defaultValue === undefined) return;
+
+      setInternalValue(defaultValue);
+    }, [defaultValue, internalValue]);
 
     /**Update internal values when children selected attribute changes */
     useEffect(() => {
