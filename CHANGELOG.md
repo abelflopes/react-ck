@@ -1,3 +1,16 @@
+## [3.83.0](https://github.com/abelflopes/react-ck/compare/v3.82.0...v3.83.0) (2025-06-02)
+
+
+### Features
+
+* **react-ck:** global library package ([97b8de5](https://github.com/abelflopes/react-ck/commit/97b8de5546a3f81bdd3f722920c985bb6f41070c))
+* **react-ck:** global library package ([55f5a8d](https://github.com/abelflopes/react-ck/commit/55f5a8dc2998c951b061b14e54602930fce9b9e8))
+
+
+### Bug Fixes
+
+* add handling of default value in select value state ([61dcf44](https://github.com/abelflopes/react-ck/commit/61dcf44f0d50fac434fdff7ff85cb1d68c3a3de0))
+
 ## [3.82.0](https://github.com/abelflopes/react-ck/compare/v3.81.0...v3.82.0) (2025-05-27)
 
 
