@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.0.2...@react-ck/icon@4.0.3) (2025-06-03)
+
+
+### Bug Fixes
+
+* **icon:** alignment in text variation ([d79e6e5](https://github.com/abelflopes/react-ck/commit/d79e6e51aa84d7e193a56666abc5737c90e1421f))
+
+
+
 ## [4.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.0.1...@react-ck/icon@4.0.2) (2025-05-04)
 
 **Note:** Version bump only for package @react-ck/icon

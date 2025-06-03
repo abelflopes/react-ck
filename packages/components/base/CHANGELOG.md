@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.9.1...@react-ck/base-components@5.10.0) (2025-06-03)
+
+
+### Features
+
+* **flex component:** allow polymorphism ([9d9df5d](https://github.com/abelflopes/react-ck/commit/9d9df5d7615249d5a67ccaeca400dfb6ed7f087b))
+
+
+### Bug Fixes
+
+* **select:** fix height change on selection ([8adca67](https://github.com/abelflopes/react-ck/commit/8adca67f82ff6192d818f4ad8627f4c3183aebad))
+
+
+
 ## [5.9.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.9.0...@react-ck/base-components@5.9.1) (2025-06-02)
 
 

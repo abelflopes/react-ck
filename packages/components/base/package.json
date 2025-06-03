@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/base-components",
   "private": false,
-  "version": "5.9.1",
+  "version": "5.10.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "@react-ck/elevation": "^1.1.19",
-    "@react-ck/icon": "^4.0.2",
+    "@react-ck/icon": "^4.0.3",
     "@react-ck/layers": "^1.4.4",
     "@react-ck/react-utils": "^1.4.0",
     "@react-ck/scss-utils": "^1.1.13",
