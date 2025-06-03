@@ -1,3 +1,18 @@
+## [3.84.0](https://github.com/abelflopes/react-ck/compare/v3.83.0...v3.84.0) (2025-06-03)
+
+
+### Features
+
+* **flex component:** allow polymorphism ([9d9df5d](https://github.com/abelflopes/react-ck/commit/9d9df5d7615249d5a67ccaeca400dfb6ed7f087b))
+* **react-ck:** global library package ([1ff3a92](https://github.com/abelflopes/react-ck/commit/1ff3a92f206396e2bbf428cf82357b6c47d27517))
+* **react-ck:** global library package ([185e2f9](https://github.com/abelflopes/react-ck/commit/185e2f9598106f72122904824f8d16d6f0bfa385))
+
+
+### Bug Fixes
+
+* **icon:** alignment in text variation ([d79e6e5](https://github.com/abelflopes/react-ck/commit/d79e6e51aa84d7e193a56666abc5737c90e1421f))
+* **select:** fix height change on selection ([8adca67](https://github.com/abelflopes/react-ck/commit/8adca67f82ff6192d818f4ad8627f4c3183aebad))
+
 ## [3.83.0](https://github.com/abelflopes/react-ck/compare/v3.82.0...v3.83.0) (2025-06-02)
 
 
