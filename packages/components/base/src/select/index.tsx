@@ -275,7 +275,6 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
           }}>
           <div ref={valueSlotRef} className={styles.value_slot}>
             {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
-            &nbsp;
           </div>
 
           <select
