@@ -4,22 +4,34 @@
 .root {
   display: inline-flex;
   height: scss-utils.get-css-var(icon, size);
+  line-height: scss-utils.get-css-var(icon, size);
   align-items: center;
   justify-content: center;
   aspect-ratio: 1 / 1;
   color: scss-utils.get-css-var(icon, color);
-  font-size: scss-utils.get-css-var(icon, size);
-  line-height: scss-utils.get-css-var(icon, size);
 
   > * {
     width: 100%;
-    height: inherit;
+    height: scss-utils.get-css-var(icon, size);
     aspect-ratio: inherit;
   }
 }
 
 .size_text {
-  @include scss-utils.define-css-var(icon, size, 1.1em);
+  @include scss-utils.define-css-var(icon, size, 1em);
+
+  position: relative;
+  height: 1em !important;
+  line-height: 1em !important;
+  vertical-align: middle;
+  aspect-ratio: unset;
+
+  > * {
+    position: relative;
+    top: -7%;
+    aspect-ratio: unset;
+    width: auto;
+  }
 }
 
 .size_m {

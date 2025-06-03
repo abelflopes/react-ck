@@ -5,6 +5,8 @@ import { Manager } from "@react-ck/manager";
 import { Grid, Skeleton, Menu, Text, type TextProps } from "@react-ck/base-components/src";
 import { capitalCase } from "change-case";
 import { faker } from "@faker-js/faker";
+import { Icon } from "@react-ck/icon/src";
+import { IconAttach } from "@react-ck/icon/icons/IconAttach";
 
 type Story = StoryObj<unknown>;
 
@@ -26,35 +28,52 @@ export const TextSkeleton: Story = {
     layout: "padded",
   },
   render: (): React.ReactElement => (
-    <Grid align="centered">
+    <>
       {generateDescribedCombinations<TextProps<"p">>({
         variation: ["banner", "h1", "h2", "h3", "h4", "h5", "h6", "p", "small", "extra-small"],
       }).map((i) => (
-        <React.Fragment key={i.description}>
-          <Grid.Column size={4}>
+        <Grid key={i.description} align="centered">
+          <Grid.Column size={2}>
             <div style={{ outline: "solid 1px green" }}>
               <Text {...i.combination}>{capitalCase(i.combination.variation ?? "-")}</Text>
             </div>
           </Grid.Column>
-          <Grid.Column size={4}>
+          <Grid.Column size={1}>
             <div style={{ outline: "solid 1px red" }}>
               <Text {...i.combination}>
                 <Skeleton variation="text" />
               </Text>
             </div>
           </Grid.Column>
-          <Grid.Column size={4}>
-            <div style={{ outline: "solid 1px blue" }}>
+          <Grid.Column size={1}>
+            <div style={{ outline: "solid 1px orange" }}>
               <Text {...i.combination}>
-                {capitalCase(i.combination.variation ?? "-")}
-                <Skeleton variation="text" />
-                {faker.lorem.sentence()}
+                <Icon size="text">
+                  <IconAttach />
+                </Icon>
               </Text>
             </div>
           </Grid.Column>
-        </React.Fragment>
+          <Grid.Column size={8}>
+            <div style={{ outline: "solid 1px blue" }}>
+              <Text {...i.combination}>
+                {capitalCase(i.combination.variation ?? "-")}
+                &nbsp;
+                <Skeleton variation="text" style={{ maxWidth: 100 }} />
+                &nbsp;
+                {faker.lorem.sentence(2)}
+                &nbsp;
+                <Icon size="text">
+                  <IconAttach />
+                </Icon>
+                &nbsp;
+                {faker.lorem.sentence(2)}
+              </Text>
+            </div>
+          </Grid.Column>
+        </Grid>
       ))}
-    </Grid>
+    </>
   ),
 };
 
