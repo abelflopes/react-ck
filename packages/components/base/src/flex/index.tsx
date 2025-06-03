@@ -2,13 +2,18 @@ import React from "react";
 import styles from "./index.module.scss";
 import classNames from "classnames";
 import { useResponsiveProps, type ResponsiveProps } from "../responsive";
+import {
+  type HTMLTag,
+  PolymorphicComponent,
+  type ConsumerPolymorphicProps,
+} from "@react-ck/react-utils";
 
 type ElementProps = React.HTMLAttributes<HTMLDivElement>;
 
 /**
  * Base configuration for the Flex component
  */
-interface BaseProps extends ElementProps {
+interface BaseProps<T extends HTMLTag = "div"> extends ElementProps, ConsumerPolymorphicProps<T> {
   /** Space between flex items. Defaults to "m" */
   spacing?: "s" | "m" | "l" | "none";
   /** Alignment of items on the cross axis. Defaults to "center" */
@@ -28,7 +33,12 @@ type FlexProps = BaseProps & ResponsiveProps<BaseProps>;
  * Flexible layout container using CSS flexbox
  * Supports responsive props and common flex layout options
  */
-const Flex = ({ responsive, ...baseProps }: Readonly<FlexProps>): React.ReactElement => {
+const Flex = ({
+  as,
+  responsive,
+  children,
+  ...baseProps
+}: Readonly<FlexProps>): React.ReactElement => {
   const { spacing, align, direction, justify, wrap, className, style, ...otherProps } =
     useResponsiveProps<BaseProps>({
       baseProps: {
@@ -43,14 +53,23 @@ const Flex = ({ responsive, ...baseProps }: Readonly<FlexProps>): React.ReactEle
     });
 
   return (
-    <div
-      className={classNames(styles.root, styles[`spacing_${spacing}`], className)}
-      style={{
-        ...style,
-        ...{ "--align": align, "--direction": direction, "--justify": justify, "--wrap": wrap },
-      }}
-      {...otherProps}
-    />
+    <PolymorphicComponent
+      as={as}
+      fallback={[
+        "div",
+        {
+          ...otherProps,
+        },
+      ]}
+      commonProps={{
+        className: classNames(styles.root, styles[`spacing_${spacing}`], className),
+        style: {
+          ...style,
+          ...{ "--align": align, "--direction": direction, "--justify": justify, "--wrap": wrap },
+        },
+      }}>
+      {children}
+    </PolymorphicComponent>
   );
 };
 
