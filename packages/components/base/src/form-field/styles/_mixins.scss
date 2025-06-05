@@ -14,20 +14,6 @@
     theme.get-spacing(1);
 }
 
-@mixin focus-base {
-  // TODO: focus mixin
-  outline: solid scss-utils.get-css-var(spacing, border) transparent;
-  transition-duration: 0.3s;
-  transition-property: outline, outline-offset;
-  transition-timing-function: ease;
-}
-
-@mixin focus-active {
-  // TODO: focus mixin
-  outline: solid scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary);
-  outline-offset: theme.get-spacing(0.2);
-}
-
 @mixin skins {
   @each $key, $props in variables.$form-field-styles {
     &.skin_#{$key} {

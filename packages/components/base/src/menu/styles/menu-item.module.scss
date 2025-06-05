@@ -14,12 +14,9 @@
   gap: theme.get-spacing(1.5);
   transition: all 0.2s;
 
-  &:focus {
-    // TODO: global focus reset mixin
-    box-shadow: none;
-    outline: none;
-  }
+  @include theme.focus-reset;
 
+  &:focus-visible,
   &:hover:not(.disabled) {
     background-color: theme.get-color(neutral-light-300);
     color: currentcolor;

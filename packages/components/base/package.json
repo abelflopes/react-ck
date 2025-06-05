@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@react-ck/elevation": "^1.1.19",
+    "@react-ck/focus-trap": "^1.0.0",
     "@react-ck/icon": "^4.0.3",
     "@react-ck/layers": "^1.4.4",
     "@react-ck/react-utils": "^1.4.0",

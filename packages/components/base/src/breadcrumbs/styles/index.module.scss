@@ -4,4 +4,6 @@
   display: flex;
   align-items: center;
   gap: theme.get-spacing(0.5);
+
+  @include theme.focus;
 }

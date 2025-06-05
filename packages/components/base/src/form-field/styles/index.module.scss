@@ -70,10 +70,11 @@
 .variation_default {
   .input_wrapper {
     @include shared.wrapper;
-    @include shared.focus-base;
+    @include theme.focus-base;
+    @include theme.focus-transition;
 
     &:focus-within {
-      @include shared.focus-active;
+      @include theme.focus-active;
     }
   }
 }

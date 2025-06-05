@@ -25,6 +25,8 @@
   text-align: center;
   transition: all 0.2s ease;
 
+  @include theme.focus;
+
   &:disabled {
     @include theme.disabled;
   }

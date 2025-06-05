@@ -19,9 +19,10 @@
 // When not inside form field, has own border, etc
 .standalone {
   @include form-field.standalone-input;
-  @include form-field.focus-base;
+  @include theme.focus-base;
+  @include theme.focus-transition;
 
   &:focus {
-    @include form-field.focus-active;
+    @include theme.focus-active;
   }
 }

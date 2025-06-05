@@ -11,6 +11,7 @@ import { Layer } from "@react-ck/layers";
 import { ScrollableContainer } from "../scrollable-container";
 import { ModalHeader } from "./ModalHeader";
 import { ModalFooter } from "./ModalFooter";
+import { FocusTrap } from "@react-ck/focus-trap";
 
 /**
  * ModalProps interface represents the properties for the Modal component.
@@ -43,7 +44,7 @@ let openModals = 0;
 
 /**
  * Modal is a full screen overlay that sits atop the page content.
- * It’s used to focus attention on an important task or message and requires user input to be dismissed.
+ * It's used to focus attention on an important task or message and requires user input to be dismissed.
  * @param props - {@link React.HTMLAttributes}
  * @returns a React element
  */
@@ -66,6 +67,9 @@ const Modal = ({
    * modal is hidden when it's not the highest layer in the group
    */
   const [temporaryHidden, setTemporaryHidden] = useState(false);
+  const [focusWrapperElement, setFocusWrapperElement] = useState<HTMLDivElement | undefined>(
+    undefined,
+  );
 
   // State child compound components' props
   const [props, setProps] = useState<ModalContextValue>({
@@ -85,6 +89,19 @@ const Modal = ({
     }),
     [setContextValue],
   );
+
+  // Initialize and cleanup focus trap
+  useEffect(() => {
+    if (!open || !focusWrapperElement) return;
+
+    // Initialize focus trap
+    const focusTrap = new FocusTrap(focusWrapperElement);
+    focusTrap.activate();
+
+    return () => {
+      focusTrap.deactivate();
+    };
+  }, [open, focusWrapperElement]);
 
   // Lock scroll if there are open modals
   useEffect(() => {
@@ -114,6 +131,10 @@ const Modal = ({
         setTemporaryHidden(layerIndexInGroup < maxLayerIndexInGroup);
       }}>
       <Overlay
+        ref={(e) => {
+          if (!e) return;
+          setFocusWrapperElement(e);
+        }}
         {...otherProps}
         blur={overlay}
         skin={overlay ? "dark" : "transparent"}

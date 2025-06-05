@@ -73,6 +73,7 @@ export const MenuItem = <T extends HTMLTag>({
       as={as}
       fallback={["li", otherProps]}
       commonProps={{
+        tabIndex: disabled ? -1 : 0,
         className: classNames(
           styles.root,
           skin !== "default" && styles[`skin_${skin}`],

@@ -7,17 +7,29 @@ import { useCallback, useEffect, useState } from "react";
 //     });
 //   }, []);
 
+export const onNextRender = (callback: () => void): (() => void) => {
+  const animationFrames: number[] = [];
+
+  animationFrames.push(
+    window.requestAnimationFrame(() => {
+      animationFrames.push(
+        window.requestAnimationFrame(() => {
+          animationFrames.push(window.requestAnimationFrame(callback));
+        }),
+      );
+    }),
+  );
+
+  return () => {
+    animationFrames.forEach(cancelAnimationFrame);
+  };
+};
+
 export const useNextRender = (): ((callback: () => void) => void) => {
   const [callbackQueue, setCallbackQueue] = useState<Array<() => void>>([]);
 
   const fn = useCallback((callback: () => void) => {
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => {
-          setCallbackQueue((v) => [...v, callback]);
-        });
-      });
-    });
+    onNextRender(callback);
   }, []);
 
   useEffect(() => {

@@ -20,6 +20,8 @@
   background: transparent;
   cursor: pointer;
 
+  @include theme.focus;
+
   .skin_default & {
     @include scss-utils.define-css-var(tabs, border-color, theme.get-color(neutral-light-400));
     @include text.text-base;

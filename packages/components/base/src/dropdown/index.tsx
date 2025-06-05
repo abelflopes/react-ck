@@ -6,6 +6,7 @@ import { Card } from "../card";
 import styles from "./index.module.scss";
 import classNames from "classnames";
 import { useOnClickOutside } from "@react-ck/react-utils";
+import { FocusTrap } from "@react-ck/focus-trap";
 
 /** Default positions to exclude from auto-positioning */
 const defaultExclude: PositionEngineProps["exclude"] = ["left", "right", "end", "full"];
@@ -45,6 +46,8 @@ export interface DropdownProps {
   onFocus?: () => void;
   /** Called when the dropdown loses focus */
   onBlur?: () => void;
+  /** Whether to restore focus to the element that had focus before the dropdown was opened */
+  restoreFocus?: boolean;
 }
 
 /**
@@ -79,15 +82,34 @@ export const Dropdown = ({
   onClose,
   onFocus,
   onBlur,
+  restoreFocus,
 }: Readonly<DropdownProps>): React.ReactNode => {
   const containerRef = useRef<HTMLElement | null>(null);
   const [internalOpen, setInternalOpen] = useState(open);
+  const [focusWrapperElement, setFocusWrapperElement] = useState<HTMLDivElement | undefined>(
+    undefined,
+  );
 
   /** Close dropdown when clicked outside  */
   useOnClickOutside(open, [anchorRef, containerRef], () => {
     setInternalOpen(false);
     onClose?.();
   });
+
+  // Initialize and cleanup focus trap
+  useEffect(() => {
+    if (!internalOpen || !focusWrapperElement) return;
+
+    // Initialize focus trap
+    const focusTrap = new FocusTrap(focusWrapperElement, {
+      restoreFocus,
+    });
+    focusTrap.activate();
+
+    return () => {
+      focusTrap.deactivate();
+    };
+  }, [internalOpen, focusWrapperElement, restoreFocus]);
 
   // Sync external and internal states
   useEffect(() => {
@@ -105,8 +127,11 @@ export const Dropdown = ({
           <Layer elevation="overlay" group="dropdown">
             <div
               ref={(r) => {
-                if (rootRef) rootRef.current = r;
                 containerRef.current = r;
+
+                if (rootRef) rootRef.current = r;
+
+                setFocusWrapperElement(r || undefined);
               }}
               tabIndex={0}
               role="menu"

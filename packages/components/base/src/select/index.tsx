@@ -311,6 +311,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
           spacing="s"
           rootRef={dropdownRef}
           excludeAutoPosition={["left", "right", "start", "end", "full"]}
+          restoreFocus={false}
           onFocus={handleFocus}
           onBlur={handleBlur}
           onClose={() => {

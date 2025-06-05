@@ -1,5 +1,37 @@
+@use "@react-ck/scss-utils";
+@use "functions";
+
 @mixin disabled {
   cursor: not-allowed;
   filter: grayscale(1);
   opacity: 0.4;
+}
+
+@mixin focus-reset {
+  box-shadow: none;
+  outline: none;
+}
+
+@mixin focus-transition {
+  transition-duration: 0.3s;
+  transition-property: outline, outline-offset;
+  transition-timing-function: ease;
+}
+
+@mixin focus-base {
+  outline: solid scss-utils.get-css-var(spacing, border) transparent;
+}
+
+@mixin focus-active {
+  outline: solid scss-utils.get-css-var(spacing, border) functions.get-color(highlight-primary);
+  outline-offset: functions.get-spacing(0.2);
+}
+
+@mixin focus($mode: "focus-visible") {
+  @include focus-reset;
+  @include focus-base;
+
+  &:#{$mode} {
+    @include focus-active;
+  }
 }
