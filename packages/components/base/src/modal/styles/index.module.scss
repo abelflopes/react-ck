@@ -74,6 +74,14 @@ $padding: scss-utils.get-css-var(modal, spacing);
 
 .content {
   padding: 0 $padding;
+
+  &_no_header {
+    padding-top: $padding;
+  }
+
+  &_no_footer {
+    padding-bottom: $padding;
+  }
 }
 
 .header,

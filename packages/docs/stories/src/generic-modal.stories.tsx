@@ -119,3 +119,38 @@ export const FullHeight: Story = {
   },
   render,
 };
+
+export const OnlyContent: Story = {
+  args: {
+    children: <Text margin="none">{faker.lorem.sentence(6)}</Text>,
+  },
+  render,
+};
+
+export const OnlyContentAndHeader: Story = {
+  args: {
+    children: (
+      <>
+        <Modal.Header heading={faker.lorem.sentence(4)} />
+
+        <Text margin="none">{faker.lorem.sentence(6)}</Text>
+      </>
+    ),
+  },
+  render,
+};
+
+export const OnlyContentAndFooter: Story = {
+  args: {
+    children: (
+      <>
+        <Text margin="none">{faker.lorem.sentence(6)}</Text>
+
+        <Modal.Footer>
+          <Button>{faker.lorem.word()}</Button>
+        </Modal.Footer>
+      </>
+    ),
+  },
+  render,
+};

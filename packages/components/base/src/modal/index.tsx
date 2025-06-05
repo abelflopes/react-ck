@@ -48,6 +48,7 @@ let openModals = 0;
  * @returns a React element
  */
 
+// eslint-disable-next-line complexity
 const Modal = ({
   size = "m",
   sizeVariation = "normal",
@@ -159,7 +160,14 @@ const Modal = ({
               </header>
             ) : null}
 
-            <ScrollableContainer className={styles.content}>{children}</ScrollableContainer>
+            <ScrollableContainer
+              className={classNames(
+                styles.content,
+                !props.header && styles.content_no_header,
+                !props.footer && styles.content_no_footer,
+              )}>
+              {children}
+            </ScrollableContainer>
 
             {props.footer ? (
               <footer
