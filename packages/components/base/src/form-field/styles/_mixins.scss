@@ -34,6 +34,7 @@
   @include skins;
 
   min-height: variables.$form-field-input-height;
+  max-width: 100%;
 }
 
 // input inside form field
@@ -44,6 +45,7 @@
   min-height: calc(
     #{variables.$form-field-input-height} - #{variables.$form-field-border-width} * 2
   );
+  max-width: 100%;
   box-sizing: border-box;
   border: none;
   border-radius: theme.get-spacing(1);

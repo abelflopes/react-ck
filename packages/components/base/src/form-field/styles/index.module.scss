@@ -9,6 +9,7 @@
   display: inline-flex;
   gap: theme.get-spacing(0.5);
   flex-direction: column;
+  max-width: 100%;
 
   &.full_width {
     display: flex;
