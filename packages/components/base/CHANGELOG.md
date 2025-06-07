@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.11.1...@react-ck/base-components@5.11.2) (2025-06-07)
+
+
+### Bug Fixes
+
+* **card:** fix fullheight behaviour ([4af52a4](https://github.com/abelflopes/react-ck/commit/4af52a41c68cc2122311eeb8cad93c753221ba4c))
+
+
+
 ## [5.11.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.11.0...@react-ck/base-components@5.11.1) (2025-06-07)
 
 
