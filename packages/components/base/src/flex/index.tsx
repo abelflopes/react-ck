@@ -47,7 +47,11 @@ const Flex = ({
         align: baseProps.align ?? "center",
         justify: baseProps.justify ?? "center",
         direction: baseProps.direction ?? "row",
-        wrap: baseProps.wrap ?? "wrap",
+        wrap:
+          // If direction is column, default to nowrap, otherwise wrap
+          baseProps.wrap ?? (!baseProps.direction || baseProps.direction === "row")
+            ? "wrap"
+            : "nowrap",
       },
       responsive,
     });
