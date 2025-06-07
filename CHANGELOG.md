@@ -1,3 +1,16 @@
+## [3.87.0](https://github.com/abelflopes/react-ck/compare/v3.86.0...v3.87.0) (2025-06-07)
+
+
+### Features
+
+* **react-ck:** global library package ([7bb1f29](https://github.com/abelflopes/react-ck/commit/7bb1f29771d452064ffc337224c9ff8b2df4469d))
+* **react-ck:** global library package ([a7c76ed](https://github.com/abelflopes/react-ck/commit/a7c76ed0b7b625e21da65ca7e916029e0c84f021))
+
+
+### Bug Fixes
+
+* **card:** fix fullheight behaviour ([4af52a4](https://github.com/abelflopes/react-ck/commit/4af52a41c68cc2122311eeb8cad93c753221ba4c))
+
 ## [3.86.0](https://github.com/abelflopes/react-ck/compare/v3.85.0...v3.86.0) (2025-06-07)
 
 
