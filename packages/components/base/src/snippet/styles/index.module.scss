@@ -21,5 +21,8 @@
   border-radius: theme.get-spacing(1);
   background-color: theme.get-color(neutral-light-300);
   font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: pre-wrap;
+  word-break: break-word;
 }
