@@ -69,5 +69,6 @@
 }
 
 @mixin content {
+  box-sizing: border-box;
   padding: scss-utils.get-css-var(card, spacing);
 }

@@ -46,7 +46,10 @@
 // Variations
 
 .full_height {
-  height: 100%;
+  &,
+  & .content {
+    height: 100%;
+  }
 }
 
 .horizontal {
