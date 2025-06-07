@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.4.0...@react-ck/react-utils@1.5.0) (2025-06-07)
+
+
+### Features
+
+* support focus trapping and apply consistent focus outline ([26ea216](https://github.com/abelflopes/react-ck/commit/26ea2167102a4d1c89f9bd937dc44949ef2a8b0e))
+
+
+
 ## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.3.7...@react-ck/react-utils@1.4.0) (2024-12-19)
 
 
