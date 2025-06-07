@@ -1,3 +1,20 @@
+## [3.85.0](https://github.com/abelflopes/react-ck/compare/v3.84.0...v3.85.0) (2025-06-07)
+
+
+### Features
+
+* **react-ck:** global library package ([a0ddffc](https://github.com/abelflopes/react-ck/commit/a0ddffcb84e9df5fe7ab2d111b6117e9cad92bce))
+* **react-ck:** global library package ([f1e2952](https://github.com/abelflopes/react-ck/commit/f1e2952e62a9abf07b3c383b885cff25b4189513))
+* support focus trapping and apply consistent focus outline ([26ea216](https://github.com/abelflopes/react-ck/commit/26ea2167102a4d1c89f9bd937dc44949ef2a8b0e))
+
+
+### Bug Fixes
+
+* apply max width in form fields ([1181011](https://github.com/abelflopes/react-ck/commit/1181011f6cc7323fef968f6f3a08d876501c9310))
+* **flex:** default to nowrap if set to column ([3be287e](https://github.com/abelflopes/react-ck/commit/3be287e1bfb0e8719fc9734bbb0414bf99902269))
+* **modal:** apply vertical spacing of content when no header or footer ([d30b7b8](https://github.com/abelflopes/react-ck/commit/d30b7b8cb68a2761ebcc9ac12f56044816a21c19))
+* **snippet:** prevent text overflow ([46eaa9a](https://github.com/abelflopes/react-ck/commit/46eaa9aa92e9a7e6726987078d5dbaca6120c5e5))
+
 ## [3.84.0](https://github.com/abelflopes/react-ck/compare/v3.83.0...v3.84.0) (2025-06-03)
 
 
