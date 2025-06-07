@@ -49,9 +49,8 @@ const Flex = ({
         direction: baseProps.direction ?? "row",
         wrap:
           // If direction is column, default to nowrap, otherwise wrap
-          baseProps.wrap ?? (!baseProps.direction || baseProps.direction === "row")
-            ? "wrap"
-            : "nowrap",
+          baseProps.wrap ??
+          (!baseProps.direction || baseProps.direction === "row" ? "wrap" : "nowrap"),
       },
       responsive,
     });
