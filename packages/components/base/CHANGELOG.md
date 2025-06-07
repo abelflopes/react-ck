@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.11.0...@react-ck/base-components@5.11.1) (2025-06-07)
+
+
+### Bug Fixes
+
+* **flex:** default wrapping ([d608c7c](https://github.com/abelflopes/react-ck/commit/d608c7c568b6e2b7d49af1b6e612f1425fb9fbc8))
+
+
+
 ## [5.11.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.10.0...@react-ck/base-components@5.11.0) (2025-06-07)
 
 
