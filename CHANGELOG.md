@@ -1,3 +1,16 @@
+## [3.86.0](https://github.com/abelflopes/react-ck/compare/v3.85.0...v3.86.0) (2025-06-07)
+
+
+### Features
+
+* **react-ck:** global library package ([080a76f](https://github.com/abelflopes/react-ck/commit/080a76fb6e4d1f3e9130639b2c18e1c6a7956687))
+* **react-ck:** global library package ([4ed6d99](https://github.com/abelflopes/react-ck/commit/4ed6d99de479f5182c5a7e695c189f605bfa9a8f))
+
+
+### Bug Fixes
+
+* **flex:** default wrapping ([d608c7c](https://github.com/abelflopes/react-ck/commit/d608c7c568b6e2b7d49af1b6e612f1425fb9fbc8))
+
 ## [3.85.0](https://github.com/abelflopes/react-ck/compare/v3.84.0...v3.85.0) (2025-06-07)
 
 
