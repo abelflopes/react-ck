@@ -1,3 +1,13 @@
+## [3.88.0](https://github.com/abelflopes/react-ck/compare/v3.87.0...v3.88.0) (2025-06-13)
+
+
+### Features
+
+* **button:** add loading variant ([b920bb9](https://github.com/abelflopes/react-ck/commit/b920bb9cf48d9b8a4828ddc18223dcbf23d9a0ea))
+* **container:** add full width variation ([a8baf99](https://github.com/abelflopes/react-ck/commit/a8baf99da2a7c2fecc1973b16d818f2851815b86))
+* **react-ck:** global library package ([0fbfc1d](https://github.com/abelflopes/react-ck/commit/0fbfc1d0e4870fd6197a56d9ed1317b1f7535c87))
+* **react-ck:** global library package ([b2881bb](https://github.com/abelflopes/react-ck/commit/b2881bb799ebaecee268b16281b2dcceeae81429))
+
 ## [3.87.0](https://github.com/abelflopes/react-ck/compare/v3.86.0...v3.87.0) (2025-06-07)
 
 
