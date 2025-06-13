@@ -93,19 +93,6 @@ export class FocusTrap {
     )
       return false;
 
-    console.log(
-      "container contains",
-      this.container.contains(document.activeElement),
-      document.activeElement.checkVisibility(),
-    );
-
-    console.log(
-      "isInFocusableElements",
-      focusableElements,
-      document.activeElement,
-      focusableElements.some((el) => el === document.activeElement),
-    );
-
     return (
       this.container.contains(document.activeElement) ||
       focusableElements.some((el) => el === document.activeElement)
@@ -117,8 +104,6 @@ export class FocusTrap {
     if (!this.isActiveTrap() || this.isCurrentFocusAllowed()) return;
 
     const { firstFocusableElement } = this.getFocusableElements();
-
-    console.log("moveFocusToContainer", document.activeElement, firstFocusableElement);
 
     firstFocusableElement?.focus();
   }
@@ -140,10 +125,6 @@ export class FocusTrap {
         this.moveFocusToContainer();
       }
     }
-
-    onNextRender(() => {
-      console.log("handleKeyDown", isInContainer, document.activeElement);
-    });
   };
 
   /**
@@ -152,7 +133,6 @@ export class FocusTrap {
    * If another focus trap is active, it will be temporarily disabled.
    */
   public activate(): void {
-    console.log("activate");
     this.initialActiveElement =
       document.activeElement instanceof HTMLElement ? document.activeElement : null;
 
@@ -176,7 +156,6 @@ export class FocusTrap {
    * If there was another focus trap active before this one, it will be reactivated.
    */
   public deactivate(): void {
-    console.log("deactivate");
     window.removeEventListener("keydown", this.handleKeyDown);
 
     // Remove this trap from the stack
