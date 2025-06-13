@@ -8,7 +8,7 @@
     "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
-    "start": "storybook dev -p 6006",
+    "start": "storybook dev -p 8090",
     "prebuild": "ts-node-dev --clear ./scripts/package-info/index.ts",
     "build": "storybook build -o dist",
     "lint:typescript": "tsc --noEmit",

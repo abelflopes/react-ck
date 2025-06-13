@@ -7,6 +7,7 @@ import {
   type ConsumerPolymorphicProps,
   type HTMLTag,
 } from "@react-ck/react-utils";
+import { Spinner } from "../spinner";
 
 /**
  * Props interface for the Button component
@@ -43,6 +44,10 @@ export interface ButtonProps<T extends HTMLTag = "button">
    * @default false
    */
   fullWidth?: boolean;
+  /** When true, the button will show a loading state.
+   * @default false
+   */
+  loading?: boolean;
 }
 
 /**
@@ -59,6 +64,7 @@ export interface ButtonProps<T extends HTMLTag = "button">
  * @returns React element
  */
 
+// eslint-disable-next-line complexity
 export const Button = <T extends HTMLTag>({
   as,
   type = "button",
@@ -71,6 +77,7 @@ export const Button = <T extends HTMLTag>({
   className,
   rootRef,
   fullWidth,
+  loading,
   ...otherProps
 }: Readonly<ButtonProps<T>>): React.ReactElement => {
   const isIconOnly = useMemo(
@@ -109,6 +116,7 @@ export const Button = <T extends HTMLTag>({
             [`${styles["icon-only"]}`]: isIconOnly,
             [`${styles.fullwidth}`]: fullWidth,
           },
+          loading && styles.loading,
           className,
         ),
       }}>
@@ -123,6 +131,10 @@ export const Button = <T extends HTMLTag>({
       ) : null}
 
       {isIconOnly ? icon : null}
+
+      <span className={styles.loader}>
+        <Spinner skin="text" size={size === "xs" || size === "s" ? "text" : "l"} />
+      </span>
     </PolymorphicComponent>
   );
 };
