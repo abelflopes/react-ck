@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.12.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.11.2...@react-ck/base-components@5.12.0) (2025-06-13)
+
+
+### Features
+
+* **button:** add loading variant ([b920bb9](https://github.com/abelflopes/react-ck/commit/b920bb9cf48d9b8a4828ddc18223dcbf23d9a0ea))
+* **container:** add full width variation ([a8baf99](https://github.com/abelflopes/react-ck/commit/a8baf99da2a7c2fecc1973b16d818f2851815b86))
+
+
+
 ## [5.11.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.11.1...@react-ck/base-components@5.11.2) (2025-06-07)
 
 

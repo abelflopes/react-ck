@@ -1,7 +1,7 @@
 {
   "name": "react-ck",
   "private": false,
-  "version": "3.24.0",
+  "version": "3.25.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sass": "src/styles/index.scss",
@@ -33,9 +33,9 @@
   },
   "gitHead": "05de74bda526b20869dbe1b390df87a8a7de8ea4",
   "dependencies": {
-    "@react-ck/base-components": "^5.11.2",
+    "@react-ck/base-components": "^5.12.0",
     "@react-ck/elevation": "^1.1.19",
-    "@react-ck/focus-trap": "^1.1.0",
+    "@react-ck/focus-trap": "^1.1.1",
     "@react-ck/icon": "^4.0.4",
     "@react-ck/layers": "^1.4.5",
     "@react-ck/manager": "^1.3.16",
