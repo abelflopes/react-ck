@@ -14,7 +14,7 @@ interface BaseProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Maximum width constraint of the container.
    * @default "l"
    */
-  size?: "s" | "m" | "l" | "xl";
+  size?: "s" | "m" | "l" | "xl" | "full";
   /** Horizontal padding on both sides.
    * @default "m"
    */
