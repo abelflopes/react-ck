@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.12.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.12.0...@react-ck/base-components@5.12.1) (2025-06-14)
+
+
+### Bug Fixes
+
+* **select:** disable width sync in full width ([256d49d](https://github.com/abelflopes/react-ck/commit/256d49d75e8730683187c8efe433a5023d07f418))
+
+
+
 ## [5.12.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.11.2...@react-ck/base-components@5.12.0) (2025-06-13)
 
 
