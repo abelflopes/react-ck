@@ -1,3 +1,16 @@
+## [3.89.0](https://github.com/abelflopes/react-ck/compare/v3.88.0...v3.89.0) (2025-06-14)
+
+
+### Features
+
+* **react-ck:** global library package ([dc3fcb5](https://github.com/abelflopes/react-ck/commit/dc3fcb5e81e8b3f9fa2ac499075f43bd04471e2f))
+* **react-ck:** global library package ([494fbe7](https://github.com/abelflopes/react-ck/commit/494fbe754d3412bf0f5cb4a244fdf50dba7044fb))
+
+
+### Bug Fixes
+
+* **select:** disable width sync in full width ([256d49d](https://github.com/abelflopes/react-ck/commit/256d49d75e8730683187c8efe433a5023d07f418))
+
 ## [3.88.0](https://github.com/abelflopes/react-ck/compare/v3.87.0...v3.88.0) (2025-06-13)
 
 
