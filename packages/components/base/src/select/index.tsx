@@ -240,14 +240,19 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
      * Synchronize the width of the value slot with the native select element.
      */
     useEffect(() => {
-      if (!sizeSetterRef.current) return;
+      if (!sizeSetterRef.current || fullWidth) return;
       const resizeObserver = new ResizeObserver(() => {
         if (!valueSlotRef.current || !sizeSetterRef.current) return;
 
         valueSlotRef.current.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
       });
       resizeObserver.observe(sizeSetterRef.current);
-    }, []);
+
+      return (): void => {
+        valueSlotRef.current?.style.removeProperty("width");
+        resizeObserver.disconnect();
+      };
+    }, [fullWidth]);
 
     return (
       <>
