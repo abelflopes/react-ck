@@ -5,6 +5,9 @@ import { ScrollableContainer } from "../scrollable-container";
 import { Card } from "../card";
 import styles from "./index.module.scss";
 
+/** Default positions to exclude from auto-positioning */
+const defaultExclude: PositionEngineProps["exclude"] = ["left", "right", "end"];
+
 /**
  * Props for configuring the Popover component
  */
@@ -13,6 +16,8 @@ export interface PopoverProps {
   anchor: PositionEngineProps["anchorRef"];
   /** Preferred position relative to anchor. Defaults to "auto" */
   position?: PositionEngineProps["position"];
+  /** Positions to exclude from auto-positioning */
+  excludeAutoPosition?: PositionEngineProps["exclude"];
   /** Content to display inside the popover */
   children?: React.ReactNode;
   /** Whether the popover is visible */
@@ -26,13 +31,14 @@ export interface PopoverProps {
 export const Popover = ({
   anchor,
   position = "auto",
+  excludeAutoPosition = defaultExclude,
   open,
   children,
 }: Readonly<PopoverProps>): React.ReactNode =>
   open && (
     <PositionEngine
       active={open}
-      exclude={["left", "right", "end"]}
+      exclude={excludeAutoPosition}
       position={position}
       anchorRef={anchor}
       render={({ style }) => (

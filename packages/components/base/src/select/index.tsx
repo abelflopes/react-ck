@@ -16,6 +16,15 @@ import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "../form-field";
 
+/** Default positions to exclude from auto-positioning */
+const defaultExclude: SelectProps["excludeAutoPosition"] = [
+  "left",
+  "right",
+  "start",
+  "end",
+  "full",
+];
+
 /**
  * A customizable select component that supports single and multiple selection modes.
  * Provides searchable options, custom styling, and keyboard navigation support.
@@ -74,6 +83,8 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       disabled,
       displayValueDivider = ",",
       fullWidth,
+      position,
+      excludeAutoPosition = defaultExclude,
       ...props
     },
     ref,
@@ -315,7 +326,8 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
           open={open}
           spacing="s"
           rootRef={dropdownRef}
-          excludeAutoPosition={["left", "right", "start", "end", "full"]}
+          excludeAutoPosition={excludeAutoPosition}
+          position={position}
           restoreFocus={false}
           onFocus={handleFocus}
           onBlur={handleBlur}

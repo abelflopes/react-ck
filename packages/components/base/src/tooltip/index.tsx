@@ -5,6 +5,9 @@ import { PositionEngine, type PositionEngineProps } from "../position-engine";
 import { Card } from "../card";
 import classNames from "classnames";
 
+/** Default positions to exclude from auto-positioning */
+const defaultExclude: PositionEngineProps["exclude"] = ["full"];
+
 /**
  * Props for configuring the Tooltip component
  */
@@ -13,6 +16,8 @@ export interface TooltipProps {
   anchor: PositionEngineProps["anchorRef"];
   /** Preferred position of the tooltip relative to the anchor. Defaults to "auto" */
   position?: PositionEngineProps["position"];
+  /** Positions to exclude from auto-positioning */
+  excludeAutoPosition?: PositionEngineProps["exclude"];
   /** Content to display inside the tooltip */
   children?: React.ReactNode;
   /**
@@ -30,6 +35,7 @@ export interface TooltipProps {
 export const Tooltip = ({
   anchor,
   position = "auto",
+  excludeAutoPosition = defaultExclude,
   open = undefined,
   children,
 }: Readonly<TooltipProps>): React.ReactNode => {
@@ -91,7 +97,7 @@ export const Tooltip = ({
     internalOpen && (
       <PositionEngine
         active={Boolean(internalOpen)}
-        exclude={["full"]}
+        exclude={excludeAutoPosition}
         position={position}
         anchorRef={anchor}
         render={({ style, position }) => (

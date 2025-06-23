@@ -1,3 +1,4 @@
+import { type DropdownProps } from "../dropdown";
 import { type InputProps } from "../input";
 import { type MenuItemProps } from "../menu";
 
@@ -23,6 +24,10 @@ export interface SelectProps
    * @default "default"
    */
   skin?: InputProps["skin"];
+  /** Preferred position of the select relative to the anchor. Defaults to "auto" */
+  position?: DropdownProps["position"];
+  /** Positions to exclude from auto-positioning */
+  excludeAutoPosition?: DropdownProps["excludeAutoPosition"];
   /** Text displayed when no option is selected */
   placeholder?: InputProps["placeholder"];
   /** Select options, typically SelectOption components */
