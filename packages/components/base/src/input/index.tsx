@@ -81,7 +81,7 @@ const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
             defaultStyles.root,
             formFieldContext === undefined && defaultStyles.standalone,
             defaultStyles[`skin_${computedSkin}`],
-            fullWidth && defaultStyles.full_width,
+            (fullWidth ?? formFieldContext?.fullWidth) && defaultStyles.full_width,
           ],
           className,
         )}

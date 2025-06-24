@@ -38,6 +38,73 @@ export const demo: Story = {
 
   render: (): React.ReactElement => (
     <form>
+      <Grid align="start" spacing="l">
+        <Grid.Column>
+          <FormField label="Text" description="Text" reserveSpace>
+            <Input type="text" required />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column>
+          <FormField label="Text" reserveSpace>
+            <Input type="text" required />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column>
+          <FormField description="Text" reserveSpace>
+            <Input type="text" required />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column>
+          <FormField
+            inlineLabel="Retired"
+            description="Are you +65 and retired?"
+            variation="inline"
+            reserveSpace>
+            <Checkbox />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column>
+          <FormField inlineLabel="Retired" variation="inline" reserveSpace>
+            <Checkbox />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column>
+          <FormField description="Are you +65 and retired?" variation="inline" reserveSpace>
+            <Checkbox />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column>
+          <FormField
+            inlineLabel="Retired"
+            description="Are you +65 and retired?"
+            variation="inline-reverse"
+            reserveSpace>
+            <Checkbox />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={1}>
+          <FormField label="Product" variation="inline-content" fullWidth reserveSpace>
+            <Input type="text" defaultValue="BTC" fullWidth />
+            -
+            <Input type="text" defaultValue="USD" fullWidth />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={2}>
+          <FormField
+            label="What are you?"
+            variation="inline-content"
+            skin="ghost"
+            fullWidth
+            reserveSpace>
+            <FormField inlineLabel="Male" variation="inline" fullWidth>
+              <Radio name="gender" />
+            </FormField>
+            <FormField inlineLabel="Female" variation="inline" fullWidth>
+              <Radio name="gender" />
+            </FormField>
+          </FormField>
+        </Grid.Column>
+      </Grid>
       <Grid align="centered" spacing="l">
         <Grid.Column size={6}>
           <Attachment format="pdf" name="file.pdf" skin="pdf" />
@@ -200,7 +267,10 @@ export const demo: Story = {
           </FormField>
         </Grid.Column>
         <Grid.Column size={3}>
-          <FormField label="Retired" description="Are you +65 and retired?" variation="inline">
+          <FormField
+            inlineLabel="Retired"
+            description="Are you +65 and retired?"
+            variation="inline">
             <Checkbox />
           </FormField>
         </Grid.Column>
@@ -224,6 +294,7 @@ export const demo: Story = {
             <FormField label="Active" variation="inline">
               <Radio name="lifestyle" />
             </FormField>
+            &nbsp;
             <FormField label="Sedentary" variation="inline">
               <Radio name="lifestyle" />
             </FormField>
@@ -231,18 +302,17 @@ export const demo: Story = {
         </Grid.Column>
         <Grid.Column size={12} />
         <Grid.Column size={4}>
-          <FormField label="Product">
-            <Input type="text" defaultValue="BTC" />
+          <FormField label="Product" variation="inline-content">
+            <Input type="text" defaultValue="BTC" fullWidth />
             -
-            <Input type="text" defaultValue="USD" />
+            <Input type="text" defaultValue="USD" fullWidth />
           </FormField>
         </Grid.Column>
-        <Grid.Column size={4}>
-          <FormField label="Date">
+        <Grid.Column size={6}>
+          <FormField label="Date" variation="inline-content">
             <Input type="date" />
             <Input type="time" />
             <Input type="month" />
-            <Input type="week" />
           </FormField>
         </Grid.Column>
         <Grid.Column size={12} />

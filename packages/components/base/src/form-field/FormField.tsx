@@ -25,8 +25,14 @@ export interface FormFieldProps
   variation?: "default" | "inline" | "inline-reverse" | "inline-content" | "inline-content-reverse";
   /** Label text or element displayed for the form field.
    * Associates with the input through generated or provided id.
+   * Displayed above the input.
    */
   label?: React.ReactNode;
+  /** Label text or element displayed for the form field.
+   * Associates with the input through generated or provided id.
+   * Displayed alongside the input.
+   */
+  inlineLabel?: React.ReactNode;
   /** Helper text displayed below the input to provide additional context or instructions. */
   description?: React.ReactNode;
   /** Validation feedback message displayed below the description when input needs attention. */
@@ -35,6 +41,8 @@ export interface FormFieldProps
   disabled?: boolean;
   /** Whether the form field should take the full width of the parent container. */
   fullWidth?: boolean;
+  /** Whether the form field should reserve space for the label. */
+  reserveSpace?: boolean | ["label" | "description" | "validationMessage"];
 }
 
 /**
@@ -56,10 +64,12 @@ export interface FormFieldProps
  * @returns React element
  */
 
+// eslint-disable-next-line complexity
 export const FormField = ({
   skin = "default",
   variation = "default",
   label,
+  inlineLabel,
   description,
   validationMessage,
   children,
@@ -67,6 +77,7 @@ export const FormField = ({
   id,
   disabled,
   fullWidth,
+  reserveSpace,
   ...otherProps
 }: Readonly<FormFieldProps>): React.ReactElement => {
   const generatedId = useMemo(() => `ff-${Math.random()}-${Number(new Date())}`, []);
@@ -78,8 +89,9 @@ export const FormField = ({
       skin,
       id: computedId,
       disabled,
+      fullWidth,
     }),
-    [computedId, skin, disabled],
+    [computedId, skin, disabled, fullWidth],
   );
 
   const mappedChildren = useMemo(
@@ -101,6 +113,24 @@ export const FormField = ({
     [children, context],
   );
 
+  const reserveSpaceLabel = useMemo(() => {
+    if (reserveSpace === true) return true;
+    if (Array.isArray(reserveSpace) && reserveSpace.includes("label")) return true;
+    return false;
+  }, [reserveSpace]);
+
+  const reserveSpaceDescription = useMemo(() => {
+    if (reserveSpace === true) return true;
+    if (Array.isArray(reserveSpace) && reserveSpace.includes("description")) return true;
+    return false;
+  }, [reserveSpace]);
+
+  const reserveSpaceValidationMessage = useMemo(() => {
+    if (reserveSpace === true) return true;
+    if (Array.isArray(reserveSpace) && reserveSpace.includes("validationMessage")) return true;
+    return false;
+  }, [reserveSpace]);
+
   return (
     <div
       {...otherProps}
@@ -112,30 +142,52 @@ export const FormField = ({
         fullWidth && styles.full_width,
         className,
       )}>
+      {label || reserveSpaceLabel ? (
+        <Text
+          className={styles.label}
+          variation={"small"}
+          margin="none"
+          as={label ? <label htmlFor={computedId}>{label}</label> : undefined}>
+          {!label && reserveSpaceLabel ? (
+            <span className={classNames(styles.reserve_space)}> </span>
+          ) : null}
+        </Text>
+      ) : null}
+
       <div className={styles.main_content}>
-        {label ? (
+        {inlineLabel ? (
           <Text
             className={styles.label}
-            variation={variation === "inline" || variation === "inline-reverse" ? "p" : "small"}
+            variation="p"
             margin="none"
-            as={<label htmlFor={computedId}>{label}</label>}
+            as={inlineLabel ? <label htmlFor={computedId}>{inlineLabel}</label> : undefined}
           />
         ) : null}
 
         <div className={styles.input_wrapper}>{mappedChildren}</div>
       </div>
 
-      {description || validationMessage ? (
+      {description ||
+      validationMessage ||
+      reserveSpaceDescription ||
+      reserveSpaceValidationMessage ? (
         <div>
-          {description ? (
+          {description || reserveSpaceDescription ? (
             <Text variation="small" margin="none" className={styles.description}>
               {description}
+              {!description && reserveSpaceDescription ? (
+                <span className={classNames(styles.reserve_space)}> </span>
+              ) : null}
             </Text>
           ) : null}
 
-          {validationMessage ? (
+          {validationMessage || reserveSpaceValidationMessage ? (
             <Text className={styles.validation_message} variation="small" margin="none">
               {validationMessage}
+
+              {!validationMessage && reserveSpaceValidationMessage ? (
+                <span className={classNames(styles.reserve_space)}> </span>
+              ) : null}
             </Text>
           ) : null}
         </div>

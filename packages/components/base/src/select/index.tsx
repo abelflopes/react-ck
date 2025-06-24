@@ -251,7 +251,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
      * Synchronize the width of the value slot with the native select element.
      */
     useEffect(() => {
-      if (!sizeSetterRef.current || fullWidth) return;
+      if (!sizeSetterRef.current || fullWidth || formFieldContext?.fullWidth) return;
       const resizeObserver = new ResizeObserver(() => {
         if (!valueSlotRef.current || !sizeSetterRef.current) return;
 
@@ -263,7 +263,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
         valueSlotRef.current?.style.removeProperty("width");
         resizeObserver.disconnect();
       };
-    }, [fullWidth]);
+    }, [fullWidth, formFieldContext?.fullWidth]);
 
     return (
       <>
@@ -278,7 +278,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
             formFieldContext === undefined && styles.standalone,
             (disabled || formFieldContext?.disabled) && styles.disabled,
 
-            fullWidth && styles.full_width,
+            (fullWidth ?? formFieldContext?.fullWidth) && styles.full_width,
             className,
           )}
           onFocus={(e) => {

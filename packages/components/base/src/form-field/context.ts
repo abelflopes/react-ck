@@ -15,6 +15,8 @@ export interface FormFieldContextProps {
   id: string;
   /** Whether the form field is disabled. */
   disabled: boolean | undefined;
+  /** Whether the form field should take the full width of the parent container. */
+  fullWidth: boolean | undefined;
 }
 
 /** Context for sharing form field state with child components */

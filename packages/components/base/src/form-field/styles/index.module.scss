@@ -66,6 +66,11 @@
 
 // Input Wrapper
 
+.input_wrapper {
+  min-height: variables.$form-field-input-height;
+  box-sizing: border-box;
+}
+
 .variation_inline-content,
 .variation_inline-content-reverse,
 .variation_default {
@@ -122,4 +127,11 @@
   .validation_message {
     width: 100%;
   }
+}
+
+// Reserve Space
+
+.reserve_space {
+  display: block;
+  white-space: pre;
 }

@@ -32,8 +32,8 @@
 @mixin standalone-input {
   @include wrapper;
   @include skins;
+  @include scss-utils.define-css-var(form-field, min-height, #{variables.$form-field-input-height});
 
-  min-height: variables.$form-field-input-height;
   max-width: 100%;
 }
 
@@ -41,10 +41,11 @@
 @mixin form-field-input {
   @include spacing;
   @include text.text-base;
-
-  min-height: calc(
+  @include scss-utils.define-css-var(form-field, min-height, calc(
     #{variables.$form-field-input-height} - #{variables.$form-field-border-width} * 2
-  );
+  ));
+
+  min-height: scss-utils.get-css-var(form-field, min-height);
   max-width: 100%;
   box-sizing: border-box;
   border: none;
