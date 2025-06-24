@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.13.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.12.1...@react-ck/base-components@5.13.0) (2025-06-24)
+
+
+### Features
+
+* allow custom positioning for select, popover and tooltip ([a5890c4](https://github.com/abelflopes/react-ck/commit/a5890c4bb7f4dccbc02bbac52f2061b45e3f61f7))
+* allow reserving space for form field elements ([fc70555](https://github.com/abelflopes/react-ck/commit/fc7055580ff396a9108e333312e50595904f624f))
+
+
+
 ## [5.12.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.12.0...@react-ck/base-components@5.12.1) (2025-06-14)
 
 
