@@ -1,3 +1,13 @@
+## [3.92.0](https://github.com/abelflopes/react-ck/compare/v3.91.0...v3.92.0) (2025-07-09)
+
+
+### Features
+
+* add expandable component ([e5cd8e7](https://github.com/abelflopes/react-ck/commit/e5cd8e7c3362eb80bf798ffa83757b35d9b43df2))
+* add update handler to expandable ([0e06f1e](https://github.com/abelflopes/react-ck/commit/0e06f1ef2483ed82c6defee1744d9da4c7778da2))
+* **react-ck:** global library package ([7ede221](https://github.com/abelflopes/react-ck/commit/7ede221283be8d43aebf7cff05319179134081d7))
+* **react-ck:** global library package ([a79e2f7](https://github.com/abelflopes/react-ck/commit/a79e2f70a108fa79619f64c8427babf41a966714))
+
 ## [3.91.0](https://github.com/abelflopes/react-ck/compare/v3.90.0...v3.91.0) (2025-07-09)
 
 
