@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.14.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.13.1...@react-ck/base-components@5.14.0) (2025-07-09)
+
+
+### Features
+
+* add expandable component ([e5cd8e7](https://github.com/abelflopes/react-ck/commit/e5cd8e7c3362eb80bf798ffa83757b35d9b43df2))
+* add update handler to expandable ([0e06f1e](https://github.com/abelflopes/react-ck/commit/0e06f1ef2483ed82c6defee1744d9da4c7778da2))
+
+
+
 ## [5.13.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.13.0...@react-ck/base-components@5.13.1) (2025-07-09)
 
 

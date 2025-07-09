@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.5.0...@react-ck/react-utils@1.6.0) (2025-07-09)
+
+
+### Features
+
+* add expandable component ([e5cd8e7](https://github.com/abelflopes/react-ck/commit/e5cd8e7c3362eb80bf798ffa83757b35d9b43df2))
+
+
+
 ## [1.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@1.4.0...@react-ck/react-utils@1.5.0) (2025-06-07)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.1.1...@react-ck/focus-trap@1.2.0) (2025-07-09)
+
+
+### Features
+
+* add expandable component ([e5cd8e7](https://github.com/abelflopes/react-ck/commit/e5cd8e7c3362eb80bf798ffa83757b35d9b43df2))
+
+
+
 ## [1.1.1](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.1.0...@react-ck/focus-trap@1.1.1) (2025-06-13)
 
 **Note:** Version bump only for package @react-ck/focus-trap

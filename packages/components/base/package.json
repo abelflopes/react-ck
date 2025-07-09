@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/base-components",
   "private": false,
-  "version": "5.13.1",
+  "version": "5.14.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
@@ -36,10 +36,10 @@
   },
   "dependencies": {
     "@react-ck/elevation": "^1.1.19",
-    "@react-ck/focus-trap": "^1.1.1",
-    "@react-ck/icon": "^4.0.4",
-    "@react-ck/layers": "^1.4.5",
-    "@react-ck/react-utils": "^1.5.0",
+    "@react-ck/focus-trap": "^1.2.0",
+    "@react-ck/icon": "^4.0.5",
+    "@react-ck/layers": "^1.4.6",
+    "@react-ck/react-utils": "^1.6.0",
     "@react-ck/scss-utils": "^1.1.13",
     "@react-ck/snackbar-provider": "^1.0.1",
     "@react-ck/theme": "^2.2.0",
