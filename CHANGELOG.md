@@ -1,3 +1,16 @@
+## [3.91.0](https://github.com/abelflopes/react-ck/compare/v3.90.0...v3.91.0) (2025-07-09)
+
+
+### Features
+
+* **react-ck:** global library package ([12ecbbf](https://github.com/abelflopes/react-ck/commit/12ecbbf59b04ee618585303185e660fcaec63b91))
+* **react-ck:** global library package ([418fb32](https://github.com/abelflopes/react-ck/commit/418fb32a3ae299994f4e12cdb6fa584533194560))
+
+
+### Bug Fixes
+
+* menu item content not stretching ([82bc127](https://github.com/abelflopes/react-ck/commit/82bc127312ac8e00559ae83611bc582f30bedc21))
+
 ## [3.90.0](https://github.com/abelflopes/react-ck/compare/v3.89.0...v3.90.0) (2025-06-24)
 
 
