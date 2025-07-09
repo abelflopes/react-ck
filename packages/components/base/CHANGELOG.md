@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.13.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.13.0...@react-ck/base-components@5.13.1) (2025-07-09)
+
+
+### Bug Fixes
+
+* menu item content not stretching ([82bc127](https://github.com/abelflopes/react-ck/commit/82bc127312ac8e00559ae83611bc582f30bedc21))
+
+
+
 ## [5.13.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.12.1...@react-ck/base-components@5.13.0) (2025-06-24)
 
 
