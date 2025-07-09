@@ -54,6 +54,8 @@
 
 .content {
   display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .variation_bordered {
