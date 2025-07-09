@@ -13,6 +13,8 @@ export interface ExpandableProps extends React.HTMLAttributes<HTMLDivElement> {
   expanded?: boolean;
   /** Whether to animate the initial render */
   animateInitial?: boolean;
+  /** Called when the transition ends */
+  onUpdate?: (e: { expanded: boolean; targetHeight: number | undefined }) => void;
 }
 
 /**
@@ -36,6 +38,8 @@ export const Expandable = ({
   animateInitial = false,
   className,
   style,
+  onTransitionEnd,
+  onUpdate,
   ...otherProps
 }: Readonly<ExpandableProps>): React.ReactElement => {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -99,7 +103,14 @@ export const Expandable = ({
   }, []);
 
   return (
-    <div style={containerStyle} className={classNames(styles.container, className)} {...otherProps}>
+    <div
+      style={containerStyle}
+      className={classNames(styles.container, className)}
+      onTransitionEnd={(e) => {
+        onTransitionEnd?.(e);
+        onUpdate?.({ expanded, targetHeight });
+      }}
+      {...otherProps}>
       <div ref={contentRef} className={styles.content}>
         {children}
       </div>
