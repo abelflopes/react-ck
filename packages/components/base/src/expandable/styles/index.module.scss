@@ -1,0 +1,17 @@
+@use "@react-ck/theme";
+@use "@react-ck/scss-utils";
+
+.container {
+  position: relative;
+  width: 100%;
+  height: var(--expandable-height, auto);
+  transition: height 0.4s ease-in-out;
+  overflow: hidden;
+  will-change: height;
+  transform: translateZ(0);
+}
+
+.content {
+  width: 100%;
+  position: relative;
+}

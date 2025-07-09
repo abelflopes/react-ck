@@ -66,6 +66,8 @@ export * from "./divider";
 
 export * from "./empty-state";
 
+export * from "./expandable";
+
 export * from "./form-field";
 
 export * from "./grid";

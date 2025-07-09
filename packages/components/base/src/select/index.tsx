@@ -9,7 +9,7 @@ import { Menu } from "../menu";
 import { Dropdown } from "../dropdown";
 import { Input } from "../input";
 import classNames from "classnames";
-import { megeRefs, useNextRender } from "@react-ck/react-utils";
+import { megeRefs, raf } from "@react-ck/react-utils";
 import { EmptyState } from "../empty-state";
 import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
@@ -89,7 +89,6 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
     },
     ref,
   ) => {
-    const onNextRender = useNextRender();
     const selectRef = useRef<HTMLSelectElement | null>(null);
     const rootElRef = useRef<HTMLDivElement>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -169,7 +168,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
 
         if (!selectMultiple) setOpen(false);
 
-        onNextRender(() => {
+        raf(() => {
           if (!selectRef.current)
             throw new Error("Select: unable to dispatch event to native element");
 
@@ -180,7 +179,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
           );
         });
       },
-      [onNextRender, selectMultiple, updateInternalValue],
+      [selectMultiple, updateInternalValue],
     );
 
     /** Context object propagated to select options  */

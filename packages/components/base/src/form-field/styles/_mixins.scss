@@ -41,9 +41,11 @@
 @mixin form-field-input {
   @include spacing;
   @include text.text-base;
-  @include scss-utils.define-css-var(form-field, min-height, calc(
-    #{variables.$form-field-input-height} - #{variables.$form-field-border-width} * 2
-  ));
+  @include scss-utils.define-css-var(
+    form-field,
+    min-height,
+    calc(#{variables.$form-field-input-height} - #{variables.$form-field-border-width} * 2)
+  );
 
   min-height: scss-utils.get-css-var(form-field, min-height);
   max-width: 100%;

@@ -1,4 +1,4 @@
-import { onNextRender } from "@react-ck/react-utils";
+import { raf } from "@react-ck/react-utils";
 
 export interface FocusTrapOptions {
   additionalElements?: HTMLElement[];
@@ -145,7 +145,7 @@ export class FocusTrap {
 
     window.addEventListener("keydown", this.handleKeyDown);
 
-    onNextRender(() => {
+    raf(() => {
       this.moveFocusToContainer();
     });
   }
