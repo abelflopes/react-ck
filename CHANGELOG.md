@@ -1,3 +1,16 @@
+## [3.93.0](https://github.com/abelflopes/react-ck/compare/v3.92.0...v3.93.0) (2025-07-09)
+
+
+### Features
+
+* **react-ck:** global library package ([bd0e520](https://github.com/abelflopes/react-ck/commit/bd0e520072589a31b73f7afa87961e15561274cc))
+* **react-ck:** global library package ([0c82593](https://github.com/abelflopes/react-ck/commit/0c8259390ddf174c22e130e2944776c846102b9a))
+
+
+### Bug Fixes
+
+* expandable shared css fowarding ([00d9bf9](https://github.com/abelflopes/react-ck/commit/00d9bf9b34f3e2082e8991acee33088a3d38943b))
+
 ## [3.92.0](https://github.com/abelflopes/react-ck/compare/v3.91.0...v3.92.0) (2025-07-09)
 
 
