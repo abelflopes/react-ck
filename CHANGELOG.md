@@ -1,3 +1,13 @@
+## [3.90.0](https://github.com/abelflopes/react-ck/compare/v3.89.0...v3.90.0) (2025-06-24)
+
+
+### Features
+
+* allow custom positioning for select, popover and tooltip ([a5890c4](https://github.com/abelflopes/react-ck/commit/a5890c4bb7f4dccbc02bbac52f2061b45e3f61f7))
+* allow reserving space for form field elements ([fc70555](https://github.com/abelflopes/react-ck/commit/fc7055580ff396a9108e333312e50595904f624f))
+* **react-ck:** global library package ([9465333](https://github.com/abelflopes/react-ck/commit/946533382eab575fd4f1488bfb8bbe1b29e720e5))
+* **react-ck:** global library package ([a218222](https://github.com/abelflopes/react-ck/commit/a218222b42b7d5313d64b59f785ecd9235cb3be0))
+
 ## [3.89.0](https://github.com/abelflopes/react-ck/compare/v3.88.0...v3.89.0) (2025-06-14)
 
 
