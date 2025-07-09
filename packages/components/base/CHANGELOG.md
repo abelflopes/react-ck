@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.14.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.14.0...@react-ck/base-components@5.14.1) (2025-07-09)
+
+
+### Bug Fixes
+
+* expandable shared css fowarding ([00d9bf9](https://github.com/abelflopes/react-ck/commit/00d9bf9b34f3e2082e8991acee33088a3d38943b))
+
+
+
 ## [5.14.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.13.1...@react-ck/base-components@5.14.0) (2025-07-09)
 
 
