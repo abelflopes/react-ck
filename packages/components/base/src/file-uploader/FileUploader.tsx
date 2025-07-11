@@ -1,6 +1,6 @@
 /* eslint-disable complexity -- TODO: refactor */
 import styles from "./styles/index.module.scss";
-import React, { useCallback, useMemo, useRef, forwardRef } from "react";
+import React, { useCallback, useMemo, useRef, forwardRef, useEffect } from "react";
 import classNames from "classnames";
 import { Text } from "../text";
 import { Button, type ButtonProps } from "../button";
@@ -42,6 +42,8 @@ interface FileUploaderProps
   ) => void;
   /** Callback fired during file reading progress */
   onProgress?: Parameters<typeof readFileList>[1];
+  /** Try topen the file input immediately when the component is mounted */
+  openImmediately?: boolean;
 }
 
 /**
@@ -62,12 +64,15 @@ const FileUploader = forwardRef<HTMLInputElement, Readonly<FileUploaderProps>>(
       buttonProps,
       onChange,
       onProgress,
+      openImmediately,
       ...otherProps
     },
     ref,
   ): React.ReactElement => {
     const inputRef = useRef<HTMLInputElement>(null);
     const isIconOnly = useMemo(() => Boolean(icon) && !description, [description, icon]);
+
+    const isFirstRender = useRef(true);
 
     const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
       if (e.code === "Enter") inputRef.current?.click();
@@ -85,6 +90,14 @@ const FileUploader = forwardRef<HTMLInputElement, Readonly<FileUploaderProps>>(
       },
       [inputProps, onChange, onProgress],
     );
+
+    useEffect(() => {
+      if (openImmediately && isFirstRender.current) inputRef.current?.click();
+    }, [openImmediately]);
+
+    useEffect(() => {
+      isFirstRender.current = false;
+    }, []);
 
     return (
       <div
