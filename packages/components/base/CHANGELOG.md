@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.15.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.14.1...@react-ck/base-components@5.15.0) (2025-07-11)
+
+
+### Features
+
+* **attachment:** add small variation, selected, disabled, interactive & skins ([3b0c854](https://github.com/abelflopes/react-ck/commit/3b0c854631759cadb9930edafbaff5439c2edf77))
+* **snippet:** add inline variation ([6425361](https://github.com/abelflopes/react-ck/commit/6425361c13ef21bb417b1d691b9688fe4a411ffb))
+
+
+
 ## [5.14.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.14.0...@react-ck/base-components@5.14.1) (2025-07-09)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@2.2.0...@react-ck/theme@2.3.0) (2025-07-11)
+
+
+### Features
+
+* **attachment:** add small variation, selected, disabled, interactive & skins ([3b0c854](https://github.com/abelflopes/react-ck/commit/3b0c854631759cadb9930edafbaff5439c2edf77))
+
+
+
 ## [2.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@2.1.1...@react-ck/theme@2.2.0) (2025-06-07)
 
 

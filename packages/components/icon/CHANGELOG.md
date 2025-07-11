@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.0.5...@react-ck/icon@4.1.0) (2025-07-11)
+
+
+### Features
+
+* **attachment:** add small variation, selected, disabled, interactive & skins ([3b0c854](https://github.com/abelflopes/react-ck/commit/3b0c854631759cadb9930edafbaff5439c2edf77))
+
+
+
 ## [4.0.5](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.0.4...@react-ck/icon@4.0.5) (2025-07-09)
 
 **Note:** Version bump only for package @react-ck/icon
