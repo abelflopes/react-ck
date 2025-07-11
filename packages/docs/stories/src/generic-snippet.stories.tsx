@@ -63,3 +63,13 @@ export const WithCustomActionsAndCopyButton: Story = {
     showCopyButton: true,
   },
 };
+
+
+export const Inline: Story = {
+  args: {
+    children: faker.lorem.word(),
+    actions: <Button aria-label="Delete snippet" size="s" skin="negative" icon={<IconTrash />} />,
+    showCopyButton: true,
+    variation: "inline",
+  },
+};

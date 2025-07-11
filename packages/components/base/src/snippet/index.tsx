@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { Flex } from "../flex";
 import { Button } from "../button";
 import { IconCopy } from "@react-ck/icon/icons/All";
 
@@ -9,6 +8,7 @@ import { IconCopy } from "@react-ck/icon/icons/All";
  * Props for configuring the Snippet component
  */
 export interface SnippetProps extends React.HTMLAttributes<HTMLElement> {
+  variation?: "default" | "inline";
   /** Custom actions displayed in the top right corner */
   actions?: React.ReactNode;
   /** Whether to show the copy button. Defaults to true */
@@ -22,6 +22,7 @@ export interface SnippetProps extends React.HTMLAttributes<HTMLElement> {
  * Supports custom actions and automatic clipboard copying
  */
 export const Snippet = ({
+  variation = "default",
   className,
   children,
   actions,
@@ -37,26 +38,25 @@ export const Snippet = ({
   }, [children, onCopy]);
 
   return (
-    <div className={styles.container}>
-      {actions || showCopyButton ? (
-        <Flex className={styles.actions} spacing="s">
-          {showCopyButton ? (
-            <Button
-              aria-label="Copy snippet"
-              size="s"
-              skin="secondary"
-              skinVariation="muted"
-              icon={<IconCopy />}
-              onClick={handleCopy}
-            />
-          ) : null}
+    <code className={classNames(className, styles.root, styles[`variation_${variation}`])} {...otherProps}>
+    {actions || showCopyButton ? (
+      <div className={styles.actions}>
+        {showCopyButton ? (
+          <Button
+            aria-label="Copy snippet"
+            size={variation === "inline" ? "xs" : "s"}
+            skin="secondary"
+            skinVariation="muted"
+            icon={<IconCopy />}
+            onClick={handleCopy}
+          />
+        ) : null}
 
-          {actions}
-        </Flex>
-      ) : null}
-      <code className={classNames(className, styles.root)} {...otherProps}>
-        {children}
-      </code>
-    </div>
+        {actions}
+      </div>
+    ) : null}
+    
+      {children}
+    </code>
   );
 };

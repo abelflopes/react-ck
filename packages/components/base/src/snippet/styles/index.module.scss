@@ -1,28 +1,58 @@
 @use "@react-ck/theme";
 @use "../../text/styles/shared" as text;
 
-.container {
-  position: relative;
-}
-
-.actions {
-  position: absolute;
-  z-index: 1;
-  top: theme.get-spacing(1);
-  right: theme.get-spacing(1);
-}
-
 .root {
   @include text.text-base;
   @include text.text-variation(small);
 
+  position: relative;
+  background-color: theme.get-color(neutral-light-300);
+  font-family: monospace;
+}
+
+.actions {
+  @include text.text-base;
+
+  display: inline-flex;
+  align-items: center;
+  gap: theme.get-spacing(0.5);
+  position: absolute;
+  z-index: 1;
+}
+
+.variation_default {
   display: block;
   padding: theme.get-spacing(1.5);
   border-radius: theme.get-spacing(1);
-  background-color: theme.get-color(neutral-light-300);
-  font-family: monospace;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: pre-wrap;
   word-break: break-word;
+
+  .actions {
+    top: theme.get-spacing(1);
+    right: theme.get-spacing(1);
+  }
+}
+
+.variation_inline {
+  display: inline;
+  padding: theme.get-spacing(0.25) theme.get-spacing(0.75);
+
+  .actions {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: theme.get-spacing(0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.2s ease-in-out,
+      visibility 0.2s ease-in-out;
+  }
+
+  &:hover .actions {
+    opacity: 1;
+    visibility: visible;
+  }
 }
