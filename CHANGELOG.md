@@ -1,3 +1,13 @@
+## [3.94.0](https://github.com/abelflopes/react-ck/compare/v3.93.0...v3.94.0) (2025-07-11)
+
+
+### Features
+
+* **attachment:** add small variation, selected, disabled, interactive & skins ([3b0c854](https://github.com/abelflopes/react-ck/commit/3b0c854631759cadb9930edafbaff5439c2edf77))
+* **react-ck:** global library package ([244b2d2](https://github.com/abelflopes/react-ck/commit/244b2d25970f6fdaea72b60454920b5640a96143))
+* **react-ck:** global library package ([d529053](https://github.com/abelflopes/react-ck/commit/d529053d0522dc965f6f7944f98ce5817f1958a5))
+* **snippet:** add inline variation ([6425361](https://github.com/abelflopes/react-ck/commit/6425361c13ef21bb417b1d691b9688fe4a411ffb))
+
 ## [3.93.0](https://github.com/abelflopes/react-ck/compare/v3.92.0...v3.93.0) (2025-07-09)
 
 
