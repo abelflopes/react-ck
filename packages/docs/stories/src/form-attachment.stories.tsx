@@ -25,7 +25,6 @@ export const Default: Story = {
   args: {
     name: "file.pdf",
     format: "pdf",
-    skin: "pdf",
   },
 };
 
@@ -44,5 +43,17 @@ export const Image: Story = {
     name: "file.jog",
     format: "jpg",
     onRemove: () => undefined,
+  },
+};
+
+export const inline: Story = {
+  args: {
+    size: "s",
+    name: "file.mp3",
+    format: "pdf",
+    error: "Invalid file",
+    onRemove: () => undefined,
+    loading: true,
+    interactive: true,
   },
 };

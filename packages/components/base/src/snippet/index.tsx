@@ -38,24 +38,26 @@ export const Snippet = ({
   }, [children, onCopy]);
 
   return (
-    <code className={classNames(className, styles.root, styles[`variation_${variation}`])} {...otherProps}>
-    {actions || showCopyButton ? (
-      <div className={styles.actions}>
-        {showCopyButton ? (
-          <Button
-            aria-label="Copy snippet"
-            size={variation === "inline" ? "xs" : "s"}
-            skin="secondary"
-            skinVariation="muted"
-            icon={<IconCopy />}
-            onClick={handleCopy}
-          />
-        ) : null}
+    <code
+      className={classNames(className, styles.root, styles[`variation_${variation}`])}
+      {...otherProps}>
+      {actions || showCopyButton ? (
+        <div className={styles.actions}>
+          {showCopyButton ? (
+            <Button
+              aria-label="Copy snippet"
+              size={variation === "inline" ? "xs" : "s"}
+              skin="secondary"
+              skinVariation="muted"
+              icon={<IconCopy />}
+              onClick={handleCopy}
+            />
+          ) : null}
 
-        {actions}
-      </div>
-    ) : null}
-    
+          {actions}
+        </div>
+      ) : null}
+
       {children}
     </code>
   );

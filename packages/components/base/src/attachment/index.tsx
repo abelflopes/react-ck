@@ -6,6 +6,9 @@ import { IconClose } from "@react-ck/icon/icons/IconClose";
 import { Icon } from "@react-ck/icon";
 import { IconDocument } from "@react-ck/icon/icons/IconDocument";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
+import { IconAudio } from "@react-ck/icon/icons/IconAudio";
+import { IconImage } from "@react-ck/icon/icons/IconImage";
+import { IconSpreadsheet } from "@react-ck/icon/icons/IconSpreadsheet";
 import { Spinner } from "../spinner";
 
 /**
@@ -16,11 +19,11 @@ export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElemen
   /** Size of the attachment container.
    * @default "m"
    */
-  size?: "m" | "l";
+  size?: "m" | "l" | "s";
   /** Visual style based on file type.
    * @default "default"
    */
-  skin?: "default" | "pdf" | "doc";
+  skin?: "default" | "pdf" | "doc" | "audio" | "image" | "spreadsheet";
   /** Whether to expand to container width.
    * @default false
    */
@@ -35,7 +38,58 @@ export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElemen
   error?: React.ReactNode;
   /** Whether to show the loading spinner */
   loading?: boolean;
+  /** Whether the attachment is selected */
+  selected?: boolean;
+  /** Whether the attachment is disabled */
+  disabled?: boolean;
+  /** Whether the attachment is interactive */
+  interactive?: boolean;
 }
+
+const iconMap: { [key in NonNullable<AttachmentProps["skin"]>]: NonNullable<React.ReactNode> } = {
+  default: <IconAttach />,
+  doc: <IconDocument />,
+  pdf: <IconDocument />,
+  audio: <IconAudio />,
+  image: <IconImage />,
+  spreadsheet: <IconSpreadsheet />,
+};
+
+const getSkin = (filename: string): NonNullable<AttachmentProps["skin"]> => {
+  const extension = filename.split(".").pop()?.toLowerCase();
+
+  switch (extension) {
+    case "pdf":
+      return "pdf";
+    case "docx":
+    case "doc":
+    case "txt":
+      return "doc";
+    case "mp3":
+    case "wav":
+    case "ogg":
+    case "m4a":
+    case "aac":
+    case "flac":
+    case "wma":
+      return "audio";
+    case "jpg":
+    case "jpeg":
+    case "png":
+    case "gif":
+    case "bmp":
+    case "tiff":
+    case "ico":
+    case "webp":
+      return "image";
+    case "xls":
+    case "xlsx":
+    case "csv":
+      return "spreadsheet";
+    default:
+      return "default";
+  }
+};
 
 /**
  * Component for displaying file attachments with type-specific icons.
@@ -57,31 +111,34 @@ export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElemen
  */
 export const Attachment = ({
   size = "m",
-  skin = "default",
   fullWidth,
   name,
+  skin = getSkin(name),
   format,
   onRemove,
   error,
   className,
   loading,
+  selected,
+  disabled,
+  interactive,
   ...otherProps
 }: Readonly<AttachmentProps>): React.ReactElement => (
   <div
+    tabIndex={interactive && !disabled ? 0 : undefined}
     {...otherProps}
     className={classNames(
       styles.root,
       onRemove && styles.removable,
       fullWidth && styles.full_width,
       styles[`size_${size}`],
+      selected && styles.selected,
+      disabled && styles.disabled,
+      interactive && styles.interactive,
       className,
     )}>
     <span className={classNames(styles.icon, styles[`icon_${skin}`])}>
-      <Icon>
-        {skin === "default" && <IconAttach />}
-        {skin === "doc" && <IconDocument />}
-        {skin === "pdf" && <IconDocument />}
-      </Icon>
+      <Icon>{iconMap[skin]}</Icon>
       {loading ? (
         <span className={styles.spinner}>
           <Spinner size="l" />
@@ -93,10 +150,11 @@ export const Attachment = ({
       <span className={styles.name} title={name}>
         {name}
       </span>
-      <span className={styles.format}>{format}</span>
-    </div>
 
-    {error ? <span className={styles.error}>{error}</span> : null}
+      {!error && size !== "s" ? <span className={styles.format}>{format}</span> : null}
+
+      {error ? <span className={styles.error}>{error}</span> : null}
+    </div>
 
     {onRemove ? (
       <Button

@@ -44,6 +44,8 @@ export const defaultTheme: Theme = {
     "misc-1": "#F28B82",
     "misc-2": "#FF8EA2",
     "misc-3": "#7EC9FF",
+    "misc-4": "#BABAFD",
+    "misc-5": "#90d585",
   },
   font: {
     "family": "system-ui, sans-serif",

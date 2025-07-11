@@ -13,7 +13,7 @@ const Chat = ({
   placeholder,
   children,
 }: Readonly<ChatProps>): React.ReactElement => (
-  <ChatLayout footer={<ChatPrompt status={status} onSend={onSend} placeholder={placeholder} />}>
+  <ChatLayout footer={<ChatPrompt status={status} placeholder={placeholder} onSend={onSend} />}>
     {children}
   </ChatLayout>
 );

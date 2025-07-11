@@ -212,4 +212,19 @@ export const iconMap: IconMap = [
     module: "react-icons/pi",
     export: "IconThumbsDown",
   },
+  {
+    import: "LuAudioLines",
+    module: "react-icons/lu",
+    export: "IconAudio",
+  },
+  {
+    import: "FaRegImage",
+    module: "react-icons/fa",
+    export: "IconImage",
+  },
+  {
+    import: "SiGooglesheets",
+    module: "react-icons/si",
+    export: "IconSpreadsheet",
+  },
 ];

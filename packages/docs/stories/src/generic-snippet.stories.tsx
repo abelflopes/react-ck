@@ -64,7 +64,6 @@ export const WithCustomActionsAndCopyButton: Story = {
   },
 };
 
-
 export const Inline: Story = {
   args: {
     children: faker.lorem.word(),

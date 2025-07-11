@@ -18,6 +18,29 @@ $spacing: theme.get-spacing(1.5);
   justify-content: flex-start;
   padding: $spacing;
   gap: $spacing;
+
+  &.selected {
+    border-color: theme.get-color(highlight-primary);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(100%);
+  }
+
+  &.interactive {
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+
+    @include theme.focus;
+
+    &:hover {
+      background-color: theme.get-color(neutral-light-200);
+    }
+  }
 }
 
 .full_width {
@@ -85,13 +108,52 @@ $spacing: theme.get-spacing(1.5);
 }
 
 .icon_default {
-  background-color: theme.get-color(highlight-primary);
+  background-color: theme.get-color(misc-3);
 }
 
 .icon_doc {
   background-color: theme.get-color(misc-3);
 }
 
+.icon_image,
 .icon_pdf {
   background-color: theme.get-color(misc-2);
+}
+
+.icon_audio {
+  background-color: theme.get-color(misc-4);
+}
+
+.icon_spreadsheet {
+  background-color: theme.get-color(misc-5);
+}
+
+.size_s {
+  padding: theme.get-spacing(0.4);
+  gap: theme.get-spacing(1);
+  min-height: unset;
+  border-radius: theme.get-spacing(2);
+
+  .content {
+    display: inline-flex;
+    align-items: center;
+    gap: theme.get-spacing(1);
+    max-width: unset;
+    flex-direction: row;
+  }
+
+  .icon {
+    width: theme.get-spacing(2.5);
+    height: theme.get-spacing(2.5);
+  }
+
+  .close {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .spinner {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
 }

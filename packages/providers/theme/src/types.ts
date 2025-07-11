@@ -39,6 +39,8 @@ export interface Theme {
     "misc-1": string;
     "misc-2": string;
     "misc-3": string;
+    "misc-4": string;
+    "misc-5": string;
   };
   font: {
     "family": string;
