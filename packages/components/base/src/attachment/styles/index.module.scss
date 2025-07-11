@@ -24,10 +24,10 @@ $spacing: theme.get-spacing(1.5);
   }
 
   &.disabled {
-    opacity: 0.5;
     cursor: not-allowed;
-    pointer-events: none;
     filter: grayscale(100%);
+    opacity: 0.5;
+    pointer-events: none;
   }
 
   &.interactive {
@@ -85,6 +85,7 @@ $spacing: theme.get-spacing(1.5);
 }
 
 .icon {
+  position: relative;
   display: flex;
   width: theme.get-spacing(3);
   height: theme.get-spacing(3);
@@ -94,15 +95,14 @@ $spacing: theme.get-spacing(1.5);
   padding: theme.get-spacing();
   border-radius: 50%;
   color: theme.get-color(neutral-light-100);
-  position: relative;
 
   .spinner {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transform: translate(-50%, -50%) scale(1.3);
   }
 }
@@ -129,17 +129,22 @@ $spacing: theme.get-spacing(1.5);
 }
 
 .size_s {
-  padding: theme.get-spacing(0.4);
-  gap: theme.get-spacing(1);
   min-height: unset;
+  padding: theme.get-spacing(0.4);
   border-radius: theme.get-spacing(2);
+  gap: theme.get-spacing(1);
 
   .content {
     display: inline-flex;
-    align-items: center;
-    gap: theme.get-spacing(1);
+    overflow: hidden;
     max-width: unset;
     flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    gap: theme.get-spacing(1);
+    text-overflow: ellipsis;
+    white-space: pre;
   }
 
   .icon {
