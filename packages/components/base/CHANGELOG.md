@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.16.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.15.0...@react-ck/base-components@5.16.0) (2025-07-11)
+
+
+### Features
+
+* **file uploader:** allow open file picker immideately ([c78ef57](https://github.com/abelflopes/react-ck/commit/c78ef5769de7c41a8bea2576f8e29a89da71ae7e))
+
+
+
 ## [5.15.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.14.1...@react-ck/base-components@5.15.0) (2025-07-11)
 
 
