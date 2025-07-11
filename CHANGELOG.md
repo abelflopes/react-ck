@@ -1,3 +1,16 @@
+## [3.96.0](https://github.com/abelflopes/react-ck/compare/v3.95.0...v3.96.0) (2025-07-11)
+
+
+### Features
+
+* **react-ck:** global library package ([63f5c38](https://github.com/abelflopes/react-ck/commit/63f5c3873fe88757b6f9dae1edc61f8796f1142f))
+* **react-ck:** global library package ([435e3d6](https://github.com/abelflopes/react-ck/commit/435e3d6f989f05390994e891d7786bf072cdc987))
+
+
+### Bug Fixes
+
+* **attachment:** truncate attachment text ([7a50120](https://github.com/abelflopes/react-ck/commit/7a501203963c59e6d9c909af99b587c7a8a228de))
+
 ## [3.95.0](https://github.com/abelflopes/react-ck/compare/v3.94.0...v3.95.0) (2025-07-11)
 
 
