@@ -1,3 +1,12 @@
+## [3.95.0](https://github.com/abelflopes/react-ck/compare/v3.94.0...v3.95.0) (2025-07-11)
+
+
+### Features
+
+* **file uploader:** allow open file picker immideately ([c78ef57](https://github.com/abelflopes/react-ck/commit/c78ef5769de7c41a8bea2576f8e29a89da71ae7e))
+* **react-ck:** global library package ([f6e11d1](https://github.com/abelflopes/react-ck/commit/f6e11d119cf60b6fddf1c774cdc7337f615d4f4f))
+* **react-ck:** global library package ([35a3f8e](https://github.com/abelflopes/react-ck/commit/35a3f8e9ddaf4ad59f5b97d882c8ec78c3af0e74))
+
 ## [3.94.0](https://github.com/abelflopes/react-ck/compare/v3.93.0...v3.94.0) (2025-07-11)
 
 
