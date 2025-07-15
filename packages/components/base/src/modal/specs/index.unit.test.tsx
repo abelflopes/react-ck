@@ -11,7 +11,7 @@ describe("unit Modal", () => {
     render(
       <LayersProvider>
         <Modal>
-          <Modal.Header heading="Heading" />
+          <Modal.Header>Heading</Modal.Header>
           {content}
           <Modal.Footer>Footer</Modal.Footer>
         </Modal>

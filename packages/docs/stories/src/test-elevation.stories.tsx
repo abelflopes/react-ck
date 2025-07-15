@@ -175,7 +175,7 @@ const WithModal = ({ children }: { readonly children: React.ReactNode }): React.
       </Button>
 
       <Modal open={open} onDismiss={toggleOpen}>
-        <Modal.Header heading="Modal" />
+        <Modal.Header>Modal</Modal.Header>
         {children}
         <Modal.Footer>
           <Button skin="secondary" skinVariation="muted" onClick={toggleOpen}>

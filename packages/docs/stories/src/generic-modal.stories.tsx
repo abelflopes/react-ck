@@ -65,7 +65,7 @@ export const Component: Story = {
   args: {
     children: (
       <>
-        <Modal.Header heading={faker.lorem.sentence(4)} />
+        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
 
         <Text margin="none">{faker.lorem.sentence(6)}</Text>
 
@@ -82,7 +82,7 @@ export const BigContent: Story = {
   args: {
     children: (
       <>
-        <Modal.Header heading={faker.lorem.sentence(4)} />
+        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
 
         <Text margin="bottom">{faker.lorem.paragraphs(19)}</Text>
 
@@ -105,7 +105,7 @@ export const FullHeight: Story = {
     sizeVariation: "full-height",
     children: (
       <>
-        <Modal.Header heading={faker.lorem.sentence(4)} />
+        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
 
         <div style={{ height: "100%", backgroundColor: "pink" }}>
           <Text margin="bottom">{faker.lorem.paragraphs(19)}</Text>
@@ -131,7 +131,7 @@ export const OnlyContentAndHeader: Story = {
   args: {
     children: (
       <>
-        <Modal.Header heading={faker.lorem.sentence(4)} />
+        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
 
         <Text margin="none">{faker.lorem.sentence(6)}</Text>
       </>

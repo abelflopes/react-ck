@@ -162,9 +162,13 @@ const Modal = ({
               <header
                 {...props.header}
                 className={classNames(styles.header, props.header.className)}>
-                <Text variation="h3" as="p" margin="none">
-                  {props.header.heading}
-                </Text>
+                {typeof props.header.children === "string" ? (
+                  <Text variation="h3" as="p" margin="none">
+                    {props.header.children}
+                  </Text>
+                ) : (
+                  props.header.children
+                )}
 
                 {closeButton && onDismiss ? (
                   <Button

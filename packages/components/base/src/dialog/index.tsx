@@ -8,7 +8,7 @@ import { Modal, type ModalProps } from "../modal";
 export interface DialogProps
   extends Omit<ModalProps, "size" | "overlay" | "closeButton" | "dismissOnClickOutside"> {
   /** Optional heading text displayed at the top of the dialog */
-  heading?: string;
+  heading?: React.ReactNode;
   /** Optional actions (typically buttons) displayed at the bottom of the dialog */
   actions?: React.ReactNode;
 }
@@ -30,7 +30,7 @@ export const Dialog = ({
     dismissOnClickOutside={false}
     layerGroup="dialog"
     {...otherProps}>
-    {heading ? <Modal.Header heading={heading} /> : null}
+    {heading ? <Modal.Header>{heading}</Modal.Header> : null}
 
     {children}
 

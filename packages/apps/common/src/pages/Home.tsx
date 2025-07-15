@@ -56,7 +56,7 @@ export const HomePage = (): React.ReactElement => {
           onDismiss={() => {
             setModalOpen(false);
           }}>
-          <Modal.Header heading="Header" />
+          <Modal.Header>Header</Modal.Header>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate!
           <Modal.Footer>
             <Button

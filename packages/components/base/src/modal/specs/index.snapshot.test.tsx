@@ -8,7 +8,7 @@ describe("snapshot Modal", () => {
     const component = await getActRender(
       <LayersProvider usePortal={false}>
         <Modal>
-          <Modal.Header heading="Heading" />
+          <Modal.Header>Heading</Modal.Header>
           <Modal.Footer>Footer</Modal.Footer>
         </Modal>
       </LayersProvider>,
