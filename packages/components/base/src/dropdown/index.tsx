@@ -9,7 +9,7 @@ import { useOnClickOutside } from "@react-ck/react-utils";
 import { FocusTrap } from "@react-ck/focus-trap";
 
 /** Default positions to exclude from auto-positioning */
-const defaultExclude: PositionEngineProps["exclude"] = ["left", "right", "end", "full"];
+const defaultExclude: PositionEngineProps["exclude"] = ["left", "right", "full"];
 
 /**
  * Props interface for the Dropdown component.
