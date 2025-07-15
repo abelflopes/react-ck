@@ -6,6 +6,7 @@
 .root {
   @include text.text-base;
 
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +27,8 @@
   .size_#{$size} {
     @include text.text-variation(map-get($props, text-variation));
 
-    padding: map-get($props, padding-y) map-get($props, padding-x);
+    height: map-get($props, height);
+    padding: 0 map-get($props, padding-x);
   }
 }
 

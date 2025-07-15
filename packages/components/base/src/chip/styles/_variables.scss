@@ -35,12 +35,12 @@ $chip-styles: (
 
 $chip-sizes: (
   m: (
-    padding-y: theme.get-spacing(0.5),
+    height: theme.get-spacing(3),
     padding-x: theme.get-spacing(),
     text-variation: small,
   ),
   s: (
-    padding-y: theme.get-spacing(0.25),
+    height: theme.get-spacing(2.5),
     padding-x: theme.get-spacing(0.75),
     text-variation: extra-small,
   ),
