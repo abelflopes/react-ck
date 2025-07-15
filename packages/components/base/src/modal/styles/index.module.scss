@@ -93,13 +93,27 @@ $padding: scss-utils.get-css-var(modal, spacing);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: scss-utils.get-css-var(modal, spacing);
+  gap: $padding;
 }
 
 .footer {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   margin-top: auto;
-  gap: scss-utils.get-css-var(modal, spacing);
+  gap: $padding;
+
+  &_content {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  &_actions {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: calc(#{$padding} * 0.5);
+  }
 }

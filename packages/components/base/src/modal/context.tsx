@@ -2,9 +2,13 @@ import React from "react";
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {}
 
+export interface FooterProps extends React.HTMLAttributes<HTMLElement> {
+  actions?: React.ReactNode;
+}
+
 export interface ModalContextValue {
   header: HeaderProps | undefined;
-  footer: React.HTMLAttributes<HTMLElement> | undefined;
+  footer: FooterProps | undefined;
 }
 
 export interface ModalContextProps {

@@ -34,6 +34,6 @@ export const Dialog = ({
 
     {children}
 
-    {actions ? <Modal.Footer>{actions}</Modal.Footer> : null}
+    {actions ? <Modal.Footer actions={actions} /> : null}
   </Modal>
 );

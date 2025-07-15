@@ -177,11 +177,13 @@ const WithModal = ({ children }: { readonly children: React.ReactNode }): React.
       <Modal open={open} onDismiss={toggleOpen}>
         <Modal.Header>Modal</Modal.Header>
         {children}
-        <Modal.Footer>
-          <Button skin="secondary" skinVariation="muted" onClick={toggleOpen}>
-            Close
-          </Button>
-        </Modal.Footer>
+        <Modal.Footer
+          actions={
+            <Button skin="secondary" skinVariation="muted" onClick={toggleOpen}>
+              Close
+            </Button>
+          }
+        />
       </Modal>
     </>
   );

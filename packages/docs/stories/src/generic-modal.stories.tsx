@@ -69,8 +69,13 @@ export const Component: Story = {
 
         <Text margin="none">{faker.lorem.sentence(6)}</Text>
 
-        <Modal.Footer>
-          <Button>{faker.lorem.word()}</Button>
+        <Modal.Footer
+          actions={
+            <Button>
+              <Button>{faker.lorem.word()}</Button>
+            </Button>
+          }>
+          {faker.lorem.sentence(6)}
         </Modal.Footer>
       </>
     ),
@@ -90,8 +95,8 @@ export const BigContent: Story = {
 
         <Text margin="top">{faker.lorem.paragraphs(20)}</Text>
 
-        <Modal.Footer>
-          <Button>{faker.lorem.word()}</Button>
+        <Modal.Footer actions={<Button>{faker.lorem.word()}</Button>}>
+          {faker.lorem.sentence(6)}
         </Modal.Footer>
       </>
     ),
@@ -111,8 +116,13 @@ export const FullHeight: Story = {
           <Text margin="bottom">{faker.lorem.paragraphs(19)}</Text>
         </div>
 
-        <Modal.Footer>
-          <Button>{faker.lorem.word()}</Button>
+        <Modal.Footer
+          actions={
+            <Button>
+              <Button>{faker.lorem.word()}</Button>
+            </Button>
+          }>
+          {faker.lorem.sentence(6)}
         </Modal.Footer>
       </>
     ),
@@ -146,8 +156,13 @@ export const OnlyContentAndFooter: Story = {
       <>
         <Text margin="none">{faker.lorem.sentence(6)}</Text>
 
-        <Modal.Footer>
-          <Button>{faker.lorem.word()}</Button>
+        <Modal.Footer
+          actions={
+            <Button>
+              <Button>{faker.lorem.word()}</Button>
+            </Button>
+          }>
+          {faker.lorem.sentence(6)}
         </Modal.Footer>
       </>
     ),

@@ -58,14 +58,16 @@ export const HomePage = (): React.ReactElement => {
           }}>
           <Modal.Header>Header</Modal.Header>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate!
-          <Modal.Footer>
-            <Button
-              onClick={() => {
-                setModalOpen(false);
-              }}>
-              Close
-            </Button>
-          </Modal.Footer>
+          <Modal.Footer
+            actions={
+              <Button
+                onClick={() => {
+                  setModalOpen(false);
+                }}>
+                Close
+              </Button>
+            }
+          />
         </Modal>
       ) : null}
     </>

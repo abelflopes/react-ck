@@ -197,8 +197,15 @@ const Modal = ({
             {props.footer ? (
               <footer
                 {...props.footer}
-                className={classNames(styles.footer, props.footer.className)}
-              />
+                className={classNames(styles.footer, props.footer.className)}>
+                {props.footer.children && (
+                  <div className={styles.footer_content}>{props.footer.children}</div>
+                )}
+
+                {props.footer.actions && (
+                  <div className={styles.footer_actions}>{props.footer.actions}</div>
+                )}
+              </footer>
             ) : null}
           </ModalContext.Provider>
         </div>
