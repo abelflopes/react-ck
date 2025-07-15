@@ -13,6 +13,7 @@ export const generateAllVariations = <T extends object>(
   render: (props: T) => React.ReactNode,
   data: PropsMap<T>,
   options?: {
+    filter?: (props: T) => boolean;
     align?: GridProps["align"];
     colSize?: GridColumnProps["size"];
   },
@@ -34,19 +35,21 @@ export const generateAllVariations = <T extends object>(
       <Divider />
 
       <Grid align={options?.align ?? "end"}>
-        {generateDescribedCombinations<T>(data).map(({ combination, description }) => (
-          <Grid.Column key={description} size={options?.colSize ?? 3} title={description}>
-            {render(combination)}
+        {generateDescribedCombinations<T>(data)
+          .filter((i) => options?.filter?.(i.combination) ?? true)
+          .map(({ combination, description }) => (
+            <Grid.Column key={description} size={options?.colSize ?? 3} title={description}>
+              {render(combination)}
 
-            {showInfo ? (
-              <>
-                <br />
-                <br />
-                <Snippet>{description}</Snippet>
-              </>
-            ) : null}
-          </Grid.Column>
-        ))}
+              {showInfo ? (
+                <>
+                  <br />
+                  <br />
+                  <Snippet>{description}</Snippet>
+                </>
+              ) : null}
+            </Grid.Column>
+          ))}
       </Grid>
     </>
   );

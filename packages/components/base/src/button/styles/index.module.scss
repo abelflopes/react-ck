@@ -15,7 +15,8 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  padding: scss-utils.get-css-var(button, padding-y) scss-utils.get-css-var(button, padding-x);
+  min-height: scss-utils.get-css-var(button, height);
+  padding: 0 scss-utils.get-css-var(button, padding-x);
   border-width: 1px;
   border-style: solid;
   border-color: scss-utils.get-css-var(button, border-color);
@@ -75,28 +76,17 @@
       padding-x,
       scss-utils.map-get-strict($props, padding-x)
     );
-    @include scss-utils.define-css-var(
-      button,
-      padding-y,
-      scss-utils.map-get-strict($props, padding-y)
-    );
+    @include scss-utils.define-css-var(button, height, scss-utils.map-get-strict($props, height));
 
     &.icon-only {
-      @include scss-utils.define-css-var(
-        button,
-        padding-x,
-        scss-utils.map-get-strict($props, padding-icon)
-      );
-      @include scss-utils.define-css-var(
-        button,
-        padding-y,
-        scss-utils.map-get-strict($props, padding-icon)
-      );
+      @include scss-utils.define-css-var(button, padding-x, 0);
     }
   }
 }
 
 .size-xs {
+  @include text.text-variation(small);
+
   &.icon-only {
     // icon size
     > * {

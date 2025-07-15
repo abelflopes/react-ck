@@ -105,25 +105,25 @@ $button-skins: (
   ),
 );
 $button-sizes: (
-  l: (
-    padding-y: theme.get-spacing(2),
+  xl: (
+    height: theme.get-spacing(7),
     padding-x: theme.get-spacing(3),
-    padding-icon: theme.get-spacing(1.5),
+  ),
+  l: (
+    height: theme.get-spacing(5),
+    padding-x: theme.get-spacing(3),
   ),
   m: (
     // align with input height
-    padding-y: theme.get-spacing(0.563),
+    height: theme.get-spacing(4),
     padding-x: theme.get-spacing(2),
-    padding-icon: theme.get-spacing(1),
   ),
   s: (
-    padding-y: theme.get-spacing(0.25),
+    height: theme.get-spacing(3),
     padding-x: theme.get-spacing(1.25),
-    padding-icon: theme.get-spacing(0.66),
   ),
   xs: (
-    padding-y: theme.get-spacing(0.063),
+    height: theme.get-spacing(2.5),
     padding-x: theme.get-spacing(1),
-    padding-icon: theme.get-spacing(0.5),
   ),
 );

@@ -88,11 +88,25 @@ export const Disabled: Story = {
 export const AllButtonVariations: Story = {
   decorators: [
     (): React.ReactElement =>
-      generateAllVariations<ButtonProps>(Button, {
-        skin: ["primary", "secondary", "negative"],
-        skinVariation: ["default", "bordered", "muted", "ghost"],
-        size: ["l", "m", "s", "xs"],
-        children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
-      }),
+      generateAllVariations<ButtonProps>(
+        Button,
+        {
+          children: [sentenceCase(faker.lorem.word()), undefined],
+          icon: [
+            undefined,
+            <Icon>
+              <IconClose />
+            </Icon>,
+          ],
+          skin: ["primary", "secondary", "negative"],
+          skinVariation: ["default", "bordered", "muted", "ghost"],
+          size: ["xl", "l", "m", "s", "xs"],
+        },
+        {
+          colSize: 2,
+          align: "centered",
+          filter: (props) => !!props.children || !!props.icon,
+        },
+      ),
   ],
 };
