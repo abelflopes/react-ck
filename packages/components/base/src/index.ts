@@ -99,3 +99,5 @@ export * from "./text";
 export * from "./textarea";
 
 export * from "./infinite-scroll";
+
+export * from "./virtualized-list";
