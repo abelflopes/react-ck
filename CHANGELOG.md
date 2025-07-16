@@ -1,3 +1,16 @@
+## [4.1.0](https://github.com/abelflopes/react-ck/compare/v4.0.0...v4.1.0) (2025-07-16)
+
+
+### Features
+
+* **react-ck:** global library package ([7c861d9](https://github.com/abelflopes/react-ck/commit/7c861d9a17438cc71af762dd039854ca26992be3))
+* **react-ck:** global library package ([daa5023](https://github.com/abelflopes/react-ck/commit/daa5023323ea9a190677a426ae059875a3b79cc7))
+
+
+### Bug Fixes
+
+* **progress:** remove invisible margins ([512cedf](https://github.com/abelflopes/react-ck/commit/512cedf8cec52deb5e9c74ac0554efadf15656df))
+
 ## [4.0.0](https://github.com/abelflopes/react-ck/compare/v3.96.0...v4.0.0) (2025-07-16)
 
 
