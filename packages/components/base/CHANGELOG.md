@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@6.0.0...@react-ck/base-components@6.0.1) (2025-07-16)
+
+
+### Bug Fixes
+
+* **progress:** remove invisible margins ([512cedf](https://github.com/abelflopes/react-ck/commit/512cedf8cec52deb5e9c74ac0554efadf15656df))
+
+
+
 ## [6.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@5.16.1...@react-ck/base-components@6.0.0) (2025-07-16)
 
 
