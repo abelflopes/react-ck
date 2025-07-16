@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@2.3.0...@react-ck/theme@2.3.1) (2025-07-16)
+
+
+### Bug Fixes
+
+* layers breaking react contexts from parent app ([0bd4bb2](https://github.com/abelflopes/react-ck/commit/0bd4bb20e11a0352f5e6cb0822ba9f08f7146f94))
+
+
+
 ## [2.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@2.2.0...@react-ck/theme@2.3.0) (2025-07-11)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/snackbar-provider@1.0.1...@react-ck/snackbar-provider@1.0.2) (2025-07-16)
+
+
+### Bug Fixes
+
+* layers breaking react contexts from parent app ([0bd4bb2](https://github.com/abelflopes/react-ck/commit/0bd4bb20e11a0352f5e6cb0822ba9f08f7146f94))
+
+
+
 ## 1.0.1 (2025-04-02)
 
 
