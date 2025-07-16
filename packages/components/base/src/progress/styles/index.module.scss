@@ -4,6 +4,7 @@
   width: 100%;
   height: theme.get-spacing(0.5);
   appearance: none;
+  display: block;
 
   &::-webkit-progress-value,
   &::-webkit-progress-bar {
