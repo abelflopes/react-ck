@@ -1,3 +1,32 @@
+## [4.0.0](https://github.com/abelflopes/react-ck/compare/v3.96.0...v4.0.0) (2025-07-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* allow custom content in modal footer & dedicated actions slot
+* use children react node to render modal header
+
+### Features
+
+* add infinite scroll component ([f869ffd](https://github.com/abelflopes/react-ck/commit/f869ffd53557ae0a1e3a603d447806a316f92389))
+* add virtualised list component ([18b7e16](https://github.com/abelflopes/react-ck/commit/18b7e16c1b55f99f0ce882a49986ed53d64a8e5c))
+* allow custom content in modal footer & dedicated actions slot ([c623986](https://github.com/abelflopes/react-ck/commit/c6239867f890a5b0721174b5e4c578155b19d519))
+* **dropdown:** add dropdown button utility ([96217f1](https://github.com/abelflopes/react-ck/commit/96217f169c52cc5d36cfb5214aae18672640ef2f))
+* **react-ck:** global library package ([b817bb4](https://github.com/abelflopes/react-ck/commit/b817bb45dd0350fc8d3d69a73a23ec165f810eeb))
+
+
+### Bug Fixes
+
+* button height variations ([0917a96](https://github.com/abelflopes/react-ck/commit/0917a9676c1bb73ce51d8ef32b515f15e06575bd))
+* **chip:** difference in height when rendering bordered vs filled ([1ac3860](https://github.com/abelflopes/react-ck/commit/1ac3860e1d64895e8a25ff1cb908323511f2c1be))
+* dropdown auto positioning ([972bdb5](https://github.com/abelflopes/react-ck/commit/972bdb5488ce46c846ace925d9521ff847159554))
+* layers breaking react contexts from parent app ([0bd4bb2](https://github.com/abelflopes/react-ck/commit/0bd4bb20e11a0352f5e6cb0822ba9f08f7146f94))
+
+
+### Code Refactoring
+
+* use children react node to render modal header ([920c4d3](https://github.com/abelflopes/react-ck/commit/920c4d3cb2535262b5e92c57a33a716119b24a09))
+
 ## [3.96.0](https://github.com/abelflopes/react-ck/compare/v3.95.0...v3.96.0) (2025-07-11)
 
 
