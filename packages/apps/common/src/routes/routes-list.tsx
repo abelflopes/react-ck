@@ -6,6 +6,7 @@
 export const routesList = {
   root: "/",
   home: "/home",
+  test: "/test",
   error: "*",
 } as const;
 

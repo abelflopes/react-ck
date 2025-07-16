@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks -- exception for storybook */
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Manager } from "@react-ck/manager";

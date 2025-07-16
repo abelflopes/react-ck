@@ -105,7 +105,7 @@ export const AllButtonVariations: Story = {
         {
           colSize: 2,
           align: "centered",
-          filter: (props) => !!props.children || !!props.icon,
+          filter: (props) => Boolean(props.children) || Boolean(props.icon),
         },
       ),
   ],

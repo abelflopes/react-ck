@@ -7,17 +7,18 @@
     "build": "vite build"
   },
   "dependencies": {
-    "react": "^18.3.1",
     "@react-ck/common-app": "*",
-    "react-dom": "^18.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^6.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "@vitejs/plugin-react-refresh": "*",
     "@originjs/vite-plugin-commonjs": "*",
-    "vite": "^5.0.12",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.0.4"
+    "@vitejs/plugin-react-refresh": "*",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "typescript": "^5.0.4",
+    "vite": "^5.0.12"
   }
 }

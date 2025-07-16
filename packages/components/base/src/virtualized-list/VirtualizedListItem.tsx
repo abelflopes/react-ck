@@ -6,7 +6,7 @@ export interface VirtualizedListItemProps
   observerRootRef: React.RefObject<HTMLDivElement>;
 }
 
-export const VirtualizedListItem: React.FC<VirtualizedListItemProps> = ({
+export const VirtualizedListItem: React.FC<Readonly<VirtualizedListItemProps>> = ({
   defaultHeight,
   children,
   observerRootRef,
@@ -22,7 +22,6 @@ export const VirtualizedListItem: React.FC<VirtualizedListItemProps> = ({
 
     const viewportObserver = new IntersectionObserver(
       (entries) => {
-        console.log("entries", entries);
         setIsVisibleInViewport(entries.some((entry) => entry.isIntersecting));
       },
       {
@@ -33,7 +32,6 @@ export const VirtualizedListItem: React.FC<VirtualizedListItemProps> = ({
 
     const containerObserver = new IntersectionObserver(
       (entries) => {
-        console.log("entries", entries);
         setIsVisibleInContainer(entries.some((entry) => entry.isIntersecting));
       },
       {
@@ -50,7 +48,7 @@ export const VirtualizedListItem: React.FC<VirtualizedListItemProps> = ({
       viewportObserver.disconnect();
       containerObserver.disconnect();
     };
-  }, []);
+  }, [observerRootRef]);
 
   const isVisible = isVisibleInContainer && isVisibleInViewport;
 
@@ -62,7 +60,7 @@ export const VirtualizedListItem: React.FC<VirtualizedListItemProps> = ({
 
   return (
     <div {...props} ref={ref} style={{ height: isVisible ? "auto" : heightWhenInvisible.current }}>
-      {isVisible && children}
+      {isVisible ? children : null}
     </div>
   );
 };

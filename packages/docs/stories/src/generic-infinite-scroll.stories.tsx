@@ -24,14 +24,20 @@ const meta: Meta<typeof InfiniteScroll> = {
 export default meta;
 
 // Helper function to generate mock data
-const generateMockItems = (count: number) => {
-  return Array.from({ length: count }, (_, index) => ({
+const generateMockItems = (
+  count: number,
+): Array<{
+  id: number;
+  title: string;
+  content: string;
+  timestamp: string;
+}> =>
+  Array.from({ length: count }, (_, index) => ({
     id: index + 1,
     title: faker.lorem.sentence(3),
     content: faker.lorem.paragraph(),
     timestamp: faker.date.recent().toLocaleDateString(),
   }));
-};
 
 const INITIAL_ITEMS = 3;
 const TOTAL_ITEMS = 15;
@@ -89,9 +95,9 @@ export const Default: Story = {
           loadingMore={loadingMore}
           loadingElement={customLoadingElement}
           loadingMoreElement={customLoadingMoreElement}
-          onLoadMore={handleLoadMore}
+          loadMoreButton="Load more items"
           displayLoadMore
-          loadMoreButton="Load more items">
+          onLoadMore={handleLoadMore}>
           <Flex direction="column" align="stretch" spacing="s">
             {items.map((item) => (
               <Card key={item.id} skin="bordered">
@@ -109,3 +115,4 @@ export const Default: Story = {
     );
   },
 };
+/* eslint-enable react-hooks/rules-of-hooks */

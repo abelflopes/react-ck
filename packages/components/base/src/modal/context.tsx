@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {}
+export type HeaderProps = React.HTMLAttributes<HTMLElement>;
 
 export interface FooterProps extends React.HTMLAttributes<HTMLElement> {
   actions?: React.ReactNode;

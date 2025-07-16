@@ -1,5 +1,5 @@
 import "./styles/index.module.scss";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { type Theme } from "./types";
 import { defaultTheme } from "./themes/default";
 import { ThemeContextProvider } from "./context";
@@ -11,6 +11,7 @@ export interface ThemeProviderProps {
   theme?: Theme;
   children?: React.ReactNode | React.ReactNode[];
   className?: string;
+  onThemeRootChange?: (root: HTMLElement) => void;
 }
 
 /**
@@ -25,6 +26,7 @@ export const ThemeProvider = ({
   theme = defaultTheme,
   children,
   className,
+  onThemeRootChange,
 }: Readonly<ThemeProviderProps>): React.ReactElement => {
   const themeCssVariables = useMemo<React.CSSProperties>(
     () =>
@@ -58,13 +60,19 @@ export const ThemeProvider = ({
     };
   }, [className, target, themeCssVariables]);
 
+  const themeRootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    onThemeRootChange?.(themeRootRef.current ?? target ?? document.body);
+  }, [onThemeRootChange, target]);
+
   return (
     <ThemeContextProvider
       value={{
         theme,
       }}>
       {!target && (
-        <div style={themeCssVariables} className={className}>
+        <div ref={themeRootRef} style={themeCssVariables} className={className}>
           {children}
         </div>
       )}

@@ -9,16 +9,18 @@ const defaultContentWrapper: React.FC<React.PropsWithChildren> = ({ children }) 
 
 export const InfiniteScroll: React.FC<
   React.PropsWithChildren<{
-    loaded?: number;
-    loading: boolean;
-    loadingElement?: React.ReactNode;
-    loadingMore: boolean;
-    loadingMoreElement?: React.ReactNode;
-    total?: number;
-    displayLoadMore?: boolean;
-    onLoadMore: () => void;
-    loadMoreButton?: React.ReactNode | ((props: { loadMore: () => void }) => React.ReactNode);
-    ContentWrapper?: React.FC<React.PropsWithChildren>;
+    readonly loaded?: number;
+    readonly loading: boolean;
+    readonly loadingElement?: React.ReactNode;
+    readonly loadingMore: boolean;
+    readonly loadingMoreElement?: React.ReactNode;
+    readonly total?: number;
+    readonly displayLoadMore?: boolean;
+    readonly onLoadMore: () => void;
+    readonly loadMoreButton?:
+      | React.ReactNode
+      | ((props: { loadMore: () => void }) => React.ReactNode);
+    readonly ContentWrapper?: React.FC<React.PropsWithChildren>;
   }>
 > = ({
   children,
@@ -46,15 +48,20 @@ export const InfiniteScroll: React.FC<
   const LoadMoreButton = useMemo(() => {
     if (!displayLoadMore) return null;
     if (typeof loadMoreButton === "function") {
-      return loadMoreButton({ loadMore: () => setInfiniteScrollEnabled(true) });
+      return loadMoreButton({
+        loadMore: () => {
+          setInfiniteScrollEnabled(true);
+        },
+      });
     }
+
     return (
       <Button
+        skinVariation="bordered"
         fullWidth
         onClick={() => {
           setInfiniteScrollEnabled(true);
-        }}
-        skinVariation="bordered">
+        }}>
         {loadMoreButton}
       </Button>
     );
@@ -84,18 +91,18 @@ export const InfiniteScroll: React.FC<
 
   return (
     <>
-      {hasItemsLeft && loading && (loadingElement ?? <Skeleton />)}
+      {hasItemsLeft && loading ? loadingElement ?? <Skeleton /> : null}
 
-      {children && (
+      {children ? (
         <ContentWrapper>
           {children}
           <div ref={intersectionRef} />
         </ContentWrapper>
-      )}
+      ) : null}
 
-      {hasItemsLeft && loadingMore && (loadingMoreElement ?? <Spinner />)}
+      {hasItemsLeft && loadingMore ? loadingMoreElement ?? <Spinner /> : null}
 
-      {displayLoadMore && !infiniteScrollEnabled && hasItemsLeft && LoadMoreButton}
+      {displayLoadMore && !infiniteScrollEnabled && hasItemsLeft ? LoadMoreButton : null}
     </>
   );
 };

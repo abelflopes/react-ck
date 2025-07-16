@@ -1,11 +1,10 @@
 import React, { isValidElement, useContext, useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { type LayerData, LayersContext } from "./context";
-import { type Elevation } from "@react-ck/elevation";
+import { elevationMap, type Elevation } from "@react-ck/elevation";
 import { DISPLAY_NAME_ATTRIBUTE, getDisplayName, DISPLAY_NAMES } from "@react-ck/react-utils";
-import { ThemeProvider, useThemeContext } from "@react-ck/theme";
 import classNames from "classnames";
-import { SnackbarContext, useSnackbar } from "@react-ck/snackbar-provider";
+import styles from "./styles/index.module.scss";
 
 interface LayerProps {
   /** The group name for the layer */
@@ -36,37 +35,28 @@ const Layer = ({
   onLayerInfo,
   group,
 }: Readonly<LayerProps>): React.ReactNode => {
-  const theme = useThemeContext();
-  const { createLayer, usePortal, className: contextClassName } = useContext(LayersContext);
-  const snackbarContext = useSnackbar();
+  const {
+    registerLayer,
+    usePortal,
+    className: contextClassName,
+    rootElement,
+  } = useContext(LayersContext);
 
-  /** Generates the portal element wrapped by theme */
-  const layerElement = useMemo(
-    () =>
-      usePortal
-        ? createPortal(
-            <ThemeProvider theme={theme.theme} className={classNames(contextClassName, className)}>
-              <SnackbarContext.Provider value={snackbarContext}>
-                {children}
-              </SnackbarContext.Provider>
-            </ThemeProvider>,
-            document.body,
-          )
-        : children,
-    [children, contextClassName, className, theme.theme, usePortal, snackbarContext],
-  );
+  const createdAt = useMemo(() => Date.now(), []);
 
   /** Renders the layer */
   useEffect(() => {
-    const removeLayer = createLayer({
+    const removeLayer = registerLayer({
+      createdAt,
       elevationKey: elevation,
-      node: layerElement,
-      onLayerInfo,
+      onLayerInfo: (info) => {
+        onLayerInfo?.(info);
+      },
       group,
     });
 
     return removeLayer;
-  }, [elevation, children, createLayer, theme, layerElement, onLayerInfo, group]);
+  }, [elevation, children, registerLayer, onLayerInfo, group, createdAt]);
 
   /** Validate children */
   useEffect(() => {
@@ -77,7 +67,29 @@ const Layer = ({
     }
   }, [children]);
 
-  return undefined;
+  const zIndex = useMemo(() => elevationMap[elevation], [elevation]);
+
+  return (
+    <>
+      {usePortal
+        ? createPortal(
+            <div
+              className={classNames(contextClassName, className, styles.layer)}
+              style={
+                // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- z-index is a css variable
+                {
+                  "--z-index": zIndex,
+                } as React.CSSProperties
+              }>
+              {children}
+            </div>,
+            rootElement,
+          )
+        : null}
+
+      {!usePortal && children}
+    </>
+  );
 };
 
 Layer[DISPLAY_NAME_ATTRIBUTE] = DISPLAY_NAMES.LAYER;

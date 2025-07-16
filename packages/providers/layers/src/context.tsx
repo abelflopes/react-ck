@@ -4,8 +4,8 @@ import { type Elevation } from "@react-ck/elevation";
 export interface LayerData {
   elevationKey: Elevation;
   group: string;
-  node: React.ReactNode;
   onLayerInfo: ((info: LayerInfoContextProps) => void) | undefined;
+  createdAt: number;
 }
 
 export interface LayerInfoContextProps {
@@ -31,14 +31,16 @@ export interface LayersContextProps {
   /** If true, renders app layers on document body instead of on same level of root element,
    * if set to false keep in mind that tit might affect positioning of floating elements */
   usePortal: boolean;
-  createLayer: (data: LayerData) => () => void;
+  registerLayer: (data: LayerData) => () => void;
   className?: string;
+  rootElement: HTMLElement;
 }
 
 export const LayersContext = React.createContext<LayersContextProps>({
   className: undefined,
   usePortal: true,
-  createLayer: () => {
+  rootElement: document.body,
+  registerLayer: () => {
     throw new Error("Layers context not defined");
   },
 });

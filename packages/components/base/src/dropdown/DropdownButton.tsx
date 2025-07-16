@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Dropdown, DropdownProps } from "./Dropdown";
+import { Dropdown, type DropdownProps } from "./Dropdown";
 
 export interface DropdownButtonRenderProps {
   ref: React.RefObject<HTMLButtonElement>;
@@ -9,7 +9,7 @@ export interface DropdownButtonRenderProps {
 }
 
 export interface DropdownButtonProps extends Omit<DropdownProps, "anchorRef"> {
-  renderButton: (props: DropdownButtonRenderProps) => React.ReactNode;
+  readonly renderButton: (props: DropdownButtonRenderProps) => React.ReactNode;
 }
 
 export const DropdownButton: React.FC<DropdownButtonProps> = ({
@@ -32,7 +32,9 @@ export const DropdownButton: React.FC<DropdownButtonProps> = ({
       renderButton({
         ref: buttonRef,
         open: internalOpen,
-        onOpen: () => setInternalOpen(true),
+        onOpen: () => {
+          setInternalOpen(true);
+        },
         onClose: internalOnClose,
       }),
     [renderButton, internalOpen, internalOnClose],

@@ -101,7 +101,7 @@ export const Tooltip = ({
         position={position}
         anchorRef={anchor}
         render={({ style, position }) => (
-          <Layer elevation="popup" group="tooltip">
+          <Layer elevation="floating" group="tooltip">
             <div
               style={style}
               className={classNames(styles.container, position)}

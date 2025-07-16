@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ThemeProvider, type ThemeProviderProps } from "@react-ck/theme";
 import { LayersProvider, type LayersProviderProps } from "@react-ck/layers";
 
@@ -25,10 +25,16 @@ export const Manager = ({
   children,
   usePortal = true,
   className,
-}: Readonly<ManagerProps>): React.ReactElement => (
-  <ThemeProvider {...theme} className={className}>
-    <LayersProvider usePortal={usePortal} className={className}>
-      {children}
-    </LayersProvider>
-  </ThemeProvider>
-);
+}: Readonly<ManagerProps>): React.ReactElement => {
+  const [layerRootElement, setLayerRootElement] = useState<HTMLElement>(
+    theme?.target ?? document.body,
+  );
+
+  return (
+    <ThemeProvider {...theme} className={className} onThemeRootChange={setLayerRootElement}>
+      <LayersProvider usePortal={usePortal} className={className} rootElement={layerRootElement}>
+        {children}
+      </LayersProvider>
+    </ThemeProvider>
+  );
+};

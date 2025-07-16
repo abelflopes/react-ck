@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import { VirtualizedListItem, VirtualizedListItemProps } from "./VirtualizedListItem";
+import React, { useMemo, useRef } from "react";
+import { VirtualizedListItem, type VirtualizedListItemProps } from "./VirtualizedListItem";
 
-const DefaultWrapper: React.FC<React.PropsWithChildren> = ({ children }) => <>{children}</>;
+const DefaultWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
 
 export interface VirtualizedListProps
   extends Omit<React.ComponentPropsWithoutRef<"div">, "children"> {
@@ -11,7 +11,7 @@ export interface VirtualizedListProps
   Wrapper?: React.FC<React.PropsWithChildren>;
 }
 
-export const VirtualizedList: React.FC<VirtualizedListProps> = ({
+export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
   items,
   defaultItemHeight = 40,
   itemProps,
@@ -20,10 +20,19 @@ export const VirtualizedList: React.FC<VirtualizedListProps> = ({
 }) => {
   const observerRootRef = useRef<HTMLDivElement>(null);
 
+  const itemsWithKey = useMemo(
+    () =>
+      items.map((item) => ({
+        item,
+        key: Math.random().toString(36).substring(2, 15),
+      })),
+    [items],
+  );
+
   return (
     <div ref={observerRootRef} {...props}>
       <Wrapper>
-        {items.map((item, key) => (
+        {itemsWithKey.map(({ item, key }) => (
           <VirtualizedListItem
             key={key}
             defaultHeight={defaultItemHeight}

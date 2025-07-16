@@ -7,7 +7,7 @@ import { elevationMap } from "@react-ck/elevation";
 type LayerList = Array<LayerData & { id: string }>;
 
 export interface LayersProviderProps
-  extends Partial<Pick<LayersContextProps, "usePortal" | "className">> {
+  extends Partial<Pick<LayersContextProps, "usePortal" | "className" | "rootElement">> {
   /** The child components to be wrapped by the LayersProvider  */
   children?: React.ReactNode;
 }
@@ -23,11 +23,12 @@ export const LayersProvider = ({
   children,
   usePortal = true,
   className,
+  rootElement = document.body,
 }: Readonly<LayersProviderProps>): React.ReactElement => {
   const currLayer = useRef<number>(0);
   const [layers, setLayers] = useState<LayerList>([]);
 
-  const createLayer = useCallback<LayersContextProps["createLayer"]>((LayerData) => {
+  const registerLayer = useCallback<LayersContextProps["registerLayer"]>((LayerData) => {
     currLayer.current += 1;
 
     const id = `layer-${currLayer.current}`;
@@ -46,24 +47,24 @@ export const LayersProvider = ({
   }, []);
 
   const contextValue = useMemo<LayersContextProps>(
-    () => ({ createLayer, usePortal, className }),
-    [className, createLayer, usePortal],
+    () => ({ registerLayer, usePortal, className, rootElement }),
+    [className, registerLayer, usePortal, rootElement],
   );
 
-  // Sort layers by elevation
-  const sortedLayers = useMemo(
-    () =>
-      [...layers].sort((a, b) => {
+  useEffect(() => {
+    // Sort layers by elevation
+    const sortedLayers = [...layers]
+      .sort((a, b) => {
+        if (a.createdAt > b.createdAt) return 1;
+        if (a.createdAt < b.createdAt) return -1;
+        return 0;
+      })
+      .sort((a, b) => {
         if (elevationMap[a.elevationKey] > elevationMap[b.elevationKey]) return 1;
         else if (elevationMap[a.elevationKey] < elevationMap[b.elevationKey]) return -1;
         return 0;
-      }),
-    [layers],
-  );
+      });
 
-  const layerElements = useMemo(() => [...sortedLayers].map((i) => i.node), [sortedLayers]);
-
-  useEffect(() => {
     sortedLayers.forEach((layer, layerIndex) => {
       const layersInElevation = sortedLayers.filter((i) => i.elevationKey === layer.elevationKey);
 
@@ -80,13 +81,7 @@ export const LayersProvider = ({
         maxLayerIndexInGroup: layersInGroup.length - 1,
       });
     });
-  }, [sortedLayers]);
+  }, [layers]);
 
-  return (
-    <LayersContext.Provider value={contextValue}>
-      {children}
-
-      {layerElements}
-    </LayersContext.Provider>
-  );
+  return <LayersContext.Provider value={contextValue}>{children}</LayersContext.Provider>;
 };
