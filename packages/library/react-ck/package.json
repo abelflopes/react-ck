@@ -31,7 +31,7 @@
     "glob": "^10.3.10",
     "ts-node-dev": "^2.0.0"
   },
-  "gitHead": "42b09f0272c54cb73a3efa43214bb89bcf1fd402",
+  "gitHead": "1b338741d8d093959783c7996dd68c04f1be0893",
   "dependencies": {
     "@react-ck/base-components": "^6.0.1",
     "@react-ck/elevation": "^1.1.19",
