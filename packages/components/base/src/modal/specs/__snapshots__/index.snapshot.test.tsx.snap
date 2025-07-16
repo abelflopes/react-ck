@@ -11,7 +11,6 @@ exports[`snapshot Modal renders correctly 1`] = `
   >
     <header
       className="header"
-      heading="Heading"
     >
       <p
         className="root variation_h3 skin_default margin_none"
@@ -36,7 +35,11 @@ exports[`snapshot Modal renders correctly 1`] = `
     <footer
       className="footer"
     >
-      Footer
+      <div
+        className="footer_content"
+      >
+        Footer
+      </div>
     </footer>
   </div>
 </div>
