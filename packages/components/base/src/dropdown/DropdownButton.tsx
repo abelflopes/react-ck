@@ -3,19 +3,21 @@ import { Dropdown, type DropdownProps } from "./Dropdown";
 
 export interface DropdownButtonRenderProps {
   ref: React.RefObject<HTMLButtonElement>;
-  open: boolean;
-  onOpen: () => void;
-  onClose: () => void;
+  isOpen: boolean;
+  open: () => void;
+  close: () => void;
 }
 
 export interface DropdownButtonProps extends Omit<DropdownProps, "anchorRef"> {
-  readonly renderButton: (props: DropdownButtonRenderProps) => React.ReactNode;
+  renderButton: (props: DropdownButtonRenderProps) => React.ReactNode;
+  onOpenChange?: (open: boolean) => void;
 }
 
-export const DropdownButton: React.FC<DropdownButtonProps> = ({
+export const DropdownButton: React.FC<Readonly<DropdownButtonProps>> = ({
   renderButton,
   open = false,
   onClose,
+  onOpenChange,
   children,
   ...props
 }) => {
@@ -27,18 +29,24 @@ export const DropdownButton: React.FC<DropdownButtonProps> = ({
     onClose?.();
   }, [onClose]);
 
+  const internalOnOpen = useCallback(() => {
+    setInternalOpen(true);
+  }, []);
+
   const button = useMemo(
     () =>
       renderButton({
         ref: buttonRef,
-        open: internalOpen,
-        onOpen: () => {
-          setInternalOpen(true);
-        },
-        onClose: internalOnClose,
+        isOpen: internalOpen,
+        open: internalOnOpen,
+        close: internalOnClose,
       }),
-    [renderButton, internalOpen, internalOnClose],
+    [renderButton, internalOpen, internalOnOpen, internalOnClose],
   );
+
+  useEffect(() => {
+    onOpenChange?.(internalOpen);
+  }, [internalOpen, onOpenChange]);
 
   useEffect(() => {
     setInternalOpen(open);
