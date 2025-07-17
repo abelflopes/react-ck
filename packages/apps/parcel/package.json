@@ -7,15 +7,15 @@
     "build": "parcel build ./index.html --no-cache --cache-dir ./cache"
   },
   "dependencies": {
-    "react": "^18.3.1",
+    "react": "*",
     "@react-ck/common-app": "*",
-    "react-dom": "^18.3.1"
+    "react-dom": "*"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "*",
+    "@types/react-dom": "*",
     "parcel": "^2.8.3",
-    "typescript": "^5.0.4"
+    "typescript": "*"
   }
 }

@@ -20,9 +20,9 @@
     "lint:typescript": "tsc --noEmit",
     "lint:code": "eslint . --ext ts,tsx --cache",
     "test": "npx -y npm-run-all -s test:*",
-    "test:unit": "jest --testPathPattern=\".unit.*\"",
-    "test:snapshot": "jest --testPathPattern=\".snapshot.*\"",
-    "test:snapshot:update": "jest --testPathPattern=\".snapshot.*\" -u",
+    "test:unit": "jest --testPathPatterns=\".unit.*\"",
+    "test:snapshot": "jest --testPathPatterns=\".snapshot.*\"",
+    "test:snapshot:update": "jest --testPathPatterns=\".snapshot.*\" -u",
     "clean": "rm -rf icons src/icons"
   },
   "devDependencies": {
@@ -30,18 +30,15 @@
     "@react-ck/jest-config": "^1.0.0",
     "@react-ck/typescript-config": "^1.0.0",
     "@react-ck/webpack-config": "^1.0.0",
-    "@types/react": "^18.3.11",
+    "@types/react": "*",
     "bunyan": "^1.8.15",
     "bunyan-format": "^0.2.1"
-  },
-  "peerDependencies": {
-    "react": "^18.3.1"
   },
   "dependencies": {
     "@react-ck/react-utils": "^1.6.0",
     "@react-ck/scss-utils": "^1.1.13",
     "@react-ck/theme": "^2.3.1",
-    "classnames": "^2.3.2",
+    "classnames": "^2.5.1",
     "react-icons": "^5.5.0"
   }
 }

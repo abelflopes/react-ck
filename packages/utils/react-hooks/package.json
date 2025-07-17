@@ -16,15 +16,12 @@
     "build": "tsc -p tsconfig.build.json",
     "lint:typescript": "tsc --noEmit",
     "lint:code": "eslint . --ext ts,tsx --cache",
-    "test": "jest --testPathPattern=\".unit.*\""
+    "test": "jest --testPathPatterns=\".unit.*\""
   },
   "devDependencies": {
     "@react-ck/babel-config": "^1.0.0",
     "@react-ck/jest-config": "^1.0.0",
     "@react-ck/typescript-config": "^1.0.0",
-    "@types/react": "^18.3.11"
-  },
-  "peerDependencies": {
-    "react": "^18.3.1"
+    "@types/react": "*"
   }
 }

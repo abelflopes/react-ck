@@ -7,17 +7,17 @@
     "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
-    "react": "^18.3.1",
+    "react": "*",
     "@react-ck/common-app": "*",
-    "react-dom": "^18.3.1"
+    "react-dom": "*"
   },
   "devDependencies": {
     "@react-ck/typescript-config": "^1.0.0",
     "@react-ck/webpack-config": "^1.0.0",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "*",
+    "@types/react-dom": "*",
     "parcel": "^2.8.3",
-    "typescript": "^5.0.4",
+    "typescript": "*",
     "html-webpack-plugin": "*",
     "webpack-dev-server": "*"
   }

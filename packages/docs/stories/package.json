@@ -21,16 +21,16 @@
     "change-case": "^5.1.2"
   },
   "dependencies": {
-    "@react-ck/elevation": "^1.1.19",
-    "@react-ck/icon": "^4.0.0",
-    "@react-ck/layers": "^1.4.1",
-    "@react-ck/manager": "^1.3.12",
-    "@react-ck/misc-utils": "^1.0.2",
-    "@react-ck/base-components": "^6.0.1",
-    "@react-ck/react-hooks": "^1.0.9",
-    "@react-ck/react-utils": "^1.4.0",
-    "@react-ck/scss-utils": "^1.1.13",
-    "@react-ck/snackbar-provider": "^1.0.0",
-    "@react-ck/theme": "^2.0.0"
+    "@react-ck/elevation": "^*",
+    "@react-ck/icon": "^*",
+    "@react-ck/layers": "^*",
+    "@react-ck/manager": "^*",
+    "@react-ck/misc-utils": "^*",
+    "@react-ck/base-components": "^*",
+    "@react-ck/react-hooks": "^*",
+    "@react-ck/react-utils": "^*",
+    "@react-ck/scss-utils": "^*",
+    "@react-ck/snackbar-provider": "^*",
+    "@react-ck/theme": "*"
   }
 }
