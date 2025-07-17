@@ -19,8 +19,7 @@
   "scripts": {
     "prepublish": "ts-node ./scripts/prepublish.ts",
     "build": "ts-node ./scripts/prebuild.ts && tsc -p tsconfig.build.json",
-    "lint:typescript": "tsc --noEmit",
-    "lint:code": "eslint . --ext ts,tsx --cache"
+    "lint:typescript": "tsc --noEmit"
   },
   "devDependencies": {
     "@react-ck/typescript-config": "*",

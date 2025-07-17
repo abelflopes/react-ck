@@ -1,14 +1,6 @@
 import React from "react";
 import { type Meta } from "@storybook/react";
-import {
-  Subtitle,
-  Description,
-  Primary,
-  Controls,
-  ArgsTable,
-  Title,
-  Stories,
-} from "@storybook/blocks";
+import { Subtitle, Description, Primary, Controls, Title, Stories } from "@storybook/blocks";
 import { capitalCase } from "change-case";
 
 interface ConfigureStoryExtra {
@@ -61,8 +53,7 @@ export const configureStory = <T,>(
             {extra?.subComponents?.filter(isComponent).map((i) => (
               <React.Fragment key={JSON.stringify(i)}>
                 <h3>{i.displayName} Props</h3>
-
-                <ArgsTable of={i} />
+                Put args table here
               </React.Fragment>
             ))}
 

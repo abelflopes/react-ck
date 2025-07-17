@@ -1,4 +1,7 @@
 {
   "extends": "@react-ck/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
   "include": ["./**/*"]
 }

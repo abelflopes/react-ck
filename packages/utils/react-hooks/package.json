@@ -15,7 +15,6 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "lint:typescript": "tsc --noEmit",
-    "lint:code": "eslint . --ext ts,tsx --cache",
     "test": "jest --testPathPatterns=\".unit.*\""
   },
   "devDependencies": {
