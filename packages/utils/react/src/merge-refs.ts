@@ -1,7 +1,7 @@
-import { type ForwardedRef, type MutableRefObject, type RefCallback } from "react";
+import { type ForwardedRef, type RefObject, type RefCallback } from "react";
 
 export const megeRefs =
-  <T>(refs: Array<ForwardedRef<T> | MutableRefObject<T | null> | RefCallback<T>>): RefCallback<T> =>
+  <T>(refs: Array<ForwardedRef<T> | RefObject<T | null> | RefCallback<T>>): RefCallback<T> =>
   (r) => {
     refs.forEach((thisRef) => {
       if (!thisRef) return;

@@ -60,7 +60,7 @@ export const ScrollableContainer = ({
   });
 
   const [isProcessing, setIsProcessing] = useState(true);
-  const showTimeout = useRef<ReturnType<typeof setTimeout>>();
+  const showTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const update = useCallback(() => {
     if (!rootRef.current || !enabled) return;
@@ -92,7 +92,7 @@ export const ScrollableContainer = ({
       if (enabled) {
         update();
 
-        clearTimeout(showTimeout.current);
+        if (showTimeout.current) clearTimeout(showTimeout.current);
         setIsProcessing(true);
 
         showTimeout.current = setTimeout(() => {
@@ -116,7 +116,7 @@ export const ScrollableContainer = ({
 
     return () => {
       ro.disconnect();
-      clearTimeout(showTimeout.current);
+      if (showTimeout.current) clearTimeout(showTimeout.current);
     };
   }, [enabled, update]);
 

@@ -1,7 +1,3 @@
-/* eslint-disable max-lines-per-function */
-/* eslint-disable max-lines */
-/* eslint-disable jsx-a11y/prefer-tag-over-role */
-/* eslint-disable complexity */
 import styles from "./styles/index.module.scss";
 import React, { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SelectOption } from "./SelectOption";
@@ -12,7 +8,7 @@ import classNames from "classnames";
 import { megeRefs, raf } from "@react-ck/react-utils";
 import { EmptyState } from "../empty-state";
 import { getChildrenData, simplifyString, valueAsArray } from "./utils";
-import { type SelectProps, type ChangeHandler, type SelectOptionProps } from "./types";
+import { type SelectProps, type ChangeHandler } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "../form-field";
 
@@ -90,7 +86,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
     ref,
   ) => {
     const selectRef = useRef<HTMLSelectElement | null>(null);
-    const rootElRef = useRef<HTMLDivElement>(null);
+    const rootElRef = useRef<HTMLDivElement | null>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const blurTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const [internalValue, setInternalValue] = useState(userValue ?? defaultValue);
@@ -136,7 +132,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       (value, mode) => {
         setInternalValue((v) => {
           if (!selectMultiple && mode === "select") return value;
-          else if (!selectMultiple && mode === "deselect" && allowDeselect) return undefined;
+          else if (!selectMultiple && mode === "deselect" && allowDeselect) return;
           else if (mode === "deselect" && (allowDeselect || selectMultiple) && v !== undefined)
             return valueAsArray(v).filter((i) => i !== value);
           else if (v !== undefined) return [...valueAsArray(v), value];
@@ -194,7 +190,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
     /** Compute value label to display */
 
     const displayValue = useMemo(() => {
-      if (selectedValuesList.length === 0) return undefined;
+      if (selectedValuesList.length === 0) return;
 
       const displayValue = childrenData.filter(
         (i) => i.computedValue && selectedValuesList.includes(i.computedValue),
@@ -235,7 +231,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
       setInternalValue(defaultValue);
     }, [defaultValue, internalValue]);
 
-    /**Update internal values when children selected attribute changes */
+    /** Update internal values when children selected attribute changes */
     useEffect(() => {
       childrenData.forEach(({ selectOptionProps, computedValue, isSelectOption }) => {
         const { selected } = selectOptionProps || {};
@@ -251,15 +247,17 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
      */
     useEffect(() => {
       if (!sizeSetterRef.current || fullWidth || formFieldContext?.fullWidth) return;
-      const resizeObserver = new ResizeObserver(() => {
-        if (!valueSlotRef.current || !sizeSetterRef.current) return;
+      const valueSlotRefCurrent = valueSlotRef.current;
 
-        valueSlotRef.current.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
+      const resizeObserver = new ResizeObserver(() => {
+        if (!valueSlotRefCurrent || !sizeSetterRef.current) return;
+
+        valueSlotRefCurrent.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
       });
       resizeObserver.observe(sizeSetterRef.current);
 
       return (): void => {
-        valueSlotRef.current?.style.removeProperty("width");
+        valueSlotRefCurrent?.style.removeProperty("width");
         resizeObserver.disconnect();
       };
     }, [fullWidth, formFieldContext?.fullWidth]);
@@ -381,8 +379,6 @@ const CompoundSelect: SelectWithOption = Select as SelectWithOption;
 
 CompoundSelect.Option = SelectOption;
 
-export { CompoundSelect as Select, type SelectProps, type SelectOptionProps };
-/* eslint-enable max-lines */
-/* eslint-enable jsx-a11y/prefer-tag-over-role */
-/* eslint-enable complexity */
-/* eslint-enable max-lines-per-function */
+export { CompoundSelect as Select };
+
+export { type SelectOptionProps, type SelectProps } from "./types";

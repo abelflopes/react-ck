@@ -1,8 +1,8 @@
 import { type default as React, useCallback, useEffect } from "react";
 
-export const useOnClickOutside = <T extends Array<React.RefObject<HTMLElement>>>(
+export const useOnClickOutside = (
   active: boolean,
-  refs: T,
+  refs: Array<React.RefObject<HTMLElement | null>>,
   onClickOutside: () => void,
 ): void => {
   const clickHandler = useCallback(
@@ -12,8 +12,7 @@ export const useOnClickOutside = <T extends Array<React.RefObject<HTMLElement>>>
       if (!active) return;
       else if (!(target instanceof HTMLElement) && !(target instanceof SVGElement))
         throw new Error("click outside target is not an HTMLElement");
-      else if (!refs.every((i) => Boolean(i)))
-        throw new Error("some click outside ref is not available");
+      else if (!refs.every(Boolean)) throw new Error("some click outside ref is not available");
       else if (refs.some((i) => i.current?.contains(target))) return;
 
       onClickOutside();

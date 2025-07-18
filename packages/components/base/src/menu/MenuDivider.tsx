@@ -19,7 +19,7 @@ export const MenuDivider = ({
     <span
       className={classNames(
         styles.root,
-        children && styles.text,
+        Boolean(children) && styles.text,
         styles[menuContext.variation],
         className,
       )}

@@ -24,7 +24,7 @@ export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
     () =>
       items.map((item) => ({
         item,
-        key: Math.random().toString(36).substring(2, 15),
+        key: Math.random().toString(36).slice(2, 15),
       })),
     [items],
   );
