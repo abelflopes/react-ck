@@ -30,8 +30,7 @@
     "@react-ck/webpack-config": "*",
     "@types/react": "*",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-test-renderer": "^19.1.0"
+    "react-dom": "^19.1.0"
   },
   "dependencies": {
     "@react-ck/elevation": "^1.1.19",

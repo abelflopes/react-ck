@@ -4,8 +4,15 @@ import { render } from "@testing-library/react";
 
 describe("snapshot accordion", () => {
   it("renders correctly", () => {
-    render(<div>aaa</div>);
-
-    expect(1).toBe(1);
+    const tree = render(
+      <Accordion
+        items={[
+          { header: "item 1", children: "content 1" },
+          { header: "item 2", children: "content 2" },
+        ]}
+        keepInDom
+      />,
+    ).asFragment();
+    expect(tree).toMatchSnapshot();
   });
 });

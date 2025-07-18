@@ -1,10 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { Icon } from "../src/index";
 
 describe("snapshot Icon", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Icon>x</Icon>).toJSON();
+    const tree = render(<Icon>x</Icon>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

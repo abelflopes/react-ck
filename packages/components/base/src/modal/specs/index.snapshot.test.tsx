@@ -1,19 +1,24 @@
-import React from "react";
+import React, { act } from "react";
 import { Modal } from "..";
 import { LayersProvider } from "@react-ck/layers";
-import { getActRender } from "@react-ck/jest-config";
+import { render } from "@testing-library/react";
+import "./mocks/resize-observer";
 
 describe("snapshot Modal", () => {
-  it("renders correctly", async () => {
-    const component = await getActRender(
-      <LayersProvider usePortal={false}>
-        <Modal>
-          <Modal.Header>Heading</Modal.Header>
-          <Modal.Footer>Footer</Modal.Footer>
-        </Modal>
-      </LayersProvider>,
-    );
+  it("renders correctly", () => {
+    const tree = render(null);
 
-    expect(component?.toJSON()).toMatchSnapshot();
+    act(() => {
+      tree.rerender(
+        <LayersProvider usePortal={false}>
+          <Modal>
+            <Modal.Header>Heading</Modal.Header>
+            <Modal.Footer>Footer</Modal.Footer>
+          </Modal>
+        </LayersProvider>,
+      );
+    });
+
+    expect(tree.asFragment()).toMatchSnapshot();
   });
 });

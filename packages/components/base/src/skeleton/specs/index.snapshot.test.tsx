@@ -1,6 +1,6 @@
 import React from "react";
 import { Skeleton } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Skeleton", () => {
   beforeAll(() => {
@@ -12,7 +12,7 @@ describe("snapshot Skeleton", () => {
   });
 
   it("renders correctly", () => {
-    const tree = renderer.create(<Skeleton />).toJSON();
+    const tree = render(<Skeleton />).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

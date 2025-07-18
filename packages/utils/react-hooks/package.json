@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "lint:typescript": "tsc --noEmit",
-    "test": "jest --testPathPatterns=\".unit.*\""
+    "test:unit": "jest --testPathPatterns=\".unit.*\""
   },
   "devDependencies": {
     "@react-ck/babel-config": "^1.0.0",

@@ -1,10 +1,10 @@
 import React from "react";
 import { Spinner } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Spinner", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Spinner />).toJSON();
+    const tree = render(<Spinner />).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
 import React from "react";
 import { EmptyState } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot EmptyState", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<EmptyState>EmptyState</EmptyState>).toJSON();
+    const tree = render(<EmptyState>EmptyState</EmptyState>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

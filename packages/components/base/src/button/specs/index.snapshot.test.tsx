@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Button", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Button>Button</Button>).toJSON();
+    const tree = render(<Button>Button</Button>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

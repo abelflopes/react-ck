@@ -1,11 +1,15 @@
 import React from "react";
 import { Pagination } from "../index";
-import { getActRender } from "@react-ck/jest-config";
+import { render, act } from "@testing-library/react";
 
 describe("snapshot Pagination", () => {
-  it("renders correctly", async () => {
-    const component = await getActRender(<Pagination current={10} slots={7} total={20} />);
+  it("renders correctly", () => {
+    const tree = render(null);
 
-    expect(component?.toJSON()).toMatchSnapshot();
+    act(() => {
+      tree.rerender(<Pagination current={10} slots={7} total={20} />);
+    });
+
+    expect(tree.asFragment()).toMatchSnapshot();
   });
 });

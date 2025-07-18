@@ -1,10 +1,10 @@
 import React from "react";
 import { Chip } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Chip", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Chip>Chip</Chip>).toJSON();
+    const tree = render(<Chip>Chip</Chip>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

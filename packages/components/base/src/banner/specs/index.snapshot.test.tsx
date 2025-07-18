@@ -1,10 +1,10 @@
 import React from "react";
 import { Banner } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Banner", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Banner src="some-image-url">Banner</Banner>).toJSON();
+    const tree = render(<Banner src="some-image-url">Banner</Banner>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

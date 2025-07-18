@@ -1,10 +1,10 @@
 import React from "react";
 import { Card } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Card", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Card>Card</Card>).toJSON();
+    const tree = render(<Card>Card</Card>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

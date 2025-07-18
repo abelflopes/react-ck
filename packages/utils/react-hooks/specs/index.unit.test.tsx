@@ -1,7 +1,6 @@
-import { renderHook, act } from "@testing-library/react";
+import { render, act, renderHook } from "@testing-library/react";
 import React from "react";
 import "@testing-library/jest-dom";
-import { getActRender } from "@react-ck/jest-config";
 import { mockFetch } from "./mock-fetch";
 import { useData } from "../src/index";
 
@@ -53,9 +52,17 @@ describe("unit useData hook", () => {
 
     mockFetch(data);
 
-    const component = await getActRender(<Component />, "render");
+    const tree = render(null);
 
-    expect(component?.getByText(JSON.stringify(data))).toBeInTheDocument();
+    await act(async () => {
+      tree.rerender(<Component />);
+
+      await new Promise<void>((r) => {
+        r();
+      });
+    });
+
+    expect(tree.getByText(JSON.stringify(data))).toBeInTheDocument();
   });
 
   it("displays error", async () => {
@@ -63,8 +70,16 @@ describe("unit useData hook", () => {
 
     mockFetch(new Error(errorMessage));
 
-    const component = await getActRender(<Component />, "render");
+    const tree = render(null);
 
-    expect(component?.getByText(errorMessage)).toBeInTheDocument();
+    await act(async () => {
+      tree.rerender(<Component />);
+
+      await new Promise<void>((r) => {
+        r();
+      });
+    });
+
+    expect(tree.getByText(errorMessage)).toBeInTheDocument();
   });
 });

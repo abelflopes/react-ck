@@ -14,12 +14,10 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "lint:typescript": "tsc --noEmit",
-    "test": "jest --testPathPatterns=\".unit.*\""
+    "lint:typescript": "tsc --noEmit"
   },
   "devDependencies": {
     "@react-ck/babel-config": "^1.0.0",
-    "@react-ck/jest-config": "^1.0.0",
     "@react-ck/typescript-config": "^1.0.0",
     "@types/react": "*"
   },

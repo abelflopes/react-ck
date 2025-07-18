@@ -1,11 +1,11 @@
 import React from "react";
 import { List } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot List", () => {
   it("renders correctly", () => {
     const content = "List";
-    const tree = renderer.create(<List items={[content]} />).toJSON();
+    const tree = render(<List items={[content]} />).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

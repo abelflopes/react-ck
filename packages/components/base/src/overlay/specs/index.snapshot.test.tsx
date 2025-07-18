@@ -1,10 +1,10 @@
 import React from "react";
 import { Overlay } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Overlay", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Overlay skin="dark" />).toJSON();
+    const tree = render(<Overlay skin="dark" />).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

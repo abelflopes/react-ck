@@ -1,10 +1,10 @@
 import React from "react";
 import { Input } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Input", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Input />).toJSON();
+    const tree = render(<Input />).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

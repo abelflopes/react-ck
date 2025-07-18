@@ -1,10 +1,10 @@
 import React from "react";
 import { FormField } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot FormField", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<FormField>FormField</FormField>).toJSON();
+    const tree = render(<FormField>FormField</FormField>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

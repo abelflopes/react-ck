@@ -1,10 +1,10 @@
 import React from "react";
 import { Table } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Table", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Table>Table</Table>).toJSON();
+    const tree = render(<Table>Table</Table>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

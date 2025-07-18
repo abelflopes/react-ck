@@ -1,10 +1,10 @@
 import React from "react";
 import { Badge } from "../index";
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 describe("snapshot Badge", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Badge>Badge</Badge>).toJSON();
+    const tree = render(<Badge>Badge</Badge>).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });
