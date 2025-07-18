@@ -1,0 +1,127 @@
+/** @type {import('stylelint').Config} */
+export default {
+  customSyntax: "postcss-scss",
+  extends: [
+    "stylelint-config-recommended",
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss",
+  ],
+  plugins: [
+    "stylelint-scss",
+    "stylelint-order",
+    "@stylistic/stylelint-plugin",
+    "stylelint-prettier",
+    "stylelint-no-unsupported-browser-features",
+  ],
+  rules: {
+    /**
+     * Rules
+     */
+    "at-rule-no-unknown": null,
+    "selector-no-qualifying-type": true,
+    "selector-no-vendor-prefix": true,
+    "scss/at-rule-no-unknown": true,
+    "selector-max-type": 0,
+    "property-disallowed-list": ["background", "flex", "font"],
+    "selector-class-pattern": null,
+    "selector-pseudo-class-no-unknown": [true, { ignorePseudoClasses: ["global"] }],
+    "custom-property-pattern": null,
+    /**
+     * Browser compatibility
+     */
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        ignore: ["flexbox-gap"],
+        severity: "warning",
+      },
+    ],
+    /**
+     * Formatting
+     */
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        except: ["first-nested"],
+        ignore: ["after-comment"],
+      },
+    ],
+    "function-calc-no-unspaced-operator": null,
+    "@stylistic/number-leading-zero": "always",
+    "@stylistic/string-quotes": "double",
+    "@stylistic/no-empty-first-line": true,
+    "@stylistic/max-empty-lines": 1,
+    "@stylistic/selector-max-empty-lines": 0,
+    "@stylistic/no-missing-end-of-source-newline": true,
+    "@stylistic/linebreaks": "unix", // Sync with prettier & eslint
+    "prettier/prettier": [
+      true,
+      {
+        endOfLine: "lf", // Sync with prettier & eslint
+      },
+    ],
+    "order/properties-order": [
+      "appearance",
+      "content",
+      "user-select",
+      "background-color",
+      "color",
+      "font-family",
+      "font-size",
+      "font-weight",
+      "text-align",
+      "letter-spacing",
+      "text-transform",
+      "display",
+      "vertical-align",
+      "flex-direction",
+      "position",
+      "box-sizing",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "min-width",
+      "width",
+      "max-width",
+      "min-height",
+      "height",
+      "max-height",
+      "align-items",
+      "justify-content",
+      "flex-shrink",
+      "flex-grow",
+      "padding",
+      "padding-top",
+      "padding-right",
+      "padding-bottom",
+      "padding-left",
+      "border-radius",
+      "border",
+      "border-top",
+      "border-right",
+      "border-bottom",
+      "border-left",
+      "border-radius",
+      "outline",
+      "margin",
+      "margin-top",
+      "margin-right",
+      "margin-bottom",
+      "margin-left",
+      "box-shadow",
+      "overflow",
+      "text-overflow",
+      "opacity",
+      "visibility",
+      "transform",
+      "transition",
+      "animation",
+      "z-index",
+      "cursor",
+    ],
+    "scss/map-keys-quotes": "always",
+  },
+};

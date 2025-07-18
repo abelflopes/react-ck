@@ -38,6 +38,10 @@ jobs:
         continue-on-error: true
         run: npm run lint:code
 
+      - name: Run Style Checks
+        continue-on-error: true
+        run: npm run lint:style
+
       - name: Run Typescript Checks
         run: npm run lint:typescript
 
