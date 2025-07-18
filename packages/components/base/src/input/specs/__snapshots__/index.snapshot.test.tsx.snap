@@ -1,7 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Input renders correctly 1`] = `
-<input
-  className="root standalone skin_default"
-/>
+<DocumentFragment>
+  <input
+    class="root standalone skin_default"
+  />
+</DocumentFragment>
 `;

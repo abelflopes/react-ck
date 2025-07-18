@@ -1,17 +1,19 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot FormField renders correctly 1`] = `
-<div
-  className="root skin_default variation_default"
->
+<DocumentFragment>
   <div
-    className="main_content"
+    class="root skin_default variation_default"
   >
     <div
-      className="input_wrapper"
+      class="main_content"
     >
-      FormField
+      <div
+        class="input_wrapper"
+      >
+        FormField
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

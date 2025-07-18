@@ -1,13 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot List renders correctly 1`] = `
-<ul
-  className="root bordered"
->
-  <li
-    className="item"
+<DocumentFragment>
+  <ul
+    class="root bordered"
   >
-    List
-  </li>
-</ul>
+    <li
+      class="item"
+    >
+      List
+    </li>
+  </ul>
+</DocumentFragment>
 `;

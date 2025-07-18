@@ -1,32 +1,31 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Select renders correctly 1`] = `
-<div
-  className="root skin_default standalone"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  role="button"
-  tabIndex={0}
->
+<DocumentFragment>
   <div
-    className="value_slot"
+    class="root skin_default standalone"
+    role="button"
+    tabindex="0"
   >
-    <span
-      className="placeholder"
-    />
+    <div
+      class="value_slot"
+    >
+      <span
+        class="placeholder"
+      />
+    </div>
+    <select
+      class="native_element"
+    >
+      <option />
+    </select>
+    <div
+      class="size_setter"
+    >
+      <span
+        class="placeholder"
+      />
+    </div>
   </div>
-  <select
-    className="native_element"
-    onChange={[Function]}
-  >
-    <option />
-  </select>
-  <div
-    className="size_setter"
-  >
-    <span
-      className="placeholder"
-    />
-  </div>
-</div>
+</DocumentFragment>
 `;

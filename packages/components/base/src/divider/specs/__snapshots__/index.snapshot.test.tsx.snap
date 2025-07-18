@@ -1,7 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Divider renders correctly 1`] = `
-<hr
-  className="root horizontal spacing_m"
-/>
+<DocumentFragment>
+  <hr
+    class="root horizontal spacing_m"
+  />
+</DocumentFragment>
 `;

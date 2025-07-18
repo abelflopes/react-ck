@@ -1,13 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Alert renders correctly 1`] = `
-<div
-  className="root neutral size_m"
->
+<DocumentFragment>
   <div
-    className="content"
+    class="root neutral size_m"
   >
-    Alert
+    <div
+      class="content"
+    >
+      Alert
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

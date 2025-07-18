@@ -3,7 +3,6 @@ import { Modal } from "..";
 import { LayersProvider } from "@react-ck/layers";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import "./mocks/resize-observer";
 
 describe("unit Modal", () => {
   it("renders correctly", async () => {

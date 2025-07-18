@@ -1,9 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Text renders correctly 1`] = `
-<p
-  className="root variation_p skin_default"
->
-  Text
-</p>
+<DocumentFragment>
+  <p
+    class="root variation_p skin_default"
+  >
+    Text
+  </p>
+</DocumentFragment>
 `;

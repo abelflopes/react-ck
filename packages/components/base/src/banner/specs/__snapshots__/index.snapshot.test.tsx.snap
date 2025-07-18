@@ -1,20 +1,22 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Banner renders correctly 1`] = `
-<div
-  className="root"
->
+<DocumentFragment>
   <div
-    className="root size_l spacing_x_m spacing_y_l container"
+    class="root"
   >
-    Banner
+    <div
+      class="root size_l spacing_x_m spacing_y_l container"
+    >
+      Banner
+    </div>
+    <img
+      class="image"
+      src="some-image-url"
+    />
+    <div
+      class="root dark blur"
+    />
   </div>
-  <img
-    className="image"
-    src="some-image-url"
-  />
-  <div
-    className="root dark blur"
-  />
-</div>
+</DocumentFragment>
 `;

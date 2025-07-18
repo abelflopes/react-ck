@@ -1,12 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Skeleton renders correctly 1`] = `
-<span
-  className="root variation_default"
-  style={
-    {
-      "--size-multi": 0.5,
-    }
-  }
-/>
+<DocumentFragment>
+  <span
+    class="root variation_default"
+    style="--size-multi: 0.5;"
+  />
+</DocumentFragment>
 `;

@@ -1,11 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot EmptyState renders correctly 1`] = `
-<div
-  className="root size_full skin_default"
->
-  <div>
-    EmptyState
+<DocumentFragment>
+  <div
+    class="root size_full skin_default"
+  >
+    <div>
+      EmptyState
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

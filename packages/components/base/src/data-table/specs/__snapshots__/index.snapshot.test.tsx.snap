@@ -1,26 +1,28 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot DataTable renders correctly 1`] = `
-<div
-  className="root spacing_default"
->
-  <table
-    className="table"
-    data-testid="table"
+<DocumentFragment>
+  <div
+    class="root spacing_default"
   >
-    <tbody>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          3
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <table
+      class="table"
+      data-testid="table"
+    >
+      <tbody>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
 `;

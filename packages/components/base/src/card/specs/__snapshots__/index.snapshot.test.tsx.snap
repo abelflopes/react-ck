@@ -1,13 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Card renders correctly 1`] = `
-<div
-  className="root bordered vertical spacing_m border_radius_m"
->
+<DocumentFragment>
   <div
-    className="content"
+    class="root bordered vertical spacing_m border_radius_m"
   >
-    Card
+    <div
+      class="content"
+    >
+      Card
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

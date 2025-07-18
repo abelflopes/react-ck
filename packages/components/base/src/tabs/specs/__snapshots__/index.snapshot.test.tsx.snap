@@ -1,35 +1,35 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Tabs renders correctly 1`] = `
-<div
-  className="root skin_default spacing_m"
->
+<DocumentFragment>
   <div
-    className="track"
-  >
-    <button
-      className="tab_button tab_button_active"
-      onClick={[Function]}
-      type="button"
-    >
-      item 1
-    </button>
-    <button
-      className="tab_button"
-      onClick={[Function]}
-      type="button"
-    >
-      item 2
-    </button>
-  </div>
-  <div
-    className="content_wrapper"
+    class="root skin_default spacing_m"
   >
     <div
-      className="content content_active"
+      class="track"
     >
-      content 1
+      <button
+        class="tab_button tab_button_active"
+        type="button"
+      >
+        item 1
+      </button>
+      <button
+        class="tab_button"
+        type="button"
+      >
+        item 2
+      </button>
+    </div>
+    <div
+      class="content_wrapper"
+    >
+      <div
+        class="content content_active"
+      >
+        content 1
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

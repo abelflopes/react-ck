@@ -2,7 +2,6 @@ import React, { act } from "react";
 import { Modal } from "..";
 import { LayersProvider } from "@react-ck/layers";
 import { render } from "@testing-library/react";
-import "./mocks/resize-observer";
 
 describe("snapshot Modal", () => {
   it("renders correctly", () => {

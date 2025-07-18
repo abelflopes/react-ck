@@ -1,9 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Icon renders correctly 1`] = `
-<span
-  className="root size_text skin_default"
->
-  x
-</span>
+<DocumentFragment>
+  <span
+    class="root size_text skin_default"
+  >
+    x
+  </span>
+</DocumentFragment>
 `;

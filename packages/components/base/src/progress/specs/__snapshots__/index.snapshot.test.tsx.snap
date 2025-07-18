@@ -1,9 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Progress renders correctly 1`] = `
-<progress
-  className="root"
-  max={100}
-  value={50}
-/>
+<DocumentFragment>
+  <progress
+    class="root"
+    max="100"
+    value="50"
+  />
+</DocumentFragment>
 `;

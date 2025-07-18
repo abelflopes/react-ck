@@ -11,7 +11,11 @@ describe("snapshot GridContainer", () => {
 
 describe("snapshot GridColumn", () => {
   it("renders correctly", () => {
-    const tree = render(<Grid.Column />).asFragment();
+    const tree = render(
+      <Grid>
+        <Grid.Column />
+      </Grid>,
+    ).asFragment();
     expect(tree).toMatchSnapshot();
   });
 });

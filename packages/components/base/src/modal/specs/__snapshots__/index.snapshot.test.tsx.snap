@@ -1,46 +1,40 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Modal renders correctly 1`] = `
-<div
-  className="root dark blur root"
-  onClick={[Function]}
->
+<DocumentFragment>
   <div
-    className="card size_m size_var_normal"
-    onClick={[Function]}
+    class="root dark blur root"
   >
-    <header
-      className="header"
-    >
-      <p
-        className="root variation_h3 skin_default margin_none"
-      >
-        Heading
-      </p>
-    </header>
     <div
-      className="content root"
-      onScroll={[Function]}
-      style={
-        {
-          "--scroll-x": "0px",
-          "--scroll-y": "0px",
-        }
-      }
+      class="card size_m size_var_normal"
     >
-      <div
-        className="shadow_x"
-      />
-    </div>
-    <footer
-      className="footer"
-    >
-      <div
-        className="footer_content"
+      <header
+        class="header"
       >
-        Footer
+        <p
+          class="root variation_h3 skin_default margin_none"
+        >
+          Heading
+        </p>
+      </header>
+      <div
+        class="content root"
+        style="--scroll-x: 0px; --scroll-y: 0px;"
+      >
+        <div
+          class="shadow_x"
+        />
       </div>
-    </footer>
+      <footer
+        class="footer"
+      >
+        <div
+          class="footer_content"
+        >
+          Footer
+        </div>
+      </footer>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

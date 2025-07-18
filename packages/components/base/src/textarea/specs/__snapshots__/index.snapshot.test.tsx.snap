@@ -1,7 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Textarea renders correctly 1`] = `
-<textarea
-  className="root standalone skin_default"
-/>
+<DocumentFragment>
+  <textarea
+    class="root standalone skin_default"
+  />
+</DocumentFragment>
 `;

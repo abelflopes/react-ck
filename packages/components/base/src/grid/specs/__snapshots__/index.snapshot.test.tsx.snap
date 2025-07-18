@@ -1,20 +1,22 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot GridColumn renders correctly 1`] = `
-<div
-  className="root"
-  style={
-    {
-      "--columns": 0,
-      "--index": undefined,
-      "--size": undefined,
-    }
-  }
-/>
+<DocumentFragment>
+  <div
+    class="root spacing_m align_default wrap"
+  >
+    <div
+      class="root"
+      style="--columns: 1; --index: 1;"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`snapshot GridContainer renders correctly 1`] = `
-<div
-  className="root spacing_m align_default wrap"
-/>
+<DocumentFragment>
+  <div
+    class="root spacing_m align_default wrap"
+  />
+</DocumentFragment>
 `;

@@ -1,7 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Overlay renders correctly 1`] = `
-<div
-  className="root dark blur"
-/>
+<DocumentFragment>
+  <div
+    class="root dark blur"
+  />
+</DocumentFragment>
 `;

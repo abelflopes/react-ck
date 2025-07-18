@@ -1,13 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Table renders correctly 1`] = `
-<div
-  className="root spacing_default"
->
-  <table
-    className="table"
+<DocumentFragment>
+  <div
+    class="root spacing_default"
   >
+    <table
+      class="table"
+    />
     Table
-  </table>
-</div>
+  </div>
+</DocumentFragment>
 `;

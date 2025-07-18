@@ -1,43 +1,39 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`snapshot Collapse renders correctly 1`] = `
-<details
-  className="spacing_s"
-  onToggle={[Function]}
->
-  <summary
-    className="header"
+<DocumentFragment>
+  <details
+    class="spacing_s"
   >
-    <span
-      className="root size_text skin_default"
+    <summary
+      class="header"
     >
-      <svg
-        className="icon"
-        fill="none"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 24 24"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        class="root size_text skin_default"
       >
-        <path
-          d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-    <div
-      className="header_content"
-    >
-      Header
-    </div>
-  </summary>
-  Collapse
-</details>
+        <svg
+          class="icon"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+      <div
+        class="header_content"
+      >
+        Header
+      </div>
+    </summary>
+    Collapse
+  </details>
+</DocumentFragment>
 `;

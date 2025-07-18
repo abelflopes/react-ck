@@ -5,3 +5,12 @@
 import { TextEncoder, TextDecoder } from "util";
 
 Object.assign(global, { TextDecoder, TextEncoder });
+
+Object.defineProperty(window, "ResizeObserver", {
+  writable: true,
+  value: jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  })),
+});
