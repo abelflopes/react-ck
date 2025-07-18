@@ -1,3 +1,15 @@
+## [4.1.1](https://github.com/abelflopes/react-ck/compare/v4.1.0...v4.1.1) (2025-07-18)
+
+
+### Bug Fixes
+
+* dropdown button state handling ([158ffaa](https://github.com/abelflopes/react-ck/commit/158ffaad1f06055875c1e7580e7350deda5af8e3))
+
+
+### Code Refactoring
+
+* use single eslint, align package config ([6ffb2d5](https://github.com/abelflopes/react-ck/commit/6ffb2d580612fbc8c03ba74a586809b2a170dab9))
+
 ## [4.1.0](https://github.com/abelflopes/react-ck/compare/v4.0.0...v4.1.0) (2025-07-16)
 
 
