@@ -25,7 +25,6 @@
     "type-fest": "^4.7.1"
   },
   "dependencies": {
-    "@react-ck/chip": "^1.1.2",
     "@react-ck/react-hooks": "^1.0.0",
     "@storybook/addon-a11y": "^7.5.3",
     "@storybook/addon-essentials": "^7.5.2",
