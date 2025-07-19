@@ -25,10 +25,10 @@
 
 @each $size, $props in variables.$chip-sizes {
   .size_#{$size} {
-    @include text.text-variation(map-get($props, text-variation));
+    @include text.text-variation(scss-utils.map-get-strict($props, text-variation));
 
-    height: map-get($props, height);
-    padding: 0 map-get($props, padding-x);
+    height: scss-utils.map-get-strict($props, height);
+    padding: 0 scss-utils.map-get-strict($props, padding-x);
   }
 }
 
