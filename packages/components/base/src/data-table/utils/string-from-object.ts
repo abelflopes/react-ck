@@ -10,7 +10,7 @@ export const stringFromObject = (obj: object, initialDepth = 0): string => {
 
   const res = Object.entries(obj)
     .flatMap(([key, value]) => {
-      let converted: string | undefined = undefined;
+      let converted: string | undefined;
 
       if (typeof value === "string") converted = value;
       else if (typeof value === "function") converted = String(value);

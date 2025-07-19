@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Markdown as StorybookMarkdown } from "@storybook/blocks";
+import { Markdown as StorybookMarkdown } from "@storybook/addon-docs/blocks";
 
 export interface MarkdownProps {
   children: string;
@@ -14,5 +14,9 @@ export const Markdown = ({ children }: Readonly<MarkdownProps>): React.ReactElem
     return filtered;
   }, [children]);
 
-  return <StorybookMarkdown>{computedContent}</StorybookMarkdown>;
+  return (
+    <div className="custom-markdown">
+      <StorybookMarkdown>{computedContent}</StorybookMarkdown>
+    </div>
+  );
 };

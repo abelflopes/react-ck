@@ -1,12 +1,8 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { FileUploader, type FileUploaderProps, Text } from "@react-ck/base-components/src";
-import { Icon } from "@react-ck/icon/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { FileUploader, type FileUploaderProps, Text, Manager, Icon } from "react-ck";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
-
-type Story = StoryObj<typeof FileUploader>;
 
 const meta: Meta<typeof FileUploader> = {
   title: "Form/File uploader",
@@ -52,6 +48,8 @@ const args: FileUploaderProps = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args,

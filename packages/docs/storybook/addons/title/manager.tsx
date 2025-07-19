@@ -1,10 +1,10 @@
-import { addons } from "@storybook/manager-api";
-import * as Events from "@storybook/core-events";
+import { addons } from "storybook/manager-api";
+import * as Events from "storybook/internal/core-events";
 
 addons.register("page-title", (api) => {
   api.on(Events.CURRENT_STORY_WAS_SET, () => {
     const { title } = api.getCurrentStoryData();
-    const [name] = [...title.split("/")].reverse();
+    const [name] = title.split("/").reverse();
 
     document.title = `React CK | ${name}`;
   });

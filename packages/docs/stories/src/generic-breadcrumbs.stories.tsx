@@ -1,13 +1,9 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Breadcrumbs } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Breadcrumbs, Manager, Icon } from "react-ck";
 import { faker } from "@faker-js/faker";
-import { Icon } from "@react-ck/icon/src";
 import { IconCog } from "@react-ck/icon/icons/IconCog";
-
-type Story = StoryObj<typeof Breadcrumbs>;
 
 const meta: Meta<typeof Breadcrumbs> = {
   title: "Generic/Breadcrumbs",
@@ -23,6 +19,8 @@ const meta: Meta<typeof Breadcrumbs> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

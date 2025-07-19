@@ -1,13 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { configureStory } from "@react-ck/story-config";
-import { Alert, type AlertProps, Text } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Alert, type AlertProps, Text, Manager } from "react-ck";
 import { generateAllVariations } from "./utils/generate-all-variations";
 import { sentenceCase } from "change-case";
-
-type Story = StoryObj<typeof Alert>;
 
 const meta: Meta<typeof Alert> = {
   title: "Generic/Alert",
@@ -27,6 +24,8 @@ const meta: Meta<typeof Alert> = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Basic: Story = {
   args: {
     children: faker.lorem.sentence({ min: 4, max: 10 }),
@@ -43,7 +42,7 @@ export const WithTitle: Story = {
 export const Dismissable: Story = {
   args: {
     ...WithTitle.args,
-    onDismiss: () => undefined,
+    onDismiss: () => {},
   },
 };
 

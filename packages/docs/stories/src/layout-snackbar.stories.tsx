@@ -1,16 +1,7 @@
-/* eslint-disable react/no-multi-comp -- demo page */
 import React, { useEffect, useCallback } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import {
-  Snackbar,
-  type SnackbarProps,
-  Alert,
-  Text,
-  Button,
-  Card,
-} from "@react-ck/base-components/src";
+import { Snackbar, type SnackbarProps, Alert, Text, Button, Card, Manager } from "react-ck";
 import { useSnackbar } from "@react-ck/snackbar-provider";
 
 const MyComponent = (): React.ReactElement => {
@@ -94,8 +85,6 @@ const App = (): React.ReactElement => (
   </Manager>
 );
 
-type Story = StoryObj<typeof App>;
-
 const meta: Meta<typeof App> = {
   title: "Layout/Snackbar",
   component: App,
@@ -107,5 +96,6 @@ const meta: Meta<typeof App> = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Component: Story = {};
-/* eslint-enable */

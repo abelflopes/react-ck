@@ -1,32 +1,23 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Menu, Button } from "@react-ck/base-components/src";
-import { Icon } from "@react-ck/icon/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Menu, Button, Manager, Icon } from "react-ck";
 import { faker } from "@faker-js/faker";
 import { IconUserCircle } from "@react-ck/icon/icons/IconUserCircle";
 import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
 
-type Story = StoryObj<typeof Menu>;
-
 const meta: Meta<typeof Menu> = {
   title: "Generic/Menu",
-  ...configureStory(
-    Menu,
-    {
-      decorators: [
-        (Story): React.ReactElement => (
-          <Manager>
-            <Story />
-          </Manager>
-        ),
-      ],
-    },
-    {
-      subComponents: [Menu.Item, Menu.Divider],
-    },
-  ),
+  ...configureStory(Menu, {
+    subcomponents: { "Menu.Item": Menu.Item, "Menu.Divider": Menu.Divider },
+    decorators: [
+      (Story): React.ReactElement => (
+        <Manager>
+          <Story />
+        </Manager>
+      ),
+    ],
+  }),
 };
 
 const children = (
@@ -138,6 +129,8 @@ const children = (
 );
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {

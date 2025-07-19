@@ -10,14 +10,14 @@ export const TestTable = (): React.ReactElement => {
 
       <DataTable
         skin="bordered"
-        data={Object.keys(Array.from(Array(10))).map((key) => ({
+        data={Object.keys([...Array(10)]).map((key) => ({
           "": (
             <Text margin="none" skin="bold" as="span">
               N{key}
             </Text>
           ),
           ...Object.fromEntries(
-            Object.keys(Array.from(Array(100))).map((k) => {
+            Object.keys([...Array(100)]).map((k) => {
               const n = Number(k) * Number(key);
               return [`N${k}`, n];
             }),

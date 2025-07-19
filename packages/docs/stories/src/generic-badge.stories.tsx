@@ -1,10 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Badge } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Badge>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Badge, Manager } from "react-ck";
 
 const meta: Meta<typeof Badge> = {
   title: "Generic/Badge",
@@ -21,10 +18,12 @@ const meta: Meta<typeof Badge> = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Component: Story = {
   args: {
     skin: "negative",
     title: "125 pending notifications",
-    children: "99+",
+    children: "99",
   },
 };

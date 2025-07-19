@@ -1,11 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { configureStory } from "@react-ck/story-config";
-import { ThemeProvider } from "@react-ck/theme";
-import { Layer, LayersProvider } from "@react-ck/layers";
-import { Card } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof LayersProvider>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Card, Layer, LayersProvider, ThemeProvider } from "react-ck";
 
 const meta: Meta<typeof LayersProvider> = {
   title: "Providers/layers",
@@ -41,6 +37,8 @@ const style: React.CSSProperties = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

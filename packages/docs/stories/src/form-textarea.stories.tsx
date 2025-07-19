@@ -1,12 +1,9 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
-import { configureStory } from "@react-ck/story-config";
-import { Textarea, FormField } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Textarea>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Textarea, FormField, Manager } from "react-ck";
 
 const meta: Meta<typeof Textarea> = {
   title: "Form/Textarea",
@@ -22,6 +19,8 @@ const meta: Meta<typeof Textarea> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {

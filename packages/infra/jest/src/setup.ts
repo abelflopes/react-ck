@@ -2,11 +2,11 @@
 // Included through ./config.ts
 // https://stackoverflow.com/questions/68468203/why-am-i-getting-textencoder-is-not-defined-in-jest
 
-import { TextEncoder, TextDecoder } from "util";
+import { TextEncoder, TextDecoder } from "node:util";
 
-Object.assign(global, { TextDecoder, TextEncoder });
+Object.assign(globalThis, { TextDecoder, TextEncoder });
 
-Object.defineProperty(window, "ResizeObserver", {
+Object.defineProperty(globalThis, "ResizeObserver", {
   writable: true,
   value: jest.fn().mockImplementation(() => ({
     observe: jest.fn(),

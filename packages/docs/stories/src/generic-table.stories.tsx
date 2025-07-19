@@ -1,12 +1,9 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Table } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Table, Manager } from "react-ck";
 import { faker } from "@faker-js/faker";
 import * as CC from "change-case";
-
-type Story = StoryObj<typeof Table>;
 
 const meta: Meta<typeof Table> = {
   title: "Generic/Table",
@@ -30,15 +27,15 @@ const rows = 4;
 const children = [
   <Table.Thead key="head">
     <Table.Tr>
-      {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
+      {Object.keys(Array.from({ length: columns })).map((i) => (
         <Table.Th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
       ))}
     </Table.Tr>
   </Table.Thead>,
   <Table.TBody key="body">
-    {Object.keys(Array.from(Array.from({ length: rows }))).map((r) => (
+    {Object.keys(Array.from({ length: rows })).map((r) => (
       <Table.Tr key={r}>
-        {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
+        {Object.keys(Array.from({ length: columns })).map((i) => (
           <Table.Td key={i}>{faker.company.catchPhraseDescriptor()}</Table.Td>
         ))}
       </Table.Tr>
@@ -46,7 +43,7 @@ const children = [
   </Table.TBody>,
   <Table.TFoot key="footer">
     <Table.Tr>
-      {Object.keys(Array.from(Array.from({ length: columns }))).map((i) => (
+      {Object.keys(Array.from({ length: columns })).map((i) => (
         <Table.Th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
       ))}
     </Table.Tr>
@@ -54,6 +51,8 @@ const children = [
 ];
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {

@@ -1,10 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Skeleton, Grid } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Skeleton>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Skeleton, Grid, Manager } from "react-ck";
 
 const meta: Meta<typeof Skeleton> = {
   title: "Loading/Skeleton",
@@ -23,6 +20,8 @@ const meta: Meta<typeof Skeleton> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

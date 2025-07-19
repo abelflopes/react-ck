@@ -68,8 +68,11 @@ const Flex = ({
         className: classNames(styles.root, styles[`spacing_${spacing}`], className),
         style: {
           ...style,
-          ...{ "--align": align, "--direction": direction, "--justify": justify, "--wrap": wrap },
-        },
+          "--align": align,
+          "--direction": direction,
+          "--justify": justify,
+          "--wrap": wrap,
+        } as React.CSSProperties,
       }}>
       {children}
     </PolymorphicComponent>

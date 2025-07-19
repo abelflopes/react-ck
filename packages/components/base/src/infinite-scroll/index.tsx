@@ -91,7 +91,7 @@ export const InfiniteScroll: React.FC<
 
   return (
     <>
-      {hasItemsLeft && loading ? loadingElement ?? <Skeleton /> : null}
+      {hasItemsLeft && loading ? (loadingElement ?? <Skeleton />) : null}
 
       {children ? (
         <ContentWrapper>
@@ -100,7 +100,7 @@ export const InfiniteScroll: React.FC<
         </ContentWrapper>
       ) : null}
 
-      {hasItemsLeft && loadingMore ? loadingMoreElement ?? <Spinner /> : null}
+      {hasItemsLeft && loadingMore ? (loadingMoreElement ?? <Spinner />) : null}
 
       {displayLoadMore && !infiniteScrollEnabled && hasItemsLeft ? LoadMoreButton : null}
     </>

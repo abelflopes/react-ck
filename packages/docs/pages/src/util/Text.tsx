@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Text, type TextVariation, type TextSkin } from "@react-ck/base-components/src";
+import { Text, type TextVariation, type TextSkin, Manager } from "react-ck";
 import { faker } from "@faker-js/faker";
-import { Typeset } from "@storybook/blocks";
-import { Manager } from "@react-ck/manager/src";
+import { Typeset } from "@storybook/addon-docs/blocks";
 import { ShadowDom } from "./ShadowDom";
 
 const sampleText = faker.lorem.sentence(3);
@@ -84,7 +83,7 @@ export const TextDemo = (): React.ReactNode => {
                     ref={(r) => {
                       if (!r) return;
 
-                      const { fontFamily, fontWeight, fontSize } = window.getComputedStyle(r);
+                      const { fontFamily, fontWeight, fontSize } = globalThis.getComputedStyle(r);
 
                       console.log("fontFamily", fontFamily);
 

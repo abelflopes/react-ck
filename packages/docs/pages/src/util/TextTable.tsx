@@ -1,7 +1,6 @@
 import React from "react";
-import { Text, Table } from "@react-ck/base-components/src";
+import { Text, Table, Manager } from "react-ck";
 import { faker } from "@faker-js/faker";
-import { Manager } from "@react-ck/manager/src";
 import { ShadowDom } from "./ShadowDom";
 import { skins, variations } from "./Text";
 

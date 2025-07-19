@@ -34,9 +34,9 @@ export const raf = <T>(
           // if first request two frames as requestAnimationFrame is often called immediately
           if (inden === 0) {
             animationFrames.push(
-              window.requestAnimationFrame(() => {
+              globalThis.requestAnimationFrame(() => {
                 animationFrames.push(
-                  window.requestAnimationFrame(() => {
+                  globalThis.requestAnimationFrame(() => {
                     resolve(i());
                   }),
                 );
@@ -44,7 +44,7 @@ export const raf = <T>(
             );
           } else {
             animationFrames.push(
-              window.requestAnimationFrame(() => {
+              globalThis.requestAnimationFrame(() => {
                 resolve(i());
               }),
             );

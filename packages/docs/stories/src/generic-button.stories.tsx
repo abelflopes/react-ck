@@ -1,15 +1,11 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
-import { configureStory } from "@react-ck/story-config";
-import { Button, type ButtonProps } from "@react-ck/base-components/src";
-import { Icon } from "@react-ck/icon/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Button, type ButtonProps, Manager, Icon } from "react-ck";
 import { IconClose } from "@react-ck/icon/icons/IconClose";
 import { generateAllVariations } from "./utils/generate-all-variations";
-
-type Story = StoryObj<typeof Button>;
 
 const meta: Meta<typeof Button> = {
   title: "Generic/Button",
@@ -25,6 +21,8 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {

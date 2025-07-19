@@ -27,10 +27,8 @@
     @include text.text-base;
 
     padding: theme.get-spacing(1) theme.get-spacing(2);
-    border-bottom: solid #{scss-utils.get-css-var(spacing, border)} #{scss-utils.get-css-var(
-        tabs,
-        border-color
-      )};
+    border-bottom: solid #{scss-utils.get-css-var(spacing, border)}
+      #{scss-utils.get-css-var(tabs, border-color)};
 
     &_active {
       @include scss-utils.define-css-var(tabs, border-color, theme.get-color(highlight-primary));

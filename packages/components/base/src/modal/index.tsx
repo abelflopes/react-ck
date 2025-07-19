@@ -49,7 +49,6 @@ let openModals = 0;
  * @returns a React element
  */
 
-// eslint-disable-next-line complexity
 const Modal = ({
   size = "m",
   sizeVariation = "normal",
@@ -67,9 +66,7 @@ const Modal = ({
    * modal is hidden when it's not the highest layer in the group
    */
   const [temporaryHidden, setTemporaryHidden] = useState(false);
-  const [focusWrapperElement, setFocusWrapperElement] = useState<HTMLDivElement | undefined>(
-    undefined,
-  );
+  const [focusWrapperElement, setFocusWrapperElement] = useState<HTMLDivElement | undefined>();
 
   // State child compound components' props
   const [props, setProps] = useState<ModalContextValue>({
@@ -118,8 +115,8 @@ const Modal = ({
     };
   }, [open]);
 
-  /* eslint-disable jsx-a11y/no-static-element-interactions  -- used only to stop click propagation on modal card*/
-  /* eslint-disable jsx-a11y/click-events-have-key-events  -- used only to stop click propagation on modal card*/
+  /* eslint-disable jsx-a11y/no-static-element-interactions  -- used only to stop click propagation on modal card */
+  /* eslint-disable jsx-a11y/click-events-have-key-events  -- used only to stop click propagation on modal card */
 
   if (!open) return null;
 

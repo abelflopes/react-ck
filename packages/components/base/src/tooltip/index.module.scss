@@ -30,10 +30,8 @@ $caret-spacing: theme.get-spacing(1.66);
 
   z-index: scss-utils.map-get-strict(elevation.$elevation, popup);
   box-sizing: border-box;
-  padding: #{scss-utils.get-css-var(tooltip, container-padding-y)} #{scss-utils.get-css-var(
-      tooltip,
-      container-padding-x
-    )};
+  padding: #{scss-utils.get-css-var(tooltip, container-padding-y)}
+    #{scss-utils.get-css-var(tooltip, container-padding-x)};
   animation: appear 0.2s ease forwards;
   will-change: opacity;
 

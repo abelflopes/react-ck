@@ -64,7 +64,6 @@ export interface ButtonProps<T extends HTMLTag = "button">
  * @returns React element
  */
 
-// eslint-disable-next-line complexity
 export const Button = <T extends HTMLTag>({
   as,
   type = "button",

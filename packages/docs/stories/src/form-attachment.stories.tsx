@@ -1,10 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager/src";
-import { configureStory } from "@react-ck/story-config";
-import { Attachment } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Attachment>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Attachment, Manager } from "react-ck";
 
 const meta: Meta<typeof Attachment> = {
   title: "Form/Attachment",
@@ -21,6 +18,8 @@ const meta: Meta<typeof Attachment> = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Default: Story = {
   args: {
     name: "file.pdf",
@@ -34,7 +33,7 @@ export const WithError: Story = {
     format: "pdf",
     error: "Invalid file",
     skin: "doc",
-    onRemove: () => undefined,
+    onRemove: () => {},
   },
 };
 
@@ -42,7 +41,7 @@ export const Image: Story = {
   args: {
     name: "file.jog",
     format: "jpg",
-    onRemove: () => undefined,
+    onRemove: () => {},
   },
 };
 
@@ -52,7 +51,7 @@ export const inline: Story = {
     name: "file.mp3",
     format: "pdf",
     error: "Invalid file",
-    onRemove: () => undefined,
+    onRemove: () => {},
     loading: true,
     interactive: true,
   },

@@ -14,5 +14,5 @@ export interface CardContextProps {
 
 /** Context for managing Card's image state */
 export const CardContext = React.createContext<CardContextProps>({
-  setValue: () => undefined,
+  setValue: () => {},
 });

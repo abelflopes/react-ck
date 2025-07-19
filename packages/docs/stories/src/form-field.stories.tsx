@@ -1,13 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { capitalCase } from "change-case";
-import { configureStory } from "@react-ck/story-config";
-import { FormField, Input, Checkbox, Select } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { FormField, Input, Checkbox, Select, Manager } from "react-ck";
 import { generateAllVariations } from "./utils/generate-all-variations";
-
-type Story = StoryObj<typeof FormField>;
 
 const meta: Meta<typeof FormField> = {
   title: "Form/Form Field",
@@ -23,6 +20,8 @@ const meta: Meta<typeof FormField> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Demo: Story = {
   args: {

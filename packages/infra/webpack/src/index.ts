@@ -12,6 +12,7 @@ export interface WebpackConfigOptions {
   mode?: Configuration["mode"];
   cssHashSalt?: string;
   extractCss?: boolean;
+  type?: "esm" | "cjs";
 }
 
 export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration => {
@@ -31,13 +32,13 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
 
   const extractCss = options?.extractCss ?? mode === "production";
 
+  const type = options?.type ?? "esm";
+
   return {
     mode,
     output: {
       filename: "index.js",
-      library: {
-        type: "module",
-      },
+      library: type === "esm" ? { type: "module" } : undefined,
       clean: true,
     },
     experiments: {
@@ -102,6 +103,7 @@ export const getWebpackConfig = (options?: WebpackConfigOptions): Configuration 
     externals: [
       nodeExternals({
         additionalModuleDirs: [mainNodeModulesFolder],
+        importType: type === "esm" ? "module" : undefined,
       }),
     ],
     externalsPresets: {

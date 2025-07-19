@@ -1,8 +1,5 @@
-/* eslint-disable react/jsx-max-depth -- demo */
-/* eslint-disable max-lines-per-function -- demo */
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager/src";
 import {
   FormField,
   Grid,
@@ -14,9 +11,8 @@ import {
   Radio,
   Textarea,
   Chip,
-} from "@react-ck/base-components/src";
-
-type Story = StoryObj<unknown>;
+  Manager,
+} from "react-ck";
 
 const meta: Meta = {
   title: "Test/Form",
@@ -30,6 +26,8 @@ const meta: Meta = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const demo: Story = {
   parameters: {
@@ -367,6 +365,3 @@ export const demo: Story = {
     </form>
   ),
 };
-
-/* eslint-enable react/jsx-max-depth */
-/* eslint-enable max-lines-per-function */

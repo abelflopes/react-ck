@@ -38,7 +38,7 @@ export const DataTable = <T extends TableData>({
   ...otherProps
 }: Readonly<DataTableProps<T>>): React.ReactElement => {
   const [sortMode, setSortMode] = useState<SortMode>("none");
-  const [sortKey, setSortKey] = useState<keyof T[number] | undefined>(undefined);
+  const [sortKey, setSortKey] = useState<keyof T[number] | undefined>();
 
   const keys = useMemo(
     () =>

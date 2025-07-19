@@ -19,12 +19,12 @@ export const ShadowDom = ({
 
     // Create shadow dom and container element
     const p = document.createElement("div");
-    shadowDomContainer.current.appendChild(p);
+    shadowDomContainer.current.append(p);
 
     const shadowDom = p.attachShadow({ mode: "open" });
 
     const el = document.createElement("div");
-    shadowDom.appendChild(el);
+    shadowDom.append(el);
 
     // Render demo styles in shadow dom
     const root = createRoot(el);
@@ -33,7 +33,7 @@ export const ShadowDom = ({
       // Move styles to shadow dom
       const styles = document.querySelectorAll(cssQuerySelector);
       styles.forEach((style) => {
-        shadowDom.appendChild(style);
+        shadowDom.append(style);
       });
 
       root.render(deferredChildren.current);

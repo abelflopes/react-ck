@@ -1,13 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
-import { configureStory } from "@react-ck/story-config";
-import { Input, type InputProps, FormField } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Input, type InputProps, FormField, Manager } from "react-ck";
 import { generateAllVariations } from "./utils/generate-all-variations";
-
-type Story = StoryObj<typeof Input>;
 
 const meta: Meta<typeof Input> = {
   title: "Form/Input",
@@ -26,6 +23,8 @@ const meta: Meta<typeof Input> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {

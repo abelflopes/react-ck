@@ -1,3 +1,4 @@
+import type { PackageInfo } from "@react-ck/packages-info/src/types";
 import { type UseDataReturn } from "@react-ck/react-hooks/src";
 
 export const CONFIG = {
@@ -29,13 +30,10 @@ export const CONFIG = {
   },
 };
 
-export type DocAddonKey = keyof (typeof CONFIG)["markdownAddons"];
-
-export const markdownAddons: DocAddonKey[] = ["readme", "changelog"];
-
-export type LabelAddonKey = keyof (typeof CONFIG)["labelAddons"];
-
-export const labelAddons: LabelAddonKey[] = ["version"];
-
-export type PackageInfoState = Pick<UseDataReturn, "loading" | "error"> &
-  Record<DocAddonKey | LabelAddonKey, string | undefined>;
+export type PackageInfoState = Pick<UseDataReturn, "loading" | "error"> & {
+  changelog?: string;
+  readme?: string;
+  version?: string;
+  currPackageInfo?: PackageInfo;
+  packagesInfo: PackageInfo[];
+};

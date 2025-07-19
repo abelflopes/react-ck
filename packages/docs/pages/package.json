@@ -11,6 +11,6 @@
     "@react-ck/typescript-config": "*"
   },
   "dependencies": {
-    "@react-ck/manager": "*"
+    "react-ck": "*"
   }
 }

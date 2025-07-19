@@ -64,7 +64,6 @@ export interface FormFieldProps
  * @returns React element
  */
 
-// eslint-disable-next-line complexity
 export const FormField = ({
   skin = "default",
   variation = "default",
@@ -80,7 +79,7 @@ export const FormField = ({
   reserveSpace,
   ...otherProps
 }: Readonly<FormFieldProps>): React.ReactElement => {
-  const generatedId = useMemo(() => `ff-${Math.random()}-${Number(new Date())}`, []);
+  const generatedId = useMemo(() => `ff-${Math.random()}-${Date.now()}`, []);
 
   const computedId = useMemo(() => id ?? generatedId, [id, generatedId]);
 
@@ -97,7 +96,6 @@ export const FormField = ({
   const mappedChildren = useMemo(
     () =>
       React.Children.map(children, (child, index) => {
-        // eslint-disable-next-line react/jsx-no-constructed-context-values -- not needed
         const fallbackContext: FormFieldContextProps = {
           ...context,
           id: `${context.id}-${index}`,
@@ -145,7 +143,7 @@ export const FormField = ({
       {label || reserveSpaceLabel ? (
         <Text
           className={styles.label}
-          variation={"small"}
+          variation="small"
           margin="none"
           as={label ? <label htmlFor={computedId}>{label}</label> : undefined}>
           {!label && reserveSpaceLabel ? (

@@ -2,7 +2,7 @@ import { type breakpointKeys } from "./constants";
 
 export type BaseProps = object;
 
-export type ResponsiveTarget = "viewport" | React.RefObject<HTMLElement>;
+export type ResponsiveTarget = "viewport" | React.RefObject<HTMLElement | null>;
 
 export type Breakpoint = (typeof breakpointKeys)[number];
 

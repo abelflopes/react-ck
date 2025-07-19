@@ -1,4 +1,4 @@
 {
-  "extends": "@react-ck/typescript-config/tsconfig.json",
-  "include": ["./.storybook/**/*.ts*", "./**/*"]
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
 }

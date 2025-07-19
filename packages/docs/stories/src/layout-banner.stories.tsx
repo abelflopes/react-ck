@@ -1,14 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
 import { capitalCase } from "change-case";
-import { Text, Button, Banner } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
-import { Icon } from "@react-ck/icon/src";
+import { Text, Button, Banner, Manager, Icon } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 import { IconLinkedin } from "@react-ck/icon/icons/IconLinkedin";
-
-type Story = StoryObj<typeof Banner>;
 
 const meta: Meta<typeof Banner> = {
   title: "Layout/Banner",
@@ -27,6 +23,8 @@ const meta: Meta<typeof Banner> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

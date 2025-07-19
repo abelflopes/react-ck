@@ -1,10 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Pagination } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Pagination>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Pagination, Manager } from "react-ck";
 
 const meta: Meta<typeof Pagination> = {
   title: "Generic/Pagination",
@@ -20,6 +17,8 @@ const meta: Meta<typeof Pagination> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

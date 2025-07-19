@@ -8,10 +8,10 @@ export interface UseDataReturn {
 }
 
 export const useData = (url: string): UseDataReturn => {
-  const [dataPromise, setDataPromise] = useState<UseDataReturn["dataPromise"]>(undefined);
-  const [data, setData] = useState<UseDataReturn["data"]>(undefined);
+  const [dataPromise, setDataPromise] = useState<UseDataReturn["dataPromise"]>();
+  const [data, setData] = useState<UseDataReturn["data"]>();
   const [loading, setLoading] = useState(0);
-  const [error, setError] = useState<UseDataReturn["error"]>(undefined);
+  const [error, setError] = useState<UseDataReturn["error"]>();
   const mounted = useRef(false);
   const computedLoading = useMemo(() => loading > 0, [loading]);
 

@@ -47,7 +47,7 @@ export const GridColumn = ({
     responsive,
   });
 
-  const [index, setIndex] = useState<number | undefined>(undefined);
+  const [index, setIndex] = useState<number | undefined>();
   const { columnsCount, registerColumn } = useGridContext();
 
   useEffect(() => {
@@ -60,10 +60,14 @@ export const GridColumn = ({
 
   return (
     <div
-      style={{
-        ...style,
-        ...{ "--size": size, "--columns": columnsCount, "--index": index },
-      }}
+      style={
+        {
+          ...style,
+          "--size": size,
+          "--columns": columnsCount,
+          "--index": index,
+        } as React.CSSProperties
+      }
       className={classNames(
         styles.root,
         {

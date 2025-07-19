@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Tooltip, Button } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Tooltip, Button, Manager } from "react-ck";
 import { faker } from "@faker-js/faker";
-
-type Story = StoryObj<typeof Tooltip>;
 
 const meta: Meta<typeof Tooltip> = {
   title: "Generic/Tooltip",
@@ -26,6 +23,8 @@ const meta: Meta<typeof Tooltip> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {
