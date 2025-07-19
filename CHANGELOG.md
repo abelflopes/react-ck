@@ -1,3 +1,10 @@
+## [4.1.3](https://github.com/abelflopes/react-ck/compare/v4.1.2...v4.1.3) (2025-07-19)
+
+
+### Bug Fixes
+
+* ignore form field context errors when using input inside select ([0f92fb2](https://github.com/abelflopes/react-ck/commit/0f92fb22a172eaea1e637ba14aa0a4bd3ab30c8f))
+
 ## [4.1.2](https://github.com/abelflopes/react-ck/compare/v4.1.1...v4.1.2) (2025-07-19)
 
 
