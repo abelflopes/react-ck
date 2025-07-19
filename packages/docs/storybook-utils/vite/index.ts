@@ -27,15 +27,12 @@ export const getExtendedViteConfig = async () => {
           icon: isIcon && `${source.split(i.id).join(i.path)}.js`,
         };
 
+        console.log("\nResolving", source, "from", importer);
+        console.log(resolved);
+
         if (isScss && !isDeepPath) return resolved.sass;
 
         if (isIcon) return resolved.icon;
-
-        console.log("Module resolution", {
-          source,
-          importer,
-          ...resolved,
-        });
 
         return resolved.main;
       },
