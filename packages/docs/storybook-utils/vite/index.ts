@@ -31,6 +31,12 @@ export const getExtendedViteConfig = async () => {
 
         if (isIcon) return resolved.icon;
 
+        console.log("Module resolution", {
+          source,
+          importer,
+          ...resolved,
+        });
+
         return resolved.main;
       },
     }));
