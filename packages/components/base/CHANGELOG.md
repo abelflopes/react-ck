@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@6.0.2...@react-ck/base-components@7.0.0) (2025-07-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* update to react 19
+
+### Code Refactoring
+
+* update to react 19 ([77d5939](https://github.com/abelflopes/react-ck/commit/77d5939d46da9f49870dbf08aa6890f63639c4ce))
+
+
+
 ## [6.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@6.0.1...@react-ck/base-components@6.0.2) (2025-07-18)
 
 
