@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/snackbar-provider",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

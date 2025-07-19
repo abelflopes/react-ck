@@ -1,3 +1,15 @@
+## [4.1.2](https://github.com/abelflopes/react-ck/compare/v4.1.1...v4.1.2) (2025-07-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* update to react 19
+
+### Code Refactoring
+
+* update storybook ([97a1a7f](https://github.com/abelflopes/react-ck/commit/97a1a7fd9e999dc16361ca1c245c6d86bc5415dd))
+* update to react 19 ([77d5939](https://github.com/abelflopes/react-ck/commit/77d5939d46da9f49870dbf08aa6890f63639c4ce))
+
 ## [4.1.1](https://github.com/abelflopes/react-ck/compare/v4.1.0...v4.1.1) (2025-07-18)
 
 
