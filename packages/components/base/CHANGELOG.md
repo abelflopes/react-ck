@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.0.0...@react-ck/base-components@7.0.1) (2025-07-19)
+
+
+### Bug Fixes
+
+* ignore form field context errors when using input inside select ([0f92fb2](https://github.com/abelflopes/react-ck/commit/0f92fb22a172eaea1e637ba14aa0a4bd3ab30c8f))
+
+
+
 ## [7.0.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@6.0.2...@react-ck/base-components@7.0.0) (2025-07-19)
 
 
