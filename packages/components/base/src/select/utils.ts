@@ -12,7 +12,7 @@ import {
 } from "./types";
 
 export const valueAsArray = (value: UserValue): SelectedValues =>
-  value ? (value instanceof Array ? value : [value]) : [];
+  value ? (Array.isArray(value) ? value : [value]) : [];
 
 export const getChildrenData = (children: React.ReactNode): SelectChildrenData[] =>
   getChildrenListWithoutFragments(children).map<SelectChildrenData>((i) => {
@@ -57,6 +57,7 @@ export const simplifyString = (s: string): string => {
   r = r.replace(new RegExp("œ", "gu"), "oe");
   r = r.replace(new RegExp("[ùúûü]", "gu"), "u");
   r = r.replace(new RegExp("[ýÿ]", "gu"), "y");
+
   // r = r.replace(new RegExp("\\W", "gu"), ""); // Special chars
   return r;
 };

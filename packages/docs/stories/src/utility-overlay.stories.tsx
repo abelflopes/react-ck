@@ -1,19 +1,16 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Overlay } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Overlay>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Overlay, Manager } from "react-ck";
 
 const meta: Meta<typeof Overlay> = {
   title: "Utility/Overlay",
   ...configureStory(Overlay, {
+    globals: {
+      backgrounds: { value: "medium" },
+    },
     parameters: {
       layout: "fullscreen",
-      backgrounds: {
-        default: "medium",
-      },
     },
     decorators: [
       (Story): React.ReactElement => (
@@ -30,6 +27,8 @@ const meta: Meta<typeof Overlay> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Dark: Story = {};
 

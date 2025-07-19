@@ -77,7 +77,7 @@ export const readFileList = async (
     [...fileList].map(
       async (i): Promise<FileReadResult> =>
         readFile(i, (progress) => {
-          const id = [i.name, i.lastModified, i.size, i.type].join();
+          const id = [i.name, i.lastModified, i.size, i.type].join(",");
           progressMap[id] = progress;
           getStats();
         }),

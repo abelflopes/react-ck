@@ -1,11 +1,8 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Flex } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
-
-type Story = StoryObj<typeof Flex>;
+import { Flex, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 
 const meta: Meta<typeof Flex> = {
   title: "Layout/Flex",
@@ -24,6 +21,8 @@ const meta: Meta<typeof Flex> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

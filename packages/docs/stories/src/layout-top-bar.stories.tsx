@@ -1,13 +1,8 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Breadcrumbs, TopBar } from "@react-ck/base-components";
-import { Button } from "@react-ck/base-components/src";
-import { Icon } from "@react-ck/icon/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Button, Breadcrumbs, TopBar, Manager, Icon } from "react-ck";
 import { IconChevronLeft } from "@react-ck/icon/icons/IconChevronLeft";
-
-type Story = StoryObj<typeof TopBar>;
 
 const meta: Meta<typeof TopBar> = {
   title: "Layout/Top Bar",
@@ -26,6 +21,8 @@ const meta: Meta<typeof TopBar> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

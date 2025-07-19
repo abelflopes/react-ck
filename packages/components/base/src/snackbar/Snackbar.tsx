@@ -15,7 +15,7 @@ import {
 const durationMap = new Map<NonNullable<AddOptions["duration"]>, number>([
   ["short", 3000],
   ["medium", 6000],
-  ["long", 12000],
+  ["long", 12_000],
 ]);
 
 /**

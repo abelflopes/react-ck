@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Dropdown, type DropdownProps } from "./Dropdown";
 
 export interface DropdownButtonRenderProps {
-  ref: React.RefObject<HTMLButtonElement>;
+  ref: React.RefObject<HTMLButtonElement | null>;
   isOpen: boolean;
   open: () => void;
   close: () => void;

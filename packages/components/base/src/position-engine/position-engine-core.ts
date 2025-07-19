@@ -66,7 +66,7 @@ export class PositionEngine {
   private readonly getMeasures = (): PositionEngineMeasures => {
     const rect = this.options.element.getBoundingClientRect();
 
-    const { innerHeight: windowHeight, innerWidth: windowWidth } = window;
+    const { innerHeight: windowHeight, innerWidth: windowWidth } = globalThis;
 
     return {
       rect,
@@ -259,14 +259,14 @@ export class PositionEngine {
   private readonly getAutoPosition = (): PositionEnginePosition => {
     const availableSpace = this.getAvailableSpace();
 
-    const [idealPosition] = Object.entries(availableSpace)
+    const idealPosition = Object.entries(availableSpace)
       .map(([key, value]) => ({
         // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- key is PositionEnginePosition
         position: key as PositionEnginePosition,
         area: value.x * value.y,
       }))
       .sort((a, b) => b.area - a.area)
-      .filter((i) => !this.options.exclude?.some((e) => i.position.includes(e)));
+      .find((i) => !this.options.exclude?.some((e) => i.position.includes(e)));
 
     if (!idealPosition) throw new Error("No ideal position found");
 

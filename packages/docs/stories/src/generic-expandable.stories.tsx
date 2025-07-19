@@ -1,12 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks -- exception for storybook */
 import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text, Button, Expandable, Flex, Card } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
-
-type Story = StoryObj<typeof Expandable>;
+import { Text, Button, Expandable, Flex, Card, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 
 const meta: Meta<typeof Expandable> = {
   title: "Generic/Expandable",
@@ -22,6 +19,8 @@ const meta: Meta<typeof Expandable> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   parameters: {

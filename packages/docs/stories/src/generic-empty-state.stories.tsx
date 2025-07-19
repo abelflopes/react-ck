@@ -1,10 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { EmptyState, Button } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof EmptyState>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { EmptyState, Button, Manager } from "react-ck";
 
 const meta: Meta<typeof EmptyState> = {
   title: "Generic/EmptyState",
@@ -20,6 +17,8 @@ const meta: Meta<typeof EmptyState> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {

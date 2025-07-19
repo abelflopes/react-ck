@@ -40,7 +40,7 @@ class BreakpointEvents {
   private readonly listen = (): void => {
     this.globalListeners = breakpointKeys.map((bpKey) => {
       // TODO: reduce number of listeners
-      const data = window.matchMedia(`(min-width: ${breakpoints[bpKey]}px)`);
+      const data = globalThis.matchMedia(`(min-width: ${breakpoints[bpKey]}px)`);
 
       this.handlers.forEach((handler) => {
         handler({

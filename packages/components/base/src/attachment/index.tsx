@@ -59,20 +59,23 @@ const getSkin = (filename: string): NonNullable<AttachmentProps["skin"]> => {
   const extension = filename.split(".").pop()?.toLowerCase();
 
   switch (extension) {
-    case "pdf":
+    case "pdf": {
       return "pdf";
+    }
     case "docx":
     case "doc":
-    case "txt":
+    case "txt": {
       return "doc";
+    }
     case "mp3":
     case "wav":
     case "ogg":
     case "m4a":
     case "aac":
     case "flac":
-    case "wma":
+    case "wma": {
       return "audio";
+    }
     case "jpg":
     case "jpeg":
     case "png":
@@ -80,14 +83,17 @@ const getSkin = (filename: string): NonNullable<AttachmentProps["skin"]> => {
     case "bmp":
     case "tiff":
     case "ico":
-    case "webp":
+    case "webp": {
       return "image";
+    }
     case "xls":
     case "xlsx":
-    case "csv":
+    case "csv": {
       return "spreadsheet";
-    default:
+    }
+    default: {
       return "default";
+    }
   }
 };
 

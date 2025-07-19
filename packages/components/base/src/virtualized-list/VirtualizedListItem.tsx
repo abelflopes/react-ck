@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 export interface VirtualizedListItemProps
   extends Omit<React.ComponentPropsWithoutRef<"div">, "style"> {
   defaultHeight: number;
-  observerRootRef: React.RefObject<HTMLDivElement>;
+  observerRootRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export const VirtualizedListItem: React.FC<Readonly<VirtualizedListItemProps>> = ({

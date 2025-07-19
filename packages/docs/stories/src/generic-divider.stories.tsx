@@ -1,10 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Divider } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Divider>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Divider, Manager } from "react-ck";
 
 const meta: Meta<typeof Divider> = {
   title: "Generic/Divider",
@@ -20,6 +17,8 @@ const meta: Meta<typeof Divider> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Horizontal: Story = {};
 

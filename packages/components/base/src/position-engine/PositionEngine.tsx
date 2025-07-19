@@ -12,7 +12,7 @@ export interface PositionEngineProps {
   /** Positions or alignments to exclude from auto-positioning */
   exclude?: PositionEngineCore.PositionEngineOptions["exclude"];
   /** Reference to the anchor element */
-  anchorRef: React.RefObject<HTMLElement>;
+  anchorRef: React.RefObject<HTMLElement | null>;
   /** Render function that receives position and style data */
   render: (
     ...args: Parameters<PositionEngineCore.PositionEngineOptions["onRender"]>

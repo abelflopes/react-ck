@@ -1,13 +1,9 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { ThemeProvider } from "@react-ck/theme";
 import { faker } from "@faker-js/faker";
 import { sentenceCase } from "change-case";
-import { configureStory } from "@react-ck/story-config";
-import { Button } from "@react-ck/base-components/src";
-import { defaultTheme } from "@react-ck/theme/src";
-
-type Story = StoryObj<typeof ThemeProvider>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Button, ThemeProvider, defaultTheme } from "react-ck";
 
 const meta: Meta<typeof ThemeProvider> = {
   title: "Providers/Theme",
@@ -15,6 +11,8 @@ const meta: Meta<typeof ThemeProvider> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 // TODO: add basic vs custom example with curtomizable arg tables
 

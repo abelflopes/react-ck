@@ -86,7 +86,7 @@ export const Pagination = ({
 
   return (
     <div {...otherProps} className={classNames(styles.root, className)}>
-      {Array.from(new Array(computedSlots).keys()).map((i) => (
+      {[...new Array(computedSlots).keys()].map((i) => (
         <React.Fragment key={i}>
           {isGotoFirst(i) && (
             <Button

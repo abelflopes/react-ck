@@ -39,7 +39,7 @@ export interface DropdownProps {
   /** Reference to the dropdown's root element.
    * Useful for imperative actions or measurements.
    */
-  rootRef?: React.MutableRefObject<HTMLDivElement | null>;
+  rootRef?: React.RefObject<HTMLDivElement | null>;
   /** Called when the dropdown should close (e.g., click outside) */
   onClose?: () => void;
   /** Called when the dropdown receives focus */
@@ -83,12 +83,10 @@ export const Dropdown = ({
   onFocus,
   onBlur,
   restoreFocus,
-}: Readonly<DropdownProps>): React.ReactNode => {
+}: Readonly<DropdownProps>) => {
   const containerRef = useRef<HTMLElement | null>(null);
   const [internalOpen, setInternalOpen] = useState(open);
-  const [focusWrapperElement, setFocusWrapperElement] = useState<HTMLDivElement | undefined>(
-    undefined,
-  );
+  const [focusWrapperElement, setFocusWrapperElement] = useState<HTMLDivElement | undefined>();
 
   /** Close dropdown when clicked outside  */
   useOnClickOutside(open, [anchorRef, containerRef], () => {

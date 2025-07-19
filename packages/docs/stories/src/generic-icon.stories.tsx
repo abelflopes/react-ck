@@ -1,14 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Icon } from "@react-ck/icon/src";
-import { Image } from "@react-ck/base-components";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Image, Manager, Icon } from "react-ck";
 import { IconGitHub } from "@react-ck/icon/icons/IconGitHub";
 import { IconNotification } from "@react-ck/icon/icons/IconNotification";
 import { faker } from "@faker-js/faker";
-
-type Story = StoryObj<typeof Icon>;
 
 const meta: Meta<typeof Icon> = {
   title: "Generic/Icon",
@@ -25,6 +21,8 @@ const meta: Meta<typeof Icon> = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Normal: Story = {
   args: {
     children: <IconNotification />,
@@ -32,10 +30,8 @@ export const Normal: Story = {
 };
 
 export const Inverted: Story = {
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
+  globals: {
+    backgrounds: { value: "dark" },
   },
   args: {
     skin: "inverted",

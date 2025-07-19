@@ -1,14 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { generateDescribedCombinations } from "@react-ck/misc-utils";
-import { Manager } from "@react-ck/manager";
-import { Grid, Skeleton, Menu, Text, type TextProps } from "@react-ck/base-components/src";
+import { Grid, Skeleton, Menu, Text, type TextProps, Manager, Icon } from "react-ck";
 import { capitalCase } from "change-case";
 import { faker } from "@faker-js/faker";
-import { Icon } from "@react-ck/icon/src";
 import { IconAttach } from "@react-ck/icon/icons/IconAttach";
-
-type Story = StoryObj<unknown>;
 
 const meta: Meta = {
   title: "Test/Skeleton & Text",
@@ -22,6 +18,8 @@ const meta: Meta = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const TextSkeleton: Story = {
   parameters: {
@@ -85,7 +83,7 @@ export const ListSkeleton: Story = {
     <Grid align="centered">
       <Grid.Column size={4}>
         <Menu>
-          {Object.keys(Array.from(Array(5))).map((i) => (
+          {Object.keys([...Array(5)]).map((i) => (
             <Menu.Item key={i} style={{ outline: "solid 1px green" }}>
               {faker.lorem.word()}
             </Menu.Item>
@@ -94,7 +92,7 @@ export const ListSkeleton: Story = {
       </Grid.Column>
       <Grid.Column size={4}>
         <Menu>
-          {Object.keys(Array.from(Array(5))).map((i) => (
+          {Object.keys([...Array(5)]).map((i) => (
             <Menu.Item key={i} style={{ outline: "solid 1px red" }}>
               <Skeleton variation="text" />
             </Menu.Item>
@@ -103,7 +101,7 @@ export const ListSkeleton: Story = {
       </Grid.Column>
       <Grid.Column size={4}>
         <Menu>
-          {Object.keys(Array.from(Array(5))).map((i) => (
+          {Object.keys([...Array(5)]).map((i) => (
             <Menu.Item key={i} style={{ outline: "solid 1px blue" }}>
               {faker.lorem.word()}
               &nbsp;

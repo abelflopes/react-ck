@@ -1,10 +1,5 @@
-/* eslint-disable max-lines -- exception for storybook */
-/* eslint-disable react/no-unstable-nested-components -- exception for storybook*/
-/* eslint-disable react/no-multi-comp -- exception for storybook */
-
 import React, { useCallback, useRef, useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import {
   Dialog,
   Dropdown,
@@ -18,14 +13,13 @@ import {
   Card,
   Alert,
   Snackbar,
-} from "@react-ck/base-components/src";
+  useSnackbar,
+  Manager,
+  Icon,
+} from "react-ck";
 import { faker } from "@faker-js/faker";
-import { Icon } from "@react-ck/icon";
 import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
 import { IconTrash } from "@react-ck/icon/icons/All";
-import { useSnackbar } from "@react-ck/snackbar-provider";
-
-type Story = StoryObj<unknown>;
 
 const meta: Meta = {
   title: "Test/Elevation",
@@ -377,13 +371,11 @@ const App = (): React.ReactElement => (
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const demo: Story = {
   parameters: {
     layout: "padded",
   },
   render: (): React.ReactElement => <App />,
 };
-
-/* eslint-enable react/no-multi-comp */
-/* eslint-enable react/no-unstable-nested-components */
-/* eslint-enable max-lines */

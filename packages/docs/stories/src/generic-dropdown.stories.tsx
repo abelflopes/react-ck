@@ -1,38 +1,31 @@
 import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Dropdown, DropdownButton, Button, Flex } from "@react-ck/base-components/src";
-import { Icon } from "@react-ck/icon/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Dropdown, DropdownButton, Button, Flex, Manager, Icon } from "react-ck";
 import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
-
-type Story = StoryObj<typeof Dropdown>;
 
 const meta: Meta<typeof Dropdown> = {
   title: "Generic/Dropdown",
-  ...configureStory(
-    Dropdown,
-    {
-      parameters: {
-        source: {
-          type: "code",
-        },
+  ...configureStory(Dropdown, {
+    parameters: {
+      source: {
+        type: "code",
       },
-      decorators: [
-        (Story): React.ReactElement => (
-          <Manager usePortal={false}>
-            <Story />
-          </Manager>
-        ),
-      ],
     },
-    {
-      subComponents: [DropdownButton],
-    },
-  ),
+    subcomponents: { DropdownButton },
+    decorators: [
+      (Story): React.ReactElement => (
+        <Manager usePortal={false}>
+          <Story />
+        </Manager>
+      ),
+    ],
+  }),
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

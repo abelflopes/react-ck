@@ -1,16 +1,13 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Avatar, Dock } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Avatar, Dock, Manager } from "react-ck";
 import { faker } from "@faker-js/faker";
 import { IconNotification } from "@react-ck/icon/icons/IconNotification";
 import { IconCog } from "@react-ck/icon/icons/IconCog";
 import { IconFolder } from "@react-ck/icon/icons/IconFolder";
 import { IconHome } from "@react-ck/icon/icons/IconHome";
 import { IconUserCircle } from "@react-ck/icon/icons/IconUserCircle";
-
-type Story = StoryObj<typeof Dock>;
 
 const meta: Meta<typeof Dock> = {
   title: "Layout/Dock",
@@ -48,6 +45,8 @@ const children = (
 );
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Collapsed: Story = {
   args: {

@@ -25,7 +25,6 @@ const generateCombinations = <T extends object>(propsMap: PropsMap<T>): T[] => {
   return combinations;
 };
 
-// eslint-disable-next-line complexity -- no alternative
 const describeCombination = (data: unknown): string => {
   if (data === null) return "null";
 
@@ -33,12 +32,14 @@ const describeCombination = (data: unknown): string => {
     case "boolean":
     case "string":
     case "number":
-    case "undefined":
+    case "undefined": {
       return String(data?.toString());
-    case "function":
+    }
+    case "function": {
       return data.name.length ? `${data.name}()` : "someFunction()";
-    case "object":
-      if (data instanceof Array) return JSON.stringify(data.map(describeCombination), null, 2);
+    }
+    case "object": {
+      if (Array.isArray(data)) return JSON.stringify(data.map(describeCombination), null, 2);
       return JSON.stringify(
         Object.fromEntries(
           Object.entries(data).map(([key, value]) => {
@@ -51,12 +52,15 @@ const describeCombination = (data: unknown): string => {
         null,
         2,
       );
-    case "symbol":
+    }
+    case "symbol": {
       return "data.toString()";
-    default:
+    }
+    default: {
       // eslint-disable-next-line no-console -- help debug
       console.warn("unsupported item:", data);
       throw new Error(`describeCombination - unsupported type: ${typeof data} / ${String(data)}`);
+    }
   }
 };
 

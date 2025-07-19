@@ -1,4 +1,4 @@
-import { addons } from "@storybook/manager-api";
+import { addons } from "storybook/manager-api";
 import { CONFIG } from "./util";
 import { registerManagerAddon } from "./modules/manager";
 import { registerMarkdownAddon } from "./modules/markdown";

@@ -1,69 +1,99 @@
 /* Set font family and styling for Storybook components and documentation */
-#storybook-docs .sb-story,
-.sb-main-fullscreen,
-#storybook-root {
-  font-family: Inter, serif;
-  font-optical-sizing: auto;
-  font-variation-settings: "slnt" 0;
+:root {
+  --custom-font-family: Inter, serif;
 }
 
-/* Set minimum height and background color for the custom documentation wrapper */
-.custom-docs-wrapper {
-  min-height: 100%;
-  background-color: #fff;
+body,
+.custom-markdown * {
+  font-family: var(--custom-font-family) !important;
 }
 
-/* Configure layout and spacing for documentation containers */
-.custom-docs-container,
-#storybook-docs .sbdocs-wrapper {
-  max-width: 1000px;
-  box-sizing: border-box;
-  padding: 70px 30px;
-  margin: 0 auto;
+.custom-markdown * {
+  font-family: var(--custom-font-family) !important;
 }
 
-/* Style main heading (h1) in documentation */
-.custom-docs-container > div > h1,
-#storybook-docs .sbdocs-content > h1 {
-  margin: 0 0 1em;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.1em;
+.sbdocs-wrapper .sbdocs-content > div > p,
+.sbdocs-wrapper .sbdocs-content > p {
+  font-family: var(--custom-font-family) !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
 }
 
-/* Style secondary heading (h2) in documentation */
-.custom-docs-container > div > h2,
-#storybook-docs .sbdocs-content > h2 {
-  margin: 1.5em 0 1em;
-  font-size: 24px;
-  font-weight: bold;
+.sbdocs.sbdocs-content > h1,
+.custom-markdown h1,
+h1.sbdocs-title,
+.sb-anchor > h1 {
+  font-family: var(--custom-font-family) !important;
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  margin-bottom: 1em !important;
+  margin-top: 0 !important;
+  position: relative !important;
+
+  a {
+    float: unset !important;
+    position: absolute !important;
+    right: 100% !important;
+  }
 }
 
-/* Style tertiary heading (h3) in documentation */
-.custom-docs-container > div > h3,
-#storybook-docs .sbdocs-content > h3 {
-  margin: 1.5em 0 1em;
-  font-size: 20px;
-  font-weight: bold;
+.sbdocs.sbdocs-content > h2,
+.custom-markdown h2,
+h2.sbdocs-title,
+.sb-anchor > h2 {
+  font-family: var(--custom-font-family) !important;
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  border-bottom: none !important;
 }
 
-/* Style paragraph text in documentation */
-.custom-docs-container > div > p,
-#storybook-docs .sbdocs-content > p {
-  margin: 16px 0;
-  font-size: 14px;
-  line-height: 24px;
+.sbdocs.sbdocs-content > h3,
+.custom-markdown h3,
+h3.sbdocs-title,
+.sb-anchor > h3 {
+  font-family: var(--custom-font-family) !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  border-bottom: none !important;
 }
 
-/* Remove default padding and margin from pre-formatted text blocks */
-.custom-docs-container > div > pre {
-  padding: 0;
-  margin: 0;
+.sbdocs.sbdocs-content > h4,
+.custom-markdown h4,
+h4.sbdocs-title,
+.sb-anchor > h4 {
+  background-color: lime !important;
 }
 
-/* Style blockquotes with background color and rounded corners */
-.custom-docs-container > div > blockquote,
-#storybook-docs .sbdocs-content > blockquote {
+.sbdocs.sbdocs-content > h5,
+.custom-markdown h5,
+h5.sbdocs-title,
+.sb-anchor > h5 {
+  background-color: lime !important;
+}
+
+.sbdocs.sbdocs-content > h6,
+.custom-markdown h6,
+h6.sbdocs-title,
+.sb-anchor > h6 {
+  background-color: lime !important;
+}
+
+.custom-markdown > div > pre {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  .docblock-source {
+    margin: 0 !important;
+  }
+}
+
+.custom-markdown > div > blockquote {
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
@@ -71,10 +101,9 @@
   background: #fff9e9;
   font-size: 14px;
   font-style: italic;
-}
+  margin-bottom: -14px;
 
-/* Remove margin from paragraphs inside blockquotes */
-.custom-docs-container > div > blockquote p,
-#storybook-docs .sbdocs-content > blockquote p {
-  margin: 0;
+  p {
+    margin: 0 !important;
+  }
 }

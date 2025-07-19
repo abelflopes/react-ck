@@ -1,0 +1,17 @@
+{
+  "name": "@react-ck/packages-info",
+  "private": true,
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelflopes/react-ck.git"
+  },
+  "scripts": {
+    "build": "npx --yes ts-node-dev --clear ./src/build.ts",
+    "lint:typescript": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@react-ck/typescript-config": "^1.0.0",
+    "type-fest": "^0.20.2"
+  }
+}

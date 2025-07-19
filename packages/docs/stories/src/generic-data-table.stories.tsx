@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Chip, DataTable, Input, Text, Alert } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
-
-type Story = StoryObj<typeof DataTable>;
+import { Chip, DataTable, Input, Text, Alert, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 
 const meta: Meta<typeof DataTable> = {
-  title: "Generic/DataTable",
+  title: "Generic/Data Table",
   ...configureStory(DataTable, {
     parameters: {
       layout: "padded",
@@ -29,11 +26,13 @@ const col3 = faker.lorem.word();
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Normal: Story = {
   args: {
     skin: "bordered",
     headers: { [col1]: faker.lorem.word(), [col2]: faker.lorem.word(), [col3]: faker.lorem.word() },
-    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
+    data: Object.keys(Array.from({ length: 10 })).map(() => ({
       [col1]: faker.date.future().toLocaleDateString(),
       [col2]: faker.company.buzzNoun(),
       [col3]: <Chip>{faker.commerce.price()}</Chip>,
@@ -45,7 +44,7 @@ export const AutoHeaders: Story = {
   args: {
     skin: "bordered",
     autoHeaders: true,
-    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => ({
+    data: Object.keys(Array.from({ length: 10 })).map(() => ({
       "some_column": faker.date.future().toLocaleDateString(),
       "otherColumn": faker.company.buzzNoun(),
       "last-column": <Chip>{faker.commerce.price()}</Chip>,
@@ -58,7 +57,7 @@ export const Sortable: Story = {
     skin: "bordered",
     autoHeaders: true,
     sortable: true,
-    data: Object.keys(Array.from(Array.from({ length: 10 }))).map(() => {
+    data: Object.keys(Array.from({ length: 10 })).map(() => {
       const date = new Date(faker.date.future()).toString();
 
       return {

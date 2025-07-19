@@ -1,10 +1,7 @@
 import React, { useRef } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Popover, Button } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Popover>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Popover, Button, Manager } from "react-ck";
 
 const meta: Meta<typeof Popover> = {
   title: "Generic/Popover",
@@ -25,6 +22,8 @@ const meta: Meta<typeof Popover> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

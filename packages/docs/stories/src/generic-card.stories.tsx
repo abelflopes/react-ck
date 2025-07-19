@@ -1,34 +1,28 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text, type CardProps, Card } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
+import { Text, type CardProps, Card, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 import { generateAllVariations } from "./utils/generate-all-variations";
 import { sentenceCase } from "change-case";
 
-type Story = StoryObj<typeof Card>;
-
 const meta: Meta<typeof Card> = {
   title: "Generic/Card",
-  ...configureStory(
-    Card,
-    {
-      decorators: [
-        (Story): React.ReactElement => (
-          <Manager>
-            <Story />
-          </Manager>
-        ),
-      ],
-    },
-    {
-      subComponents: [Card.Image],
-    },
-  ),
+  ...configureStory(Card, {
+    decorators: [
+      (Story): React.ReactElement => (
+        <Manager>
+          <Story />
+        </Manager>
+      ),
+    ],
+    subcomponents: { "Card.Image": Card.Image },
+  }),
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {

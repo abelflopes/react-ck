@@ -1,6 +1,6 @@
 import styles from "./styles/index.module.scss";
 /// React
-import React, { type ReactHTML, useMemo } from "react";
+import React, { useMemo } from "react";
 // Utils
 import classNames from "classnames";
 import { useThemeContext } from "@react-ck/theme";
@@ -29,7 +29,7 @@ export type TextSkin =
 /** Typography variations defining the semantic level and visual hierarchy */
 export type TextVariation =
   | "banner"
-  | keyof Pick<ReactHTML, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">
+  | Extract<HTMLTag, "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p">
   | "small"
   | "extra-small";
 
@@ -77,7 +77,7 @@ export const Text = <T extends HTMLTag>({
 }: Readonly<TextProps<T>>): React.ReactElement => {
   const theme = useThemeContext();
 
-  const computedSkins = useMemo(() => (Array.isArray(skin) ? skin : skin && [skin]), [skin]);
+  const computedSkins = useMemo(() => (Array.isArray(skin) ? skin : [skin]), [skin]);
 
   const computedClassNames = useMemo(
     () =>
@@ -94,19 +94,22 @@ export const Text = <T extends HTMLTag>({
     [variation, margin, computedSkins, theme.inverted, className],
   );
 
-  const defaultTag = useMemo<keyof ReactHTML>(() => {
-    let value: keyof ReactHTML | undefined = undefined;
+  const defaultTag = useMemo<HTMLTag>(() => {
+    let value: HTMLTag | undefined;
 
     switch (variation) {
-      case "banner":
+      case "banner": {
         value = "h1";
         break;
+      }
       case "small":
-      case "extra-small":
+      case "extra-small": {
         value = "p";
         break;
-      default:
+      }
+      default: {
         value = variation;
+      }
     }
 
     return value;

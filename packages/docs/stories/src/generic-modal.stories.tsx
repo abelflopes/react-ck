@@ -1,18 +1,8 @@
 import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import {
-  Text,
-  Button,
-  Container,
-  Image,
-  Modal,
-  type ModalProps,
-} from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
-
-type Story = StoryObj<typeof Modal>;
+import { Text, Button, Container, Image, Modal, type ModalProps, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 
 const meta: Meta<typeof Modal> = {
   title: "Generic/Modal",
@@ -60,6 +50,8 @@ const render = (props: ModalProps): React.ReactElement => {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

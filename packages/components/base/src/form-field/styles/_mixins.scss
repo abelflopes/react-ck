@@ -4,7 +4,8 @@
 @use "variables";
 
 @mixin wrapper {
-  border: solid #{scss-utils.get-css-var(form-field, border-color)} variables.$form-field-border-width;
+  border: solid #{scss-utils.get-css-var(form-field, border-color)}
+    variables.$form-field-border-width;
   border-radius: theme.get-spacing(1);
   background: scss-utils.get-css-var(form-field, background-color);
 }

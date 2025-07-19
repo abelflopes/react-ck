@@ -1,33 +1,25 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Grid, Card, Text, type GridColumnProps } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
+import { Grid, Card, Text, type GridColumnProps, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 import { sentenceCase } from "change-case";
-
-type Story = StoryObj<typeof Grid>;
 
 const meta: Meta<typeof Grid> = {
   title: "Layout/Grid",
-  ...configureStory(
-    Grid,
-    {
-      parameters: {
-        layout: "padded",
-      },
-      decorators: [
-        (Story): React.ReactElement => (
-          <Manager>
-            <Story />
-          </Manager>
-        ),
-      ],
+  ...configureStory(Grid, {
+    parameters: {
+      layout: "padded",
     },
-    {
-      subComponents: [Grid.Column],
-    },
-  ),
+    subcomponents: { "Grid.Column": Grid.Column },
+    decorators: [
+      (Story): React.ReactElement => (
+        <Manager>
+          <Story />
+        </Manager>
+      ),
+    ],
+  }),
 };
 
 const cols: GridColumnProps[] = [
@@ -75,6 +67,8 @@ const cols: GridColumnProps[] = [
 ];
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

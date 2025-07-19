@@ -42,10 +42,8 @@ export const Skeleton = <T extends HTMLTag>({
         className: classNames(styles.root, styles[`variation_${variation}`], className),
         style: {
           ...style,
-          ...{
-            "--size-multi": sizeMulti,
-          },
-        },
+          "--size-multi": sizeMulti,
+        } as React.CSSProperties,
       }}>
       {children}
     </PolymorphicComponent>

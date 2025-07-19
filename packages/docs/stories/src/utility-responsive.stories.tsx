@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
+import { configureStory } from "@react-ck/storybook-utils";
 import {
   ResponsiveFragment,
   useBreakpoints,
@@ -10,10 +9,9 @@ import {
   Snippet,
   Text,
   Grid,
-} from "@react-ck/base-components/src";
+  Manager,
+} from "react-ck";
 import { faker } from "@faker-js/faker";
-
-type Story = StoryObj<typeof ResponsiveFragment>;
 
 const meta: Meta<typeof ResponsiveFragment> = {
   title: "Utility/Responsive",
@@ -34,6 +32,8 @@ const meta: Meta<typeof ResponsiveFragment> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   decorators: [

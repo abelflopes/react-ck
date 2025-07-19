@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { generateDescribedCombinations, type PropsMap } from "@react-ck/misc-utils";
 import {
   Grid,
   type GridColumnProps,
@@ -7,7 +6,9 @@ import {
   Snippet,
   Button,
   Divider,
-} from "@react-ck/base-components/src";
+  generateDescribedCombinations,
+  type PropsMap,
+} from "react-ck";
 
 export const generateAllVariations = <T extends object>(
   render: (props: T) => React.ReactNode,

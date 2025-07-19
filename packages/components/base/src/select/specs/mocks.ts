@@ -1,5 +1,5 @@
 export const mockResizeObserver = (): void => {
-  Object.defineProperty(window, "ResizeObserver", {
+  Object.defineProperty(globalThis, "ResizeObserver", {
     writable: true,
     value: class {
       public observe = (): void => undefined;

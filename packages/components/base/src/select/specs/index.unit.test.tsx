@@ -15,7 +15,7 @@ describe("unit Select", () => {
     mockResizeObserver();
 
     // make RAF synchronous so that position engine renders immediately
-    Object.defineProperty(window, "requestAnimationFrame", {
+    Object.defineProperty(globalThis, "requestAnimationFrame", {
       writable: true,
       value: (cb: () => void) => {
         cb();

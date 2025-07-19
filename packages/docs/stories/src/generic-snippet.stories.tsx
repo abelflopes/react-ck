@@ -1,12 +1,9 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { configureStory } from "@react-ck/story-config";
-import { Snippet, Button } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Snippet, Button, Manager } from "react-ck";
 import { IconTrash } from "@react-ck/icon/icons/All";
-
-type Story = StoryObj<typeof Snippet>;
 
 const meta: Meta<typeof Snippet> = {
   title: "Generic/Snippet",
@@ -25,6 +22,8 @@ const meta: Meta<typeof Snippet> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 const sampleCode = JSON.stringify(
   {

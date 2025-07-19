@@ -1,11 +1,8 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { OverlaySpinner, Text } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { OverlaySpinner, Text, Manager } from "react-ck";
 import { faker } from "@faker-js/faker";
-
-type Story = StoryObj<typeof OverlaySpinner>;
 
 const meta: Meta<typeof OverlaySpinner> = {
   title: "Loading/Overlay Spinner",
@@ -29,6 +26,8 @@ const meta: Meta<typeof OverlaySpinner> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
   args: {

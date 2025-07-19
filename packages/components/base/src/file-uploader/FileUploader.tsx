@@ -1,4 +1,3 @@
-/* eslint-disable complexity -- TODO: refactor */
 import styles from "./styles/index.module.scss";
 import React, { useCallback, useMemo, useRef, forwardRef, useEffect } from "react";
 import classNames from "classnames";
@@ -164,5 +163,3 @@ const FileUploader = forwardRef<HTMLInputElement, Readonly<FileUploaderProps>>(
 FileUploader.displayName = "FileUploader";
 
 export { FileUploader, type FileUploaderProps };
-
-/* eslint-enable complexity */

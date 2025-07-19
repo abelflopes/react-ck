@@ -2,7 +2,7 @@
   "extends": "@react-ck/typescript-config/tsconfig.build.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "module": "UMD"
+    "module": "CommonJS"
   },
   "include": ["./src/index.ts", "./src/setup.ts"]
 }

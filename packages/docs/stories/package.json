@@ -15,21 +15,12 @@
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",
     "@react-ck/misc-utils": "*",
-    "@react-ck/story-config": "^1.0.0",
+    "@react-ck/storybook-utils": "*",
     "@react-ck/typescript-config": "^1.0.0",
     "change-case": "^5.1.2"
   },
   "dependencies": {
-    "@react-ck/elevation": "^*",
     "@react-ck/icon": "^*",
-    "@react-ck/layers": "^*",
-    "@react-ck/manager": "^*",
-    "@react-ck/misc-utils": "^*",
-    "@react-ck/base-components": "^*",
-    "@react-ck/react-hooks": "^*",
-    "@react-ck/react-utils": "^*",
-    "@react-ck/scss-utils": "^*",
-    "@react-ck/snackbar-provider": "^*",
-    "@react-ck/theme": "*"
+    "react-ck": "*"
   }
 }

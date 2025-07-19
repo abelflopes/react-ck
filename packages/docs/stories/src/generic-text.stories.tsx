@@ -1,13 +1,10 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { configureStory } from "@react-ck/story-config";
-import { Card, Text, type TextProps } from "@react-ck/base-components/src";
+import { configureStory } from "@react-ck/storybook-utils";
+import { Card, Text, type TextProps, Manager } from "react-ck";
 import { generateAllVariations } from "./utils/generate-all-variations";
 import { sentenceCase } from "change-case";
-
-type Story = StoryObj<typeof Text>;
 
 const meta: Meta<typeof Text> = {
   title: "Generic/Text",
@@ -24,6 +21,8 @@ const meta: Meta<typeof Text> = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Component: Story = {
   args: {
     children: faker.lorem.sentence(),
@@ -31,10 +30,8 @@ export const Component: Story = {
 };
 
 export const Inverted: Story = {
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
+  globals: {
+    backgrounds: { value: "dark" },
   },
   args: {
     skin: "inverted",

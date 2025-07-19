@@ -1,31 +1,25 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Chat, EmptyState } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Chat>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Chat, EmptyState, Manager } from "react-ck";
 
 const meta: Meta<typeof Chat> = {
   title: "Chat/Chat",
-  ...configureStory(
-    Chat,
-    {
-      decorators: [
-        (Story): React.ReactElement => (
-          <Manager>
-            <Story />
-          </Manager>
-        ),
-      ],
-    },
-    {
-      subComponents: [Chat.Message],
-    },
-  ),
+  ...configureStory(Chat, {
+    decorators: [
+      (Story): React.ReactElement => (
+        <Manager>
+          <Story />
+        </Manager>
+      ),
+    ],
+    subcomponents: { "Chat.Message": Chat.Message },
+  }),
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {
@@ -34,7 +28,7 @@ export const Normal: Story = {
       type: "loading",
       description: "Someone is writing...",
     },
-    onSend: () => undefined,
+    onSend: () => {},
     children: (
       <>
         <Chat.Message senderName="Leslie" type="sent">
@@ -58,7 +52,7 @@ export const Error: Story = {
       type: "error",
       description: "The server is not responding. Please try again later.",
     },
-    onSend: () => undefined,
+    onSend: () => {},
     children: (
       <>
         <Chat.Message senderName="Leslie" type="sent">
@@ -78,7 +72,7 @@ export const Error: Story = {
 export const Empty: Story = {
   args: {
     placeholder: "Ask me anything...",
-    onSend: () => undefined,
+    onSend: () => {},
     children: <EmptyState>The chat is empty, send the first message</EmptyState>,
   },
 };

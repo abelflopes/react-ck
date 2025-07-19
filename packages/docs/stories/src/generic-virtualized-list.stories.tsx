@@ -1,11 +1,8 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text, VirtualizedList } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
-
-type Story = StoryObj<typeof VirtualizedList>;
+import { Text, VirtualizedList, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 
 const meta: Meta<typeof VirtualizedList> = {
   title: "Generic/VirtualizedList",
@@ -21,6 +18,8 @@ const meta: Meta<typeof VirtualizedList> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 const items = Array.from({ length: 50 }, (_, index) => (
   <Text key={index}>

@@ -1,12 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks -- exception for storybook */
 import React, { useState, useCallback, useEffect } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
 import { faker } from "@faker-js/faker";
-import { Text, InfiniteScroll, Flex, Card, Skeleton, Spinner } from "@react-ck/base-components/src";
-import { configureStory } from "@react-ck/story-config";
-
-type Story = StoryObj<typeof InfiniteScroll>;
+import { Text, InfiniteScroll, Flex, Card, Skeleton, Spinner, Manager } from "react-ck";
+import { configureStory } from "@react-ck/storybook-utils";
 
 const meta: Meta<typeof InfiniteScroll> = {
   title: "Generic/InfiniteScroll",
@@ -22,6 +19,8 @@ const meta: Meta<typeof InfiniteScroll> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 // Helper function to generate mock data
 const generateMockItems = (

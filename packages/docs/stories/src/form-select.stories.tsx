@@ -1,10 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager";
-import { configureStory } from "@react-ck/story-config";
-import { Select, type SelectProps, FormField, Chip } from "@react-ck/base-components/src";
-
-type Story = StoryObj<typeof Select>;
+import { configureStory } from "@react-ck/storybook-utils";
+import { Select, type SelectProps, FormField, Chip, Manager } from "react-ck";
 
 const meta: Meta<typeof Select> = {
   title: "Form/Select",
@@ -46,6 +43,8 @@ const args: SelectProps = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args,

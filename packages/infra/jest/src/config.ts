@@ -1,5 +1,5 @@
 import { type Config } from "jest";
-import path from "path";
+import path from "node:path";
 
 export const config: Config = {
   testEnvironment: "jsdom",

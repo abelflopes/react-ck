@@ -1,9 +1,6 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Manager } from "@react-ck/manager/src";
-import { FormField, Grid, Input, Button, Select, Chip } from "@react-ck/base-components/src";
-
-type Story = StoryObj<unknown>;
+import { FormField, Grid, Input, Button, Select, Chip, Manager } from "react-ck";
 
 const meta: Meta = {
   title: "Test/Form Alignment",
@@ -18,12 +15,13 @@ const meta: Meta = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const demo: Story = {
   parameters: {
     layout: "padded",
   },
 
-  // eslint-disable-next-line max-lines-per-function
   render: (): React.ReactElement => (
     <form>
       <div

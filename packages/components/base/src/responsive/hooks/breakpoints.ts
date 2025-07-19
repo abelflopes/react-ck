@@ -32,9 +32,7 @@ export const useBreakpoints = (
   const computedActive = useMemo(() => data?.active ?? true, [data?.active]);
   const computedTarget = useMemo(() => data?.target ?? "viewport", [data?.target]);
 
-  const [breakpointsData, setBreakpointsData] = useState<EnabledBreakpointsMapping | undefined>(
-    undefined,
-  );
+  const [breakpointsData, setBreakpointsData] = useState<EnabledBreakpointsMapping | undefined>();
 
   const activeBreakpoint = useMemo<Breakpoint | undefined>(() => {
     if (!computedActive || !breakpointsData) return;

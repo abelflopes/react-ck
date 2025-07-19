@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useRef, useState } from "react";
 import styles from "./styles/container.module.scss";
 import classNames from "classnames";
 import { GridContext, type GridContextProps } from "./context";
-import { GridColumn, type GridColumnProps } from "./Column";
+import { GridColumn } from "./Column";
 import { useResponsiveProps, type ResponsiveProps } from "../responsive";
 
 /**
@@ -97,4 +97,6 @@ const Grid = ({ responsive, ...baseProps }: Readonly<GridProps>): React.ReactEle
 
 Grid.Column = GridColumn;
 
-export { Grid, type GridProps, type GridColumnProps };
+export { Grid, type GridProps };
+
+export { type GridColumnProps } from "./Column";
