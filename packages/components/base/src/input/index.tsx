@@ -20,6 +20,8 @@ interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
   skin?: FormFieldContextProps["skin"];
   /** Whether the input should take the full width of the parent container. */
   fullWidth?: boolean;
+  /** Whether to ignore context errors. */
+  ignoreContextErrors?: boolean;
 }
 
 /**
@@ -42,7 +44,7 @@ interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
  */
 
 const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
-  ({ skin, fullWidth, id, className, disabled, ...props }, ref) => {
+  ({ skin, fullWidth, id, className, disabled, ignoreContextErrors, ...props }, ref) => {
     const formFieldContext = useFormFieldContext();
 
     const computedSkin = useMemo(
@@ -61,14 +63,14 @@ const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
     // Validate usage inside form field
     useEffect(() => {
       // Is not inside form field, skip
-      if (formFieldContext === undefined) return;
+      if (formFieldContext === undefined || ignoreContextErrors) return;
 
       // Is inside form field
       if (skin)
         throw new Error("When using input inside form field, define skin on the form field");
       else if (id)
         throw new Error("When using input inside form field, define id on the form field");
-    }, [formFieldContext, id, skin]);
+    }, [formFieldContext, id, skin, ignoreContextErrors]);
 
     return (
       <input

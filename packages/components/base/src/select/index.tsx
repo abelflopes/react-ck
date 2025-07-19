@@ -346,6 +346,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
                   onChange={(e) => {
                     setSearch(e.target.value);
                   }}
+                  ignoreContextErrors
                 />
                 <Menu.Divider />
               </>
