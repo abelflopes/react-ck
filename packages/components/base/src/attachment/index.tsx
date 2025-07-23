@@ -33,7 +33,7 @@ export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElemen
   /** File format or extension */
   format: string;
   /** Callback for removing the attachment */
-  onRemove?: () => void;
+  onRemove?: React.MouseEventHandler<HTMLButtonElement>;
   /** Error message to display below the attachment */
   error?: React.ReactNode;
   /** Whether to show the loading spinner */
@@ -44,6 +44,8 @@ export interface AttachmentProps extends Omit<React.HTMLAttributes<HTMLDivElemen
   disabled?: boolean;
   /** Whether the attachment is interactive */
   interactive?: boolean;
+  /** Actions to display in the attachment */
+  actions?: React.ReactNode;
 }
 
 const iconMap: { [key in NonNullable<AttachmentProps["skin"]>]: NonNullable<React.ReactNode> } = {
@@ -128,6 +130,7 @@ export const Attachment = ({
   selected,
   disabled,
   interactive,
+  actions,
   ...otherProps
 }: Readonly<AttachmentProps>): React.ReactElement => (
   <div
@@ -135,7 +138,6 @@ export const Attachment = ({
     {...otherProps}
     className={classNames(
       styles.root,
-      onRemove && styles.removable,
       fullWidth && styles.full_width,
       styles[`size_${size}`],
       selected && styles.selected,
@@ -161,20 +163,24 @@ export const Attachment = ({
 
       {error ? <span className={styles.error}>{error}</span> : null}
     </div>
+    {(onRemove || actions) && (
+      <div className={styles.actions}>
+        {actions}
 
-    {onRemove ? (
-      <Button
-        className={styles.close}
-        size="xs"
-        skin="secondary"
-        skinVariation="ghost"
-        icon={
-          <Icon size="m">
-            <IconClose />
-          </Icon>
-        }
-        onClick={onRemove}
-      />
-    ) : null}
+        {onRemove ? (
+          <Button
+            size="xs"
+            skin="secondary"
+            skinVariation="ghost"
+            icon={
+              <Icon size="m">
+                <IconClose />
+              </Icon>
+            }
+            onClick={onRemove}
+          />
+        ) : null}
+      </div>
+    )}
   </div>
 );

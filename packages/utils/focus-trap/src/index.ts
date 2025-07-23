@@ -45,11 +45,11 @@ export class FocusTrap {
 
     const focusableElements = [
       ...(this.options?.additionalElements || []),
-      ...Array.from(this.container.querySelectorAll<HTMLElement>(focusableSelectors.join(","))),
+      ...this.container.querySelectorAll<HTMLElement>(focusableSelectors.join(",")),
     ].filter((el) => el.checkVisibility() && !el.hasAttribute("disabled") && el.tabIndex !== -1);
 
     const firstFocusableElement = focusableElements[0] || null;
-    const lastFocusableElement = focusableElements[focusableElements.length - 1] || null;
+    const lastFocusableElement = focusableElements.at(-1) || null;
 
     return {
       focusableElements,
@@ -95,7 +95,7 @@ export class FocusTrap {
 
     return (
       this.container.contains(document.activeElement) ||
-      focusableElements.some((el) => el === document.activeElement)
+      focusableElements.includes(document.activeElement)
     );
   };
 
@@ -143,7 +143,7 @@ export class FocusTrap {
     // Add this trap to the stack
     FocusTrap.trapStack.push(this);
 
-    window.addEventListener("keydown", this.handleKeyDown);
+    globalThis.addEventListener("keydown", this.handleKeyDown);
 
     raf(() => {
       this.moveFocusToContainer();
@@ -156,7 +156,7 @@ export class FocusTrap {
    * If there was another focus trap active before this one, it will be reactivated.
    */
   public deactivate(): void {
-    window.removeEventListener("keydown", this.handleKeyDown);
+    globalThis.removeEventListener("keydown", this.handleKeyDown);
 
     // Remove this trap from the stack
     const index = FocusTrap.trapStack.indexOf(this);

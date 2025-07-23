@@ -1,11 +1,15 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { configureStory } from "@react-ck/storybook-utils";
-import { Attachment, Manager } from "react-ck";
+import { Attachment, Button, Manager } from "react-ck";
+import { generateAllVariations } from "./utils/generate-all-variations";
 
 const meta: Meta<typeof Attachment> = {
   title: "Form/Attachment",
   ...configureStory(Attachment, {
+    parameters: {
+      layout: "padded",
+    },
     decorators: [
       (Story): React.ReactElement => (
         <Manager>
@@ -24,6 +28,21 @@ export const Default: Story = {
   args: {
     name: "file.pdf",
     format: "pdf",
+  },
+};
+
+export const LargeWithActions: Story = {
+  args: {
+    name: "file.pdf",
+    format: "pdf",
+    skin: "doc",
+    size: "l",
+    onRemove: () => {},
+    actions: (
+      <Button size="xs" skinVariation="ghost">
+        action
+      </Button>
+    ),
   },
 };
 
@@ -54,5 +73,41 @@ export const inline: Story = {
     onRemove: () => {},
     loading: true,
     interactive: true,
+    actions: (
+      <Button size="xs" skinVariation="ghost">
+        action
+      </Button>
+    ),
   },
+};
+
+export const AllVariations: Story = {
+  decorators: [
+    (): React.ReactElement => (
+      <>
+        {generateAllVariations(Attachment, {
+          size: ["s", "m", "l"],
+          name: ["file"],
+          format: ["file"],
+          error: [undefined, "Invalid file"],
+          onRemove: [undefined, () => {}],
+          loading: [true, false],
+          interactive: [true, false],
+          actions: [
+            undefined,
+            <Button size="xs" skinVariation="ghost" key={0}>
+              action
+            </Button>,
+          ],
+        })}
+
+        {generateAllVariations(Attachment, {
+          size: ["s", "m", "l"],
+          skin: ["default", "pdf", "doc", "audio", "image", "spreadsheet"],
+          name: ["file"],
+          format: ["file"],
+        })}
+      </>
+    ),
+  ],
 };

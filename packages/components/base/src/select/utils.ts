@@ -46,17 +46,17 @@ export const getChildrenData = (children: React.ReactNode): SelectChildrenData[]
 
 export const simplifyString = (s: string): string => {
   let r = s.toLowerCase().trim();
-  r = r.replace(new RegExp("\\s", "gu"), "");
-  r = r.replace(new RegExp("[àáâãäå]", "gu"), "a");
-  r = r.replace(new RegExp("æ", "gu"), "ae");
-  r = r.replace(new RegExp("ç", "gu"), "c");
-  r = r.replace(new RegExp("[èéêë]", "gu"), "e");
-  r = r.replace(new RegExp("[ìíîï]", "gu"), "i");
-  r = r.replace(new RegExp("ñ", "gu"), "n");
-  r = r.replace(new RegExp("[òóôõö]", "gu"), "o");
-  r = r.replace(new RegExp("œ", "gu"), "oe");
-  r = r.replace(new RegExp("[ùúûü]", "gu"), "u");
-  r = r.replace(new RegExp("[ýÿ]", "gu"), "y");
+  r = r.replaceAll(new RegExp(String.raw`\s`, "gu"), "");
+  r = r.replaceAll(new RegExp("[àáâãäå]", "gu"), "a");
+  r = r.replaceAll(new RegExp("æ", "gu"), "ae");
+  r = r.replaceAll(new RegExp("ç", "gu"), "c");
+  r = r.replaceAll(new RegExp("[èéêë]", "gu"), "e");
+  r = r.replaceAll(new RegExp("[ìíîï]", "gu"), "i");
+  r = r.replaceAll(new RegExp("ñ", "gu"), "n");
+  r = r.replaceAll(new RegExp("[òóôõö]", "gu"), "o");
+  r = r.replaceAll(new RegExp("œ", "gu"), "oe");
+  r = r.replaceAll(new RegExp("[ùúûü]", "gu"), "u");
+  r = r.replaceAll(new RegExp("[ýÿ]", "gu"), "y");
 
   // r = r.replace(new RegExp("\\W", "gu"), ""); // Special chars
   return r;

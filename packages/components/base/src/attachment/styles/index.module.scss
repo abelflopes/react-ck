@@ -74,10 +74,12 @@ $spacing: theme.get-spacing(1.5);
   color: theme.get-color(neutral-dark-100);
 }
 
-.close {
+.actions {
   position: absolute;
   top: calc(#{$spacing} * 0.5);
   right: calc(#{$spacing} * 0.5);
+  display: flex;
+  align-items: center;
 }
 
 .error {
@@ -152,7 +154,7 @@ $spacing: theme.get-spacing(1.5);
     height: theme.get-spacing(2.5);
   }
 
-  .close {
+  .actions {
     position: relative;
     top: 0;
     right: 0;

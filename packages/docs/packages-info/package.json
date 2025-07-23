@@ -7,7 +7,7 @@
     "url": "git+https://github.com/abelflopes/react-ck.git"
   },
   "scripts": {
-    "build": "npx --yes ts-node-dev --clear ./src/build.ts",
+    "prebuild": "npx --yes ts-node-dev --clear ./src/build.ts",
     "lint:typescript": "tsc --noEmit"
   },
   "devDependencies": {
