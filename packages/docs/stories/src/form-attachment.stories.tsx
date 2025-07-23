@@ -86,6 +86,8 @@ export const AllVariations: Story = {
     (): React.ReactElement => (
       <>
         {generateAllVariations(Attachment, {
+          selected: [false, true],
+          disabled: [false, true],
           size: ["s", "m", "l"],
           name: ["file"],
           format: ["file"],
@@ -93,6 +95,7 @@ export const AllVariations: Story = {
           onRemove: [undefined, () => {}],
           loading: [true, false],
           interactive: [true, false],
+
           actions: [
             undefined,
             <Button size="xs" skinVariation="ghost" key={0}>

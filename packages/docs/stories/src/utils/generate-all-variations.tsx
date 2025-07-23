@@ -24,6 +24,8 @@ export const generateAllVariations = <T extends object>(
 
   return (
     <>
+      <br />
+
       <Button
         skin="secondary"
         skinVariation="muted"
@@ -33,7 +35,7 @@ export const generateAllVariations = <T extends object>(
         {showInfo ? "Hide Info" : "Show Info"}
       </Button>
 
-      <Divider />
+      <Divider spacing="l" />
 
       <Grid align={options?.align ?? "end"}>
         {generateDescribedCombinations<T>(data)
