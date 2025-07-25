@@ -25,10 +25,10 @@ export const useOnClickOutside = (
 
     const container = document.documentElement;
 
-    container.addEventListener("click", clickHandler);
+    container.addEventListener("click", clickHandler, { capture: true });
 
     return (): void => {
-      container.removeEventListener("click", clickHandler);
+      container.removeEventListener("click", clickHandler, { capture: true });
     };
   }, [active, clickHandler]);
 };
