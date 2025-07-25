@@ -42,7 +42,7 @@ export interface FormFieldProps
   /** Whether the form field should take the full width of the parent container. */
   fullWidth?: boolean;
   /** Whether the form field should reserve space for the label. */
-  reserveSpace?: boolean | ["label" | "description" | "validationMessage"];
+  reserveSpace?: boolean | Array<"label" | "description" | "validationMessage">;
 }
 
 /**
