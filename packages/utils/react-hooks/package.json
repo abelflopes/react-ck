@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/react-hooks",
   "private": false,
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
