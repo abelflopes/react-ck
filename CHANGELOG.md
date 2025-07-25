@@ -1,3 +1,17 @@
+## [4.2.0](https://github.com/abelflopes/react-ck/compare/v4.1.3...v4.2.0) (2025-07-25)
+
+
+### Features
+
+* **dropdown:** add content renderer function to DropdownButton with handlers ([f1ad166](https://github.com/abelflopes/react-ck/commit/f1ad1665251d3fe73cb9a9206c35bb0f5b5955a5))
+* support custom actions in attachment ([4f53ee3](https://github.com/abelflopes/react-ck/commit/4f53ee38e1d1b4dc3aaf8f6ca710e780d36dbf77))
+
+
+### Bug Fixes
+
+* **click outside:** fix outside click not being detected ([c8d23ec](https://github.com/abelflopes/react-ck/commit/c8d23ecc699e6ee223846deedf615dfea7da5b71))
+* form field reserve space ([b2fc955](https://github.com/abelflopes/react-ck/commit/b2fc9554687df2cb4dae14a8477951a352cb1e4a))
+
 ## [4.1.3](https://github.com/abelflopes/react-ck/compare/v4.1.2...v4.1.3) (2025-07-19)
 
 
