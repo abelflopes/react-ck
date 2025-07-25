@@ -49,7 +49,7 @@ export class FocusTrap {
     ].filter((el) => el.checkVisibility() && !el.hasAttribute("disabled") && el.tabIndex !== -1);
 
     const firstFocusableElement = focusableElements[0] || null;
-    const lastFocusableElement = focusableElements.at(-1) || null;
+    const lastFocusableElement = focusableElements[focusableElements.length - 1] || null;
 
     return {
       focusableElements,

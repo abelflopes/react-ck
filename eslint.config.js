@@ -173,6 +173,8 @@ const config = [
       "unicorn/prefer-module": "off",
       "unicorn/catch-error-name": "off",
       "unicorn/prefer-top-level-await": "off",
+      "unicorn/prefer-at": "off",
+      "unicorn/prefer-string-replace-all": "off",
       "unicorn/filename-case": [
         "warn",
         {
