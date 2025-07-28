@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/icon",
   "private": false,
-  "version": "4.1.5",
+  "version": "4.1.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
@@ -34,9 +34,9 @@
     "bunyan-format": "^0.2.1"
   },
   "dependencies": {
-    "@react-ck/react-utils": "^2.0.2",
+    "@react-ck/react-utils": "^2.0.3",
     "@react-ck/scss-utils": "^1.1.13",
-    "@react-ck/theme": "^2.3.5",
+    "@react-ck/theme": "^2.3.6",
     "classnames": "^2.5.1",
     "react-icons": "^5.5.0"
   }

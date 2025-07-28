@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.1.0...@react-ck/base-components@7.1.1) (2025-07-28)
+
+
+### Bug Fixes
+
+* virtualised list detection default threshold ([faf258e](https://github.com/abelflopes/react-ck/commit/faf258edebba538d19e4e825bf4302e8abaaf2d7))
+
+
+
 ## [7.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.0.1...@react-ck/base-components@7.1.0) (2025-07-25)
 
 
