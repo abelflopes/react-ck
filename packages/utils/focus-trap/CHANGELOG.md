@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.2.3...@react-ck/focus-trap@1.3.0) (2025-07-25)
+
+
+### Features
+
+* support custom actions in attachment ([4f53ee3](https://github.com/abelflopes/react-ck/commit/4f53ee38e1d1b4dc3aaf8f6ca710e780d36dbf77))
+
+
+
 ## [1.2.3](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.2.2...@react-ck/focus-trap@1.2.3) (2025-07-19)
 
 **Note:** Version bump only for package @react-ck/focus-trap

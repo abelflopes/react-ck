@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@2.0.1...@react-ck/react-utils@2.0.2) (2025-07-25)
+
+
+### Bug Fixes
+
+* **click outside:** fix outside click not being detected ([c8d23ec](https://github.com/abelflopes/react-ck/commit/c8d23ecc699e6ee223846deedf615dfea7da5b71))
+
+
+
 ## [2.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@2.0.0...@react-ck/react-utils@2.0.1) (2025-07-19)
 
 **Note:** Version bump only for package @react-ck/react-utils

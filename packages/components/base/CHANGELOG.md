@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.0.1...@react-ck/base-components@7.1.0) (2025-07-25)
+
+
+### Features
+
+* **dropdown:** add content renderer function to DropdownButton with handlers ([f1ad166](https://github.com/abelflopes/react-ck/commit/f1ad1665251d3fe73cb9a9206c35bb0f5b5955a5))
+* support custom actions in attachment ([4f53ee3](https://github.com/abelflopes/react-ck/commit/4f53ee38e1d1b4dc3aaf8f6ca710e780d36dbf77))
+
+
+### Bug Fixes
+
+* form field reserve space ([b2fc955](https://github.com/abelflopes/react-ck/commit/b2fc9554687df2cb4dae14a8477951a352cb1e4a))
+
+
+
 ## [7.0.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.0.0...@react-ck/base-components@7.0.1) (2025-07-19)
 
 
