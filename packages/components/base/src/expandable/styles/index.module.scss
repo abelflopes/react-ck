@@ -1,17 +1,31 @@
 @use "@react-ck/theme";
 @use "@react-ck/scss-utils";
 
-.container {
+.root {
   position: relative;
-  width: 100%;
+  display: inline-block;
+  max-width: 100%;
   height: var(--expandable-height, auto);
-  transition: height 0.4s ease-in-out;
+  width: var(--expandable-width, auto);
+  transition:
+    height 0.4s ease-in-out,
+    width 0.4s ease-in-out;
   overflow: hidden;
   will-change: height;
   transform: translateZ(0);
 }
 
 .content {
-  width: 100%;
   position: relative;
+  display: inline-block;
+}
+
+.full_width {
+  width: 100%;
+  display: block;
+
+  .content {
+    width: 100%;
+    display: block;
+  }
 }

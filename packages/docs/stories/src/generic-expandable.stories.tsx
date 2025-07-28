@@ -29,6 +29,7 @@ export const Component: Story = {
   args: {
     expanded: true,
     animateInitial: true,
+    fullWidth: true,
     children: (
       <Card skin="light">
         <Text margin="none">{faker.lorem.paragraph()}</Text>
@@ -44,12 +45,13 @@ export const DynamicExample: Story = {
   args: {
     expanded: true,
     animateInitial: true,
+    fullWidth: false,
   },
   render: (props) => {
     const [expanded, setExpanded] = useState(props.expanded);
     const [mounted, setMounted] = useState(true);
     const [showChildren, setShowChildren] = useState(true);
-    const [content, setContent] = useState<string[]>([faker.lorem.paragraph()]);
+    const [content, setContent] = useState<string[]>([faker.lorem.word()]);
 
     return (
       <Flex direction="column" align="stretch">
@@ -66,7 +68,10 @@ export const DynamicExample: Story = {
             skin="secondary"
             skinVariation="muted"
             onClick={() => {
-              setContent((prev) => [...prev, faker.lorem.paragraph()]);
+              setContent((prev) => [
+                ...prev,
+                prev.length > 2 ? faker.lorem.paragraph() : faker.lorem.word(),
+              ]);
             }}>
             Add Content
           </Button>
@@ -97,7 +102,10 @@ export const DynamicExample: Story = {
         </Flex>
         {mounted ? (
           <Card skin="light">
-            <Expandable expanded={expanded} animateInitial={props.animateInitial}>
+            <Expandable
+              expanded={expanded}
+              animateInitial={props.animateInitial}
+              fullWidth={props.fullWidth}>
               {showChildren
                 ? content.map((text, index) => (
                     <Text key={text} margin={index > 0 ? "top" : "none"}>

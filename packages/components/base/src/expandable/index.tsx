@@ -15,6 +15,8 @@ export interface ExpandableProps extends React.HTMLAttributes<HTMLDivElement> {
   animateInitial?: boolean;
   /** Called when the transition ends */
   onUpdate?: (e: { expanded: boolean; targetHeight: number | undefined }) => void;
+  /** Whether to use full width */
+  fullWidth?: boolean;
 }
 
 /**
@@ -40,6 +42,7 @@ export const Expandable = ({
   style,
   onTransitionEnd,
   onUpdate,
+  fullWidth = true,
   ...otherProps
 }: Readonly<ExpandableProps>): React.ReactElement => {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -47,8 +50,12 @@ export const Expandable = ({
   const [height, setHeight] = useState<number | undefined>(
     (isInitialRender && animateInitial) || !expanded ? 0 : undefined,
   );
+  const [width, setWidth] = useState<number | undefined>(
+    (isInitialRender && animateInitial) || !expanded ? 0 : undefined,
+  );
 
   const targetHeight = useMemo(() => (expanded ? height : 0), [expanded, height]);
+  const targetWidth = useMemo(() => (expanded ? width : 0), [expanded, width]);
 
   const containerStyle = useMemo<React.CSSProperties>(
     () => ({
@@ -56,9 +63,10 @@ export const Expandable = ({
       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- this is a valid use case
       ...({
         "--expandable-height": targetHeight === undefined ? "auto" : `${targetHeight}px`,
+        "--expandable-width": targetWidth === undefined ? "auto" : `${targetWidth}px`,
       } as React.CSSProperties),
     }),
-    [style, targetHeight],
+    [style, targetHeight, targetWidth],
   );
 
   // Update height when content changes
@@ -68,8 +76,10 @@ export const Expandable = ({
     const resizeObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
         const newHeight = entry.contentRect.height;
+        const newWidth = entry.contentRect.width;
 
         setHeight(newHeight);
+        setWidth(newWidth);
       });
     });
 
@@ -78,7 +88,7 @@ export const Expandable = ({
     return () => {
       resizeObserver.disconnect();
     };
-  }, [setHeight]);
+  }, [setHeight, setWidth]);
 
   // Update height when props change
   useEffect(() => {
@@ -87,16 +97,23 @@ export const Expandable = ({
     const isZero = isInitialRender && animateInitial;
 
     const initialHeight = contentRef.current.scrollHeight;
+    const initialWidth = contentRef.current.scrollWidth;
 
-    if (isZero) setHeight(0);
-    else setHeight(initialHeight);
+    if (isZero) {
+      setHeight(0);
+      setWidth(0);
+    } else {
+      setHeight(initialHeight);
+      setWidth(initialWidth);
+    }
 
     if (isInitialRender && animateInitial) {
       raf(() => {
         setHeight(initialHeight);
+        setWidth(initialWidth);
       });
     }
-  }, [setHeight, expanded, isInitialRender, animateInitial]);
+  }, [setHeight, setWidth, expanded, isInitialRender, animateInitial]);
 
   useEffect(() => {
     setIsInitialRender(false);
@@ -105,7 +122,7 @@ export const Expandable = ({
   return (
     <div
       style={containerStyle}
-      className={classNames(styles.container, className)}
+      className={classNames(styles.root, className, fullWidth && styles.full_width)}
       onTransitionEnd={(e) => {
         onTransitionEnd?.(e);
         onUpdate?.({ expanded, targetHeight });
