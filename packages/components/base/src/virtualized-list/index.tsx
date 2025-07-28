@@ -3,14 +3,37 @@ import { VirtualizedListItem, type VirtualizedListItemProps } from "./Virtualize
 
 const DefaultWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
 
+const keyMap = new Map<React.ReactNode, string>();
+
+function generateStableKey(item: React.ReactNode): string {
+  const currentKey = keyMap.get(item);
+
+  if (currentKey) return currentKey;
+
+  const key = Math.random().toString(36).slice(2, 15);
+  keyMap.set(item, key);
+  return key;
+}
+
+/**
+ * Props for the VirtualizedList component
+ */
 export interface VirtualizedListProps
   extends Omit<React.ComponentPropsWithoutRef<"div">, "children"> {
+  /** Array of React nodes to render as list items */
   items: React.ReactNode[];
+  /** Default height for list items in pixels */
   defaultItemHeight?: number;
+  /** Additional props to pass to each VirtualizedListItem */
   itemProps?: Omit<VirtualizedListItemProps, "observerRootRef" | "defaultHeight">;
+  /** Custom wrapper component for the list items */
   Wrapper?: React.FC<React.PropsWithChildren>;
 }
 
+/**
+ * A virtualized list component that efficiently renders large lists
+ * by only rendering visible items and using stable keys for performance
+ */
 export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
   items,
   defaultItemHeight = 40,
@@ -24,7 +47,7 @@ export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
     () =>
       items.map((item) => ({
         item,
-        key: Math.random().toString(36).slice(2, 15),
+        key: generateStableKey(item),
       })),
     [items],
   );

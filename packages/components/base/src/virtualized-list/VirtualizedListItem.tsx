@@ -1,15 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 export interface VirtualizedListItemProps
   extends Omit<React.ComponentPropsWithoutRef<"div">, "style"> {
   defaultHeight: number;
   observerRootRef: React.RefObject<HTMLDivElement | null>;
+  threshold?: number;
 }
 
 export const VirtualizedListItem: React.FC<Readonly<VirtualizedListItemProps>> = ({
   defaultHeight,
   children,
   observerRootRef,
+  threshold = 0,
   ...props
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,7 +28,7 @@ export const VirtualizedListItem: React.FC<Readonly<VirtualizedListItemProps>> =
       },
       {
         rootMargin: "10px",
-        threshold: 0.1,
+        threshold,
       },
     );
 
@@ -37,7 +39,7 @@ export const VirtualizedListItem: React.FC<Readonly<VirtualizedListItemProps>> =
       {
         root: observerRootRef.current,
         rootMargin: "10px",
-        threshold: 0.1,
+        threshold,
       },
     );
 
@@ -48,9 +50,12 @@ export const VirtualizedListItem: React.FC<Readonly<VirtualizedListItemProps>> =
       viewportObserver.disconnect();
       containerObserver.disconnect();
     };
-  }, [observerRootRef]);
+  }, [observerRootRef, threshold]);
 
-  const isVisible = isVisibleInContainer && isVisibleInViewport;
+  const isVisible = useMemo(
+    () => isVisibleInContainer && isVisibleInViewport,
+    [isVisibleInContainer, isVisibleInViewport],
+  );
 
   useEffect(() => {
     if (!isVisible) return;
