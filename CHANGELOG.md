@@ -1,3 +1,15 @@
+## [4.3.0](https://github.com/abelflopes/react-ck/compare/v4.2.0...v4.3.0) (2025-07-28)
+
+
+### Features
+
+* **react-ck:** global library package ([dd130fc](https://github.com/abelflopes/react-ck/commit/dd130fc93a39e5570b4e9f6828d3c3522ebe7172))
+
+
+### Bug Fixes
+
+* virtualised list detection default threshold ([faf258e](https://github.com/abelflopes/react-ck/commit/faf258edebba538d19e4e825bf4302e8abaaf2d7))
+
 ## [4.2.0](https://github.com/abelflopes/react-ck/compare/v4.1.3...v4.2.0) (2025-07-25)
 
 
