@@ -168,6 +168,11 @@ export const iconMap: IconMap = [
     export: "IconVerticalDots",
   },
   {
+    import: "HiDotsHorizontal",
+    module: "react-icons/hi",
+    export: "IconHorizontalDots",
+  },
+  {
     import: "RiInformation2Line",
     module: "react-icons/ri",
     export: "IconInfo",

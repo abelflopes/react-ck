@@ -6,6 +6,9 @@ import {
   type ConsumerPolymorphicProps,
   type HTMLTag,
 } from "@react-ck/react-utils";
+import { useBreadcrumbsDropdownContext } from "./context/dropdown";
+import { Menu } from "../menu";
+import { Flex } from "../flex";
 
 /**
  * Props for configuring a BreadcrumbItem component
@@ -27,13 +30,23 @@ export const BreadcrumbItem = <T extends HTMLTag>({
   className,
   children,
   ...otherProps
-}: Readonly<BreadcrumbItemProps<T>>): React.ReactElement => (
-  <PolymorphicComponent
-    as={as}
-    fallback={["span", otherProps]}
-    commonProps={{
-      className: classNames(styles.root, active && styles.active, className),
-    }}>
-    {children}
-  </PolymorphicComponent>
-);
+}: Readonly<BreadcrumbItemProps<T>>): React.ReactElement => {
+  const breadcrumbsDropdownContext = useBreadcrumbsDropdownContext();
+
+  return breadcrumbsDropdownContext?.isInDropdown ? (
+    <Menu.Item as={as} skin={active ? "primary" : "default"} {...otherProps}>
+      <Flex spacing="s" justify="start">
+        {children}
+      </Flex>
+    </Menu.Item>
+  ) : (
+    <PolymorphicComponent
+      as={as}
+      fallback={["span", otherProps]}
+      commonProps={{
+        className: classNames(styles.root, active && styles.active, className),
+      }}>
+      {children}
+    </PolymorphicComponent>
+  );
+};

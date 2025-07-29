@@ -38,3 +38,21 @@ export const Component: Story = {
     ],
   },
 };
+
+export const Long: Story = {
+  args: {
+    items: [
+      <Breadcrumbs.Item key="1" as={<a href="/"> {faker.lorem.word()}</a>} />,
+      <Breadcrumbs.Item key="2" as={["a", { href: "../" }]}>
+        <Icon size="text">
+          <IconCog />
+        </Icon>
+        {faker.lorem.word()}
+      </Breadcrumbs.Item>,
+      <Breadcrumbs.Item key="3">{faker.lorem.word()}</Breadcrumbs.Item>,
+      <Breadcrumbs.Item key="3" active>
+        {faker.lorem.word()}
+      </Breadcrumbs.Item>,
+    ],
+  },
+};
