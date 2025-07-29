@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.1.1...@react-ck/base-components@7.2.0) (2025-07-29)
+
+
+### Features
+
+* **breadcrumbs:** allow collapsing inner items into dropdown ([4a663bc](https://github.com/abelflopes/react-ck/commit/4a663bce91f879838805d84bafaa70a0e9ba05dd))
+* **expandable:** implement horizontal expanding ([951c625](https://github.com/abelflopes/react-ck/commit/951c625418abb185c5cc7995c471cc36dc31abbd))
+* **overlay spinner:** allow customise offset ([713d24a](https://github.com/abelflopes/react-ck/commit/713d24a44a93d7686b5bc4cf0a43bd98e5a2692d))
+
+
+
 ## [7.1.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.1.0...@react-ck/base-components@7.1.1) (2025-07-28)
 
 

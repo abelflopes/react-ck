@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.1.6...@react-ck/icon@4.2.0) (2025-07-29)
+
+
+### Features
+
+* **breadcrumbs:** allow collapsing inner items into dropdown ([4a663bc](https://github.com/abelflopes/react-ck/commit/4a663bce91f879838805d84bafaa70a0e9ba05dd))
+
+
+
 ## [4.1.6](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.1.5...@react-ck/icon@4.1.6) (2025-07-28)
 
 **Note:** Version bump only for package @react-ck/icon
