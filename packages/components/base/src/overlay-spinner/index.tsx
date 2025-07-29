@@ -11,6 +11,8 @@ import { OverlaySpinnerContainer } from "./Container";
 interface OverlaySpinnerProps extends OverlayProps {
   /** Whether the spinner is visible. Defaults to true */
   active?: boolean;
+  /** Offset from the container */
+  offset?: number;
 }
 
 /**
@@ -19,12 +21,20 @@ interface OverlaySpinnerProps extends OverlayProps {
  */
 const OverlaySpinner = ({
   active = true,
+  offset = 0,
   className,
+  style,
   ...otherProps
 }: Readonly<OverlaySpinnerProps>): React.ReactElement => (
   <Overlay
     skin="light"
     {...otherProps}
+    style={{
+      ...style,
+      ...({
+        "--offset": offset,
+      } as React.CSSProperties),
+    }}
     className={classNames(styles.overlay, className, {
       [`${styles.overlay__active}`]: active,
     })}>
