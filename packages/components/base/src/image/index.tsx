@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
-import { Skeleton } from "../skeleton";
 
 /**
  * Props for configuring the Image component
@@ -11,6 +10,8 @@ export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   alt: string;
   /** Whether the image should expand to fill container width. Defaults to false */
   fullWidth?: boolean;
+  /** Fallback content to display when the image fails to load */
+  fallback?: React.ReactNode;
 }
 
 /**
@@ -24,13 +25,16 @@ export const Image = ({
   onLoad,
   onError,
   fullWidth,
+  fallback,
   ...otherProps
 }: Readonly<ImageProps>): React.ReactElement => {
-  const [shouldDisplay, setShouldDisplay] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const computedOnLoad = useCallback<NonNullable<ImageProps["onLoad"]>>(
     (...args) => {
-      setShouldDisplay(true);
+      setError(false);
+      setLoading(false);
       onLoad?.(...args);
     },
     [onLoad],
@@ -38,7 +42,8 @@ export const Image = ({
 
   const computedOnError = useCallback<NonNullable<ImageProps["onError"]>>(
     (...args) => {
-      setShouldDisplay(true);
+      setError(true);
+      setLoading(false);
       onError?.(...args);
     },
     [onError],
@@ -46,7 +51,8 @@ export const Image = ({
 
   return (
     <>
-      {!shouldDisplay && <Skeleton className={className} />}
+      {(error || loading) && fallback}
+
       <img
         alt={alt}
         className={classNames(className, styles.root, {
@@ -55,7 +61,7 @@ export const Image = ({
         onLoad={computedOnLoad}
         onError={computedOnError}
         {...otherProps}
-        hidden={hidden || !shouldDisplay}
+        hidden={hidden || (Boolean(fallback) && (loading || error))}
       />
     </>
   );

@@ -17,7 +17,7 @@ interface SkeletonProps<T extends HTMLTag = "span">
   extends ComponentProps<"span">,
     ConsumerPolymorphicProps<T> {
   /** Visual style of the loading placeholder. Defaults to "default" */
-  variation?: "default" | "text" | "content";
+  variation?: "default" | "text" | "content" | "basic";
 }
 
 /**

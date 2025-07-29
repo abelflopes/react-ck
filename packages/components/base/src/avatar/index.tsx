@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Image } from "../image";
+import { Skeleton } from "../skeleton";
 
 /**
  * Props for configuring the Avatar component
@@ -41,7 +42,14 @@ export const Avatar = ({
       className={classNames(styles.root, styles[`size_${size}`], styles[`skin_${skin}`], className)}
       {...otherProps}>
       {!image && <figcaption>{initials}</figcaption>}
-      {image ? <Image alt={name} src={image} className={styles.image} /> : null}
+      {image ? (
+        <Image
+          alt={name}
+          src={image}
+          className={styles.image}
+          fallback={<Skeleton className={styles.image_fallback} variation="basic" />}
+        />
+      ) : null}
     </figure>
   );
 };
