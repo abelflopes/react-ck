@@ -1,3 +1,18 @@
+## [4.4.0](https://github.com/abelflopes/react-ck/compare/v4.3.0...v4.4.0) (2025-07-29)
+
+
+### Features
+
+* **breadcrumbs:** allow collapsing inner items into dropdown ([4a663bc](https://github.com/abelflopes/react-ck/commit/4a663bce91f879838805d84bafaa70a0e9ba05dd))
+* **expandable:** implement horizontal expanding ([951c625](https://github.com/abelflopes/react-ck/commit/951c625418abb185c5cc7995c471cc36dc31abbd))
+* **overlay spinner:** allow customise offset ([713d24a](https://github.com/abelflopes/react-ck/commit/713d24a44a93d7686b5bc4cf0a43bd98e5a2692d))
+* **react-ck:** global library package ([4b531e5](https://github.com/abelflopes/react-ck/commit/4b531e51f4bb14397e011d175ed881e65bf16a09))
+
+
+### Code Refactoring
+
+* replace image skeleton by customisable fallback ([bb24ec8](https://github.com/abelflopes/react-ck/commit/bb24ec898e6789bcf9fa7378e23cd1b87a4f2ab8))
+
 ## [4.3.0](https://github.com/abelflopes/react-ck/compare/v4.2.0...v4.3.0) (2025-07-28)
 
 
