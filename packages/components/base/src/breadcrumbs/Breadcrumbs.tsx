@@ -6,7 +6,7 @@ import { IconChevronRight } from "@react-ck/icon/icons/IconChevronRight";
 import { BreadcrumbItem } from "./BreadcrumbItem";
 import { DropdownButton } from "../dropdown/DropdownButton";
 import { Button } from "../button";
-import { IconHorizontalDots } from "@react-ck/icon/icons/IconHorizontalDots";
+import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
 import { Menu } from "../menu";
 import { BreadcrumsDropdownContextProvider } from "./context/dropdown";
 
@@ -51,7 +51,7 @@ const Breadcrumbs = ({
               skinVariation="ghost"
               icon={
                 <Icon>
-                  <IconHorizontalDots />
+                  <IconVerticalDots />
                 </Icon>
               }
             />
