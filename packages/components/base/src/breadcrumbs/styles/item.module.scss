@@ -16,4 +16,8 @@
   &:hover:not(.active) {
     @include text.text-skin(highlight-primary);
   }
+
+  &.interactive {
+    cursor: pointer;
+  }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styles from "./styles/item.module.scss";
 import classNames from "classnames";
 import {
@@ -18,6 +18,8 @@ export interface BreadcrumbItemProps<T extends HTMLTag>
     ConsumerPolymorphicProps<T> {
   /** Whether this item represents the current page. Defaults to false */
   active?: boolean;
+  /** Whether this item is interactive */
+  interactive?: boolean;
 }
 
 /**
@@ -29,9 +31,15 @@ export const BreadcrumbItem = <T extends HTMLTag>({
   active,
   className,
   children,
+  interactive,
   ...otherProps
 }: Readonly<BreadcrumbItemProps<T>>): React.ReactElement => {
   const breadcrumbsDropdownContext = useBreadcrumbsDropdownContext();
+
+  const isInteractive = useMemo(
+    () => interactive ?? !!otherProps.onClick,
+    [interactive, otherProps.onClick],
+  );
 
   return breadcrumbsDropdownContext?.isInDropdown ? (
     <Menu.Item as={as} skin={active ? "primary" : "default"} {...otherProps}>
@@ -44,7 +52,12 @@ export const BreadcrumbItem = <T extends HTMLTag>({
       as={as}
       fallback={["span", otherProps]}
       commonProps={{
-        className: classNames(styles.root, active && styles.active, className),
+        className: classNames(
+          styles.root,
+          active && styles.active,
+          isInteractive && styles.interactive,
+          className,
+        ),
       }}>
       {children}
     </PolymorphicComponent>
