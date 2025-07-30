@@ -20,15 +20,11 @@
 .size_text {
   @include scss-utils.define-css-var(icon, size, 1em);
 
-  position: relative;
-  height: 1em !important;
-  line-height: 1em !important;
+  display: inline;
   vertical-align: middle;
   aspect-ratio: unset;
 
   > * {
-    position: relative;
-    top: -7%;
     aspect-ratio: unset;
     width: auto;
   }

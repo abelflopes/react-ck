@@ -4,7 +4,9 @@ import { generateDescribedCombinations } from "@react-ck/misc-utils";
 import { Grid, Skeleton, Menu, Text, type TextProps, Manager, Icon } from "react-ck";
 import { capitalCase } from "change-case";
 import { faker } from "@faker-js/faker";
-import { IconAttach } from "@react-ck/icon/icons/IconAttach";
+import { IconChat } from "@react-ck/icon/icons/IconChat";
+import { IconClose } from "@react-ck/icon/icons/IconClose";
+import { IconUserCircle } from "@react-ck/icon/icons/IconUserCircle";
 
 const meta: Meta = {
   title: "Test/Skeleton & Text",
@@ -47,7 +49,7 @@ export const TextSkeleton: Story = {
             <div style={{ outline: "solid 1px orange" }}>
               <Text {...i.combination}>
                 <Icon size="text">
-                  <IconAttach />
+                  <IconUserCircle />
                 </Icon>
               </Text>
             </div>
@@ -59,10 +61,14 @@ export const TextSkeleton: Story = {
                 &nbsp;
                 <Skeleton variation="text" style={{ maxWidth: 100 }} />
                 &nbsp;
-                {faker.lorem.sentence(2)}
+                <Icon size="text">
+                  <IconClose />
+                </Icon>
+                &nbsp;
+                {faker.lorem.word()}
                 &nbsp;
                 <Icon size="text">
-                  <IconAttach />
+                  <IconChat />
                 </Icon>
                 &nbsp;
                 {faker.lorem.sentence(2)}
