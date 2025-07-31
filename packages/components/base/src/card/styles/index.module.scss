@@ -48,7 +48,7 @@
 }
 
 .disabled {
-  @include shared.disabled;
+  @include theme.disabled;
 }
 
 // Variations

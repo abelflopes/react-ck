@@ -40,12 +40,6 @@
   background-color: theme.get-color(highlight-primary-light);
 }
 
-@mixin disabled {
-  opacity: 0.6;
-  filter: grayscale(1);
-  cursor: not-allowed;
-}
-
 // Spacing
 
 @mixin card-spacing($key) {
