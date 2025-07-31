@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { faker } from "@faker-js/faker";
-import { Text, Button, Container, Image, Modal, type ModalProps, Manager } from "react-ck";
+import { Text, Button, Container, Image, Modal, type ModalProps, Manager, Input } from "react-ck";
 import { configureStory } from "@react-ck/storybook-utils";
 
 const meta: Meta<typeof Modal> = {
@@ -53,33 +53,51 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const header = (
+  <Modal.Header actions={<Input type="search" placeholder="Search" />}>
+    {faker.lorem.sentence(1)}
+  </Modal.Header>
+);
+
+const footer = (
+  <Modal.Footer
+    actions={
+      <Button>
+        <Button>{faker.lorem.word()}</Button>
+      </Button>
+    }>
+    {faker.lorem.sentence(6)}
+  </Modal.Footer>
+);
+
 export const Component: Story = {
   args: {
     children: (
       <>
-        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
+        {header}
 
         <Text margin="none">{faker.lorem.sentence(6)}</Text>
 
-        <Modal.Footer
-          actions={
-            <Button>
-              <Button>{faker.lorem.word()}</Button>
-            </Button>
-          }>
-          {faker.lorem.sentence(6)}
-        </Modal.Footer>
+        {footer}
       </>
     ),
   },
   render,
 };
 
+export const Dismissable: Story = {
+  ...Component,
+  args: {
+    ...Component.args,
+    onDismiss: () => {},
+  },
+};
+
 export const BigContent: Story = {
   args: {
     children: (
       <>
-        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
+        {header}
 
         <Text margin="bottom">{faker.lorem.paragraphs(19)}</Text>
 
@@ -87,9 +105,7 @@ export const BigContent: Story = {
 
         <Text margin="top">{faker.lorem.paragraphs(20)}</Text>
 
-        <Modal.Footer actions={<Button>{faker.lorem.word()}</Button>}>
-          {faker.lorem.sentence(6)}
-        </Modal.Footer>
+        {footer}
       </>
     ),
   },
@@ -102,20 +118,13 @@ export const FullHeight: Story = {
     sizeVariation: "full-height",
     children: (
       <>
-        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
+        {header}
 
         <div style={{ height: "100%", backgroundColor: "pink" }}>
           <Text margin="bottom">{faker.lorem.paragraphs(19)}</Text>
         </div>
 
-        <Modal.Footer
-          actions={
-            <Button>
-              <Button>{faker.lorem.word()}</Button>
-            </Button>
-          }>
-          {faker.lorem.sentence(6)}
-        </Modal.Footer>
+        {footer}
       </>
     ),
   },
@@ -133,7 +142,7 @@ export const OnlyContentAndHeader: Story = {
   args: {
     children: (
       <>
-        <Modal.Header>{faker.lorem.sentence(4)}</Modal.Header>
+        {header}
 
         <Text margin="none">{faker.lorem.sentence(6)}</Text>
       </>
@@ -148,14 +157,7 @@ export const OnlyContentAndFooter: Story = {
       <>
         <Text margin="none">{faker.lorem.sentence(6)}</Text>
 
-        <Modal.Footer
-          actions={
-            <Button>
-              <Button>{faker.lorem.word()}</Button>
-            </Button>
-          }>
-          {faker.lorem.sentence(6)}
-        </Modal.Footer>
+        {footer}
       </>
     ),
   },
