@@ -1,3 +1,15 @@
+## [4.6.0](https://github.com/abelflopes/react-ck/compare/v4.5.0...v4.6.0) (2025-07-31)
+
+
+### Features
+
+* **react-ck:** global library package ([b716f93](https://github.com/abelflopes/react-ck/commit/b716f93b0b7f488f8aa5658c3f76a3b14535ad23))
+
+
+### Bug Fixes
+
+* **card:** use disabled mixin from theme ([f0bea2c](https://github.com/abelflopes/react-ck/commit/f0bea2c0c9cea8de00187715dd2836365f232e8e))
+
 ## [4.5.0](https://github.com/abelflopes/react-ck/compare/v4.4.0...v4.5.0) (2025-07-31)
 
 
