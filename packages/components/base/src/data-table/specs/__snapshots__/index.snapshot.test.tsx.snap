@@ -10,7 +10,9 @@ exports[`snapshot DataTable renders correctly 1`] = `
       data-testid="table"
     >
       <tbody>
-        <tr>
+        <tr
+          class=""
+        >
           <td>
             1
           </td>

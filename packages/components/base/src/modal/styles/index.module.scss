@@ -14,11 +14,9 @@
   }
 }
 
-$padding: scss-utils.get-css-var(modal, spacing);
+$padding: theme.get-spacing(2);
 
 .root {
-  @include scss-utils.define-css-var(modal, spacing, theme.get-spacing(3));
-
   position: fixed !important;
   z-index: scss-utils.map-get-strict(elevation.$elevation, overlay);
   display: flex;
@@ -73,7 +71,7 @@ $padding: scss-utils.get-css-var(modal, spacing);
 }
 
 .content {
-  padding: 0 $padding;
+  padding: $padding;
 
   &_no_header {
     padding-top: $padding;
@@ -87,13 +85,21 @@ $padding: scss-utils.get-css-var(modal, spacing);
 .header,
 .footer {
   padding: $padding;
+  border-style: solid;
+  border-color: theme.get-color(neutral-light-300);
+  border-width: 0;
 }
 
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: $padding;
+  justify-content: flex-end;
+  gap: theme.get-spacing();
+  border-bottom-width: scss-utils.get-css-var(spacing, border);
+
+  .header_content {
+    margin-right: auto;
+  }
 }
 
 .footer {
@@ -101,6 +107,7 @@ $padding: scss-utils.get-css-var(modal, spacing);
   align-items: center;
   margin-top: auto;
   gap: $padding;
+  border-top-width: scss-utils.get-css-var(spacing, border);
 
   &_content {
     flex-grow: 1;

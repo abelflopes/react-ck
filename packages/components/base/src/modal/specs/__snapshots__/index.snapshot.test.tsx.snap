@@ -12,7 +12,7 @@ exports[`snapshot Modal renders correctly 1`] = `
         class="header"
       >
         <p
-          class="root variation_h3 skin_default margin_none"
+          class="root variation_p skin_bold margin_none header_content"
         >
           Heading
         </p>
