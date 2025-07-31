@@ -291,7 +291,7 @@ const Select = forwardRef<HTMLSelectElement, Readonly<SelectProps>>(
           </div>
 
           <select
-            ref={megeRefs([ref, selectRef])}
+            ref={megeRefs(ref, selectRef)}
             id={computedId}
             name={selectName}
             multiple={selectMultiple}

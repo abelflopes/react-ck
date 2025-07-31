@@ -110,7 +110,7 @@ const FileUploader = forwardRef<HTMLInputElement, Readonly<FileUploaderProps>>(
         )}>
         <input
           {...inputProps}
-          ref={megeRefs([ref, inputRef])}
+          ref={megeRefs(ref, inputRef)}
           type="file"
           className={classNames(styles.file, inputProps?.className)}
           onChange={handleChange}
