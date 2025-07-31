@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.3.0...@react-ck/base-components@7.3.1) (2025-07-31)
+
+
+### Bug Fixes
+
+* **card:** use disabled mixin from theme ([f0bea2c](https://github.com/abelflopes/react-ck/commit/f0bea2c0c9cea8de00187715dd2836365f232e8e))
+
+
+
 ## [7.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.2.0...@react-ck/base-components@7.3.0) (2025-07-31)
 
 
