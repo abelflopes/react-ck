@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.2.0...@react-ck/icon@4.3.0) (2025-07-31)
+
+
+### Features
+
+* **icon:** update sizes ([39301ee](https://github.com/abelflopes/react-ck/commit/39301ee18b776618f5aafec7abc486896fb5f09c))
+
+
+### Bug Fixes
+
+* icons alignment ([9a20681](https://github.com/abelflopes/react-ck/commit/9a20681b89fe348c72fdbe5c2918c3b04d070407))
+
+
+
 ## [4.2.0](https://github.com/abelflopes/react-ck/compare/@react-ck/icon@4.1.6...@react-ck/icon@4.2.0) (2025-07-29)
 
 

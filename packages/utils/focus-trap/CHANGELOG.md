@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.3.1...@react-ck/focus-trap@1.3.2) (2025-07-31)
+
+**Note:** Version bump only for package @react-ck/focus-trap
+
+
+
+
+
 ## [1.3.1](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.3.0...@react-ck/focus-trap@1.3.1) (2025-07-28)
 
 **Note:** Version bump only for package @react-ck/focus-trap
