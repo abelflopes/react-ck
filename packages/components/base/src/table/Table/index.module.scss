@@ -85,23 +85,25 @@
 }
 
 .skin_bordered {
-  @include scss-utils.define-css-var(table, border-color, theme.get-color(neutral-light-400-solid));
+  @include scss-utils.define-css-var(table, border-color, theme.get-color(neutral-light-300-solid));
 }
 
 // Spacing
 
 .spacing_default {
-  @include scss-utils.define-css-var(table, spacing, theme.get-spacing());
+  @include scss-utils.define-css-var(table, spacing, theme.get-spacing(1.5));
+  @include scss-utils.define-css-var(table, min-height, theme.get-spacing(5));
 }
 
 .spacing_compact {
-  @include scss-utils.define-css-var(table, spacing, theme.get-spacing(0.5));
+  @include scss-utils.define-css-var(table, spacing, theme.get-spacing(1));
+  @include scss-utils.define-css-var(table, min-height, theme.get-spacing(4));
 }
 
 // Table
 
 .table {
-  @include text.text-base;
+  @include text.text-base(small);
 
   width: 100%;
   border-radius: inherit;
@@ -109,7 +111,9 @@
 
   td,
   th {
-    padding: scss-utils.get-css-var(table, spacing);
+    box-sizing: border-box;
+    height: scss-utils.get-css-var(table, min-height);
+    padding: calc(scss-utils.get-css-var(table, spacing) / 2) scss-utils.get-css-var(table, spacing);
 
     &:not(:last-child) {
       border-right: solid scss-utils.get-css-var(spacing, border)

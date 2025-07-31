@@ -1,0 +1,9 @@
+@use "@react-ck/theme";
+
+.selected {
+  background-color: theme.get-color(highlight-primary-light);
+}
+
+.interactive {
+  cursor: pointer;
+}

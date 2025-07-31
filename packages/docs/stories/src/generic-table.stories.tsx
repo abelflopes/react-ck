@@ -34,7 +34,7 @@ const children = [
   </Table.Thead>,
   <Table.TBody key="body">
     {Object.keys(Array.from({ length: rows })).map((r) => (
-      <Table.Tr key={r}>
+      <Table.Tr key={r} selected={r === "1"} interactive={Number(r) < rows / 2}>
         {Object.keys(Array.from({ length: columns })).map((i) => (
           <Table.Td key={i}>{faker.company.catchPhraseDescriptor()}</Table.Td>
         ))}
