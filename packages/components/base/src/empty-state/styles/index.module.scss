@@ -2,8 +2,7 @@
 @use "../../text/styles/shared" as text;
 
 .root {
-  @include text.text-base;
-  @include text.text-skin(soft);
+  @include text.text-base(p, soft);
 
   display: flex;
   width: 100%;

@@ -8,8 +8,7 @@
   background-color: theme.get-color(neutral-light-300);
 
   &.text {
-    @include text.text-base;
-    @include text.text-variation(extra-small);
+    @include text.text-base(extra-small);
   }
 
   &.vertical {

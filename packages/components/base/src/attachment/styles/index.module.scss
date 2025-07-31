@@ -8,8 +8,7 @@ $spacing: theme.get-spacing(1.5);
 .root {
   @include card.base;
   @include card.skin-bordered;
-  @include text.text-base;
-  @include text.text-variation(small);
+  @include text.text-base(small);
 
   position: relative;
   display: flex;

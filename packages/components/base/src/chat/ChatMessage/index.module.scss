@@ -54,8 +54,7 @@ $spacing-y: theme.get-spacing(0.5);
 }
 
 .text {
-  @include text.text-base;
-  @include text.text-variation(extra-small);
+  @include text.text-base(extra-small);
 
   padding: theme.get-spacing(1) theme.get-spacing(1.5);
   border-radius: theme.get-spacing(2);
@@ -65,8 +64,7 @@ $spacing-y: theme.get-spacing(0.5);
 }
 
 .sender {
-  @include text.text-base;
-  @include text.text-variation(extra-small);
+  @include text.text-base(extra-small);
 
   padding: 0 theme.get-spacing(-5);
   color: theme.get-color(neutral-dark-100);

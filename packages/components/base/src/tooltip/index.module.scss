@@ -118,8 +118,7 @@ $caret-spacing: theme.get-spacing(1.66);
 }
 
 .content {
-  @include text.text-base;
-  @include text.text-variation(extra-small);
+  @include text.text-base(extra-small);
 
   position: relative;
   max-width: scss-utils.get-css-var(tooltip, max-width);

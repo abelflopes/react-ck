@@ -6,8 +6,7 @@
 .root {
   $size: theme.get-spacing(2);
 
-  @include text.text-base;
-  @include text.text-variation(extra-small);
+  @include text.text-base(extra-small);
 
   display: inline-block;
   overflow: hidden;

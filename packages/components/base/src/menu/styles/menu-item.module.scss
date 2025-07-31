@@ -2,8 +2,7 @@
 @use "../../text/styles/shared" as text;
 
 .root {
-  @include text.text-base;
-  @include text.text-variation(p);
+  @include text.text-base(p);
 
   display: flex;
   box-sizing: border-box;

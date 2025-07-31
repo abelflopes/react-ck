@@ -4,8 +4,7 @@
 @use "variables";
 
 .root {
-  @include text.text-base;
-  @include text.text-skin(soft);
+  @include text.text-base(p, soft);
 
   position: relative;
   display: flex;
