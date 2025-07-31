@@ -14,6 +14,7 @@ const meta: Meta<typeof Checkbox> = {
             skin="negative"
             variation="inline"
             label={faker.lorem.sentence()}
+            inlineLabel={faker.lorem.sentence()}
             description={faker.lorem.sentence()}
             validationMessage={faker.lorem.sentence()}>
             <Story />
@@ -29,7 +30,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Component: Story = {
-  args: {},
+  args: {
+    indeterminate: true,
+  },
 };
 
 export const Toggle: Story = {

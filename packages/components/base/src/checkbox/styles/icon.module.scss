@@ -1,24 +1,49 @@
 @use "@react-ck/theme";
 @use "@react-ck/scss-utils";
 
+// Root
+
 .root {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: theme.get-color(neutral-light-100);
-  border: theme.get-color(neutral-light-400) solid scss-utils.get-css-var(spacing, border);
-
-  padding: theme.get-spacing(0.25);
+  border: theme.get-color(neutral-dark-100) solid scss-utils.get-css-var(spacing, border);
   border-radius: theme.get-spacing(0.5);
-  line-height: 0;
+  height: theme.get-spacing(2);
+  width: theme.get-spacing(2);
+  box-sizing: border-box;
+  transition: all 0.4s ease;
 }
 
-:checked ~ .root .icon {
-  transform: scale(1);
+:checked ~ .root,
+:indeterminate ~ .root {
+  background-color: theme.get-color(highlight-primary);
+  border-color: theme.get-color(highlight-primary);
+  transition: all 0.2s ease;
 }
+
+// Icon
 
 .icon {
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
   will-change: transform;
-
   transform: scale(0);
   color: theme.get-color(highlight-primary);
+}
+
+:indeterminate ~ .root .icon,
+:checked ~ .root .icon {
+  transform: scale(1);
+  color: theme.get-color(neutral-light-100);
+  transition: all 0.4s ease;
+}
+
+// Icon indeterminate
+
+:indeterminate ~ .root .icon > * {
+  height: 2px;
+  width: theme.get-spacing(0.75);
+  background-color: theme.get-color(neutral-light-100);
+  border-radius: 1px;
 }

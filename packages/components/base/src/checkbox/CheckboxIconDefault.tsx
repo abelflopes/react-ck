@@ -6,7 +6,7 @@ import { type BooleanInputIconComponent } from "../boolean-input";
 
 export const CheckboxIconDefault: BooleanInputIconComponent = () => (
   <span className={styles.root}>
-    <Icon className={styles.icon}>
+    <Icon className={styles.icon} size="m">
       <IconCheck />
     </Icon>
   </span>

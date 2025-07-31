@@ -1,20 +1,24 @@
 import styles from "./styles/index.module.scss";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import classNames from "classnames";
 import { type FormFieldContextProps, useFormFieldContext } from "../form-field";
 import { type BooleanInputIconComponent } from "./types";
+import { megeRefs } from "@react-ck/react-utils";
 
 /**
  * Props interface for the BooleanInput component.
  * Base component for checkbox and radio inputs with custom icons.
  */
-export interface BooleaInputProps extends React.ComponentProps<"input"> {
+export interface BooleaInputProps extends React.ComponentPropsWithRef<"input"> {
   /** Component to render the input's visual state */
   Icon: BooleanInputIconComponent;
   /** Visual theme of the input. When used within FormField, define on FormField instead.
-   * @default "default"
    */
   skin?: FormFieldContextProps["skin"];
+  /**
+   * Whether the input is indeterminate.
+   */
+  indeterminate?: boolean;
 }
 
 /**
@@ -30,11 +34,21 @@ export const BooleaInput = ({
   className,
   id,
   disabled,
+  indeterminate,
+  ref,
   ...otherProps
 }: Readonly<BooleaInputProps>): React.ReactElement => {
   const formFieldContext = useFormFieldContext();
-
   const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const input = inputRef.current;
+
+    if (!input) return;
+
+    input.indeterminate = indeterminate ?? false;
+  }, [indeterminate]);
 
   return (
     <span
@@ -43,7 +57,13 @@ export const BooleaInput = ({
         className,
         (disabled || formFieldContext?.disabled) && styles.disabled,
       )}>
-      <input {...otherProps} id={computedId} className={styles.input} disabled={disabled} />
+      <input
+        ref={megeRefs(ref, inputRef)}
+        id={computedId}
+        className={styles.input}
+        disabled={disabled}
+        {...otherProps}
+      />
 
       <Icon {...otherProps} skin={skin ?? formFieldContext?.skin} />
     </span>
