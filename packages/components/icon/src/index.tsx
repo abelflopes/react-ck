@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { DISPLAY_NAME_ATTRIBUTE, DISPLAY_NAMES } from "@react-ck/react-utils";
 
 interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
-  size?: "text" | "m" | "l" | "xl";
+  size?: "text" | "s" | "m" | "l" | "xl" | "xxl";
   skin?: "default" | "inverted";
   children: NonNullable<React.ReactNode>;
 }

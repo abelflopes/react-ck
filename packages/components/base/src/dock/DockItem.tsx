@@ -36,7 +36,7 @@ export const DockItem = ({
       skin={active ? "primary" : "secondary"}
       skinVariation={active ? "muted" : "ghost"}
       title={expanded ? undefined : label}
-      icon={<Icon size={expanded ? "m" : "l"}>{icon}</Icon>}
+      icon={<Icon size={expanded ? "l" : "xl"}>{icon}</Icon>}
       {...otherProps}>
       {expanded ? label : null}
     </Button>

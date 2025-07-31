@@ -30,15 +30,23 @@
   }
 }
 
+.size_s {
+  @include scss-utils.define-css-var(icon, size, theme.get-spacing(1.25));
+}
+
 .size_m {
   @include scss-utils.define-css-var(icon, size, theme.get-spacing(1.5));
 }
 
 .size_l {
-  @include scss-utils.define-css-var(icon, size, theme.get-spacing(3));
+  @include scss-utils.define-css-var(icon, size, theme.get-spacing(2));
 }
 
 .size_xl {
+  @include scss-utils.define-css-var(icon, size, theme.get-spacing(3));
+}
+
+.size_xxl {
   @include scss-utils.define-css-var(icon, size, theme.get-spacing(5));
 }
 
