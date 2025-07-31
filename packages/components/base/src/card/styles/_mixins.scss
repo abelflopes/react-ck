@@ -35,6 +35,17 @@
   background-color: theme.get-color(neutral-light-200);
 }
 
+@mixin skin-selected {
+  border: solid scss-utils.get-css-var(spacing, border) theme.get-color(highlight-primary);
+  background-color: theme.get-color(highlight-primary-light);
+}
+
+@mixin disabled {
+  opacity: 0.6;
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+
 // Spacing
 
 @mixin card-spacing($key) {

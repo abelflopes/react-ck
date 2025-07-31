@@ -70,6 +70,36 @@ export const AsLink: Story = {
   },
 };
 
+export const Selected: Story = {
+  args: {
+    selected: true,
+    children: (
+      <>
+        <Text skin="bold" margin="none">
+          {faker.lorem.sentence(4)}
+        </Text>
+
+        <Text margin="none">{faker.lorem.sentence(16)}</Text>
+      </>
+    ),
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: (
+      <>
+        <Text skin="bold" margin="none">
+          {faker.lorem.sentence(4)}
+        </Text>
+
+        <Text margin="none">{faker.lorem.sentence(16)}</Text>
+      </>
+    ),
+  },
+};
+
 export const AllCardVariations: Story = {
   decorators: [
     (): React.ReactElement =>
@@ -80,6 +110,8 @@ export const AllCardVariations: Story = {
           spacing: ["l", "m", "s", "none"],
           interaction: [undefined, "hover", "click"],
           variation: ["vertical", "horizontal"],
+          selected: [false, true],
+          disabled: [false, true],
           children: [sentenceCase(faker.lorem.words({ min: 1, max: 2 }))],
         },
         {

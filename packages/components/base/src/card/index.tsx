@@ -20,6 +20,14 @@ interface CardProps<T extends HTMLTag = "div">
    * @default "bordered"
    */
   skin?: "bordered" | "shadowed" | "ghost" | "light";
+  /** Whether the card is in a selected state with primary highlight border.
+   * @default false
+   */
+  selected?: boolean;
+  /** Whether the card is disabled with reduced opacity and grayscale filter.
+   * @default false
+   */
+  disabled?: boolean;
   /** Interactive behavior on user interaction.
    * - hover: Visual feedback on hover
    * - click: Visual feedback on hover and click
@@ -63,6 +71,8 @@ interface CardProps<T extends HTMLTag = "div">
 const Card = <T extends HTMLTag>({
   as,
   skin = "bordered",
+  selected = false,
+  disabled = false,
   interaction,
   variation = "vertical",
   spacing = "m",
@@ -103,8 +113,11 @@ const Card = <T extends HTMLTag>({
             styles[`spacing_${spacing}`],
             styles[`border_radius_${borderRadius}`],
             {
-              [`${styles.hoverable}`]: interaction === "click" || interaction === "hover",
-              [`${styles.clickable}`]: interaction === "click",
+              [`${styles.hoverable}`]:
+                !disabled && (interaction === "click" || interaction === "hover"),
+              [`${styles.clickable}`]: !disabled && interaction === "click",
+              [`${styles.selected}`]: selected,
+              [`${styles.disabled}`]: disabled,
             },
           ),
         }}>

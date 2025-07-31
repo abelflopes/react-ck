@@ -43,6 +43,14 @@
   @include shared.skin-light;
 }
 
+.selected {
+  @include shared.skin-selected;
+}
+
+.disabled {
+  @include shared.disabled;
+}
+
 // Variations
 
 .full_height {
