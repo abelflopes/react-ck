@@ -1,3 +1,28 @@
+## [4.5.0](https://github.com/abelflopes/react-ck/compare/v4.4.0...v4.5.0) (2025-07-31)
+
+
+### Features
+
+* **breadcrumb:** add interactive styles ([5125d2f](https://github.com/abelflopes/react-ck/commit/5125d2fe92c4a25e40030d965b581ee0ee1e4f95))
+* **card:** add selectable & disabled variations ([65b7f90](https://github.com/abelflopes/react-ck/commit/65b7f9074d210c550df2167147036be4fc34bc1d))
+* **checkbox:** implement indeterminate state ([4c17ce8](https://github.com/abelflopes/react-ck/commit/4c17ce8a3d3943318f3754d68da5b56e7bbf24d3))
+* **icon:** update sizes ([39301ee](https://github.com/abelflopes/react-ck/commit/39301ee18b776618f5aafec7abc486896fb5f09c))
+* **modal:** update ui & support actions ([7c48b9c](https://github.com/abelflopes/react-ck/commit/7c48b9cdc4f91d2ea8971bb31e6a87bf678a1102))
+* **table:** support interactive and selected ui, adjust font and spacings ([81eb716](https://github.com/abelflopes/react-ck/commit/81eb71695853d1d86f4f0469868a10667bc87a46))
+
+
+### Bug Fixes
+
+* breadcrumbs icon ([786150e](https://github.com/abelflopes/react-ck/commit/786150e6e20b368110b51c1f47ffab96fab26894))
+* icons alignment ([9a20681](https://github.com/abelflopes/react-ck/commit/9a20681b89fe348c72fdbe5c2918c3b04d070407))
+* **text:** adjust small variation ([bb0290a](https://github.com/abelflopes/react-ck/commit/bb0290ae97796c4661b364a9e5e1d802a9b6fb58))
+
+
+### Code Refactoring
+
+* destruct args list in merge refs util ([3bed311](https://github.com/abelflopes/react-ck/commit/3bed3110fa73a6f333b1555edf45f3a30765f11f))
+* **text:** allow defining variation and skin in text-base mixin ([fd736eb](https://github.com/abelflopes/react-ck/commit/fd736eb91ea85c4496eb62a570e935da0a208c79))
+
 ## [4.4.0](https://github.com/abelflopes/react-ck/compare/v4.3.0...v4.4.0) (2025-07-29)
 
 
