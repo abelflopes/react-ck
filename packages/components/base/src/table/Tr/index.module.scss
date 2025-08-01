@@ -6,4 +6,8 @@
 
 .interactive {
   cursor: pointer;
+
+  &:hover:not(.selected) {
+    background-color: theme.get-color(neutral-light-200);
+  }
 }
