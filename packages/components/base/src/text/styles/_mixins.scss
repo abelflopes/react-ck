@@ -27,10 +27,11 @@
 }
 
 @mixin text-base($variation: p, $skin: base) {
-  @include text-variation($variation);
-  @include text-skin($skin);
   @include scss-utils.define-css-var(text, color, theme.get-color(neutral-dark-500));
   @include scss-utils.define-css-var(text, text-decoration, none);
+
+  @include text-variation($variation);
+  @include text-skin($skin);
 
   color: scss-utils.get-css-var(text, color);
   font-family: inherit;
