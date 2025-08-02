@@ -12,6 +12,7 @@ import { ScrollableContainer } from "../scrollable-container";
 import { ModalHeader } from "./ModalHeader";
 import { ModalFooter } from "./ModalFooter";
 import { FocusTrap } from "@react-ck/focus-trap";
+import { KeyboardControls } from "@react-ck/keyboard-controls";
 
 /**
  * ModalProps interface represents the properties for the Modal component.
@@ -99,6 +100,21 @@ const Modal = ({
       focusTrap.deactivate();
     };
   }, [open, focusWrapperElement]);
+
+  // Initialize and cleanup keyboard controls
+  useEffect(() => {
+    if (!open || !focusWrapperElement) return;
+
+    // Initialize keyboard controls
+    const keyboardControls = new KeyboardControls(focusWrapperElement, {
+      onEscape: onDismiss,
+    });
+    keyboardControls.activate();
+
+    return () => {
+      keyboardControls.deactivate();
+    };
+  }, [open, focusWrapperElement, onDismiss]);
 
   // Lock scroll if there are open modals
   useEffect(() => {

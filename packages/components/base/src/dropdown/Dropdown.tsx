@@ -7,6 +7,7 @@ import styles from "./index.module.scss";
 import classNames from "classnames";
 import { useOnClickOutside } from "@react-ck/react-utils";
 import { FocusTrap } from "@react-ck/focus-trap";
+import { KeyboardControls } from "@react-ck/keyboard-controls";
 
 /** Default positions to exclude from auto-positioning */
 const defaultExclude: PositionEngineProps["exclude"] = ["left", "right", "full"];
@@ -108,6 +109,24 @@ export const Dropdown = ({
       focusTrap.deactivate();
     };
   }, [internalOpen, focusWrapperElement, restoreFocus]);
+
+  // Initialize and cleanup keyboard controls
+  useEffect(() => {
+    if (!open || !focusWrapperElement) return;
+
+    // Initialize keyboard controls
+    const keyboardControls = new KeyboardControls(focusWrapperElement, {
+      onEscape: () => {
+        setInternalOpen(false);
+        onClose?.();
+      },
+    });
+    keyboardControls.activate();
+
+    return () => {
+      keyboardControls.deactivate();
+    };
+  }, [open, focusWrapperElement, onClose]);
 
   // Sync external and internal states
   useEffect(() => {

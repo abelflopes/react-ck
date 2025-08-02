@@ -22,7 +22,7 @@ const meta: Meta<typeof Modal> = {
 
 const render = (props: ModalProps): React.ReactElement => {
   // eslint-disable-next-line react-hooks/rules-of-hooks -- not recognized inside stories
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(props.open);
 
   return (
     <Container size="s">
@@ -60,12 +60,7 @@ const header = (
 );
 
 const footer = (
-  <Modal.Footer
-    actions={
-      <Button>
-        <Button>{faker.lorem.word()}</Button>
-      </Button>
-    }>
+  <Modal.Footer actions={<Button>{faker.lorem.word()}</Button>}>
     {faker.lorem.sentence(6)}
   </Modal.Footer>
 );
