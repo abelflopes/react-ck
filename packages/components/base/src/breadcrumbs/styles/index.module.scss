@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   gap: theme.get-spacing(0.5);
+  color: theme.get-color(neutral-dark-100);
 
   @include theme.focus;
 }
