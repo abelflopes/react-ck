@@ -3,7 +3,7 @@
 exports[`snapshot Modal renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="root dark blur root"
+    class="root dark blur root header_bordered footer_bordered"
   >
     <div
       class="card size_m size_var_normal"
