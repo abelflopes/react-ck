@@ -9,7 +9,7 @@
 
 @mixin focus-reset {
   box-shadow: none;
-  outline: none;
+  outline: solid 0 transparent;
 }
 
 @mixin focus-active {

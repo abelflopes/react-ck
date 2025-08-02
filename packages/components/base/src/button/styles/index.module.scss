@@ -96,6 +96,24 @@
   }
 }
 
+.size-block {
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+  padding-top: theme.get-spacing(1.5);
+  padding-bottom: theme.get-spacing(1.5);
+  gap: theme.get-spacing(1);
+  border-radius: theme.get-spacing(2);
+
+  .icon {
+    margin: 0;
+  }
+
+  &.icon-only {
+    align-items: center;
+  }
+}
+
 // Skins
 
 @each $skin, $skin_variations in variables.$button-skins {

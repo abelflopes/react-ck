@@ -105,6 +105,10 @@ $button-skins: (
   ),
 );
 $button-sizes: (
+  block: (
+    height: theme.get-spacing(9),
+    padding-x: theme.get-spacing(1.5),
+  ),
   xl: (
     height: theme.get-spacing(7),
     padding-x: theme.get-spacing(3),

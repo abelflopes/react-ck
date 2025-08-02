@@ -83,6 +83,22 @@ export const Disabled: Story = {
   },
 };
 
+export const Block: Story = {
+  args: {
+    ...Default.args,
+    iconPosition: "before",
+    size: "block",
+    skin: "secondary",
+    skinVariation: "muted",
+    fullWidth: true,
+    icon: (
+      <Icon>
+        <IconClose />
+      </Icon>
+    ),
+  },
+};
+
 export const AllButtonVariations: Story = {
   decorators: [
     (): React.ReactElement =>

@@ -27,7 +27,7 @@ export interface ButtonProps<T extends HTMLTag = "button">
   /** Controls the button's size, affecting padding and overall dimensions.
    * @default "m"
    */
-  size?: "xs" | "s" | "m" | "l" | "xl";
+  size?: "xs" | "s" | "m" | "l" | "xl" | "block";
   /** Icon element to be displayed within the button.
    * Can be any valid React node (SVG, icon component, etc).
    */
