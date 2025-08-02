@@ -38,12 +38,8 @@
 // When not inside form field, has own border, etc
 .standalone {
   @include form-field.standalone-input;
-  @include theme.focus-base;
-  @include theme.focus-transition;
 
-  &:focus-within {
-    @include theme.focus-active;
-  }
+  @include theme.focus(focus-within);
 }
 
 .menu {

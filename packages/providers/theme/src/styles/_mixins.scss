@@ -12,24 +12,16 @@
   outline: none;
 }
 
-@mixin focus-transition {
-  transition-duration: 0.3s;
-  transition-property: outline, outline-offset;
-  transition-timing-function: ease;
-}
-
-@mixin focus-base {
-  outline: solid scss-utils.get-css-var(spacing, border) transparent;
-}
-
 @mixin focus-active {
-  outline: solid scss-utils.get-css-var(spacing, border) functions.get-color(highlight-primary);
-  outline-offset: functions.get-spacing(0.2);
+  outline: solid calc(scss-utils.get-css-var(spacing, border) * 2) functions.get-color(focus);
 }
 
 @mixin focus($mode: "focus-visible") {
+  @if not($mode == "focus" or $mode == "focus-visible" or $mode == "focus-within") {
+    @error "Invalid focus mode: #{$mode}. Expected 'focus', 'focus-visible', or 'focus-within'";
+  }
+
   @include focus-reset;
-  @include focus-base;
 
   &:#{$mode} {
     @include focus-active;

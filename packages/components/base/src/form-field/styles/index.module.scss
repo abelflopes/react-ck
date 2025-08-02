@@ -76,12 +76,7 @@
 .variation_default {
   .input_wrapper {
     @include shared.wrapper;
-    @include theme.focus-base;
-    @include theme.focus-transition;
-
-    &:focus-within {
-      @include theme.focus-active;
-    }
+    @include theme.focus(focus-within);
   }
 }
 
