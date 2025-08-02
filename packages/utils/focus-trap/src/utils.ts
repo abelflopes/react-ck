@@ -11,7 +11,9 @@ export const getFocusableElements = (options: {
   const focusableElements = [
     ...(options.additionalElements || []),
     ...options.container.querySelectorAll<HTMLElement>(focusableSelectors.join(",")),
-  ].filter((el) => el.checkVisibility() && !el.hasAttribute("disabled") && el.tabIndex !== -1);
+  ]
+    .filter((el) => el.checkVisibility() && !el.hasAttribute("disabled") && el.tabIndex !== -1)
+    .sort((a, b) => a.tabIndex - b.tabIndex);
 
   const firstFocusableElement = focusableElements[0] || null;
   const lastFocusableElement = focusableElements[focusableElements.length - 1] || null;
