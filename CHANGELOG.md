@@ -1,3 +1,23 @@
+## [4.7.0](https://github.com/abelflopes/react-ck/compare/v4.6.0...v4.7.0) (2025-08-02)
+
+
+### Features
+
+* add keyboard controls, focus navigation with arrows, and escape dismiss ([9bf499c](https://github.com/abelflopes/react-ck/commit/9bf499c86cf2a4eb644d76fbe8bc204aacdfe670))
+* breadcrumbs ui ([0770c8a](https://github.com/abelflopes/react-ck/commit/0770c8aed13f0b81d63fce8f28ebf91504c891e5))
+* **button:** add block size variation ([da0f52f](https://github.com/abelflopes/react-ck/commit/da0f52f021bdefe71c283dca16b1767d80a7bb50))
+* **react-ck:** global library package ([4f1cf32](https://github.com/abelflopes/react-ck/commit/4f1cf3264f37a725350b62a28fafaddec75c2c02))
+* **table:** add interactive row hover state ([2a12cf4](https://github.com/abelflopes/react-ck/commit/2a12cf4f17b797afb5ec0512d01532198f29b7fd))
+* update focus styles ([f4228b1](https://github.com/abelflopes/react-ck/commit/f4228b146849d731a7f92d15cc2012285ecc3c98))
+
+
+### Bug Fixes
+
+* fix handling of tab navigation ([478f08d](https://github.com/abelflopes/react-ck/commit/478f08d2729e29acced3cbb47140c58de9a36646))
+* remove borders from dialog ([fda6e82](https://github.com/abelflopes/react-ck/commit/fda6e8202e676d784ab886aae9d38da404a86ffe))
+* storybook docs display ([d7a0785](https://github.com/abelflopes/react-ck/commit/d7a07852d784b298e4df6ddfc738c04c80ecdaa4))
+* text skins ([0ecaca5](https://github.com/abelflopes/react-ck/commit/0ecaca5457969d23189dbb4c95218ccb5346af9c))
+
 ## [4.6.0](https://github.com/abelflopes/react-ck/compare/v4.5.0...v4.6.0) (2025-07-31)
 
 
