@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@2.3.6...@react-ck/theme@2.4.0) (2025-08-02)
+
+
+### Features
+
+* **button:** add block size variation ([da0f52f](https://github.com/abelflopes/react-ck/commit/da0f52f021bdefe71c283dca16b1767d80a7bb50))
+* update focus styles ([f4228b1](https://github.com/abelflopes/react-ck/commit/f4228b146849d731a7f92d15cc2012285ecc3c98))
+
+
+
 ## [2.3.6](https://github.com/abelflopes/react-ck/compare/@react-ck/theme@2.3.5...@react-ck/theme@2.3.6) (2025-07-28)
 
 **Note:** Version bump only for package @react-ck/theme

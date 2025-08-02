@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.3.2...@react-ck/focus-trap@1.4.0) (2025-08-02)
+
+
+### Features
+
+* add keyboard controls, focus navigation with arrows, and escape dismiss ([9bf499c](https://github.com/abelflopes/react-ck/commit/9bf499c86cf2a4eb644d76fbe8bc204aacdfe670))
+
+
+### Bug Fixes
+
+* fix handling of tab navigation ([478f08d](https://github.com/abelflopes/react-ck/commit/478f08d2729e29acced3cbb47140c58de9a36646))
+
+
+
 ## [1.3.2](https://github.com/abelflopes/react-ck/compare/@react-ck/focus-trap@1.3.1...@react-ck/focus-trap@1.3.2) (2025-07-31)
 
 **Note:** Version bump only for package @react-ck/focus-trap

@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/focus-trap",
   "private": false,
-  "version": "1.3.2",
+  "version": "1.4.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
