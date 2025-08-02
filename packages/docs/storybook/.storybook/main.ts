@@ -23,6 +23,17 @@ const config: StorybookConfig = {
       to: "/docs/assets",
     },
   ],
+  typescript: {
+    check: true,
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldExtractValuesFromUnion: true,
+      shouldIncludePropTagMap: true,
+      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+      EXPERIMENTAL_useProjectService: true,
+    },
+  },
   async viteFinal(config) {
     const { mergeConfig } = await import("vite");
     return mergeConfig(config, await getExtendedViteConfig());
