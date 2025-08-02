@@ -71,7 +71,15 @@ $padding: theme.get-spacing(2);
 }
 
 .content {
-  padding: $padding;
+  padding: 0 $padding;
+
+  .header_bordered & {
+    padding-top: $padding;
+  }
+
+  .footer_bordered & {
+    padding-bottom: $padding;
+  }
 
   &_no_header {
     padding-top: $padding;
@@ -95,7 +103,10 @@ $padding: theme.get-spacing(2);
   align-items: center;
   justify-content: flex-end;
   gap: theme.get-spacing();
-  border-bottom-width: scss-utils.get-css-var(spacing, border);
+
+  .header_bordered & {
+    border-bottom-width: scss-utils.get-css-var(spacing, border);
+  }
 
   .header_content {
     margin-right: auto;
@@ -107,7 +118,10 @@ $padding: theme.get-spacing(2);
   align-items: center;
   margin-top: auto;
   gap: $padding;
-  border-top-width: scss-utils.get-css-var(spacing, border);
+
+  .footer_bordered & {
+    border-top-width: scss-utils.get-css-var(spacing, border);
+  }
 
   &_content {
     flex-grow: 1;

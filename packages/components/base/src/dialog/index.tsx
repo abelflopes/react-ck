@@ -30,10 +30,10 @@ export const Dialog = ({
     dismissOnClickOutside={false}
     layerGroup="dialog"
     {...otherProps}>
-    {heading ? <Modal.Header>{heading}</Modal.Header> : null}
+    {heading ? <Modal.Header bordered={false}>{heading}</Modal.Header> : null}
 
     {children}
 
-    {actions ? <Modal.Footer actions={actions} /> : null}
+    {actions ? <Modal.Footer bordered={false} actions={actions} /> : null}
   </Modal>
 );

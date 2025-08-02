@@ -155,6 +155,8 @@ const Modal = ({
           styles.root,
           temporaryHidden && styles.hidden,
           dismissOnClickOutside && onDismiss && styles.clickable_overlay,
+          (props.header?.bordered ?? true) && styles.header_bordered,
+          (props.footer?.bordered ?? true) && styles.footer_bordered,
           className,
         )}
         onClick={(e) => {

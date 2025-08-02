@@ -2,10 +2,12 @@ import React from "react";
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
   actions?: React.ReactNode;
+  bordered?: boolean;
 }
 
 export interface FooterProps extends React.HTMLAttributes<HTMLElement> {
   actions?: React.ReactNode;
+  bordered?: boolean;
 }
 
 export interface ModalContextValue {
