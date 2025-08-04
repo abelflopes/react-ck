@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 
@@ -6,7 +6,7 @@ import classNames from "classnames";
  * Props interface for the Overlay component.
  * Defines visual options for the overlay layer.
  */
-interface OverlayProps extends React.ComponentPropsWithoutRef<"div"> {
+interface OverlayProps extends React.ComponentPropsWithRef<"div"> {
   /** Visual style affecting opacity and color.
    * @default "dark"
    */
@@ -29,16 +29,18 @@ interface OverlayProps extends React.ComponentPropsWithoutRef<"div"> {
  * @param props - Component props {@link OverlayProps}
  * @returns React element
  */
-const Overlay = forwardRef<HTMLDivElement, Readonly<OverlayProps>>(
-  ({ skin = "dark", blur = true, className, ...otherProps }, ref): React.ReactElement => (
-    <div
-      ref={ref}
-      className={classNames(styles.root, styles[skin], blur && styles.blur, className)}
-      {...otherProps}
-    />
-  ),
+export const Overlay = ({
+  skin = "dark",
+  blur = true,
+  className,
+  ref,
+  ...otherProps
+}: Readonly<OverlayProps>): React.ReactElement => (
+  <div
+    ref={ref}
+    className={classNames(styles.root, styles[skin], blur && styles.blur, className)}
+    {...otherProps}
+  />
 );
 
-Overlay.displayName = "Overlay";
-
-export { Overlay, type OverlayProps };
+export { type OverlayProps };

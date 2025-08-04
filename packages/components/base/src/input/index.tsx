@@ -1,6 +1,5 @@
 import React, {
   type ComponentPropsWithRef,
-  forwardRef,
   type HTMLInputTypeAttribute,
   useEffect,
   useMemo,
@@ -43,55 +42,56 @@ interface InputProps extends Omit<ComponentPropsWithRef<"input">, "children"> {
  * @returns React element
  */
 
-const Input = forwardRef<HTMLInputElement, Readonly<InputProps>>(
-  ({ skin, fullWidth, id, className, disabled, ignoreContextErrors, ...props }, ref) => {
-    const formFieldContext = useFormFieldContext();
+export const Input = ({
+  skin,
+  fullWidth,
+  id,
+  className,
+  disabled,
+  ignoreContextErrors,
+  ...props
+}: Readonly<InputProps>): React.ReactElement => {
+  const formFieldContext = useFormFieldContext();
 
-    const computedSkin = useMemo(
-      () => formFieldContext?.skin ?? skin ?? "default",
-      [formFieldContext?.skin, skin],
-    );
+  const computedSkin = useMemo(
+    () => formFieldContext?.skin ?? skin ?? "default",
+    [formFieldContext?.skin, skin],
+  );
 
-    const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
+  const computedId = useMemo(() => formFieldContext?.id ?? id, [formFieldContext?.id, id]);
 
-    // Determines if input should render the default styles or not
-    const isDefaultStyle = useMemo(() => {
-      const specialTypes: HTMLInputTypeAttribute[] = ["checkbox", "radio", "range", "color"];
-      return !props.type || !specialTypes.includes(props.type);
-    }, [props.type]);
+  // Determines if input should render the default styles or not
+  const isDefaultStyle = useMemo(() => {
+    const specialTypes: HTMLInputTypeAttribute[] = ["checkbox", "radio", "range", "color"];
+    return !props.type || !specialTypes.includes(props.type);
+  }, [props.type]);
 
-    // Validate usage inside form field
-    useEffect(() => {
-      // Is not inside form field, skip
-      if (formFieldContext === undefined || ignoreContextErrors) return;
+  // Validate usage inside form field
+  useEffect(() => {
+    // Is not inside form field, skip
+    if (formFieldContext === undefined || ignoreContextErrors) return;
 
-      // Is inside form field
-      if (skin)
-        throw new Error("When using input inside form field, define skin on the form field");
-      else if (id)
-        throw new Error("When using input inside form field, define id on the form field");
-    }, [formFieldContext, id, skin, ignoreContextErrors]);
+    // Is inside form field
+    if (skin) throw new Error("When using input inside form field, define skin on the form field");
+    else if (id) throw new Error("When using input inside form field, define id on the form field");
+  }, [formFieldContext, id, skin, ignoreContextErrors]);
 
-    return (
-      <input
-        ref={ref}
-        {...props}
-        id={computedId}
-        disabled={disabled || formFieldContext?.disabled}
-        className={classNames(
-          isDefaultStyle && [
-            defaultStyles.root,
-            formFieldContext === undefined && defaultStyles.standalone,
-            defaultStyles[`skin_${computedSkin}`],
-            (fullWidth ?? formFieldContext?.fullWidth) && defaultStyles.full_width,
-          ],
-          className,
-        )}
-      />
-    );
-  },
-);
+  return (
+    <input
+      {...props}
+      id={computedId}
+      disabled={disabled || formFieldContext?.disabled}
+      className={classNames(
+        isDefaultStyle && [
+          defaultStyles.root,
+          formFieldContext === undefined && defaultStyles.standalone,
+          defaultStyles[`skin_${computedSkin}`],
+          (fullWidth ?? formFieldContext?.fullWidth) && defaultStyles.full_width,
+        ],
+        className,
+      )}
+    />
+  );
+};
 
-Input.displayName = "Input";
-
-export { Input, type InputProps };
+export { type InputProps };

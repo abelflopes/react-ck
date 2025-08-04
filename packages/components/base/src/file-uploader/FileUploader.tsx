@@ -1,5 +1,5 @@
 import styles from "./styles/index.module.scss";
-import React, { useCallback, useMemo, useRef, forwardRef, useEffect } from "react";
+import React, { useCallback, useMemo, useRef, useEffect } from "react";
 import classNames from "classnames";
 import { Text } from "../text";
 import { Button, type ButtonProps } from "../button";
@@ -19,7 +19,7 @@ import { megeRefs } from "@react-ck/react-utils";
  * Props for configuring the FileUploader component
  */
 interface FileUploaderProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, "onChange" | "onProgress"> {
+  extends Omit<React.ComponentPropsWithRef<"div">, "onChange" | "onProgress" | "type"> {
   /** Visual style of the uploader. Defaults to "default" */
   skin?: "default" | "negative" | "disabled";
   /** Layout variation of the uploader. Defaults to "default" */
@@ -29,7 +29,7 @@ interface FileUploaderProps
   /** Optional description text */
   description?: React.ReactNode;
   /** Props passed to the file input element */
-  inputProps?: Omit<React.InputHTMLAttributes<HTMLInputElement>, "type">;
+  inputProps?: Omit<React.ComponentPropsWithRef<"input">, "type">;
   /** Props passed to the button element when in icon-only mode */
   buttonProps?: ButtonProps;
   /** Validation message displayed below the uploader */
@@ -49,117 +49,110 @@ interface FileUploaderProps
  * File input component with drag and drop support
  * Supports icon-only and descriptive layouts with validation
  */
-const FileUploader = forwardRef<HTMLInputElement, Readonly<FileUploaderProps>>(
-  (
-    {
-      skin = "default",
-      variation = "default",
-      icon,
-      description,
-      validationMessage,
-      className,
-      children,
-      inputProps,
-      buttonProps,
-      onChange,
-      onProgress,
-      openImmediately,
-      ...otherProps
+export const FileUploader = ({
+  skin = "default",
+  variation = "default",
+  icon,
+  description,
+  validationMessage,
+  className,
+  children,
+  inputProps,
+  buttonProps,
+  onChange,
+  onProgress,
+  openImmediately,
+  ...otherProps
+}: Readonly<FileUploaderProps>): React.ReactElement => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const isIconOnly = useMemo(() => Boolean(icon) && !description, [description, icon]);
+
+  const isFirstRender = useRef(true);
+
+  const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
+    if (e.code === "Enter") inputRef.current?.click();
+  }, []);
+
+  const handleChange = useCallback<React.ChangeEventHandler<HTMLInputElement>>(
+    (e) => {
+      if (!e.target.files) throw new Error("No files added");
+
+      const fileList = readFileList(e.target.files, onProgress);
+
+      onChange?.(e, fileList);
+
+      inputProps?.onChange?.(e);
     },
-    ref,
-  ): React.ReactElement => {
-    const inputRef = useRef<HTMLInputElement>(null);
-    const isIconOnly = useMemo(() => Boolean(icon) && !description, [description, icon]);
+    [inputProps, onChange, onProgress],
+  );
 
-    const isFirstRender = useRef(true);
+  useEffect(() => {
+    if (openImmediately && isFirstRender.current) inputRef.current?.click();
+  }, [openImmediately]);
 
-    const handleKeyUp = useCallback((e: React.KeyboardEvent<HTMLElement>): void => {
-      if (e.code === "Enter") inputRef.current?.click();
-    }, []);
+  useEffect(() => {
+    isFirstRender.current = false;
+  }, []);
 
-    const handleChange = useCallback<React.ChangeEventHandler<HTMLInputElement>>(
-      (e) => {
-        if (!e.target.files) throw new Error("No files added");
+  return (
+    <div
+      {...otherProps}
+      className={classNames(
+        variation !== "default" && styles[variation],
+        skin !== "default" && styles[skin],
+        !isIconOnly && styles.root,
+        isIconOnly && styles.root_icon_only,
+        className,
+      )}>
+      <input
+        {...inputProps}
+        ref={megeRefs(inputRef, inputProps?.ref)}
+        type="file"
+        className={classNames(styles.file, inputProps?.className)}
+        onChange={handleChange}
+        onKeyUp={(e) => {
+          handleKeyUp(e);
+          inputProps?.onKeyUp?.(e);
+        }}
+      />
 
-        const fileList = readFileList(e.target.files, onProgress);
+      {!isIconOnly && icon}
 
-        onChange?.(e, fileList);
+      {children ? <div className={styles.content}>{children}</div> : null}
 
-        inputProps?.onChange?.(e);
-      },
-      [inputProps, onChange, onProgress],
-    );
-
-    useEffect(() => {
-      if (openImmediately && isFirstRender.current) inputRef.current?.click();
-    }, [openImmediately]);
-
-    useEffect(() => {
-      isFirstRender.current = false;
-    }, []);
-
-    return (
-      <div
-        {...otherProps}
-        className={classNames(
-          variation !== "default" && styles[variation],
-          skin !== "default" && styles[skin],
-          !isIconOnly && styles.root,
-          isIconOnly && styles.root_icon_only,
-          className,
-        )}>
-        <input
-          {...inputProps}
-          ref={megeRefs(ref, inputRef)}
-          type="file"
-          className={classNames(styles.file, inputProps?.className)}
-          onChange={handleChange}
+      {isIconOnly ? (
+        <Button
+          {...buttonProps}
+          icon={icon}
+          disabled={skin === "disabled" || buttonProps?.disabled}
+          className={classNames(styles.button, buttonProps?.className)}
           onKeyUp={(e) => {
             handleKeyUp(e);
-            inputProps?.onKeyUp?.(e);
+            buttonProps?.onKeyUp?.(e);
+          }}
+          onClick={(e) => {
+            inputRef.current?.click();
+            buttonProps?.onClick?.(e);
           }}
         />
+      ) : null}
 
-        {!isIconOnly && icon}
+      {description || validationMessage ? (
+        <div className={styles.details}>
+          {description ? (
+            <Text variation="small" skin="soft">
+              {description}
+            </Text>
+          ) : null}
+          {validationMessage ? (
+            <Text variation="small" className={styles.validation_message}>
+              {validationMessage}
+            </Text>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  );
+};
 
-        {children ? <div className={styles.content}>{children}</div> : null}
-
-        {isIconOnly ? (
-          <Button
-            {...buttonProps}
-            icon={icon}
-            disabled={skin === "disabled" || buttonProps?.disabled}
-            className={classNames(styles.button, buttonProps?.className)}
-            onKeyUp={(e) => {
-              handleKeyUp(e);
-              buttonProps?.onKeyUp?.(e);
-            }}
-            onClick={(e) => {
-              inputRef.current?.click();
-              buttonProps?.onClick?.(e);
-            }}
-          />
-        ) : null}
-
-        {description || validationMessage ? (
-          <div className={styles.details}>
-            {description ? (
-              <Text variation="small" skin="soft">
-                {description}
-              </Text>
-            ) : null}
-            {validationMessage ? (
-              <Text variation="small" className={styles.validation_message}>
-                {validationMessage}
-              </Text>
-            ) : null}
-          </div>
-        ) : null}
-      </div>
-    );
-  },
-);
-
-FileUploader.displayName = "FileUploader";
-
-export { FileUploader, type FileUploaderProps };
+export { type FileUploaderProps };

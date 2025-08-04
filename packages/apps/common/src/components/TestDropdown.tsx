@@ -8,7 +8,7 @@ export const TestDropdown = (): React.ReactElement => {
   return (
     <DropdownButton
       renderButton={({ ref, onOpen }) => (
-        <Button rootRef={ref} onClick={onOpen} skin="secondary" skinVariation="muted">
+        <Button ref={ref} onClick={onOpen} skin="secondary" skinVariation="muted">
           Test Dropdown
         </Button>
       )}>

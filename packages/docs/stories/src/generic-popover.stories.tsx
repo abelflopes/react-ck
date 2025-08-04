@@ -35,7 +35,7 @@ export const Component: Story = {
 
     return (
       <>
-        <Button rootRef={buttonRef}>Button</Button>
+        <Button ref={buttonRef}>Button</Button>
         <Popover anchor={buttonRef} open={open} position={position}>
           Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla est, quidem
           enim a molestias accusantium quo officia provident maxime voluptatem, beatae delectus

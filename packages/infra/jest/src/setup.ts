@@ -14,3 +14,11 @@ Object.defineProperty(globalThis, "ResizeObserver", {
     disconnect: jest.fn(),
   })),
 });
+
+// Mock checkVisibility method for HTMLElement
+if (typeof HTMLElement !== "undefined") {
+  Object.defineProperty(HTMLElement.prototype, "checkVisibility", {
+    writable: true,
+    value: jest.fn().mockReturnValue(true),
+  });
+}

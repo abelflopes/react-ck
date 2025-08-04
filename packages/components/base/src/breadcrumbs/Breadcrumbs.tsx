@@ -44,7 +44,7 @@ const Breadcrumbs = ({
           position="bottom-start"
           renderButton={({ ref, open }) => (
             <Button
-              rootRef={ref}
+              ref={ref}
               onClick={open}
               size="s"
               skin="secondary"

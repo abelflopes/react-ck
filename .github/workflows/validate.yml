@@ -31,8 +31,11 @@ jobs:
       - name: Prebuild
         run: npm run prebuild
 
-      - name: Run Tests
-        run: npm run test
+      - name: Run Unit Tests
+        run: npm run test:unit -- --parallel --stream
+
+      - name: Run Snapshot Tests
+        run: npm run test:snapshot -- --parallel --stream
 
       - name: Run Code Checks
         continue-on-error: true

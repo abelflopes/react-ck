@@ -36,7 +36,7 @@ export const Component: Story = {
       <DropdownButton
         open={props.open}
         renderButton={({ ref, open }) => (
-          <Button rootRef={ref} onClick={open}>
+          <Button ref={ref} onClick={open}>
             Dropdown 1
           </Button>
         )}>
@@ -53,7 +53,7 @@ export const Component: Story = {
 
       <DropdownButton
         renderButton={({ ref, open }) => (
-          <Button rootRef={ref} onClick={open}>
+          <Button ref={ref} onClick={open}>
             Button 2
           </Button>
         )}>
@@ -83,7 +83,7 @@ export const ExternalState: Story = {
       <DropdownButton
         open={open}
         renderButton={({ ref, open }) => (
-          <Button rootRef={ref} onClick={open}>
+          <Button ref={ref} onClick={open}>
             Dropdown 1
           </Button>
         )}
@@ -117,7 +117,7 @@ export const IconButton: Story = {
         open={props.open}
         renderButton={({ ref, open }) => (
           <Button
-            rootRef={ref}
+            ref={ref}
             skin="secondary"
             skinVariation="ghost"
             icon={
@@ -142,7 +142,7 @@ export const IconButton: Story = {
         open={props.open}
         renderButton={({ ref, open }) => (
           <Button
-            rootRef={ref}
+            ref={ref}
             skin="secondary"
             skinVariation="ghost"
             icon={

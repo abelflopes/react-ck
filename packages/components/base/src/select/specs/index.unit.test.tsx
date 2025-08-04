@@ -99,4 +99,34 @@ describe("unit Select", () => {
     expect(handleChange).toHaveBeenCalledTimes(1);
     expect(nativeElement.value).toBe(value);
   });
+
+  describe("ref forwarding", () => {
+    it("should forward ref to select element", () => {
+      const ref = React.createRef<HTMLSelectElement>();
+      render(
+        <Select ref={ref} data-testid="select">
+          <Select.Option value="1">Option 1</Select.Option>
+          <Select.Option value="2">Option 2</Select.Option>
+        </Select>,
+      );
+
+      expect(ref.current).toBeInstanceOf(HTMLSelectElement);
+      expect(ref.current?.tagName).toBe("SELECT");
+    });
+
+    it("should allow accessing select methods via ref", () => {
+      const ref = React.createRef<HTMLSelectElement>();
+      render(
+        <Select ref={ref} data-testid="select">
+          <Select.Option value="1">Option 1</Select.Option>
+          <Select.Option value="2">Option 2</Select.Option>
+        </Select>,
+      );
+
+      expect(ref.current).toBeInstanceOf(HTMLSelectElement);
+      expect(typeof ref.current?.focus).toBe("function");
+      expect(typeof ref.current?.blur).toBe("function");
+      expect(typeof ref.current?.click).toBe("function");
+    });
+  });
 });

@@ -37,7 +37,7 @@ export const Component: Story = {
 
     return (
       <>
-        <Button rootRef={buttonRef}>Hover me</Button>
+        <Button ref={buttonRef}>Hover me</Button>
         <Tooltip anchor={buttonRef} open={open} position={position}>
           {faker.lorem.sentence(5)}
         </Tooltip>

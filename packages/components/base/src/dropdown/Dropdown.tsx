@@ -5,7 +5,7 @@ import { ScrollableContainer } from "../scrollable-container";
 import { Card } from "../card";
 import styles from "./index.module.scss";
 import classNames from "classnames";
-import { useOnClickOutside } from "@react-ck/react-utils";
+import { megeRefs, useOnClickOutside } from "@react-ck/react-utils";
 import { FocusTrap } from "@react-ck/focus-trap";
 import { KeyboardControls } from "@react-ck/keyboard-controls";
 
@@ -16,7 +16,7 @@ const defaultExclude: PositionEngineProps["exclude"] = ["left", "right", "full"]
  * Props interface for the Dropdown component.
  * Provides positioning and display options for dropdown content.
  */
-export interface DropdownProps {
+export interface DropdownProps extends React.ComponentPropsWithRef<"div"> {
   /** Reference to the element the dropdown should be positioned relative to */
   anchorRef: PositionEngineProps["anchorRef"];
   /** Fixed position or "auto" for automatic positioning
@@ -37,10 +37,6 @@ export interface DropdownProps {
    * @default "m"
    */
   spacing?: "s" | "m" | "l" | "none";
-  /** Reference to the dropdown's root element.
-   * Useful for imperative actions or measurements.
-   */
-  rootRef?: React.RefObject<HTMLDivElement | null>;
   /** Called when the dropdown should close (e.g., click outside) */
   onClose?: () => void;
   /** Called when the dropdown receives focus */
@@ -78,12 +74,13 @@ export const Dropdown = ({
   position = "auto",
   open = false,
   spacing = "m",
-  rootRef,
   children,
   onClose,
   onFocus,
   onBlur,
   restoreFocus,
+  ref,
+  ...otherProps
 }: Readonly<DropdownProps>) => {
   const containerRef = useRef<HTMLElement | null>(null);
   const [internalOpen, setInternalOpen] = useState(open);
@@ -133,6 +130,14 @@ export const Dropdown = ({
     setInternalOpen(open);
   }, [open]);
 
+  useEffect(() => {
+    console.log("mount");
+
+    return () => {
+      console.log("unmount");
+    };
+  }, []);
+
   return (
     internalOpen && (
       <PositionEngine
@@ -143,19 +148,17 @@ export const Dropdown = ({
         render={({ style }) => (
           <Layer elevation="overlay" group="dropdown">
             <div
-              ref={(r) => {
-                containerRef.current = r;
-
-                if (rootRef) rootRef.current = r;
-
-                setFocusWrapperElement(r || undefined);
+              ref={(el) => {
+                megeRefs(ref, containerRef)(el);
+                setFocusWrapperElement(el || undefined);
               }}
               tabIndex={0}
               role="menu"
               style={style}
-              className={styles.container}
+              className={classNames(styles.container, otherProps.className)}
               onFocus={onFocus}
-              onBlur={onBlur}>
+              onBlur={onBlur}
+              {...otherProps}>
               <Card skin="shadowed" spacing="none" borderRadius="m">
                 <ScrollableContainer
                   horizontal={false}

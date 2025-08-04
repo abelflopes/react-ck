@@ -116,7 +116,7 @@ const Actions = (): React.ReactElement => {
         skin="secondary"
         skinVariation="ghost"
         type="button"
-        rootRef={buttonRef}
+        ref={buttonRef}
         icon={
           <Icon>
             <IconVerticalDots />
@@ -221,7 +221,7 @@ const WithDropdown = ({ children }: { readonly children: React.ReactNode }): Rea
 
   return (
     <>
-      <Button rootRef={buttonRef} skin="primary" skinVariation="muted" onClick={toggleOpen}>
+      <Button ref={buttonRef} skin="primary" skinVariation="muted" onClick={toggleOpen}>
         Toggle dropdown
       </Button>
 
@@ -237,7 +237,7 @@ const WithTooltip = ({ children }: { readonly children: React.ReactNode }): Reac
 
   return (
     <>
-      <Button rootRef={buttonRef} skin="primary" skinVariation="ghost">
+      <Button ref={buttonRef} skin="primary" skinVariation="ghost">
         Hover tooltip
       </Button>
 

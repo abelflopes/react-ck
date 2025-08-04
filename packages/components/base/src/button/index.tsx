@@ -14,7 +14,7 @@ import { Spinner } from "../spinner";
  * @template T - HTML tag type that the button can be rendered as
  */
 export interface ButtonProps<T extends HTMLTag = "button">
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.ComponentPropsWithRef<"button">,
     ConsumerPolymorphicProps<T> {
   /** The visual theme of the button. Affects color scheme and overall appearance.
    * @default "primary"
@@ -36,10 +36,6 @@ export interface ButtonProps<T extends HTMLTag = "button">
    * @default "after"
    */
   iconPosition?: "before" | "after";
-  /** Reference to the root button element.
-   * Useful for imperative actions or DOM measurements.
-   */
-  rootRef?: React.ForwardedRef<HTMLButtonElement>;
   /** When true, the button will expand to fill its container's width.
    * @default false
    */
@@ -74,7 +70,7 @@ export const Button = <T extends HTMLTag>({
   iconPosition = "after",
   children,
   className,
-  rootRef,
+  ref,
   fullWidth,
   loading,
   ...otherProps
@@ -86,7 +82,7 @@ export const Button = <T extends HTMLTag>({
 
   useEffect(() => {
     // Validate icon usage (icon should be set through specific prop)
-    for (const i of React.Children.toArray(children).filter(isValidElement)) {
+    for (const i of React.Children.toArray(children).filter((child) => isValidElement(child))) {
       const name = getDisplayName(i);
       // use any icon display name instead of DISPLAY_NAMES const to have more coverage
       if (name?.toLowerCase().includes("icon"))
@@ -101,7 +97,7 @@ export const Button = <T extends HTMLTag>({
         "button",
         {
           type,
-          ref: rootRef,
+          ref,
           ...otherProps,
         },
       ]}

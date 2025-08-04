@@ -19,7 +19,8 @@ export type ChangeHandler = (value: string, mode: "select" | "deselect") => void
  * Provides a customizable dropdown selection interface with single/multiple selection support.
  */
 export interface SelectProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, "onChange" | "value" | "defaultValue"> {
+  extends Omit<React.ComponentPropsWithoutRef<"div">, "onChange" | "value" | "defaultValue">,
+    Pick<React.ComponentPropsWithRef<"select">, "ref"> {
   /** Visual theme of the select input.
    * @default "default"
    */
