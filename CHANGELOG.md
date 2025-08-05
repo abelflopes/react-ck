@@ -1,3 +1,15 @@
+## [4.8.0](https://github.com/abelflopes/react-ck/compare/v4.7.0...v4.8.0) (2025-08-05)
+
+
+### Features
+
+* **react-ck:** global library package ([c844e2e](https://github.com/abelflopes/react-ck/commit/c844e2e70bf8555d6de833e92ed1de923e12769a))
+
+
+### Code Refactoring
+
+* update ref handling ([29b0a0b](https://github.com/abelflopes/react-ck/commit/29b0a0bcc75a706fd7505a44b98f3bc445594280))
+
 ## [4.7.0](https://github.com/abelflopes/react-ck/compare/v4.6.0...v4.7.0) (2025-08-02)
 
 
