@@ -1,3 +1,15 @@
+## [4.10.0](https://github.com/abelflopes/react-ck/compare/v4.9.0...v4.10.0) (2025-08-06)
+
+
+### Features
+
+* **react-ck:** global library package ([1032d1c](https://github.com/abelflopes/react-ck/commit/1032d1c0de8de1a043cc5379ec1218e228a257bf))
+
+
+### Bug Fixes
+
+* **breadcrumbs:** text wrap & overflow ([6a29e43](https://github.com/abelflopes/react-ck/commit/6a29e43e36f12829561c0399910a876c778df293))
+
 ## [4.9.0](https://github.com/abelflopes/react-ck/compare/v4.8.0...v4.9.0) (2025-08-06)
 
 
