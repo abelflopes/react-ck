@@ -9,7 +9,7 @@ import styles from "./index.module.scss";
 /**
  * Props for configuring a table header cell
  */
-export interface ThProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
+export interface ThProps extends React.ComponentPropsWithRef<"th"> {
   /** Optional sort mode to display sort indicator. When null, header is sortable but not sorted */
   sorting?: SortMode | null;
 }

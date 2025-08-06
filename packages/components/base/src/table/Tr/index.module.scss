@@ -1,13 +1,22 @@
 @use "@react-ck/theme";
 
 .selected {
-  background-color: theme.get-color(highlight-primary-light);
+  th,
+  td {
+    background-color: theme.get-color(highlight-primary-light) !important;
+  }
 }
 
 .interactive {
-  cursor: pointer;
+  th,
+  td {
+    cursor: pointer;
+  }
 
   &:hover:not(.selected) {
-    background-color: theme.get-color(neutral-light-200);
+    th,
+    td {
+      background-color: theme.get-color(neutral-light-200);
+    }
   }
 }

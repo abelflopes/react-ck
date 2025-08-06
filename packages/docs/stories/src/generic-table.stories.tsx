@@ -1,7 +1,7 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { configureStory } from "@react-ck/storybook-utils";
-import { Table, Manager } from "react-ck";
+import { Table, Manager, Checkbox } from "react-ck";
 import { faker } from "@faker-js/faker";
 import * as CC from "change-case";
 
@@ -27,6 +27,9 @@ const rows = 4;
 const children = [
   <Table.Thead key="head">
     <Table.Tr>
+      <Table.Th>
+        <Checkbox indeterminate />
+      </Table.Th>
       {Object.keys(Array.from({ length: columns })).map((i) => (
         <Table.Th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
       ))}
@@ -35,6 +38,9 @@ const children = [
   <Table.TBody key="body">
     {Object.keys(Array.from({ length: rows })).map((r) => (
       <Table.Tr key={r} selected={r === "1"} interactive={Number(r) < rows / 2}>
+        <Table.Td>
+          <Checkbox />
+        </Table.Td>
         {Object.keys(Array.from({ length: columns })).map((i) => (
           <Table.Td key={i}>{faker.company.catchPhraseDescriptor()}</Table.Td>
         ))}
@@ -43,6 +49,7 @@ const children = [
   </Table.TBody>,
   <Table.TFoot key="footer">
     <Table.Tr>
+      <Table.Th></Table.Th>
       {Object.keys(Array.from({ length: columns })).map((i) => (
         <Table.Th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
       ))}
@@ -72,7 +79,7 @@ export const Scrollable: Story = {
   ],
   args: {
     scrollable: true,
-    skin: "bordered",
+    skin: "bordered-column",
     children,
   },
 };

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./index.module.scss";
 
 /** Props for configuring a table row */
-export type TrProps = React.HTMLAttributes<HTMLTableRowElement> & {
+export type TrProps = React.ComponentPropsWithRef<"tr"> & {
   /** Whether the row is selected */
   selected?: boolean;
   /** Whether the row is interactive */

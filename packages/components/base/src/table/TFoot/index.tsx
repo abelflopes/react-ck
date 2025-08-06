@@ -3,7 +3,7 @@ import React from "react";
 import { useTableContext } from "../context";
 import styles from "./index.module.scss";
 
-export type TFootProps = React.HTMLAttributes<HTMLTableSectionElement>;
+export type TFootProps = React.ComponentPropsWithRef<"tfoot">;
 
 export const TFoot = ({ className, ...props }: Readonly<TFootProps>): React.ReactElement => {
   const { skin } = useTableContext();
