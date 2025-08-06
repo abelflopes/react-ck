@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.5.0...@react-ck/base-components@7.5.1) (2025-08-06)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** text wrap & overflow ([6a29e43](https://github.com/abelflopes/react-ck/commit/6a29e43e36f12829561c0399910a876c778df293))
+
+
+
 ## [7.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.4.1...@react-ck/base-components@7.5.0) (2025-08-06)
 
 
