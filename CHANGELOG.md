@@ -1,3 +1,17 @@
+## [4.9.0](https://github.com/abelflopes/react-ck/compare/v4.8.0...v4.9.0) (2025-08-06)
+
+
+### Features
+
+* **react-ck:** global library package ([b67b8e8](https://github.com/abelflopes/react-ck/commit/b67b8e8985597b53e26cbf3ce2e7cfadf0478dc4))
+* **table:** add bordered row & bordered column variations ([f0f27a0](https://github.com/abelflopes/react-ck/commit/f0f27a08e4f9c2cd54a34fbdb04f2f90e419f6ca))
+
+
+### Bug Fixes
+
+* **checkbox:** fix alignment ([4ef71ab](https://github.com/abelflopes/react-ck/commit/4ef71abf691774d2614819ab56f87acd4aac03ec))
+* **table:** border radius clipping ([46e75c4](https://github.com/abelflopes/react-ck/commit/46e75c4553eca13a6b6202ebed66cd65dd556888))
+
 ## [4.8.0](https://github.com/abelflopes/react-ck/compare/v4.7.0...v4.8.0) (2025-08-05)
 
 
