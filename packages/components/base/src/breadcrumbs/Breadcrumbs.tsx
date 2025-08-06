@@ -13,7 +13,7 @@ import { BreadcrumsDropdownContextProvider } from "./context/dropdown";
 /**
  * Props for configuring the Breadcrumbs component
  */
-interface BreadcrumbsProps extends Omit<React.HTMLAttributes<HTMLElement>, "children"> {
+interface BreadcrumbsProps extends Omit<React.ComponentPropsWithRef<"nav">, "children"> {
   /** Array of React nodes to be displayed as breadcrumb items, separated by chevron icons */
   items: React.ReactNode[];
   /** The number of items to collapse at */

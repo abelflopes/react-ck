@@ -4,10 +4,13 @@
 .root {
   @include text.text-base(p, soft);
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: theme.get-spacing(0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+  flex-grow: 0;
+
+  @include theme.focus;
 
   &.active {
     @include text.text-skin(highlight-primary);
