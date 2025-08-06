@@ -5,6 +5,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  vertical-align: text-bottom;
 }
 
 .input {
@@ -16,6 +17,7 @@
   appearance: none;
   cursor: pointer;
   z-index: 1;
+  margin: 0;
 }
 
 .disabled {

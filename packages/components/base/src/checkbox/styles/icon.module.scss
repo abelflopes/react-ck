@@ -30,6 +30,11 @@
   will-change: transform;
   transform: scale(0);
   color: theme.get-color(highlight-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 :indeterminate ~ .root .icon,
