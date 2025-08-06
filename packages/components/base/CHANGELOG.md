@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.4.1...@react-ck/base-components@7.5.0) (2025-08-06)
+
+
+### Features
+
+* **table:** add bordered row & bordered column variations ([f0f27a0](https://github.com/abelflopes/react-ck/commit/f0f27a08e4f9c2cd54a34fbdb04f2f90e419f6ca))
+
+
+### Bug Fixes
+
+* **checkbox:** fix alignment ([4ef71ab](https://github.com/abelflopes/react-ck/commit/4ef71abf691774d2614819ab56f87acd4aac03ec))
+* **table:** border radius clipping ([46e75c4](https://github.com/abelflopes/react-ck/commit/46e75c4553eca13a6b6202ebed66cd65dd556888))
+
+
+
 ## [7.4.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.4.0...@react-ck/base-components@7.4.1) (2025-08-05)
 
 **Note:** Version bump only for package @react-ck/base-components
