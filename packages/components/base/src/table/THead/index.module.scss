@@ -15,5 +15,9 @@
     &:first-child {
       border-top-left-radius: inherit;
     }
+
+    &:last-child {
+      border-top-right-radius: inherit;
+    }
   }
 }
