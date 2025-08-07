@@ -1,6 +1,6 @@
 import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { FormField, Grid, Input, Button, Select, Chip, Manager } from "react-ck";
+import { FormField, Grid, Input, Button, Select, Chip, Manager, Checkbox } from "react-ck";
 
 const meta: Meta = {
   title: "Test/Form Alignment",
@@ -79,6 +79,16 @@ export const demo: Story = {
               <Select.Option>Y</Select.Option>
               <Select.Option>Z</Select.Option>
             </Select>
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={1}>
+          <FormField variation="inline">
+            <Checkbox />
+          </FormField>
+        </Grid.Column>
+        <Grid.Column size={1}>
+          <FormField variation="inline">
+            <Checkbox isToggle />
           </FormField>
         </Grid.Column>
       </Grid>

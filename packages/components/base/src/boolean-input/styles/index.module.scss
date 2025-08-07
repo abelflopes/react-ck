@@ -18,6 +18,8 @@
   cursor: pointer;
   z-index: 1;
   margin: 0;
+
+  @include theme.focus;
 }
 
 .disabled {
