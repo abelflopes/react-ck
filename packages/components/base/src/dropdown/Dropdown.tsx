@@ -130,14 +130,6 @@ export const Dropdown = ({
     setInternalOpen(open);
   }, [open]);
 
-  useEffect(() => {
-    console.log("mount");
-
-    return () => {
-      console.log("unmount");
-    };
-  }, []);
-
   return (
     internalOpen && (
       <PositionEngine
