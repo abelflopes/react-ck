@@ -1,3 +1,15 @@
+## [4.11.0](https://github.com/abelflopes/react-ck/compare/v4.10.0...v4.11.0) (2025-08-07)
+
+
+### Features
+
+* **react-ck:** global library package ([3774b11](https://github.com/abelflopes/react-ck/commit/3774b11dbd3ab18488b2ca7ecacd18c868fe7bc1))
+
+
+### Bug Fixes
+
+* checkbox focus ([5f3c374](https://github.com/abelflopes/react-ck/commit/5f3c37441585203d51c44ccec2844c0d6cb94995))
+
 ## [4.10.0](https://github.com/abelflopes/react-ck/compare/v4.9.0...v4.10.0) (2025-08-06)
 
 
