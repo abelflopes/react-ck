@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.37.4](https://github.com/abelflopes/react-ck/compare/react-ck@3.37.3...react-ck@3.37.4) (2025-08-07)
+
+**Note:** Version bump only for package react-ck
+
+
+
+
+
 ## [3.37.3](https://github.com/abelflopes/react-ck/compare/react-ck@3.37.2...react-ck@3.37.3) (2025-08-06)
 
 **Note:** Version bump only for package react-ck

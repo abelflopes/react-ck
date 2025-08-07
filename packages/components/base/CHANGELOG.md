@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.5.1...@react-ck/base-components@7.5.2) (2025-08-07)
+
+
+### Bug Fixes
+
+* checkbox focus ([5f3c374](https://github.com/abelflopes/react-ck/commit/5f3c37441585203d51c44ccec2844c0d6cb94995))
+
+
+
 ## [7.5.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.5.0...@react-ck/base-components@7.5.1) (2025-08-06)
 
 
