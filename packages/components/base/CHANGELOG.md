@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.5.3](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.5.2...@react-ck/base-components@7.5.3) (2025-08-18)
+
+
+### Bug Fixes
+
+* **textarea:** add missing ref ([f84f23d](https://github.com/abelflopes/react-ck/commit/f84f23dc62cd8f31ab89aabdbfdf21144ada8cbf))
+
+
+
 ## [7.5.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.5.1...@react-ck/base-components@7.5.2) (2025-08-07)
 
 
