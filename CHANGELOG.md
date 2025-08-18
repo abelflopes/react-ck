@@ -1,3 +1,15 @@
+## [4.12.0](https://github.com/abelflopes/react-ck/compare/v4.11.0...v4.12.0) (2025-08-18)
+
+
+### Features
+
+* **react-ck:** global library package ([7a5349e](https://github.com/abelflopes/react-ck/commit/7a5349eae270d77a5e77a197c35b19614ae3af5e))
+
+
+### Bug Fixes
+
+* **textarea:** add missing ref ([f84f23d](https://github.com/abelflopes/react-ck/commit/f84f23dc62cd8f31ab89aabdbfdf21144ada8cbf))
+
 ## [4.11.0](https://github.com/abelflopes/react-ck/compare/v4.10.0...v4.11.0) (2025-08-07)
 
 
