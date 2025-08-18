@@ -7,7 +7,7 @@ import { useFormFieldContext, type FormFieldProps } from "../form-field";
  * Props interface for the Textarea component.
  * Extends native textarea attributes with form field integration.
  */
-export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextareaProps extends React.ComponentPropsWithRef<"textarea"> {
   /** Visual theme of the textarea. When used within FormField, define on FormField instead.
    * @default "default"
    */
