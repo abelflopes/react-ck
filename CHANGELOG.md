@@ -1,3 +1,10 @@
+## [4.13.0](https://github.com/abelflopes/react-ck/compare/v4.12.0...v4.13.0) (2025-08-20)
+
+
+### Features
+
+* use single unique id generator ([a3ddb73](https://github.com/abelflopes/react-ck/commit/a3ddb7385501fb6d28969183ea414ddb2ba93651))
+
 ## [4.12.0](https://github.com/abelflopes/react-ck/compare/v4.11.0...v4.12.0) (2025-08-18)
 
 
