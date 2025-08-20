@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.6.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.5.3...@react-ck/base-components@7.6.0) (2025-08-20)
+
+
+### Features
+
+* use single unique id generator ([a3ddb73](https://github.com/abelflopes/react-ck/commit/a3ddb7385501fb6d28969183ea414ddb2ba93651))
+
+
+
 ## [7.5.3](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.5.2...@react-ck/base-components@7.5.3) (2025-08-18)
 
 

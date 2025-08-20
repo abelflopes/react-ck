@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/abelflopes/react-ck/compare/@react-ck/manager@1.3.26...@react-ck/manager@1.4.0) (2025-08-20)
+
+
+### Features
+
+* use single unique id generator ([a3ddb73](https://github.com/abelflopes/react-ck/commit/a3ddb7385501fb6d28969183ea414ddb2ba93651))
+
+
+
 ## [1.3.26](https://github.com/abelflopes/react-ck/compare/@react-ck/manager@1.3.25...@react-ck/manager@1.3.26) (2025-08-02)
 
 **Note:** Version bump only for package @react-ck/manager
