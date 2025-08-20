@@ -3,7 +3,7 @@ import { Select } from "../index";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { mockResizeObserver } from "./mocks";
-// eslint-disable-next-line workspaces/require-dependency -- testing purposes only
+
 import { Manager } from "@react-ck/manager/src";
 
 /**

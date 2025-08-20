@@ -3,15 +3,19 @@
 exports[`snapshot FormField renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="root skin_default variation_default"
+    style="--react-ck-color-highlight-primary-light: hsl(185deg 50% 95%); --react-ck-color-highlight-primary: hsl(185deg 50% 55%); --react-ck-color-highlight-primary-dark: hsl(185deg 50% 35%); --react-ck-color-highlight-alt: #0052cc; --react-ck-color-highlight-alt-dark: #003e99; --react-ck-color-neutral-light-100: #fff; --react-ck-color-neutral-light-200: hsl(230deg 40% 76% / 10%); --react-ck-color-neutral-light-300: hsl(230deg 40% 76% / 20%); --react-ck-color-neutral-light-400: hsl(230deg 30% 46% / 20%); --react-ck-color-neutral-light-500: hsl(230deg 10% 2% / 25%); --react-ck-color-neutral-light-600: hsl(230deg 5% 1% / 35%); --react-ck-color-neutral-light-200-solid: #F9FAFB; --react-ck-color-neutral-light-300-solid: hsl(230deg 40% 95%); --react-ck-color-neutral-light-400-solid: hsl(230deg 30% 90%); --react-ck-color-neutral-light-500-solid: hsl(230deg 10% 80%); --react-ck-color-neutral-light-600-solid: hsl(230deg 5% 70%); --react-ck-color-neutral-dark-100: hsl(230deg 5% 60%); --react-ck-color-neutral-dark-200: hsl(230deg 5% 50%); --react-ck-color-neutral-dark-300: hsl(230deg 5% 40%); --react-ck-color-neutral-dark-400: hsl(230deg 15% 25%); --react-ck-color-neutral-dark-500: hsl(230deg 25% 15%); --react-ck-color-status-positive-light: #E1FCF0; --react-ck-color-status-positive: #00D891; --react-ck-color-status-positive-dark: #276749; --react-ck-color-status-average-light: #FFEDD5; --react-ck-color-status-average: #F59E0B; --react-ck-color-status-average-dark: #9b5c2c; --react-ck-color-status-negative-light: #FFF0F0; --react-ck-color-status-negative: #EF4444; --react-ck-color-status-negative-dark: #b71010; --react-ck-color-status-info-light: #BFDBFE; --react-ck-color-status-info: #3B82F6; --react-ck-color-status-info-dark: #0950c3; --react-ck-color-overlay-light: rgba(255,255,255, .4); --react-ck-color-overlay-dark: rgba(0,0,0,.2); --react-ck-color-focus: #2684FFB2; --react-ck-color-misc-1: #F28B82; --react-ck-color-misc-2: #FF8EA2; --react-ck-color-misc-3: #7EC9FF; --react-ck-color-misc-4: #BABAFD; --react-ck-color-misc-5: #90d585; --react-ck-font-family: system-ui, sans-serif; --react-ck-font-base-size: 14px; --react-ck-spacing-base: 8px; --react-ck-spacing-border: 1px;"
   >
     <div
-      class="main_content"
+      class="root skin_default variation_default"
     >
       <div
-        class="input_wrapper"
+        class="main_content"
       >
-        FormField
+        <div
+          class="input_wrapper"
+        >
+          FormField
+        </div>
       </div>
     </div>
   </div>

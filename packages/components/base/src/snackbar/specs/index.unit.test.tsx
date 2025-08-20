@@ -3,7 +3,7 @@ import { render, screen, waitFor, act } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Snackbar } from "../index";
 import { useSnackbar } from "@react-ck/snackbar-provider";
-// eslint-disable-next-line workspaces/require-dependency -- testing purposes only
+
 import { Manager } from "@react-ck/manager/src";
 
 // Test component that uses the snackbar context

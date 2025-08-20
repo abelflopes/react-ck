@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useMemo } from "react";
 import classNames from "classnames";
 import { Skeleton } from "./Skeleton";
 import { Table, type TableProps } from "../table";
 import { Card } from "../card";
+import { useManagerContext } from "@react-ck/manager";
 
 /**
  * Props for configuring the SkeletonTable component
@@ -23,20 +24,31 @@ export const SkeletonTable = ({
   columns = 4,
   className,
   ...otherProps
-}: Readonly<SkeletonTableProps>): React.ReactElement => (
-  <Card>
-    <Table className={classNames(className)} {...otherProps}>
+}: Readonly<SkeletonTableProps>): React.ReactElement => {
+  const { generateUniqueId } = useManagerContext();
+
+  const content = useMemo(
+    () => (
       <Table.TBody>
         {Array.from({ length: rows }).map(() => (
-          <Table.Tr key={`skeleton-row-${crypto.randomUUID()}`}>
+          <Table.Tr key={`skeleton-row-${generateUniqueId()}`}>
             {Array.from({ length: columns }).map(() => (
-              <Table.Td key={`skeleton-cell-${crypto.randomUUID()}`}>
+              <Table.Td key={`skeleton-cell-${generateUniqueId()}`}>
                 <Skeleton variation="text" />
               </Table.Td>
             ))}
           </Table.Tr>
         ))}
       </Table.TBody>
-    </Table>
-  </Card>
-);
+    ),
+    [columns, generateUniqueId, rows],
+  );
+
+  return (
+    <Card>
+      <Table className={classNames(className)} {...otherProps}>
+        {content}
+      </Table>
+    </Card>
+  );
+};

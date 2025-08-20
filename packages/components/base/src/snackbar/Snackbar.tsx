@@ -1,5 +1,4 @@
 import React, { useCallback, useMemo, useRef, useState } from "react";
-import { generateId } from "./utils";
 import { Layer } from "@react-ck/layers";
 import { SnackbarItem } from "./SnackbarItem";
 import styles from "./styles/index.module.scss";
@@ -11,6 +10,7 @@ import {
   type Item,
   type AddOptions,
 } from "@react-ck/snackbar-provider";
+import { useManagerContext } from "@react-ck/manager";
 
 const durationMap = new Map<NonNullable<AddOptions["duration"]>, number>([
   ["short", 3000],
@@ -38,9 +38,11 @@ export const Snackbar = ({
 }: Readonly<SnackbarProps>): React.ReactElement => {
   const timeoutMap = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
 
+  const { generateUniqueId } = useManagerContext();
+
   const [items, setItems] = useState<Item[]>(
     initialItems?.map((elementCreator) => {
-      const id = generateId();
+      const id = generateUniqueId();
       const element = elementCreator(id);
 
       return {
@@ -64,7 +66,7 @@ export const Snackbar = ({
 
   const add = useCallback<SnackbarContextProps["add"]>(
     (elementCreator, options) => {
-      const id = generateId();
+      const id = generateUniqueId();
       const element = elementCreator(id);
 
       setItems((v) => [
@@ -84,7 +86,7 @@ export const Snackbar = ({
 
       return id;
     },
-    [remove],
+    [remove, generateUniqueId],
   );
 
   const contextValue = useMemo(

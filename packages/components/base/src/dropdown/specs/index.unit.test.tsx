@@ -2,7 +2,7 @@ import React, { act } from "react";
 import { Dropdown } from "../Dropdown";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-// eslint-disable-next-line workspaces/no-relative-imports, workspaces/require-dependency -- this is a test
+// eslint-disable-next-line workspaces/no-relative-imports -- this is a test
 import { Manager } from "../../../../../providers/manager/src";
 
 describe("unit Dropdown", () => {

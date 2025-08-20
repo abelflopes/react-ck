@@ -1,16 +1,17 @@
 import React, { useMemo, useRef } from "react";
 import { VirtualizedListItem, type VirtualizedListItemProps } from "./VirtualizedListItem";
+import { useManagerContext } from "@react-ck/manager";
 
 const DefaultWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
 
 const keyMap = new Map<React.ReactNode, string>();
 
-function generateStableKey(item: React.ReactNode): string {
+function generateStableKey(item: React.ReactNode, generateUniqueId: () => string): string {
   const currentKey = keyMap.get(item);
 
   if (currentKey) return currentKey;
 
-  const key = Math.random().toString(36).slice(2, 15);
+  const key = generateUniqueId();
   keyMap.set(item, key);
   return key;
 }
@@ -41,15 +42,17 @@ export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
   Wrapper = DefaultWrapper,
   ...props
 }) => {
+  const { generateUniqueId } = useManagerContext();
+
   const observerRootRef = useRef<HTMLDivElement>(null);
 
   const itemsWithKey = useMemo(
     () =>
       items.map((item) => ({
         item,
-        key: generateStableKey(item),
+        key: generateStableKey(item, generateUniqueId),
       })),
-    [items],
+    [items, generateUniqueId],
   );
 
   return (

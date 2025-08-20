@@ -3,6 +3,7 @@ import styles from "./styles/index.module.scss";
 import classNames from "classnames";
 import { Text } from "../text";
 import { FormFieldContext, type FormFieldContextProps } from "./context";
+import { useManagerContext } from "@react-ck/manager";
 
 /**
  * Props interface for the FormField component.
@@ -79,9 +80,9 @@ export const FormField = ({
   reserveSpace,
   ...otherProps
 }: Readonly<FormFieldProps>): React.ReactElement => {
-  const generatedId = useMemo(() => `ff-${Math.random()}-${Date.now()}`, []);
+  const { generateUniqueId } = useManagerContext();
 
-  const computedId = useMemo(() => id ?? generatedId, [id, generatedId]);
+  const computedId = useMemo(() => id ?? generateUniqueId(), [id, generateUniqueId]);
 
   const context = useMemo<FormFieldContextProps>(
     () => ({
