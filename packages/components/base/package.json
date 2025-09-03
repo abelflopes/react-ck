@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/base-components",
   "private": false,
-  "version": "7.6.0",
+  "version": "7.6.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
@@ -36,7 +36,7 @@
     "@react-ck/elevation": "^1.1.24",
     "@react-ck/focus-trap": "^1.4.0",
     "@react-ck/icon": "^4.3.2",
-    "@react-ck/keyboard-controls": "^1.1.0",
+    "@react-ck/keyboard-controls": "^1.1.1",
     "@react-ck/layers": "^1.4.15",
     "@react-ck/manager": "^1.4.0",
     "@react-ck/react-utils": "^2.0.4",
