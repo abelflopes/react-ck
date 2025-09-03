@@ -16,6 +16,7 @@ import {
   useSnackbar,
   Manager,
   Icon,
+  Input,
 } from "react-ck";
 import { faker } from "@faker-js/faker";
 import { IconVerticalDots } from "@react-ck/icon/icons/IconVerticalDots";
@@ -301,12 +302,15 @@ const Counter = (): React.ReactElement => {
   );
 };
 
-const SelectField = (): React.ReactElement => (
-  <Select placeholder="Select">
-    <Select.Option>1</Select.Option>
-    <Select.Option>2</Select.Option>
-    <Select.Option>3</Select.Option>
-  </Select>
+const Fields = (): React.ReactElement => (
+  <>
+    <Input placeholder="Input" />
+    <Select placeholder="Select">
+      <Select.Option>1</Select.Option>
+      <Select.Option>2</Select.Option>
+      <Select.Option>3</Select.Option>
+    </Select>
+  </>
 );
 
 const AllItems = ({ children }: { readonly children: React.ReactNode }): React.ReactElement => {
@@ -355,14 +359,14 @@ const App = (): React.ReactElement => (
 
     <Counter />
 
-    <SelectField />
+    <Fields />
 
     <AllItems>
       <Text>{faker.lorem.paragraph()}</Text>
 
       <Counter />
 
-      <SelectField />
+      <Fields />
 
       <Actions />
     </AllItems>

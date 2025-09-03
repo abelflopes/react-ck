@@ -60,7 +60,17 @@ export class KeyboardControls {
   private handleFocusWithArrows = (e: KeyboardEvent): void => {
     const currentElement = document.activeElement;
 
-    if (!currentElement) return;
+    // skip if no focused element
+    // or content editable element
+    // or current element is an input or textarea with value
+    if (
+      !currentElement ||
+      (currentElement instanceof HTMLElement && currentElement.isContentEditable) ||
+      (currentElement instanceof HTMLInputElement &&
+        currentElement.value &&
+        (currentElement.tagName === "INPUT" || currentElement.tagName === "TEXTAREA"))
+    )
+      return;
 
     const { focusableElements } = getFocusableElements({
       container: this.container,
