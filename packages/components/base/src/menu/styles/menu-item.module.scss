@@ -9,9 +9,9 @@
   align-items: center;
   padding: theme.get-spacing(0.75) theme.get-spacing();
   border-radius: theme.get-spacing();
+  transition: all 0.2s;
   cursor: pointer;
   gap: theme.get-spacing(1.5);
-  transition: all 0.2s;
 
   @include theme.focus-reset;
 
@@ -41,9 +41,9 @@
   &.horizontal {
     max-width: theme.get-spacing(20);
     height: 100%;
-    flex-grow: 1;
-    flex-shrink: 1;
     justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 1;
   }
 }
 
@@ -53,8 +53,8 @@
 
 .content {
   display: block;
-  flex-grow: 1;
   flex-shrink: 1;
+  flex-grow: 1;
 }
 
 .variation_bordered {
