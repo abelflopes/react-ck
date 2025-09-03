@@ -1,3 +1,16 @@
+## [4.14.0](https://github.com/abelflopes/react-ck/compare/v4.13.0...v4.14.0) (2025-09-03)
+
+
+### Features
+
+* **react-ck:** global library package ([a50cabd](https://github.com/abelflopes/react-ck/commit/a50cabdb080420f4dbcc5f447ff20b47144219c2))
+
+
+### Bug Fixes
+
+* **dropdown:** add ref validation ([baf5371](https://github.com/abelflopes/react-ck/commit/baf5371973192002533ceb22803875177e65a289))
+* exclude input with value from keyboard arrow navigation ([1c5259a](https://github.com/abelflopes/react-ck/commit/1c5259a4e8c5fbe263ce425f178b568642f25e9c))
+
 ## [4.13.0](https://github.com/abelflopes/react-ck/compare/v4.12.0...v4.13.0) (2025-08-20)
 
 
