@@ -130,6 +130,13 @@ export const Dropdown = ({
     setInternalOpen(open);
   }, [open]);
 
+  useEffect(() => {
+    if (!internalOpen) return;
+    if (!anchorRef.current) {
+      throw new Error("Dropdown anchor ref not initialized");
+    }
+  }, [anchorRef, internalOpen]);
+
   return (
     internalOpen && (
       <PositionEngine

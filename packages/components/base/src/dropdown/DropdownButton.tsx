@@ -68,12 +68,6 @@ export const DropdownButton: React.FC<Readonly<DropdownButtonProps>> = ({
     setInternalOpen(open);
   }, [open]);
 
-  useEffect(() => {
-    if (buttonRef.current) {
-      throw new Error("DropdownButton ref not initialized");
-    }
-  }, []);
-
   return (
     <>
       {button}
