@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.6.2](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.6.1...@react-ck/base-components@7.6.2) (2025-09-04)
+
+
+### Bug Fixes
+
+* **dropdown:** fix ref validation ([aae2b60](https://github.com/abelflopes/react-ck/commit/aae2b60e917b6b50ac57838db0a6b2813d0394da))
+
+
+### Reverts
+
+* remove dropdown anchor validation ([da445c3](https://github.com/abelflopes/react-ck/commit/da445c3f6e75b188e7587066ded3aacf4db9a59a))
+
+
+
 ## [7.6.1](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.6.0...@react-ck/base-components@7.6.1) (2025-09-03)
 
 
