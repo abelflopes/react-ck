@@ -7,7 +7,7 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/utils/react-hooks#readme",
+  "homepage": "https://github.com/abelflopes/react-ck/tree/master/packages/utils/react-utils#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abelflopes/react-ck.git"

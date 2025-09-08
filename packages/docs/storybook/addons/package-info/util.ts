@@ -1,5 +1,5 @@
 import type { PackageInfo } from "@react-ck/packages-info/src/types";
-import { type UseDataReturn } from "@react-ck/react-hooks/src";
+import type { UseDataReturn } from "./modules/manager";
 
 export const CONFIG = {
   id: "package-info",

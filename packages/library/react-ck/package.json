@@ -40,7 +40,6 @@
     "@react-ck/layers": "^1.4.15",
     "@react-ck/manager": "^1.4.0",
     "@react-ck/misc-utils": "^1.0.7",
-    "@react-ck/react-hooks": "^1.0.15",
     "@react-ck/react-utils": "^2.0.4",
     "@react-ck/scss-utils": "^1.1.13",
     "@react-ck/snackbar-provider": "^1.0.7",
