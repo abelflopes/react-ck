@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/layers",
   "private": false,
-  "version": "1.4.15",
+  "version": "1.4.16",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@react-ck/elevation": "^1.1.24",
-    "@react-ck/react-utils": "^2.0.4",
+    "@react-ck/react-utils": "^2.0.5",
     "@react-ck/snackbar-provider": "^1.0.7",
     "@react-ck/theme": "^2.4.0",
     "classnames": "^2.5.1"
