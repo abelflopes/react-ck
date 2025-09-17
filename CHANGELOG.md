@@ -1,3 +1,11 @@
+## [4.16.0](https://github.com/abelflopes/react-ck/compare/v4.15.0...v4.16.0) (2025-09-17)
+
+
+### Features
+
+* **collapse:** allow hiding caret and lock state when controlled ([61dec15](https://github.com/abelflopes/react-ck/commit/61dec158ae5881f4fb26731fe1e55f635baa8ffc))
+* **modal:** allow configuring blur ([fb55991](https://github.com/abelflopes/react-ck/commit/fb55991b23f457351015d131416ca6c3639d1b70))
+
 ## [4.15.0](https://github.com/abelflopes/react-ck/compare/v4.14.0...v4.15.0) (2025-09-04)
 
 
