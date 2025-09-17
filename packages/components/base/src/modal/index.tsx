@@ -32,6 +32,8 @@ interface ModalProps extends Omit<OverlayProps, "skin"> {
   closeButton?: boolean;
   /** Changes visibility of overlay */
   overlay?: boolean;
+  /** Changes visibility of overlay blur */
+  blur?: boolean;
   /** Toggle visibility of the modal */
   open?: boolean;
   /** Layer group name */
@@ -59,6 +61,7 @@ const Modal = ({
   dismissOnClickOutside = true,
   closeButton = true,
   overlay = true,
+  blur = true,
   open = true,
   layerGroup = "modal",
   ...otherProps
@@ -149,7 +152,7 @@ const Modal = ({
           setFocusWrapperElement(e);
         }}
         {...otherProps}
-        blur={overlay}
+        blur={blur && overlay}
         skin={overlay ? "dark" : "transparent"}
         className={classNames(
           styles.root,
