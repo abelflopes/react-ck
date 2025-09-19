@@ -2,8 +2,24 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { faker } from "@faker-js/faker";
-import { Text, InfiniteScroll, Flex, Card, Skeleton, Spinner, Manager } from "react-ck";
+import {
+  Text,
+  InfiniteScroll,
+  Flex,
+  Card,
+  Skeleton,
+  Spinner,
+  Manager,
+  VirtualizedList,
+  VirtualizedListProps,
+} from "react-ck";
 import { configureStory } from "@react-ck/storybook-utils";
+
+const VirtualizedListWrapper: VirtualizedListProps["Wrapper"] = ({ children }) => (
+  <Flex direction="column" align="stretch" spacing="s">
+    {children}
+  </Flex>
+);
 
 const meta: Meta<typeof InfiniteScroll> = {
   title: "Generic/InfiniteScroll",
@@ -25,6 +41,7 @@ type Story = StoryObj<typeof meta>;
 // Helper function to generate mock data
 const generateMockItems = (
   count: number,
+  idFrom: number,
 ): Array<{
   id: number;
   title: string;
@@ -32,14 +49,14 @@ const generateMockItems = (
   timestamp: string;
 }> =>
   Array.from({ length: count }, (_, index) => ({
-    id: index + 1,
+    id: idFrom + index + 1,
     title: faker.lorem.sentence(3),
     content: faker.lorem.paragraph(),
     timestamp: faker.date.recent().toLocaleDateString(),
   }));
 
-const INITIAL_ITEMS = 3;
-const TOTAL_ITEMS = 15;
+const ITEMS_PER_PAGE = 3;
+const TOTAL_ITEMS = 31;
 
 const customLoadingElement = (
   <>
@@ -62,8 +79,15 @@ export const Default: Story = {
   parameters: {
     layout: "padded",
   },
-  render: () => {
-    const [items, setItems] = useState(generateMockItems(0));
+  args: {
+    loadMoreButton: "Load more items",
+    displayLoadMore: true,
+    loadingMoreElement: customLoadingMoreElement,
+    loadingElement: customLoadingElement,
+    direction: "bottom",
+  },
+  render: (args) => {
+    const [items, setItems] = useState<ReturnType<typeof generateMockItems>>([]);
     const [loading, setLoading] = useState(false);
     const [loadingMore, setLoadingMore] = useState(false);
 
@@ -71,47 +95,62 @@ export const Default: Story = {
       setLoadingMore(true);
 
       setTimeout(() => {
-        const newItems = generateMockItems(3);
-        setItems((prev) => [...prev, ...newItems]);
+        const newItems = generateMockItems(ITEMS_PER_PAGE, items.length);
+        setItems(() =>
+          args.direction === "bottom" ? [...items, ...newItems] : [...newItems.reverse(), ...items],
+        );
         setLoadingMore(false);
       }, 1500);
-    }, []);
+    }, [args.direction, items]);
 
+    // load intially
     useEffect(() => {
       setLoading(true);
       setTimeout(() => {
-        setItems(generateMockItems(INITIAL_ITEMS));
+        const initialItems = generateMockItems(ITEMS_PER_PAGE, 0);
+        setItems(() =>
+          args.direction === "bottom" ? [...initialItems] : [...initialItems.reverse()],
+        );
         setLoading(false);
       }, 1500);
-    }, []);
+    }, [args.direction]);
 
     return (
-      <Flex direction="column" align="stretch" spacing="s">
-        <InfiniteScroll
-          loaded={items.length}
-          total={TOTAL_ITEMS}
-          loading={loading}
-          loadingMore={loadingMore}
-          loadingElement={customLoadingElement}
-          loadingMoreElement={customLoadingMoreElement}
-          loadMoreButton="Load more items"
-          displayLoadMore
-          onLoadMore={handleLoadMore}>
-          <Flex direction="column" align="stretch" spacing="s">
-            {items.map((item) => (
-              <Card key={item.id} skin="bordered">
-                <Text skin="bold" margin="none">
-                  {item.title}
-                </Text>
-                <Text margin="top" variation="small">
-                  {item.content}
-                </Text>
-              </Card>
-            ))}
-          </Flex>
-        </InfiniteScroll>
-      </Flex>
+      <div style={{ maxHeight: "50vh", overflow: "auto" }}>
+        <Flex direction="column" align="stretch" spacing="s">
+          <InfiniteScroll
+            {...args}
+            loaded={items.length}
+            total={TOTAL_ITEMS}
+            loading={loading}
+            loadingMore={loadingMore}
+            onLoadMore={handleLoadMore}>
+            <VirtualizedList
+              defaultItemHeight={90}
+              Wrapper={VirtualizedListWrapper}
+              items={items.map((item) => (
+                <Card key={item.id} skin="bordered">
+                  <Text skin="bold" margin="none">
+                    {item.id} - {item.title}
+                  </Text>
+                  <Text margin="top" variation="small">
+                    {item.content}
+                  </Text>
+                </Card>
+              ))}
+            />
+          </InfiniteScroll>
+        </Flex>
+      </div>
     );
   },
 };
 /* eslint-enable react-hooks/rules-of-hooks */
+
+export const Reversed: Story = {
+  ...Default,
+  args: {
+    ...Default.args,
+    direction: "top",
+  },
+};

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "storybook build -o ./dist",
-    "start": "storybook dev -p 6006",
+    "start": "storybook dev -p 5050",
     "lint:typescript": "tsc --noEmit"
   },
   "dependencies": {
