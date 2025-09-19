@@ -78,6 +78,11 @@ const customLoadingMoreElement = (
 export const Default: Story = {
   parameters: {
     layout: "padded",
+    docs: {
+      source: {
+        type: "code",
+      },
+    },
   },
   args: {
     loadMoreButton: "Load more items",
