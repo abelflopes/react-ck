@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/base-components",
   "private": false,
-  "version": "7.7.0",
+  "version": "7.8.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "style": "dist/index.css",

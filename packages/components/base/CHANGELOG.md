@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.7.0...@react-ck/base-components@7.8.0) (2025-09-20)
+
+
+### Features
+
+* **infinite scroll:** support infinite scroll up ([892a968](https://github.com/abelflopes/react-ck/commit/892a968f1c6f46944748d7c6508e7db393f9b539))
+
+
+### Bug Fixes
+
+* **table:** fix scrollable table ([45ce194](https://github.com/abelflopes/react-ck/commit/45ce194c035d5137c584be4c2e1fe71c09521539))
+
+
+
 ## [7.7.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.6.3...@react-ck/base-components@7.7.0) (2025-09-17)
 
 
