@@ -1,3 +1,16 @@
+## [4.17.0](https://github.com/abelflopes/react-ck/compare/v4.16.0...v4.17.0) (2025-09-20)
+
+
+### Features
+
+* **infinite scroll:** support infinite scroll up ([892a968](https://github.com/abelflopes/react-ck/commit/892a968f1c6f46944748d7c6508e7db393f9b539))
+* **react-ck:** global library package ([829a4a9](https://github.com/abelflopes/react-ck/commit/829a4a9960b662485db5084ee32fa2e20d19c0ee))
+
+
+### Bug Fixes
+
+* **table:** fix scrollable table ([45ce194](https://github.com/abelflopes/react-ck/commit/45ce194c035d5137c584be4c2e1fe71c09521539))
+
 ## [4.16.0](https://github.com/abelflopes/react-ck/compare/v4.15.0...v4.16.0) (2025-09-17)
 
 
