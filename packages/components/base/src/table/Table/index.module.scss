@@ -38,14 +38,19 @@
   max-height: 100%;
 
   @include sticky-column {
+    background-color: theme.get-color(neutral-light-100);
     position: sticky;
     left: 0;
-    background-color: theme.get-color(neutral-light-100);
+    z-index: 2;
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 3 !important;
   }
 
   @include sticky_headers {
-    position: sticky;
-    top: 0;
     background-color: theme.get-color(neutral-light-300-solid) !important;
     white-space: nowrap;
 
@@ -61,15 +66,15 @@
 .scrollable.skin_bordered {
   @include sticky_headers {
     &::before {
+      content: "";
+      background-color: scss-utils.get-css-var(table, border-color);
+      display: block;
       position: absolute;
-      z-index: 1;
       bottom: calc(#{scss-utils.get-css-var(spacing, border)} * -1);
       left: 0;
-      display: block;
       width: 100%;
       height: scss-utils.get-css-var(spacing, border);
-      background-color: scss-utils.get-css-var(table, border-color);
-      content: "";
+      z-index: 1;
     }
   }
 }
@@ -78,14 +83,14 @@
 .scrollable.skin_bordered {
   @include sticky-column {
     &::after {
+      content: "";
+      background-color: scss-utils.get-css-var(table, border-color);
+      display: block;
       position: absolute;
       top: 0;
       right: 0;
-      display: block;
       width: scss-utils.get-css-var(spacing, border);
       height: 100%;
-      background-color: scss-utils.get-css-var(table, border-color);
-      content: "";
     }
   }
 }
@@ -124,6 +129,11 @@
 .spacing_compact {
   @include scss-utils.define-css-var(table, spacing, theme.get-spacing(1));
   @include scss-utils.define-css-var(table, min-height, theme.get-spacing(4));
+}
+
+.spacing_none {
+  @include scss-utils.define-css-var(table, spacing, 0);
+  @include scss-utils.define-css-var(table, min-height, 0);
 }
 
 // Table

@@ -34,12 +34,23 @@ const children = [
         <Table.Th key={i}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
       ))}
     </Table.Tr>
+    <Table.Tr>
+      <Table.Th>
+        <Checkbox indeterminate />
+      </Table.Th>
+      <Table.Th colSpan={columns}>{CC.capitalCase(faker.company.buzzAdjective())}</Table.Th>
+    </Table.Tr>
   </Table.Thead>,
   <Table.TBody key="body">
     {Object.keys(Array.from({ length: rows })).map((r) => (
       <Table.Tr key={r} selected={r === "1"} interactive={Number(r) < rows / 2}>
         <Table.Td>
           <Checkbox />
+        </Table.Td>
+        <Table.Td>
+          <div
+            style={{ background: "pink", position: "relative", zIndex: 1, height: 20, width: 20 }}
+          />
         </Table.Td>
         {Object.keys(Array.from({ length: columns })).map((i) => (
           <Table.Td key={i}>{faker.company.catchPhraseDescriptor()}</Table.Td>
