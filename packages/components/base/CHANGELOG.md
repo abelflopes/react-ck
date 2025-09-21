@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.8.0...@react-ck/base-components@7.9.0) (2025-09-21)
+
+
+### Features
+
+* **select:** add custom display value renderer ([75969cb](https://github.com/abelflopes/react-ck/commit/75969cb48148a1d2b61b996828a5ebb45a43aae5))
+
+
+
 ## [7.8.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.7.0...@react-ck/base-components@7.8.0) (2025-09-20)
 
 
