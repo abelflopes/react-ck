@@ -1,3 +1,11 @@
+## [4.18.0](https://github.com/abelflopes/react-ck/compare/v4.17.0...v4.18.0) (2025-09-21)
+
+
+### Features
+
+* **react-ck:** global library package ([c31fc15](https://github.com/abelflopes/react-ck/commit/c31fc15ab22933895b8d8a7510a509cad895cc23))
+* **select:** add custom display value renderer ([75969cb](https://github.com/abelflopes/react-ck/commit/75969cb48148a1d2b61b996828a5ebb45a43aae5))
+
 ## [4.17.0](https://github.com/abelflopes/react-ck/compare/v4.16.0...v4.17.0) (2025-09-20)
 
 
