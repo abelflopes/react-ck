@@ -80,6 +80,7 @@ const Select = ({
   position,
   excludeAutoPosition = defaultExclude,
   ref,
+  displayValueRenderer,
   ...props
 }: Readonly<SelectProps>): React.ReactElement => {
   const selectRef = useRef<HTMLSelectElement | null>(null);
@@ -94,7 +95,7 @@ const Select = ({
   const valueSlotRef = useRef<HTMLDivElement>(null);
 
   const computedSkin = useMemo(
-    () => formFieldContext?.skin ?? skin ?? "default",
+    () => formFieldContext?.skin ?? skin,
     [formFieldContext?.skin, skin],
   );
 
@@ -186,26 +187,32 @@ const Select = ({
 
   /** Compute value label to display */
 
-  const displayValue = useMemo(() => {
+  const displayValue = useMemo<React.ReactNode>(() => {
     if (selectedValuesList.length === 0) return;
 
-    const displayValue = childrenData.filter(
+    const selectedChildrenData = childrenData.filter(
       (i) => i.computedValue && selectedValuesList.includes(i.computedValue),
     );
 
+    if (displayValueRenderer) {
+      return displayValueRenderer(selectedChildrenData);
+    }
+
     const node = (
       <>
-        {displayValue.map((i, k) => (
+        {selectedChildrenData.map((i, k) => (
           <span key={i.textContent} className={styles.display_value_item}>
             {i.displayValue ?? i.textContent}
-            {displayValue.length > 1 && k < displayValue.length - 1 && displayValueDivider}
+            {selectedChildrenData.length > 1 &&
+              k < selectedChildrenData.length - 1 &&
+              displayValueDivider}
           </span>
         ))}
       </>
     );
 
     return node;
-  }, [childrenData, selectedValuesList, displayValueDivider]);
+  }, [selectedValuesList, childrenData, displayValueRenderer, displayValueDivider]);
 
   /** Actions to do when dropdown closes  */
   useEffect(() => {

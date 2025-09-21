@@ -73,6 +73,8 @@ export interface SelectProps
   displayValueDivider?: React.ReactNode;
   /** Whether the select should take the full width of the parent container */
   fullWidth?: boolean;
+  /** Custom display value renderer */
+  displayValueRenderer?: (data: SelectChildrenData[]) => React.ReactNode;
 }
 
 /**
