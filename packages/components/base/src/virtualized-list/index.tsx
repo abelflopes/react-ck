@@ -1,6 +1,7 @@
 import React, { useMemo, useRef } from "react";
 import { VirtualizedListItem, type VirtualizedListItemProps } from "./VirtualizedListItem";
 import { useManagerContext } from "@react-ck/manager";
+import { megeRefs } from "@react-ck/react-utils";
 
 const DefaultWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
 
@@ -16,13 +17,17 @@ function generateStableKey(item: React.ReactNode, generateUniqueId: () => string
   return key;
 }
 
+export interface VirtualizedListITem {
+  element: React.ReactNode;
+  key?: string;
+}
+
 /**
  * Props for the VirtualizedList component
  */
-export interface VirtualizedListProps
-  extends Omit<React.ComponentPropsWithoutRef<"div">, "children"> {
+export interface VirtualizedListProps extends Omit<React.ComponentPropsWithRef<"div">, "children"> {
   /** Array of React nodes to render as list items */
-  items: React.ReactNode[];
+  items: React.ReactNode[] | VirtualizedListITem[];
   /** Default height for list items in pixels */
   defaultItemHeight?: number;
   /** Additional props to pass to each VirtualizedListItem */
@@ -36,6 +41,7 @@ export interface VirtualizedListProps
  * by only rendering visible items and using stable keys for performance
  */
 export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
+  ref,
   items,
   defaultItemHeight = 40,
   itemProps,
@@ -48,23 +54,32 @@ export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
 
   const itemsWithKey = useMemo(
     () =>
-      items.map((item) => ({
-        item,
-        key: generateStableKey(item, generateUniqueId),
-      })),
+      items.map((item) => {
+        if (typeof item === "object" && item !== null && "element" in item) {
+          return {
+            element: item.element,
+            key: item.key ?? generateStableKey(item.element, generateUniqueId),
+          };
+        }
+
+        return {
+          element: item,
+          key: generateStableKey(item, generateUniqueId),
+        };
+      }),
     [items, generateUniqueId],
   );
 
   return (
-    <div ref={observerRootRef} {...props}>
+    <div ref={megeRefs(observerRootRef, ref)} {...props}>
       <Wrapper>
-        {itemsWithKey.map(({ item, key }) => (
+        {itemsWithKey.map(({ element, key }) => (
           <VirtualizedListItem
             key={key}
             defaultHeight={defaultItemHeight}
             observerRootRef={observerRootRef}
             {...itemProps}>
-            {item}
+            {element}
           </VirtualizedListItem>
         ))}
       </Wrapper>
