@@ -1,3 +1,12 @@
+## [4.19.0](https://github.com/abelflopes/react-ck/compare/v4.18.0...v4.19.0) (2025-09-22)
+
+
+### Features
+
+* allow custom key for virtualised list items ([d0b1cfd](https://github.com/abelflopes/react-ck/commit/d0b1cfdcd4399eabac85eb4208223998a0ebaae0))
+* **infinite scroll:** add pagination mode ([c8d2128](https://github.com/abelflopes/react-ck/commit/c8d2128c445acc220ae8531fb28d910a0195f853))
+* **react-ck:** global library package ([f3e52b7](https://github.com/abelflopes/react-ck/commit/f3e52b7e1c0ad808ad38368188fb8d7c47e5f27a))
+
 ## [4.18.0](https://github.com/abelflopes/react-ck/compare/v4.17.0...v4.18.0) (2025-09-21)
 
 
