@@ -34,6 +34,7 @@ export interface InfiniteScrollProps {
   ContentWrapper?: React.FC<React.PropsWithChildren>;
   /** Additional props passed to the intersection observer element */
   intersectionElementProps?: React.ComponentPropsWithoutRef<"div">;
+  mode?: "infinite" | "enable-once" | "pagination";
 }
 
 export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProps>> = ({
@@ -50,10 +51,11 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
   loadMoreButton = "Load more",
   ContentWrapper = defaultContentWrapper,
   intersectionElementProps,
+  mode = loadMoreButton ? "enable-once" : "infinite",
 }) => {
   const intersectionRef = useRef<HTMLDivElement>(null);
 
-  const [infiniteScrollEnabled, setInfiniteScrollEnabled] = useState(!displayLoadMore);
+  const [infiniteScrollEnabled, setInfiniteScrollEnabled] = useState(mode === "infinite");
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   const hasItemsLeft = useMemo(
@@ -63,25 +65,28 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
 
   const LoadMoreButton = useMemo(() => {
     if (!displayLoadMore) return null;
+
+    const action = () => {
+      if (mode === "enable-once") {
+        setInfiniteScrollEnabled(true);
+      } else {
+        if (loading) return;
+        void onLoadMore();
+      }
+    };
+
     if (typeof loadMoreButton === "function") {
       return loadMoreButton({
-        loadMore: () => {
-          setInfiniteScrollEnabled(true);
-        },
+        loadMore: action,
       });
     }
 
     return (
-      <Button
-        skinVariation="bordered"
-        fullWidth
-        onClick={() => {
-          setInfiniteScrollEnabled(true);
-        }}>
+      <Button skinVariation="bordered" fullWidth onClick={action}>
         {loadMoreButton}
       </Button>
     );
-  }, [loadMoreButton, displayLoadMore]);
+  }, [displayLoadMore, loadMoreButton, loading, mode, onLoadMore]);
 
   const elements = useMemo<React.ReactNode[]>(() => {
     const elements = [
@@ -94,7 +99,9 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
         </ContentWrapper>
       ) : null,
       hasItemsLeft && loadingMore ? (loadingMoreElement ?? <Spinner />) : null,
-      displayLoadMore && !infiniteScrollEnabled && hasItemsLeft ? LoadMoreButton : null,
+      displayLoadMore && !infiniteScrollEnabled && hasItemsLeft && !loading && !loadingMore
+        ? LoadMoreButton
+        : null,
     ];
 
     return direction === "bottom" ? elements : elements.reverse();

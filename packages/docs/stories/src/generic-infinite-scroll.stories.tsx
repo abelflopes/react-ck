@@ -85,6 +85,7 @@ export const Default: Story = {
     },
   },
   args: {
+    mode: "enable-once",
     loadMoreButton: "Load more items",
     displayLoadMore: true,
     loadingMoreElement: customLoadingMoreElement,
