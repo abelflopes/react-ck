@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.9.0...@react-ck/base-components@7.10.0) (2025-09-22)
+
+
+### Features
+
+* allow custom key for virtualised list items ([d0b1cfd](https://github.com/abelflopes/react-ck/commit/d0b1cfdcd4399eabac85eb4208223998a0ebaae0))
+* **infinite scroll:** add pagination mode ([c8d2128](https://github.com/abelflopes/react-ck/commit/c8d2128c445acc220ae8531fb28d910a0195f853))
+
+
+
 ## [7.9.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.8.0...@react-ck/base-components@7.9.0) (2025-09-21)
 
 
