@@ -8,7 +8,7 @@ export * from "./click-outside";
 
 export * from "./children-without-fragments";
 
-export * from "./merge-refs";
+export { megeRefs, megeRefs as mergeRefs } from "./merge-refs";
 
 export * from "./raf";
 
