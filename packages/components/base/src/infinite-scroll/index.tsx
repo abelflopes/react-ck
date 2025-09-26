@@ -130,6 +130,8 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
     if (!isIntersecting || !infiniteScrollEnabled || loadingMore || loading || !hasItemsLeft) {
       return;
     }
+
+    // Load more items
     void onLoadMore();
   }, [hasItemsLeft, infiniteScrollEnabled, isIntersecting, loading, loadingMore, onLoadMore]);
 
