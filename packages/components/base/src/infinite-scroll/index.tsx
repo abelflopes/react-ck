@@ -127,25 +127,11 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
 
   // Load more
   useEffect(() => {
-    if (
-      !isIntersecting ||
-      !infiniteScrollEnabled ||
-      loadingMore ||
-      loading ||
-      !hasItemsLeft ||
-    ) {
+    if (!isIntersecting || !infiniteScrollEnabled || loadingMore || loading || !hasItemsLeft) {
       return;
     }
-        void onLoadMore();
-
-  }, [
-    hasItemsLeft,
-    infiniteScrollEnabled,
-    isIntersecting,
-    loading,
-    loadingMore,
-    onLoadMore,
-  ]);
+    void onLoadMore();
+  }, [hasItemsLeft, infiniteScrollEnabled, isIntersecting, loading, loadingMore, onLoadMore]);
 
   // Load more controls
   const LoadMoreControls = useMemo(() => {
