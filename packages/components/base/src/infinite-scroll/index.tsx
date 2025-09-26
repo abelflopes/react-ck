@@ -47,8 +47,6 @@ interface InfiniteScrollStatus {
   infiniteScrollEnabled: boolean;
   /** Whether the intersection observer is intersecting */
   isIntersecting: boolean;
-  /** Whether the infinite scroll is idle */
-  isIdle: boolean;
 }
 
 export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProps>> = ({
@@ -71,14 +69,13 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
   const intersectionRef = useRef<HTMLDivElement>(null);
 
   // Status
-  const [{ infiniteScrollEnabled, isIntersecting, isIdle }, setStatus] = useReducer(
+  const [{ infiniteScrollEnabled, isIntersecting }, setStatus] = useReducer(
     (prev: InfiniteScrollStatus, next: Partial<InfiniteScrollStatus>) => {
       return { ...prev, ...next };
     },
     {
       infiniteScrollEnabled: mode === "infinite",
       isIntersecting: false,
-      isIdle: false,
     },
   );
 
@@ -136,28 +133,17 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
       loadingMore ||
       loading ||
       !hasItemsLeft ||
-      isIdle
-    )
+    ) {
       return;
-
-    async function load() {
-      setStatus({ isIdle: true });
-      try {
-        await onLoadMore();
-      } finally {
-        setStatus({ isIdle: false });
-      }
     }
+        void onLoadMore();
 
-    // Load more
-    void load();
   }, [
     hasItemsLeft,
     infiniteScrollEnabled,
     isIntersecting,
     loading,
     loadingMore,
-    isIdle,
     onLoadMore,
   ]);
 
