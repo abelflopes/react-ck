@@ -18,7 +18,7 @@ export interface VirtualizedListItemProps
    */
   keepVisibleWhen?: "above" | "below" | "never";
   /** Called when the item is rendered */
-  onRendered?: () => void;
+  onMount?: () => void;
 }
 
 export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListItemProps>(
@@ -28,7 +28,7 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
       children,
       observerRootRef,
       threshold = 0,
-      onRendered,
+      onMount,
       keepVisibleWhen = "never",
       ...props
     },
@@ -38,17 +38,12 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
 
     const [isVisibleInContainer, setIsVisibleInContainer] = useState(false);
     const [isVisibleInViewport, setIsVisibleInViewport] = useState(false);
-    const [isFullyVisible, setIsFullyVisible] = useState(false);
 
     const heightWhenInvisible = useRef(defaultHeight);
 
     useEffect(() => {
       const el = innerRef.current;
       if (!el || !observerRootRef.current) return;
-
-      const observers: IntersectionObserver[] = [];
-
-      // Observer for full visibility (100% in viewport)
 
       // eslint-disable-next-line compat/compat -- Not supported old browsers, but we target modern browsers
       const partialObserver = new IntersectionObserver(
@@ -70,9 +65,6 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
         },
       );
 
-      partialObserver.observe(el);
-      observers.push(partialObserver);
-
       // eslint-disable-next-line compat/compat -- Not supported old browsers, but we target modern browsers
       const containerObserver = new IntersectionObserver(
         (entries) => {
@@ -84,31 +76,14 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
           threshold,
         },
       );
-      containerObserver.observe(el);
-      observers.push(containerObserver);
 
-      // eslint-disable-next-line compat/compat -- Not supported old browsers, but we target modern browsers
-      const fullObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.intersectionRatio >= 1) {
-              setIsFullyVisible(true);
-            } else {
-              setIsFullyVisible(false);
-            }
-          });
-        },
-        {
-          rootMargin: "0px",
-          threshold: 1, // fully in viewport
-        },
-      );
-      fullObserver.observe(el);
-      observers.push(fullObserver);
+      containerObserver.observe(el);
+      partialObserver.observe(el);
 
       return () => {
         // Disconnect the observers
-        observers.forEach((o) => o.disconnect());
+        containerObserver.disconnect();
+        partialObserver.disconnect();
       };
     }, [observerRootRef, threshold, keepVisibleWhen]);
 
@@ -124,10 +99,8 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
     }, [isVisible]);
 
     useEffect(() => {
-      if (isFullyVisible) {
-        onRendered?.();
-      }
-    }, [isFullyVisible, onRendered]);
+      onMount?.();
+    }, [onMount]);
 
     return (
       <div
