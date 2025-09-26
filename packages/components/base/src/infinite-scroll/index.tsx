@@ -83,10 +83,7 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
   );
 
   // Has items left
-  const hasItemsLeft = useMemo(
-    () => (loaded === undefined && total === undefined) || (loaded ?? 0) < (total ?? 0),
-    [loaded, total],
-  );
+  const hasItemsLeft = useMemo(() => (loaded ?? 0) < (total ?? 0), [loaded, total]);
 
   // Load more button
   const LoadMoreButton = useMemo(() => {
@@ -170,11 +167,18 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
       return loadingMoreElement ?? <Spinner />;
     }
 
-    return displayLoadMore && !infiniteScrollEnabled && LoadMoreButton;
-  }, [LoadMoreButton, displayLoadMore, infiniteScrollEnabled, loadingMore, loadingMoreElement]);
+    return displayLoadMore && hasItemsLeft && !infiniteScrollEnabled && LoadMoreButton;
+  }, [
+    LoadMoreButton,
+    displayLoadMore,
+    hasItemsLeft,
+    infiniteScrollEnabled,
+    loadingMore,
+    loadingMoreElement,
+  ]);
 
   // Loading element
-  if (hasItemsLeft && loading) {
+  if (loading) {
     return loadingElement ?? <Skeleton />;
   }
 
