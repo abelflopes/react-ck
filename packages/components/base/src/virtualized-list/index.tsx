@@ -1,5 +1,12 @@
-import React, { forwardRef, useEffect, useImperativeHandle, useMemo, useRef } from "react";
-import { VirtualizedListItem, type VirtualizedListItemProps } from "./VirtualizedListItem";
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { type VirtualizedListItemProps, VirtualizedListItem } from "./VirtualizedListItem";
 import { useManagerContext } from "@react-ck/manager";
 
 const DefaultWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
@@ -55,9 +62,11 @@ export interface VirtualizedListProps
    * Called when rendering state changes
    * @param options - The options for the rendering state
    */
-  onRenderingChange?: (options: {
+  onItemsChange?: (options: {
     /** Whether the list is rendering */
     isRendering: boolean;
+    /** Whether all items have been mounted in the DOM */
+    isMounted: boolean;
   }) => void;
 }
 
@@ -67,18 +76,25 @@ export const VirtualizedList = forwardRef(function Root(
     defaultItemHeight = 40,
     itemProps,
     Wrapper = DefaultWrapper,
-    onItemsMounted,
-    onRenderingChange,
+    onItemsChange,
     keepVisibleWhen,
     ...props
   }: VirtualizedListProps,
   ref: React.Ref<VirtualizedListRef>,
 ) {
+  // Unique ID generator provided by context, used to create stable keys
   const { generateUniqueId } = useManagerContext();
 
+  // Ref to the scroll container, passed as the IntersectionObserver root
   const observerRootRef = useRef<HTMLDivElement>(null);
+
+  // Holds refs to each individual item element, indexed by item position
   const itemRefs = useRef<(HTMLElement | null)[]>([]);
 
+  // Tracks whether all items in the list have been mounted in the DOM.
+  const [mounted, setMounted] = useState(false);
+
+  // Normalize items into objects that always have a stable key + element
   const itemsWithKey = useMemo(
     () =>
       items.map((item) => {
@@ -111,10 +127,17 @@ export const VirtualizedList = forwardRef(function Root(
     [],
   );
 
+  // Resets item refs and signals that the list has started rendering whenever
+  // the `items` array changes.
   useEffect(() => {
-    // Set the rendering change to true when the component is mounted
-    onRenderingChange?.({ isRendering: true });
-  }, [onRenderingChange]);
+    if (!items.length) return;
+
+    // clear refs for new items
+    itemRefs.current = [];
+
+    // Notify consumer that rendering has started
+    onItemsChange?.({ isRendering: true, isMounted: mounted });
+  }, [items, mounted, onItemsChange]);
 
   return (
     <div ref={observerRootRef} {...props}>
@@ -126,15 +149,15 @@ export const VirtualizedList = forwardRef(function Root(
               if (!node) {
                 return;
               }
+
               // Set the node element to items references, required to scroll to the correct index
               itemRefs.current[index] = node;
 
-              // Set the rendering change to true if the items references are not the same as the items with key
-              onRenderingChange?.({ isRendering: itemRefs.current.length !== itemsWithKey.length });
-            }}
-            onMount={() => {
-              // Call the on items mounted function when the item is mounted
-              onItemsMounted?.();
+              // check against count, not array length
+              if (itemRefs.current.length === itemsWithKey.length) {
+                setMounted(true);
+                onItemsChange?.({ isRendering: false, isMounted: mounted });
+              }
             }}
             defaultHeight={defaultItemHeight}
             observerRootRef={observerRootRef}

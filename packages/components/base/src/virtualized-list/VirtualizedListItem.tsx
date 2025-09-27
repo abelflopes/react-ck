@@ -17,8 +17,6 @@ export interface VirtualizedListItemProps
    * @default "never"
    */
   keepVisibleWhen?: "above" | "below" | "never";
-  /** Called when the item is rendered */
-  onMount?: () => void;
 }
 
 export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListItemProps>(
@@ -28,7 +26,6 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
       children,
       observerRootRef,
       threshold = 0,
-      onMount,
       keepVisibleWhen = "never",
       ...props
     },
@@ -36,8 +33,8 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
   ) {
     const innerRef = useRef<HTMLDivElement>(null);
 
-    const [isVisibleInContainer, setIsVisibleInContainer] = useState(false);
-    const [isVisibleInViewport, setIsVisibleInViewport] = useState(false);
+    const [isVisibleInContainer, setIsVisibleInContainer] = useState(true);
+    const [isVisibleInViewport, setIsVisibleInViewport] = useState(true);
 
     const heightWhenInvisible = useRef(defaultHeight);
 
@@ -97,10 +94,6 @@ export const VirtualizedListItem = forwardRef<HTMLDivElement, VirtualizedListIte
         heightWhenInvisible.current = innerRef.current?.offsetHeight ?? 0;
       }
     }, [isVisible]);
-
-    useEffect(() => {
-      onMount?.();
-    }, [onMount]);
 
     return (
       <div
