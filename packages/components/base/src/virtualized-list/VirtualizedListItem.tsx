@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useMemo, useRef, useState } from "react";
-import { megeRefs as mergeRefs } from "react-ck";
+import { mergeRefs } from "@react-ck/react-utils";
 
 export interface VirtualizedListItemProps
   extends Omit<React.ComponentPropsWithoutRef<"div">, "style"> {
