@@ -80,7 +80,10 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
   );
 
   // Has items left
-  const hasItemsLeft = useMemo(() => (loaded ?? 0) < (total ?? 0), [loaded, total]);
+  const hasItemsLeft = useMemo(
+    () => (loaded === undefined && total === undefined) || (loaded ?? 0) < (total ?? 0),
+    [loaded, total],
+  );
 
   // Load more button
   const LoadMoreButton = useMemo(() => {
