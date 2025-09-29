@@ -1,12 +1,24 @@
-import React, { useMemo, useRef } from "react";
-import { VirtualizedListItem, type VirtualizedListItemProps } from "./VirtualizedListItem";
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { type VirtualizedListItemProps, VirtualizedListItem } from "./VirtualizedListItem";
 import { useManagerContext } from "@react-ck/manager";
-import { megeRefs } from "@react-ck/react-utils";
 
 const DefaultWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
 
 const keyMap = new Map<React.ReactNode, string>();
 
+/**
+ * Generate a stable key for an item
+ * @param item - The item to generate a stable key for
+ * @param generateUniqueId - The function to generate a unique id
+ * @returns The stable key for the item
+ */
 function generateStableKey(item: React.ReactNode, generateUniqueId: () => string): string {
   const currentKey = keyMap.get(item);
 
@@ -17,15 +29,25 @@ function generateStableKey(item: React.ReactNode, generateUniqueId: () => string
   return key;
 }
 
+export interface VirtualizedListRef {
+  /**
+   * Scroll to the index of the item
+   * @param index - The index of the item to scroll to
+   * @param options - The options to scroll to the item
+   */
+  scrollToIndex: (index: number, options?: ScrollIntoViewOptions) => void;
+}
+
 export interface VirtualizedListITem {
+  /** The element to render as a list item */
   element: React.ReactNode;
+  /** The key for the item */
   key?: string;
 }
 
-/**
- * Props for the VirtualizedList component
- */
-export interface VirtualizedListProps extends Omit<React.ComponentPropsWithRef<"div">, "children"> {
+export interface VirtualizedListProps
+  extends Pick<VirtualizedListItemProps, "keepVisibleWhen">,
+    Omit<React.ComponentPropsWithRef<"div">, "children"> {
   /** Array of React nodes to render as list items */
   items: React.ReactNode[] | VirtualizedListITem[];
   /** Default height for list items in pixels */
@@ -34,24 +56,43 @@ export interface VirtualizedListProps extends Omit<React.ComponentPropsWithRef<"
   itemProps?: Omit<VirtualizedListItemProps, "observerRootRef" | "defaultHeight">;
   /** Custom wrapper component for the list items */
   Wrapper?: React.FC<React.PropsWithChildren>;
+  /**
+   * Called when rendering state changes
+   * @param options - The options for the rendering state
+   */
+  onItemsChange?: (options: {
+    /** Whether the list is rendering */
+    isRendering: boolean;
+    /** Whether all items have been mounted in the DOM */
+    isMounted: boolean;
+  }) => void;
 }
 
-/**
- * A virtualized list component that efficiently renders large lists
- * by only rendering visible items and using stable keys for performance
- */
-export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
-  ref,
-  items,
-  defaultItemHeight = 40,
-  itemProps,
-  Wrapper = DefaultWrapper,
-  ...props
-}) => {
+export const VirtualizedList = forwardRef(function Root(
+  {
+    items,
+    defaultItemHeight = 40,
+    itemProps,
+    Wrapper = DefaultWrapper,
+    onItemsChange,
+    keepVisibleWhen,
+    ...props
+  }: VirtualizedListProps,
+  ref: React.Ref<VirtualizedListRef>,
+) {
+  // Unique ID generator provided by context, used to create stable keys
   const { generateUniqueId } = useManagerContext();
 
+  // Ref to the scroll container, passed as the IntersectionObserver root
   const observerRootRef = useRef<HTMLDivElement>(null);
 
+  // Holds refs to each individual item element, indexed by item position
+  const itemRefs = useRef<(HTMLElement | null)[]>([]);
+
+  // Tracks whether all items in the list have been mounted in the DOM.
+  const [mounted, setMounted] = useState(false);
+
+  // Normalize items into objects that always have a stable key + element
   const itemsWithKey = useMemo(
     () =>
       items.map((item) => {
@@ -70,14 +111,55 @@ export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
     [items, generateUniqueId],
   );
 
+  useImperativeHandle(
+    ref,
+    () => ({
+      scrollToIndex: (index, options) => {
+        const node = itemRefs.current[index];
+        if (node instanceof HTMLElement) {
+          // Scroll to the index of the item if the node is an HTMLElement
+          node.scrollIntoView(options);
+        }
+      },
+    }),
+    [],
+  );
+
+  // Resets item refs and signals that the list has started rendering whenever
+  // the `items` array changes.
+  useEffect(() => {
+    if (!items.length) return;
+
+    // clear refs for new items
+    itemRefs.current = [];
+
+    // Notify consumer that rendering has started
+    onItemsChange?.({ isRendering: true, isMounted: mounted });
+  }, [items, mounted, onItemsChange]);
+
   return (
-    <div ref={megeRefs(observerRootRef, ref)} {...props}>
+    <div ref={observerRootRef} {...props}>
       <Wrapper>
-        {itemsWithKey.map(({ element, key }) => (
+        {itemsWithKey.map(({ element, key }, index) => (
           <VirtualizedListItem
             key={key}
+            ref={(node) => {
+              if (!node) {
+                return;
+              }
+
+              // Set the node element to items references, required to scroll to the correct index
+              itemRefs.current[index] = node;
+
+              // check against count, not array length
+              if (itemRefs.current.length === itemsWithKey.length) {
+                setMounted(true);
+                onItemsChange?.({ isRendering: false, isMounted: mounted });
+              }
+            }}
             defaultHeight={defaultItemHeight}
             observerRootRef={observerRootRef}
+            keepVisibleWhen={keepVisibleWhen}
             {...itemProps}>
             {element}
           </VirtualizedListItem>
@@ -85,4 +167,4 @@ export const VirtualizedList: React.FC<Readonly<VirtualizedListProps>> = ({
       </Wrapper>
     </div>
   );
-};
+});
