@@ -1,16 +1,19 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useReducer, useRef } from "react";
 import { Skeleton } from "../skeleton";
 import { Spinner } from "../spinner";
 import { Button } from "../button";
 
-const defaultContentWrapper: React.FC<React.PropsWithChildren> = ({ children }) => <>{children}</>;
+const DefaultContentWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
 
 /**
  * Props for the InfiniteScroll component that handles automatic loading of content
  * as the user scrolls or clicks a load more button.
  */
 export interface InfiniteScrollProps {
-  /** Direction of infinite scroll - adapts the behaviour according to the scroll direction */
+  /**
+   * Direction of infinite scroll - adapts the behaviour according to the scroll direction
+   * @default "bottom"
+   */
   direction?: "bottom" | "top";
   /** Number of items currently loaded - used to determine if more items are available */
   loaded?: number;
@@ -24,17 +27,28 @@ export interface InfiniteScrollProps {
   loadingMore: boolean;
   /** Custom element to display while loading more content (defaults to Spinner) */
   loadingMoreElement?: React.ReactNode;
-  /** Whether to show a "Load more" button instead of automatic infinite scroll */
+  /**
+   * Whether to show a "Load more" button instead of automatic infinite scroll
+   * @default true
+   */
   displayLoadMore?: boolean;
   /** Function called when more content should be loaded */
   onLoadMore: (() => void) | (() => Promise<void>);
   /** Custom button element or render function for the load more button */
   loadMoreButton?: React.ReactNode | ((props: { loadMore: () => void }) => React.ReactNode);
   /** Custom wrapper component for the content area */
-  ContentWrapper?: React.FC<React.PropsWithChildren>;
+  ContentWrapper?: typeof DefaultContentWrapper;
   /** Additional props passed to the intersection observer element */
   intersectionElementProps?: React.ComponentPropsWithoutRef<"div">;
+  /** Mode of the infinite scroll */
   mode?: "infinite" | "enable-once" | "pagination";
+}
+
+interface InfiniteScrollStatus {
+  /** Whether the infinite scroll is enabled */
+  infiniteScrollEnabled: boolean;
+  /** Whether the intersection observer is intersecting */
+  isIntersecting: boolean;
 }
 
 export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProps>> = ({
@@ -49,26 +63,37 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
   loadingMoreElement,
   onLoadMore,
   loadMoreButton = "Load more",
-  ContentWrapper = defaultContentWrapper,
+  ContentWrapper = DefaultContentWrapper,
   intersectionElementProps,
   mode = loadMoreButton ? "enable-once" : "infinite",
 }) => {
+  // Intersection ref
   const intersectionRef = useRef<HTMLDivElement>(null);
 
-  const [infiniteScrollEnabled, setInfiniteScrollEnabled] = useState(mode === "infinite");
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  // Status
+  const [{ infiniteScrollEnabled, isIntersecting }, setStatus] = useReducer(
+    (prev: InfiniteScrollStatus, next: Partial<InfiniteScrollStatus>) => {
+      return { ...prev, ...next };
+    },
+    {
+      infiniteScrollEnabled: mode === "infinite",
+      isIntersecting: false,
+    },
+  );
 
+  // Has items left
   const hasItemsLeft = useMemo(
     () => (loaded === undefined && total === undefined) || (loaded ?? 0) < (total ?? 0),
     [loaded, total],
   );
 
+  // Load more button
   const LoadMoreButton = useMemo(() => {
-    if (!displayLoadMore) return null;
+    if (!displayLoadMore) return;
 
     const action = () => {
       if (mode === "enable-once") {
-        setInfiniteScrollEnabled(true);
+        setStatus({ infiniteScrollEnabled: true });
       } else {
         if (loading) return;
         void onLoadMore();
@@ -88,45 +113,14 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
     );
   }, [displayLoadMore, loadMoreButton, loading, mode, onLoadMore]);
 
-  const elements = useMemo<React.ReactNode[]>(() => {
-    const elements = [
-      hasItemsLeft && loading ? (loadingElement ?? <Skeleton />) : null,
-      children ? (
-        <ContentWrapper>
-          {direction === "top" && <div ref={intersectionRef} {...intersectionElementProps} />}
-          {children}
-          {direction === "bottom" && <div ref={intersectionRef} {...intersectionElementProps} />}
-        </ContentWrapper>
-      ) : null,
-      hasItemsLeft && loadingMore ? (loadingMoreElement ?? <Spinner />) : null,
-      displayLoadMore && !infiniteScrollEnabled && hasItemsLeft && !loading && !loadingMore
-        ? LoadMoreButton
-        : null,
-    ];
-
-    return direction === "bottom" ? elements : elements.reverse();
-  }, [
-    hasItemsLeft,
-    loading,
-    loadingElement,
-    children,
-    ContentWrapper,
-    intersectionRef,
-    loadingMore,
-    loadingMoreElement,
-    displayLoadMore,
-    infiniteScrollEnabled,
-    LoadMoreButton,
-    direction,
-    intersectionElementProps,
-  ]);
-
+  // Intersection observer
   useEffect(() => {
     if (!intersectionRef.current || !infiniteScrollEnabled || !children || !hasItemsLeft) return;
 
+    // eslint-disable-next-line compat/compat -- IntersectionObserver is not supported old browsers, but we target modern browsers
     const observer = new IntersectionObserver((entries) => {
       const isIntersecting = entries.some((entry) => entry.isIntersecting);
-      setIsIntersecting(isIntersecting);
+      setStatus({ isIntersecting });
     });
 
     observer.observe(intersectionRef.current);
@@ -136,12 +130,54 @@ export const InfiniteScroll: React.FC<React.PropsWithChildren<InfiniteScrollProp
     };
   }, [children, hasItemsLeft, infiniteScrollEnabled]);
 
+  // Load more
   useEffect(() => {
-    if (!isIntersecting || !infiniteScrollEnabled || loadingMore || loading || !hasItemsLeft)
+    if (!isIntersecting || !infiniteScrollEnabled || loadingMore || loading || !hasItemsLeft) {
       return;
+    }
 
+    // Load more items
     void onLoadMore();
   }, [hasItemsLeft, infiniteScrollEnabled, isIntersecting, loading, loadingMore, onLoadMore]);
 
-  return <>{elements}</>;
+  // Load more controls
+  const LoadMoreControls = useMemo(() => {
+    if (loadingMore) {
+      return loadingMoreElement ?? <Spinner />;
+    }
+
+    return displayLoadMore && hasItemsLeft && !infiniteScrollEnabled && LoadMoreButton;
+  }, [
+    LoadMoreButton,
+    displayLoadMore,
+    hasItemsLeft,
+    infiniteScrollEnabled,
+    loadingMore,
+    loadingMoreElement,
+  ]);
+
+  // Loading element
+  if (loading) {
+    return loadingElement ?? <Skeleton />;
+  }
+
+  return (
+    <ContentWrapper>
+      {direction === "top" && (
+        <>
+          {LoadMoreControls}
+          <div ref={intersectionRef} {...intersectionElementProps} />
+        </>
+      )}
+
+      {children}
+
+      {direction === "bottom" && (
+        <>
+          <div ref={intersectionRef} {...intersectionElementProps} />
+          {LoadMoreControls}
+        </>
+      )}
+    </ContentWrapper>
+  );
 };
