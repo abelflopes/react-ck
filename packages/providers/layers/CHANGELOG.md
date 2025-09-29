@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.17](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.4.16...@react-ck/layers@1.4.17) (2025-09-29)
+
+**Note:** Version bump only for package @react-ck/layers
+
+
+
+
+
 ## [1.4.16](https://github.com/abelflopes/react-ck/compare/@react-ck/layers@1.4.15...@react-ck/layers@1.4.16) (2025-09-08)
 
 **Note:** Version bump only for package @react-ck/layers

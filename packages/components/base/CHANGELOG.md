@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.11.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.10.0...@react-ck/base-components@7.11.0) (2025-09-29)
+
+
+### Features
+
+* adds ref API and visibility controls  ([#6](https://github.com/abelflopes/react-ck/issues/6)) ([d3f2211](https://github.com/abelflopes/react-ck/commit/d3f22112e069b0ca146d76161cc1af83326f511d))
+
+
+### Bug Fixes
+
+* display loading when children are present  ([#5](https://github.com/abelflopes/react-ck/issues/5)) ([b19c100](https://github.com/abelflopes/react-ck/commit/b19c100ea50902a65edeec7f52a02bcac0dbc703))
+
+
+
 ## [7.10.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.9.0...@react-ck/base-components@7.10.0) (2025-09-22)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@2.0.5...@react-ck/react-utils@2.0.6) (2025-09-29)
+
+
+### Bug Fixes
+
+* display loading when children are present  ([#5](https://github.com/abelflopes/react-ck/issues/5)) ([b19c100](https://github.com/abelflopes/react-ck/commit/b19c100ea50902a65edeec7f52a02bcac0dbc703))
+
+
+
 ## [2.0.5](https://github.com/abelflopes/react-ck/compare/@react-ck/react-utils@2.0.4...@react-ck/react-utils@2.0.5) (2025-09-08)
 
 **Note:** Version bump only for package @react-ck/react-utils

@@ -1,7 +1,7 @@
 {
   "name": "@react-ck/focus-trap",
   "private": false,
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -19,7 +19,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@react-ck/react-utils": "^2.0.5"
+    "@react-ck/react-utils": "^2.0.6"
   },
   "devDependencies": {
     "@react-ck/typescript-config": "^1.0.0"
