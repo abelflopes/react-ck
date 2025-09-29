@@ -1,3 +1,16 @@
+## [4.20.0](https://github.com/abelflopes/react-ck/compare/v4.19.0...v4.20.0) (2025-09-29)
+
+
+### Features
+
+* adds ref API and visibility controls  ([#6](https://github.com/abelflopes/react-ck/issues/6)) ([d3f2211](https://github.com/abelflopes/react-ck/commit/d3f22112e069b0ca146d76161cc1af83326f511d))
+* **react-ck:** global library package ([6b1cf8d](https://github.com/abelflopes/react-ck/commit/6b1cf8d311f21328356cc880c1fd1873a7589be0))
+
+
+### Bug Fixes
+
+* display loading when children are present  ([#5](https://github.com/abelflopes/react-ck/issues/5)) ([b19c100](https://github.com/abelflopes/react-ck/commit/b19c100ea50902a65edeec7f52a02bcac0dbc703))
+
 ## [4.19.0](https://github.com/abelflopes/react-ck/compare/v4.18.0...v4.19.0) (2025-09-22)
 
 
