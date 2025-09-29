@@ -56,8 +56,6 @@ export interface VirtualizedListProps
   itemProps?: Omit<VirtualizedListItemProps, "observerRootRef" | "defaultHeight">;
   /** Custom wrapper component for the list items */
   Wrapper?: React.FC<React.PropsWithChildren>;
-  /** Called when all virtualized items are rendered */
-  onItemsMounted?: () => void;
   /**
    * Called when rendering state changes
    * @param options - The options for the rendering state
