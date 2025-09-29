@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useReducer, useRef } from "react";
-import { Skeleton, Spinner, Button } from "react-ck";
+import { Skeleton } from "../skeleton";
+import { Spinner } from "../spinner";
+import { Button } from "../button";
 
 const DefaultContentWrapper: React.FC<React.PropsWithChildren> = ({ children }) => children;
 

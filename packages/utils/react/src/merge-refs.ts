@@ -1,6 +1,6 @@
 import { type ForwardedRef, type RefObject, type RefCallback } from "react";
 
-export const megeRefs =
+export const mergeRefs =
   <T>(
     ...refs: Array<undefined | null | ForwardedRef<T> | RefObject<T | null> | RefCallback<T>>
   ): RefCallback<T> =>
