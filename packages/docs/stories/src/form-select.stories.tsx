@@ -104,10 +104,18 @@ export const FullWidth: Story = {
   },
 };
 
-export const WithDividers: Story = {
+export const Loading: Story = {
   args: {
     ...args,
-    placeholder: "Select a category",
+    loading: true,
+    fullWidth: true,
+  },
+};
+
+export const WithDividersText: Story = {
+  args: {
+    ...args,
+    placeholder: "Select a fruit",
     children: (
       <>
         <Select.Divider>Fruits</Select.Divider>
@@ -129,9 +137,24 @@ export const WithDividers: Story = {
 
 export const WithDividersAndSearch: Story = {
   args: {
-    ...WithDividers.args,
+    placeholder: "Select a fruit",
+    children: (
+      <>
+        <Select.Option value="apple">Apple</Select.Option>
+        <Select.Option value="banana">Banana</Select.Option>
+        <Select.Option value="orange">Orange</Select.Option>
+        <Select.Divider />
+        <Select.Option value="carrot">Carrot</Select.Option>
+        <Select.Option value="broccoli">Broccoli</Select.Option>
+        <Select.Option value="spinach">Spinach</Select.Option>
+        <Select.Divider />
+        <Select.Option value="chicken">Chicken</Select.Option>
+        <Select.Option value="beef">Beef</Select.Option>
+        <Select.Option value="fish">Fish</Select.Option>
+      </>
+    ),
     search: {
-      placeholder: "Search categories...",
+      placeholder: "Search a fruit...",
       emptyStateMessage: (value) => (
         <>
           No results found for <strong>{value}</strong>

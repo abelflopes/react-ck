@@ -6,7 +6,7 @@ import { Menu } from "../menu";
 import { Dropdown } from "../dropdown";
 import { Input } from "../input";
 import classNames from "classnames";
-import { megeRefs, raf } from "@react-ck/react-utils";
+import { mergeRefs, raf } from "@react-ck/react-utils";
 import { EmptyState } from "../empty-state";
 import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler } from "./types";
@@ -308,7 +308,7 @@ const Select = ({
         </div>
 
         <select
-          ref={megeRefs(ref, selectRef)}
+          ref={mergeRefs(ref, selectRef)}
           id={computedId}
           name={selectName}
           multiple={selectMultiple}

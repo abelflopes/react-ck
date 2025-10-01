@@ -1,5 +1,6 @@
 @use "@react-ck/theme";
 @use "../../form-field/styles/shared" as form-field;
+@use "../../text/styles/shared" as text;
 
 .root {
   @include form-field.form-field-input;
@@ -98,4 +99,24 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
+}
+
+.divider {
+  margin-block: theme.get-spacing(0.5);
+
+  &:not(.divider_text) {
+    border-bottom: 1px solid theme.get-color(neutral-light-300);
+  }
+
+  &.divider_text {
+    @include text.text-base(small);
+
+    color: theme.get-color(neutral-light-600);
+    padding-inline: theme.get-spacing(0.5);
+
+    &:not(:first-of-type) {
+      padding-top: theme.get-spacing(1);
+      border-top: 1px solid theme.get-color(neutral-light-300);
+    }
+  }
 }

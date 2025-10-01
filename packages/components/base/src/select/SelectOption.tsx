@@ -2,7 +2,7 @@ import { Menu } from "../menu";
 import React, { useContext, useMemo } from "react";
 import { SelectContext } from "./context";
 import { DISPLAY_NAME_ATTRIBUTE } from "@react-ck/react-utils";
-import { type SelectOptionProps } from "./types";
+import type { SelectOptionProps } from "./types";
 
 const SelectOption = ({
   value,

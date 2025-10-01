@@ -1,7 +1,8 @@
-import { Menu } from "../menu";
 import React from "react";
 import { DISPLAY_NAME_ATTRIBUTE } from "@react-ck/react-utils";
-import { type SelectDividerProps } from "./types";
+import type { SelectDividerProps } from "./types";
+import styles from "./styles/index.module.scss";
+import classNames from "classnames";
 
 /**
  * A divider component for the Select component.
@@ -10,9 +11,19 @@ import { type SelectDividerProps } from "./types";
  * @param props - Component props {@link SelectDividerProps}
  * @returns React element
  */
-const SelectDivider = ({ ...props }: Readonly<SelectDividerProps>): React.ReactElement => {
-  return <Menu.Divider {...props} />;
-};
+function SelectDivider({
+  className,
+  children,
+  ...props
+}: Readonly<SelectDividerProps>): React.ReactElement {
+  return (
+    <div
+      className={classNames(styles.divider, Boolean(children) && styles.divider_text, className)}
+      {...props}>
+      {children}
+    </div>
+  );
+}
 
 SelectDivider[DISPLAY_NAME_ATTRIBUTE] = "SelectDivider";
 

@@ -1,6 +1,6 @@
-import { type DropdownProps } from "../dropdown";
-import { type InputProps } from "../input";
-import { type MenuItemProps, type MenuDividerProps } from "../menu";
+import type { DropdownProps } from "../dropdown";
+import type { InputProps } from "../input";
+import type { MenuItemProps } from "../menu";
 
 /** Type representing the user-selected value(s) in the select component */
 export type UserValue = string | string[] | undefined;
@@ -108,7 +108,7 @@ export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
  * Props interface for Select divider component.
  * Used to create visual separators with labels in select dropdowns.
  */
-export type SelectDividerProps = MenuDividerProps;
+export type SelectDividerProps = React.ComponentPropsWithoutRef<"div">;
 
 /**
  * Internal type for processing select children data.
