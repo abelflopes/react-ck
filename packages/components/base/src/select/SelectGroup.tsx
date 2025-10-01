@@ -3,6 +3,7 @@ import { DISPLAY_NAME_ATTRIBUTE } from "@react-ck/react-utils";
 import { type SelectGroupProps } from "./types";
 import { Text } from "../text";
 import styles from "./styles/index.module.scss";
+import { useManagerContext } from "@react-ck/manager";
 
 /**
  * A group component for organizing Select options with a label.
@@ -29,9 +30,13 @@ const SelectGroup = ({
   name,
   children,
 }: Readonly<Omit<SelectGroupProps, "disabled">>): React.ReactElement => {
+  const { generateUniqueId } = useManagerContext();
+
+  const uniqueId = generateUniqueId();
+
   return (
-    <div role="group" aria-labelledby={name} className={styles.group}>
-      <div id={name} className={styles.group_name}>
+    <div role="group" aria-labelledby={uniqueId} className={styles.group}>
+      <div id={uniqueId} className={styles.group_name}>
         <Text margin="none" variation="small" skin={["bold", "soft"]}>
           {name}
         </Text>
