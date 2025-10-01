@@ -7,6 +7,7 @@ import {
 import {
   type SelectChildrenData,
   type SelectOptionProps,
+  type SelectGroupProps,
   type SelectedValues,
   type UserValue,
 } from "./types";
@@ -14,35 +15,53 @@ import {
 export const valueAsArray = (value: UserValue): SelectedValues =>
   value ? (Array.isArray(value) ? value : [value]) : [];
 
-export const getChildrenData = (children: React.ReactNode): SelectChildrenData[] =>
-  getChildrenListWithoutFragments(children).map<SelectChildrenData>((i) => {
-    if (getDisplayName(i) === "SelectOption" && React.isValidElement<SelectOptionProps>(i)) {
-      if (!("children" in i.props || "value" in i.props))
-        throw new Error("SelectOption has no computable value");
+export const getChildrenData = (children: React.ReactNode): SelectChildrenData[] => {
+  const result: SelectChildrenData[] = [];
 
-      const { value, displayValue } = i.props;
-      const textContent = componentToText(i);
-      const computedValue = value ?? textContent;
+  const processChildren = (children: React.ReactNode, groupName?: string) => {
+    getChildrenListWithoutFragments(children).forEach((i) => {
+      if (getDisplayName(i) === "SelectOption" && React.isValidElement<SelectOptionProps>(i)) {
+        if (!("children" in i.props || "value" in i.props))
+          throw new Error("SelectOption has no computable value");
 
-      return {
-        isSelectOption: true,
-        element: i,
-        selectOptionProps: i.props,
-        textContent: textContent ?? value,
-        computedValue,
-        displayValue,
-      };
-    }
+        const { value, displayValue, disabled } = i.props;
+        const textContent = componentToText(i);
+        const computedValue = value ?? textContent;
 
-    return {
-      isSelectOption: false,
-      element: i,
-      textContent: undefined,
-      computedValue: undefined,
-      selectOptionProps: undefined,
-      displayValue: undefined,
-    };
-  });
+        result.push({
+          isSelectOption: true,
+          element: i,
+          selectOptionProps: {
+            ...i.props,
+            disabled,
+          },
+          selectGroupProps: undefined,
+          textContent: textContent ?? value,
+          computedValue,
+          displayValue,
+          groupName,
+        });
+      } else if (getDisplayName(i) === "SelectGroup" && React.isValidElement<SelectGroupProps>(i)) {
+        const { name, children: groupChildren } = i.props;
+        processChildren(groupChildren, name);
+      } else {
+        result.push({
+          isSelectOption: false,
+          element: i,
+          textContent: undefined,
+          computedValue: undefined,
+          selectOptionProps: undefined,
+          selectGroupProps: undefined,
+          displayValue: undefined,
+          groupName,
+        });
+      }
+    });
+  };
+
+  processChildren(children);
+  return result;
+};
 
 export const simplifyString = (s: string): string => {
   let r = s.toLowerCase().trim();

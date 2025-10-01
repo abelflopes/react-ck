@@ -1,3 +1,4 @@
+import React from "react";
 import { type DropdownProps } from "../dropdown";
 import { type InputProps } from "../input";
 import { type MenuItemProps } from "../menu";
@@ -69,6 +70,10 @@ export interface SelectProps
    * @default false
    */
   disabled?: boolean;
+  /** Select is loading
+   * @default false
+   */
+  loading?: boolean;
   /** Display value divider */
   displayValueDivider?: React.ReactNode;
   /** Whether the select should take the full width of the parent container */
@@ -101,6 +106,17 @@ export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
 }
 
 /**
+ * Props interface for Select group components.
+ * Used to group related options together with a label.
+ */
+export interface SelectGroupProps {
+  /** Name/label for the group */
+  name: string;
+  /** Wrapper for select options */
+  children?: React.ReactNode;
+}
+
+/**
  * Internal type for processing select children data.
  * Used to normalize and handle different types of child elements.
  */
@@ -109,6 +125,8 @@ export type SelectChildrenData = {
   isSelectOption: boolean;
   /** Props passed to the SelectOption if applicable */
   selectOptionProps: SelectOptionProps | undefined;
+  /** Props passed to the SelectGroup if applicable */
+  selectGroupProps: SelectGroupProps | undefined;
   /** Processed value for the option */
   computedValue: string | undefined;
   /** Text content of the option */
@@ -117,4 +135,6 @@ export type SelectChildrenData = {
   element: React.ReactNode;
   /** Custom display value for selected state */
   displayValue: SelectOptionProps["displayValue"];
+  /** Group name if this is part of a group */
+  groupName?: string;
 };

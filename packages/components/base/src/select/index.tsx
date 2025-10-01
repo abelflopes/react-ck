@@ -1,6 +1,7 @@
 import styles from "./styles/index.module.scss";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SelectOption } from "./SelectOption";
+import { SelectGroup } from "./SelectGroup";
 import { Menu } from "../menu";
 import { Dropdown } from "../dropdown";
 import { Input } from "../input";
@@ -11,6 +12,9 @@ import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "../form-field";
+import { Spinner } from "../spinner";
+import { Icon } from "@react-ck/icon";
+import { IconChevronDown } from "@react-ck/icon/icons/IconChevronDown";
 
 /** Default positions to exclude from auto-positioning */
 const defaultExclude: SelectProps["excludeAutoPosition"] = [
@@ -75,6 +79,7 @@ const Select = ({
   allowDeselect = true,
   required,
   disabled,
+  loading,
   displayValueDivider = ",",
   fullWidth,
   position,
@@ -105,17 +110,47 @@ const Select = ({
   const childrenData = useMemo(() => getChildrenData(children), [children]);
 
   /** Options list children filtered by user search  */
-  const filteredOptions = useMemo(
-    () =>
-      childrenData
-        .filter(
-          (i) =>
-            !search.length ||
-            (i.textContent && simplifyString(i.textContent).includes(simplifyString(search))),
-        )
-        .map((i) => i.element),
-    [childrenData, search],
-  );
+  const filteredOptions = useMemo(() => {
+    const filtered = childrenData.filter(
+      (i) =>
+        !search.length ||
+        (i.textContent && simplifyString(i.textContent).includes(simplifyString(search))),
+    );
+
+    // Group options by groupName
+    const groupedOptions: { [key: string]: React.ReactNode[] } = {};
+    const ungroupedOptions: React.ReactNode[] = [];
+
+    filtered.forEach((item) => {
+      if (item.isSelectOption) {
+        if (item.groupName) {
+          if (!(item.groupName in groupedOptions)) {
+            groupedOptions[item.groupName] = [];
+          }
+          groupedOptions[item.groupName]?.push(item.element);
+        } else {
+          ungroupedOptions.push(item.element);
+        }
+      }
+    });
+
+    // Render grouped options
+    const result: React.ReactNode[] = [];
+
+    // Add ungrouped options first
+    ungroupedOptions.forEach((option) => result.push(option));
+
+    // Add grouped options using SelectGroup component
+    Object.entries(groupedOptions).forEach(([groupName, options]) => {
+      result.push(
+        <SelectGroup key={groupName} name={groupName}>
+          {options}
+        </SelectGroup>,
+      );
+    });
+
+    return result;
+  }, [childrenData, search]);
 
   /** Returns the internal value always as an array to facilitate operations  */
   const selectedValuesList = useMemo(
@@ -256,7 +291,9 @@ const Select = ({
     const resizeObserver = new ResizeObserver(() => {
       if (!valueSlotRefCurrent || !sizeSetterRef.current) return;
 
-      valueSlotRefCurrent.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
+      if (valueSlotRefCurrent.clientWidth < sizeSetterRef.current.clientWidth) {
+        valueSlotRefCurrent.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
+      }
     });
     resizeObserver.observe(sizeSetterRef.current);
 
@@ -278,7 +315,7 @@ const Select = ({
           styles[`skin_${computedSkin}`],
           formFieldContext === undefined && styles.standalone,
           (disabled || formFieldContext?.disabled) && styles.disabled,
-
+          loading && styles.loading,
           (fullWidth ?? formFieldContext?.fullWidth) && styles.full_width,
           className,
         )}
@@ -291,7 +328,13 @@ const Select = ({
           onBlur?.(e);
         }}>
         <div ref={valueSlotRef} className={styles.value_slot}>
-          {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+          <div className={styles.value_content}>
+            {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+          </div>
+          {loading && <Spinner size="l" />}
+          <Icon size="l">
+            <IconChevronDown />
+          </Icon>
         </div>
 
         <select
@@ -372,15 +415,17 @@ const Select = ({
 
 type SelectWithOption = typeof Select & {
   Option: typeof SelectOption;
+  Group: typeof SelectGroup;
 };
 
-// Add the Option property
+// Add the Option and Group properties
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- needed for compound component definition with forward ref
 const CompoundSelect: SelectWithOption = Select as SelectWithOption;
 
 CompoundSelect.Option = SelectOption;
+CompoundSelect.Group = SelectGroup;
 
 export { CompoundSelect as Select };
 
-export { type SelectOptionProps, type SelectProps } from "./types";
+export { type SelectOptionProps, type SelectProps, type SelectGroupProps } from "./types";

@@ -4,11 +4,11 @@
 .root {
   @include form-field.form-field-input;
 
-  position: relative;
   display: inline-block;
   vertical-align: middle;
-  cursor: pointer;
+  position: relative;
   min-width: theme.get-spacing(10);
+  cursor: pointer;
 
   &.full_width {
     @include form-field.form-field-input-full-width;
@@ -19,20 +19,27 @@
 
 .value_slot {
   display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: theme.get-spacing(1);
+}
+
+.value_content {
+  display: flex;
   align-items: flex-start;
   justify-self: unset;
   flex-wrap: wrap;
   gap: theme.get-spacing(0.5);
-  max-width: 100%;
 }
 
 .display_value_item {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  display: inline-block;
-  max-width: 100%;
-  vertical-align: middle;
 }
 
 // When not inside form field, has own border, etc
@@ -64,12 +71,16 @@
 
 .native_element {
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.loading {
   pointer-events: none;
 }
 
@@ -82,9 +93,23 @@
   It is used to ensure that the value slot is the same width as the native select element.
 */
 .size_setter {
-  position: absolute;
   display: block;
   flex-direction: column;
-  pointer-events: none;
+  position: absolute;
   opacity: 0;
+  pointer-events: none;
+}
+
+.group {
+  padding-top: theme.get-spacing(1);
+
+  &:not(:first-of-type) {
+    border-top: 1px solid theme.get-color(neutral-light-300);
+    margin-top: theme.get-spacing(1);
+  }
+}
+
+.group_name {
+  margin-inline: theme.get-spacing(1);
+  margin-bottom: theme.get-spacing(0.5);
 }
