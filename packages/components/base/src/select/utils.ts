@@ -7,6 +7,7 @@ import {
 import {
   type SelectChildrenData,
   type SelectOptionProps,
+  type SelectDividerProps,
   type SelectedValues,
   type UserValue,
 } from "./types";
@@ -31,6 +32,17 @@ export const getChildrenData = (children: React.ReactNode): SelectChildrenData[]
         textContent: textContent ?? value,
         computedValue,
         displayValue,
+      };
+    }
+
+    if (getDisplayName(i) === "SelectDivider" && React.isValidElement<SelectDividerProps>(i)) {
+      return {
+        isSelectOption: false,
+        element: i,
+        textContent: undefined,
+        computedValue: undefined,
+        selectOptionProps: undefined,
+        displayValue: undefined,
       };
     }
 

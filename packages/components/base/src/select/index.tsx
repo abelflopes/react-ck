@@ -1,6 +1,7 @@
 import styles from "./styles/index.module.scss";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SelectOption } from "./SelectOption";
+import { SelectDivider } from "./SelectDivider";
 import { Menu } from "../menu";
 import { Dropdown } from "../dropdown";
 import { Input } from "../input";
@@ -11,6 +12,9 @@ import { getChildrenData, simplifyString, valueAsArray } from "./utils";
 import { type SelectProps, type ChangeHandler } from "./types";
 import { SelectContext, type SelectContextProps } from "./context";
 import { useFormFieldContext } from "../form-field";
+import { Spinner } from "../spinner";
+import { Icon } from "@react-ck/icon";
+import { IconChevronDown } from "@react-ck/icon/icons/IconChevronDown";
 
 /** Default positions to exclude from auto-positioning */
 const defaultExclude: SelectProps["excludeAutoPosition"] = [
@@ -77,6 +81,7 @@ const Select = ({
   disabled,
   displayValueDivider = ",",
   fullWidth,
+  loading,
   position,
   excludeAutoPosition = defaultExclude,
   ref,
@@ -256,7 +261,9 @@ const Select = ({
     const resizeObserver = new ResizeObserver(() => {
       if (!valueSlotRefCurrent || !sizeSetterRef.current) return;
 
-      valueSlotRefCurrent.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
+      if (valueSlotRefCurrent.clientWidth < sizeSetterRef.current.clientWidth) {
+        valueSlotRefCurrent.style.width = `${sizeSetterRef.current.clientWidth + 10}px`;
+      }
     });
     resizeObserver.observe(sizeSetterRef.current);
 
@@ -278,7 +285,7 @@ const Select = ({
           styles[`skin_${computedSkin}`],
           formFieldContext === undefined && styles.standalone,
           (disabled || formFieldContext?.disabled) && styles.disabled,
-
+          loading && styles.loading,
           (fullWidth ?? formFieldContext?.fullWidth) && styles.full_width,
           className,
         )}
@@ -291,7 +298,13 @@ const Select = ({
           onBlur?.(e);
         }}>
         <div ref={valueSlotRef} className={styles.value_slot}>
-          {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+          <div className={styles.value_content}>
+            {displayValue || <span className={styles.placeholder}>{placeholder}</span>}
+          </div>
+          {loading && <Spinner size="l" />}
+          <Icon size="l">
+            <IconChevronDown />
+          </Icon>
         </div>
 
         <select
@@ -372,15 +385,17 @@ const Select = ({
 
 type SelectWithOption = typeof Select & {
   Option: typeof SelectOption;
+  Divider: typeof SelectDivider;
 };
 
-// Add the Option property
+// Add the Option and Divider properties
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- needed for compound component definition with forward ref
 const CompoundSelect: SelectWithOption = Select as SelectWithOption;
 
 CompoundSelect.Option = SelectOption;
+CompoundSelect.Divider = SelectDivider;
 
 export { CompoundSelect as Select };
 
-export { type SelectOptionProps, type SelectProps } from "./types";
+export { type SelectOptionProps, type SelectProps, type SelectDividerProps } from "./types";

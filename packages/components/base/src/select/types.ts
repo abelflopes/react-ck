@@ -1,6 +1,6 @@
 import { type DropdownProps } from "../dropdown";
 import { type InputProps } from "../input";
-import { type MenuItemProps } from "../menu";
+import { type MenuItemProps, type MenuDividerProps } from "../menu";
 
 /** Type representing the user-selected value(s) in the select component */
 export type UserValue = string | string[] | undefined;
@@ -69,6 +69,10 @@ export interface SelectProps
    * @default false
    */
   disabled?: boolean;
+  /** Select is loading
+   * @default false
+   */
+  loading?: boolean;
   /** Display value divider */
   displayValueDivider?: React.ReactNode;
   /** Whether the select should take the full width of the parent container */
@@ -99,6 +103,12 @@ export interface SelectOptionProps extends Omit<MenuItemProps, "skin"> {
   /** Handler called when the option is deselected */
   onDeselected?: (value: string) => void;
 }
+
+/**
+ * Props interface for Select divider component.
+ * Used to create visual separators with labels in select dropdowns.
+ */
+export type SelectDividerProps = MenuDividerProps;
 
 /**
  * Internal type for processing select children data.
