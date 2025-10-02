@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { Text } from "../text";
 import { Button, type ButtonProps } from "../button";
 import { readFileList } from "./utils/read-file";
-import { megeRefs } from "@react-ck/react-utils";
+import { mergeRefs } from "@react-ck/react-utils";
 
 // TODO: check https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 // TODO: add size limitation: https://stackoverflow.com/questions/5697605/limit-the-size-of-a-file-upload-html-input-element
@@ -106,7 +106,7 @@ export const FileUploader = ({
       )}>
       <input
         {...inputProps}
-        ref={megeRefs(inputRef, inputProps?.ref)}
+        ref={mergeRefs(inputRef, inputProps?.ref)}
         type="file"
         className={classNames(styles.file, inputProps?.className)}
         onChange={handleChange}

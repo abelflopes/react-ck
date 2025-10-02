@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useRef } from "react";
 import classNames from "classnames";
 import { type FormFieldContextProps, useFormFieldContext } from "../form-field";
 import { type BooleanInputIconComponent } from "./types";
-import { megeRefs } from "@react-ck/react-utils";
+import { mergeRefs } from "@react-ck/react-utils";
 
 /**
  * Props interface for the BooleanInput component.
@@ -58,7 +58,7 @@ export const BooleaInput = ({
         (disabled || formFieldContext?.disabled) && styles.disabled,
       )}>
       <input
-        ref={megeRefs(ref, inputRef)}
+        ref={mergeRefs(ref, inputRef)}
         id={computedId}
         className={styles.input}
         disabled={disabled}

@@ -5,7 +5,7 @@ import { ScrollableContainer } from "../scrollable-container";
 import { Card } from "../card";
 import styles from "./index.module.scss";
 import classNames from "classnames";
-import { megeRefs, useOnClickOutside } from "@react-ck/react-utils";
+import { mergeRefs, useOnClickOutside } from "@react-ck/react-utils";
 import { FocusTrap } from "@react-ck/focus-trap";
 import { KeyboardControls } from "@react-ck/keyboard-controls";
 
@@ -141,7 +141,7 @@ export const Dropdown = ({
           <Layer elevation="overlay" group="dropdown">
             <div
               ref={(el) => {
-                megeRefs(ref, containerRef)(el);
+                mergeRefs(ref, containerRef)(el);
                 setFocusWrapperElement(el || undefined);
               }}
               tabIndex={0}
