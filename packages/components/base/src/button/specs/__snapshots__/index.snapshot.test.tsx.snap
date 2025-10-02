@@ -14,7 +14,7 @@ exports[`snapshot Button renders correctly 1`] = `
         class="root text"
       >
         <span
-          class="VsR_m2r2hGIr7NfX85BU YicCROjsCroMsOGSwMAE sf93RNkSSnS5VkGCtSLh"
+          class="root size_l skin_default"
         >
           <svg
             fill="currentColor"
