@@ -26,6 +26,7 @@
 
 .value_content {
   display: flex;
+  width: 100%;
   align-items: flex-start;
   justify-self: unset;
   flex-wrap: wrap;
@@ -35,7 +36,7 @@
 .display_value_item {
   display: inline-block;
   vertical-align: middle;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
