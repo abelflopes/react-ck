@@ -103,3 +103,63 @@ export const FullWidth: Story = {
     fullWidth: true,
   },
 };
+
+export const Loading: Story = {
+  args: {
+    ...args,
+    loading: true,
+    fullWidth: true,
+  },
+};
+
+export const WithDividersText: Story = {
+  args: {
+    ...args,
+    placeholder: "Select a fruit",
+    children: (
+      <>
+        <Select.Divider>Fruits</Select.Divider>
+        <Select.Option value="apple">Apple</Select.Option>
+        <Select.Option value="banana">Banana</Select.Option>
+        <Select.Option value="orange">Orange</Select.Option>
+        <Select.Divider>Vegetables</Select.Divider>
+        <Select.Option value="carrot">Carrot</Select.Option>
+        <Select.Option value="broccoli">Broccoli</Select.Option>
+        <Select.Option value="spinach">Spinach</Select.Option>
+        <Select.Divider>Proteins</Select.Divider>
+        <Select.Option value="chicken">Chicken</Select.Option>
+        <Select.Option value="beef">Beef</Select.Option>
+        <Select.Option value="fish">Fish</Select.Option>
+      </>
+    ),
+  },
+};
+
+export const WithDividersAndSearch: Story = {
+  args: {
+    placeholder: "Select a fruit",
+    children: (
+      <>
+        <Select.Option value="apple">Apple</Select.Option>
+        <Select.Option value="banana">Banana</Select.Option>
+        <Select.Option value="orange">Orange</Select.Option>
+        <Select.Divider />
+        <Select.Option value="carrot">Carrot</Select.Option>
+        <Select.Option value="broccoli">Broccoli</Select.Option>
+        <Select.Option value="spinach">Spinach</Select.Option>
+        <Select.Divider />
+        <Select.Option value="chicken">Chicken</Select.Option>
+        <Select.Option value="beef">Beef</Select.Option>
+        <Select.Option value="fish">Fish</Select.Option>
+      </>
+    ),
+    search: {
+      placeholder: "Search a fruit...",
+      emptyStateMessage: (value) => (
+        <>
+          No results found for <strong>{value}</strong>
+        </>
+      ),
+    },
+  },
+};

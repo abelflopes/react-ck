@@ -3,9 +3,9 @@
 @use "@react-ck/scss-utils";
 
 .root {
+  background-color: theme.get-color(neutral-light-300);
   display: block;
   box-sizing: border-box;
-  background-color: theme.get-color(neutral-light-300);
 
   &.text {
     @include text.text-base(extra-small);
