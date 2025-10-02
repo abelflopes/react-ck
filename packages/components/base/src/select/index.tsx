@@ -291,6 +291,7 @@ const Select = ({
           formFieldContext === undefined && styles.standalone,
           (disabled || formFieldContext?.disabled) && styles.disabled,
           loading && styles.loading,
+          selectMultiple && styles.multiple,
           (fullWidth ?? formFieldContext?.fullWidth) && styles.full_width,
           className,
         )}

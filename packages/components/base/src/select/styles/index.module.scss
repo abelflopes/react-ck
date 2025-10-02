@@ -36,10 +36,16 @@
 .display_value_item {
   display: inline-block;
   vertical-align: middle;
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.root:not(.multiple) {
+  .display_value_item {
+    width: 100%;
+  }
 }
 
 // When not inside form field, has own border, etc
