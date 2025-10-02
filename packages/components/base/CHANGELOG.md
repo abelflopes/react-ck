@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.12.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.11.0...@react-ck/base-components@7.12.0) (2025-10-02)
+
+
+### Features
+
+* add select divider ([#9](https://github.com/abelflopes/react-ck/issues/9)) ([c8f05b7](https://github.com/abelflopes/react-ck/commit/c8f05b78be87199ba1913d78a9162a7453caceb3))
+
+
+### Bug Fixes
+
+* remove flex prop when select is full-width ([6ab86b3](https://github.com/abelflopes/react-ck/commit/6ab86b3e6e6180b5c5c33649acdd489222be3168))
+* remove possible undefined ([84604d6](https://github.com/abelflopes/react-ck/commit/84604d6fc5919cd7f16b535f5b77458f36e13bcb))
+* style of value to use all available space ([d702fd3](https://github.com/abelflopes/react-ck/commit/d702fd355b68c0f7b0a06d7418d7089433372f0c))
+* styles for when is multiple ([54e3bbd](https://github.com/abelflopes/react-ck/commit/54e3bbdb2fe45f001ab120069d4c8a8e7b5e4599))
+
+
+
 ## [7.11.0](https://github.com/abelflopes/react-ck/compare/@react-ck/base-components@7.10.0...@react-ck/base-components@7.11.0) (2025-09-29)
 
 
