@@ -273,6 +273,11 @@ const Select = ({
     };
   }, [fullWidth, formFieldContext?.fullWidth]);
 
+  const selectOptions = useMemo(
+    () => childrenData.filter(({ isSelectOption }) => isSelectOption),
+    [childrenData],
+  );
+
   return (
     <>
       <div
@@ -321,7 +326,7 @@ const Select = ({
             selectOnChange?.(e, selectedValuesList);
           }}>
           <option />
-          {childrenData.map((i) => (
+          {selectOptions.map((i) => (
             <option key={`${i.computedValue}-${i.textContent}`} value={i.computedValue}>
               {i.textContent}
             </option>
@@ -329,7 +334,7 @@ const Select = ({
         </select>
         <div ref={sizeSetterRef} className={styles.size_setter}>
           <span className={styles.placeholder}>{placeholder}</span>
-          {childrenData.map((i) => (
+          {selectOptions.map((i) => (
             <span key={i.computedValue}>{i.element}</span>
           ))}
         </div>
