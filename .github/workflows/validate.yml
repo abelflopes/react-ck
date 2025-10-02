@@ -45,14 +45,14 @@ jobs:
         continue-on-error: true
         run: npm run lint:style
 
-      - name: Run Typescript Checks
-        run: npm run lint:typescript
-
       - name: Run Formatting Checks
         run: npm run format
 
       - name: Build
         run: npm run build
+
+      - name: Run Typescript Checks
+        run: npm run lint:typescript
 
       - name: Build test apps
         run: npm run build:apps
