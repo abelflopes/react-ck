@@ -13,8 +13,6 @@
 
   &.full_width {
     @include form-field.form-field-input-full-width;
-
-    display: flex;
   }
 }
 
