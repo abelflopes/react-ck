@@ -10,6 +10,8 @@ const SelectOption = ({
   children,
   onSelected,
   onDeselected,
+  // Omit prop because in only used internally, we should not set to DOM.
+  displayValue: __displayValue,
   ...props
 }: Readonly<SelectOptionProps>): React.ReactElement => {
   const context = useContext(SelectContext);
